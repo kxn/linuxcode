@@ -81,7 +81,7 @@ python3 /path/to/workspace/scripts/probe-ios-resource-tools.py \
 
 资源路径已增加私有 `xcrun` 分发入口：保留全部原始参数；仅执行 `actool`、`ibtool` 时恢复资源路径。SDK 查询和其他工具保留已验证的编译环境，Ruby/OpenSSL 在调用前清除覆盖库路径。这样避免旧 Ruby 的 `rbconfig.rb` 在启动时调用 `xcrun --show-sdk-path`，把资源库带进 SDK 查询进程。
 
-后续[原始绑定表与代码字节恢复实验](research/native-cache-patch-got/README.md)保存 AppleIDSSO 的保留指令字节模式、七个原始资源依赖候选及独立检查，以及当时缺 BiomeStreams、完整构建超时的历史证据。[稳定时钟与资源依赖检查点](research/stable-boottime/README.md)修复一秒级时钟倒退，最新完整 Unity workspace 已到达实际资源查询并返回 65，后续直接工具探测仍缺 InternationalTextSearch。尚未完成真实资源编译；固定 overlay 和默认安装候选没有提升。
+后续[原始绑定表与代码字节恢复实验](research/native-cache-patch-got/README.md)保存 AppleIDSSO 的保留指令字节模式、七个原始资源依赖候选及独立检查，以及当时缺 BiomeStreams、完整构建超时的历史证据。[稳定时钟与资源依赖检查点](research/stable-boottime/README.md)修复一秒级时钟倒退，最新完整 Unity workspace 已到达实际资源查询并返回 65，后续直接工具探测当时仍缺 InternationalTextSearch。最新的[资源映像准备与依赖推进](research/resource-image-preparation/README.md)补齐随后 12 个原版依赖候选，新增严格准备与原始导出审计脚本；完整 Unity workspace 再次进入真实资源查询，现因缺 AppSupport 返回 65，尚无 CompileC 或最终产物。尚未完成真实资源编译；固定 overlay 和默认安装候选没有提升。
 
 原版 `xcrun` 还通过提供 dyld API 的系统库的最低部署版本推断宿主版本。旧源码库声明 11.0，导致最低要求 14.0 的原版 Clang 被拒绝。新增构建参数将私有源码库的部署元数据与选定的 guest 身份 26.6.2 对齐；实际 API 返回已验证，原版 `xcrun clang --version` 成功。原版工具及其版本检查未修改；编译 SDK 仍是 11，不能据此推断完整 macOS 26 API 已实现。其他版本 API 的一致性仍需完善。
 

@@ -4,7 +4,7 @@
 
 目前已有**原版 xcodebuild 编译并用原版 codesign 完成 CocoaPod iPhoneOS/arm64 App 的 ad-hoc 签名**的研究里程碑；整合工程的 PATH 入口也已从全新 DerivedData 复现。它使用单独的 CoreServices 诊断策略，尚不是完整 Unity/UE 或开发者证书 CI 环境。本工程把安装、依赖锁定、候选运行入口和开发工具集中起来；完整成功候选的干净机器重建还没有自动化完毕。
 
-游戏工程的后续研究已通过原版 Unity 6 IL2CPP/Bee 生成并独立核对 377 个 iPhoneOS/arm64 静态库对象，并将真实 CocoaPods/AFNetworking 接入完整 workspace；**完整 Unity/UE App 尚未构建成功**。最新的[稳定时钟与资源依赖检查点](dev/resource-runtime/research/stable-boottime/README.md)修复一秒级时钟倒退，完整 workspace 已进入五 target 依赖图和原版资源工具调用，因缺依赖返回 65；后续直接探测仍缺 InternationalTextSearch。此前的[原始绑定表检查点](dev/resource-runtime/research/native-cache-patch-got/README.md)保留 AppleIDSSO 恢复与初始化超时的历史证据。研究附件没有升级默认安装候选。
+游戏工程的后续研究已通过原版 Unity 6 IL2CPP/Bee 生成并独立核对 377 个 iPhoneOS/arm64 静态库对象，并将真实 CocoaPods/AFNetworking 接入完整 workspace；**完整 Unity/UE App 尚未构建成功**。最新的[资源映像准备与依赖检查点](dev/resource-runtime/research/resource-image-preparation/README.md)新增严格准备/导入审计工具和 12 个原版依赖候选；全新 DerivedData 的完整 workspace 进入五 target 依赖图和原版资源工具调用，因缺 AppSupport 返回 65，尚无 CompileC 或最终 App。此前的[时钟修正](dev/resource-runtime/research/stable-boottime/README.md)已解决一秒级启动时间跳变。此前的[原始绑定表检查点](dev/resource-runtime/research/native-cache-patch-got/README.md)保留 AppleIDSSO 恢复与初始化超时的历史证据。研究附件没有升级默认安装候选。
 
 ```bash
 git clone https://github.com/kxn/linuxcode.git
