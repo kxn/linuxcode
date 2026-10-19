@@ -1,0 +1,79 @@
+{
+  "complete": false,
+  "attempts": [
+    {
+      "target": "generativemodels-patch-got-v2",
+      "command": [
+        "/usr/bin/python3",
+        "scripts/prepare-resource-image-candidate.py",
+        "--from-target",
+        "generativemodels-resource-v1",
+        "--exact-import-audit",
+        "artifacts/generativemodels-original-import-audit-v1.json",
+        "--verified-subset-import-audit",
+        "--preserve-code-with-patch-got",
+        "--patch-got-renamed-reexports",
+        "--omit-lazy-helper-section",
+        "--omit-leading-padding-sections",
+        "--preserve-original-uuid",
+        "--read-only-data-const",
+        "--align-linkedit-streams",
+        "--target",
+        "generativemodels-patch-got-v2",
+        "--build"
+      ],
+      "status": 0,
+      "log": "logs/generativemodels-patch-got-v2-preparation.log",
+      "log_sha256": "51a61ca094c0ceaabd2491d5f34d16980cd41fafde7f344bd559dbd0d93f47f0"
+    },
+    {
+      "target": "generativemodelsfoundation-patch-got-v3",
+      "command": [
+        "/usr/bin/python3",
+        "scripts/prepare-resource-image-candidate.py",
+        "--from-target",
+        "generativemodelsfoundation-resource-v1",
+        "--exact-import-audit",
+        "artifacts/generativemodelsfoundation-original-import-audit-v1.json",
+        "--preserve-code-with-patch-got",
+        "--patch-got-renamed-reexports",
+        "--omit-lazy-helper-section",
+        "--omit-leading-padding-sections",
+        "--preserve-original-uuid",
+        "--read-only-data-const",
+        "--align-linkedit-streams",
+        "--target",
+        "generativemodelsfoundation-patch-got-v3",
+        "--build"
+      ],
+      "status": 0,
+      "log": "logs/generativemodelsfoundation-patch-got-v3-preparation.log",
+      "log_sha256": "66e7ee7e8a7a791440f8b1624357dc833781c7c21b1f46d7b319251a542caf33"
+    },
+    {
+      "target": "appleintelligencereporting-patch-got-v3",
+      "command": [
+        "/usr/bin/python3",
+        "scripts/prepare-resource-image-candidate.py",
+        "--from-target",
+        "appleintelligencereporting-resource-v2",
+        "--exact-import-audit",
+        "artifacts/appleintelligencereporting-original-import-audit-v2.json",
+        "--verified-subset-import-audit",
+        "--preserve-code-with-patch-got",
+        "--patch-got-renamed-reexports",
+        "--omit-lazy-helper-section",
+        "--omit-leading-padding-sections",
+        "--preserve-original-uuid",
+        "--read-only-data-const",
+        "--align-linkedit-streams",
+        "--target",
+        "appleintelligencereporting-patch-got-v3",
+        "--build"
+      ],
+      "status": 1,
+      "log": "logs/appleintelligencereporting-patch-got-v3-preparation.log",
+      "log_sha256": "a7dc03bb2d93b33e4d0ef0b8c0042f8b5243ace43f775491df1d63686b6e3785"
+    }
+  ]
+}

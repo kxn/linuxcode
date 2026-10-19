@@ -1,0 +1,38 @@
+{
+  "target": "libperfcheck-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libperfcheck.dylib",
+    "sha256": "b464efdaf3358cd14d6fb6b2d6dcec33798bf1b9e77b32f77a02294ef0bffc39",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 77824,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "6f792f0765415e304ec5f88cd48a7cef81bccb8883c1c13cca6500960a7353d6",
+  "manifest_sha256": "3081ccab525d4b6737ebd2a35b0b30412770fe3933944cec35fa57592f606799",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libperfcheck-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libperfcheck-resource-v1-build.log",
+  "log_sha256": "d40f0f7aa7416aecc8ac6cf3e03d81f3986aa7cce71c2308ef446d57d4aaca76"
+}

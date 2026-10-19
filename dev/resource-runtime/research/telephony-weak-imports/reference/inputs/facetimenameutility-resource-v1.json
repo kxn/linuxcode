@@ -1,0 +1,37 @@
+{
+  "target": "facetimenameutility-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/FaceTimeNameUtility.framework/Versions/A/FaceTimeNameUtility",
+    "sha256": "6bda9ffa65996aa61f68d130259fb308644c44086388864f49884519cdbe15b3",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {}
+  },
+  "original_bytes": 8192,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "ec96ed5fa8a7db0e2f52f2e957c43a3846641431a733dc6f565a7b47bc0ada48",
+  "manifest_sha256": "6c1edb863258a591a2ded7f08208dd04c6553c721bf4c6bad6d077d3b0b3cdb2",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "facetimenameutility-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/facetimenameutility-resource-v1-build.log",
+  "log_sha256": "c461a326f430872d709e406a7916d17d3a8d3e72aa41b856979d7f5b77ae0e1a"
+}

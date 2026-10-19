@@ -1,0 +1,39 @@
+{
+  "target": "incomingcallfilter-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/IncomingCallFilter.framework/Versions/A/IncomingCallFilter",
+    "sha256": "fc8000802774d1f9d3eca338093b91673c4f1bb21888c74c4f9874d0d9f34ed1",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {}
+  },
+  "original_bytes": 36864,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/CommunicationsFilter.framework/Versions/A/CommunicationsFilter",
+    "/System/Library/PrivateFrameworks/IMFoundation.framework/Versions/A/IMFoundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "ef36af0980150d600ba09187e5b6528712fbc2a16c2bcddf119a1e76ba123ef3",
+  "manifest_sha256": "b430b212be28f54b8fd438a4df6cec79984fc27b74fc3b7bca14db69aa310ca4",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "incomingcallfilter-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/incomingcallfilter-resource-v1-build.log",
+  "log_sha256": "b6b573bf6393c1a724b13b40f925ab9ca5765e15ac598ca277310cb0c934867d"
+}

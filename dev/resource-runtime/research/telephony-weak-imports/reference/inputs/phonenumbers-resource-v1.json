@@ -1,0 +1,39 @@
+{
+  "target": "phonenumbers-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/PhoneNumbers",
+    "sha256": "2346fc7a1d1046efb83c9ae1fb1003f84f46d2087225e90735fc14a2b5aeea37",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "restore_objc_categories": true
+  },
+  "original_bytes": 8192,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "b430b212be28f54b8fd438a4df6cec79984fc27b74fc3b7bca14db69aa310ca4",
+  "manifest_sha256": "ec96ed5fa8a7db0e2f52f2e957c43a3846641431a733dc6f565a7b47bc0ada48",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "phonenumbers-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/phonenumbers-resource-v1-build.log",
+  "log_sha256": "5e8425a499076ff5cdb2671bcc5ba171cfd8f3d95471d4dbaede0a1c722991d7"
+}

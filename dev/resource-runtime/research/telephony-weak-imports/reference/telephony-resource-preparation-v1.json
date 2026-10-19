@@ -1,0 +1,934 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/telephony-resource-batch-v1.json",
+  "configuration_sha256": "e352d1d2acc06ba7fda0799333274999b7a07ea0f69e484087cd9c09126ec550",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "76f0c437f92673e1dc5a10fa74d18419b6c912756012c45abfcac6b732bdfa4a",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/CallKit.framework/Versions/A/CallKit",
+      "attempts": [],
+      "prepared_target": "callkit-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CommunicationsFilter.framework/Versions/A/CommunicationsFilter",
+      "attempts": [
+        {
+          "target": "communicationsfilter-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CommunicationsFilter.framework/Versions/A/CommunicationsFilter",
+            "--target",
+            "communicationsfilter-resource-v1",
+            "--build"
+          ],
+          "log": "logs/communicationsfilter-resource-v1-batch-preparation.log",
+          "log_sha256": "30d8c104bbfee862b4c92dee3ca9e27d401c742eae2eb94df950e44d01addeab",
+          "preparation": "artifacts/communicationsfilter-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "communicationsfilter-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IncomingCallFilter.framework/Versions/A/IncomingCallFilter",
+      "attempts": [
+        {
+          "target": "incomingcallfilter-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/IncomingCallFilter.framework/Versions/A/IncomingCallFilter",
+            "--target",
+            "incomingcallfilter-resource-v1",
+            "--build"
+          ],
+          "log": "logs/incomingcallfilter-resource-v1-batch-preparation.log",
+          "log_sha256": "5208d33e5992731273dcd9ca03bf4970ef54566c3de84436f07304161a9e3c5f",
+          "preparation": "artifacts/incomingcallfilter-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "incomingcallfilter-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/PhoneNumbers",
+      "attempts": [
+        {
+          "target": "phonenumbers-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/PhoneNumbers",
+            "--target",
+            "phonenumbers-resource-v1",
+            "--build"
+          ],
+          "log": "logs/phonenumbers-resource-v1-batch-preparation.log",
+          "log_sha256": "f626d4c41b807e9b3f92cc3f8c1124fb966ac469c70e2adfcacb9eea3f6716d1",
+          "preparation": "artifacts/phonenumbers-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "phonenumbers-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/FaceTimeNameUtility.framework/Versions/A/FaceTimeNameUtility",
+      "attempts": [
+        {
+          "target": "facetimenameutility-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/FaceTimeNameUtility.framework/Versions/A/FaceTimeNameUtility",
+            "--target",
+            "facetimenameutility-resource-v1",
+            "--build"
+          ],
+          "log": "logs/facetimenameutility-resource-v1-batch-preparation.log",
+          "log_sha256": "39d640deae7d9bd61456821fa3f62722e74bfc1c6e0705464b31b82076b56847",
+          "preparation": "artifacts/facetimenameutility-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "facetimenameutility-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/NeighborhoodActivityConduit.framework/Versions/A/NeighborhoodActivityConduit",
+      "attempts": [
+        {
+          "target": "neighborhoodactivityconduit-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/NeighborhoodActivityConduit.framework/Versions/A/NeighborhoodActivityConduit",
+            "--target",
+            "neighborhoodactivityconduit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/neighborhoodactivityconduit-resource-v1-batch-preparation.log",
+          "log_sha256": "2ddaa56130f62308434870453e29987be08be4a16ff852d9d37e4c1489caca79",
+          "preparation": "artifacts/neighborhoodactivityconduit-resource-v1-input.json"
+        },
+        {
+          "target": "neighborhoodactivityconduit-resource-v2",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/NeighborhoodActivityConduit.framework/Versions/A/NeighborhoodActivityConduit",
+            "--omit-lazy-helper-section",
+            "--target",
+            "neighborhoodactivityconduit-resource-v2",
+            "--build"
+          ],
+          "log": "logs/neighborhoodactivityconduit-resource-v2-batch-preparation.log",
+          "log_sha256": "f90f6e6b548957aacb63de6fab50fed5a0a0d4f04858579f24b5c1dbf55eef95",
+          "preparation": "artifacts/neighborhoodactivityconduit-resource-v2-input.json"
+        },
+        {
+          "target": "neighborhoodactivityconduit-resource-v3",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/NeighborhoodActivityConduit.framework/Versions/A/NeighborhoodActivityConduit",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "neighborhoodactivityconduit-resource-v3",
+            "--build"
+          ],
+          "log": "logs/neighborhoodactivityconduit-resource-v3-batch-preparation.log",
+          "log_sha256": "0926a8e1c56263cfb80b8dcede2e8f71c242e6a341b2aba428f7d7ca4836b0f7",
+          "preparation": "artifacts/neighborhoodactivityconduit-resource-v3-input.json"
+        }
+      ],
+      "prepared_target": "neighborhoodactivityconduit-resource-v3"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CallHistory.framework/Versions/A/CallHistory",
+      "attempts": [
+        {
+          "target": "callhistory-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CallHistory.framework/Versions/A/CallHistory",
+            "--target",
+            "callhistory-resource-v1",
+            "--build"
+          ],
+          "log": "logs/callhistory-resource-v1-batch-preparation.log",
+          "log_sha256": "704e535e5068afdbb71d559d1f437a137770db8ca871e04dc71727fabd50b7c4",
+          "preparation": "artifacts/callhistory-resource-v1-input.json"
+        },
+        {
+          "target": "callhistory-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "callhistory-resource-v1",
+            "--exact-import-audit",
+            "artifacts/callhistory-original-import-audit-v1.json",
+            "--target",
+            "callhistory-resource-v2",
+            "--build"
+          ],
+          "log": "logs/callhistory-resource-v2-batch-preparation.log",
+          "log_sha256": "44a6db6a62aee98b6e4b481c87bb69b66af8550b8b23516bbefea8969086db73",
+          "preparation": "artifacts/callhistory-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "callhistory-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GenerativeModels.framework/Versions/A/GenerativeModels",
+      "attempts": [
+        {
+          "target": "generativemodels-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GenerativeModels.framework/Versions/A/GenerativeModels",
+            "--target",
+            "generativemodels-resource-v1",
+            "--build"
+          ],
+          "log": "logs/generativemodels-resource-v1-batch-preparation.log",
+          "log_sha256": "1e0b176d02be3fab47aa01dce155e3555418720202a3a334d1e51407ae357eb6",
+          "preparation": "artifacts/generativemodels-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'generativemodels-resource-v1', '--output', 'artifacts/generativemodels-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/usr/lib/libBASupport.dylib",
+      "attempts": [
+        {
+          "target": "libbasupport-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libBASupport.dylib",
+            "--target",
+            "libbasupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libbasupport-resource-v1-batch-preparation.log",
+          "log_sha256": "0d8e13b7645b09866e884746bca191cb1c726350e0918febf8551afed70fd0c0",
+          "preparation": "artifacts/libbasupport-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libbasupport-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libTelephonyUtilDynamic.dylib",
+      "attempts": [
+        {
+          "target": "libtelephonyutildynamic-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libTelephonyUtilDynamic.dylib",
+            "--target",
+            "libtelephonyutildynamic-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libtelephonyutildynamic-resource-v1-batch-preparation.log",
+          "log_sha256": "df4d03ad93baf6f3354c83888e3159f807c236322052c3065769c1876b51f217",
+          "preparation": "artifacts/libtelephonyutildynamic-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libtelephonyutildynamic-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/CoreSpotlight.framework/Versions/A/CoreSpotlight",
+      "attempts": [
+        {
+          "target": "corespotlight-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/CoreSpotlight.framework/Versions/A/CoreSpotlight",
+            "--target",
+            "corespotlight-resource-v1",
+            "--build"
+          ],
+          "log": "logs/corespotlight-resource-v1-batch-preparation.log",
+          "log_sha256": "704a80a31d616bc8a46e4249e7f1dd08e77f584392db79676b88489250abd3ae",
+          "preparation": "artifacts/corespotlight-resource-v1-input.json"
+        },
+        {
+          "target": "corespotlight-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "corespotlight-resource-v1",
+            "--exact-import-audit",
+            "artifacts/corespotlight-original-import-audit-v1.json",
+            "--target",
+            "corespotlight-resource-v2",
+            "--build"
+          ],
+          "log": "logs/corespotlight-resource-v2-batch-preparation.log",
+          "log_sha256": "ff9e09d4186ea90cd356067361117294daa3ddd83fd352ad8e27d6e39c73965d",
+          "preparation": "artifacts/corespotlight-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "corespotlight-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GenerativeModelsFoundation.framework/Versions/A/GenerativeModelsFoundation",
+      "attempts": [
+        {
+          "target": "generativemodelsfoundation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GenerativeModelsFoundation.framework/Versions/A/GenerativeModelsFoundation",
+            "--target",
+            "generativemodelsfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/generativemodelsfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "fa54d8ff2987bd9c1b61e3a22c8f8eb8137321bfb1584f1e7edab35a8bd3eeb1",
+          "preparation": "artifacts/generativemodelsfoundation-resource-v1-input.json"
+        },
+        {
+          "target": "generativemodelsfoundation-resource-v2",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "generativemodelsfoundation-resource-v1",
+            "--exact-import-audit",
+            "artifacts/generativemodelsfoundation-original-import-audit-v1.json",
+            "--target",
+            "generativemodelsfoundation-resource-v2",
+            "--build"
+          ],
+          "log": "logs/generativemodelsfoundation-resource-v2-batch-preparation.log",
+          "log_sha256": "b8599be39f30cee297fad829251f1b24d59dc1e89f1ad7ad9651067881c8d5a0",
+          "preparation": "artifacts/generativemodelsfoundation-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Unresolved reconstruction failure: logs/generativemodelsfoundation-resource-v2-build.log"
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/TokenGeneration.framework/Versions/A/TokenGeneration",
+      "attempts": [
+        {
+          "target": "tokengeneration-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/TokenGeneration.framework/Versions/A/TokenGeneration",
+            "--target",
+            "tokengeneration-resource-v1",
+            "--build"
+          ],
+          "log": "logs/tokengeneration-resource-v1-batch-preparation.log",
+          "log_sha256": "94f080f8383da9b3bbbe011e890e8fc58097c150d6d4d7ea99746609c825cfd6",
+          "preparation": "artifacts/tokengeneration-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Unresolved reconstruction failure: logs/tokengeneration-resource-v1-build.log"
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GenerativeFunctions.framework/Versions/A/GenerativeFunctions",
+      "attempts": [
+        {
+          "target": "generativefunctions-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GenerativeFunctions.framework/Versions/A/GenerativeFunctions",
+            "--target",
+            "generativefunctions-resource-v1",
+            "--build"
+          ],
+          "log": "logs/generativefunctions-resource-v1-batch-preparation.log",
+          "log_sha256": "38dc61dada75187263b600bdb9140a31b922fae854531a6f9359ee270b9b7fed",
+          "preparation": "artifacts/generativefunctions-resource-v1-input.json"
+        },
+        {
+          "target": "generativefunctions-resource-v2",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "generativefunctions-resource-v1",
+            "--exact-import-audit",
+            "artifacts/generativefunctions-original-import-audit-v1.json",
+            "--target",
+            "generativefunctions-resource-v2",
+            "--build"
+          ],
+          "log": "logs/generativefunctions-resource-v2-batch-preparation.log",
+          "log_sha256": "319ce96135a9760cf22c129ca514bd2ae7b2dec7e693d4c9a9c562dee134ad37",
+          "preparation": "artifacts/generativefunctions-resource-v2-input.json"
+        },
+        {
+          "target": "generativefunctions-resource-v3",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "generativefunctions-resource-v1",
+            "--exact-import-audit",
+            "artifacts/generativefunctions-original-import-audit-v1.json",
+            "--omit-lazy-helper-section",
+            "--target",
+            "generativefunctions-resource-v3",
+            "--build"
+          ],
+          "log": "logs/generativefunctions-resource-v3-batch-preparation.log",
+          "log_sha256": "4e587d87b152f9fcd6982168dd8ee0c9b5ec988f631e7aaff56217dd467938c0",
+          "preparation": "artifacts/generativefunctions-resource-v3-input.json"
+        },
+        {
+          "target": "generativefunctions-resource-v4",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "generativefunctions-resource-v1",
+            "--exact-import-audit",
+            "artifacts/generativefunctions-original-import-audit-v1.json",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "generativefunctions-resource-v4",
+            "--build"
+          ],
+          "log": "logs/generativefunctions-resource-v4-batch-preparation.log",
+          "log_sha256": "bf9ff21c12af1dbd689b3be63e26757cbdea06519126d6891b2c7f00d01bed83",
+          "preparation": "artifacts/generativefunctions-resource-v4-input.json"
+        }
+      ],
+      "prepared_target": "generativefunctions-resource-v4"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GenerativeFunctionsFoundation.framework/Versions/A/GenerativeFunctionsFoundation",
+      "attempts": [
+        {
+          "target": "generativefunctionsfoundation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GenerativeFunctionsFoundation.framework/Versions/A/GenerativeFunctionsFoundation",
+            "--target",
+            "generativefunctionsfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/generativefunctionsfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "d0ffe6588ec985507080cd08c23d635f61c2fb84d2672a067f20e8563e48039e",
+          "preparation": "artifacts/generativefunctionsfoundation-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Unresolved reconstruction failure: logs/generativefunctionsfoundation-resource-v1-build.log"
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ModelCatalog.framework/Versions/A/ModelCatalog",
+      "attempts": [
+        {
+          "target": "modelcatalog-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ModelCatalog.framework/Versions/A/ModelCatalog",
+            "--target",
+            "modelcatalog-resource-v1",
+            "--build"
+          ],
+          "log": "logs/modelcatalog-resource-v1-batch-preparation.log",
+          "log_sha256": "2affa3a366baeca242d7ef7f72eded2a1bc68f34587ec3581100d8f40d48602c",
+          "preparation": "artifacts/modelcatalog-resource-v1-input.json"
+        },
+        {
+          "target": "modelcatalog-resource-v2",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "modelcatalog-resource-v1",
+            "--exact-import-audit",
+            "artifacts/modelcatalog-original-import-audit-v1.json",
+            "--target",
+            "modelcatalog-resource-v2",
+            "--build"
+          ],
+          "log": "logs/modelcatalog-resource-v2-batch-preparation.log",
+          "log_sha256": "0026cd20bb8d13def52d0346ffbc09e192551fabad374f88151477cfc0add5dd",
+          "preparation": "artifacts/modelcatalog-resource-v2-input.json"
+        },
+        {
+          "target": "modelcatalog-resource-v3",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "modelcatalog-resource-v1",
+            "--exact-import-audit",
+            "artifacts/modelcatalog-original-import-audit-v1.json",
+            "--omit-lazy-helper-section",
+            "--target",
+            "modelcatalog-resource-v3",
+            "--build"
+          ],
+          "log": "logs/modelcatalog-resource-v3-batch-preparation.log",
+          "log_sha256": "594fa32148c99227fa7d6175c85614f908c27605f9e79a8820e48af7bef1a4d7",
+          "preparation": "artifacts/modelcatalog-resource-v3-input.json"
+        }
+      ],
+      "prepared_target": "modelcatalog-resource-v3"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SensitiveContentAnalysisML.framework/Versions/A/SensitiveContentAnalysisML",
+      "attempts": [
+        {
+          "target": "sensitivecontentanalysisml-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SensitiveContentAnalysisML.framework/Versions/A/SensitiveContentAnalysisML",
+            "--target",
+            "sensitivecontentanalysisml-resource-v1",
+            "--build"
+          ],
+          "log": "logs/sensitivecontentanalysisml-resource-v1-batch-preparation.log",
+          "log_sha256": "d5a5df66a3f3dc748c2732e2f32b6377d988704b333113a38d5ee291a1d23f53",
+          "preparation": "artifacts/sensitivecontentanalysisml-resource-v1-input.json"
+        },
+        {
+          "target": "sensitivecontentanalysisml-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "sensitivecontentanalysisml-resource-v1",
+            "--exact-import-audit",
+            "artifacts/sensitivecontentanalysisml-original-import-audit-v1.json",
+            "--target",
+            "sensitivecontentanalysisml-resource-v2",
+            "--build"
+          ],
+          "log": "logs/sensitivecontentanalysisml-resource-v2-batch-preparation.log",
+          "log_sha256": "127fcb0c1746c37890ef27748d55a26c022afdf7dc7b31de412523dcd6be60aa",
+          "preparation": "artifacts/sensitivecontentanalysisml-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "sensitivecontentanalysisml-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GenerativeFunctionsInstrumentation.framework/Versions/A/GenerativeFunctionsInstrumentation",
+      "attempts": [
+        {
+          "target": "generativefunctionsinstrumentation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GenerativeFunctionsInstrumentation.framework/Versions/A/GenerativeFunctionsInstrumentation",
+            "--target",
+            "generativefunctionsinstrumentation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/generativefunctionsinstrumentation-resource-v1-batch-preparation.log",
+          "log_sha256": "ffc17f490dc364e405ed4eb3259edb70fe2e4ab126c7203decd1c38f294e0d71",
+          "preparation": "artifacts/generativefunctionsinstrumentation-resource-v1-input.json"
+        },
+        {
+          "target": "generativefunctionsinstrumentation-resource-v2",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "generativefunctionsinstrumentation-resource-v1",
+            "--exact-import-audit",
+            "artifacts/generativefunctionsinstrumentation-original-import-audit-v1.json",
+            "--target",
+            "generativefunctionsinstrumentation-resource-v2",
+            "--build"
+          ],
+          "log": "logs/generativefunctionsinstrumentation-resource-v2-batch-preparation.log",
+          "log_sha256": "b8b1a77d7134f4d87b408228a758e990a9363bce6b0a14054b3de456f1f43aae",
+          "preparation": "artifacts/generativefunctionsinstrumentation-resource-v2-input.json"
+        },
+        {
+          "target": "generativefunctionsinstrumentation-resource-v3",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "generativefunctionsinstrumentation-resource-v1",
+            "--exact-import-audit",
+            "artifacts/generativefunctionsinstrumentation-original-import-audit-v1.json",
+            "--omit-lazy-helper-section",
+            "--target",
+            "generativefunctionsinstrumentation-resource-v3",
+            "--build"
+          ],
+          "log": "logs/generativefunctionsinstrumentation-resource-v3-batch-preparation.log",
+          "log_sha256": "95803e2deb4eaf28eb9f8d75538e971ae423295053c5b5b82f9d594a9c01addb",
+          "preparation": "artifacts/generativefunctionsinstrumentation-resource-v3-input.json"
+        }
+      ],
+      "prepared_target": "generativefunctionsinstrumentation-resource-v3"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PromptKit.framework/Versions/A/PromptKit",
+      "attempts": [
+        {
+          "target": "promptkit-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PromptKit.framework/Versions/A/PromptKit",
+            "--target",
+            "promptkit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/promptkit-resource-v1-batch-preparation.log",
+          "log_sha256": "a85433a9bdbac716e527059f910f7fda8711b4b352f8c6b92deb88b60238e308",
+          "preparation": "artifacts/promptkit-resource-v1-input.json"
+        },
+        {
+          "target": "promptkit-resource-v2",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "promptkit-resource-v1",
+            "--exact-import-audit",
+            "artifacts/promptkit-original-import-audit-v1.json",
+            "--target",
+            "promptkit-resource-v2",
+            "--build"
+          ],
+          "log": "logs/promptkit-resource-v2-batch-preparation.log",
+          "log_sha256": "72bce3119b1e7d9f211ecb0bf5dd7fccc9a127c78afd67d39bc8df4b5c0db128",
+          "preparation": "artifacts/promptkit-resource-v2-input.json"
+        },
+        {
+          "target": "promptkit-resource-v3",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "promptkit-resource-v1",
+            "--exact-import-audit",
+            "artifacts/promptkit-original-import-audit-v1.json",
+            "--omit-lazy-helper-section",
+            "--target",
+            "promptkit-resource-v3",
+            "--build"
+          ],
+          "log": "logs/promptkit-resource-v3-batch-preparation.log",
+          "log_sha256": "9d083159537b1b1b24b54b5b2223428b8e2c18847782e67258cac402dd6e3269",
+          "preparation": "artifacts/promptkit-resource-v3-input.json"
+        },
+        {
+          "target": "promptkit-resource-v4",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "promptkit-resource-v1",
+            "--exact-import-audit",
+            "artifacts/promptkit-original-import-audit-v1.json",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "promptkit-resource-v4",
+            "--build"
+          ],
+          "log": "logs/promptkit-resource-v4-batch-preparation.log",
+          "log_sha256": "62c9ad2851f3c4317c8dfb24ea34c08ef4aa92b7344fb8412563559625b4bcc8",
+          "preparation": "artifacts/promptkit-resource-v4-input.json"
+        }
+      ],
+      "prepared_target": "promptkit-resource-v4"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ProactiveDaemonSupport.framework/Versions/A/ProactiveDaemonSupport",
+      "attempts": [
+        {
+          "target": "proactivedaemonsupport-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ProactiveDaemonSupport.framework/Versions/A/ProactiveDaemonSupport",
+            "--target",
+            "proactivedaemonsupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/proactivedaemonsupport-resource-v1-batch-preparation.log",
+          "log_sha256": "c3213262865367dbd115d86f77526c5df40d2d305f9dc98ef25a904e8f4ca891",
+          "preparation": "artifacts/proactivedaemonsupport-resource-v1-input.json"
+        },
+        {
+          "target": "proactivedaemonsupport-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "proactivedaemonsupport-resource-v1",
+            "--exact-import-audit",
+            "artifacts/proactivedaemonsupport-original-import-audit-v1.json",
+            "--target",
+            "proactivedaemonsupport-resource-v2",
+            "--build"
+          ],
+          "log": "logs/proactivedaemonsupport-resource-v2-batch-preparation.log",
+          "log_sha256": "5ef357c97108593d4b87153adc11c7d738a38d81bcffc6d0ef5d3376513f072b",
+          "preparation": "artifacts/proactivedaemonsupport-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "proactivedaemonsupport-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ModelManagerServices.framework/Versions/A/ModelManagerServices",
+      "attempts": [
+        {
+          "target": "modelmanagerservices-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ModelManagerServices.framework/Versions/A/ModelManagerServices",
+            "--target",
+            "modelmanagerservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/modelmanagerservices-resource-v1-batch-preparation.log",
+          "log_sha256": "4d60c85b95d1c07736139195ced91a961888337dcf5e656e3ddb18f4cdb9be66",
+          "preparation": "artifacts/modelmanagerservices-resource-v1-input.json"
+        },
+        {
+          "target": "modelmanagerservices-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "modelmanagerservices-resource-v1",
+            "--exact-import-audit",
+            "artifacts/modelmanagerservices-original-import-audit-v1.json",
+            "--target",
+            "modelmanagerservices-resource-v2",
+            "--build"
+          ],
+          "log": "logs/modelmanagerservices-resource-v2-batch-preparation.log",
+          "log_sha256": "df22da105228a3bc375ef68e18ff29949db03b8d708b06794d156ae6a401b2b4",
+          "preparation": "artifacts/modelmanagerservices-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "modelmanagerservices-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/TokenGenerationCore.framework/Versions/A/TokenGenerationCore",
+      "attempts": [
+        {
+          "target": "tokengenerationcore-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/TokenGenerationCore.framework/Versions/A/TokenGenerationCore",
+            "--target",
+            "tokengenerationcore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/tokengenerationcore-resource-v1-batch-preparation.log",
+          "log_sha256": "d8def96da4bf8ae23137cc6c89c7ffe136c34cdd2daf791cd5f324f2a76fce85",
+          "preparation": "artifacts/tokengenerationcore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "tokengenerationcore-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleIntelligenceReporting.framework/Versions/A/AppleIntelligenceReporting",
+      "attempts": [
+        {
+          "target": "appleintelligencereporting-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppleIntelligenceReporting.framework/Versions/A/AppleIntelligenceReporting",
+            "--target",
+            "appleintelligencereporting-resource-v1",
+            "--build"
+          ],
+          "log": "logs/appleintelligencereporting-resource-v1-batch-preparation.log",
+          "log_sha256": "0b6c7727d99ed5eec6ec8156993c1efbe32489a46218bcd19ee18366a0130140",
+          "preparation": "artifacts/appleintelligencereporting-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Unresolved reconstruction failure: logs/appleintelligencereporting-resource-v1-build.log"
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/UnifiedAssetFramework.framework/Versions/A/UnifiedAssetFramework",
+      "attempts": [
+        {
+          "target": "unifiedassetframework-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/UnifiedAssetFramework.framework/Versions/A/UnifiedAssetFramework",
+            "--target",
+            "unifiedassetframework-resource-v1",
+            "--build"
+          ],
+          "log": "logs/unifiedassetframework-resource-v1-batch-preparation.log",
+          "log_sha256": "d2d2c6b0c93b91a5da4702fe4f5825242393f0c0c1923c293882382d8dd4d5f8",
+          "preparation": "artifacts/unifiedassetframework-resource-v1-input.json"
+        },
+        {
+          "target": "unifiedassetframework-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "unifiedassetframework-resource-v1",
+            "--exact-import-audit",
+            "artifacts/unifiedassetframework-original-import-audit-v1.json",
+            "--target",
+            "unifiedassetframework-resource-v2",
+            "--build"
+          ],
+          "log": "logs/unifiedassetframework-resource-v2-batch-preparation.log",
+          "log_sha256": "5b1af0dbbe80f75f2d5e54d7a39c25a22a0a67e3f3367116dac872b91ec1e971",
+          "preparation": "artifacts/unifiedassetframework-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "unifiedassetframework-resource-v2"
+    },
+    {
+      "image": "/usr/lib/libperfcheck.dylib",
+      "attempts": [
+        {
+          "target": "libperfcheck-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libperfcheck.dylib",
+            "--target",
+            "libperfcheck-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libperfcheck-resource-v1-batch-preparation.log",
+          "log_sha256": "a6421e5b51190bc43aae7818e77f99a4985e42a1bef71d32282c26ac4cc30e92",
+          "preparation": "artifacts/libperfcheck-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libperfcheck-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SentencePieceInternal.framework/Versions/A/SentencePieceInternal",
+      "attempts": [
+        {
+          "target": "sentencepieceinternal-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SentencePieceInternal.framework/Versions/A/SentencePieceInternal",
+            "--target",
+            "sentencepieceinternal-resource-v1",
+            "--build"
+          ],
+          "log": "logs/sentencepieceinternal-resource-v1-batch-preparation.log",
+          "log_sha256": "6f7b62c0402f4218ee0132326d63af8280683e39a8020ccdf22fceb48b5506b8",
+          "preparation": "artifacts/sentencepieceinternal-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "sentencepieceinternal-resource-v1"
+    }
+  ]
+}

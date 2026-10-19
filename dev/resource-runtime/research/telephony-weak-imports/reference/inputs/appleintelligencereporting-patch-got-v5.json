@@ -1,0 +1,115 @@
+{
+  "target": "appleintelligencereporting-patch-got-v5",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AppleIntelligenceReporting.framework/Versions/A/AppleIntelligenceReporting",
+    "sha256": "1764ddd457f431fe786c4ac492861d8fcc5b6497fbdb587804cee4632b27a84e",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {},
+    "absent_weak_dependencies": [
+      "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary_AppleInternal.framework/Versions/A/IntelligencePlatformLibrary_AppleInternal"
+    ],
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 964,
+    "patch_got_range": [
+      "0x7ffb4000f000",
+      "0x7ffb4009a000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 2478080,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags",
+    "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary.framework/Versions/A/IntelligencePlatformLibrary",
+    "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary_AppleInternal.framework/Versions/A/IntelligencePlatformLibrary_AppleInternal",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftSynchronization.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswift_DarwinFoundation1.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "9ac6b2e85910b5f35df0da996f0c156f4f194211e68fc0f82f9326469577fb62",
+  "manifest_sha256": "bd5a4213f4db030b0ead0132209d783b541c81f5c8de57b6023a6af9a56e5712",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "appleintelligencereporting-patch-got-v5",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "appleintelligencereporting-resource-v2",
+  "exact_import_audit": "artifacts/appleintelligencereporting-original-import-audit-v2.json",
+  "exact_import_audit_sha256": "6d1f0d8bb6aba97aea50846a53408fdbae1692f608a3d58719997b1f9afd9349",
+  "typed_class_aliases": [],
+  "audit_unresolved_rows_not_selected": 1,
+  "original_patch_contract": {
+    "original_records": 321,
+    "nonzero_addends": 0,
+    "got_cells": 964,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffb40097bd0",
+          "0x7ffb40097be0"
+        ]
+      }
+    ],
+    "source_sha256": "224e3cad2d779a9c8f3d5623ba799f64762d9187db8414649b942b5ae053631b"
+  },
+  "original_absent_weak_dependencies": {
+    "original_image_sha256": "1764ddd457f431fe786c4ac492861d8fcc5b6497fbdb587804cee4632b27a84e",
+    "dependencies": [
+      {
+        "provider": "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary_AppleInternal.framework/Versions/A/IntelligencePlatformLibrary_AppleInternal",
+        "ordinal": 7,
+        "load_command": "0x80000018",
+        "undefined_weak_symbols": [
+          "_$s41IntelligencePlatformLibrary_AppleInternal14StreamResourceMp",
+          "_$s41IntelligencePlatformLibrary_AppleInternal14StreamResourcePAAE6sourceAA6Source_px0F0Rts_XPyKFZ",
+          "_$s41IntelligencePlatformLibrary_AppleInternal6SourceMp",
+          "_$s41IntelligencePlatformLibrary_AppleInternal6SourceP9sendEventyy6Stream_0H4TypeQZFTj"
+        ],
+        "original_provider_absent": true
+      }
+    ]
+  },
+  "absent_weak_audit_source_sha256": "3af43b14df349e5e303cd28c459b0ac905aa81640b1ef277885a6f238708b1ad",
+  "build_returncode": 0,
+  "log": "logs/appleintelligencereporting-patch-got-v5-build.log",
+  "log_sha256": "377a22eed07752281687ceadc2f44d7dfd1ac10d062aa1e8d06b0e3a35e9cd21"
+}

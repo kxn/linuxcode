@@ -1,0 +1,45 @@
+{
+  "target": "communicationsfilter-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CommunicationsFilter.framework/Versions/A/CommunicationsFilter",
+    "sha256": "c2fb2922da554e502dc879beaf7537ebb381e96b37496d35c0e98f51be6bfcdd",
+    "reference_set": "fullsystem",
+    "objc_classes": 6,
+    "import_providers": {}
+  },
+  "original_bytes": 49152,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/IMFoundation.framework/Versions/A/IMFoundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib"
+  ],
+  "previous_manifest_sha256": "9404ae4f4b3ce706188d0188c4be24ad7ffbbc9cb230056581934ec330d54ad0",
+  "manifest_sha256": "ef36af0980150d600ba09187e5b6528712fbc2a16c2bcddf119a1e76ba123ef3",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "communicationsfilter-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/communicationsfilter-resource-v1-build.log",
+  "log_sha256": "789a1e976bd5c38d872e5eefdc3b10b6fb95e1b3c0c3c7ef711031749626414b"
+}

@@ -1,0 +1,100 @@
+{
+  "target": "tokengeneration-resource-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/TokenGeneration.framework/Versions/A/TokenGeneration",
+    "sha256": "250b05887d96f84db82dc6fbc6566eee56ac7bcb64038261e301a586f1de51b7",
+    "reference_set": "fullsystem",
+    "objc_classes": 7,
+    "import_providers": {},
+    "absent_weak_dependencies": [
+      "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary_AppleInternal.framework/Versions/A/IntelligencePlatformLibrary_AppleInternal"
+    ]
+  },
+  "original_bytes": 6115328,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/TokenGenerationCore.framework/Versions/A/TokenGenerationCore",
+    "/System/Library/PrivateFrameworks/GenerativeModelsFoundation.framework/Versions/A/GenerativeModelsFoundation",
+    "/System/Library/PrivateFrameworks/GenerativeFunctionsFoundation.framework/Versions/A/GenerativeFunctionsFoundation",
+    "/System/Library/PrivateFrameworks/ModelManagerServices.framework/Versions/A/ModelManagerServices",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/PrivateFrameworks/AppleIntelligenceReporting.framework/Versions/A/AppleIntelligenceReporting",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/PrivateFrameworks/GenerativeFunctions.framework/Versions/A/GenerativeFunctions",
+    "/System/Library/PrivateFrameworks/GenerativeFunctionsInstrumentation.framework/Versions/A/GenerativeFunctionsInstrumentation",
+    "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary.framework/Versions/A/IntelligencePlatformLibrary",
+    "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary_AppleInternal.framework/Versions/A/IntelligencePlatformLibrary_AppleInternal",
+    "/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf",
+    "/System/Library/PrivateFrameworks/ModelCatalog.framework/Versions/A/ModelCatalog",
+    "/System/Library/PrivateFrameworks/PromptKit.framework/Versions/A/PromptKit",
+    "/usr/lib/swift/libswiftAccelerate.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftQuartzCore.dylib",
+    "/usr/lib/swift/libswiftSynchronization.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "previous_manifest_sha256": "d98b8b5c7b03436362bca7d9f45947ac29f3619970c876ab91cc057019bc449b",
+  "manifest_sha256": "ee31a62e9238b8d02d67fd955ee3222c953c6544e563243c0fb0ce2dc27662cf",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "tokengeneration-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "68adbc5fed47f6bdee78ecd4a3b303977973085009c58a0e6f80812e79475079",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_absent_weak_dependencies": {
+    "original_image_sha256": "250b05887d96f84db82dc6fbc6566eee56ac7bcb64038261e301a586f1de51b7",
+    "dependencies": [
+      {
+        "provider": "/System/Library/PrivateFrameworks/IntelligencePlatformLibrary_AppleInternal.framework/Versions/A/IntelligencePlatformLibrary_AppleInternal",
+        "ordinal": 15,
+        "load_command": "0x80000018",
+        "undefined_weak_symbols": [
+          "_$s41IntelligencePlatformLibrary_AppleInternal0eC0O7StreamsO15TokenGenerationO9InferenceO8RequestsOAA14StreamResourceAAMc",
+          "_$s41IntelligencePlatformLibrary_AppleInternal0eC0O7StreamsO15TokenGenerationO9InferenceO8RequestsOMa",
+          "_$s41IntelligencePlatformLibrary_AppleInternal0eC0OMa",
+          "_$s41IntelligencePlatformLibrary_AppleInternal0eC0OMn",
+          "_$s41IntelligencePlatformLibrary_AppleInternal0eC0ON",
+          "_$s41IntelligencePlatformLibrary_AppleInternal14StreamResourcePAAE6sourceAA6Source_px0F0Rts_XPyKFZ",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsV15clientRequestID10Foundation4UUIDVSgvs",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsV17absoluteTimestamp10Foundation4DateVSgvs",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsV21modelManagerRequestID10Foundation4UUIDVSgvs",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsV4data10Foundation4DataVvs",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsV9eventTypeSSvs",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsV9sessionID10Foundation4UUIDVSgvs",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsVAA9BuildableAAWP",
+          "_$s41IntelligencePlatformLibrary_AppleInternal23TokenGenerationRequestsVMa",
+          "_$s41IntelligencePlatformLibrary_AppleInternal6SourceP9sendEventyy6Stream_0H4TypeQZFTj",
+          "_$s41IntelligencePlatformLibrary_AppleInternal9BuildablePAAE4withyxyxzKXEKFZ"
+        ],
+        "original_provider_absent": true
+      }
+    ]
+  },
+  "build_returncode": 0,
+  "log": "logs/tokengeneration-resource-v2-build.log",
+  "log_sha256": "856f283c8bf3024221fff521faff2e13a007cc573217b444ce834b1002091b31"
+}

@@ -1,0 +1,142 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "generativemodels-patch-got-v2",
+      "candidate_sha256": "8217cfc3b8faa91bed930a2967abb1645b76aee5c29bc4fef9d858e2f4a87560",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 629232,
+            "sha256": "029cbe7733d24e037415759224c2468fcaae651b023059c34bbeb04c2ba85f44"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 4032,
+            "sha256": "04cd63836c25696868cadc2004bb7f549f99eddb58f5256ceb7ad2a5dcdd75c7"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1166,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 2040,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 116,
+        "original_null_pool_cells_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "generativemodelsfoundation-patch-got-v3",
+      "candidate_sha256": "3855eb1c50a34793174c82a50b0cbcfd620d8121c0c329545dd6882ed77e427d",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 284844,
+            "sha256": "66a1e93ca4be067c323b9acc0b18cea01b45a1480356129bc04dca74c1e5b4b2"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 2466,
+            "sha256": "d57d64facb9090819f26c4428cbd3767fecb859d61b7b29a4e47284e28a15cf2"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 778,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1425,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true
+    },
+    {
+      "target": "generativefunctionsfoundation-patch-got-v4",
+      "candidate_sha256": "76dd0b740e1f8c4d7c5aee4d9df02d0feeb5d029f4d9932de8512afe4f28d218",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 342375,
+            "sha256": "eebc5c74ead0c6cd85ac27a1902789bdc6f2f789d9a2605d5815e3536903d056"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 2100,
+            "sha256": "7b8cf7f6dead104b0d29b3320a4a4f82a9a775c2328156951f85d7010435c8eb"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 660,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1460,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true
+    },
+    {
+      "target": "appleintelligencereporting-patch-got-v5",
+      "candidate_sha256": "7d2b16d28f0f7b953bdbbd347c49a2bdf364bf6591279b439d415cc957dfa244",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 374646,
+            "sha256": "0db0c13c611ab4c267d74c1b1d70ee00eab6b3cd717bac70ed37dee63970b442"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 3702,
+            "sha256": "92eddb337a6797e8ddde706ffe162c8aca73919f3e528b738ac5b62b0caee612"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 964,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1452,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 2,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_original_NULL_pool_cell_rejected": true,
+      "missing_original_cache_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "f1d56c2afce28578878d9a29eeaf3cb65784fd24084eca04da97d93094239e40",
+    "scripts/inspect-preserved-patch-got.py": "e5a7a60c5ca406e6e646afc0c3fe3d30489b963374971d2d784755e271cfddaa"
+  }
+}

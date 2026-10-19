@@ -1,0 +1,94 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 374646,
+      "sha256": "0db0c13c611ab4c267d74c1b1d70ee00eab6b3cd717bac70ed37dee63970b442"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3702,
+      "sha256": "92eddb337a6797e8ddde706ffe162c8aca73919f3e528b738ac5b62b0caee612"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 964,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1452,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 2,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 13,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x83d8",
+        "first_section_prefix": "0xce0",
+        "symbol": "_$s27IntelligencePlatformLibrary05AppleA17ReportingBuddyLogV12DecisionTypeO5optInyA2EmFWC"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x83e0",
+        "first_section_prefix": "0xce0",
+        "symbol": "_$s27IntelligencePlatformLibrary05AppleA17ReportingBuddyLogV12DecisionTypeO6optOutyA2EmFWC"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x83e8",
+        "first_section_prefix": "0xce0",
+        "symbol": "_$s27IntelligencePlatformLibrary05AppleA17ReportingBuddyLogV12DecisionTypeO5lateryA2EmFWC"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x83f0",
+        "first_section_prefix": "0xce0",
+        "symbol": "_$s27IntelligencePlatformLibrary05AppleA17ReportingBuddyLogV12DecisionTypeO9dismissedyA2EmFWC"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x83f8",
+        "first_section_prefix": "0xce0",
+        "symbol": "_$s27IntelligencePlatformLibrary05AppleA17ReportingBuddyLogV12DecisionTypeO8notShownyA2EmFWC"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x8460",
+        "first_section_prefix": "0xce0",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x8468",
+        "first_section_prefix": "0xce0",
+        "symbol": "_swift_cvw_destroy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x8470",
+        "first_section_prefix": "0xce0",
+        "symbol": "_swift_cvw_initWithCopy"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-appleintelligencereporting-patch-got-v5/AppleIntelligenceReporting': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xb217)\n",
+    "original_validator": "runtime/original-dyld-validation-8zr9d89x/result.json",
+    "original_validator_sha256": "6f105353625b3c81ed27ce9b4ac834a80b5e5c50bd8ce16a85c6d97b54b0e9e7",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "b1dd99769b6a91342d29515ca185783fce2845f5cf4e58de0a2e911b626d4106",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "e5a7a60c5ca406e6e646afc0c3fe3d30489b963374971d2d784755e271cfddaa",
+    "config/coregraphics-image-pins.json": "bd5a4213f4db030b0ead0132209d783b541c81f5c8de57b6023a6af9a56e5712",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AppleIntelligenceReporting.framework/Versions/A/AppleIntelligenceReporting": "1764ddd457f431fe786c4ac492861d8fcc5b6497fbdb587804cee4632b27a84e",
+    "runtime/rebuilt-appleintelligencereporting-patch-got-v5/AppleIntelligenceReporting": "7d2b16d28f0f7b953bdbbd347c49a2bdf364bf6591279b439d415cc957dfa244",
+    "runtime/rebuilt-appleintelligencereporting-patch-got-v5/reconstruction.json": "68fd936bf8439e726f8d164c31c8fef658ff3687ee974c0299ec488fe7c77181"
+  },
+  "verified": true
+}

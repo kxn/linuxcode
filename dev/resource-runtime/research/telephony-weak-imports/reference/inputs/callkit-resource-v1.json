@@ -1,0 +1,50 @@
+{
+  "target": "callkit-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/CallKit.framework/Versions/A/CallKit",
+    "sha256": "fb0b0e1e93f3097cebc44f01a41bac7883f31da6753afe26bde33ac03a1eca23",
+    "reference_set": "fullsystem",
+    "objc_classes": 125,
+    "import_providers": {}
+  },
+  "original_bytes": 1171456,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libBASupport.dylib",
+    "/System/Library/PrivateFrameworks/IDS.framework/Versions/A/IDS",
+    "/System/Library/PrivateFrameworks/CommonUtilities.framework/Versions/A/CommonUtilities",
+    "/System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/PhoneNumbers",
+    "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+    "/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/PrivateFrameworks/FTServices.framework/Versions/A/FTServices",
+    "/System/Library/Frameworks/PushKit.framework/Versions/A/PushKit",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libsqlite3.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "c4864f145dd19d59e3a4245b3fad9679e213ea6c546b3c7b17235e97d5535160",
+  "manifest_sha256": "9404ae4f4b3ce706188d0188c4be24ad7ffbbc9cb230056581934ec330d54ad0",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "callkit-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/callkit-resource-v1-build.log",
+  "log_sha256": "157375daeef9594c9fe0a4647a28b4acb8dfe8ecbe8bf77f6d1657e5e12d6ee6"
+}

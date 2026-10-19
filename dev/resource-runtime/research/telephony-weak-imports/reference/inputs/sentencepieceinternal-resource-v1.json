@@ -1,0 +1,38 @@
+{
+  "target": "sentencepieceinternal-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/SentencePieceInternal.framework/Versions/A/SentencePieceInternal",
+    "sha256": "d6f8d55b1dcef3bc3f6a379ca46c1f276dafb06d9b1cc954add214435a028d39",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {}
+  },
+  "original_bytes": 917504,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "3081ccab525d4b6737ebd2a35b0b30412770fe3933944cec35fa57592f606799",
+  "manifest_sha256": "d98b8b5c7b03436362bca7d9f45947ac29f3619970c876ab91cc057019bc449b",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "sentencepieceinternal-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/sentencepieceinternal-resource-v1-build.log",
+  "log_sha256": "3841c294776f1cf70e66e6a1e6b727e69c91738446083950da82b20d67740b1c"
+}

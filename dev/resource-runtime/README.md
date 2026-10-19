@@ -157,3 +157,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [Unity 子进程环境与原版 plutil 修复](research/unity-exec-environment/README.md) 已恢复原版 .NET 环境枚举并补齐绝对路径 plutil，新的候选通过原版 ad-hoc 签名回归。最新构建在 Bee 因客体 `/proc` 判定 Linux 后拒绝 iOS 工具链，GameAssembly 仍未生成；包含源码、实际失败证据和后续定位。
 
 最新研究附件：[ScreenTime 依赖与 Swift 原指令保留](research/screentime-patch-got/README.md)，包含 33 个候选、批量准备/staging、实际二进制校验和完整 workspace 的失败证据；默认安装候选未升级。
+
+最新研究附件：[Telephony、原始弱引用与 KeyPath 环境](research/telephony-weak-imports/README.md)，包含 26 个候选、实际弱/强链接矩阵、原指令与 NULL 槽位校验，以及完整 workspace 的失败证据；默认安装候选未升级。

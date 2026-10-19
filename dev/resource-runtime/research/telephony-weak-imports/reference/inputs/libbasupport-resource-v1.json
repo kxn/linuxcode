@@ -1,0 +1,37 @@
+{
+  "target": "libbasupport-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libBASupport.dylib",
+    "sha256": "5eaa1ac937bd1454f94fc1be0fc7ca47f551c896cdb9e45904cf68e6425e6e0c",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 12288,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "74daf6d7d5861074564bd4b5c8ca72d95a3860e2d0dc78029a0c30c82d9c8fca",
+  "manifest_sha256": "01115a0fd4335fa07aa090a02b1c061c6f16ef96aa685731e320ade00e81e97e",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libbasupport-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libbasupport-resource-v1-build.log",
+  "log_sha256": "ee4e698ac61f1f19dd5dd93a7692694c390ebdfda1c00e7f7261e32b54fa53ca"
+}

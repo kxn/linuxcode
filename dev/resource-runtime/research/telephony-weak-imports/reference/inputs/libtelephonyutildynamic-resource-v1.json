@@ -1,0 +1,42 @@
+{
+  "target": "libtelephonyutildynamic-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libTelephonyUtilDynamic.dylib",
+    "sha256": "bb78ea05f8662060f0a7862210e10deff6fc221c70c29c00b87ed877f1d41d53",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {}
+  },
+  "original_bytes": 1110016,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/MSUDataAccessor.framework/Versions/A/MSUDataAccessor",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libz.1.dylib",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "01115a0fd4335fa07aa090a02b1c061c6f16ef96aa685731e320ade00e81e97e",
+  "manifest_sha256": "41ebb2faf45806be7e34378750d594acec5c32260c7387b922236f04b327c4fe",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libtelephonyutildynamic-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libtelephonyutildynamic-resource-v1-build.log",
+  "log_sha256": "34df1c9ee354cb45f6ae3964326a6edafee7a5ac1921e7fa2816d35b4e2ab864"
+}
