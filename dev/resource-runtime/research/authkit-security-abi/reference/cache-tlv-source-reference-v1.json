@@ -1,0 +1,12 @@
+{
+  "rule": "The cache builder substitutes __tlv_bootstrap+8 and a TLV_Thunkv2 layout; standalone disk ABI restoration is separately required.",
+  "source_files_sha256": {
+    "vendor/apple-dyld/cache_builder/NewSharedCacheBuilder.cpp": "58d1f19d122c16a04b04f27fb7336cb41afc9dfa5ed5cb28c22a93fc9d6d48c5",
+    "vendor/apple-dyld/libdyld/threadLocalHelpers.s": "50699dd3758b8e770a20e98626855677a932ddbc59160e66c1cbfeb87d5f758f",
+    "vendor/apple-dyld/libdyld/ThreadLocalVariables.h": "cfbb4c2db31702b8005d766d2bc605e11cf2af313de9e42ae02643afa602d5ed"
+  },
+  "validator": "scripts/cache-tlv-optimization.py",
+  "validator_sha256": "f89e05dfff195dcdd772fa227229a7e5c471fcfadbc748c45944c0a778920535",
+  "actual_original_security_descriptors": 2,
+  "actual_native_runtime_proof": "runtime/original-security-tlv-0d0al613/result.json"
+}

@@ -1,0 +1,62 @@
+{
+  "target": "keychaincircle-patch-got-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle",
+    "sha256": "151a4b6d0f5f1aff2194d7cda359fc429e1dd3a9738b8c3fc9f70874024381a2",
+    "reference_set": "fullsystem",
+    "objc_classes": 21,
+    "import_providers": {},
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 370,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 430080,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore",
+    "/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit",
+    "/System/Library/PrivateFrameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libcompression.dylib",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "8a4534eb36fe6f54b2b0defef0c48ce85d52a1129abf56492707bd75b2f7bc55",
+  "manifest_sha256": "62d0bac4669f95a359dc04a34d7beb6233547486fa14822746adfaec77e5832f",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "keychaincircle-patch-got-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "bacc25a7f17a511eb43f4d5e83f60c2a9cd70997d4ada75e56d7d52eba239f3a",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 641,
+    "nonzero_addends": 0,
+    "got_cells": 370,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/keychaincircle-patch-got-v2-build.log",
+  "log_sha256": "4d319931ec96aa5d916bd0f445e8ca47727580ab18328f2a4fe672d1520f9c49"
+}

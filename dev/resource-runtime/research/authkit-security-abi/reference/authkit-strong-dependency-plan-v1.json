@@ -1,0 +1,503 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-ordspvrs/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v100-stage.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "authkit-resource-v1"
+  ],
+  "images": {
+    "/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit": {
+      "original_sha256": "f3e58a9868654619a4c4a4492a7c8e1f5c420b4dba246b5b2d6483cd4df90a1f",
+      "original_bytes": 4304896,
+      "dependencies": [
+        {
+          "path": "/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/native-framework-stage/MobileKeyBag.framework/Versions/A/MobileKeyBag",
+            "runtime/native-framework-stage/MobileKeyBag.framework/MobileKeyBag"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/coregraphics-native-v100/frameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+            "runtime/coregraphics-native-v100/frameworks/CorePhoneNumbers.framework/CorePhoneNumbers"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/MultiverseSupport.framework/Versions/A/MultiverseSupport",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/device-identity-native/frameworks/MultiverseSupport.framework/Versions/A/MultiverseSupport",
+            "runtime/device-identity-native/frameworks/MultiverseSupport.framework/MultiverseSupport"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery",
+            "runtime/mdns-native/frameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery",
+            "runtime/mdns-native/frameworks/RemoteServiceDiscovery.framework/RemoteServiceDiscovery"
+          ]
+        },
+        {
+          "path": "/usr/lib/libMobileGestalt.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libMobileGestalt.dylib",
+            "runtime/mobilegestalt-native/libraries/libMobileGestalt.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/DiskManagement.framework/Versions/A/DiskManagement",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/DiskManagement.framework/Versions/A/DiskManagement",
+            "runtime/diskmanagement-nserror-source/frameworks/DiskManagement.framework/Versions/A/DiskManagement",
+            "runtime/diskmanagement-nserror-source/frameworks/DiskManagement.framework/DiskManagement"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport",
+          "load_command": "0xc",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/CoreServices"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Network.framework/Versions/A/Network",
+            "runtime/foundation-native-framework-stage/Network.framework/Versions/A/Network",
+            "runtime/foundation-native-framework-stage/Network.framework/Network"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v100/frameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+            "runtime/coregraphics-native-v100/frameworks/AAAFoundation.framework/AAAFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "runtime/foundation-native-framework-stage/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "runtime/foundation-native-framework-stage/DiskArbitration.framework/DiskArbitration"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/Versions/A/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/IOKit"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v100/frameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v100/frameworks/SoftLinking.framework/SoftLinking"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle",
+          "load_command": "0xc",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-resource-constant-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Versions/A/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-resource-constant-v1/frameworks/Security.framework/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Security"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+            "runtime/foundation-native-framework-stage/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+            "runtime/foundation-native-framework-stage/SystemConfiguration.framework/SystemConfiguration"
+          ]
+        },
+        {
+          "path": "/usr/lib/libcompression.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libcompression.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Accounts.framework/Versions/A/Accounts",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Accounts.framework/Versions/A/Accounts",
+            "runtime/coregraphics-native-v100/frameworks/Accounts.framework/Versions/A/Accounts",
+            "runtime/coregraphics-native-v100/frameworks/Accounts.framework/Accounts"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/URLFormatting.framework/Versions/A/URLFormatting",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/URLFormatting.framework/Versions/A/URLFormatting",
+            "runtime/ios-resource-lazy-v1/frameworks/URLFormatting.framework/URLFormatting"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v100/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        }
+      ]
+    },
+    "/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport": {
+      "original_sha256": "87d06efec44e515591adca6d882201efd86d26f6241f8d4690d6b9f6e2f741be",
+      "original_bytes": 86016,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+            "runtime/foundation-native-framework-stage/CFNetwork.framework/Versions/A/CFNetwork",
+            "runtime/foundation-native-framework-stage/CFNetwork.framework/CFNetwork"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-resource-constant-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Versions/A/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-resource-constant-v1/frameworks/Security.framework/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Security"
+          ]
+        },
+        {
+          "path": "/usr/lib/libicucore.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libicucore.A.dylib",
+            "runtime/foundation-native-library-stage/libicucore.A.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v100/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        }
+      ]
+    },
+    "/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle": {
+      "original_sha256": "151a4b6d0f5f1aff2194d7cda359fc429e1dd3a9738b8c3fc9f70874024381a2",
+      "original_bytes": 430080,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0x80000023",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+          "load_command": "0x80000023",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+            "runtime/coregraphics-native-v100/frameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+            "runtime/coregraphics-native-v100/frameworks/ProtocolBuffer.framework/ProtocolBuffer"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/native-framework-stage/AppleKeyStore.framework/Versions/A/AppleKeyStore",
+            "runtime/native-framework-stage/AppleKeyStore.framework/AppleKeyStore"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/coregraphics-native-v100/frameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+            "runtime/coregraphics-native-v100/frameworks/AAAFoundation.framework/AAAFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/Versions/A/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/IOKit"
+          ]
+        },
+        {
+          "path": "/usr/lib/libcompression.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libcompression.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-resource-constant-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Versions/A/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-resource-constant-v1/frameworks/Security.framework/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Security"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v100/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0x80000023",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v100/frameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v100/frameworks/SoftLinking.framework/SoftLinking"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-ordspvrs/result.json": "2008350807c0621cdc02419a9f70c5d9f6f073c297c54c469ba0e9429b669d39",
+    "artifacts/coregraphics-native-v100-stage.json": "48b695ea5fc41f161138bf76eae181a9de7328b3b0dde9f2bec6c3604df5d13b",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "653d5d0512881f1dada4402793ef3b6ad1a7c9e471a972caf0869e1554aac377",
+    "scripts/plan-original-resource-dependencies.py": "a561a1e1ac98edeb80b6b7b023ebc29c2a26fa7c188c39edac6f91a13da2964b"
+  }
+}

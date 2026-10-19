@@ -1,0 +1,56 @@
+{
+  "summary_only": true,
+  "full_local_report": "runtime/rebuilt-security-resource-original-patch-got-v3/reconstruction.json",
+  "full_local_report_sha256": "e3a82a72a479c5b12e7defbaedf90483c317cbb89ca34b5f8a4327ebf530b875",
+  "original_image_sha256": "53bad77d92bf3df5d6f50630be2dc2fcdff7321acf3563e05c3598558fe0e8f6",
+  "staged_image_sha256": "a2d7d1f61bafb937c775df742e0f04dc08e8c7868f2c098703f4b70bf954e815",
+  "rebases": 31419,
+  "bindings": 5303,
+  "exports": 4594,
+  "lazy_bindings": 1236,
+  "rip_instructions_patched": 0,
+  "installed": false,
+  "execution_verified": false,
+  "tls_metadata": {
+    "variables": 2,
+    "template_size": 64,
+    "descriptors": [
+      {
+        "offset": "0x3d8dbb20",
+        "template_offset": 8,
+        "zero_fill": true
+      },
+      {
+        "offset": "0x3d8dbb38",
+        "template_offset": 0,
+        "zero_fill": true
+      }
+    ]
+  },
+  "optimized_tlv_restoration": [
+    {
+      "slot": "0x7ff843b0fb20",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ff843b0fb50",
+      "template_size": 64,
+      "variable_offset": 8,
+      "cache_key": 133,
+      "template_delta": 0,
+      "raw_original_descriptor": "c853a9020006000085000000080000000000000040000000",
+      "requires_disk_ABI_restoration": true
+    },
+    {
+      "slot": "0x7ff843b0fb38",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ff843b0fb50",
+      "template_size": 64,
+      "variable_offset": 0,
+      "cache_key": 133,
+      "template_delta": 0,
+      "raw_original_descriptor": "c853a9020000000085000000000000000000000040000000",
+      "requires_disk_ABI_restoration": true
+    }
+  ]
+}

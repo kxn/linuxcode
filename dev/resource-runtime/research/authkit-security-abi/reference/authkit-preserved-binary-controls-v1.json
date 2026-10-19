@@ -1,0 +1,78 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "authkit-patch-got-v2",
+      "candidate_sha256": "d039ade518de1011a11d982e8c95c4cd6f8e0beb1be6c51aca92e44c4e9cecbc",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 2365404,
+            "sha256": "0f0ac49cda91661414e88fd8b6f5b7fe5eb5756970b4b4e1560ff0b53d480a46"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1224,
+            "sha256": "2dad320fa36e0ea8e1d26fbe471fbe1ecc9b3656f6ad449cac8fb02e86cdc3c2"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 447,
+        "nonzero_addends_verified": 19,
+        "serialized_bindings": 3926,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true
+    },
+    {
+      "target": "generativemodels-patch-got-v2",
+      "candidate_sha256": "8217cfc3b8faa91bed930a2967abb1645b76aee5c29bc4fef9d858e2f4a87560",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 629232,
+            "sha256": "029cbe7733d24e037415759224c2468fcaae651b023059c34bbeb04c2ba85f44"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 4032,
+            "sha256": "04cd63836c25696868cadc2004bb7f549f99eddb58f5256ceb7ad2a5dcdd75c7"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1166,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 2040,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 116,
+        "original_null_pool_cells_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "false_local_binding_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "8f00ee6235df3bf1ecfe7f2304be773d7caf323b0f5bacf5714d9f51eccc3295",
+    "scripts/inspect-preserved-patch-got.py": "e5a7a60c5ca406e6e646afc0c3fe3d30489b963374971d2d784755e271cfddaa"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "target": "security-resource-original-patch-got-v3",
+  "pin": {
+    "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "sha256": "53bad77d92bf3df5d6f50630be2dc2fcdff7321acf3563e05c3598558fe0e8f6",
+    "reference_set": "fullsystem",
+    "objc_classes": 103,
+    "import_providers": {},
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 454,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 1579,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 6111232,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore",
+    "/usr/lib/libCoreEntitlements.dylib",
+    "/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/CloudServices.framework/Versions/A/CloudServices",
+    "/System/Library/PrivateFrameworks/SymptomDiagnosticReporter.framework/Versions/A/SymptomDiagnosticReporter",
+    "/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression",
+    "/usr/lib/libDiagnosticMessagesClient.dylib",
+    "/usr/lib/libbsm.0.dylib",
+    "/usr/lib/libcoretls.dylib",
+    "/usr/lib/libcoretls_cfhelpers.dylib",
+    "/usr/lib/libpam.2.dylib",
+    "/usr/lib/libsqlite3.dylib",
+    "/usr/lib/libxar.1.dylib",
+    "/usr/lib/libz.1.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "a7a22a8212f173d3fe9c02e7078562cbb21c6fd41adf64d27813b71436754eb1",
+  "manifest_sha256": "cab11ff1164678d88271ab6e58ed3200d5cae4ad601e98d929709d89f323681c",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "security-resource-original-patch-got-v3",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "9c121ea738faf8a17f9cf2b57efb122f5b8760fc9f992d4b8551ce62e4326874",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 5165,
+    "nonzero_addends": 454,
+    "got_cells": 1579,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "original_cache_TLV_optimizations": [
+    {
+      "slot": "0x7ff843b0fb20",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ff843b0fb50",
+      "template_size": 64,
+      "variable_offset": 8,
+      "cache_key": 133,
+      "template_delta": 0,
+      "raw_original_descriptor": "c853a9020006000085000000080000000000000040000000",
+      "requires_disk_ABI_restoration": true
+    },
+    {
+      "slot": "0x7ff843b0fb38",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ff843b0fb50",
+      "template_size": 64,
+      "variable_offset": 0,
+      "cache_key": 133,
+      "template_delta": 0,
+      "raw_original_descriptor": "c853a9020000000085000000000000000000000040000000",
+      "requires_disk_ABI_restoration": true
+    }
+  ],
+  "TLV_validator_sha256": "f89e05dfff195dcdd772fa227229a7e5c471fcfadbc748c45944c0a778920535",
+  "build_returncode": 0,
+  "log": "logs/security-resource-original-patch-got-v3-build.log",
+  "log_sha256": "a672c132fcc3578f2b50580f2721b07828f785cf14cd6711c8418123662aa955"
+}

@@ -1,0 +1,145 @@
+{
+  "checked_at": "2026-10-19T21:42:52.762245+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "new_original_candidate_count": 8,
+  "candidates": [
+    {
+      "target": "authkit-patch-got-v2",
+      "path": "/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit",
+      "original_sha256": "f3e58a9868654619a4c4a4492a7c8e1f5c420b4dba246b5b2d6483cd4df90a1f",
+      "staged_sha256": "d039ade518de1011a11d982e8c95c4cd6f8e0beb1be6c51aca92e44c4e9cecbc",
+      "objc_classes": 214,
+      "exports": 1813,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    },
+    {
+      "target": "appleidauthsupport-patch-got-v2",
+      "path": "/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport",
+      "original_sha256": "87d06efec44e515591adca6d882201efd86d26f6241f8d4690d6b9f6e2f741be",
+      "staged_sha256": "b47e137bf69315577dd461de57466ca7c08e69ea3f7108b2a37b52cc07126e5f",
+      "objc_classes": 2,
+      "exports": 100,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    },
+    {
+      "target": "keychaincircle-patch-got-v2",
+      "path": "/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle",
+      "original_sha256": "151a4b6d0f5f1aff2194d7cda359fc429e1dd3a9738b8c3fc9f70874024381a2",
+      "staged_sha256": "b6422b4700e830277b3e3df1409927c7de9e84eef98e78db67fc1ce99fc330ba",
+      "objc_classes": 21,
+      "exports": 398,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    },
+    {
+      "target": "security-resource-original-patch-got-v3",
+      "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+      "original_sha256": "53bad77d92bf3df5d6f50630be2dc2fcdff7321acf3563e05c3598558fe0e8f6",
+      "staged_sha256": "a2d7d1f61bafb937c775df742e0f04dc08e8c7868f2c098703f4b70bf954e815",
+      "objc_classes": 103,
+      "exports": 4594,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    },
+    {
+      "target": "messagesecurity-patch-got-v3",
+      "path": "/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity",
+      "original_sha256": "f6881076b88d8d8952bb02414fcfe30bd984805061f9a7909a9b7f5b0b5fa1b6",
+      "staged_sha256": "64391cf9d95c24dbbaf6d2aa7c3f69663668ecb3ea4ddf47cbcabfad858e8bf4",
+      "objc_classes": 32,
+      "exports": 1706,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    },
+    {
+      "target": "applefscompression-patch-got-v3",
+      "path": "/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression",
+      "original_sha256": "67581f360fa285b6f5b79eca4db10327c1a83241e05cc20c11ffbc260955b677",
+      "staged_sha256": "96ba903fd2af252edff5fa084f3ba4703a7974a9c683dd36ca84a398d9680b7b",
+      "objc_classes": 0,
+      "exports": 45,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    },
+    {
+      "target": "urlformatting-categories-patch-got-v1",
+      "path": "/System/Library/PrivateFrameworks/URLFormatting.framework/Versions/A/URLFormatting",
+      "original_sha256": "b134b8f82948fefd18f482df09ac96d359751e32fd6a8bc56e59d06f90f70e8e",
+      "staged_sha256": "2669bcbf8597d376acd8287480f285da3153cccfc7564b95549e2ce54fcfb3a4",
+      "objc_classes": 0,
+      "exports": 0,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    },
+    {
+      "target": "oseligibility-patch-got-v6",
+      "path": "/System/Library/PrivateFrameworks/OSEligibility.framework/Versions/A/OSEligibility",
+      "original_sha256": "456fb396656e1c2e9c24d7d44f1e32d9043b79163ed8a16eb66f69930c30a99c",
+      "staged_sha256": "c5a889d121f42d95c57ca5f0800760bd1d25ea54aef6a245e354cf1ccfe77ef7",
+      "objc_classes": 5,
+      "exports": 371,
+      "original_instruction_bytes_preserved": true,
+      "runtime_API_behavior_globally_verified": false
+    }
+  ],
+  "sources": {
+    "scripts/cache-tlv-optimization.py": "f89e05dfff195dcdd772fa227229a7e5c471fcfadbc748c45944c0a778920535",
+    "scripts/cache-patch-metadata.py": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e",
+    "scripts/rebuild-c-cache-image.py": "320d1e926343b3e7784f4567d81f795796c5f74daca10ce0ee6c1b94d29c7284",
+    "scripts/prepare-resource-image-candidate.py": "bacc25a7f17a511eb43f4d5e83f60c2a9cd70997d4ada75e56d7d52eba239f3a",
+    "scripts/extend-coregraphics-stage.py": "8b2982c6ede30c6648027c9ffb6d3e61a2b6376d77350862175836a86b56fb4c",
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "scripts/test-cache-tlv-optimization.py": "536760418b9b86939de8aad18c3483966d769381329f5fbedac21b8118ce5e04",
+    "scripts/test-concurrent-resource-preparation.py": "582c74fe62ba78aa36cdc1b2f1d913445a854fa8a535dd955e680f5142726dfe",
+    "scripts/test-preserved-patch-got-binaries.py": "7f8b6870645fdff64ade35085872ed97c847455e8da3a3d7629ec2e09434cb38",
+    "scripts/stage-original-resource-security.py": "b5df3ab4be70a61bcf10d8830aa7819558a4923b4f12dccd95084e3c5086bced",
+    "scripts/probe-original-security-tlv.py": "7f7eac9b5520107f605ceac97d4a671ba6d7440db7f3ed3346faf8a612d5dcd3",
+    "fixtures/hello/security-tlv.c": "52a477caba975d307cf520c15f4d0950f7f10f132525edc9052dcb14086b28f5"
+  },
+  "evidence": {
+    "runtime/original-security-tlv-0d0al613/result.json": "612c938c7bf2e40c1d07c874f957bf3720739cf013da9a0ac597030540cf5c63",
+    "runtime/original-security-tlv-f8y5lay_/result.json": "ab5259335de0125083cd2b7b4a87c8e96bf85ddcfdc3501f90a764ec15e0e28f",
+    "runtime/original-security-tlv-1r6aw12a/result.json": "fe53cf5538ed6e790882831a9f22e6cbfb3fe918d8ba5cd10afe1ae3a32029ae",
+    "runtime/original-dyld-validation-8qloduhu/result.json": "a98fa68052763a8f03a6254b07e7bae1c78e30328bc574169faadd4cb66a4013",
+    "runtime/direct-resource-tools-cg7ns89n/result.json": "c6dfa83f0380e67ee3089467a178a5e619faa4e33b0be5608eb3d11ff6c983e0",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-b5b088ebc079.json": "625cc78e9e522963e9e4f3177da0450470b9ea6da3be5f549b09d3bce80c583b",
+    "artifacts/unity-ios-cocoapods-v14-product-inspection.json": "529133af177ee6d0c18f339135bd5a0cfd2fbfb0896227c037ebf67e1318e5c8",
+    "artifacts/urlformatting-category-method-contract-v1.json": "cbe69299418e525a3b748ddbbc76e089ab9b241a416930630f3fc081f1784438",
+    "artifacts/resource-preparation-lost-update-recovery-v1.json": "85f1992eb90a97d9f0a397c6d01b3d451debf91866baf522144dcca9b9d531ee",
+    "artifacts/authkit-security-selected-binary-controls-v4.json": "6afc3223d126f1857ad1cc8d93b97d2f7e866db6e6c16b5ba86af648668b9ad0"
+  },
+  "selected_configuration": "config/direct-resource-tool-environment-v55.json",
+  "selected_graphics": "artifacts/coregraphics-native-v105-stage.json",
+  "selected_private_runtime": "artifacts/private-procfs-v11-stage.json",
+  "selected_original_security": "artifacts/security-resource-original-v3-stage.json",
+  "original_Security_native_TLS_verified": true,
+  "native_TLS_threads": 4,
+  "native_TLS_descriptors": 2,
+  "native_TLS_queries": 2048,
+  "original_session_class_identity_symbols_verified": 10,
+  "original_category_selectors_and_types_verified": 26,
+  "structure_and_preparation_tests": 41,
+  "original_Unity_workspace_native_status": [
+    "65"
+  ],
+  "original_Unity_workspace_outer_status": 65,
+  "original_Unity_build_report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-b5b088ebc079.json",
+  "UTI_preflight_verified": true,
+  "five_target_graph_verified": true,
+  "original_resource_tool_queries_observed": true,
+  "resource_compilation_verified": false,
+  "full_Unity_App_verified": false,
+  "full_UE_App_verified": false,
+  "signing_with_original_security_verified": false,
+  "developer_identity_signing_verified": false,
+  "installer_default_promoted": false,
+  "next_blocker": "SystemAdministration requires LocalAuthentication _OBJC_CLASS_$_LAUserStore",
+  "next_work": [
+    "Recover required original LocalAuthentication classes and dependencies.",
+    "Complete actual resource compilation and Unity/AFNetworking linking/signing.",
+    "Verify UE, developer identities/provisioning and archive/export."
+  ]
+}

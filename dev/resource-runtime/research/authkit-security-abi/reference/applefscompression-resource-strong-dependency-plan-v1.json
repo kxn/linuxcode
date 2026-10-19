@@ -1,0 +1,95 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-ko3_lny2/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v102-stage.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "applefscompression-resource-v1"
+  ],
+  "images": {
+    "/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression": {
+      "original_sha256": "67581f360fa285b6f5b79eca4db10327c1a83241e05cc20c11ffbc260955b677",
+      "original_bytes": 61440,
+      "dependencies": [
+        {
+          "path": "/usr/lib/libz.1.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libz.1.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/liblzma.5.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/liblzma.5.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libcompression.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libcompression.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libc++.1.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libc++.1.dylib",
+            "runtime/expected-access-source/libraries/libc++.1.dylib",
+            "runtime/typed-new-delete-source/libraries/libc++.1.dylib",
+            "runtime/native-library-stage/libc++.1.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v102/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-ko3_lny2/result.json": "9900d86b6e1150cd534e5390d04b38ba47c662068b86473c997fb9d89fecf0ce",
+    "artifacts/coregraphics-native-v102-stage.json": "a5e539137a219039a19527284067fbfa6fb7d07c2faeae94ff15c3643a0a7a48",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "1d54a4321daeb7f4d534644f3a4c35bc9f0d32d4b94676e74a0aec9b8107d3e9",
+    "scripts/plan-original-resource-dependencies.py": "a561a1e1ac98edeb80b6b7b023ebc29c2a26fa7c188c39edac6f91a13da2964b"
+  }
+}

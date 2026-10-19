@@ -1,0 +1,71 @@
+{
+  "target": "applefscompression-patch-got-v3",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression",
+    "sha256": "67581f360fa285b6f5b79eca4db10327c1a83241e05cc20c11ffbc260955b677",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 169,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 61440,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/liblzma.5.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libcompression.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "8e7330f91bbc918cc7c58054d3b64809d2957e5e9651f166c3402db8761e59f6",
+  "manifest_sha256": "cdd053a61ca0259151fbb8be69f267723251a406be6bb736b51bf8670752e1ba",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "applefscompression-patch-got-v3",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "bacc25a7f17a511eb43f4d5e83f60c2a9cd70997d4ada75e56d7d52eba239f3a",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 154,
+    "nonzero_addends": 0,
+    "got_cells": 169,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/applefscompression-patch-got-v3-build.log",
+  "log_sha256": "7ddf43644655f36225f7065c09df9de5c8454eae1fc4ea84e6dc2c9c1e78470d"
+}

@@ -1,0 +1,192 @@
+{
+  "verified": true,
+  "candidate": "runtime/rebuilt-urlformatting-categories-patch-got-v1/URLFormatting",
+  "candidate_sha256": "2669bcbf8597d376acd8287480f285da3153cccfc7564b95549e2ce54fcfb3a4",
+  "original_methods_verified": 26,
+  "checks": [
+    {
+      "kind": "instance",
+      "selector": "_lp_userVisibleHost",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_hasCaseInsensitivePrefix:",
+      "type": "c24@0:8@16",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_hasCaseInsensitiveSubstring:startingAt:",
+      "type": "c32@0:8@16Q24",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_highLevelDomainFromComponents:indexOfFirstHighLevelDomainComponent:indexOfFirstTopLevelDomainComponent:",
+      "type": "@40@0:8@16^Q24^Q32",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_highLevelDomainFromHost",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_hostByStrippingTopLevelDomain",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_lengthOfDeepSubdomainsFromComponents:",
+      "type": "Q24@0:8@16",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_similarityToString:",
+      "type": "f24@0:8@16",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_simplifiedUserVisibleURLStringWithSimplifications:forDisplayOnly:",
+      "type": "@28@0:8Q16c24",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_stringByDeletingTrailingSlash",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_stringByDeletingUsernameAndPassword",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_stringByTrimmingWhitespace",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_stringForcingLeftToRightDirection",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b6fe8",
+      "candidate_list": "0xa010"
+    },
+    {
+      "kind": "class",
+      "selector": "_lp_reverseEnumerateComponents:usingBlock:",
+      "type": "v32@0:8@16@?24",
+      "old_list": "0x7ff9078b6fb0",
+      "candidate_list": "0xa3c8"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_userVisibleStringUsesEncodedHost",
+      "type": "c16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_userVisibleString",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_URLBySortingQueryItems",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_URLByDeletingCommonIndexPageNames",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_highLevelDomain",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_isHTTPFamilyURL",
+      "type": "c16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_originalData",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_simplifiedDisplayString",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_simplifiedStringForDisplayOnly:",
+      "type": "@20@0:8c16",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "instance",
+      "selector": "_lp_simplifiedURLStringForFuzzyMatching",
+      "type": "@16@0:8",
+      "old_list": "0x7ff9078b7090",
+      "candidate_list": "0xa428"
+    },
+    {
+      "kind": "class",
+      "selector": "_lp_URLWithUserTypedString:relativeToURL:",
+      "type": "@32@0:8@16@24",
+      "old_list": "0x7ff9078b6fc8",
+      "candidate_list": "0xa650"
+    },
+    {
+      "kind": "class",
+      "selector": "_lp_URLWithData:baseURL:",
+      "type": "@32@0:8@16@24",
+      "old_list": "0x7ff9078b6fc8",
+      "candidate_list": "0xa650"
+    }
+  ],
+  "original_small_headers_converted_to_disk_pointer_lists": true,
+  "runtime_execution_verified": false
+}

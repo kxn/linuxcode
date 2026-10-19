@@ -1,0 +1,57 @@
+{
+  "target": "appleidauthsupport-patch-got-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport",
+    "sha256": "87d06efec44e515591adca6d882201efd86d26f6241f8d4690d6b9f6e2f741be",
+    "reference_set": "fullsystem",
+    "objc_classes": 2,
+    "import_providers": {},
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 205,
+    "patch_got_range": [
+      "0x7ff840004000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 86016,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libicucore.A.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "cdd053a61ca0259151fbb8be69f267723251a406be6bb736b51bf8670752e1ba",
+  "manifest_sha256": "8a4534eb36fe6f54b2b0defef0c48ce85d52a1129abf56492707bd75b2f7bc55",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "appleidauthsupport-patch-got-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "bacc25a7f17a511eb43f4d5e83f60c2a9cd70997d4ada75e56d7d52eba239f3a",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 196,
+    "nonzero_addends": 0,
+    "got_cells": 205,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/appleidauthsupport-patch-got-v2-build.log",
+  "log_sha256": "24cc37cc320a86233242bd406d1e81c674d5fb6bd1bce587f34b8c59ef70e0dd"
+}

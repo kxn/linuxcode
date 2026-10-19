@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 100422,
+      "sha256": "f95a0f69a15f7c9f2ecac5a829b8e5740d0a83e63ab9c49bf20b51680acb5f5b"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 822,
+      "sha256": "7dd949f4f4f392bfd4661d01eca4a50f6ec56433177cad8377e1edd6082e0e15"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 217,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 344,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 22,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x23d8",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x23f8",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2418",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2438",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2458",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2478",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2498",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x24b8",
+        "first_section_prefix": "0xb98",
+        "symbol": "_$sytWV"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-oseligibility-patch-got-v6/OSEligibility': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1554)\n",
+    "original_validator": "runtime/original-dyld-validation-8qloduhu/result.json",
+    "original_validator_sha256": "a98fa68052763a8f03a6254b07e7bae1c78e30328bc574169faadd4cb66a4013",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "b40f71820c5b086b01d9dce7b330e9c1ccdd62001fbe27c6cefdaab82c20e6c1",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "e1a1cd450e3285ef2c2f38406bc45939f0fa499316cc7fc04d7fdbaeb575043f",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/OSEligibility.framework/Versions/A/OSEligibility": "456fb396656e1c2e9c24d7d44f1e32d9043b79163ed8a16eb66f69930c30a99c",
+    "runtime/rebuilt-oseligibility-patch-got-v6/OSEligibility": "c5a889d121f42d95c57ca5f0800760bd1d25ea54aef6a245e354cf1ccfe77ef7",
+    "runtime/rebuilt-oseligibility-patch-got-v6/reconstruction.json": "b88ef86424510e82ea25030c3b693de5235eba66914593b4e435517d3b751862"
+  },
+  "verified": true
+}

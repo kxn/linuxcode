@@ -1,0 +1,267 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "authkit-patch-got-v2",
+      "candidate_sha256": "d039ade518de1011a11d982e8c95c4cd6f8e0beb1be6c51aca92e44c4e9cecbc",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 2365404,
+            "sha256": "0f0ac49cda91661414e88fd8b6f5b7fe5eb5756970b4b4e1560ff0b53d480a46"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1224,
+            "sha256": "2dad320fa36e0ea8e1d26fbe471fbe1ecc9b3656f6ad449cac8fb02e86cdc3c2"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 447,
+        "nonzero_addends_verified": 19,
+        "serialized_bindings": 3926,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true
+    },
+    {
+      "target": "appleidauthsupport-patch-got-v2",
+      "candidate_sha256": "b47e137bf69315577dd461de57466ca7c08e69ea3f7108b2a37b52cc07126e5f",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 32800,
+            "sha256": "67c4e6f9b690375a4570dcedd9f59e4343b2a2fdca3c0dd446e7555a95ae2f95"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 786,
+            "sha256": "5fab307cce6a38225524d90d6957586147679e3cab2f25d6dc4f2c4fdb066f55"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 205,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 402,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true
+    },
+    {
+      "target": "keychaincircle-patch-got-v2",
+      "candidate_sha256": "b6422b4700e830277b3e3df1409927c7de9e84eef98e78db67fc1ce99fc330ba",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 199610,
+            "sha256": "cf5f3bbcdead75e80e0102cd28db279fd89ff6357ae24c7e2ab597d42cb3e736"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1380,
+            "sha256": "d21e03c9d3be608297e3dcdffbbc5a528ff9009b5b1cf339085f039dc1d3eccb"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__delay_helper",
+            "bytes": 186,
+            "sha256": "1544d31b6375a267ca159a79c410b99b1e702da892f2f90c4d0575c20a61f54e"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 370,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 954,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true
+    },
+    {
+      "target": "security-resource-original-patch-got-v3",
+      "candidate_sha256": "a2d7d1f61bafb937c775df742e0f04dc08e8c7868f2c098703f4b70bf954e815",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 3380030,
+            "sha256": "f66747efdce8da5ada689f24913afce2ca4688afece391c26589536e8c974737"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 7506,
+            "sha256": "77f99ccb47b003f9fed57b74bebfa893b2cc543a78ed84715ca36afd3d51ed8d"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__delay_helper",
+            "bytes": 294,
+            "sha256": "d5276bd23ee3ae7609f549079099f4246fbc5a2f4d073da5aabdb5c0148ce506"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1579,
+        "nonzero_addends_verified": 454,
+        "serialized_bindings": 6539,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 5,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 2,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "false_local_binding_proof_rejected": true,
+      "changed_TLV_key_rejected": true,
+      "changed_TLV_offset_rejected": true,
+      "missing_original_TLV_cache_proof_rejected": true
+    },
+    {
+      "target": "messagesecurity-patch-got-v3",
+      "candidate_sha256": "64391cf9d95c24dbbaf6d2aa7c3f69663668ecb3ea4ddf47cbcabfad858e8bf4",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 330400,
+            "sha256": "5724519cdd91a51a1e5aaa3ec34c211eee4c190e17b8ffaebf59261d1b55f4bc"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1470,
+            "sha256": "860012fc410b2aac5748f106576fa1f939ca9dd6611d67f6c3d65c53c87e10da"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 442,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1192,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true
+    },
+    {
+      "target": "applefscompression-patch-got-v3",
+      "candidate_sha256": "96ba903fd2af252edff5fa084f3ba4703a7974a9c683dd36ca84a398d9680b7b",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 31130,
+            "sha256": "c8f779418f044a68013dc0bfb0e3259ef06ddcdcae1652003cab0df3c6cf39a4"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 792,
+            "sha256": "3faaea89731fd4de4ca54f66e1faca252028e2e981f1c4459e20b98fc2a6b918"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 169,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 324,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true
+    },
+    {
+      "target": "appleintelligencereporting-patch-got-v5",
+      "candidate_sha256": "7d2b16d28f0f7b953bdbbd347c49a2bdf364bf6591279b439d415cc957dfa244",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 374646,
+            "sha256": "0db0c13c611ab4c267d74c1b1d70ee00eab6b3cd717bac70ed37dee63970b442"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 3702,
+            "sha256": "92eddb337a6797e8ddde706ffe162c8aca73919f3e528b738ac5b62b0caee612"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 964,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1452,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 2,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "changed_original_NULL_pool_cell_rejected": true,
+      "missing_original_cache_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "7f8b6870645fdff64ade35085872ed97c847455e8da3a3d7629ec2e09434cb38",
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c"
+  }
+}

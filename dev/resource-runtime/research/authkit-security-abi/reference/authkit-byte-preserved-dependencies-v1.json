@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "attempts": [
+    {
+      "target": "appleidauthsupport-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport",
+      "command": [
+        "python3",
+        "scripts/prepare-resource-image-candidate.py",
+        "--image",
+        "/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport",
+        "--preserve-code-with-patch-got",
+        "--patch-got-renamed-reexports",
+        "--target",
+        "appleidauthsupport-patch-got-v2",
+        "--build"
+      ],
+      "returncode": 0,
+      "log": "logs/appleidauthsupport-patch-got-v2-preparation.log"
+    },
+    {
+      "target": "keychaincircle-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle",
+      "command": [
+        "python3",
+        "scripts/prepare-resource-image-candidate.py",
+        "--image",
+        "/System/Library/PrivateFrameworks/KeychainCircle.framework/Versions/A/KeychainCircle",
+        "--preserve-code-with-patch-got",
+        "--patch-got-renamed-reexports",
+        "--target",
+        "keychaincircle-patch-got-v2",
+        "--build"
+      ],
+      "returncode": 0,
+      "log": "logs/keychaincircle-patch-got-v2-preparation.log"
+    }
+  ]
+}

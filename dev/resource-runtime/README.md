@@ -161,3 +161,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 最新研究附件：[Telephony、原始弱引用与 KeyPath 环境](research/telephony-weak-imports/README.md)，包含 26 个候选、实际弱/强链接矩阵、原指令与 NULL 槽位校验，以及完整 workspace 的失败证据；默认安装候选未升级。
 
 [CMCapture 与转导出检查点](research/cmcapture-reexports/README.md) 保存 42 个原版依赖候选、显式导出链审计、原子准备清单和嵌套 framework 路径修复。真实构建与资源工具结果及未完成范围见该附件的 evidence.json；默认安装候选没有提升。
+
+[AuthKit / Security 与缓存 ABI 检查点](research/authkit-security-abi/README.md) 保存八个保留原始指令的候选、原生 Security TLS / 类身份验证、URLFormatting 类别方法表恢复与候选发布写入锁。完整 Unity workspace 仍因 LocalAuthentication 的 LAUserStore 缺失而返回 65；默认安装环境未提升。
