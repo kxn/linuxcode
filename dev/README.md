@@ -107,3 +107,5 @@ shell 的工作目录为指定 workspace，设置 `CC=clang-19`、`CXX=clang++-1
 [原版 codesign 附件](resource-runtime/research/native-codesign/README.md) 保存了后续内核扩展属性源码、缓存提示、新接口兼容、原版工具入口和实测证据。原版 xcodebuild 与原版 codesign 已一起完成简单 CocoaPods App 的 ad-hoc 构建，整合 PATH 入口也已复现。附件显式复制到对应工作区，不由较早固定 overlay 自动应用；仍需完整研究基线，不能把源码打包成功当作干净机器重建成功。
 
 [Unity 6 事件注册修复](resource-runtime/research/unity-kqueue-receipts/README.md) 已让原版 IL2CPP 越过 EAGAIN，启动 Bee 和 il2cpp-compile。完整源码库通过事件、共享内存和原版 ad-hoc 签名回归；当前编译仍因子进程环境/`uname` 查找失败，实际 GameAssembly 产物尚未生成。
+
+[Unity 子进程环境与原版 plutil 修复](resource-runtime/research/unity-exec-environment/README.md) 已恢复原版 .NET 环境枚举并补齐绝对路径 plutil，新的候选通过原版 ad-hoc 签名回归。最新构建在 Bee 因客体 `/proc` 判定 Linux 后拒绝 iOS 工具链，GameAssembly 仍未生成；包含源码、实际失败证据和后续定位。
