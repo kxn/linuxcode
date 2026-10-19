@@ -4,6 +4,8 @@
 
 目前已有**原版 xcodebuild 编译并用原版 codesign 完成 CocoaPod iPhoneOS/arm64 App 的 ad-hoc 签名**的研究里程碑；整合工程的 PATH 入口也已从全新 DerivedData 复现。它使用单独的 CoreServices 诊断策略，尚不是完整 Unity/UE 或开发者证书 CI 环境。本工程把安装、依赖锁定、候选运行入口和开发工具集中起来；完整成功候选的干净机器重建还没有自动化完毕。
 
+游戏工程的后续研究已通过原版 Unity 6 IL2CPP/Bee 生成并独立核对 377 个 iPhoneOS/arm64 静态库对象，并将真实 CocoaPods/AFNetworking 接入完整 workspace；**完整 Unity/UE App 尚未构建成功**。最新的[原始绑定表与代码字节恢复检查点](dev/resource-runtime/research/native-cache-patch-got/README.md)恢复了 AppleIDSSO 等七个资源依赖候选，直接 actool/ibtool 仍缺 BiomeStreams；本轮完整 workspace 重试在 CoreSimulator 服务加载等待中超时，尚未到达资源调用。研究附件没有升级默认安装候选。
+
 ```bash
 git clone https://github.com/kxn/linuxcode.git
 cd linuxcode
@@ -44,12 +46,12 @@ python3 linuxcode.py package --output dist/linuxcode-0.1.0-source.tar.gz
 
 [原版 CoreGraphics 图像处理实验](dev/resource-runtime/research/native-coregraphics/README.md) 已通过真实位图绘制和原版 ImageIO 的 PNG 像素检查。颜色转换对象创建和 actool/ibtool 仍失败；源码及失败证据作为独立开发附件保存。
 
-[后续资源依赖开发检查点](dev/resource-runtime/research/native-resource-dependencies/README.md) 保存 Swift 泛型环境和 accessible-function 表的解析修复、70 个原版依赖的延迟绑定恢复、原版 SIMD 数值检查及实际失败证据。CoreVideo CPU 缓冲区仍缺 IOSurface 服务；actool/ibtool 最新实验缺 AppleIDSSOAuthentication。它没有改变安装基线，也没有宣称资源编译已完成。
+[后续资源依赖开发检查点](dev/resource-runtime/research/native-resource-dependencies/README.md) 保存 Swift 泛型环境和 accessible-function 表的解析修复、70 个原版依赖的延迟绑定恢复、原版 SIMD 数值检查及当时缺少 AppleIDSSOAuthentication 的失败证据。CoreVideo CPU 缓冲区仍缺 IOSurface 服务。它没有改变安装基线，也没有宣称资源编译已完成。
 
 [Unity 宿主工具检查点](dev/resource-runtime/research/unity-host-tools/README.md) 保存 Darling 对动态描述符上限的源码修复、原版 IL2CPP/Bee 启动结果，以及 Unity 6 共享内存重映射的实际失败。尚未完成游戏 App 构建。
 
 [Unity 6 共享内存与启动修复](dev/resource-runtime/research/unity-shared-remap/README.md) 已通过原版 IL2CPP/Bee 启动和实际内存共享检查。该检查点记录了 GameAssembly 编译驱动的异步 socket 注册错误；Xcode 的成功横幅与缺失的实际产物被独立区分，尚未完成游戏编译。
 
-[Unity 6 事件注册修复](dev/resource-runtime/research/unity-kqueue-receipts/README.md) 已让原版 IL2CPP 越过 EAGAIN，启动 Bee 和 il2cpp-compile。完整源码库通过事件、共享内存和原版 ad-hoc 签名回归；当前编译仍因子进程环境/`uname` 查找失败，实际 GameAssembly 产物尚未生成。
+[Unity 6 事件注册修复](dev/resource-runtime/research/unity-kqueue-receipts/README.md) 已让原版 IL2CPP 越过 EAGAIN，启动 Bee 和 il2cpp-compile。完整源码库通过事件、共享内存和原版 ad-hoc 签名回归；该检查点当时仍因子进程环境/`uname` 查找失败，尚未生成 GameAssembly。
 
-[Unity 子进程环境与原版 plutil 修复](dev/resource-runtime/research/unity-exec-environment/README.md) 已恢复原版 .NET 环境枚举并补齐绝对路径 plutil，新的候选通过原版 ad-hoc 签名回归。最新构建在 Bee 因客体 `/proc` 判定 Linux 后拒绝 iOS 工具链，GameAssembly 仍未生成；包含源码、实际失败证据和后续定位。
+[Unity 子进程环境与原版 plutil 修复](dev/resource-runtime/research/unity-exec-environment/README.md) 已恢复原版 .NET 环境枚举并补齐绝对路径 plutil，候选通过原版 ad-hoc 签名回归。该检查点记录了 Bee 因客体 `/proc` 判定 Linux 而拒绝 iOS 工具链的旧失败；后续静态库成功及完整 scheme 的范围见[真实 Unity/CocoaPods 工作流](dev/resource-runtime/research/unity-full-app-cocoapods/README.md)和上方最新状态。
