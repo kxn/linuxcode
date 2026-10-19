@@ -2,7 +2,7 @@
 
 本目录在整合仓库的 `main` 维护，向固定的 `runtime-2026.10.19` 源码工作区应用一组可审阅、可回滚的更新。Darling 及其子模块仍在原有 fork 中维护，不新增开发分支或提交身份。
 
-这批代码恢复 64 个明确锁定的原版 Intel 资源映像，补上 Swift KeyPath 二进制泛型环境、缓存合并的 Objective-C 协议引用和类引用表。它是资源工具兼容性的开发材料。**原版 actool/ibtool 尚未完成启动和资源编译**；最新实际缺口是 DesktopServicesPriv 所需的 Sharing.framework。没有完成 Unity/UE、签名或完整冷安装。
+这批代码恢复 67 个明确锁定的原版 Intel 资源映像，补上 Swift KeyPath 二进制泛型环境、缓存合并的 Objective-C 协议引用和类引用表。它是资源工具兼容性的开发材料。**原版 actool/ibtool 尚未完成启动和资源编译**；本次公开候选最新实际缺口是 Sharing 所需的 CoreWiFi.framework。没有完成 Unity/UE、签名或完整冷安装。
 
 ## 应用到开发工作区
 
@@ -47,7 +47,7 @@ python3 dev/resource-runtime/build-resources.py --workspace /path/to/workspace \
   --target telephonyutilities-resource-native
 ```
 
-省略 `--target` 会按 `overlay.json` 中实际验证过的参数重建全部 64 项。每次运行保存新的 `logs/developer-resources-*/` 及结果 JSON，首个失败会停止后续构建。输出在 `runtime/rebuilt-<target>/`，不会安装或选入默认运行根。请在自己的开发工作区迭代；重建会更新该目标的实验产物与报告。
+省略 `--target` 会按 `overlay.json` 中实际验证过的参数重建全部 67 项。每次运行保存新的 `logs/developer-resources-*/` 及结果 JSON，首个失败会停止后续构建。输出在 `runtime/rebuilt-<target>/`，不会安装或选入默认运行根。请在自己的开发工作区迭代；重建会更新该目标的实验产物与报告。
 
 相关检查：
 
@@ -73,7 +73,31 @@ python3 /path/to/workspace/scripts/probe-ios-resource-tools.py \
 
 每个 stage/tag 必须使用新名字，以保留旧证据。探测清除宿主及 Darwin 子进程中的 DISPLAY、WAYLAND_DISPLAY、XAUTHORITY，串行执行原版工具，并同时核对原生命令状态标记和外层退出码。`ibtoold` 是命令行后台辅助进程；本项目不以桌面或显示服务器为前提。实际资源编译通过前，不把版本查询或框架加载进展记作完成。
 
-独立资源路径尚未整合进原版 xcrun 的整个构建进程树。运行原版 Apple Swift 的 KeyPath 测试需要上述完整候选；它已实际完成三个泛型投影，并复现 marker 协议造成的声明/实际需求条数差异，原始元数据头没有改写。选定共享重建回归的两个输入配置另存于 `config/ios-resource-regression-pins.json`，避免覆盖原候选产物。
+资源路径已增加私有 `xcrun` 分发入口：保留全部原始参数；仅执行 `actool`、`ibtool` 时恢复资源路径。SDK 查询和其他工具保留已验证的编译环境，Ruby/OpenSSL 在调用前清除覆盖库路径。这样避免旧 Ruby 的 `rbconfig.rb` 在启动时调用 `xcrun --show-sdk-path`，把资源库带进 SDK 查询进程。
+
+原版 `xcrun` 还通过提供 dyld API 的系统库的最低部署版本推断宿主版本。旧源码库声明 11.0，导致最低要求 14.0 的原版 Clang 被拒绝。新增构建参数将私有源码库的部署元数据与选定的 guest 身份 26.6.2 对齐；实际 API 返回已验证，原版 `xcrun clang --version` 成功。原版工具及其版本检查未修改；编译 SDK 仍是 11，不能据此推断完整 macOS 26 API 已实现。其他版本 API 的一致性仍需完善。
+
+在完整基线已具备时，可构造独立候选并核对实际命令：
+
+```bash
+python3 /path/to/workspace/scripts/build-libdyld-source.py \
+  --output-dir runtime/dev-libdyld-guest \
+  --variant-base runtime/xcode-tool-dispatch-v2-normal/darling-root \
+  --report artifacts/dev-libdyld-guest-build.json --minimum-os 26.6.2
+python3 /path/to/workspace/scripts/stage-resource-tool-dispatch.py \
+  --tag my-dispatch --resource-stage artifacts/ios-resource-my-resource-change-stage.json \
+  --libdyld-source-build artifacts/dev-libdyld-guest-build.json
+python3 /path/to/workspace/scripts/test-resource-tool-dispatch.py \
+  --dispatch-stage artifacts/resource-tool-dispatch-my-dispatch-stage.json --diagnostic
+python3 /path/to/workspace/scripts/test-libdyld-guest-identity.py \
+  --dispatch-stage artifacts/resource-tool-dispatch-my-dispatch-stage.json --diagnostic
+```
+
+构建 libdyld 会在隔离的 Darling 中使用原版链接器，但不会启动图形界面。stage 复制普通与诊断运行根，并检查源库 SHA256、固定 loader ABI 以及选定 SystemVersion；不推广到默认入口。这里 `--diagnostic` 选择现有 CoreServices 诊断策略。第一个测试中的资源工具目前预期仍失败，测试会返回非零并保留真实日志；其余三个命令检查已实际通过。第二个测试还核对真实加载/卸载、八线程 512 次循环、进程映像快照及线程局部存储；它需要先前完整基线生成的生命周期夹具，只有源码检出不能运行它。
+
+`probe-xcode-service-runtime.py` 新增 `--resource-tool-dispatch-stage`，可以在这一候选中运行真实服务、Pod 预处理和原版 Xcode 构建；`verify-ios-cocoapods-product.py` 支持独立产物目录和报告路径。这一新候选已实际从全新 DerivedData 完成 Pod install、C/Objective-C 编译、静态库和 App 链接；原生与外层退出均为 0，独立核对为 iPhoneOS/arm64 并含实际 Pod 函数。`record-resource-tool-dispatch-progress.py` 复核日志、实际状态标记、组件与产物哈希，避免把 shell 跟踪输出当作成功。它们不代表资源编译、Unity/UE 或签名已完成。
+
+运行原版 Apple Swift 的 KeyPath 测试需要上述完整候选；它已实际完成三个泛型投影，并复现 marker 协议造成的声明/实际需求条数差异，原始元数据头没有改写。选定共享重建回归的两个输入配置另存于 `config/ios-resource-regression-pins.json`，避免覆盖原候选产物。
 
 `evidence/summary.json` 是本机实际实验的摘要，只有哈希、计数和范围说明；没有包含 Apple 库、SDK、IR、XIP、证书或私钥。开发者应重新运行自己修改所涉及的检查，而不是把摘要当作本机验证结果。
 

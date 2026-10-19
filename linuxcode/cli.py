@@ -422,7 +422,7 @@ def package(output):
         'build-resources.py', 'overlay.json', 'evidence/summary.json', 'tests/test_overlay.py')]
     for relative, entry in overlay['files'].items():
         name = Path(relative)
-        if name.is_absolute() or '..' in name.parts or name.suffix not in ('.py', '.json', '.swift'):
+        if name.is_absolute() or '..' in name.parts or name.suffix not in ('.py', '.json', '.swift', '.c'):
             fail('Invalid developer source payload path: ' + relative)
         payload = resource + 'payload/' + relative
         if sha(SOURCE / payload) != entry['sha256']:

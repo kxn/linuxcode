@@ -63,7 +63,15 @@
     "artifacts/pooled-objc-class-reference-relocation.json": "fb3b495feca2b2b342ad9340d447df348c201cb6478a15e65cccfd10c86335d9",
     "artifacts/pooled-objc-class-reference-shared-regressions.json": "ba9509a2e8a2d486e5ac6b417526e001f95c3db285df9572b83f110a15e2ebd6",
     "artifacts/ios-resource-class-cells-v1-headless-version-probes.json": "65f2c13b424a8143b66996b70d94f52263749939b62256d0be5443431b248e3f",
-    "artifacts/developer-resource-overlay-reproduction.json": "cbf1414ef8c8ed947e086892213093591105a2667c7d48961525911e40217a11"
+    "artifacts/developer-resource-overlay-reproduction.json": "cbf1414ef8c8ed947e086892213093591105a2667c7d48961525911e40217a11",
+    "runtime/resource-tool-dispatch-probe-qv_yp7h8/result.json": "28e8372aaec554157ad4a9d8f275acd261bde5b8370fdb5be708a24154cc8457",
+    "runtime/libdyld-guest-identity-test-tfh5h2kr/result.json": "ed624cc68e1b73c666790b87a409476a4dccda04020cdd07b12bb25a7c4fe286",
+    "artifacts/developer-resource-dispatch-overlay-reproduction.json": "3b808751d410c1be24fc4d9d32b84b2437408b5dff1c686684bafe82d4d1879f",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-c035b39f916e.json": "67715bd865f7484448d0e958bee70c84475ca2f235e7e78fcab1e7a3c73d5c7e",
+    "artifacts/ios-cocoapods-resource-dispatch-product.json": "51337d66a394a8f436b9d43737f5c664a2453b4fdb5725af64cab1d909a85009",
+    "artifacts/resource-tool-dispatch-progress.json": "b5b97458cba7595a8a98f3ab9629531a3be71ece5d9c1fc1e2e0403bea7488f4",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-9ef790b4f92f.json": "ce25566d6cd0716d22bb51c95a81f63901905ce6182b8dd88f86c9ddb44d674a",
+    "artifacts/ios-cocoapods-guest-identity-product.json": "05e26296d3a61c0b2ab0472e8b4082ab85af9db7b7793914baa3b551e6a76daa"
   },
   "reconstructed_images": {
     "coresvg-resource-native": {
@@ -577,6 +585,30 @@
       "modern_adapter": false,
       "backend_call_overrides": [],
       "redirected_imports": []
+    },
+    "sharing-resource-native": {
+      "original_image_sha256": "d5d97e0b608fca19c93be943649c7b367b8c105e7b8cf5ea370cdc9b1afd6927",
+      "staged_image_sha256": "a50078686060ced3234780131fee3fa4c01ec6577a9970c5ccafa180df2b0d5d",
+      "exports": 5819,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "loginsupport-resource-native": {
+      "original_image_sha256": "20bcdbad1ab36ebacb6852581a6a0a01432de317cca77fa7add8f93eb0b99605",
+      "staged_image_sha256": "4eb6abdab1f581ca2fc89d0a73569273447fa8c46eb9639018a286e685df3269",
+      "exports": 15,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "apple80211-resource-native": {
+      "original_image_sha256": "e2cbada8c96ef02efee5dd26ec3cbafffca4de430346fcccf167856c3ac23830",
+      "staged_image_sha256": "6141e1966b736810e7b07330bd1977b9919ced3dade048507ba890a1a4638f8a",
+      "exports": 68,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
     }
   },
   "shared_tool_regressions": [
@@ -604,11 +636,11 @@
   "evidence_kind": "Summary of actual local experiments; binaries, raw cache bytes and SDKs are excluded.",
   "original_protocol_pointer_checks": 6,
   "pooled_class_reference_checks": 33,
-  "latest_tool_probe": "Original actool and ibtool --version; DISPLAY, WAYLAND_DISPLAY and XAUTHORITY removed; both fail loading Sharing.framework from DesktopServicesPriv.",
+  "latest_tool_probe": "Private 67-image xcrun dispatch: Ruby/OpenSSL + SDK query, parent Xcode version and original xcrun clang version pass; resource invocations fail loading CoreWiFi.framework from Sharing. GUI environment removed.",
   "fresh_fixed_snapshot_reproduction": {
     "verified": true,
     "base_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
-    "image_count": 64,
+    "image_count": 67,
     "all_images_byte_identical_to_research_outputs": true,
     "source_reconstruction_inputs": [
       "scripts/rebuild-c-cache-image.py",
@@ -623,7 +655,8 @@
     ],
     "new_project_local_Capstone_download_verified": true,
     "Darling_executed": false,
-    "complete_cold_runtime_rebuild_verified": false
+    "complete_cold_runtime_rebuild_verified": false,
+    "verification": "64 prior unchanged byte-identical outputs plus three newly reproduced outputs from an independent fixed-snapshot checkout"
   },
   "fresh_structural_tests": {
     "swift-keypath-environment-layouts.json": {
@@ -651,5 +684,77 @@
     "passed": true,
     "Darling_executed": false
   },
-  "full_resource_compilation_verified": false
+  "full_resource_compilation_verified": false,
+  "private_source_libdyld": {
+    "minimum_os": "26.6.2",
+    "SDK_version": "11",
+    "library_sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b",
+    "actual_provider_version_verified": true,
+    "real_loader_lifecycles_and_eight_thread_512_cycles_verified": true,
+    "real_image_snapshots_and_TLV_verified": true,
+    "original_xcrun_modified": false,
+    "all_macOS_26_APIs_implemented": false,
+    "default_runtime_changed": false
+  },
+  "xcrun_scope_checks": [
+    {
+      "case": "scope",
+      "verified": true,
+      "outer_status": 0,
+      "native_status": null
+    },
+    {
+      "case": "parent-version",
+      "verified": true,
+      "outer_status": 0,
+      "native_status": [
+        "0"
+      ]
+    },
+    {
+      "case": "xcrun-clang",
+      "verified": true,
+      "outer_status": 0,
+      "native_status": [
+        "0"
+      ]
+    },
+    {
+      "case": "actool",
+      "verified": false,
+      "outer_status": 1,
+      "native_status": []
+    },
+    {
+      "case": "ibtool",
+      "verified": false,
+      "outer_status": 1,
+      "native_status": []
+    }
+  ],
+  "previous_scoped_dispatch_unsigned_iOS_build": {
+    "verified": true,
+    "engine_generated_project": false,
+    "signing_verified": false,
+    "configuration": "65-image query-scoped xcrun; original source libdyld minimum 11; preceding new guest-identity candidate"
+  },
+  "guest_identity_scoped_dispatch_unsigned_iOS_build": {
+    "verified": true,
+    "fresh_DerivedData": true,
+    "original_xcodebuild_sha256": "d6ceec0a4fa47e3f7a20c712d960ffb954b2246a2c94a0bf0818b2e8344065c5",
+    "native_exit_status": 0,
+    "outer_exit_status": 0,
+    "actual_CocoaPods_install_and_C_ObjC_compilation_archive_and_linking_verified": true,
+    "platform": "iPhoneOS",
+    "architecture": "arm64",
+    "linked_Pod_symbol": "_local_add",
+    "gui_environment_removed": [
+      "DISPLAY",
+      "WAYLAND_DISPLAY",
+      "XAUTHORITY"
+    ],
+    "signing_verified": false,
+    "engine_generated_project": false,
+    "CoreServices_diagnostic_policy": true
+  }
 }

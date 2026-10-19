@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "name": "resource-runtime-2026.10.19",
+  "name": "resource-runtime-dispatch-2026.10.19",
   "base": {
     "repository": "https://github.com/kxn/linuxcode.git",
     "commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
@@ -75,84 +75,87 @@
     "libtle-dylib-resource-native",
     "symptomdiagnosticreporter-resource-native",
     "desktopservicespriv-resource-native",
-    "netauth-resource-native"
+    "netauth-resource-native",
+    "sharing-resource-native",
+    "loginsupport-resource-native",
+    "apple80211-resource-native"
   ],
   "files": {
     "scripts/rebuild-c-cache-image.py": {
       "sha256": "f71d9f5b5ed2628aca6c80ea9185d47482c0a82bf9e0eb4aafc6b18c38787f90",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": "6b8e11dbb3a177beff300e62d536fa9c333aa362bfcf1ce2912e16ca81c3b7a8",
       "baseline_mode": 420
     },
     "scripts/restore-swift-metadata.py": {
       "sha256": "6c91472fb643dd33a4e36512684f97d23396dcb97b8013eb566c17e764f10691",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": "4d94714da7b50ba92a217e7b5a9b2f1025436cf535a9d06e7cc59042c79d3ebb",
       "baseline_mode": 420
     },
     "scripts/swift-keypath-environment-records.py": {
       "sha256": "174d93e492289d1863ba4fbb5eff49e9dd116b32cfed1b9e1736368296171c3f",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/test-swift-keypath-environments.py": {
       "sha256": "7dcc3fde9bb2828648f761c16bd5cc6fc6090fd14fee613fff22b26d2d8718ac",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/test-original-swift-keypath-environments.py": {
       "sha256": "d301aae9b5bf43cce401957408ca469a5b5aa2f4ad7f434b6a6e521f6a547c89",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/stage-ios-resource-native.py": {
       "sha256": "ef2044ed48290e13960bfc578297b5e9550bb92c2a7bf7228ce357e0226c4e72",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/ios-resource-native-profile.py": {
       "sha256": "35630dd4921a14df573b7c02588bd5da911c603c21e25f44614bdc46638239ed",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/stage-ios-resource-closure.py": {
       "sha256": "9a478ea6e800124f8897f51f676e58c64956a3dadc8ab6431641bc5d47fb24ed",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/ios-resource-closure-profile.py": {
       "sha256": "9e0aa1c75fdc0ab6d233f072ac412ba71f0f5c102550c4d7b4934d0f826e8181",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/probe-ios-resource-tools.py": {
       "sha256": "d4c0e89bf723a3fb511fba511b8e81cd509de6146b600890ba5283cc5d640465",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "fixtures/SwiftKeyPathEnvironment/MarkerKeyPath.swift": {
       "sha256": "f096986c64d87169f120ec8706bb7bc6a6c227b178b2e6ff7c13c184be3fc72a",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "fixtures/SwiftKeyPathEnvironment/main.swift": {
       "sha256": "cf7d91eb04d32e6536c1d96d76af1bdfaf599cf178d3d75908c18129ea0ac012",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "config/ios-resource-image-pins.json": {
-      "sha256": "e8bcd09da729e590b9927e05fbdb3392e222b734982fcddab6f7b41584af3421",
-      "mode": 420,
+      "sha256": "c75b43d670542c63bad8b6a3d18a49467a966cfcf42f376f8209d2226baf7ba3",
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
@@ -164,19 +167,19 @@
     },
     "scripts/restore-objc-metadata.py": {
       "sha256": "c904b092b16835410f7d1db7466ba21595907e4044ca72682adac300d4711e4e",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": "515e3b9b3c903037a819c7611ce99bbe7ec460e64185f29eb5befb3e377b5605",
       "baseline_mode": 420
     },
     "scripts/test-pooled-objc-class-references.py": {
       "sha256": "8012ee7df38321c30295ca7daf3d1787e06b8711559b060505a8f91a1fd34bda",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
     "scripts/test-objc-protocol-got.py": {
       "sha256": "33a9e7f767044d6861b307cec0e775f6f802ed3587e329a0c23223df2c2d3e87",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
     },
@@ -188,9 +191,75 @@
     },
     "scripts/prepare-capstone.py": {
       "sha256": "c1a3180be1265fde0bbc3caada49d73d849056799fb93703455293dd43ef7e05",
-      "mode": 420,
+      "mode": 436,
       "baseline_sha256": "09269ea2a6251c497ba1224e62ef405d5cc6d5be7059443a110e93b258e10df1",
       "baseline_mode": 420
+    },
+    "scripts/stage-resource-tool-dispatch.py": {
+      "sha256": "35a9453dd1214823ee34a70e6797d55a4101fae9048695e0e6f6c158d0e116ad",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/resource-tool-dispatch-profile.py": {
+      "sha256": "da0b41ba2a6dd295a7a7283005e2203d994610fba6614cb85fc3eef96010f2fb",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/test-resource-tool-dispatch.py": {
+      "sha256": "92045e1550b0daf85b4311d5a7999a2dcf60b7e400e197dacb3afe749ebdd15b",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/build-libdyld-source.py": {
+      "sha256": "f7efd6d333f0d8a577fd2f8197ab3749d8fbfe3c84d8768cae57341155bdc1b2",
+      "mode": 436,
+      "baseline_sha256": "538b84085ef55b08a55ad9bf6e207c0cf1daa1664948cd4fd6f7a01830988473",
+      "baseline_mode": 420
+    },
+    "scripts/test-libdyld-guest-identity.py": {
+      "sha256": "490e76bb3cead30e7bf02bc5931426f707e1ec9f049c05cc9809dbe1e09a67ed",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "fixtures/hello/xcrun-host-version.c": {
+      "sha256": "53217f1926899aa3bd774cb13b4cb31287c6be6345fc2e6b3a10293dd3af0ba7",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/probe-xcode-service-runtime.py": {
+      "sha256": "61639357e358d0362bfda806f7644eccfcf3671516bf9647c56516a8dea5904d",
+      "mode": 436,
+      "baseline_sha256": "51566b236a8b0146f2f612fab444ebe9b780f4320d9a63d0ac788edc37712dd6",
+      "baseline_mode": 420
+    },
+    "scripts/verify-ios-cocoapods-product.py": {
+      "sha256": "5b99ae3d120234541912099b58a46a66ccf1da8da2c95e33171529456e9e2227",
+      "mode": 436,
+      "baseline_sha256": "01a72adc02b6788122124c811c3f3ddc2d67e5cf639a890fdea4e8d09e72def8",
+      "baseline_mode": 420
+    },
+    "config/ios-cocoapods-resource-dispatch-build-arguments.json": {
+      "sha256": "17fd491682c24edd37da9c729d4ae32c12162c6acad5501ddad9b1266f3bb70d",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "config/ios-cocoapods-guest-identity-build-arguments.json": {
+      "sha256": "1b228bcf452ed5bd85ec33978c3bd74bc43caf168e1f5c31d9d89fa2c9ea0c6c",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/record-resource-tool-dispatch-progress.py": {
+      "sha256": "101ac8cf6b70994e957ba2efe39b41bee3e8fe2b12bd474982204747ce99eb86",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
     }
   },
   "baseline_dependencies": {
@@ -200,9 +269,11 @@
     "scripts/cache-code-analysis.py": "d10089d9f60dc36d02f0d4d86904a15d8e150c319779a5b0b3fe86ac09bf85a1",
     "scripts/source-assembly-literals.py": "6cf3b5b115ba5dfb32c3ff775aac36e3730b68dd8de2607732581750f53e43ec",
     "scripts/xcode-tool-dispatch-runtime-profile.py": "babaa737956d08b898e0bcc41ef6fce92d1423005a18ceccd6ad542357a099c4",
-    "config/capstone.json": "7ae645c2104e0651ce54fc368ce47f6995bf651895509ea99b2bb892084e0556"
+    "config/capstone.json": "7ae645c2104e0651ce54fc368ce47f6995bf651895509ea99b2bb892084e0556",
+    "config/libdyld-source-build.json": "357b44b6e6c48afd7ad26c9a3ffa218a94c2f7dde8ac77c0e8a3b7c03848fabc",
+    "fixtures/hello/dyld-dlopen-header.c": "8d1366ce04694dcfa906fcc654009161a2d32126e2fdd71dc56e1e409a57370d"
   },
-  "scope": "Developer source overlay for 64 specifically pinned original Intel resource images. Requires the existing compatibility candidate and local original OS reference inputs. Original actool/ibtool still fail during dependency loading; no successful resource compilation or cold installation claim.",
+  "scope": "Developer sources for 67 pinned original Intel resource images and scoped xcrun environment dispatch. Private source-built libdyld guest identity verified through original xcrun compiler execution; resource tools still fail during dependency loading. No complete resource compilation, signing, Unity/UE or cold-installation claim.",
   "build_arguments": {
     "coresvg-resource-native": [
       "--analyze-code"
@@ -496,6 +567,17 @@
       "--analyze-code"
     ],
     "netauth-resource-native": [
+      "--analyze-code"
+    ],
+    "sharing-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "loginsupport-resource-native": [
+      "--analyze-code"
+    ],
+    "apple80211-resource-native": [
       "--analyze-code"
     ]
   },
