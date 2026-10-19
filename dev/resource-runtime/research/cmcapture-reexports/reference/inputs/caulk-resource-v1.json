@@ -1,0 +1,39 @@
+{
+  "target": "caulk-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "sha256": "7413a14b08c3b499940dbb56cf4f398a7fd0f977902622b1a609264ae35d2213",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 475136,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "6e0d8c736ebe5f59f802e6b8d46f31f7cd4e55bd0a875255c36ca1b921fcca30",
+  "manifest_sha256": "84e3de27e4f923e21cc246556d394e090f8c2ab5092463010b66304ebed39beb",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "caulk-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/caulk-resource-v1-build.log",
+  "log_sha256": "324f9409db2b90a324d8c42f8a12108af97462fe4a15e050dcdac75d3b7cbfaf"
+}

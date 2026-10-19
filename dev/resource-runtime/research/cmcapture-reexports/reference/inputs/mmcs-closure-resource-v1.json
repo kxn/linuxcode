@@ -1,0 +1,46 @@
+{
+  "target": "mmcs-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS",
+    "sha256": "550cbf3e1a3aabfef920da3b2c8162b8aa8679e572d5075fd56329f7f801f88b",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {}
+  },
+  "original_bytes": 1015808,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Versions/A/ProtectedCloudStorage",
+    "/System/Library/PrivateFrameworks/CacheDelete.framework/Versions/A/CacheDelete",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+    "/System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary",
+    "/System/Library/PrivateFrameworks/C2.framework/Versions/A/C2",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/AssetCacheServices",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "22da301e3644bffaf6b4b4c3321d0ebcd166a857031caa4795b5b4cc399ffae0",
+  "manifest_sha256": "1dc01945dced948b2239e7f132bd81498aa2acc499280d9b1461af40ca769a38",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mmcs-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/mmcs-closure-resource-v1-build.log",
+  "log_sha256": "128e83fadd1f449dbe6c5d12c5fd5ecb146f199329c3f91e44c1ac7ad5c03195"
+}

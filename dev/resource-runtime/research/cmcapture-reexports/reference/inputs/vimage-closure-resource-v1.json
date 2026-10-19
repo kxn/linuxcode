@@ -1,0 +1,40 @@
+{
+  "target": "vimage-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage",
+    "sha256": "6866044ca2d9e4c28a4b4766978841a4587a5ab101f338c139489677c5b1b9cc",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 7528448,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/Libraries/libCGInterfaces.dylib",
+    "/System/Library/PrivateFrameworks/AccelerateGPU.framework/Versions/A/AccelerateGPU",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/usr/lib/libcompression.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "6ecf284da3f3fc2ac9025887a25b7029b8517ed93fd7f4cb321cb54b588ad6a5",
+  "manifest_sha256": "ceea06f40208eda77fcce09cc0d6636a89330f7b0ad001a2f5df8e31ee31a074",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "vimage-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/vimage-closure-resource-v1-build.log",
+  "log_sha256": "499b0743dd7ecf855db1da0e99b9e8f0ba12b26d56fd409f8a96f33d601b5675"
+}

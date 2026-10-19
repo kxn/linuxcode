@@ -1,0 +1,64 @@
+{
+  "recorded_at": "2026-10-19T20:39:03.557755+00:00",
+  "diagnostic_only": true,
+  "driver_session": 13312,
+  "processes": [
+    {
+      "pid": 1477660,
+      "threads": [
+        {
+          "tid": "1477660",
+          "wchan": "__skb_wait_for_more_packets",
+          "syscall": "47 0x7ffff 0x7fffffdfded0 0x0 0x0 0x0 0x0 0x7fffffdfdde8 0x7fe66b0e5a05"
+        },
+        {
+          "tid": "1477955",
+          "wchan": "do_epoll_wait",
+          "syscall": "232 0x3 0x7fc212008200 0x10 0xffffffffffffffff 0x0 0x0 0x7fc2142f4008 0x7fe66b0e5a05"
+        },
+        {
+          "tid": "1478559",
+          "wchan": "__skb_wait_for_more_packets",
+          "syscall": "47 0x7fffd 0x7fa92cfbc5a0 0x0 0x0 0x0 0x0 0x7fa92cfbc4b8 0x7fe66b0e5a05"
+        },
+        {
+          "tid": "1495438",
+          "wchan": "__skb_wait_for_more_packets",
+          "syscall": "47 0x7fffb 0x7fa9299fcb20 0x0 0x0 0x0 0x0 0x7fa9299fca38 0x7fe66b0e5a05"
+        }
+      ],
+      "command_suffix": "ns/Xcode.app/Contents/Developer/usr/bin/xcodebuild -workspace /Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-v1/ios/Unity-iPhone.xcworkspace -scheme Unity-iPhone -sdk iphoneos -configuration Debug -destination generic/platform=iOS -derivedDataPath /Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-v12-build/DerivedData CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=- AD_HOC_CODE_SIGNING_ALLOWED=YES DEVELOPMENT_TEAM= CODE_SIGN_STYLE=Manual ARCHS=arm64 build"
+    },
+    {
+      "pid": 1496916,
+      "threads": [
+        {
+          "tid": "1496916",
+          "wchan": "__skb_wait_for_more_packets",
+          "syscall": "47 0x7ffff 0x7fffffdfecf0 0x0 0x0 0x0 0x0 0x7fffffdfec08 0x7fcec2948a05"
+        },
+        {
+          "tid": "1497379",
+          "wchan": "do_epoll_wait",
+          "syscall": "232 0x3 0x7fafd5008200 0x10 0xffffffffffffffff 0x0 0x0 0x7fafe85bb008 0x7fcec2948a05"
+        },
+        {
+          "tid": "1562619",
+          "wchan": "futex_wait_queue",
+          "syscall": "202 0x7fafe8654ec8 0x0 0xffffffffffffffff 0x7fafe8654e88 0x0 0x0 0x7fafe8654e58 0x7fcec2948a05"
+        },
+        {
+          "tid": "1562620",
+          "wchan": "futex_wait_queue",
+          "syscall": "202 0x7fafe80fdec8 0x0 0xffffffffffffffff 0x7fafe80fde88 0x0 0x0 0x7fafe80fde58 0x7fcec2948a05"
+        },
+        {
+          "tid": "1562807",
+          "wchan": "futex_wait_queue",
+          "syscall": "202 0x7fafd7ff0ec8 0x0 0xffffffffffffffff 0x7fafd7ff0e88 0x0 0x0 0x7fafd7ff0e58 0x7fcec2948a05"
+        }
+      ],
+      "command_suffix": "/Applications/Xcode.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/MacOS/SWBBuildService"
+    }
+  ]
+}

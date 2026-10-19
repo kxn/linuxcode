@@ -1,0 +1,40 @@
+{
+  "target": "chunkinglibrary-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary",
+    "sha256": "c50014042f1fb6de34c0d9e9395c4ac15f247973fc7ab5f35668fed33b8bbf79",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 704512,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libDiagnosticMessagesClient.dylib",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libsqlite3.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "22f20014399d5fba868499f4d5f2a3a7e0b127f22fa6575be657d632ab09bf1f",
+  "manifest_sha256": "d514b711825a39ebc378b89fba2ee8a3a21b526ec90c3ff7e7cb00ec4cbcb6c3",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "chunkinglibrary-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/chunkinglibrary-closure-resource-v1-build.log",
+  "log_sha256": "df7a8353cbe713b415569c5955f41f4a18f5b0f2afc551efd38326f03b27f63e"
+}

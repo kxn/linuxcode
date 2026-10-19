@@ -1,0 +1,39 @@
+{
+  "target": "multitouchsupport-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport",
+    "sha256": "6cc64a883e322b353127d8cfb82e1f7ef9593943b0303852e28b662c3bbcb6cb",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {}
+  },
+  "original_bytes": 339968,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "88bf105acf5d7757d5e2cffbd91170c407bd9bcb42f12af3f811b6e6ff0e6fe6",
+  "manifest_sha256": "b826d44f949e5934ec716a9815fd5900cbd6091e41f2eda0a2d9e5ff4d07f13a",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "multitouchsupport-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/multitouchsupport-closure-resource-v1-build.log",
+  "log_sha256": "5f0c1ea53e75164f0c9fd3d511871264c2eca8fcb884c7e47d0c4a0e13c12df9"
+}

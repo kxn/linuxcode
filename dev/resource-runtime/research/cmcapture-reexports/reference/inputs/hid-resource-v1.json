@@ -1,0 +1,38 @@
+{
+  "target": "hid-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID",
+    "sha256": "fa428ecc49d743dcd9c056794af86508eb129bdbc7fdd855b4b74bcb0173b039",
+    "reference_set": "fullsystem",
+    "objc_classes": 6,
+    "import_providers": {}
+  },
+  "original_bytes": 167936,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "410e6b165c4f9e4bc1e41d36b7c3b9ee9c01e7fd27d08095ed6a9fc4b2e600bb",
+  "manifest_sha256": "ebed4b1a263a2525998304e2ff10fdc69c9535567af98c6dd69acb01a9f9f165",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "hid-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "cb920c8831b23e9dcf04c7f2d9580f528138da21f1d1fd3845c9e0322f1737b7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/hid-resource-v1-build.log",
+  "log_sha256": "bccfcde9cc69bba98b9f4448fe89cc7c2a9300a203b0f4226d86641de5ed6f28"
+}

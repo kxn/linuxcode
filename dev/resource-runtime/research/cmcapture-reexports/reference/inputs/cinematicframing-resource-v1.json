@@ -1,0 +1,49 @@
+{
+  "target": "cinematicframing-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CinematicFraming.framework/Versions/A/CinematicFraming",
+    "sha256": "bf7cef5bce7d611c26560b8b973a8e2f14ae35976721060d6b82f788c2a451b9",
+    "reference_set": "fullsystem",
+    "objc_classes": 25,
+    "import_providers": {}
+  },
+  "original_bytes": 397312,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore",
+    "/System/Library/PrivateFrameworks/CMImaging.framework/Versions/A/CMImaging",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+    "/System/Library/PrivateFrameworks/Espresso.framework/Versions/A/Espresso",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+    "/System/Library/Frameworks/CoreMotion.framework/Versions/A/CoreMotion",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "ebb17ca3b7854f7adf9564ba9bc7f91175b68cb0d65a758312c5d71e35a78c4e",
+  "manifest_sha256": "b84315f6e36600d875c48f352fee13c757f95f1efa789b46669a36b503d78138",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "cinematicframing-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/cinematicframing-resource-v1-build.log",
+  "log_sha256": "b890abf4bd3b207451db8b67ae10db6bbbdbfc609b81bb825ea7b373b9c1fc8c"
+}

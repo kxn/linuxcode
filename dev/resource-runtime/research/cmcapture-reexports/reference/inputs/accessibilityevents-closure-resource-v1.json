@@ -1,0 +1,46 @@
+{
+  "target": "accessibilityevents-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityEvents.framework/Versions/A/AccessibilityEvents",
+    "sha256": "81ecbbcad12db1bdcea63d703530d9143555120f4ab94c44d30e0c1495bce109",
+    "reference_set": "fullsystem",
+    "objc_classes": 33,
+    "import_providers": {}
+  },
+  "original_bytes": 319488,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID",
+    "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityFoundation.framework/Versions/A/AccessibilityFoundation",
+    "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+    "/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon",
+    "/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa",
+    "/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+  ],
+  "previous_manifest_sha256": "ceea06f40208eda77fcce09cc0d6636a89330f7b0ad001a2f5df8e31ee31a074",
+  "manifest_sha256": "8b62b194bb2c793f3094103d2fe7bbc923477ca4a630f2ca144e63d02572e935",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "accessibilityevents-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/accessibilityevents-closure-resource-v1-build.log",
+  "log_sha256": "35d75159b2e2743aec14d4e4a33e9b67c33dbbad38079d086e83ec7ad64bf2e7"
+}

@@ -1,0 +1,52 @@
+{
+  "target": "coredisplay-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay",
+    "sha256": "e8ca1d0b851143235aa2acb500bab5e8ca2d5dbb708647d135f9f8458d3d933f",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {}
+  },
+  "original_bytes": 1626112,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler",
+    "/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+    "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay",
+    "/usr/lib/libbsm.0.dylib",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libDiagnosticMessagesClient.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "b465ffdfa30ecff6afd96d4315f9374a7f442cde6d90570f4fc809b0735c5c85",
+  "manifest_sha256": "3ebfbb39cbe1c593323b0a14137e1140c31f703fcc85d2003a6cfc077d918d4a",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "coredisplay-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "cb920c8831b23e9dcf04c7f2d9580f528138da21f1d1fd3845c9e0322f1737b7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/coredisplay-resource-v1-build.log",
+  "log_sha256": "65a052c95a5db5b4a7586db79d0f0af249d7b3759d39a05ac323f4bb1479456d"
+}

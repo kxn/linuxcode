@@ -1,0 +1,37 @@
+{
+  "target": "gpuwrangler-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler",
+    "sha256": "692d4a92e1f54a27a64dfad27c6954d09a53df2d48afd52de36249e45b960928",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 40960,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "3ebfbb39cbe1c593323b0a14137e1140c31f703fcc85d2003a6cfc077d918d4a",
+  "manifest_sha256": "97dc1d53684acd9135cafac2e4d803f2d971365a4c5fe72caad9546eec8a62cf",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "gpuwrangler-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "cb920c8831b23e9dcf04c7f2d9580f528138da21f1d1fd3845c9e0322f1737b7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/gpuwrangler-resource-v1-build.log",
+  "log_sha256": "4e4c1150e32095b2427700bc9709c342b0110ec4c92b765e5cdb00b155530456"
+}

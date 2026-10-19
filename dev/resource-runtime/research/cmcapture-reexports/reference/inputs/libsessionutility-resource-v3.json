@@ -1,0 +1,346 @@
+{
+  "target": "libsessionutility-resource-v3",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib",
+    "sha256": "70574e16d2f7b66b37add1a0621709feb3f6fc8926e5a850d7652c40d6534861",
+    "reference_set": "fullsystem",
+    "objc_classes": 19,
+    "import_providers": {},
+    "cache_imports": {
+      "__ZTSNSt3__117bad_function_callE": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt19bad_optional_access": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt9exception": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt20bad_array_new_length": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt9bad_alloc": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt11logic_error": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt12length_error": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt13runtime_error": "/usr/lib/libc++.1.dylib",
+      "__ZTISt9exception": "/usr/lib/libc++.1.dylib",
+      "__ZTISt20bad_array_new_length": "/usr/lib/libc++.1.dylib",
+      "__ZTISt9bad_alloc": "/usr/lib/libc++.1.dylib",
+      "__ZTISt11logic_error": "/usr/lib/libc++.1.dylib",
+      "__ZTISt13runtime_error": "/usr/lib/libc++.1.dylib"
+    }
+  },
+  "original_bytes": 544768,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "826bf40b5c006967eb445f01c65d51cf6d85e8d04bbec4acd2c23dea82d36f76",
+  "manifest_sha256": "410e6b165c4f9e4bc1e41d36b7c3b9ee9c01e7fd27d08095ed6a9fc4b2e600bb",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libsessionutility-resource-v3",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "cb920c8831b23e9dcf04c7f2d9580f528138da21f1d1fd3845c9e0322f1737b7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "libsessionutility-resource-v1",
+  "exact_import_audit": "artifacts/libsessionutility-original-reexport-audit-v2.json",
+  "exact_import_audit_sha256": "001fbdf117571c2ab2888790200b9c2f3d51a171c8076de4f5d873c61710dd04",
+  "typed_class_aliases": [],
+  "explicit_reexports": {
+    "chains": [
+      {
+        "target": "0x7ff8400915b0",
+        "symbol": "__ZTISt11logic_error",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTISt11logic_error",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTISt11logic_error",
+            "export": [
+              "address",
+              140704202954160,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff8400916c8",
+        "symbol": "__ZTISt13runtime_error",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTISt13runtime_error",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTISt13runtime_error",
+            "export": [
+              "address",
+              140704202954440,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff8400914f0",
+        "symbol": "__ZTISt20bad_array_new_length",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTISt20bad_array_new_length",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTISt20bad_array_new_length",
+            "export": [
+              "address",
+              140704202953968,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff840091508",
+        "symbol": "__ZTISt9bad_alloc",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTISt9bad_alloc",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTISt9bad_alloc",
+            "export": [
+              "address",
+              140704202953992,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff8400914a0",
+        "symbol": "__ZTISt9exception",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTISt9exception",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTISt9exception",
+            "export": [
+              "address",
+              140704202953888,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff802e5f92e",
+        "symbol": "__ZTSSt11logic_error",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTSSt11logic_error",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTSSt11logic_error",
+            "export": [
+              "address",
+              140703177242926,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff802e5f953",
+        "symbol": "__ZTSSt12length_error",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTSSt12length_error",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTSSt12length_error",
+            "export": [
+              "address",
+              140703177242963,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff802e5f985",
+        "symbol": "__ZTSSt13runtime_error",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTSSt13runtime_error",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTSSt13runtime_error",
+            "export": [
+              "address",
+              140703177243013,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff802e5f8f7",
+        "symbol": "__ZTSSt20bad_array_new_length",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTSSt20bad_array_new_length",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTSSt20bad_array_new_length",
+            "export": [
+              "address",
+              140703177242871,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff802e5f910",
+        "symbol": "__ZTSSt9bad_alloc",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTSSt9bad_alloc",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTSSt9bad_alloc",
+            "export": [
+              "address",
+              140703177242896,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff802e5f8d8",
+        "symbol": "__ZTSSt9exception",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTSSt9exception",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTSSt9exception",
+            "export": [
+              "address",
+              140703177242840,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "original_provider_sha256": {
+      "/usr/lib/libc++.1.dylib": "98a388765e2b9a56940265d09723d2b1fccb9db63953157e5c6006089cab3ac8",
+      "/usr/lib/libc++abi.dylib": "3677d04224c9ef31032048951fdc0531994cb4ce8c5247b95c00f95388672670"
+    }
+  },
+  "build_returncode": 0,
+  "log": "logs/libsessionutility-resource-v3-build.log",
+  "log_sha256": "d84b8fbecbe083a25fc7b38594e8d9125fea7e4260b71645f590be3216298397"
+}

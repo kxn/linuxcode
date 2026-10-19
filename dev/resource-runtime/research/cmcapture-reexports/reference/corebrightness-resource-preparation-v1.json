@@ -1,0 +1,120 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/corebrightness-resource-batch-v1.json",
+  "configuration_sha256": "c4373fb9ffc1e0044f31e571c4b281352c57ee4fb69e23e1c912845369bc8096",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "76f0c437f92673e1dc5a10fa74d18419b6c912756012c45abfcac6b732bdfa4a",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID",
+      "attempts": [
+        {
+          "target": "hid-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/HID.framework/Versions/A/HID",
+            "--target",
+            "hid-resource-v1",
+            "--build"
+          ],
+          "log": "logs/hid-resource-v1-batch-preparation.log",
+          "log_sha256": "ad20f11c7f29e79525e3cb9c118907ec67e90f7a07fd9a02419cb3e18bfa66db",
+          "preparation": "artifacts/hid-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "hid-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libSMC.dylib",
+      "attempts": [
+        {
+          "target": "libsmc-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libSMC.dylib",
+            "--target",
+            "libsmc-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libsmc-resource-v1-batch-preparation.log",
+          "log_sha256": "ffe585fb5cdeef44e957e0d0dd4d3b4192699122626c79b1327850e52c7fd5d4",
+          "preparation": "artifacts/libsmc-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libsmc-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay",
+      "attempts": [
+        {
+          "target": "coredisplay-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay",
+            "--target",
+            "coredisplay-resource-v1",
+            "--build"
+          ],
+          "log": "logs/coredisplay-resource-v1-batch-preparation.log",
+          "log_sha256": "7665e76fa8197e51668474da86bd4b3efa21f055f5ceb03cfd5c9fd6e2fa51db",
+          "preparation": "artifacts/coredisplay-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "coredisplay-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler",
+      "attempts": [
+        {
+          "target": "gpuwrangler-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler",
+            "--target",
+            "gpuwrangler-resource-v1",
+            "--build"
+          ],
+          "log": "logs/gpuwrangler-resource-v1-batch-preparation.log",
+          "log_sha256": "bd327e9817e7e09c2509a70db358be57c72dfeed91f52f4a9f0466e5f4279157",
+          "preparation": "artifacts/gpuwrangler-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "gpuwrangler-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment",
+      "attempts": [
+        {
+          "target": "iopresentment-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment",
+            "--target",
+            "iopresentment-resource-v1",
+            "--build"
+          ],
+          "log": "logs/iopresentment-resource-v1-batch-preparation.log",
+          "log_sha256": "40bb229376e3574dc73837bdbad10786cd4ede27489f2fd94cbcaf3cceb78926",
+          "preparation": "artifacts/iopresentment-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "iopresentment-resource-v1"
+    }
+  ]
+}

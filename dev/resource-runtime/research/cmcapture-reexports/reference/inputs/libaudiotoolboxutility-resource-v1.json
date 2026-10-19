@@ -1,0 +1,41 @@
+{
+  "target": "libaudiotoolboxutility-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libAudioToolboxUtility.dylib",
+    "sha256": "96219803835a62e7918b90b89a87da4c1fded92ad2aa9776a3c5972f9171aa50",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 233472,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "27b82c7596f9807aaaa1e8219f82fba75a425363726aece3685e43a513aa38eb",
+  "manifest_sha256": "039a6159aa8bc4ac93af8f35500219c5bff09771a63d91732aa92a2d134bcd7c",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libaudiotoolboxutility-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libaudiotoolboxutility-resource-v1-build.log",
+  "log_sha256": "bd6c5615c97b79aeed27d8ccf1374329ac6b6c187a9722b6d43ac058317d9c13"
+}

@@ -1,0 +1,49 @@
+{
+  "target": "avfoundationcf-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AVFoundationCF.framework/Versions/A/AVFoundationCF",
+    "sha256": "353f4318a83f41f9c4cb15023b769265c90833289843dfe6912670ab40a5b9c5",
+    "reference_set": "fullsystem",
+    "objc_classes": 3,
+    "import_providers": {}
+  },
+  "original_bytes": 884736,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport",
+    "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+    "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore"
+  ],
+  "previous_manifest_sha256": "62c6b8771f8ed8b1976961f377ed5a897cc1f4a52cf887b780e1ca589b894995",
+  "manifest_sha256": "22da301e3644bffaf6b4b4c3321d0ebcd166a857031caa4795b5b4cc399ffae0",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "avfoundationcf-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/avfoundationcf-closure-resource-v1-build.log",
+  "log_sha256": "ffd7d082c6b6a09268fd1a9f94c93141dfbf1a9d51146d8baee8a7a7da17fc4f"
+}

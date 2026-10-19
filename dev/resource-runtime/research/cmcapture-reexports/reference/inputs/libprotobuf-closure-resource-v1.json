@@ -1,0 +1,36 @@
+{
+  "target": "libprotobuf-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf.dylib",
+    "sha256": "5c437f44fed90859a466d66d3b1ef6c30bcf3fed980c5625cb6f1e25cf8b49b5",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 643072,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf-lite.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "9d427dd53ceec11d96f6825c8ee07bd219c0c434f7b3c58d5c1b62727da02209",
+  "manifest_sha256": "a652fede27ee829596988d40380fc5456de17ee7a7c1f953c0fed3f47071a351",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libprotobuf-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libprotobuf-closure-resource-v1-build.log",
+  "log_sha256": "9040f4f17ea644fabaa4baa01d8d1750d9863bd72606c9dc35db923d1e25c070"
+}

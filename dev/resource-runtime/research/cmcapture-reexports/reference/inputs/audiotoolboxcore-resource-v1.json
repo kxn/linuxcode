@@ -1,0 +1,50 @@
+{
+  "target": "audiotoolboxcore-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+    "sha256": "f9bcfa2ad0cba4663dd715efd14df20b569281a39b4c081e9b67b8122e1d7495",
+    "reference_set": "fullsystem",
+    "objc_classes": 61,
+    "import_providers": {}
+  },
+  "original_bytes": 6180864,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "/usr/lib/liboah.dylib",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/usr/lib/libAudioToolboxUtility.dylib",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/usr/lib/libxml2.2.dylib",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "fe260cf9f866fdc6464afd5d797bf212679125d6b261211cd4e83bbca1bb2d11",
+  "manifest_sha256": "20dc604f9c4aa8be2ddc3c94c77289ad65bac082f864a89739a428f19dd7820a",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "audiotoolboxcore-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/audiotoolboxcore-resource-v1-build.log",
+  "log_sha256": "14ffb75f4a0338aaf60b51cff6d05fec3b6c4547ee62903bdc64592844a89acf"
+}

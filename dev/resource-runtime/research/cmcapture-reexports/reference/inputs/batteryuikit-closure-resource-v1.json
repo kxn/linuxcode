@@ -1,0 +1,39 @@
+{
+  "target": "batteryuikit-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/BatteryUIKit",
+    "sha256": "6b22a6cd473d5de1d11270134b53577b9459a2a7e9b536be11587beac1e53016",
+    "reference_set": "fullsystem",
+    "objc_classes": 4,
+    "import_providers": {}
+  },
+  "original_bytes": 57344,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "b826d44f949e5934ec716a9815fd5900cbd6091e41f2eda0a2d9e5ff4d07f13a",
+  "manifest_sha256": "86b7261e4a3fe860d2eeafbff1090c1ef3f1ce267dd5dda147026819b37902a8",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "batteryuikit-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/batteryuikit-closure-resource-v1-build.log",
+  "log_sha256": "927e1d4fa0fc036410c652be7a9ff85f4cfb19898cbf4ad078db0741f8fed668"
+}

@@ -1,0 +1,40 @@
+{
+  "target": "iopresentment-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment",
+    "sha256": "206b15238134b8b58e1184d9812035b9b2372fd1f8aa0ad84fb119b47a345503",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 200704,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler",
+    "/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "97dc1d53684acd9135cafac2e4d803f2d971365a4c5fe72caad9546eec8a62cf",
+  "manifest_sha256": "6ecf284da3f3fc2ac9025887a25b7029b8517ed93fd7f4cb321cb54b588ad6a5",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "iopresentment-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "cb920c8831b23e9dcf04c7f2d9580f528138da21f1d1fd3845c9e0322f1737b7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/iopresentment-resource-v1-build.log",
+  "log_sha256": "a35013b7bf48fc175727c2a305a0bb343a94e4e36ab794a76d168954b9f1673f"
+}

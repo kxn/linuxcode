@@ -1,0 +1,36 @@
+{
+  "target": "libsmc-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libSMC.dylib",
+    "sha256": "84d7070a413a5c6fabe943767495c0f174ca57fc616159519e45b5e7785e0573",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 942080,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "ebed4b1a263a2525998304e2ff10fdc69c9535567af98c6dd69acb01a9f9f165",
+  "manifest_sha256": "b465ffdfa30ecff6afd96d4315f9374a7f442cde6d90570f4fc809b0735c5c85",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libsmc-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "cb920c8831b23e9dcf04c7f2d9580f528138da21f1d1fd3845c9e0322f1737b7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libsmc-resource-v1-build.log",
+  "log_sha256": "0ec8a4df8856a6dec2d05ad32b959f93277fea297d0b536a45312fd10bc0fbc6"
+}

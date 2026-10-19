@@ -1,0 +1,45 @@
+{
+  "target": "wirelessdiagnostics-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/WirelessDiagnostics",
+    "sha256": "de814b0fc404c819816beaa1a9c7db6788a931fe6b9a786a283a420a7488c5c1",
+    "reference_set": "fullsystem",
+    "objc_classes": 4,
+    "import_providers": {}
+  },
+  "original_bytes": 380928,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libAWDSupportFramework.dylib",
+    "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libAWDSupport.dylib",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf-lite.dylib",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/usr/lib/libTelephonyUtilDynamic.dylib",
+    "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "440fd1242014125eecd6ce2e4e690e3ce7b35e26b4fbf8ccdbda39aa0b2b20d7",
+  "manifest_sha256": "d232d6a67e502f26b5c231c898b6077890c06d64c5fa8506812bf68418309657",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "wirelessdiagnostics-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/wirelessdiagnostics-closure-resource-v1-build.log",
+  "log_sha256": "7b3e28ea0aafc660326c0d58894585b4961e4f7fad4961cb4a0bde97416f633d"
+}

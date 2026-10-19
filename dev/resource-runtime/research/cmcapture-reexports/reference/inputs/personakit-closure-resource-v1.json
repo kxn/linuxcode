@@ -1,0 +1,41 @@
+{
+  "target": "personakit-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/PersonaKit.framework/Versions/A/PersonaKit",
+    "sha256": "567340111082fa86059c2ad420ba348c7e6488c51d18013073838258e0b723e2",
+    "reference_set": "fullsystem",
+    "objc_classes": 8,
+    "import_providers": {}
+  },
+  "original_bytes": 102400,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO"
+  ],
+  "previous_manifest_sha256": "86b7261e4a3fe860d2eeafbff1090c1ef3f1ce267dd5dda147026819b37902a8",
+  "manifest_sha256": "440fd1242014125eecd6ce2e4e690e3ce7b35e26b4fbf8ccdbda39aa0b2b20d7",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "personakit-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/personakit-closure-resource-v1-build.log",
+  "log_sha256": "19b3164a3e14bb03d3c6bb4ba9e7b724cdec47e36d29d8dcc4ecfd157dbb6886"
+}

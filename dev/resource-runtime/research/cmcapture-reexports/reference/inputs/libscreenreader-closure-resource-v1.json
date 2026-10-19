@@ -1,0 +1,41 @@
+{
+  "target": "libscreenreader-closure-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libScreenReader.dylib",
+    "sha256": "ef3e0c02d9d988c6f5009a59e1949e1f0db1d09d7bb1085683564b53e37f3143",
+    "reference_set": "fullsystem",
+    "objc_classes": 3,
+    "import_providers": {}
+  },
+  "original_bytes": 81920,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+    "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "25df9119e098749a789ea71df305f8d437b1e8ef0bbd1f1a554b8e421cd1751b",
+  "manifest_sha256": "bfd6a1299434f0fc39709d01f666a626b53e81a359cae8e14f932a9dc5d07a24",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libscreenreader-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libscreenreader-closure-resource-v1-build.log",
+  "log_sha256": "ba19171e54f1c486f66d1c5e7feba2bbdf67e18ca3c6d5f354f1411ba187c436"
+}

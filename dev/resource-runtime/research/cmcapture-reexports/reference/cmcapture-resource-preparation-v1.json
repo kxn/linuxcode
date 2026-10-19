@@ -1,0 +1,331 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/cmcapture-resource-batch-v1.json",
+  "configuration_sha256": "00686f740151514a6e646c92f92e8e8d2542ebde7481fd3c80d0c2b56e8e3b73",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "76f0c437f92673e1dc5a10fa74d18419b6c912756012c45abfcac6b732bdfa4a",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore",
+      "attempts": [
+        {
+          "target": "cmcapturecore-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore",
+            "--target",
+            "cmcapturecore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/cmcapturecore-resource-v1-batch-preparation.log",
+          "log_sha256": "56b403d68ecd8f17d0177650fd32910f4c4cb69e14493b4e39099b6016148c88",
+          "preparation": "artifacts/cmcapturecore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "cmcapturecore-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CMCaptureDevice.framework/Versions/A/CMCaptureDevice",
+      "attempts": [
+        {
+          "target": "cmcapturedevice-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CMCaptureDevice.framework/Versions/A/CMCaptureDevice",
+            "--target",
+            "cmcapturedevice-resource-v1",
+            "--build"
+          ],
+          "log": "logs/cmcapturedevice-resource-v1-batch-preparation.log",
+          "log_sha256": "27c6e37837afcfd796c0601ffae88a1915445e082a53bfd89fadc6fa39cf9add",
+          "preparation": "artifacts/cmcapturedevice-resource-v1-input.json"
+        },
+        {
+          "target": "cmcapturedevice-resource-v2",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CMCaptureDevice.framework/Versions/A/CMCaptureDevice",
+            "--omit-lazy-helper-section",
+            "--target",
+            "cmcapturedevice-resource-v2",
+            "--build"
+          ],
+          "log": "logs/cmcapturedevice-resource-v2-batch-preparation.log",
+          "log_sha256": "bf43c5a2c75095b1c8902549f244d950cf71afc1f7503f759f0696fb2ca39031",
+          "preparation": "artifacts/cmcapturedevice-resource-v2-input.json"
+        },
+        {
+          "target": "cmcapturedevice-resource-v3",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CMCaptureDevice.framework/Versions/A/CMCaptureDevice",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "cmcapturedevice-resource-v3",
+            "--build"
+          ],
+          "log": "logs/cmcapturedevice-resource-v3-batch-preparation.log",
+          "log_sha256": "3ca97d595c2a81772630f4315bbd69c1de03be1a2d44035b2a6422b362e1f71e",
+          "preparation": "artifacts/cmcapturedevice-resource-v3-input.json"
+        }
+      ],
+      "prepared_target": "cmcapturedevice-resource-v3"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CMPhoto.framework/Versions/A/CMPhoto",
+      "attempts": [
+        {
+          "target": "cmphoto-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CMPhoto.framework/Versions/A/CMPhoto",
+            "--target",
+            "cmphoto-resource-v1",
+            "--build"
+          ],
+          "log": "logs/cmphoto-resource-v1-batch-preparation.log",
+          "log_sha256": "4f367eef1318147f83cfd0b3362db51b2cd04cdd699dc0cfe00d66faf84b020a",
+          "preparation": "artifacts/cmphoto-resource-v1-input.json"
+        },
+        {
+          "target": "cmphoto-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "cmphoto-resource-v1",
+            "--exact-import-audit",
+            "artifacts/cmphoto-original-import-audit-v1.json",
+            "--target",
+            "cmphoto-resource-v2",
+            "--build"
+          ],
+          "log": "logs/cmphoto-resource-v2-batch-preparation.log",
+          "log_sha256": "f257dcc46c1232d8eb015cd12811a578e2d5162b4270bb8132ac6da7666a7303",
+          "preparation": "artifacts/cmphoto-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "cmphoto-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CMImaging.framework/Versions/A/CMImaging",
+      "attempts": [
+        {
+          "target": "cmimaging-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CMImaging.framework/Versions/A/CMImaging",
+            "--target",
+            "cmimaging-resource-v1",
+            "--build"
+          ],
+          "log": "logs/cmimaging-resource-v1-batch-preparation.log",
+          "log_sha256": "096c6492536f8bda9578f2022804320c0b68bb1f878b97fe15c4175e15f69529",
+          "preparation": "artifacts/cmimaging-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "cmimaging-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CinematicFraming.framework/Versions/A/CinematicFraming",
+      "attempts": [
+        {
+          "target": "cinematicframing-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CinematicFraming.framework/Versions/A/CinematicFraming",
+            "--target",
+            "cinematicframing-resource-v1",
+            "--build"
+          ],
+          "log": "logs/cinematicframing-resource-v1-batch-preparation.log",
+          "log_sha256": "61b5375c65e67a5a3a7a342e9b7d271a2b746f20a45745fc1463a1f30484163c",
+          "preparation": "artifacts/cinematicframing-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "cinematicframing-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+      "attempts": [
+        {
+          "target": "audiosession-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+            "--target",
+            "audiosession-resource-v1",
+            "--build"
+          ],
+          "log": "logs/audiosession-resource-v1-batch-preparation.log",
+          "log_sha256": "72ac9358321bb9722c88d3c4c5f5f5c7267d0a1a727d643e00f1e6d8e090a9c1",
+          "preparation": "artifacts/audiosession-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "audiosession-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Quagga.framework/Versions/A/Quagga",
+      "attempts": [
+        {
+          "target": "quagga-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Quagga.framework/Versions/A/Quagga",
+            "--target",
+            "quagga-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quagga-resource-v1-batch-preparation.log",
+          "log_sha256": "67d8425ce71313642872dc09254cf85533e22f73962a0a4dd8115f07d62605cb",
+          "preparation": "artifacts/quagga-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "quagga-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+      "attempts": [
+        {
+          "target": "audiotoolboxcore-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+            "--target",
+            "audiotoolboxcore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/audiotoolboxcore-resource-v1-batch-preparation.log",
+          "log_sha256": "db9952e3b0b001f0a5d14759ff2f04a9e40c82b57db8b1c8d292437a35c1de5f",
+          "preparation": "artifacts/audiotoolboxcore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "audiotoolboxcore-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib",
+      "attempts": [
+        {
+          "target": "libsessionutility-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib",
+            "--target",
+            "libsessionutility-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libsessionutility-resource-v1-batch-preparation.log",
+          "log_sha256": "303379fa9067144f516b62fcb5b9ea08e5a2a9c432e21ecb3d84cefe8b109d09",
+          "preparation": "artifacts/libsessionutility-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'libsessionutility-resource-v1', '--output', 'artifacts/libsessionutility-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+      "attempts": [
+        {
+          "target": "caulk-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+            "--target",
+            "caulk-resource-v1",
+            "--build"
+          ],
+          "log": "logs/caulk-resource-v1-batch-preparation.log",
+          "log_sha256": "22722b5f65e36b929de26fdeb29ce1db9747ac1be93ccefb119dc3fda0b5e867",
+          "preparation": "artifacts/caulk-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "caulk-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libAudioStatistics.dylib",
+      "attempts": [
+        {
+          "target": "libaudiostatistics-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libAudioStatistics.dylib",
+            "--target",
+            "libaudiostatistics-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libaudiostatistics-resource-v1-batch-preparation.log",
+          "log_sha256": "a1a82169499a12cf801094b8d6ebc36ba1b9e06405b722254a46d5c58627fe4c",
+          "preparation": "artifacts/libaudiostatistics-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libaudiostatistics-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libAudioToolboxUtility.dylib",
+      "attempts": [
+        {
+          "target": "libaudiotoolboxutility-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libAudioToolboxUtility.dylib",
+            "--target",
+            "libaudiotoolboxutility-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libaudiotoolboxutility-resource-v1-batch-preparation.log",
+          "log_sha256": "82e563dc0a670e42967cf1e062b6766ae136897433e948b1816744826c786b3b",
+          "preparation": "artifacts/libaudiotoolboxutility-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libaudiotoolboxutility-resource-v1"
+    }
+  ]
+}

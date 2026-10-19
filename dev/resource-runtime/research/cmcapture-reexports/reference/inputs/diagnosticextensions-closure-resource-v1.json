@@ -1,0 +1,41 @@
+{
+  "target": "diagnosticextensions-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/DiagnosticExtensions.framework/Versions/A/DiagnosticExtensions",
+    "sha256": "865962ed513eca1d80e6699657c4aaadc9d7ed1d3d12f6e8f358e3364ac35be8",
+    "reference_set": "fullsystem",
+    "objc_classes": 21,
+    "import_providers": {}
+  },
+  "original_bytes": 311296,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport",
+    "/usr/lib/libarchive.2.dylib",
+    "/System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit",
+    "/System/Library/PrivateFrameworks/Bom.framework/Versions/A/Bom",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "18812c9dd617fd803173bb86f6ef1aefbe5fa1b080c0c32fb823c69e81d18505",
+  "manifest_sha256": "916fab58adaf5ef18815a747eae0e50f733b05cf19c4bf4f1609b70fd1d3f86c",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "diagnosticextensions-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/diagnosticextensions-closure-resource-v1-build.log",
+  "log_sha256": "221094e4b53865cf27d8617be837e7f370ecdf3a4b56cdd99915d92b94fc802e"
+}

@@ -1,0 +1,40 @@
+{
+  "target": "libawdsupport-closure-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libAWDSupport.dylib",
+    "sha256": "be607b039e370e29d250de10c6ee3f948b60436924a70f0128b19ce9a58d4103",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 290816,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf-lite.dylib",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf.dylib",
+    "/usr/lib/libTelephonyUtilDynamic.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "e0b1d550f957dcf75c72e80e38e384411409ec490b862bbf7b80ec09b38220fb",
+  "manifest_sha256": "7e641030bf0b2ec29b60684d0bb9e2ccac697b7d9c698ed09a2c7dc69dfd7463",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libawdsupport-closure-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0c4e64e2d0af92de95df0673f4b3bcc9d2ef4b9859e76208ab7a8b70a0d82ff8",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libawdsupport-closure-resource-v1-build.log",
+  "log_sha256": "d87ef15f674e0cc098371be857bcc133c5e81536f8b9d0527d200217f44a9ceb"
+}

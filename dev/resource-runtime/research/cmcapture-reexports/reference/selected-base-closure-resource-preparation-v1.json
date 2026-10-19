@@ -1,0 +1,614 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/selected-base-closure-resource-batch-v1.json",
+  "configuration_sha256": "15b5366fe011afafb0a3df188fe6fe8140e68047bb3c7f67a6f339f85522ac54",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "76f0c437f92673e1dc5a10fa74d18419b6c912756012c45abfcac6b732bdfa4a",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage",
+      "attempts": [
+        {
+          "target": "vimage-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage",
+            "--target",
+            "vimage-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vimage-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "e550c11af5fd6a83efa0bcfbf16696d587ac3edf246c724705056a8c33983ee9",
+          "preparation": "artifacts/vimage-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "vimage-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityEvents.framework/Versions/A/AccessibilityEvents",
+      "attempts": [
+        {
+          "target": "accessibilityevents-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityEvents.framework/Versions/A/AccessibilityEvents",
+            "--target",
+            "accessibilityevents-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/accessibilityevents-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "f8bdc81504396ca79b4d81b9c72b808a5a7b6ae13b37fac88055b731afb51d32",
+          "preparation": "artifacts/accessibilityevents-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "accessibilityevents-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityFoundation.framework/Versions/A/AccessibilityFoundation",
+      "attempts": [
+        {
+          "target": "accessibilityfoundation-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityFoundation.framework/Versions/A/AccessibilityFoundation",
+            "--target",
+            "accessibilityfoundation-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/accessibilityfoundation-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "2a8972d9f1f9023f57298d1a695d09f612b62f5827a59b45bb6d4dd8b99354e7",
+          "preparation": "artifacts/accessibilityfoundation-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "accessibilityfoundation-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityKit.framework/Versions/A/AccessibilityKit",
+      "attempts": [
+        {
+          "target": "accessibilitykit-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityKit.framework/Versions/A/AccessibilityKit",
+            "--target",
+            "accessibilitykit-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/accessibilitykit-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "0c6b97f646fe1d1eee4f4dc9b0953bf17c5aa63a3db6438fd25db1a0fcd508f0",
+          "preparation": "artifacts/accessibilitykit-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "accessibilitykit-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityVisuals.framework/Versions/A/AccessibilityVisuals",
+      "attempts": [
+        {
+          "target": "accessibilityvisuals-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Frameworks/AccessibilityVisuals.framework/Versions/A/AccessibilityVisuals",
+            "--target",
+            "accessibilityvisuals-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/accessibilityvisuals-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "0de4ffa3f891b7b3690c8635fd6bc515b1378efb84d7263aac13bb2219e3229e",
+          "preparation": "artifacts/accessibilityvisuals-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "accessibilityvisuals-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PersonaUI.framework/Versions/A/PersonaUI",
+      "attempts": [
+        {
+          "target": "personaui-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PersonaUI.framework/Versions/A/PersonaUI",
+            "--target",
+            "personaui-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/personaui-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "f5140f8a3ab6ee5da6b7f61fb5c2722b4dea8e065bba5f30abbf9cfef7f1a94f",
+          "preparation": "artifacts/personaui-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "personaui-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DiagnosticExtensions.framework/Versions/A/DiagnosticExtensions",
+      "attempts": [
+        {
+          "target": "diagnosticextensions-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/DiagnosticExtensions.framework/Versions/A/DiagnosticExtensions",
+            "--target",
+            "diagnosticextensions-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/diagnosticextensions-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "83a81896dbcfe1bab2364069c9a1a7b6d523f13b54807ebe3225d8ebe9eec8c5",
+          "preparation": "artifacts/diagnosticextensions-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "diagnosticextensions-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DiagnosticExtensionsDaemon.framework/Versions/A/DiagnosticExtensionsDaemon",
+      "attempts": [
+        {
+          "target": "diagnosticextensionsdaemon-closure-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/DiagnosticExtensionsDaemon.framework/Versions/A/DiagnosticExtensionsDaemon",
+            "--target",
+            "diagnosticextensionsdaemon-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/diagnosticextensionsdaemon-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "5023520875b58c37e69f694561abdbd1465000448b4e5eaeda0df9fcaf81553c",
+          "preparation": "artifacts/diagnosticextensionsdaemon-closure-resource-v1-input.json"
+        },
+        {
+          "target": "diagnosticextensionsdaemon-closure-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "diagnosticextensionsdaemon-closure-resource-v1",
+            "--exact-import-audit",
+            "artifacts/diagnosticextensionsdaemon-closure-original-import-audit-v1.json",
+            "--target",
+            "diagnosticextensionsdaemon-closure-resource-v2",
+            "--build"
+          ],
+          "log": "logs/diagnosticextensionsdaemon-closure-resource-v2-batch-preparation.log",
+          "log_sha256": "1deec5a71096ae33a3f4f5a16f9100d0fc6a6df485e1e687bd3557b27175f277",
+          "preparation": "artifacts/diagnosticextensionsdaemon-closure-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "diagnosticextensionsdaemon-closure-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AVFoundationCF.framework/Versions/A/AVFoundationCF",
+      "attempts": [
+        {
+          "target": "avfoundationcf-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AVFoundationCF.framework/Versions/A/AVFoundationCF",
+            "--target",
+            "avfoundationcf-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/avfoundationcf-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "9dd75bc82a07827e670ac6ec9a8e6921250245df4bd01de17ef62b7663a4e940",
+          "preparation": "artifacts/avfoundationcf-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "avfoundationcf-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS",
+      "attempts": [
+        {
+          "target": "mmcs-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MMCS.framework/Versions/A/MMCS",
+            "--target",
+            "mmcs-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mmcs-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "b5b78f55279b772b4c1b78f1d0873f0763f64117bf6a4fa39933ef709a4b2225",
+          "preparation": "artifacts/mmcs-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mmcs-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PhotoFoundation.framework/Versions/A/PhotoFoundation",
+      "attempts": [
+        {
+          "target": "photofoundation-closure-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PhotoFoundation.framework/Versions/A/PhotoFoundation",
+            "--target",
+            "photofoundation-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/photofoundation-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "d83120f95bd0147f9f135c6e79094af12f685de61c53503d63140d915dfc8b73",
+          "preparation": "artifacts/photofoundation-closure-resource-v1-input.json"
+        },
+        {
+          "target": "photofoundation-closure-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "photofoundation-closure-resource-v1",
+            "--exact-import-audit",
+            "artifacts/photofoundation-closure-original-import-audit-v1.json",
+            "--target",
+            "photofoundation-closure-resource-v2",
+            "--build"
+          ],
+          "log": "logs/photofoundation-closure-resource-v2-batch-preparation.log",
+          "log_sha256": "8cb161b0b0a4ffb9133c6c95c25efc963521bb96bb248fb9f5973a27e58bf6f7",
+          "preparation": "artifacts/photofoundation-closure-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "photofoundation-closure-resource-v2"
+    },
+    {
+      "image": "/usr/lib/libScreenReader.dylib",
+      "attempts": [
+        {
+          "target": "libscreenreader-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libScreenReader.dylib",
+            "--target",
+            "libscreenreader-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libscreenreader-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "67dbb4bd3f746af8712978d9811f5985a8178fe1744f8e41c4c69e9f7cb51770",
+          "preparation": "artifacts/libscreenreader-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libscreenreader-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/BezelServices.framework/Versions/A/BezelServices",
+      "attempts": [
+        {
+          "target": "bezelservices-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/BezelServices.framework/Versions/A/BezelServices",
+            "--target",
+            "bezelservices-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/bezelservices-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "f3c137fd3fbc1daa6b25df9aaf1d2dc69c709b6617caad584109b1d164e4e5f4",
+          "preparation": "artifacts/bezelservices-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "bezelservices-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation",
+      "attempts": [
+        {
+          "target": "dfrfoundation-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/DFRFoundation.framework/Versions/A/DFRFoundation",
+            "--target",
+            "dfrfoundation-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/dfrfoundation-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "6c3b1d84d83bed22d77f0a07f38b9f77e2e1f49f897ad4f1588fd1c30848a00b",
+          "preparation": "artifacts/dfrfoundation-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "dfrfoundation-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport",
+      "attempts": [
+        {
+          "target": "multitouchsupport-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport",
+            "--target",
+            "multitouchsupport-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/multitouchsupport-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "5b20e31fca834794b45c00e6737f97af3908b60f65ff816e104de14d9f99edce",
+          "preparation": "artifacts/multitouchsupport-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "multitouchsupport-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/BatteryUIKit",
+      "attempts": [
+        {
+          "target": "batteryuikit-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/BatteryUIKit",
+            "--target",
+            "batteryuikit-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/batteryuikit-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "0b8bf71af29cbf2acf4cb3bccc30e0a4042ceca238708f2c817e486d7e3ed579",
+          "preparation": "artifacts/batteryuikit-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "batteryuikit-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PersonaKit.framework/Versions/A/PersonaKit",
+      "attempts": [
+        {
+          "target": "personakit-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PersonaKit.framework/Versions/A/PersonaKit",
+            "--target",
+            "personakit-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/personakit-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "3d9f8e7bd63abe197e2bc6253e4ddeba31ea13adbbf2f362d027ac94ac1823ad",
+          "preparation": "artifacts/personakit-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "personakit-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/WirelessDiagnostics",
+      "attempts": [
+        {
+          "target": "wirelessdiagnostics-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/WirelessDiagnostics",
+            "--target",
+            "wirelessdiagnostics-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/wirelessdiagnostics-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "f8a393be3f8be3a5ffb512e234c088dc29bea6067cb6635d8fd69228bf44d813",
+          "preparation": "artifacts/wirelessdiagnostics-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "wirelessdiagnostics-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EnhancedLogging.framework/Versions/A/EnhancedLogging",
+      "attempts": [
+        {
+          "target": "enhancedlogging-closure-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/EnhancedLogging.framework/Versions/A/EnhancedLogging",
+            "--target",
+            "enhancedlogging-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/enhancedlogging-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "dc2f651f8c43d279aeb7e615ee04c184b48f1488aceb8083f8b6aba8c7cd13fc",
+          "preparation": "artifacts/enhancedlogging-closure-resource-v1-input.json"
+        },
+        {
+          "target": "enhancedlogging-closure-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "enhancedlogging-closure-resource-v1",
+            "--exact-import-audit",
+            "artifacts/enhancedlogging-closure-original-import-audit-v1.json",
+            "--target",
+            "enhancedlogging-closure-resource-v2",
+            "--build"
+          ],
+          "log": "logs/enhancedlogging-closure-resource-v2-batch-preparation.log",
+          "log_sha256": "00a0f07f8196b0321ee3e4432ab8ea27be95754e1bace185f0407b6fa79222b4",
+          "preparation": "artifacts/enhancedlogging-closure-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "enhancedlogging-closure-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EnhancedLoggingState.framework/Versions/A/EnhancedLoggingState",
+      "attempts": [
+        {
+          "target": "enhancedloggingstate-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/EnhancedLoggingState.framework/Versions/A/EnhancedLoggingState",
+            "--target",
+            "enhancedloggingstate-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/enhancedloggingstate-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "efd53b2cf8c2bb6cd0020bedc11d0a67dcc7a865decfe204e4fe88f3f2e285ad",
+          "preparation": "artifacts/enhancedloggingstate-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "enhancedloggingstate-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary",
+      "attempts": [
+        {
+          "target": "chunkinglibrary-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ChunkingLibrary.framework/Versions/A/ChunkingLibrary",
+            "--target",
+            "chunkinglibrary-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/chunkinglibrary-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "658c83c8252d8dbd47a2ba8fd6447c0ac8121ffb7d3ac691a02c447bfa40b07f",
+          "preparation": "artifacts/chunkinglibrary-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "chunkinglibrary-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libAWDSupportFramework.dylib",
+      "attempts": [
+        {
+          "target": "libawdsupportframework-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libAWDSupportFramework.dylib",
+            "--target",
+            "libawdsupportframework-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libawdsupportframework-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "667d136a49441238a8dfafb2b3587d5e84e6c1f91f76d06eccf9c467be3bce00",
+          "preparation": "artifacts/libawdsupportframework-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libawdsupportframework-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libAWDSupport.dylib",
+      "attempts": [
+        {
+          "target": "libawdsupport-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libAWDSupport.dylib",
+            "--target",
+            "libawdsupport-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libawdsupport-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "0c4930347cc184e953d25862d0762244814f2a55df0934850fd3f0c781857080",
+          "preparation": "artifacts/libawdsupport-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libawdsupport-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf-lite.dylib",
+      "attempts": [
+        {
+          "target": "libprotobuf-lite-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf-lite.dylib",
+            "--target",
+            "libprotobuf-lite-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libprotobuf-lite-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "30a37accb5ccd1c2d25bbff98a917f7c8ca02acf69e154e28c9d0f7b7c34d436",
+          "preparation": "artifacts/libprotobuf-lite-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libprotobuf-lite-closure-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf.dylib",
+      "attempts": [
+        {
+          "target": "libprotobuf-closure-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Versions/A/Libraries/libprotobuf.dylib",
+            "--target",
+            "libprotobuf-closure-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libprotobuf-closure-resource-v1-batch-preparation.log",
+          "log_sha256": "be527d61930268668ba7db1eb7dd16fac2832eb2be084eb5f5a250afa60d27da",
+          "preparation": "artifacts/libprotobuf-closure-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "libprotobuf-closure-resource-v1"
+    }
+  ]
+}

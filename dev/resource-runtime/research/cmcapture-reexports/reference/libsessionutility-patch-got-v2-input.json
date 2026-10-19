@@ -1,0 +1,82 @@
+{
+  "target": "libsessionutility-patch-got-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib",
+    "sha256": "70574e16d2f7b66b37add1a0621709feb3f6fc8926e5a850d7652c40d6534861",
+    "reference_set": "fullsystem",
+    "objc_classes": 19,
+    "import_providers": {},
+    "cache_imports": {
+      "__ZTSNSt3__117bad_function_callE": "/usr/lib/libc++.1.dylib",
+      "__ZTSSt19bad_optional_access": "/usr/lib/libc++.1.dylib",
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 11,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 215,
+    "patch_got_range": [
+      "0x7ff840006000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 544768,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "039a6159aa8bc4ac93af8f35500219c5bff09771a63d91732aa92a2d134bcd7c",
+  "manifest_sha256": "826bf40b5c006967eb445f01c65d51cf6d85e8d04bbec4acd2c23dea82d36f76",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libsessionutility-patch-got-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "libsessionutility-resource-v1",
+  "exact_import_audit": "artifacts/libsessionutility-original-import-audit-v1.json",
+  "exact_import_audit_sha256": "858aca121ba698fba6daf9f62fa8ef5c2eecb3d2d925eb15a8f843e29011b623",
+  "typed_class_aliases": [],
+  "audit_unresolved_rows_not_selected": 11,
+  "original_patch_contract": {
+    "original_records": 272,
+    "nonzero_addends": 11,
+    "got_cells": 215,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "224e3cad2d779a9c8f3d5623ba799f64762d9187db8414649b942b5ae053631b"
+  },
+  "build_returncode": 1,
+  "log": "logs/libsessionutility-patch-got-v2-build.log",
+  "log_sha256": "af9d9e9f3ecda6d0a1c2edc49d8996a78c1f9e183dd70952bdcbb36333c68434"
+}

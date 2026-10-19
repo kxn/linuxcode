@@ -1,0 +1,50 @@
+{
+  "target": "quagga-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/Quagga.framework/Versions/A/Quagga",
+    "sha256": "6aef7f471abaf0ea1fa98887b456b0f2db2b4a8dc7096bb4498053e8fc04af82",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {}
+  },
+  "original_bytes": 1339392,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libc++.1.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/usr/lib/libiconv.2.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/libobjc.A.dylib"
+  ],
+  "previous_manifest_sha256": "28e637eafa086f81e92f275e08328041a171668f20eb8c346275728548274b04",
+  "manifest_sha256": "fe260cf9f866fdc6464afd5d797bf212679125d6b261211cd4e83bbca1bb2d11",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "quagga-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/quagga-resource-v1-build.log",
+  "log_sha256": "d2e2628b6061c9b4df6bae9fd3c20370d6789e9d581761e74cadceaef99f3cf1"
+}

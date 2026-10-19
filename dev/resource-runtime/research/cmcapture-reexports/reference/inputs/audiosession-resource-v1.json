@@ -1,0 +1,52 @@
+{
+  "target": "audiosession-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+    "sha256": "4c735c33fe21a5f09ac0629a6f0b3b011855df1bc16c2d8736cc8d8476475d2e",
+    "reference_set": "fullsystem",
+    "objc_classes": 61,
+    "import_providers": {}
+  },
+  "original_bytes": 978944,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib",
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce",
+    "/usr/lib/libAudioStatistics.dylib",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "b84315f6e36600d875c48f352fee13c757f95f1efa789b46669a36b503d78138",
+  "manifest_sha256": "28e637eafa086f81e92f275e08328041a171668f20eb8c346275728548274b04",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "audiosession-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "436580e0d36bde508c5dd2a18670043bba7c4357d57fc3c6467a061881e3f2a3",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/audiosession-resource-v1-build.log",
+  "log_sha256": "c5627c8c2d6ad6ee6403587f0b1cc5fbf029ab60a42f9b49a897029c1e5f4ae8"
+}
