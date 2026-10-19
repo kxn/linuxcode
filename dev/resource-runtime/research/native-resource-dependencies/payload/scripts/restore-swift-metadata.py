@@ -283,6 +283,14 @@ def restore(segments,ns,allocate,store,classify,own):
     overstated_keypath_requirements=[]
     environment_addresses=list(ns.get('swift_generic_environments',[]))
     environment_addresses += [int(record['environment'],16) for record in keypaths]
+    accessible_module=runpy.run_path(str(Path(__file__).with_name('swift-accessible-function-records.py')))
+    accessible_functions=accessible_module['validate'](
+        read,ns.get('swift_original_sections',original_sections))
+    environment_addresses += [int(record['environment'],16) for record in accessible_functions
+                              if record['environment'] is not None]
+    for record in accessible_functions:
+        for offset in (0,4,8,12):
+            relative(int(record['record'],16)+offset,label='accessible-function field')
     inverse_module=runpy.run_path(str(Path(__file__).with_name('swift-environment-inverse-bounds.py')))
     inverse_environment_ends=inverse_module['validate'](
         read,ns.get('swift_original_sections',original_sections),environment_addresses,
@@ -353,6 +361,7 @@ def restore(segments,ns,allocate,store,classify,own):
         'conditional_pack_shapes':conformance_packs,
         'generic_environments':[{'start':hex(a),'end':hex(b)} for a,b in environment_ranges],
         'pinned_keypath_patterns':keypaths,
+        'accessible_functions':accessible_functions,
         'overstated_keypath_requirements':overstated_keypath_requirements,
         'understated_environment_requirements':understated_environment_requirements,
         'conformances':len(conformances),'symbolic_references':symbolic_count,

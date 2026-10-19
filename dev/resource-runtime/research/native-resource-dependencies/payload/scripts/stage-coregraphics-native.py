@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import json
 import os
+import runpy
 import shutil
 
 root = Path(__file__).resolve().parent.parent
@@ -19,6 +20,7 @@ folder = root / ('runtime/coregraphics-native-' + args.tag)
 output = root / ('artifacts/coregraphics-native-' + args.tag + '-stage.json')
 assert not folder.exists() and not output.exists()
 digest = lambda p: hashlib.sha256((root / p).read_bytes()).hexdigest()
+resolve = runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
 manifest = 'config/coregraphics-image-pins.json'
 pin = json.loads((root / manifest).read_text())['coregraphics-resource-native']
 original = 'runtime/fullsystem-libraries' + pin['path']
@@ -80,7 +82,10 @@ for target in args.dependency:
 if args.simd_stage:
     simd = json.loads((root / args.simd_stage).read_text())
     for p, expected in simd['files'].items():
-        assert digest(p) == expected, p
+        if p.startswith(('scripts/', 'config/', 'vendor/')):
+            resolve(p, expected)
+        else:
+            assert digest(p) == expected, p
     record['files'].update(simd['files'])
     record['files'][args.simd_stage] = digest(args.simd_stage)
     for path in [simd['helper'], simd['library'], *simd.get('additional_libraries',[])]:

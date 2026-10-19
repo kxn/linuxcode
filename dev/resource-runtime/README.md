@@ -4,7 +4,7 @@
 
 这批固定 overlay 恢复 67 个明确锁定的原版 Intel 资源映像，补上 Swift KeyPath 二进制泛型环境、缓存合并的 Objective-C 协议引用和类引用表。它是资源工具兼容性的开发材料。**原版 actool/ibtool 尚未完成启动和资源编译**；固定 67 镜像候选仍缺 Sharing 所需的 CoreWiFi.framework。后续独立附件已经验证原版 ad-hoc 签名及 CPU 图像处理，Unity/UE 和完整冷安装仍未完成。
 
-[原版 CoreGraphics 附件](research/native-coregraphics/README.md) 保存真实位图绘制、原版 PNG 解码和字体链的进展。CPU 图像测试不需要图形界面；颜色转换对象创建仍失败。[后续依赖检查点](research/native-resource-dependencies/README.md) 已越过此前 ATS 加载缺口，当前工具缺少 Security 新接口；实际 CoreVideo CPU 测试因 IOSurface 内核服务不可用而断言退出。这些附件没有自动加入固定 overlay 或已成功的原版签名候选。
+[原版 CoreGraphics 附件](research/native-coregraphics/README.md) 保存真实位图绘制、原版 PNG 解码和字体链的进展。CPU 图像测试不需要图形界面；颜色转换对象创建仍失败。[后续依赖检查点](research/native-resource-dependencies/README.md) 保存原版依赖的延迟绑定和 Swift accessible-function 表修复，当前工具缺 XPCDistributed；实际 CoreVideo CPU 测试因 IOSurface 内核服务不可用而断言退出。这些附件没有自动加入固定 overlay 或已成功的原版签名候选。
 
 ## 应用到开发工作区
 

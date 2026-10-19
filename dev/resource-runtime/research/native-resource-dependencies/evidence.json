@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-19T10:52:48.811733+00:00",
+  "checked_at": "2026-10-19T11:28:12.694355+00:00",
   "classification": "progress",
   "previous_goal_turn_classification": "progress",
   "full_goal_complete": false,
@@ -77,7 +77,7 @@
   },
   "CoreVideo_CPU_API_verified": false,
   "CoreVideo_observed_blocker": "CVPixelBufferCreateWithBytes reaches original IOSurface _iosConnectInitalize; cannot open IOSurface kernel service (e00002c7), assertion aborts.",
-  "current_observed_tool_blocker": "LightweightCodeRequirements requires SecRequirementCreateWithLightweightCodeRequirementData from selected Security framework.",
+  "current_observed_tool_blocker": "Original actool/ibtool both fail loading XPCDistributed, required by original IDSFoundation. Library load closure remains incomplete.",
   "resource_tool_versions_verified": false,
   "full_resource_compilation_verified": false,
   "semantic_equivalence_verified": false,
@@ -90,9 +90,9 @@
     "Integrate resource pipeline into real Unity/UE CocoaPods iOS builds and signing; full objective remains unverified."
   ],
   "source_attachments": {
-    "config/coregraphics-image-pins.json": "fb2635dc4419d8624c4ae8d9a90a10a26d821cff8f324fe50d11ccc735155783",
+    "config/coregraphics-image-pins.json": "0bb1120267abb7763decd20ad951462a71e9bdd0ec06b842b7a6856d243c928f",
     "scripts/rebuild-c-cache-image.py": "da44488e0a12a16f19420153fd5b3c15f637ce898fe24eb9a630a43f3276039e",
-    "scripts/restore-swift-metadata.py": "5ab13a990e32d7c6dbd391435432bb40029e8c0581dabf0d99de680f8f71073f",
+    "scripts/restore-swift-metadata.py": "bff2eded6cbcd345a84358bf4252cfacab68db0c23784d90a68e4604b87c6ac5",
     "scripts/swift-environment-inverse-bounds.py": "84f2aba74ac70e52b82bac3f3ee4011207600e65a4690676577bc4e6015870c4",
     "scripts/test-swift-environment-inverse-bounds.py": "ed419a84f134a599434c01edcc190a265356d119b6794a4e849a893379ec2008",
     "scripts/stage-native-simd-math.py": "07a9d44a51ffd4f10545387dab37e28099d954375ca98fe28f359184ae863b43",
@@ -116,11 +116,28 @@
     "scripts/resolve-evidence-history.py": "b099805a7ea9777266e2e020dc0c2b72efbe7aff7d209a461943f41239e42928",
     "scripts/ios-resource-closure-profile.py": "9e0aa1c75fdc0ab6d233f072ac412ba71f0f5c102550c4d7b4934d0f826e8181",
     "scripts/coregraphics-native-profile.py": "356fa218c0a1351ff7136c1159d1989caebcff32bf7a32ec25dacef38a392f29",
-    "scripts/stage-coregraphics-native.py": "58b920e9c2550310f36f6ff8043a70f10cdc8ff88fd0ba77653a34d8b58673e3",
+    "scripts/stage-coregraphics-native.py": "00a7a29d7a4484775bbd8f232950928bb81277d7873ad7fd87351d8c66bf3637",
     "scripts/resolve-coregraphics-cache-imports.py": "3c8df36a8449c4cfeeb075ed4d1c956920e10bad6ab74bdb3f94ab962e6cc595",
     "scripts/probe-ios-resource-tools.py": "43df0a8df8f0b4bfb22b7dc0de2e963c82c71b980905e56b5d37e99aafcc3cad",
     "scripts/test-swift-metadata-layouts.py": "c08269868d203b7c5b4fe8216df6a77a596f52c9e88b29522c04fd61f1b93598",
-    "scripts/test-swift-keypath-environments.py": "7dcc3fde9bb2828648f761c16bd5cc6fc6090fd14fee613fff22b26d2d8718ac"
+    "scripts/test-swift-keypath-environments.py": "7dcc3fde9bb2828648f761c16bd5cc6fc6090fd14fee613fff22b26d2d8718ac",
+    "config/ios-resource-lazy-image-pins.json": "338df9313bd62a619291f3ac17adb1eaaee7c3508e2d70238e23903a9f29b290",
+    "artifacts/ios-resource-lazy-v1-rebuild-plan.json": "e172bb7576ddc55501c1596ab251724a1155f7a849882ca2a03e5aa1e970267f",
+    "scripts/stage-ios-resource-closure.py": "53d0c63bde24c2c401bd463e9a0a0cd5a8df7402a0586bc7914caf4be0455e19",
+    "scripts/coregraphics-native-security-profile.py": "0886e40f84afdd0809335310df078647add188ddca698ffb8732c3a73e8a62ae",
+    "scripts/swift-accessible-function-records.py": "341a4e656345f1327a259a2aba5d75749962b18eb847d4e9030e27aa76b99850",
+    "scripts/test-swift-accessible-function-records.py": "563d0c2afe86d3990ae673820fb9b976f45c41cbd881ffda64ca2e96ffd20c44",
+    "scripts/test-original-swift-accessible-functions.py": "6efa3ee035603ba0a3be6225e32957c17b4d4a693cafe068da99eaefa5974f1b",
+    "scripts/stage-native-sandbox-extension-constants.py": "19cf5f1b05316281364e6665a383f16f7fec22b28c31ae28fad193ddb7eb7ad3",
+    "scripts/test-sandbox-extension-constants.py": "11049145936a1d84b3591c7c4cdf1c0d1e699010e26ef1cc06ef8c4a905f81fa",
+    "scripts/test-original-resource-identifiers.py": "7e1535947e535736ce9c3f1d5420117e113b12c5b44b174805ecdda5a16488b0",
+    "scripts/sandbox-check-source-profile.py": "b3459d67b6a0cf39dba8dfe12b70f6879a386e5d8e45ff4148f1de2267ebdffe",
+    "scripts/verify-historical-source.py": "d8609a51343b83a408afc303b90b70badbe25c889e7ad154181a76a70fcf18ec",
+    "fixtures/SwiftAccessibleFunctions/AccessibleFunctions.swift": "2912dd2f968d323535cc1f91cd7029fd46749b1233ac051a505fc427931f3796",
+    "fixtures/hello/original-resource-identifiers.c": "c01cbc3595659d94570ffaa0279e406d9d825e7434e1aff285b95d5769f496fb",
+    "vendor/darling/src/sandbox/extension_constants.c": "f93d2775cd8952d4cef27c5afd637172183d59abec305eba068bb93c8d9c3e9d",
+    "vendor/darling/src/sandbox/extension.h": "5a2cc43ed92458cc683552111e40ff877d24a18708c35586583345211b6c654a",
+    "vendor/darling/src/sandbox/CMakeLists.txt": "ea9f19cac43c5ca4b6fb905597aef3c493e0efa809fc308211c1ba4fbae4164e"
   },
   "Swift_reference": {
     "repository": "https://github.com/swiftlang/swift",
@@ -153,5 +170,141 @@
       }
     ]
   },
-  "snapshot_is_complete_installer": false
+  "snapshot_is_complete_installer": false,
+  "Swift_accessible_function_reference": {
+    "repository": "https://github.com/swiftlang/swift",
+    "revision": "swift-6.3.3-RELEASE",
+    "files": [
+      {
+        "path": "include/swift/ABI/Metadata.h",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/include/swift/ABI/Metadata.h",
+        "sha256": "b828f86ebabd7d5252b87e608b97b6c92d658579622db69f62184da6a97b4073"
+      },
+      {
+        "path": "lib/IRGen/GenDecl.cpp",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/lib/IRGen/GenDecl.cpp",
+        "sha256": "e19b291e4d509992c2df03cfefc16fe52b1bee850b79c75c5dba91c89684fb94"
+      },
+      {
+        "path": "include/swift/ABI/Task.h",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/include/swift/ABI/Task.h",
+        "sha256": "6d54012a1d69fcead2b4188c5d111b787a1899fe6e3cf3729926ba4d51fac210"
+      }
+    ]
+  },
+  "followup_progress": {
+    "checked_at": "2026-10-19T11:28:12.694355+00:00",
+    "classification": "progress",
+    "previous_goal_turn_classification": "progress",
+    "full_goal_complete": false,
+    "evidence": {
+      "lazy_rebuilds": {
+        "path": "artifacts/ios-resource-lazy-v1-rebuild.json",
+        "sha256": "6aeb84e7ebc0d55fd84eecfc79c60e46272a2ab1ef78401c41b23ef7f846e566"
+      },
+      "lazy_stage": {
+        "path": "artifacts/ios-resource-lazy-v1-stage.json",
+        "sha256": "567a2d5f427137beed0a928c42d2fcc44c22eb0f39adbe37e01035d32366c93b"
+      },
+      "native_flags": {
+        "path": "runtime/sandbox-extension-constants-z3ev0uji/result.json",
+        "sha256": "22427302a3d1b3825300b93f2e970e380a3a002276a7eab920b84abfee8e0b4e"
+      },
+      "original_compiler": {
+        "path": "runtime/original-swift-accessible-functions-lgz_hda4/result.json",
+        "sha256": "7aef3e00b64741d812d6284f83db75867150a55bdcb291d7be646e39e485ef19"
+      },
+      "accessible_records": {
+        "path": "artifacts/idsfoundation-accessible-function-records-v1-proof.json",
+        "sha256": "1ec763efe0b5f84f2eb679f0f4b44c9d1754d9b554f1090a6113edec84f4ed9a"
+      },
+      "shared_regression": {
+        "path": "artifacts/swift-accessible-functions-shared-regression-v1.json",
+        "sha256": "175d16578153a288ce8a16db1cf5013f03385965a5edce29beb4edba430a9251"
+      },
+      "ids_family_rebuilds": {
+        "path": "artifacts/ids-family-resource-dependency-rebuild-v2.json",
+        "sha256": "686031a06aa6de2afbae3a5e7f5603c2acca0111b364cd0cd8b0dc019dd6f4b2"
+      },
+      "latest_probe": {
+        "path": "artifacts/ios-resource-lazy-v1-graphics-v38-security-headless-version-probes.json",
+        "sha256": "a2029eaa56cee74050ad739aa4ed9eb902b3b08fd07ce2a0d0c9b2a0e93dc9b3"
+      },
+      "graphics_stage": {
+        "path": "artifacts/coregraphics-native-v38-stage.json",
+        "sha256": "7fc1267bf32fbcd6ebcd0be4cb301ec0baffdcb2a25447f272e36a1f1d0fa467"
+      }
+    },
+    "sources": {
+      "config/coregraphics-image-pins.json": "0bb1120267abb7763decd20ad951462a71e9bdd0ec06b842b7a6856d243c928f",
+      "config/ios-resource-lazy-image-pins.json": "338df9313bd62a619291f3ac17adb1eaaee7c3508e2d70238e23903a9f29b290",
+      "scripts/restore-swift-metadata.py": "bff2eded6cbcd345a84358bf4252cfacab68db0c23784d90a68e4604b87c6ac5",
+      "scripts/swift-accessible-function-records.py": "341a4e656345f1327a259a2aba5d75749962b18eb847d4e9030e27aa76b99850",
+      "scripts/test-swift-accessible-function-records.py": "563d0c2afe86d3990ae673820fb9b976f45c41cbd881ffda64ca2e96ffd20c44",
+      "scripts/test-original-swift-accessible-functions.py": "6efa3ee035603ba0a3be6225e32957c17b4d4a693cafe068da99eaefa5974f1b",
+      "fixtures/SwiftAccessibleFunctions/AccessibleFunctions.swift": "2912dd2f968d323535cc1f91cd7029fd46749b1233ac051a505fc427931f3796",
+      "scripts/stage-coregraphics-native.py": "00a7a29d7a4484775bbd8f232950928bb81277d7873ad7fd87351d8c66bf3637",
+      "scripts/stage-ios-resource-closure.py": "53d0c63bde24c2c401bd463e9a0a0cd5a8df7402a0586bc7914caf4be0455e19",
+      "scripts/coregraphics-native-security-profile.py": "0886e40f84afdd0809335310df078647add188ddca698ffb8732c3a73e8a62ae",
+      "scripts/stage-native-sandbox-extension-constants.py": "19cf5f1b05316281364e6665a383f16f7fec22b28c31ae28fad193ddb7eb7ad3",
+      "scripts/test-sandbox-extension-constants.py": "11049145936a1d84b3591c7c4cdf1c0d1e699010e26ef1cc06ef8c4a905f81fa",
+      "scripts/sandbox-check-source-profile.py": "b3459d67b6a0cf39dba8dfe12b70f6879a386e5d8e45ff4148f1de2267ebdffe",
+      "vendor/darling/src/sandbox/extension_constants.c": "f93d2775cd8952d4cef27c5afd637172183d59abec305eba068bb93c8d9c3e9d",
+      "vendor/darling/src/sandbox/extension.h": "5a2cc43ed92458cc683552111e40ff877d24a18708c35586583345211b6c654a",
+      "vendor/darling/src/sandbox/CMakeLists.txt": "ea9f19cac43c5ca4b6fb905597aef3c493e0efa809fc308211c1ba4fbae4164e"
+    },
+    "original_lazy_closure": {
+      "images_rebuilt": 70,
+      "Swift_images": 56,
+      "restored_lazy_binding_slots": 28150,
+      "original_function_calls_preserved": true,
+      "unavailable_targets_still_fail_if_called": true,
+      "runtime_API_correctness_verified": false
+    },
+    "sandbox_constant_objects": {
+      "new_uint32_objects": 5,
+      "existing_objects_verified": 4,
+      "original_values_and_compiled_bytes_match": true,
+      "runtime_values_and_new_owners_verified": true,
+      "new_policy_operations_implemented": false
+    },
+    "accessible_functions": {
+      "original_Apple_compiler_local_calls": 2,
+      "actual_original_table_records": 19,
+      "original_table_generic_environments": 4,
+      "damaged_records_rejected": 18,
+      "no_pattern_guess_or_header_rewrite": true,
+      "original_IDSFoundation_exports": 15950,
+      "remote_invocation_verified": false,
+      "full_framework_API_verified": false
+    },
+    "shared_rebuild_regression": {
+      "byte_identical": [
+        "swift-os",
+        "rsd-full-native",
+        "corevideo-resource-native"
+      ],
+      "existing_KeyPath_checks": 22,
+      "existing_damaged_layout_checks": 5
+    },
+    "current_observed_tool_blocker": "Original actool/ibtool both fail loading XPCDistributed, required by original IDSFoundation. Library load closure remains incomplete.",
+    "actual_tool_versions_verified": false,
+    "actual_resource_compilation_verified": false,
+    "original_CoreVideo_CPU_API_verified": false,
+    "original_CoreVideo_CPU_blocker": "Original IOSurface kernel service user client unsupported. Original initialization then requires selector 13, 40-byte limits record with version=1 at offset34. No user-client implementation was added in this turn.",
+    "identifier_CFString_test_status": "Still failed during dependency loading; no positive CFString value/copy claim.",
+    "original_SIMD_strict_scalar_equivalence_verified": false,
+    "original_SIMD_signed_zero_difference_preserved": true,
+    "original_signed_fixture_unchanged": true,
+    "existing_native_signing_profile_still_validates": true,
+    "existing_signed_build_rerun": false,
+    "semantic_equivalence_verified": false,
+    "GUI_required": false,
+    "next_work": [
+      "Reconstruct and connect actual XPCDistributed and continue native actool/ibtool startup and resource output validation.",
+      "Run pending original CFString and other APIs only after the corresponding load closure succeeds.",
+      "Implement the actual headless IOSurface user-client protocol, not a successful connection stub; retest original CoreVideo CPU buffer bytes and ownership.",
+      "Verify real Unity/UE exported CocoaPods iOS projects, certificate/provisioning signing and archive/export; these remain incomplete."
+    ]
+  }
 }
