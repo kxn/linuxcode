@@ -1,0 +1,64 @@
+{
+  "target": "cfopendirectory-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory",
+    "sha256": "0c262f8564c3903dc9eab6e44548b625c4b635b64998cab6d68e25855a0f1b89",
+    "reference_set": "fullsystem",
+    "objc_classes": 11,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 316,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 282624,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory",
+    "/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS",
+    "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "95dfeeb7597241b618adf90b950d007a43010f72490da7965cd99c8c1ff4f284",
+  "manifest_sha256": "4ab6de68154582bd3354e84fcb876e1d803f13705f410c6c91f4c0380e3fa764",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "cfopendirectory-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "bacc25a7f17a511eb43f4d5e83f60c2a9cd70997d4ada75e56d7d52eba239f3a",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 784,
+    "nonzero_addends": 0,
+    "got_cells": 316,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/cfopendirectory-patch-got-v1-build.log",
+  "log_sha256": "217c0e432031122c571f5b5aab5fac5d8dc8f1e46686866884665390ad0d14e1"
+}

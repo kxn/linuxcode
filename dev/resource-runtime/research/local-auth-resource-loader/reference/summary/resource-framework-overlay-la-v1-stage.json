@@ -1,0 +1,49 @@
+{
+  "installed": false,
+  "frameworks": "runtime/resource-framework-overlay-la-v1/frameworks",
+  "libraries": "runtime/resource-framework-overlay-la-v1/libraries",
+  "original_security_target": "security-resource-original-patch-got-v3",
+  "original_executable_bytes_preserved": true,
+  "required_exports": [
+    "_OBJC_CLASS_$_OTControlArguments",
+    "_kSecAttrSharingGroup"
+  ],
+  "exported_symbols": 6077,
+  "original_session_class_reexports": {
+    "original_export_payloads_preserved": 0,
+    "added_names": [
+      "_OBJC_CLASS_$_ExternalPreSharedKey",
+      "_OBJC_CLASS_$_OfferedEPSK",
+      "_OBJC_CLASS_$_SecExternalPreSharedKey",
+      "_OBJC_CLASS_$_SecOfferedEPSK",
+      "_OBJC_CLASS_$_SecSessionInfo",
+      "_OBJC_METACLASS_$_ExternalPreSharedKey",
+      "_OBJC_METACLASS_$_OfferedEPSK",
+      "_OBJC_METACLASS_$_SecExternalPreSharedKey",
+      "_OBJC_METACLASS_$_SecOfferedEPSK",
+      "_OBJC_METACLASS_$_SecSessionInfo"
+    ],
+    "original_instructions_and_other_bytes_preserved": true,
+    "provider_entire_namespace_reexported": false
+  },
+  "runtime_execution_verified": false,
+  "signing_with_original_security_verified": false,
+  "parent_overlay": "artifacts/security-resource-original-v3-stage.json",
+  "parent_overlay_sha256": "d34b2f3e1ab57cd83e819a1a6010ebce2213548e5530526258d051e91057d9e4",
+  "graphics_stage": "artifacts/coregraphics-native-v106-stage.json",
+  "graphics_stage_sha256": "ac69d2b2da0c8216f3c5a3b484c753243da2a1fc116fed8835e584d703d5f916",
+  "added_original_frameworks": [
+    {
+      "target": "localauthentication-patch-got-v2",
+      "framework": "LocalAuthentication.framework",
+      "source": "runtime/coregraphics-native-v106/frameworks/LocalAuthentication.framework",
+      "image": "runtime/coregraphics-native-v106/frameworks/LocalAuthentication.framework/Versions/A/LocalAuthentication",
+      "image_sha256": "a6af4eb9437ee76e585592baaa0a06afcc66a6538f63d71a075771a864317f62",
+      "reconstruction": "runtime/rebuilt-localauthentication-patch-got-v2/reconstruction.json"
+    }
+  ],
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-framework-overlay-la-v1-stage.json",
+  "full_local_report_sha256": "f6240bbc308430e41c5a0f2126abdb4acb797f9ed690222c2af9b9e6c53fa8dc",
+  "full_local_file_count": 21
+}

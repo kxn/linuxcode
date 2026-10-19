@@ -1,0 +1,28 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/systemadministration-resource-v59-symbol-audit.json",
+  "full_local_report_sha256": "c46443afe0253db1cd0b71cbb9c79a2015e82991c719723425a3081a0e5713c3",
+  "image_count": 446,
+  "binding_slots_checked": 475295,
+  "eager_strong_missing_count": 1698,
+  "prioritized_consumers": [
+    {
+      "consumer": "/System/Library/PrivateFrameworks/CoreAUC.framework/Versions/A/CoreAUC",
+      "provider": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+      "symbol": "_IOAVServiceCreateWithService",
+      "weak_import": false,
+      "binding": "eager",
+      "provider_in_inventory": true
+    },
+    {
+      "consumer": "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+      "provider": "/System/Library/PrivateFrameworks/login.framework/Versions/A/login",
+      "symbol": "_OBJC_CLASS_$_LFVolume",
+      "weak_import": false,
+      "binding": "eager",
+      "provider_in_inventory": true
+    }
+  ],
+  "full_compatibility": false,
+  "limitations": "Static search model uses first rpath context and does not prove actual dyld selection or runtime API behavior."
+}

@@ -1,0 +1,77 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 6574659,
+      "sha256": "e55c583b53b0f23702870de6ffe731121a5cfe06c39b03796562c28e3a77f1e6"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 5154,
+      "sha256": "19c29f7c563abd975d1281154eed97ece30272667fbc92684c42fbdd10d093bf"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1413,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 2999,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 5,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x567a8",
+        "first_section_prefix": "0xa0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x567e0",
+        "first_section_prefix": "0xa0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x567f8",
+        "first_section_prefix": "0xa0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56810",
+        "first_section_prefix": "0xa0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56828",
+        "first_section_prefix": "0xa0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-videotoolbox-patch-got-v1/VideoToolbox': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x15e4b)\n",
+    "original_validator": "runtime/original-dyld-validation-nicifzck/result.json",
+    "original_validator_sha256": "af37950ca8a5ce30ce7bbb7dce9abfea9773f30e7ff162d9f0efbad63d84b3a1",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "457078f2cc1ff62ba1a2cc308f3bf919916a9eec699af12f95b7c107842671af",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "a0f9d3ffeb44d3586bd5f0a58ced8c85a4cf8cae417e5d19c39039e2125978bc",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox": "9a4082c7533fc9fe8fcb4cb1aa17f3eb2ad09ae41794439c6f214bc2cb50f152",
+    "runtime/rebuilt-videotoolbox-patch-got-v1/VideoToolbox": "f38fec7f0fb7b8db4f7f322f76f12e92f699c48ba0d49cda8f16be391f314b11",
+    "runtime/rebuilt-videotoolbox-patch-got-v1/reconstruction.json": "a8e84eeadd3332ba43cbff7189a7dd92cb54a994bf9e5516be560894bd4800f4"
+  },
+  "verified": true
+}

@@ -1,0 +1,581 @@
+{
+  "checked_at": "2026-10-19T22:18:59.250013+00:00",
+  "scope": "Inventory x86_64 Mach-O load-command dependencies in the isolated prefix.\n\nThis is a static inventory, not proof of symbol/ABI/initializer compatibility.\nUses each image's first encountered rpath context; dlopen/plugin dependencies\noutside the two explicit seeds are not inferred.\n",
+  "images_visited": 446,
+  "runtime_root": "runtime/private-procfs-v11/darling-root",
+  "overlay_prefix": "runtime/state/prefix",
+  "native_stage_included": false,
+  "framework_stages": [
+    "/home/dl/linuxcode/runtime/resource-framework-overlay-la-od-media-v1/frameworks",
+    "/home/dl/linuxcode/runtime/resource-framework-overlay-la-od-media-v1/frameworks/LocalAuthentication.framework/Support",
+    "/home/dl/linuxcode/runtime/resource-framework-overlay-la-od-media-v1/frameworks/OpenDirectory.framework/Versions/A/Frameworks",
+    "/home/dl/linuxcode/runtime/original-codesign-closure-native-local-signer-v1/frameworks",
+    "/home/dl/linuxcode/runtime/coregraphics-native-v108/frameworks",
+    "/home/dl/linuxcode/runtime/ios-resource-lazy-v1/frameworks",
+    "/home/dl/linuxcode/runtime/global-fsevents-source/frameworks",
+    "/home/dl/linuxcode/runtime/fsevents-history-source/frameworks",
+    "/home/dl/linuxcode/runtime/mobileasset-query-source/frameworks",
+    "/home/dl/linuxcode/runtime/local-authentication-error-source/frameworks",
+    "/home/dl/linuxcode/runtime/crypto-token-kit-native/frameworks",
+    "/home/dl/linuxcode/runtime/security-cryptokit-constants/frameworks",
+    "/home/dl/linuxcode/runtime/crypto-token-parameters-source/frameworks",
+    "/home/dl/linuxcode/runtime/cryptokit-original-native/frameworks",
+    "/home/dl/linuxcode/runtime/argument-parser-native/frameworks",
+    "/home/dl/linuxcode/runtime/diskmanagement-nserror-source/frameworks",
+    "/home/dl/linuxcode/runtime/mobileasset-download-attributes/frameworks",
+    "/home/dl/linuxcode/runtime/cryptex-native/frameworks",
+    "/home/dl/linuxcode/runtime/device-identity-native/frameworks",
+    "/home/dl/linuxcode/runtime/iokit-main-port-source/frameworks",
+    "/home/dl/linuxcode/runtime/security-device-constants/frameworks",
+    "/home/dl/linuxcode/runtime/crypto-token-error-source/frameworks",
+    "/home/dl/linuxcode/runtime/coreutils-crypto-source/frameworks",
+    "/home/dl/linuxcode/runtime/xcode-mobile-device/System/Library/PrivateFrameworks",
+    "/home/dl/linuxcode/runtime/security-cloud-rpc-stage/frameworks",
+    "/home/dl/linuxcode/runtime/mdns-native/frameworks",
+    "/home/dl/linuxcode/runtime/fsevents-heap-source/frameworks",
+    "/home/dl/linuxcode/runtime/combine-native/frameworks",
+    "/home/dl/linuxcode/runtime/imageio-legacy-key/frameworks",
+    "/home/dl/linuxcode/runtime/imageio-cg-constants/frameworks",
+    "/home/dl/linuxcode/runtime/imageio-native/frameworks",
+    "/home/dl/linuxcode/runtime/mobilegestalt-native/frameworks",
+    "/home/dl/linuxcode/runtime/native-layer-context/frameworks",
+    "/home/dl/linuxcode/runtime/native-layer-support/frameworks",
+    "/home/dl/linuxcode/runtime/uniform-type-identifiers-native/frameworks",
+    "/home/dl/linuxcode/runtime/security-policy-source/frameworks",
+    "/home/dl/linuxcode/runtime/apple-system-info-native/frameworks",
+    "/home/dl/linuxcode/runtime/mobileasset-source/frameworks",
+    "/home/dl/linuxcode/runtime/quartzcore-native/frameworks",
+    "/home/dl/linuxcode/runtime/logging-support-native/frameworks",
+    "/home/dl/linuxcode/runtime/foundation-native-framework-stage",
+    "/home/dl/linuxcode/runtime/native-framework-stage"
+  ],
+  "library_stages": [
+    "/home/dl/linuxcode/runtime/libsystem-kqueue-source-gx7z94z5/resourcev40",
+    "/home/dl/linuxcode/runtime/resource-framework-overlay-la-od-media-v1/libraries",
+    "/home/dl/linuxcode/runtime/objc-data-const-source-v1",
+    "/home/dl/linuxcode/runtime/original-codesign-closure-native-local-signer-v1/libraries",
+    "/home/dl/linuxcode/runtime/local-identity-store-readonly-v2/libraries",
+    "/home/dl/linuxcode/runtime/coregraphics-native-v108/libraries",
+    "/home/dl/linuxcode/runtime/ios-resource-lazy-v1/libraries",
+    "/home/dl/linuxcode/runtime/log-compose-runtime/libraries",
+    "/home/dl/linuxcode/runtime/rebuilt-sandbox-compiler-native",
+    "/home/dl/linuxcode/runtime/rebuilt-match-sandbox-native",
+    "/home/dl/linuxcode/runtime/rebuilt-commoncrypto-original-native",
+    "/home/dl/linuxcode/runtime/security-cryptokit-constants/libraries",
+    "/home/dl/linuxcode/runtime/crypto-token-parameters-source/libraries",
+    "/home/dl/linuxcode/runtime/rebuilt-corecrypto-original-native-v2",
+    "/home/dl/linuxcode/runtime/corecrypto-malloc-source/libraries",
+    "/home/dl/linuxcode/runtime/corecrypto-hkdf-source/libraries",
+    "/home/dl/linuxcode/runtime/applearchive-native/libraries",
+    "/home/dl/linuxcode/runtime/cryptex-native/libraries",
+    "/home/dl/linuxcode/runtime/device-identity-native/libraries",
+    "/home/dl/linuxcode/runtime/security-device-constants/libraries",
+    "/home/dl/linuxcode/runtime/crypto-token-error-source/libraries",
+    "/home/dl/linuxcode/runtime/crypto-quarantine-runtime/libraries",
+    "/home/dl/linuxcode/runtime/expected-access-source/libraries",
+    "/home/dl/linuxcode/runtime/typed-new-delete-source/libraries",
+    "/home/dl/linuxcode/runtime/security-cloud-rpc-stage/libraries",
+    "/home/dl/linuxcode/runtime/mdns-native/libraries",
+    "/home/dl/linuxcode/runtime/foundation-coherent/libraries",
+    "/home/dl/linuxcode/runtime/objc-selector-source/libraries",
+    "/home/dl/linuxcode/runtime/objc-selector-source",
+    "/home/dl/linuxcode/runtime/imageio-legacy-key/libraries",
+    "/home/dl/linuxcode/runtime/simd-matrix-source/libraries",
+    "/home/dl/linuxcode/runtime/imageio-cg-constants/libraries",
+    "/home/dl/linuxcode/runtime/imageio-native/libraries",
+    "/home/dl/linuxcode/runtime/runnable-archs-source/libraries",
+    "/home/dl/linuxcode/runtime/mobilegestalt-native/libraries",
+    "/home/dl/linuxcode/runtime/container-persona/libraries",
+    "/home/dl/linuxcode/runtime/log-hooks/libraries",
+    "/home/dl/linuxcode/runtime/native-log-message/libraries",
+    "/home/dl/linuxcode/runtime/log-enablement/libraries",
+    "/home/dl/linuxcode/runtime/libtrace-pack-source/libraries",
+    "/home/dl/linuxcode/runtime/native-layer-context/libraries",
+    "/home/dl/linuxcode/runtime/native-layer-support/libraries",
+    "/home/dl/linuxcode/runtime/container-manager-export/libraries",
+    "/home/dl/linuxcode/runtime/sysdir-native-export/libraries",
+    "/home/dl/linuxcode/runtime/sandbox-container-source/libraries",
+    "/home/dl/linuxcode/runtime/rootless-nounlink-export/libraries",
+    "/home/dl/linuxcode/runtime/typed-malloc-source/libraries",
+    "/home/dl/linuxcode/runtime/os-log-simple-source/libraries",
+    "/home/dl/linuxcode/runtime/rootless-datavault-export/libraries",
+    "/home/dl/linuxcode/runtime/user-local-dir-export/libraries",
+    "/home/dl/linuxcode/runtime/libtrace-source/libraries",
+    "/home/dl/linuxcode/runtime/objc-source",
+    "/home/dl/linuxcode/runtime/uti-runtime-support/libraries",
+    "/home/dl/linuxcode/runtime/uniform-type-identifiers-native/libraries",
+    "/home/dl/linuxcode/runtime/pthread-yield-export/libraries",
+    "/home/dl/linuxcode/runtime/security-policy-source/libraries",
+    "/home/dl/linuxcode/runtime/quartzcore-native/libraries",
+    "/home/dl/linuxcode/runtime/foundation-native-library-stage",
+    "/home/dl/linuxcode/runtime/native-library-stage",
+    "/home/dl/linuxcode/runtime/rebuilt-der"
+  ],
+  "library_search_paths": [],
+  "missing_required_images": [
+    {
+      "name": "/System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS",
+        "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+        "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftCore.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreAudio.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib",
+        "/usr/lib/swift/libswiftsimd.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftCoreGraphics.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftFoundation.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftMetal.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftCoreMedia.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftObjectiveC.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib"
+      ]
+    }
+  ],
+  "missing_weak_images": [
+    {
+      "name": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/Libraries/libCGInterfaces.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage"
+      ]
+    },
+    {
+      "name": "/System/Library/Frameworks/NetworkExtension.framework/Versions/A/NetworkExtension",
+      "consumers": [
+        "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AOSKit.framework/Versions/A/AOSKit",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AccelerateGPU.framework/Versions/A/AccelerateGPU",
+      "consumers": [
+        "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AppSSOCore.framework/Versions/A/AppSSOCore",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AppleDeviceQuerySupport.framework/Versions/A/AppleDeviceQuerySupport",
+      "consumers": [
+        "/usr/lib/libFDR.dylib"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AppleJPEGXL.framework/Versions/A/AppleJPEGXL",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/CMPhoto.framework/Versions/A/CMPhoto"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AppleVPA.framework/Versions/A/AppleVPA",
+      "consumers": [
+        "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+        "/System/Library/PrivateFrameworks/CMPhoto.framework/Versions/A/CMPhoto"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AudioAccessoryServices.framework/Versions/A/AudioAccessoryServices",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics",
+      "consumers": [
+        "/usr/lib/libAudioStatistics.dylib"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/CloudServices.framework/Versions/A/CloudServices",
+      "consumers": [
+        "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+        "/System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Versions/A/ProtectedCloudStorage"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/CoreAVCHD.framework/Versions/A/CoreAVCHD",
+      "consumers": [
+        "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout",
+      "consumers": [
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay",
+      "consumers": [
+        "/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/DeviceRecovery.framework/Versions/A/DeviceRecovery",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing",
+      "consumers": [
+        "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+        "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libGPUCompilerUtils.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Metal.framework/Versions/A/Metal"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Metal.framework/Versions/A/Metal"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter",
+      "consumers": [
+        "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer",
+      "consumers": [
+        "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary",
+      "consumers": [
+        "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/MSUDataAccessor.framework/Versions/A/MSUDataAccessor",
+      "consumers": [
+        "/usr/lib/libFDR.dylib"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/Mangrove.framework/Versions/A/Mangrove",
+      "consumers": [
+        "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/Netrb.framework/Versions/A/Netrb",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/CoreWiFi.framework/Versions/A/CoreWiFi"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/NetworkScore.framework/Versions/A/NetworkScore",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/Versions/A/NetworkServiceProxy",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG",
+      "consumers": [
+        "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/OctagonTrust.framework/Versions/A/OctagonTrust",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Versions/A/ProtectedCloudStorage"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing",
+      "consumers": [
+        "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/StreamingExtractor.framework/Versions/A/StreamingExtractor",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/SymptomReporter.framework/Versions/A/SymptomReporter",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+      ]
+    },
+    {
+      "name": "/System/Library/PrivateFrameworks/WiFiPeerToPeer.framework/Versions/A/WiFiPeerToPeer",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/CoreWiFi.framework/Versions/A/CoreWiFi"
+      ]
+    },
+    {
+      "name": "/usr/lib/libCheckFix.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore"
+      ]
+    },
+    {
+      "name": "/usr/lib/libMemoryResourceException.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+      ]
+    },
+    {
+      "name": "/usr/lib/libapp_launch_measurement.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices"
+      ]
+    },
+    {
+      "name": "/usr/lib/libcupolicy.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+      ]
+    },
+    {
+      "name": "/usr/lib/libdns_services.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+      ]
+    },
+    {
+      "name": "/usr/lib/libmrc.dylib",
+      "consumers": [
+        "/System/Library/PrivateFrameworks/CoreWiFi.framework/Versions/A/CoreWiFi"
+      ]
+    },
+    {
+      "name": "/usr/lib/libnetworkextension.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+        "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+      ]
+    },
+    {
+      "name": "/usr/lib/libnwswifttls.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+      ]
+    },
+    {
+      "name": "/usr/lib/libpcap.A.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+      ]
+    },
+    {
+      "name": "/usr/lib/libquic.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/Network.framework/Versions/A/Network"
+      ]
+    },
+    {
+      "name": "/usr/lib/swift/libswiftCoreMIDI.dylib",
+      "consumers": [
+        "/System/Library/Frameworks/CloudKit.framework/Versions/A/CloudKit",
+        "/System/Library/PrivateFrameworks/CloudAsset.framework/Versions/A/CloudAsset"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftCoreAudio.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftCoreFoundation.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreAudio.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftCoreGraphics.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftCoreImage.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftDarwin.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreAudio.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib",
+        "/usr/lib/swift/libswiftsimd.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftDispatch.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreAudio.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftFoundation.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftIOKit.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftMetal.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftObjectiveC.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftCoreAudio.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftQuartzCore.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftXPC.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMedia.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib"
+      ]
+    },
+    {
+      "name": "@rpath/libswiftsimd.dylib",
+      "consumers": [
+        "/usr/lib/swift/libswiftAVFoundation.dylib"
+      ]
+    }
+  ],
+  "invalid_images": [],
+  "full_build_compatibility_asserted": false,
+  "summary_only": true,
+  "full_local_report": "artifacts/systemadministration-resource-v59-dependency-inventory.json",
+  "full_local_report_sha256": "1b225e6a72508ee660079304867572a88e190bcfb3c4c1672459991a4a755789",
+  "image_count": 446
+}

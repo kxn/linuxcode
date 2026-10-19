@@ -1,0 +1,53 @@
+{
+  "installed": false,
+  "frameworks": "runtime/resource-framework-overlay-la-od-v1/frameworks",
+  "libraries": "runtime/resource-framework-overlay-la-od-v1/libraries",
+  "original_security_target": "security-resource-original-patch-got-v3",
+  "original_executable_bytes_preserved": true,
+  "required_exports": [
+    "_OBJC_CLASS_$_OTControlArguments",
+    "_kSecAttrSharingGroup"
+  ],
+  "exported_symbols": 6077,
+  "original_session_class_reexports": {
+    "original_export_payloads_preserved": 0,
+    "added_names": [
+      "_OBJC_CLASS_$_ExternalPreSharedKey",
+      "_OBJC_CLASS_$_OfferedEPSK",
+      "_OBJC_CLASS_$_SecExternalPreSharedKey",
+      "_OBJC_CLASS_$_SecOfferedEPSK",
+      "_OBJC_CLASS_$_SecSessionInfo",
+      "_OBJC_METACLASS_$_ExternalPreSharedKey",
+      "_OBJC_METACLASS_$_OfferedEPSK",
+      "_OBJC_METACLASS_$_SecExternalPreSharedKey",
+      "_OBJC_METACLASS_$_SecOfferedEPSK",
+      "_OBJC_METACLASS_$_SecSessionInfo"
+    ],
+    "original_instructions_and_other_bytes_preserved": true,
+    "provider_entire_namespace_reexported": false
+  },
+  "runtime_execution_verified": false,
+  "signing_with_original_security_verified": false,
+  "parent_overlay": "artifacts/resource-framework-overlay-la-v2-stage.json",
+  "parent_overlay_sha256": "5258e0a493342c1603bac84b33e80b0870fc7d1b01126b87347908cb03e7af8d",
+  "graphics_stage": "artifacts/coregraphics-native-v107-stage.json",
+  "graphics_stage_sha256": "068bfe8fd1333bf7d884dcc72401ed3d2f88d6be3738276d71dcef2729ed5037",
+  "added_original_frameworks": [
+    {
+      "target": "opendirectory-patch-got-v2",
+      "framework": "OpenDirectory.framework",
+      "source": "runtime/coregraphics-native-v107/frameworks/OpenDirectory.framework",
+      "image": "runtime/coregraphics-native-v107/frameworks/OpenDirectory.framework/Versions/A/OpenDirectory",
+      "image_sha256": "e0e6d44e28de0b99c4416c5ce3fca9d77626dd87b5d65b3ce2b12526345c9124",
+      "reconstruction": "runtime/rebuilt-opendirectory-patch-got-v2/reconstruction.json"
+    }
+  ],
+  "extra_framework_paths": [
+    "runtime/resource-framework-overlay-la-od-v1/frameworks/LocalAuthentication.framework/Support",
+    "runtime/resource-framework-overlay-la-od-v1/frameworks/OpenDirectory.framework/Versions/A/Frameworks"
+  ],
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-framework-overlay-la-od-v1-stage.json",
+  "full_local_report_sha256": "c76d40fb6fdb2fae4949b6299893df6c4de8e788cfc02518deef11254b10a3c5",
+  "full_local_file_count": 31
+}

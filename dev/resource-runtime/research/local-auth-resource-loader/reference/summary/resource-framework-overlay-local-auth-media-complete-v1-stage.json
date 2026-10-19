@@ -1,0 +1,101 @@
+{
+  "installed": false,
+  "frameworks": "runtime/resource-framework-overlay-local-auth-media-complete-v1/frameworks",
+  "libraries": "runtime/resource-framework-overlay-local-auth-media-complete-v1/libraries",
+  "original_security_target": "security-resource-original-patch-got-v3",
+  "original_executable_bytes_preserved": true,
+  "required_exports": [
+    "_OBJC_CLASS_$_OTControlArguments",
+    "_kSecAttrSharingGroup"
+  ],
+  "exported_symbols": 6077,
+  "original_session_class_reexports": {
+    "original_export_payloads_preserved": 0,
+    "added_names": [
+      "_OBJC_CLASS_$_ExternalPreSharedKey",
+      "_OBJC_CLASS_$_OfferedEPSK",
+      "_OBJC_CLASS_$_SecExternalPreSharedKey",
+      "_OBJC_CLASS_$_SecOfferedEPSK",
+      "_OBJC_CLASS_$_SecSessionInfo",
+      "_OBJC_METACLASS_$_ExternalPreSharedKey",
+      "_OBJC_METACLASS_$_OfferedEPSK",
+      "_OBJC_METACLASS_$_SecExternalPreSharedKey",
+      "_OBJC_METACLASS_$_SecOfferedEPSK",
+      "_OBJC_METACLASS_$_SecSessionInfo"
+    ],
+    "original_instructions_and_other_bytes_preserved": true,
+    "provider_entire_namespace_reexported": false
+  },
+  "runtime_execution_verified": false,
+  "signing_with_original_security_verified": false,
+  "parent_overlay": "artifacts/resource-framework-overlay-la-od-media-v1-stage.json",
+  "parent_overlay_sha256": "c462c11017956e4230ade083ff72491e4c0ddc77e754dc7fe75a51a56084113b",
+  "graphics_stage": "artifacts/coregraphics-native-v110-stage.json",
+  "graphics_stage_sha256": "a24c4f5bd665387d4d3ae6ef10641122208b2e7f87531f93dc7f5031d84210f9",
+  "added_original_frameworks": [
+    {
+      "target": "coremedia-patch-got-v1",
+      "framework": "CoreMedia.framework",
+      "source": "runtime/coregraphics-native-v110/frameworks/CoreMedia.framework",
+      "image": "runtime/coregraphics-native-v110/frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+      "image_sha256": "ddd8285b9099283a7cb93b64caeabb01c812f1366126ba3846d48650079da233",
+      "reconstruction": "runtime/rebuilt-coremedia-patch-got-v1/reconstruction.json"
+    },
+    {
+      "target": "login-patch-got-v1",
+      "framework": "login.framework",
+      "source": "runtime/coregraphics-native-v110/frameworks/login.framework",
+      "image": "runtime/coregraphics-native-v110/frameworks/login.framework/Versions/A/login",
+      "image_sha256": "9ece2b7999c4067ed1409ad9ad7cec43cc8b0a88e37750f16ea7e981792c0a81",
+      "reconstruction": "runtime/rebuilt-login-patch-got-v1/reconstruction.json"
+    },
+    {
+      "target": "videotoolbox-patch-got-v1",
+      "framework": "VideoToolbox.framework",
+      "source": "runtime/coregraphics-native-v110/frameworks/VideoToolbox.framework",
+      "image": "runtime/coregraphics-native-v110/frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+      "image_sha256": "f38fec7f0fb7b8db4f7f322f76f12e92f699c48ba0d49cda8f16be391f314b11",
+      "reconstruction": "runtime/rebuilt-videotoolbox-patch-got-v1/reconstruction.json"
+    },
+    {
+      "target": "skylight-patch-got-v3",
+      "framework": "SkyLight.framework",
+      "source": "runtime/coregraphics-native-v110/frameworks/SkyLight.framework",
+      "image": "runtime/coregraphics-native-v110/frameworks/SkyLight.framework/Versions/A/SkyLight",
+      "image_sha256": "7d51946d26c371513ae85f70adc7532c24efc79a60dfc2ff95208f0f6bdd244f",
+      "reconstruction": "runtime/rebuilt-skylight-patch-got-v3/reconstruction.json"
+    },
+    {
+      "target": "iokit-resource-patch-got-v1",
+      "framework": "IOKit.framework",
+      "source": "runtime/coregraphics-native-v110/frameworks/IOKit.framework",
+      "image": "runtime/coregraphics-native-v110/frameworks/IOKit.framework/Versions/A/IOKit",
+      "image_sha256": "a1756fac4c01368492e4a0b7c55d49689f71efea5059e8464fd6500d6f7dcdde",
+      "reconstruction": "runtime/rebuilt-iokit-resource-patch-got-v1/reconstruction.json"
+    },
+    {
+      "target": "appleva-patch-got-v1",
+      "framework": "AppleVA.framework",
+      "source": "runtime/coregraphics-native-v110/frameworks/AppleVA.framework",
+      "image": "runtime/coregraphics-native-v110/frameworks/AppleVA.framework/Versions/A/AppleVA",
+      "image_sha256": "16fd806995adcca393cf4c87eb15b0d375487fda390b6a29c3539d8f0b2635ee",
+      "reconstruction": "runtime/rebuilt-appleva-patch-got-v1/reconstruction.json"
+    },
+    {
+      "target": "backboardhideventfoundation-patch-got-v2",
+      "framework": "BackBoardHIDEventFoundation.framework",
+      "source": "runtime/coregraphics-native-v110/frameworks/BackBoardHIDEventFoundation.framework",
+      "image": "runtime/coregraphics-native-v110/frameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation",
+      "image_sha256": "2443a6def1a35ca401574b441dc307ff4bf56c22fa64eed0f0721239d19b6c88",
+      "reconstruction": "runtime/rebuilt-backboardhideventfoundation-patch-got-v2/reconstruction.json"
+    }
+  ],
+  "extra_framework_paths": [
+    "runtime/resource-framework-overlay-local-auth-media-complete-v1/frameworks/LocalAuthentication.framework/Support",
+    "runtime/resource-framework-overlay-local-auth-media-complete-v1/frameworks/OpenDirectory.framework/Versions/A/Frameworks"
+  ],
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-framework-overlay-local-auth-media-complete-v1-stage.json",
+  "full_local_report_sha256": "004beba687cc9b3f1a3e8de2687fd6c8cdbf79c9f85133e888c3e67c66306622",
+  "full_local_file_count": 60
+}

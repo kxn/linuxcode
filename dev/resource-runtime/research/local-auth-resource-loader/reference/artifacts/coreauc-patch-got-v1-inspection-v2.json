@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 3413708,
+      "sha256": "8d0b81ec8577df24f06c3f2b6534fe94d67c4365a5c7bd2461c80ea75899b4c4"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 852,
+      "sha256": "e3300eabd2836dcda3f3465befde743c055e45c507e335628c38ec8544e479e3"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 192,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 229,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 31,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16a0",
+        "first_section_prefix": "0x880",
+        "symbol": "_FigBaseObjectStandardNotificationBarrier"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1778",
+        "first_section_prefix": "0x880",
+        "symbol": "__NSConcreteGlobalBlock"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x18f0",
+        "first_section_prefix": "0x880",
+        "symbol": "_FigBaseObjectStandardNotificationBarrier"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x19b8",
+        "first_section_prefix": "0x880",
+        "symbol": "__NSConcreteGlobalBlock"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x19f8",
+        "first_section_prefix": "0x880",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a18",
+        "first_section_prefix": "0x880",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a38",
+        "first_section_prefix": "0x880",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a58",
+        "first_section_prefix": "0x880",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coreauc-patch-got-v1/CoreAUC': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x748)\n",
+    "original_validator": "runtime/original-dyld-validation-71akeajl/result.json",
+    "original_validator_sha256": "61345745e5a62bd2030bfc4e57677ff3ec8c536eea97d706f05b01e47abf6e6c",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "ebcc3c8b6949509a79c206e99da5953db6089c91a0a79d08207c311bbb1e5147",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "4e1b3b14420827ff7a6b53d43c440ae05aa693d3d1984c07793239028f0bdb59",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CoreAUC.framework/Versions/A/CoreAUC": "9833af86dc30a31184376def1798b37094eacc725d89e35fb4113495f350d0f2",
+    "runtime/rebuilt-coreauc-patch-got-v1/CoreAUC": "8949c372a3dd303e1481dc70ec6dde8d9e060ad1ad2a6a8ae2db805e8e7e954e",
+    "runtime/rebuilt-coreauc-patch-got-v1/reconstruction.json": "5bff9bc4b2230793d12160647356fff51d1ef46a82ec55885b67d59b9a02e0f5"
+  },
+  "verified": true
+}

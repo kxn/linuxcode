@@ -1,0 +1,42 @@
+{
+  "diagnostic_only": true,
+  "candidate_emitted": false,
+  "original_image": "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary",
+  "target": "0x7ff812dd9e6b",
+  "slot": "0x7ffd400bf158",
+  "exact_leaf_export_aliases": [
+    "_ldexp",
+    "_ldexp$fenv_access_off",
+    "_scalbn",
+    "_scalbn$fenv_access_off"
+  ],
+  "original_patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+  "original_GOT_records": [
+    {
+      "symbol": "_scalbn",
+      "provider": "/usr/lib/system/libsystem_m.dylib",
+      "kind": 0,
+      "implementation": 140703445130859,
+      "matching_import_names": [
+        "_scalbn"
+      ],
+      "slot": 140725677977944,
+      "addend": 0,
+      "weak_import": false,
+      "high7": 0,
+      "target": 140703445130859,
+      "target_matches_patch": true,
+      "export_matches_patch": true,
+      "provider_index": 155,
+      "export_index": 53708,
+      "location_index": 107105
+    }
+  ],
+  "direct_dependency_resolution": {
+    "_ldexp": "0x7ff812dd9e6b",
+    "_ldexp$fenv_access_off": "0x7ff812dd9e6b",
+    "_scalbn": "0x7ff812dd9e6b",
+    "_scalbn$fenv_access_off": "0x7ff812dd9e6b"
+  },
+  "alias_selection_applied": false
+}

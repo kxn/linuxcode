@@ -1,0 +1,3651 @@
+{
+  "target": "skylight-patch-got-v1",
+  "original_sha256": "c65551730208f3441f77a6a22b0da305f5bff1883f1982f915b58475203f32c3",
+  "original_patch_GOT_cells": 2396,
+  "uncovered_stubs": [
+    {
+      "stub": "0x7ff8096829c4",
+      "slot": "0x7ff8400191e8",
+      "raw": "d062570400020000",
+      "decoded_target": "0x7ff8045762d0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation13__DataStorageC6_bytesSvSgvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829ca",
+      "slot": "0x7ff840019200",
+      "raw": "60f0580400020000",
+      "decoded_target": "0x7ff80458f060",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation13__DataStorageC7_lengthSivg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829d0",
+      "slot": "0x7ff840019210",
+      "raw": "b063570400020000",
+      "decoded_target": "0x7ff8045763b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation13__DataStorageC7_offsetSivg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829d6",
+      "slot": "0x7ff840019ed8",
+      "raw": "f0ceb40400020000",
+      "decoded_target": "0x7ff804b4cef0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4DataV36_unconditionallyBridgeFromObjectiveCyACSo6NSDataCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829dc",
+      "slot": "0x7ff84001a0f0",
+      "raw": "6001ae0400020000",
+      "decoded_target": "0x7ff804ae0160",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4DateV21timeIntervalSince1970ACSd_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829e2",
+      "slot": "0x7ff84001a100",
+      "raw": "c001ae0400020000",
+      "decoded_target": "0x7ff804ae01c0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4DateV21timeIntervalSince1970Sdvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829e8",
+      "slot": "0x7ff84001a148",
+      "raw": "5019ae0400020000",
+      "decoded_target": "0x7ff804ae1950",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4DateVACycfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829ee",
+      "slot": "0x7ff84001a150",
+      "raw": "b018ae0400020000",
+      "decoded_target": "0x7ff804ae18b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4DateVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829f4",
+      "slot": "0x7ff84001a1a0",
+      "raw": "90cdae0400020000",
+      "decoded_target": "0x7ff804aecd90",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4UUIDV10uuidStringACSgSSh_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff8096829fa",
+      "slot": "0x7ff84001a1a8",
+      "raw": "f0ccae0400020000",
+      "decoded_target": "0x7ff804aeccf0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4UUIDV10uuidStringSSvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a00",
+      "slot": "0x7ff84001a1c0",
+      "raw": "40d0ae0400020000",
+      "decoded_target": "0x7ff804aed040",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4UUIDV2eeoiySbAC_ACtFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a06",
+      "slot": "0x7ff84001a1d0",
+      "raw": "20ceae0400020000",
+      "decoded_target": "0x7ff804aece20",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4UUIDV4uuidACs5UInt8V_A15Ft_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a0c",
+      "slot": "0x7ff84001a1d8",
+      "raw": "80cdae0400020000",
+      "decoded_target": "0x7ff804aecd80",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4UUIDV4uuids5UInt8V_A15Ftvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a12",
+      "slot": "0x7ff84001a1f0",
+      "raw": "90d9ae0400020000",
+      "decoded_target": "0x7ff804aed990",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s10Foundation4UUIDVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a18",
+      "slot": "0x7ff84003f530",
+      "raw": "30ce690e05020000",
+      "decoded_target": "0x7ffd0e69ce30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V10presetListSayAA6PresetV4InfoVGyF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a1e",
+      "slot": "0x7ff84003f538",
+      "raw": "10f2690e05020000",
+      "decoded_target": "0x7ffd0e69f210",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V12removePreset2idyAA10IdentifierVyAA0E0VG_tKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a24",
+      "slot": "0x7ff84003f540",
+      "raw": "30cb690e05020000",
+      "decoded_target": "0x7ffd0e69cb30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V14activePresetIDAA10IdentifierVyAA0E0VGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a2a",
+      "slot": "0x7ff84003f548",
+      "raw": "10566a0e05020000",
+      "decoded_target": "0x7ffd0e6a5610",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V14userAdjustment2ofAA04UserE0VSgAA10IdentifierVyAA6PresetVG_tF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a30",
+      "slot": "0x7ff84003f550",
+      "raw": "f0306a0e05020000",
+      "decoded_target": "0x7ffd0e6a30f0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V14userAdjustmentAA04UserE0VSgyF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a36",
+      "slot": "0x7ff84003f558",
+      "raw": "50046a0e05020000",
+      "decoded_target": "0x7ffd0e6a0450",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V16customPresetInfoAA06CustomeF0VyF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a3c",
+      "slot": "0x7ff84003f560",
+      "raw": "10016a0e05020000",
+      "decoded_target": "0x7ffd0e6a0110",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V16newValidPresetIDAA10IdentifierVyAA0F0VGyKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a42",
+      "slot": "0x7ff84003f568",
+      "raw": "70f9690e05020000",
+      "decoded_target": "0x7ffd0e69f970",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V16removeAllPresetsyyKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a48",
+      "slot": "0x7ff84003f570",
+      "raw": "30336a0e05020000",
+      "decoded_target": "0x7ffd0e6a3330",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V17addUserAdjustment_3for4liveyAA0eF0V_AA10IdentifierVyAA6PresetVGSbtKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a4e",
+      "slot": "0x7ff84003f578",
+      "raw": "40116a0e05020000",
+      "decoded_target": "0x7ffd0e6a1140",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V17addUserAdjustmentyyAA0eF0VKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a54",
+      "slot": "0x7ff84003f580",
+      "raw": "90d7690e05020000",
+      "decoded_target": "0x7ffd0e69d790",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V18updateActivePreset2idyAA10IdentifierVyAA0F0VG_tKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a5a",
+      "slot": "0x7ff84003f588",
+      "raw": "70436a0e05020000",
+      "decoded_target": "0x7ffd0e6a4370",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V19userAdjustmentRange2of4withAA04UserE0V6RangesVAA10IdentifierVyAA6PresetVG_AH6InputsVtKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a60",
+      "slot": "0x7ff84003f590",
+      "raw": "80046a0e05020000",
+      "decoded_target": "0x7ffd0e6a0480",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V20customPresetTemplateAA0E0VyF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a66",
+      "slot": "0x7ff84003f598",
+      "raw": "d05c6a0e05020000",
+      "decoded_target": "0x7ffd0e6a5cd0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V20removeUserAdjustment3for4liveyAA10IdentifierVyAA6PresetVG_SbtKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a6c",
+      "slot": "0x7ff84003f5a0",
+      "raw": "a02f6a0e05020000",
+      "decoded_target": "0x7ffd0e6a2fa0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V20removeUserAdjustmentyyKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a72",
+      "slot": "0x7ff84003f5a8",
+      "raw": "f0ca690e05020000",
+      "decoded_target": "0x7ffd0e69caf0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V22defaultFactoryPresetIDAA10IdentifierVyAA0F0VGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a78",
+      "slot": "0x7ff84003f5b0",
+      "raw": "c0ca690e05020000",
+      "decoded_target": "0x7ffd0e69cac0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V22presetControlInterfaceAA06PreseteF0Ovg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a7e",
+      "slot": "0x7ff84003f5b8",
+      "raw": "40086a0e05020000",
+      "decoded_target": "0x7ffd0e6a0840",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V25luminanceCorrectionFactor10whitepoint16calibrationSpaceSdAA10WhitePointO_AA6PresetV011CalibrationI0OtF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a84",
+      "slot": "0x7ff84003f5c0",
+      "raw": "80cb690e05020000",
+      "decoded_target": "0x7ffd0e69cb80",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V26availableCustomPresetSlotsSivg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a8a",
+      "slot": "0x7ff84003f5c8",
+      "raw": "80d5690e05020000",
+      "decoded_target": "0x7ffd0e69d580",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V6preset4withAA6PresetVAA10IdentifierVyAGG_tKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a90",
+      "slot": "0x7ff84003f5d0",
+      "raw": "50af690e05020000",
+      "decoded_target": "0x7ffd0e69af50",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V6vendor5model11containerId8doAsRoot7testingACSgs6UInt32V_AKSSSgyyyXEXCSbtKcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a96",
+      "slot": "0x7ff84003f5d8",
+      "raw": "90ca690e05020000",
+      "decoded_target": "0x7ffd0e69ca90",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V8featuresShyAA0aB7FeatureOGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682a9c",
+      "slot": "0x7ff84003f5e0",
+      "raw": "b0d9690e05020000",
+      "decoded_target": "0x7ffd0e69d9b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0V9addPresetyyAA0E0VKF",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682aa2",
+      "slot": "0x7ff84003f5e8",
+      "raw": "70be690e05020000",
+      "decoded_target": "0x7ffd0e69be70",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB0VMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682aa8",
+      "slot": "0x7ff84003f618",
+      "raw": "e003780e05020000",
+      "decoded_target": "0x7ffd0e7803e0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary0aB7FeatureOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682aae",
+      "slot": "0x7ff84003f670",
+      "raw": "80f7790e05020000",
+      "decoded_target": "0x7ffd0e79f780",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10ColorSpaceO9primariesAA9PrimariesVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ab4",
+      "slot": "0x7ff84003f678",
+      "raw": "50157a0e05020000",
+      "decoded_target": "0x7ffd0e7a1550",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10ColorSpaceOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682aba",
+      "slot": "0x7ff84003f690",
+      "raw": "102d730e05020000",
+      "decoded_target": "0x7ffd0e732d10",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10IdentifierV2eeoiySbACyxG_AEtFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ac0",
+      "slot": "0x7ff84003f698",
+      "raw": "e02c730e05020000",
+      "decoded_target": "0x7ffd0e732ce0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10IdentifierV4uuid10Foundation4UUIDVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ac6",
+      "slot": "0x7ff84003f6a0",
+      "raw": "b02c730e05020000",
+      "decoded_target": "0x7ffd0e732cb0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10IdentifierV4uuidACyxG10Foundation4UUIDV_tcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682acc",
+      "slot": "0x7ff84003f6a8",
+      "raw": "302c730e05020000",
+      "decoded_target": "0x7ffd0e732c30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10IdentifierV7shortIDSays5UInt8VGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ad2",
+      "slot": "0x7ff84003f6f8",
+      "raw": "a051790e05020000",
+      "decoded_target": "0x7ffd0e7951a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10WhitePointO6chromaAA12ChromaticityVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ad8",
+      "slot": "0x7ff84003f700",
+      "raw": "1067790e05020000",
+      "decoded_target": "0x7ffd0e796710",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary10WhitePointOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ade",
+      "slot": "0x7ff84003f718",
+      "raw": "7027790e05020000",
+      "decoded_target": "0x7ffd0e792770",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary12ChromaticityV1x1yACSd_SdtcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ae4",
+      "slot": "0x7ff84003f720",
+      "raw": "8027790e05020000",
+      "decoded_target": "0x7ffd0e792780",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary12ChromaticityV1xSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682aea",
+      "slot": "0x7ff84003f728",
+      "raw": "9027790e05020000",
+      "decoded_target": "0x7ffd0e792790",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary12ChromaticityV1ySdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682af0",
+      "slot": "0x7ff84003f730",
+      "raw": "502f790e05020000",
+      "decoded_target": "0x7ffd0e792f50",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary12ChromaticityVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682af6",
+      "slot": "0x7ff84003f740",
+      "raw": "a06d780e05020000",
+      "decoded_target": "0x7ffd0e786da0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary12EOTFStandardO2eeoiySbAC_ACtFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682afc",
+      "slot": "0x7ff84003f770",
+      "raw": "0071780e05020000",
+      "decoded_target": "0x7ffd0e787100",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary12EOTFStandardOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b02",
+      "slot": "0x7ff84003f780",
+      "raw": "10c5720e05020000",
+      "decoded_target": "0x7ffd0e72c510",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV11description12creationDate18measuredWhitePoint0I9Luminance06targetjK00mL0ACSS_10Foundation0H0VAA12ChromaticityVSdANSdtcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b08",
+      "slot": "0x7ff84003f788",
+      "raw": "a0c2720e05020000",
+      "decoded_target": "0x7ffd0e72c2a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV11descriptionSSvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b0e",
+      "slot": "0x7ff84003f790",
+      "raw": "60c2720e05020000",
+      "decoded_target": "0x7ffd0e72c260",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV12creationDate10Foundation0G0Vvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b14",
+      "slot": "0x7ff84003f798",
+      "raw": "a0c4720e05020000",
+      "decoded_target": "0x7ffd0e72c4a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV15targetLuminanceSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b1a",
+      "slot": "0x7ff84003f7a0",
+      "raw": "20c4720e05020000",
+      "decoded_target": "0x7ffd0e72c420",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV16targetWhitePointAA12ChromaticityVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b20",
+      "slot": "0x7ff84003f7a8",
+      "raw": "b0c3720e05020000",
+      "decoded_target": "0x7ffd0e72c3b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV17measuredLuminanceSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b26",
+      "slot": "0x7ff84003f7b0",
+      "raw": "30c3720e05020000",
+      "decoded_target": "0x7ffd0e72c330",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV18measuredWhitePointAA12ChromaticityVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b2c",
+      "slot": "0x7ff84003f7b8",
+      "raw": "70d0780e05020000",
+      "decoded_target": "0x7ffd0e78d070",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6InputsV19measuredWhitePointX0ghI1Y0G9Luminance06targethI1X0khI1Y0kJ0AESdSg_A5LtcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b32",
+      "slot": "0x7ff84003f7c0",
+      "raw": "10e6780e05020000",
+      "decoded_target": "0x7ffd0e78e610",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6InputsVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b38",
+      "slot": "0x7ff84003f7c8",
+      "raw": "c0d6780e05020000",
+      "decoded_target": "0x7ffd0e78d6c0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesV20targetLuminanceRangeSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b3e",
+      "slot": "0x7ff84003f7d0",
+      "raw": "60d6780e05020000",
+      "decoded_target": "0x7ffd0e78d660",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesV22measuredLuminanceRangeSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b44",
+      "slot": "0x7ff84003f7d8",
+      "raw": "80d6780e05020000",
+      "decoded_target": "0x7ffd0e78d680",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesV22targetWhitePointXRangeSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b4a",
+      "slot": "0x7ff84003f7e0",
+      "raw": "a0d6780e05020000",
+      "decoded_target": "0x7ffd0e78d6a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesV22targetWhitePointYRangeSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b50",
+      "slot": "0x7ff84003f7e8",
+      "raw": "20d6780e05020000",
+      "decoded_target": "0x7ffd0e78d620",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesV24measuredWhitePointXRangeSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b56",
+      "slot": "0x7ff84003f7f0",
+      "raw": "40d6780e05020000",
+      "decoded_target": "0x7ffd0e78d640",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesV24measuredWhitePointYRangeSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b5c",
+      "slot": "0x7ff84003f7f8",
+      "raw": "e0d6780e05020000",
+      "decoded_target": "0x7ffd0e78d6e0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesV31fullScreenMaxLuminanceThresholdSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b62",
+      "slot": "0x7ff84003f800",
+      "raw": "20e6780e05020000",
+      "decoded_target": "0x7ffd0e78e620",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentV6RangesVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b68",
+      "slot": "0x7ff84003f808",
+      "raw": "80b6720e05020000",
+      "decoded_target": "0x7ffd0e72b680",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary14UserAdjustmentVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b6e",
+      "slot": "0x7ff84003f820",
+      "raw": "8000780e05020000",
+      "decoded_target": "0x7ffd0e780080",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV11colorspacesShyAA10ColorSpaceOGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b74",
+      "slot": "0x7ff84003f828",
+      "raw": "9000780e05020000",
+      "decoded_target": "0x7ffd0e780090",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV11whitepointsShyAA10WhitePointOGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b7a",
+      "slot": "0x7ff84003f830",
+      "raw": "7001780e05020000",
+      "decoded_target": "0x7ffd0e780170",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV12hdrLuminanceSNySiGSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b80",
+      "slot": "0x7ff84003f838",
+      "raw": "3001780e05020000",
+      "decoded_target": "0x7ffd0e780130",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV12latencyModesShyAA0E0V11LatencyModeOGSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b86",
+      "slot": "0x7ff84003f840",
+      "raw": "6000780e05020000",
+      "decoded_target": "0x7ffd0e780060",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV12nameMaxBytesSivg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b8c",
+      "slot": "0x7ff84003f848",
+      "raw": "5001780e05020000",
+      "decoded_target": "0x7ffd0e780150",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV12sdrLuminanceSNySiGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b92",
+      "slot": "0x7ff84003f850",
+      "raw": "a001780e05020000",
+      "decoded_target": "0x7ffd0e7801a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV16supportsPQforHDRSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b98",
+      "slot": "0x7ff84003f858",
+      "raw": "1001780e05020000",
+      "decoded_target": "0x7ffd0e780110",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV16systemGammaBoostSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682b9e",
+      "slot": "0x7ff84003f860",
+      "raw": "a000780e05020000",
+      "decoded_target": "0x7ffd0e7800a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV17customWhitePointXSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ba4",
+      "slot": "0x7ff84003f868",
+      "raw": "c000780e05020000",
+      "decoded_target": "0x7ffd0e7800c0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV17customWhitePointYSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682baa",
+      "slot": "0x7ff84003f870",
+      "raw": "e000780e05020000",
+      "decoded_target": "0x7ffd0e7800e0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV17transferFunctionsShyAA12EOTFStandardOGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bb0",
+      "slot": "0x7ff84003f878",
+      "raw": "7000780e05020000",
+      "decoded_target": "0x7ffd0e780070",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV19descriptionMaxBytesSivg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bb6",
+      "slot": "0x7ff84003f880",
+      "raw": "9001780e05020000",
+      "decoded_target": "0x7ffd0e780190",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV19fullscreenLuminanceSivg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bbc",
+      "slot": "0x7ff84003f888",
+      "raw": "c001780e05020000",
+      "decoded_target": "0x7ffd0e7801c0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV22perceptualOptimizationShyAA0E0V010PerceptualH0OGSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bc2",
+      "slot": "0x7ff84003f890",
+      "raw": "4001780e05020000",
+      "decoded_target": "0x7ffd0e780140",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV23supportsGlobalBacklightSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bc8",
+      "slot": "0x7ff84003f898",
+      "raw": "b001780e05020000",
+      "decoded_target": "0x7ffd0e7801b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV23supportsHostToneMappingSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bce",
+      "slot": "0x7ff84003f8a0",
+      "raw": "f000780e05020000",
+      "decoded_target": "0x7ffd0e7800f0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoV9purePowerSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bd4",
+      "slot": "0x7ff84003f8a8",
+      "raw": "d004780e05020000",
+      "decoded_target": "0x7ffd0e7804d0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary16CustomPresetInfoVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bda",
+      "slot": "0x7ff84003f8b0",
+      "raw": "8008780e05020000",
+      "decoded_target": "0x7ffd0e780880",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary22PresetControlInterfaceO2eeoiySbAC_ACtFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682be0",
+      "slot": "0x7ff84003f8d0",
+      "raw": "d003780e05020000",
+      "decoded_target": "0x7ffd0e7803d0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary22PresetControlInterfaceOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682be6",
+      "slot": "0x7ff84003f8e8",
+      "raw": "705c7a0e05020000",
+      "decoded_target": "0x7ffd0e7a5c70",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV2LaSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bec",
+      "slot": "0x7ff84003f8f0",
+      "raw": "605c7a0e05020000",
+      "decoded_target": "0x7ffd0e7a5c60",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV2LbSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bf2",
+      "slot": "0x7ff84003f8f8",
+      "raw": "505c7a0e05020000",
+      "decoded_target": "0x7ffd0e7a5c50",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV2LwSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bf8",
+      "slot": "0x7ff84003f900",
+      "raw": "803e7a0e05020000",
+      "decoded_target": "0x7ffd0e7a3e80",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV2PQ13peakLuminanceACSd_tFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682bfe",
+      "slot": "0x7ff84003f908",
+      "raw": "f0657a0e05020000",
+      "decoded_target": "0x7ffd0e7a65f0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV3HDR13peakLuminance5gammaACSd_SdtFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c04",
+      "slot": "0x7ff84003f910",
+      "raw": "70997a0e05020000",
+      "decoded_target": "0x7ffd0e7a9970",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV5DICOM9LprimeMax0H3Min4LambACSd_S2dtFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c0a",
+      "slot": "0x7ff84003f918",
+      "raw": "805c7a0e05020000",
+      "decoded_target": "0x7ffd0e7a5c80",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV5gammaSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c10",
+      "slot": "0x7ff84003f920",
+      "raw": "703e7a0e05020000",
+      "decoded_target": "0x7ffd0e7a3e70",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV6BT18862Lw2LbACSd_SdtFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c16",
+      "slot": "0x7ff84003f928",
+      "raw": "405c7a0e05020000",
+      "decoded_target": "0x7ffd0e7a5c40",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV8standardAA12EOTFStandardOvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c1c",
+      "slot": "0x7ff84003f930",
+      "raw": "303e7a0e05020000",
+      "decoded_target": "0x7ffd0e7a3e30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV9PurePower5gammaACSd_tFZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c22",
+      "slot": "0x7ff84003f938",
+      "raw": "90657a0e05020000",
+      "decoded_target": "0x7ffd0e7a6590",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionV9sRGBICCv2ACvgZ",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c28",
+      "slot": "0x7ff84003f940",
+      "raw": "50887a0e05020000",
+      "decoded_target": "0x7ffd0e7a8850",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary27GeneralizedTransferFunctionVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c2e",
+      "slot": "0x7ff84003f960",
+      "raw": "a084720e05020000",
+      "decoded_target": "0x7ffd0e7284a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV11LatencyModeOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c34",
+      "slot": "0x7ff84003f988",
+      "raw": "d046720e05020000",
+      "decoded_target": "0x7ffd0e7246d0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV13highPrecisionSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c3a",
+      "slot": "0x7ff84003f990",
+      "raw": "9046720e05020000",
+      "decoded_target": "0x7ffd0e724690",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV14allowAppleLookSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c40",
+      "slot": "0x7ff84003f998",
+      "raw": "4018720e05020000",
+      "decoded_target": "0x7ffd0e721840",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV14disableHarmony0G10NightShift0G14AutoBrightness0gK10BlackLevel03maxkL00G14HDRToneMapping0O20PotentialEDRHeadroom0G14UserAdjustment0gtU10Interfaces16systemGammaValue013targetAmbientL00z7AmbientL9Excursion03minL9ForSlider0oL9ForSlider07defaultL9ForSlider14allowAppleLook13highPrecision16visibleByDefault18allowNotificationsAESb_S3bSdSgSbAYSbSayAC0tU9InterfaceOGSgA3YS3dS4btcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c46",
+      "slot": "0x7ff84003f9a0",
+      "raw": "d042720e05020000",
+      "decoded_target": "0x7ffd0e7242d0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV14disableHarmonySbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c4c",
+      "slot": "0x7ff84003f9a8",
+      "raw": "1045720e05020000",
+      "decoded_target": "0x7ffd0e724510",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV16systemGammaValueSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c52",
+      "slot": "0x7ff84003f9b0",
+      "raw": "1047720e05020000",
+      "decoded_target": "0x7ffd0e724710",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV16visibleByDefaultSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c58",
+      "slot": "0x7ff84003f9b8",
+      "raw": "0043720e05020000",
+      "decoded_target": "0x7ffd0e724300",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV17disableNightShiftSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c5e",
+      "slot": "0x7ff84003f9c0",
+      "raw": "c043720e05020000",
+      "decoded_target": "0x7ffd0e7243c0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV17maxAutoBrightnessSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c64",
+      "slot": "0x7ff84003f9c8",
+      "raw": "5047720e05020000",
+      "decoded_target": "0x7ffd0e724750",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV18allowNotificationsSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c6a",
+      "slot": "0x7ff84003f9d0",
+      "raw": "8043720e05020000",
+      "decoded_target": "0x7ffd0e724380",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV21disableAutoBlackLevelSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c70",
+      "slot": "0x7ff84003f9d8",
+      "raw": "4043720e05020000",
+      "decoded_target": "0x7ffd0e724340",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV21disableAutoBrightnessSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c76",
+      "slot": "0x7ff84003f9e0",
+      "raw": "0044720e05020000",
+      "decoded_target": "0x7ffd0e724400",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV21disableHDRToneMappingSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c7c",
+      "slot": "0x7ff84003f9e8",
+      "raw": "8044720e05020000",
+      "decoded_target": "0x7ffd0e724480",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV21disableUserAdjustmentSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c82",
+      "slot": "0x7ff84003f9f0",
+      "raw": "1046720e05020000",
+      "decoded_target": "0x7ffd0e724610",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV22maxBrightnessForSliderSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c88",
+      "slot": "0x7ff84003f9f8",
+      "raw": "d045720e05020000",
+      "decoded_target": "0x7ffd0e7245d0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV22minBrightnessForSliderSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c8e",
+      "slot": "0x7ff84003fa00",
+      "raw": "4044720e05020000",
+      "decoded_target": "0x7ffd0e724440",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV23maxPotentialEDRHeadroomSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c94",
+      "slot": "0x7ff84003fa08",
+      "raw": "5045720e05020000",
+      "decoded_target": "0x7ffd0e724550",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV23targetAmbientBrightnessSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682c9a",
+      "slot": "0x7ff84003fa10",
+      "raw": "5046720e05020000",
+      "decoded_target": "0x7ffd0e724650",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV26defaultBrightnessForSliderSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ca0",
+      "slot": "0x7ff84003fa18",
+      "raw": "c044720e05020000",
+      "decoded_target": "0x7ffd0e7244c0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV31disableUserAdjustmentInterfacesSayAC0hI9InterfaceOGSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ca6",
+      "slot": "0x7ff84003fa20",
+      "raw": "9045720e05020000",
+      "decoded_target": "0x7ffd0e724590",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsV32targetAmbientBrightnessExcursionSdSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cac",
+      "slot": "0x7ff84003fa28",
+      "raw": "8084720e05020000",
+      "decoded_target": "0x7ffd0e728480",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12HostSettingsVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cb2",
+      "slot": "0x7ff84003fa30",
+      "raw": "a01c720e05020000",
+      "decoded_target": "0x7ffd0e721ca0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV12hostSettingsAC04HostF0Vvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cb8",
+      "slot": "0x7ff84003fa38",
+      "raw": "d02c720e05020000",
+      "decoded_target": "0x7ffd0e722cd0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV10whitepointAA10WhitePointOvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cbe",
+      "slot": "0x7ff84003fa40",
+      "raw": "402f720e05020000",
+      "decoded_target": "0x7ffd0e722f40",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV12enableBT2020Sbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cc4",
+      "slot": "0x7ff84003fa48",
+      "raw": "102e720e05020000",
+      "decoded_target": "0x7ffd0e722e10",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV12minLuminanceSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cca",
+      "slot": "0x7ff84003fa50",
+      "raw": "002f720e05020000",
+      "decoded_target": "0x7ffd0e722f00",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV15advertisedGammaSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cd0",
+      "slot": "0x7ff84003fa58",
+      "raw": "902d720e05020000",
+      "decoded_target": "0x7ffd0e722d90",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV15maxHDRLuminanceSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cd6",
+      "slot": "0x7ff84003fa60",
+      "raw": "d02d720e05020000",
+      "decoded_target": "0x7ffd0e722dd0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV15maxSDRLuminanceSdvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cdc",
+      "slot": "0x7ff84003fa68",
+      "raw": "f030720e05020000",
+      "decoded_target": "0x7ffd0e7230f0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV16calibrationSpaceAC011CalibrationG0Ovg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ce2",
+      "slot": "0x7ff84003fa70",
+      "raw": "502e720e05020000",
+      "decoded_target": "0x7ffd0e722e50",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV16transferFunctionSayAA019GeneralizedTransferG0VGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ce8",
+      "slot": "0x7ff84003fa78",
+      "raw": "b030720e05020000",
+      "decoded_target": "0x7ffd0e7230b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV18defaultLatencyModeAC0gH0Ovg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cee",
+      "slot": "0x7ff84003fa80",
+      "raw": "502c720e05020000",
+      "decoded_target": "0x7ffd0e722c50",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV19perceptualPrimariesAA10ColorSpaceOSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cf4",
+      "slot": "0x7ff84003fa88",
+      "raw": "302d720e05020000",
+      "decoded_target": "0x7ffd0e722d30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV20perceptualWhitepointAA10WhitePointOSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682cfa",
+      "slot": "0x7ff84003fa90",
+      "raw": "902f720e05020000",
+      "decoded_target": "0x7ffd0e722f90",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV21enableGlobalBacklightSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d00",
+      "slot": "0x7ff84003fa98",
+      "raw": "4030720e05020000",
+      "decoded_target": "0x7ffd0e723040",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV21supportedLatencyModesShyAC0G4ModeOGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d06",
+      "slot": "0x7ff84003faa0",
+      "raw": "8031720e05020000",
+      "decoded_target": "0x7ffd0e723180",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV22perceptualOptimizationAC010PerceptualG0Ovg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d0c",
+      "slot": "0x7ff84003faa8",
+      "raw": "c02e720e05020000",
+      "decoded_target": "0x7ffd0e722ec0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV23defaultTransferFunctionAA12EOTFStandardOvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d12",
+      "slot": "0x7ff84003fab0",
+      "raw": "3031720e05020000",
+      "decoded_target": "0x7ffd0e723130",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV30useUserCalibrationsIfAvailableSbvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d18",
+      "slot": "0x7ff84003fab8",
+      "raw": "e02f720e05020000",
+      "decoded_target": "0x7ffd0e722fe0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV31contrastEnhancementFactorLimitsSNySdGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d1e",
+      "slot": "0x7ff84003fac0",
+      "raw": "3017720e05020000",
+      "decoded_target": "0x7ffd0e721730",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV9primaries19perceptualPrimaries10whitepoint0G10Whitepoint15maxHDRLuminance0K12SDRLuminance12minLuminance16transferFunction015defaultTransferQ015advertisedGamma12enableBT20200V15GlobalBacklight31contrastEnhancementFactorLimits21supportedLatencyModes0R11LatencyMode16calibrationSpace30useUserCalibrationsIfAvailable0G12OptimizationAeA10ColorSpaceO_AYSgAA10WhitePointOA0_SgS3dSayAA011GeneralizedsQ0VGAA12EOTFStandardOSdS2bSNySdGShyAC11LatencyModeOGA9_AC16CalibrationSpaceOSbAC22PerceptualOptimizationOtcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d24",
+      "slot": "0x7ff84003fac8",
+      "raw": "e02b720e05020000",
+      "decoded_target": "0x7ffd0e722be0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsV9primariesAA10ColorSpaceOvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d2a",
+      "slot": "0x7ff84003fad0",
+      "raw": "5083720e05020000",
+      "decoded_target": "0x7ffd0e728350",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14SpecificationsVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d30",
+      "slot": "0x7ff84003fad8",
+      "raw": "d01b720e05020000",
+      "decoded_target": "0x7ffd0e721bd0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV14specificationsAC14SpecificationsVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d36",
+      "slot": "0x7ff84003faf0",
+      "raw": "b084720e05020000",
+      "decoded_target": "0x7ffd0e7284b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV16CalibrationSpaceOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d3c",
+      "slot": "0x7ff84003fb10",
+      "raw": "c084720e05020000",
+      "decoded_target": "0x7ffd0e7284c0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV22PerceptualOptimizationOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d42",
+      "slot": "0x7ff84003fb30",
+      "raw": "d084720e05020000",
+      "decoded_target": "0x7ffd0e7284d0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV23UserAdjustmentInterfaceOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d48",
+      "slot": "0x7ff84003fb48",
+      "raw": "8020720e05020000",
+      "decoded_target": "0x7ffd0e722080",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4InfoV11descriptionSSvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d4e",
+      "slot": "0x7ff84003fb50",
+      "raw": "8021720e05020000",
+      "decoded_target": "0x7ffd0e722180",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4InfoV12creationDate10Foundation0G0VSgvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d54",
+      "slot": "0x7ff84003fb58",
+      "raw": "d01f720e05020000",
+      "decoded_target": "0x7ffd0e721fd0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4InfoV2idAA10IdentifierVyACGvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d5a",
+      "slot": "0x7ff84003fb60",
+      "raw": "a00d720e05020000",
+      "decoded_target": "0x7ffd0e720da0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4InfoV4name11description6origin4uuid12creationDate14userAdjustmentAESS_SSAC6OriginO10Foundation4UUIDVAN0K0VSgAA10IdentifierVyAA04UserM0VGSgtcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d60",
+      "slot": "0x7ff84003fb68",
+      "raw": "f01f720e05020000",
+      "decoded_target": "0x7ffd0e721ff0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4InfoV4nameSSvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d66",
+      "slot": "0x7ff84003fb70",
+      "raw": "1021720e05020000",
+      "decoded_target": "0x7ffd0e722110",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4InfoV6originAC6OriginOvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d6c",
+      "slot": "0x7ff84003fb78",
+      "raw": "c00e720e05020000",
+      "decoded_target": "0x7ffd0e720ec0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4InfoVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d72",
+      "slot": "0x7ff84003fb80",
+      "raw": "4019720e05020000",
+      "decoded_target": "0x7ffd0e721940",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4info14specifications12hostSettingsA2C4InfoV_AC14SpecificationsVAC04HostH0VtcfC",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d78",
+      "slot": "0x7ff84003fb88",
+      "raw": "901b720e05020000",
+      "decoded_target": "0x7ffd0e721b90",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4infoAC4InfoVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d7e",
+      "slot": "0x7ff84003fb90",
+      "raw": "b01b720e05020000",
+      "decoded_target": "0x7ffd0e721bb0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV4infoAC4InfoVvs",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d84",
+      "slot": "0x7ff84003fba8",
+      "raw": "9084720e05020000",
+      "decoded_target": "0x7ffd0e728490",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetV6OriginOMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d8a",
+      "slot": "0x7ff84003fbc8",
+      "raw": "e019720e05020000",
+      "decoded_target": "0x7ffd0e7219e0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary6PresetVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d90",
+      "slot": "0x7ff84003fbe0",
+      "raw": "a03f790e05020000",
+      "decoded_target": "0x7ffd0e793fa0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary9PrimariesV3redAA12ChromaticityVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d96",
+      "slot": "0x7ff84003fbe8",
+      "raw": "c03f790e05020000",
+      "decoded_target": "0x7ffd0e793fc0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary9PrimariesV4blueAA12ChromaticityVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682d9c",
+      "slot": "0x7ff84003fbf0",
+      "raw": "b03f790e05020000",
+      "decoded_target": "0x7ffd0e793fb0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary9PrimariesV5greenAA12ChromaticityVvg",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682da2",
+      "slot": "0x7ff84003fbf8",
+      "raw": "d04d790e05020000",
+      "decoded_target": "0x7ffd0e794dd0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s17ProDisplayLibrary9PrimariesVMa",
+          "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682da8",
+      "slot": "0x7ff8400510b8",
+      "raw": "20aaa22000020000",
+      "decoded_target": "0x7ff820a2aa20",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s2os6LoggerV9logObjectSo03OS_a1_C0Cvg",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dae",
+      "slot": "0x7ff8400510c0",
+      "raw": "60aaa22000020000",
+      "decoded_target": "0x7ff820a2aa60",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s2os6LoggerV9subsystem8categoryACSS_SStcfC",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682db4",
+      "slot": "0x7ff8400510d0",
+      "raw": "70b8a22000020000",
+      "decoded_target": "0x7ff820a2b870",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$s2os6LoggerVMa",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dba",
+      "slot": "0x7ff84004c1a8",
+      "raw": "0090bf1600020000",
+      "decoded_target": "0x7ff816bf9000",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sS2SycfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dc0",
+      "slot": "0x7ff84004c1b0",
+      "raw": "b051be1600020000",
+      "decoded_target": "0x7ff816be51b0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sS2ayxGycfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dc6",
+      "slot": "0x7ff84001a7e0",
+      "raw": "6032b50400020000",
+      "decoded_target": "0x7ff804b53260",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSD10FoundationE19_bridgeToObjectiveCSo12NSDictionaryCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dcc",
+      "slot": "0x7ff84004c270",
+      "raw": "3038eb1600020000",
+      "decoded_target": "0x7ff816eb3830",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSD6ValuesVMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dd2",
+      "slot": "0x7ff84004c290",
+      "raw": "60d7c51600020000",
+      "decoded_target": "0x7ff816c5d760",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSD6filterySDyxq_GSbx3key_q_5valuet_tKXEKF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dd8",
+      "slot": "0x7ff84004c2d8",
+      "raw": "70dee91600020000",
+      "decoded_target": "0x7ff816e9de70",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSDMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dde",
+      "slot": "0x7ff84004c300",
+      "raw": "6018ed1600020000",
+      "decoded_target": "0x7ff816ed1860",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSDyq_Sgxcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682de4",
+      "slot": "0x7ff84004c308",
+      "raw": "60a4c11600020000",
+      "decoded_target": "0x7ff816c1a460",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSDyq_Sgxcis",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dea",
+      "slot": "0x7ff84004c3e8",
+      "raw": "3078eb1600020000",
+      "decoded_target": "0x7ff816eb7830",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSH13_rawHashValue4seedS2i_tFTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682df0",
+      "slot": "0x7ff84004c3f8",
+      "raw": "2078eb1600020000",
+      "decoded_target": "0x7ff816eb7820",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSH4hash4intoys6HasherVz_tFTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682df6",
+      "slot": "0x7ff84004c688",
+      "raw": "6046eb1600020000",
+      "decoded_target": "0x7ff816eb4660",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSQ2eeoiySbx_xtFZTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682dfc",
+      "slot": "0x7ff84001a878",
+      "raw": "c08e9d0400020000",
+      "decoded_target": "0x7ff8049d8ec0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e02",
+      "slot": "0x7ff84001a898",
+      "raw": "008b9d0400020000",
+      "decoded_target": "0x7ff8049d8b00",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS10FoundationE36_unconditionallyBridgeFromObjectiveCySSSo8NSStringCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e08",
+      "slot": "0x7ff84004c7a8",
+      "raw": "305bc01600020000",
+      "decoded_target": "0x7ff816c05b30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS4hash4intoys6HasherVz_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e0e",
+      "slot": "0x7ff84004c7b0",
+      "raw": "308ded1600020000",
+      "decoded_target": "0x7ff816ed8d30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS4utf8SS8UTF8ViewVvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e14",
+      "slot": "0x7ff84004c7c0",
+      "raw": "7043d91600020000",
+      "decoded_target": "0x7ff816d94370",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS5IndexV13encodedOffsetSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e1a",
+      "slot": "0x7ff84004c7c8",
+      "raw": "d03aec1600020000",
+      "decoded_target": "0x7ff816ec3ad0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS5IndexVMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e20",
+      "slot": "0x7ff84004c820",
+      "raw": "7073ed1600020000",
+      "decoded_target": "0x7ff816ed7370",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS6appendyySSF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e26",
+      "slot": "0x7ff84004c830",
+      "raw": "6076c51600020000",
+      "decoded_target": "0x7ff816c57660",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS7cStringSSSPys4Int8VG_tcfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e2c",
+      "slot": "0x7ff84004c848",
+      "raw": "20fbd71600020000",
+      "decoded_target": "0x7ff816d7fb20",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS8UTF8ViewV10startIndexSS0D0Vvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e32",
+      "slot": "0x7ff84004c850",
+      "raw": "2053ae1600020000",
+      "decoded_target": "0x7ff816ae5320",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS8UTF8ViewV13_foreignCountSiyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e38",
+      "slot": "0x7ff84004c888",
+      "raw": "e05ed71600020000",
+      "decoded_target": "0x7ff816d75ee0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS8UTF8ViewV5countSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e3e",
+      "slot": "0x7ff84004c890",
+      "raw": "a020da1600020000",
+      "decoded_target": "0x7ff816da20a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS8UTF8ViewV5index5afterSS5IndexVAF_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e44",
+      "slot": "0x7ff84004c898",
+      "raw": "405fed1600020000",
+      "decoded_target": "0x7ff816ed5f40",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS8UTF8ViewV8endIndexSS0D0Vvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e4a",
+      "slot": "0x7ff84004c8a0",
+      "raw": "f041ec1600020000",
+      "decoded_target": "0x7ff816ec41f0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS8UTF8ViewVMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e50",
+      "slot": "0x7ff84004c8c0",
+      "raw": "4026da1600020000",
+      "decoded_target": "0x7ff816da2640",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS8UTF8ViewVys5UInt8VSS5IndexVcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e56",
+      "slot": "0x7ff84004c920",
+      "raw": "7039ec1600020000",
+      "decoded_target": "0x7ff816ec3970",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSSMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e5c",
+      "slot": "0x7ff84004c980",
+      "raw": "609cc51600020000",
+      "decoded_target": "0x7ff816c59c60",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSS_5radix9uppercaseSSx_SiSbtcSzRzlufC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e62",
+      "slot": "0x7ff84004cac0",
+      "raw": "90eec81600020000",
+      "decoded_target": "0x7ff816c8ee90",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSTsE6filterySay7ElementQzGSbACKXEKF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e68",
+      "slot": "0x7ff84004cc70",
+      "raw": "0059be1600020000",
+      "decoded_target": "0x7ff816be5900",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa034_makeUniqueAndReserveCapacityIfNotB0yyFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e6e",
+      "slot": "0x7ff84001a970",
+      "raw": "106b320400020000",
+      "decoded_target": "0x7ff804326b10",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa10FoundationE19_bridgeToObjectiveCSo7NSArrayCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e74",
+      "slot": "0x7ff84001a990",
+      "raw": "106a320400020000",
+      "decoded_target": "0x7ff804326a10",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa10FoundationE36_unconditionallyBridgeFromObjectiveCySayxGSo7NSArrayCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e7a",
+      "slot": "0x7ff84004cc78",
+      "raw": "003dad1600020000",
+      "decoded_target": "0x7ff816ad3d00",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa10startIndexSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e80",
+      "slot": "0x7ff84004ccb0",
+      "raw": "1058be1600020000",
+      "decoded_target": "0x7ff816be5810",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e86",
+      "slot": "0x7ff84004ccd8",
+      "raw": "a054be1600020000",
+      "decoded_target": "0x7ff816be54a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa28_allocateBufferUninitialized15minimumCapacitys06_ArrayB0VyxGSi_tFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e8c",
+      "slot": "0x7ff84004cce8",
+      "raw": "f059be1600020000",
+      "decoded_target": "0x7ff816be59f0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e92",
+      "slot": "0x7ff84004cd00",
+      "raw": "2042ad1600020000",
+      "decoded_target": "0x7ff816ad4220",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa6appendyyxnF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e98",
+      "slot": "0x7ff84004cd18",
+      "raw": "90e0ac1600020000",
+      "decoded_target": "0x7ff816ace090",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa8endIndexSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682e9e",
+      "slot": "0x7ff84004cd38",
+      "raw": "a052be1600020000",
+      "decoded_target": "0x7ff816be52a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSa9repeating5countSayxGx_SitcfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ea4",
+      "slot": "0x7ff84004cd40",
+      "raw": "e00dac1600020000",
+      "decoded_target": "0x7ff816ac0de0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSaMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682eaa",
+      "slot": "0x7ff84004cdd0",
+      "raw": "6076ae1600020000",
+      "decoded_target": "0x7ff816ae7660",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSayxSicig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682eb0",
+      "slot": "0x7ff84004cf48",
+      "raw": "104ead1600020000",
+      "decoded_target": "0x7ff816ad4e10",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSh15minimumCapacityShyxGSi_tcfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682eb6",
+      "slot": "0x7ff84000a5a8",
+      "raw": "00fd860900020000",
+      "decoded_target": "0x7ff80986fd00",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSo10CGColorRefa12CoreGraphicsE5blackABvgZ",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ebc",
+      "slot": "0x7ff8400510f8",
+      "raw": "c0daa12000020000",
+      "decoded_target": "0x7ff820a1dac0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSo13os_log_type_ta0A0E5errorABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ec2",
+      "slot": "0x7ff840051108",
+      "raw": "20bfa12000020000",
+      "decoded_target": "0x7ff820a1bf20",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSo13os_log_type_ta0A0E7defaultABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ec8",
+      "slot": "0x7ff840050340",
+      "raw": "207ea12000020000",
+      "decoded_target": "0x7ff820a17e20",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSo8NSObjectC10ObjectiveCE2eeoiySbAB_ABtFZ",
+          "/usr/lib/swift/libswiftObjectiveC.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ece",
+      "slot": "0x7ff84004d4a8",
+      "raw": "500abe1600020000",
+      "decoded_target": "0x7ff816be0a50",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSq17unsafelyUnwrappedxvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ed4",
+      "slot": "0x7ff84004d4b8",
+      "raw": "5048e91600020000",
+      "decoded_target": "0x7ff816e94850",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$sSqMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682eda",
+      "slot": "0x7ff84004d778",
+      "raw": "3068ac1600020000",
+      "decoded_target": "0x7ff816ac6830",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss018_bridgeAnyObjectToB0yypyXlSgF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ee0",
+      "slot": "0x7ff84004d780",
+      "raw": "2073ac1600020000",
+      "decoded_target": "0x7ff816ac7320",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss042_stdlib_isOSVersionAtLeastOrVariantVersiondE0yBi1_Bw_BwBwBwBwBwtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ee6",
+      "slot": "0x7ff84004d930",
+      "raw": "f025c71600020000",
+      "decoded_target": "0x7ff816c725f0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss10_HashTableV11startBucketAB0D0Vvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682eec",
+      "slot": "0x7ff84004d938",
+      "raw": "d06bcc1600020000",
+      "decoded_target": "0x7ff816cc6bd0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss10_HashTableV12previousHole6beforeAB6BucketVAF_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ef2",
+      "slot": "0x7ff84004da38",
+      "raw": "803fd11600020000",
+      "decoded_target": "0x7ff816d13f80",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss11_SetStorageC4copy8originalAByxGs05__RawaB0C_tFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682ef8",
+      "slot": "0x7ff84004da40",
+      "raw": "6002ae1600020000",
+      "decoded_target": "0x7ff816ae0260",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss11_SetStorageC6resize8original8capacity4moveAByxGs05__RawaB0C_SiSbtFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682efe",
+      "slot": "0x7ff84004da68",
+      "raw": "80f4d71600020000",
+      "decoded_target": "0x7ff816d7f480",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss11_StringGutsV16_foreignCopyUTF84intoSiSgSrys5UInt8VG_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f04",
+      "slot": "0x7ff84004da98",
+      "raw": "4001ad1600020000",
+      "decoded_target": "0x7ff816ad0140",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss11_StringGutsV4growyySiF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f0a",
+      "slot": "0x7ff84004db88",
+      "raw": "7005be1600020000",
+      "decoded_target": "0x7ff816be0570",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f10",
+      "slot": "0x7ff84004db90",
+      "raw": "00ddbd1600020000",
+      "decoded_target": "0x7ff816bddd00",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f16",
+      "slot": "0x7ff84004dc98",
+      "raw": "a019af1600020000",
+      "decoded_target": "0x7ff816af19a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss13_StringObjectV10sharedUTF8SRys5UInt8VGvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f1c",
+      "slot": "0x7ff84004dd20",
+      "raw": "b08dc41600020000",
+      "decoded_target": "0x7ff816c48db0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f22",
+      "slot": "0x7ff84004dd28",
+      "raw": "1065c41600020000",
+      "decoded_target": "0x7ff816c46510",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss15ContiguousArrayV12_endMutationyyFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f28",
+      "slot": "0x7ff84004dd70",
+      "raw": "108ec41600020000",
+      "decoded_target": "0x7ff816c48e10",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f2e",
+      "slot": "0x7ff84004dd78",
+      "raw": "a08ec41600020000",
+      "decoded_target": "0x7ff816c48ea0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f34",
+      "slot": "0x7ff84004dea8",
+      "raw": "3052ad1600020000",
+      "decoded_target": "0x7ff816ad5230",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss15_print_unlockedyyx_q_zts16TextOutputStreamR_r0_lF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f3a",
+      "slot": "0x7ff84004e138",
+      "raw": "6090bf1600020000",
+      "decoded_target": "0x7ff816bf9060",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss17_assertionFailure__4file4line5flagss5NeverOs12StaticStringV_SSAHSus6UInt32VtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f40",
+      "slot": "0x7ff84004e140",
+      "raw": "60b5ab1600020000",
+      "decoded_target": "0x7ff816abb560",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss17_bridgeCocoaArrayySayxGyXllF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f46",
+      "slot": "0x7ff84004e220",
+      "raw": "80b5ab1600020000",
+      "decoded_target": "0x7ff816abb580",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss18_CocoaArrayWrapperV8endIndexSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f4c",
+      "slot": "0x7ff84004e230",
+      "raw": "907dc71600020000",
+      "decoded_target": "0x7ff816c77d90",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss18_DictionaryStorageC4copy8originalAByxq_Gs05__RawaB0C_tFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f52",
+      "slot": "0x7ff84004e238",
+      "raw": "9045ac1600020000",
+      "decoded_target": "0x7ff816ac4590",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss18_DictionaryStorageC6resize8original8capacity4moveAByxq_Gs05__RawaB0C_SiSbtFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f58",
+      "slot": "0x7ff84004e248",
+      "raw": "2092ac1600020000",
+      "decoded_target": "0x7ff816ac9220",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss18_DictionaryStorageC8allocate8capacityAByxq_GSi_tFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f5e",
+      "slot": "0x7ff84004e580",
+      "raw": "e0f9ab1600020000",
+      "decoded_target": "0x7ff816abf9e0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss23CustomStringConvertibleP11descriptionSSvgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f64",
+      "slot": "0x7ff84004e9a8",
+      "raw": "80ddab1600020000",
+      "decoded_target": "0x7ff816abdd80",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f6a",
+      "slot": "0x7ff84004eb10",
+      "raw": "0045ec1600020000",
+      "decoded_target": "0x7ff816ec4500",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss28__ContiguousArrayStorageBaseC17staticElementTypeypXpvgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f70",
+      "slot": "0x7ff84004f078",
+      "raw": "304ed11600020000",
+      "decoded_target": "0x7ff816d14e30",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss50ELEMENT_TYPE_OF_SET_VIOLATES_HASHABLE_REQUIREMENTSys5NeverOypXpF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f76",
+      "slot": "0x7ff84004f080",
+      "raw": "a0f6d01600020000",
+      "decoded_target": "0x7ff816d0f6a0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss53KEY_TYPE_OF_DICTIONARY_VIOLATES_HASHABLE_REQUIREMENTSys5NeverOypXpF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f7c",
+      "slot": "0x7ff84004f0b0",
+      "raw": "40a6c11600020000",
+      "decoded_target": "0x7ff816c1a640",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss5ErrorPsE19_getEmbeddedNSErroryXlSgyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f82",
+      "slot": "0x7ff84004f0b8",
+      "raw": "c00ac71600020000",
+      "decoded_target": "0x7ff816c70ac0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss5ErrorPsE5_codeSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f88",
+      "slot": "0x7ff84004f0c0",
+      "raw": "200ac71600020000",
+      "decoded_target": "0x7ff816c70a20",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss5ErrorPsE7_domainSSvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f8e",
+      "slot": "0x7ff84004f0c8",
+      "raw": "e00ac71600020000",
+      "decoded_target": "0x7ff816c70ae0",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss5ErrorPsE9_userInfoyXlSgvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f94",
+      "slot": "0x7ff84004f2c0",
+      "raw": "607ed21600020000",
+      "decoded_target": "0x7ff816d27e60",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss5print_9separator10terminatoryypd_S2StF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682f9a",
+      "slot": "0x7ff84004f2d8",
+      "raw": "201fac1600020000",
+      "decoded_target": "0x7ff816ac1f20",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss6HasherV5_seedABSi_tcfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682fa0",
+      "slot": "0x7ff84004f2f0",
+      "raw": "701fac1600020000",
+      "decoded_target": "0x7ff816ac1f70",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss6HasherV8_combineyySuF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682fa6",
+      "slot": "0x7ff84004f2f8",
+      "raw": "5059cc1600020000",
+      "decoded_target": "0x7ff816cc5950",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss6HasherV8_combineyys5UInt8VF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682fac",
+      "slot": "0x7ff84004f308",
+      "raw": "9057cc1600020000",
+      "decoded_target": "0x7ff816cc5790",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss6HasherV8_combineyys6UInt32VF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809682fb2",
+      "slot": "0x7ff84004f320",
+      "raw": "90f4be1600020000",
+      "decoded_target": "0x7ff816bef490",
+      "slot_sections": [],
+      "target_sections": [],
+      "exact_dependency_exports": [
+        [
+          "_$ss6HasherV9_finalizeSiyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ]
+    },
+    {
+      "stub": "0x7ff809684968",
+      "slot": "0x7ff840abaf00",
+      "raw": "0ea3e40200020000",
+      "decoded_target": "0x7ff802e4a30e",
+      "slot_sections": [
+        {
+          "name": "__got",
+          "segment": "__DATA_CONST",
+          "start": "0x7ff840ab58d0",
+          "size": 22104,
+          "flags": "0x0"
+        }
+      ],
+      "target_sections": [],
+      "exact_dependency_exports": []
+    },
+    {
+      "stub": "0x7ff80968496e",
+      "slot": "0x7ff840abaf08",
+      "raw": "18a3e40200020000",
+      "decoded_target": "0x7ff802e4a318",
+      "slot_sections": [
+        {
+          "name": "__got",
+          "segment": "__DATA_CONST",
+          "start": "0x7ff840ab58d0",
+          "size": 22104,
+          "flags": "0x0"
+        }
+      ],
+      "target_sections": [],
+      "exact_dependency_exports": []
+    },
+    {
+      "stub": "0x7ff809684974",
+      "slot": "0x7ff840abaf10",
+      "raw": "d0b9e50200020000",
+      "decoded_target": "0x7ff802e5b9d0",
+      "slot_sections": [
+        {
+          "name": "__got",
+          "segment": "__DATA_CONST",
+          "start": "0x7ff840ab58d0",
+          "size": 22104,
+          "flags": "0x0"
+        }
+      ],
+      "target_sections": [],
+      "exact_dependency_exports": []
+    },
+    {
+      "stub": "0x7ff80968497a",
+      "slot": "0x7ff840abaf18",
+      "raw": "82c9e50200020000",
+      "decoded_target": "0x7ff802e5c982",
+      "slot_sections": [
+        {
+          "name": "__got",
+          "segment": "__DATA_CONST",
+          "start": "0x7ff840ab58d0",
+          "size": 22104,
+          "flags": "0x0"
+        }
+      ],
+      "target_sections": [],
+      "exact_dependency_exports": []
+    },
+    {
+      "stub": "0x7ff809684980",
+      "slot": "0x7ff840abaf20",
+      "raw": "c2b9e50200260000",
+      "decoded_target": "0x7ff802e5b9c2",
+      "slot_sections": [
+        {
+          "name": "__got",
+          "segment": "__DATA_CONST",
+          "start": "0x7ff840ab58d0",
+          "size": 22104,
+          "flags": "0x0"
+        }
+      ],
+      "target_sections": [],
+      "exact_dependency_exports": []
+    }
+  ],
+  "diagnostic_only": true,
+  "candidate_emitted": false,
+  "source_sha256": "5cef374df0e5d23adf971a6c0b008f3aa2a41592d80f94991f8934e6c12b32e5"
+}

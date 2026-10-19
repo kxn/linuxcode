@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 287059,
+      "sha256": "fcbe035e60317599a8ab12cfe8c87dbfeb17ee6d7bf4ab431b1ddaf5b803ba7e"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1026,
+      "sha256": "dee09ba55dc42eba59cde429682aa4f2eb938b824aecef30ee79fb6bcf9f976e"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 238,
+  "nonzero_addends_verified": 10,
+  "serialized_bindings": 286,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 4,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 18,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe78",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe98",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xeb8",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xed8",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xef8",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xf18",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xf38",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xf58",
+        "first_section_prefix": "0x240",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-appleva-patch-got-v1/AppleVA': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xde5)\n",
+    "original_validator": "runtime/original-dyld-validation-pjr8y7oa/result.json",
+    "original_validator_sha256": "b81fbd502c478c1efb26b279c36b1edace54246b5793f6b869ee5437e7d8a7af",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "362ce6d3e4052f0c016b08bdfeb1138d8cf895e55600a67cf1f94d6c6ff60ce6",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "80537f876d501ef4900a83431b3fdf3b09de743af4f8aa2ac0f166e9dc090bc3",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA": "48bd142d8e4370c2ee9e6823ffe55a8cdbd847419be43ac7beb829d848232957",
+    "runtime/rebuilt-appleva-patch-got-v1/AppleVA": "16fd806995adcca393cf4c87eb15b0d375487fda390b6a29c3539d8f0b2635ee",
+    "runtime/rebuilt-appleva-patch-got-v1/reconstruction.json": "c53eab088d6c3656fe71f34f0c1cdd2061cd8c47c1726979120d0254a885222b"
+  },
+  "verified": true
+}

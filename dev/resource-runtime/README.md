@@ -163,3 +163,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [CMCapture 与转导出检查点](research/cmcapture-reexports/README.md) 保存 42 个原版依赖候选、显式导出链审计、原子准备清单和嵌套 framework 路径修复。真实构建与资源工具结果及未完成范围见该附件的 evidence.json；默认安装候选没有提升。
 
 [AuthKit / Security 与缓存 ABI 检查点](research/authkit-security-abi/README.md) 保存八个保留原始指令的候选、原生 Security TLS / 类身份验证、URLFormatting 类别方法表恢复与候选发布写入锁。完整 Unity workspace 仍因 LocalAuthentication 的 LAUserStore 缺失而返回 65；默认安装环境未提升。
+
+[原版认证、目录与媒体依赖加载](research/local-auth-resource-loader/README.md) 保存 14 个保留原始指令的候选、嵌套 framework 搜索路径修正、原始跳转桩缺口诊断和损坏副本对照。资源工具已继续到 SkyLight 的 ProDisplayLibrary Swift 类型依赖；完整 Unity/UE 构建签名仍未完成，默认安装候选未提升。

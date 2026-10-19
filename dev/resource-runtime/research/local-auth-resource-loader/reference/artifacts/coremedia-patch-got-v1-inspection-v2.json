@@ -1,0 +1,59 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1566825,
+      "sha256": "3b23eebfe015a530bb67af014ad2e8e64caf0d0fecabcba2066895d6b5e63888"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 4626,
+      "sha256": "8f0cc3bace61376c0027d15b4e8ec5aa17780c6386ee4db231b1eb596a6905a3"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1046,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 4013,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 2,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27330",
+        "first_section_prefix": "0x1e0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27348",
+        "first_section_prefix": "0x1e0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coremedia-patch-got-v1/CoreMedia': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x22ab5)\n",
+    "original_validator": "runtime/original-dyld-validation-z4u4mfjg/result.json",
+    "original_validator_sha256": "a64bf1d9bffbd058dff20430f21a33748d3c9fb685dd0fbbc177e7077ab3fd1f",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "a39926c6ff6875fe91cfbf6030a85ba8d6f8697a3fbf1c829744fec000aa8490",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "ef8e0d3e975e4c91b26e97f4bb22170bf55aea189cf20499a5a34f3c7c9fd0ee",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia": "f498b2518c2a775c9c1768c5d3451285f1ee86a497f5918c5f1b1499651c55bf",
+    "runtime/rebuilt-coremedia-patch-got-v1/CoreMedia": "ddd8285b9099283a7cb93b64caeabb01c812f1366126ba3846d48650079da233",
+    "runtime/rebuilt-coremedia-patch-got-v1/reconstruction.json": "9f0619d11f9d83550e57510cdbbcef1f01b6de38bb70a0f5e0ef917d4d6ca9cb"
+  },
+  "verified": true
+}
