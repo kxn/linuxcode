@@ -1,5 +1,7 @@
 # 原版 CoreGraphics 的无界面图像处理实验
 
+这是 alpha.5 的实验记录。后续 Swift 元数据修复、资源依赖进展与新失败见 [后续依赖检查点](../native-resource-dependencies/README.md)；其中没有宣称 actool/ibtool 或 CoreVideo 已可用。
+
 已在 Linux x86_64/Darling 中实际调用重建的原版 Intel CoreGraphics，创建真实 CF RGB 色彩空间、绘制 2×2 红色位图、生成 CGImage，并核对读回的每个像素字节。原版 ImageIO 另行解码一个有效 PNG，91 个像素的 RGB 值全部与 Linux 侧生成的输入一致。测试移除 DISPLAY、WAYLAND_DISPLAY 和 XAUTHORITY。
 
 这条实验使用原版图像算法，恢复共享缓存重定位、合并引用及 Swift/Objective-C 元数据；不是新增一个替代渲染器。CoreGraphics 保留 5,476 个导出，完整 Swift API 兼容性未验证。新 SIMD double3x3 常量按 SDK 的 96 字节大小、16 字节对齐构建，全部字节与原版缓存核对。

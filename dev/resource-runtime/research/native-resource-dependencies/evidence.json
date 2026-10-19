@@ -1,0 +1,157 @@
+{
+  "checked_at": "2026-10-19T10:52:48.811733+00:00",
+  "classification": "progress",
+  "previous_goal_turn_classification": "progress",
+  "full_goal_complete": false,
+  "evidence": {
+    "swift_compiler": {
+      "path": "runtime/original-swift-inverse-environment-l88lkspv/result.json",
+      "sha256": "0a5941602d679ad60a7706bb1c47d17d30b525906580de87e1f1d9652232f9c5"
+    },
+    "metadata_validation": {
+      "path": "artifacts/corevideo-swift-inverse-environment-v1-proof.json",
+      "sha256": "cb7386c8864778fa9a2af2e2e8273f9e92eed2b6d5b4540615700085cb550612"
+    },
+    "shared_regression": {
+      "path": "artifacts/corevideo-swift-parser-shared-regression-v1.json",
+      "sha256": "fd2ad13b29bdce93e1697a04dea39212eb093802a89e4c5bf712115bd308fa15"
+    },
+    "math_bytes": {
+      "path": "artifacts/original-simd-math-v1-byte-identity.json",
+      "sha256": "19c192018e6d729e358ee50c5b6d098deeb2b070eabfbdd028fb64247b0f7214"
+    },
+    "math_runtime": {
+      "path": "runtime/original-simd-math-test-j51ga32k/result.json",
+      "sha256": "97e54ee915c072dca9eca50ae9785299e2fc90149650bd54cff97a6936e1bf2e"
+    },
+    "corevideo_runtime": {
+      "path": "runtime/original-corevideo-native-test-t_ofnqk1/result.json",
+      "sha256": "1213c14f17377c2f10cecbbbaf3096e2390b34bcfcbc53c39e2f998f5a38f613"
+    },
+    "tool_probe": {
+      "path": "artifacts/ios-resource-coregraphics-native-v22-headless-version-probes.json",
+      "sha256": "54e0d5d2c05d6df71d2eaaa4d367134c8984eb318f18237e31690d8fbf1e1b55"
+    },
+    "stage": {
+      "path": "artifacts/coregraphics-native-v22-stage.json",
+      "sha256": "7cb6a4b625d259741af444ee40643ec672febae451b676ea6d79779abf9954aa"
+    }
+  },
+  "sources": {
+    "config/coregraphics-image-pins.json": "fb2635dc4419d8624c4ae8d9a90a10a26d821cff8f324fe50d11ccc735155783",
+    "scripts/rebuild-c-cache-image.py": "da44488e0a12a16f19420153fd5b3c15f637ce898fe24eb9a630a43f3276039e",
+    "scripts/restore-swift-metadata.py": "5ab13a990e32d7c6dbd391435432bb40029e8c0581dabf0d99de680f8f71073f",
+    "scripts/swift-environment-inverse-bounds.py": "84f2aba74ac70e52b82bac3f3ee4011207600e65a4690676577bc4e6015870c4",
+    "scripts/test-swift-environment-inverse-bounds.py": "ed419a84f134a599434c01edcc190a265356d119b6794a4e849a893379ec2008",
+    "scripts/stage-native-simd-math.py": "07a9d44a51ffd4f10545387dab37e28099d954375ca98fe28f359184ae863b43",
+    "scripts/test-original-simd-math.py": "64d347ea02efd5d45734f2c5248ffad3cb371b16c9c9d136d96e8c1bca89f517",
+    "scripts/verify-original-simd-math-bytes.py": "423de1491f8d43497f3ed80ae2d18b4e1918d9c2abcd806a3a44a2f2c7352e96",
+    "scripts/test-original-corevideo-native.py": "81f042c1ab23fed925f90e7b7480336575128b36db8d955e6ee8672e2028ad1c",
+    "scripts/test-original-swift-inverse-environment.py": "6f55dac77916a6203f18f6851cce63c87fe6116e7335221984248a925858d761",
+    "scripts/rootless-token-native-loader.c": "8810abafe4b6495292100653dd8415d81cc593eb4cc014fb88e72e9f0b333051",
+    "scripts/stage-native-system-resource-exports.py": "e04af61e923cdf47c466efaa49826826ff18735df257b9ffbe62a8e7bbcbce15",
+    "fixtures/hello/original-simd-math.c": "4fa433d731ad22b59e11b2f7628cf0d23b12754787e7520891fec157c3131ca1",
+    "fixtures/hello/original-corevideo-native.c": "fa4f9505d0ce4efb398e2dc1f4176fe33a2462d1552653a9b381a9ff9bf7efd7",
+    "fixtures/SwiftInverseEnvironment/InverseKeyPath.swift": "38e8baf6b52faf8031a130ca7f622bff5f17cb5b6b1d07764a745e8ee15f45c9",
+    "fixtures/SwiftInverseEnvironment/main.swift": "5e9ea7dd9c581b1b7eadd0d8374d92c69bde0ef5e054a4e574ead929e06268e8"
+  },
+  "Swift_inverse_environment": {
+    "original_compiler_projections": 6,
+    "damaged_records_rejected": 15,
+    "original_header_and_image_bytes_preserved": true,
+    "shared_rebuilds_byte_identical": [
+      "swift-os",
+      "rsd-full-native"
+    ]
+  },
+  "native_math": {
+    "original_functions": 7,
+    "original_readonly_sections": 4,
+    "original_bytes_identical": true,
+    "rational_inverse_matrices": 129,
+    "Linux_scalar_vector_lanes": 408,
+    "numeric_values_verified": true,
+    "signed_zero_differences": 1,
+    "strict_scalar_equivalence_verified": false,
+    "observation": "Mixed vector [-0,+0,NaN,+Inf] gives +0 for sin(-0); original seven function instruction ranges and read-only constants are byte-identical. No fix or scalar bitwise-equivalence claim."
+  },
+  "CoreVideo_CPU_API_verified": false,
+  "CoreVideo_observed_blocker": "CVPixelBufferCreateWithBytes reaches original IOSurface _iosConnectInitalize; cannot open IOSurface kernel service (e00002c7), assertion aborts.",
+  "current_observed_tool_blocker": "LightweightCodeRequirements requires SecRequirementCreateWithLightweightCodeRequirementData from selected Security framework.",
+  "resource_tool_versions_verified": false,
+  "full_resource_compilation_verified": false,
+  "semantic_equivalence_verified": false,
+  "selected_signed_build_baseline_unchanged": true,
+  "no_GUI_used": true,
+  "next_work": [
+    "Implement or connect the actual Security lightweight requirement API using source/native behavior; do not return fixed success.",
+    "Resolve the actual IOSurface kernel service requirement for CPU CoreVideo buffers; current test aborts.",
+    "Continue actual actool/ibtool compilation and validate generated assets/storyboards.",
+    "Integrate resource pipeline into real Unity/UE CocoaPods iOS builds and signing; full objective remains unverified."
+  ],
+  "source_attachments": {
+    "config/coregraphics-image-pins.json": "fb2635dc4419d8624c4ae8d9a90a10a26d821cff8f324fe50d11ccc735155783",
+    "scripts/rebuild-c-cache-image.py": "da44488e0a12a16f19420153fd5b3c15f637ce898fe24eb9a630a43f3276039e",
+    "scripts/restore-swift-metadata.py": "5ab13a990e32d7c6dbd391435432bb40029e8c0581dabf0d99de680f8f71073f",
+    "scripts/swift-environment-inverse-bounds.py": "84f2aba74ac70e52b82bac3f3ee4011207600e65a4690676577bc4e6015870c4",
+    "scripts/test-swift-environment-inverse-bounds.py": "ed419a84f134a599434c01edcc190a265356d119b6794a4e849a893379ec2008",
+    "scripts/stage-native-simd-math.py": "07a9d44a51ffd4f10545387dab37e28099d954375ca98fe28f359184ae863b43",
+    "scripts/test-original-simd-math.py": "64d347ea02efd5d45734f2c5248ffad3cb371b16c9c9d136d96e8c1bca89f517",
+    "scripts/verify-original-simd-math-bytes.py": "423de1491f8d43497f3ed80ae2d18b4e1918d9c2abcd806a3a44a2f2c7352e96",
+    "scripts/test-original-corevideo-native.py": "81f042c1ab23fed925f90e7b7480336575128b36db8d955e6ee8672e2028ad1c",
+    "scripts/test-original-swift-inverse-environment.py": "6f55dac77916a6203f18f6851cce63c87fe6116e7335221984248a925858d761",
+    "scripts/rootless-token-native-loader.c": "8810abafe4b6495292100653dd8415d81cc593eb4cc014fb88e72e9f0b333051",
+    "scripts/stage-native-system-resource-exports.py": "e04af61e923cdf47c466efaa49826826ff18735df257b9ffbe62a8e7bbcbce15",
+    "fixtures/hello/original-simd-math.c": "4fa433d731ad22b59e11b2f7628cf0d23b12754787e7520891fec157c3131ca1",
+    "fixtures/hello/original-corevideo-native.c": "fa4f9505d0ce4efb398e2dc1f4176fe33a2462d1552653a9b381a9ff9bf7efd7",
+    "fixtures/SwiftInverseEnvironment/InverseKeyPath.swift": "38e8baf6b52faf8031a130ca7f622bff5f17cb5b6b1d07764a745e8ee15f45c9",
+    "fixtures/SwiftInverseEnvironment/main.swift": "5e9ea7dd9c581b1b7eadd0d8374d92c69bde0ef5e054a4e574ead929e06268e8",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab",
+    "scripts/restore-objc-metadata.py": "c904b092b16835410f7d1db7466ba21595907e4044ca72682adac300d4711e4e",
+    "scripts/restore-tls-metadata.py": "4405d587f28ef2c8781aa71a7c83326cddcef9e1a7dad1e95553fd05bc5039b5",
+    "scripts/cache-code-analysis.py": "d10089d9f60dc36d02f0d4d86904a15d8e150c319779a5b0b3fe86ac09bf85a1",
+    "scripts/source-assembly-literals.py": "6cf3b5b115ba5dfb32c3ff775aac36e3730b68dd8de2607732581750f53e43ec",
+    "scripts/swift-keypath-environment-records.py": "174d93e492289d1863ba4fbb5eff49e9dd116b32cfed1b9e1736368296171c3f",
+    "scripts/macho-named-reexport.py": "bf99680d4d711abd6f4001671c813544df64403275788fdab8c8ad05041e5a31",
+    "scripts/resolve-evidence-history.py": "b099805a7ea9777266e2e020dc0c2b72efbe7aff7d209a461943f41239e42928",
+    "scripts/ios-resource-closure-profile.py": "9e0aa1c75fdc0ab6d233f072ac412ba71f0f5c102550c4d7b4934d0f826e8181",
+    "scripts/coregraphics-native-profile.py": "356fa218c0a1351ff7136c1159d1989caebcff32bf7a32ec25dacef38a392f29",
+    "scripts/stage-coregraphics-native.py": "58b920e9c2550310f36f6ff8043a70f10cdc8ff88fd0ba77653a34d8b58673e3",
+    "scripts/resolve-coregraphics-cache-imports.py": "3c8df36a8449c4cfeeb075ed4d1c956920e10bad6ab74bdb3f94ab962e6cc595",
+    "scripts/probe-ios-resource-tools.py": "43df0a8df8f0b4bfb22b7dc0de2e963c82c71b980905e56b5d37e99aafcc3cad",
+    "scripts/test-swift-metadata-layouts.py": "c08269868d203b7c5b4fe8216df6a77a596f52c9e88b29522c04fd61f1b93598",
+    "scripts/test-swift-keypath-environments.py": "7dcc3fde9bb2828648f761c16bd5cc6fc6090fd14fee613fff22b26d2d8718ac"
+  },
+  "Swift_reference": {
+    "repository": "https://github.com/swiftlang/swift",
+    "revision": "swift-6.3.3-RELEASE",
+    "files": [
+      {
+        "path": "include/swift/ABI/GenericContext.h",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/include/swift/ABI/GenericContext.h",
+        "sha256": "f773c6eae0c874ab6db409be697eff2ca4edc7b1005140c4d4fe312482d90331"
+      },
+      {
+        "path": "include/swift/ABI/MetadataValues.h",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/include/swift/ABI/MetadataValues.h",
+        "sha256": "7486ff6d39a55c1a0bfcc7ff0345484ced1578c81b41fd34a322954128301e67"
+      },
+      {
+        "path": "lib/IRGen/GenProto.cpp",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/lib/IRGen/GenProto.cpp",
+        "sha256": "6cf768f13bb238873f5a870f5b90c34d7b28994fda653c156bfde8f3c70552ea"
+      },
+      {
+        "path": "lib/IRGen/GenMeta.cpp",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/lib/IRGen/GenMeta.cpp",
+        "sha256": "7f68f6287176015696c8791faa406d55bb1fa133502dd3d637f53823170beeec"
+      },
+      {
+        "path": "lib/IRGen/GenKeyPath.cpp",
+        "url": "https://raw.githubusercontent.com/swiftlang/swift/swift-6.3.3-RELEASE/lib/IRGen/GenKeyPath.cpp",
+        "sha256": "6a10af244447f4f00dcea9981b492bf40e8ebe6eff67c010bd618a920bb0f642"
+      }
+    ]
+  },
+  "snapshot_is_complete_installer": false
+}

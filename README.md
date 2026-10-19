@@ -43,3 +43,5 @@ python3 linuxcode.py package --output dist/linuxcode-0.1.0-source.tar.gz
 最新的 [原版 codesign 源码附件和实测说明](dev/resource-runtime/research/native-codesign/README.md) 提供真实扩展属性支持、原生签名接口兼容和原版分配器入口。已有完整候选时，可通过 `adopt --native-codesign-stage … --identity-store … --build-report … --product-report …` 一次选用它；随后仍使用原来的 `xcodebuild` 命令和工程。此候选不需要 zsign；目前只验证 ad-hoc，尚未验证开发者证书、provisioning 或设备信任。默认不带这些选项的 adopt 继续选择旧的无签名基线。
 
 [原版 CoreGraphics 图像处理实验](dev/resource-runtime/research/native-coregraphics/README.md) 已通过真实位图绘制和原版 ImageIO 的 PNG 像素检查。颜色转换对象创建和 actool/ibtool 仍失败；源码及失败证据作为独立开发附件保存。
+
+[后续资源依赖开发检查点](dev/resource-runtime/research/native-resource-dependencies/README.md) 保存 CoreVideo 的 Swift 逆协议元数据解析修复、原版 SIMD 数值检查及实际失败证据：CoreVideo CPU 缓冲区仍因 IOSurface 内核服务不可用而退出；actool/ibtool 当前缺少 Security 新接口。它没有改变安装基线，也没有宣称资源编译已完成。
