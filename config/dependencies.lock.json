@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "workspace": {
+    "url": "https://github.com/kxn/linuxcode.git",
+    "commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+    "milestone": "original-xcodebuild-ios-cocoapods-unsigned",
+    "manifest_sha256": "f3ae46e47cef776d554a5a18271a91c9f183e9083105de49a1d135c8279a0f2e",
+    "tag": "runtime-2026.10.19"
+  },
+  "baseline_assets": [
+    {
+      "name": "debs_20260608.zip",
+      "url": "https://github.com/darlinghq/darling/releases/download/v0.1.20260608/debs_20260608.zip",
+      "sha256": "27469ef3932da2e91dd7fb34b70e3628a3e54b7af9fb5480051f44af35eca1fd"
+    },
+    {
+      "name": "ubuntu-base-24.04.5-base-amd64.tar.gz",
+      "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.5-base-amd64.tar.gz",
+      "sha256": "e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86"
+    }
+  ],
+  "xcode": {
+    "version": "26.6",
+    "build": "17F113",
+    "xcodebuild_sha256": "d6ceec0a4fa47e3f7a20c712d960ffb954b2246a2c94a0bf0818b2e8344065c5",
+    "xip_sha256": "3f7e2985a080d6166f178034a76a7e7a24e5e64a31f36772f9a3f55e27c94591",
+    "xip_signature_verification": false
+  },
+  "candidate": {
+    "profile": "scripts/xcode-tool-dispatch-runtime-profile.py",
+    "report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-c53d8a856d7e.json",
+    "diagnostic": true,
+    "full_ci_ready": false,
+    "signed": false
+  },
+  "reference_inputs": {
+    "full_installer": {
+      "product": "140-93587",
+      "build": "25G83",
+      "version": "26.6.2",
+      "url": "https://swcdn.apple.com/content/downloads/37/33/140-93587-A_GRFFH93NOL/f944yaqo1cjhh2m0kxrl0zhcpg9yb9qphv/InstallAssistant.pkg",
+      "length": 18384624402,
+      "catalog_toc_sha1": "9545b959cab5c536998c45f0fdd4b5d3832dc6f7",
+      "sharedsupport_sha1": "65adfb4192ad9e8b6282f3ecc480cd3cafdabfef",
+      "sharedsupport_length": 18366669607,
+      "catalog_url": "https://swscan.apple.com/content/catalogs/others/index-26-15-14-13-12-10.16-10.15-10.14-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog",
+      "distribution_url": "https://swdist.apple.com/content/downloads/37/33/140-93587-A_GRFFH93NOL/f944yaqo1cjhh2m0kxrl0zhcpg9yb9qphv/140-93587.English.dist",
+      "package_sha256": "376923d7494cfa32b69f383bcfdce46aeedb609fe6a242ea12a6e015bfb77ba4",
+      "sharedsupport_sha256": "9327c292fb8f804f17b7bcde542aa523d27014606bc3d74e8f3dc3b892399354",
+      "mobileasset_zip_sha256": "0b44a71bd6a721f5ddfb46f8dba39b09ee46bf9678a1c3100b978f512acfc07c",
+      "mobileasset_zip_sha1": "60533a8ae8e47c23593a6965d64c1f00a6396cfe",
+      "mobileasset_zip_length": 18356020461,
+      "mobileasset_zip_name": "60533a8ae8e47c23593a6965d64c1f00a6396cfe.zip",
+      "intel_patch_sha256": "8f53d47470e988b6a26ad392cb96ba8000898d4e9823145750c9da9178179d44"
+    },
+    "recovery": {
+      "version": "26.6.2",
+      "build": "25G83",
+      "script": "scripts/prepare-recovery.sh",
+      "requires": "public Apple recovery service; no Mac"
+    },
+    "cold_candidate_rebuild_ready": false
+  },
+  "historical_checkpoints": [
+    {
+      "commit": "b5225c486ee95ebd6e07c08974ba74e375a5cf7d",
+      "note": "Original milestone manifest listed 11 generated files absent from Git; corrected by r1 with no source/build evidence changes. Earlier XIP installation test retains this original input revision."
+    }
+  ]
+}

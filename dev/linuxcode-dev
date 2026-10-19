@@ -1,0 +1,399 @@
+#!/usr/bin/env python3
+"""Develop the pinned Linux x86_64 Darling/Xcode milestone without changing defaults."""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import platform
+import shlex
+import shutil
+import subprocess
+import sys
+
+HERE = Path(__file__).resolve().parent
+DEFAULT_WORKSPACE = next((p for p in HERE.parents if (p / 'scripts').is_dir()
+                          and (p / 'bin/darling').is_file()), Path.cwd())
+PIN = json.loads((HERE / 'locks/developer.lock.json').read_text())
+MANIFEST_BYTES = (HERE / 'locks/source-manifest.json').read_bytes()
+if hashlib.sha256(MANIFEST_BYTES).hexdigest() != PIN['checkpoint']['source-manifest.json']:
+    raise SystemExit('Developer source lock checksum mismatch')
+MANIFEST = json.loads(MANIFEST_BYTES)
+TOOLS = ['git', 'python3', 'cmake', 'ninja', 'g++', 'clang-19', 'clang++-19',
+         'ld64.lld-19', 'llvm-objdump-19', 'bison', 'flex', 'm4', 'pkg-config']
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def emit(value):
+    print(json.dumps(value, indent=2, ensure_ascii=False))
+
+
+def git(repo, *args):
+    return subprocess.check_output(['git', '-C', str(repo), *args], stderr=subprocess.PIPE)
+
+
+def beneath(root, relative):
+    path = root / relative
+    # Do not follow the final component: expected source deletions and symlinks
+    # have to be inspected themselves, while parent traversal is forbidden.
+    if Path(relative).is_absolute() or '..' in Path(relative).parts:
+        raise ValueError('Unsafe relative path: ' + relative)
+    if not path.parent.resolve().is_relative_to(root.resolve()):
+        raise ValueError('Path escapes workspace: ' + relative)
+    return path
+
+
+def source_status(workspace):
+    records = []
+    for entry in MANIFEST['repositories']:
+        repo = beneath(workspace, entry['path'])
+        record = {'path': entry['path'], 'expected_base': entry['base_commit'],
+                  'published_fork': entry['fork_url'], 'published_commit': entry['commit']}
+        try:
+            record['head'] = git(repo, 'rev-parse', 'HEAD').decode().strip()
+            differences = []
+            for name, expected in entry['files'].items():
+                path = beneath(repo, name)
+                if expected is None:
+                    matches = not path.exists() and not path.is_symlink()
+                else:
+                    matches = (path.is_file() and not path.is_symlink()
+                               and sha(path) == expected['sha256']
+                               and bool(path.stat().st_mode & 0o111) == expected['executable'])
+                if not matches:
+                    differences.append(name)
+            record['changed_checkpoint_files'] = differences
+            record['checkpoint_files_checked'] = len(entry['files'])
+            record['exact_checkpoint'] = (record['head'] == entry['base_commit'] and not differences)
+        except (OSError, subprocess.CalledProcessError) as error:
+            record.update(exact_checkpoint=False, error=str(error))
+        records.append(record)
+    return {'repositories': records, 'repository_count': len(records),
+            'source_files_checked': sum(r.get('checkpoint_files_checked', 0) for r in records),
+            'exact_checkpoint': all(r['exact_checkpoint'] for r in records),
+            'scope': 'Locked modified source files and base HEADs; unrelated developer edits are not erased or certified.'}
+
+
+def checkpoint_root(workspace):
+    direct = workspace / 'checkpoint'
+    historical = workspace / 'runtime/github-publication-2026-10-19-build/workspace/checkpoint'
+    return direct if direct.is_dir() else historical
+
+
+def inspect_prerequisites(workspace):
+    sdk = 'runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk'
+    paths = {
+        'source_cmake': 'build-support/darlingserver/CMakeLists.txt',
+        'darling_sdk': 'vendor/darling/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk',
+        'xcode_sdk': sdk,
+        'runtime_root': 'runtime/rootfs/usr/libexec/darling',
+        'server_generated_rpc': 'runtime/darlingserver-source-build/darlingserver/src/rpc.c',
+        'server_mig': 'runtime/darlingserver-source-build/build-mig',
+        'candidate_profile': 'scripts/xcode-tool-dispatch-runtime-profile.py',
+        'candidate_stage_report': 'artifacts/xcode-tool-dispatch-stage-v2.json',
+        'full_intel_os_libraries': 'runtime/fullsystem-libraries/System/Library',
+        'recovery_libraries': 'runtime/recovery-libraries/System/Library',
+    }
+    return {key: {'path': value, 'exists': (workspace / value).exists()} for key, value in paths.items()}
+
+
+def tool_path(workspace, name):
+    found = shutil.which(name)
+    fallback = workspace / 'runtime/host-build-tools/usr/bin' / name
+    return found or (str(fallback) if fallback.is_file() else None)
+
+
+def developer_env(workspace):
+    env = dict(os.environ)
+    fallback = workspace / 'runtime/host-build-tools/usr'
+    if (fallback / 'bin').is_dir():
+        env['PATH'] = env.get('PATH', '') + os.pathsep + str(fallback / 'bin')
+    if not shutil.which('bison') and (fallback / 'share/bison').is_dir():
+        env['BISON_PKGDATADIR'] = str(fallback / 'share/bison')
+    if not shutil.which('m4') and (fallback / 'bin/m4').is_file():
+        env['M4'] = str(fallback / 'bin/m4')
+    return env
+
+
+def doctor(workspace):
+    tools = {}
+    for name in TOOLS:
+        program = tool_path(workspace, name)
+        item = {'path': program}
+        if program:
+            command = [program, '--version']
+            result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, timeout=15)
+            item['version'] = result.stdout.splitlines()[0] if result.stdout else ''
+            item['exit_status'] = result.returncode
+        tools[name] = item
+    sources = source_status(workspace)
+    return {'schema': 1, 'checked_at': datetime.now(timezone.utc).isoformat(),
+            'workspace': str(workspace), 'milestone': PIN['workspace'],
+            'host': {'system': platform.system(), 'machine': platform.machine(),
+                     'supported': platform.system() == 'Linux' and platform.machine() == 'x86_64'},
+            'tools': tools, 'sources': sources,
+            'inputs': inspect_prerequisites(workspace),
+            'cold_candidate_rebuild_ready': False,
+            'known_gaps': ['XIP alone does not contain the Intel OS reference libraries used by this candidate.',
+                           'The full sequence from clean inputs to every private candidate runtime is not automated.',
+                           'Current iOS milestone is unsigned and uses a diagnostic CoreServices policy; Unity/UE, resource tools, archive/export and trusted signing remain incomplete.']}
+
+
+def run_commands(commands, workspace, plan=False, output=None, cwd=None):
+    if plan:
+        emit({'workspace': str(workspace), 'output': str(output) if output else None,
+              'commands': commands, 'shell': [shlex.join(c) for c in commands]})
+        return
+    for command in commands:
+        print('+ ' + shlex.join(command), flush=True)
+        subprocess.run(command, cwd=cwd or workspace, env=developer_env(workspace), check=True)
+
+
+def output_dir(workspace, name, selected, create):
+    out = Path(selected).expanduser().resolve() if selected else workspace / 'runtime/developer' / name
+    if not out.is_relative_to((workspace / 'runtime').resolve()):
+        raise ValueError('Build output must be a private directory under WORKSPACE/runtime')
+    protected = [workspace / 'runtime/darlingserver-source-build', workspace / 'runtime/rootfs',
+                 workspace / 'runtime/state']
+    if any(out == p or out.is_relative_to(p) or p.is_relative_to(out) for p in protected):
+        raise ValueError('Refusing output overlapping a baseline or persistent runtime')
+    if out.exists() and not (out / '.linuxcode-developer-output').is_file():
+        raise ValueError('Refusing existing directory without developer output marker: ' + str(out))
+    if create:
+        out.mkdir(parents=True, exist_ok=True)
+        (out / '.linuxcode-developer-output').write_text('private developer build; no default runtime promotion\n')
+    return out
+
+
+def build_commands(workspace, module, out, jobs):
+    py = sys.executable
+    if module == 'journal':
+        return [['g++', '-std=c++17', '-O1', '-g', '-Wall', '-Wextra', '-Werror',
+                 '-Wno-misleading-indentation', '-pthread', '-fsanitize=address,undefined',
+                 '-fno-omit-frame-pointer', '-Ivendor/darlingserver/internal-include',
+                 'fixtures/hello/fsevents-journal-linux.cpp', 'vendor/darlingserver/src/fsevents-journal.cpp',
+                 '-o', str(out / 'journal-test')]]
+    if module == 'server':
+        return [['cmake', '-S', 'build-support/darlingserver', '-B', str(out), '-G', 'Ninja',
+                 '-DCMAKE_C_COMPILER=clang-19', '-DCMAKE_CXX_COMPILER=clang++-19',
+                 '-DCMAKE_ASM_COMPILER=clang-19', '-DCMAKE_BUILD_TYPE=RelWithDebInfo',
+                 '-DBISON_EXECUTABLE=' + (tool_path(workspace, 'bison') or 'bison'),
+                 '-DFLEX_EXECUTABLE=' + (tool_path(workspace, 'flex') or 'flex')],
+                ['cmake', '--build', str(out), '--target', 'darlingserver', '-j', str(jobs)]]
+    if module == 'fsevents':
+        return [[py, 'scripts/build-fsevents-source.py', '--output-dir', str(out.relative_to(workspace)),
+                 '--report', str((out / 'build.json').relative_to(workspace))]]
+    if module == 'kernel':
+        return [[py, 'scripts/build-libsystem-kernel-source.py', '--output-dir', str(out.relative_to(workspace)),
+                 '--variant-base', 'runtime/vchroot-links-normal/darling-root',
+                 '--report', str((out / 'build.json').relative_to(workspace))]]
+    raise ValueError(module)
+
+
+REGRESSIONS = {
+    'vchroot': ['scripts/test-vchroot-links.py'],
+    'metadata': ['scripts/test-metadata-root-name.py'],
+    'fsevents': ['scripts/test-global-fsevents-native.py', '--vchroot-links'],
+    'stat-cache': ['scripts/test-original-stat-cache.py', '--vchroot-links'],
+    'real-sdk': ['scripts/test-original-real-sdk-stat-cache.py'],
+    'xcode-version': ['scripts/probe-xcode-service-runtime.py', 'version', '--tool-dispatch', '--cfprefsd-daemon', '--timeout-seconds', '120'],
+    'ios-cocoapods': ['scripts/probe-xcode-service-runtime.py', 'build', '--tool-dispatch',
+                      '--core-volume-diagnostic', '--cfprefsd-daemon', '--filecoordination',
+                      '--prebuild-command-file', 'config/ios-cocoapods-prebuild-arguments.json',
+                      '--xcode-arguments-file', 'config/ios-cocoapods-build-arguments.json', '--timeout-seconds', '450'],
+    'ios-product': ['scripts/verify-ios-cocoapods-product.py'],
+}
+
+
+def export_evidence(workspace, destination, reports, added_sources):
+    destination = Path(destination).expanduser().resolve()
+    if destination.exists():
+        raise ValueError('Evidence destination must not exist: ' + str(destination))
+    if destination.is_relative_to(workspace / 'vendor'):
+        raise ValueError('Evidence destination must be outside source repositories')
+    selected = {}
+    entries = sorted(MANIFEST['repositories'], key=lambda e: len(Path(e['path']).parts), reverse=True)
+    for relative in added_sources:
+        path = beneath(workspace, relative)
+        owner = next((e for e in entries if path.is_relative_to(workspace / e['path'])), None)
+        if owner is None:
+            raise ValueError('--source must belong to one of the 17 locked source repositories: ' + relative)
+        selected.setdefault(owner['path'], set()).add(str(path.relative_to(workspace / owner['path'])))
+    # Stage all content in memory first: a rejected binary cannot leave a partial capsule.
+    payload = {}
+    records = []
+    for entry in entries:
+        repo = workspace / entry['path']
+        head = git(repo, 'rev-parse', 'HEAD').decode().strip()
+        if head != entry['base_commit']:
+            raise ValueError('Unexpected base HEAD; keep source lock coherent before publication: ' + entry['path'])
+        names = set(entry['files']) | selected.get(entry['path'], set())
+        names.update(x.decode() for x in git(repo, 'diff', '--name-only', '-z', 'HEAD').split(b'\0') if x)
+        names = {n for n in names if not any((repo / n).is_relative_to(workspace / other['path'])
+                  for other in entries if other is not entry and (workspace / other['path']).is_relative_to(repo))}
+        snapshots = {}
+        for name in sorted(names):
+            path = beneath(repo, name)
+            if path.is_dir():
+                continue
+            if path.is_symlink():
+                raise ValueError('Symlink source export requires explicit review: ' + str(path))
+            if path.exists():
+                data = path.read_bytes()
+                data.decode('utf-8')
+                if b'\0' in data:
+                    raise ValueError('Binary source export refused: ' + str(path))
+                snapshots[name] = {'sha256': hashlib.sha256(data).hexdigest(),
+                                   'executable': bool(path.stat().st_mode & 0o111)}
+            else:
+                snapshots[name] = None
+        existing = [n for n in snapshots if git(repo, 'ls-files', '--', n).strip()]
+        patch = git(repo, 'diff', '--binary', 'HEAD', '--', *existing) if existing else b''
+        for name in snapshots:
+            if name not in existing and snapshots[name] is not None:
+                result = subprocess.run(['git', 'diff', '--no-index', '--binary', '--', '/dev/null', name],
+                                        cwd=repo, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                if result.returncode not in (0, 1):
+                    raise RuntimeError(result.stderr.decode())
+                patch += result.stdout
+        patchname = 'sources/' + entry['fork_url'].rsplit('/', 1)[-1].removesuffix('.git') + '.patch'
+        payload[patchname] = patch
+        records.append({'path': entry['path'], 'base_commit': head, 'fork_url': entry['fork_url'],
+                        'patch': patchname, 'patch_sha256': hashlib.sha256(patch).hexdigest(), 'files': snapshots})
+    for relative in reports:
+        path = beneath(workspace, relative)
+        if path.suffix not in ('.json', '.log', '.txt', '.md') or not path.is_file() or path.is_symlink():
+            raise ValueError('Evidence must be an explicitly selected text report/log: ' + relative)
+        data = path.read_bytes()
+        data.decode('utf-8')
+        if b'\0' in data:
+            raise ValueError('Binary evidence refused: ' + relative)
+        payload['evidence/' + relative] = data
+    manifest = {'schema': 1, 'checked_at': datetime.now(timezone.utc).isoformat(),
+                'milestone': PIN['workspace'], 'repositories': records,
+                'files': {n: hashlib.sha256(d).hexdigest() for n, d in payload.items()},
+                'published': False, 'runtime_validated': False,
+                'notes': 'Review explicit reports for credentials before publishing; export itself makes no test-success claim.'}
+    destination.mkdir(parents=True)
+    for name, data in payload.items():
+        path = destination / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+    (destination / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+    emit({'destination': str(destination), 'source_repositories': len(records), 'files': len(payload),
+          'published': False, 'manifest': str(destination / 'manifest.json')})
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--workspace', type=Path, default=DEFAULT_WORKSPACE, help='Workspace with scripts/, vendor/ and runtime/')
+    sub = parser.add_subparsers(dest='action', required=True)
+    sub.add_parser('doctor', help='Read-only host toolchain, source lock and runtime input inventory')
+    source = sub.add_parser('sources', help='Verify/restore locked sources; never reset developer edits')
+    source.add_argument('operation', choices=['verify', 'restore'])
+    source.add_argument('--clone', action='store_true', help='Fetch missing upstream repositories/submodules during restore')
+    source.add_argument('--plan', action='store_true')
+    checkout = sub.add_parser('checkout', help='Create a fresh workspace at the pinned GitHub milestone')
+    checkout.add_argument('destination', type=Path)
+    checkout.add_argument('--plan', action='store_true')
+    build = sub.add_parser('build', help='Build a component into private runtime/developer output')
+    build.add_argument('module', choices=['journal', 'server', 'fsevents', 'kernel'])
+    build.add_argument('--output-dir')
+    build.add_argument('--jobs', type=int, default=8)
+    build.add_argument('--plan', action='store_true')
+    test = sub.add_parser('test', help='Run a selected regression; Darling sessions use existing workspace locking')
+    test.add_argument('module', choices=['journal', *REGRESSIONS])
+    test.add_argument('--output-dir')
+    test.add_argument('--plan', action='store_true')
+    shell = sub.add_parser('shell', help='Enter a host developer shell with pinned tool names; no Darling session')
+    shell.add_argument('--plan', action='store_true')
+    shell.add_argument('command', nargs=argparse.REMAINDER)
+    evidence = sub.add_parser('evidence', help='Export text source patches and explicit test evidence for milestone review')
+    evidence.add_argument('destination', type=Path)
+    evidence.add_argument('--report', action='append', default=[])
+    evidence.add_argument('--source', action='append', default=[], help='Include an additional, explicitly selected untracked source file')
+    args = parser.parse_args()
+    workspace = args.workspace.expanduser().resolve()
+    if args.action == 'doctor':
+        result = doctor(workspace)
+        emit(result)
+        return 0 if result['host']['supported'] and result['tools']['git']['path'] and result['tools']['python3']['path'] else 1
+    if args.action == 'sources':
+        if args.operation == 'verify':
+            result = source_status(workspace)
+            emit(result)
+            return 0 if result['exact_checkpoint'] else 1
+        cp = checkpoint_root(workspace)
+        if cp != workspace / 'checkpoint':
+            raise ValueError('Restore only in a real milestone workspace with checkpoint/; use checkout to create one. Historical capsules are read-only.')
+        for name in ('source-manifest.json', 'restore-sources.py'):
+            if sha(cp / name) != PIN['checkpoint'][name]:
+                raise ValueError('Pinned checkpoint checksum mismatch: ' + name)
+        command = [sys.executable, str(cp / 'restore-sources.py')]
+        if args.clone:
+            command.append('--clone')
+        run_commands([command], workspace, args.plan)
+    elif args.action == 'checkout':
+        target = args.destination.expanduser().resolve()
+        if target.exists():
+            raise ValueError('Checkout destination must not exist: ' + str(target))
+        commands = [['git', 'clone', '--no-checkout', '--filter=blob:none', PIN['workspace']['repository'], str(target)],
+                    ['git', '-C', str(target), 'checkout', '--detach', PIN['workspace']['commit']]]
+        # A checkout creates its workspace; the selected --workspace may not exist yet.
+        run_commands(commands, workspace, args.plan, cwd=HERE)
+        if not args.plan:
+            cp = target / 'checkpoint'
+            for name, expected in PIN['checkpoint'].items():
+                if sha(cp / name) != expected:
+                    raise ValueError('Downloaded checkpoint checksum mismatch: ' + name)
+    elif args.action in ('build', 'test'):
+        if args.action == 'build' or args.module == 'journal':
+            if getattr(args, 'jobs', 8) < 1:
+                raise ValueError('--jobs must be positive')
+            out = output_dir(workspace, args.module, args.output_dir, not args.plan)
+            commands = build_commands(workspace, args.module, out, getattr(args, 'jobs', 8))
+            if args.action == 'test':
+                commands.append([str(out / 'journal-test')])
+            run_commands(commands, workspace, args.plan, out)
+            if not args.plan and args.module in ('journal', 'server'):
+                binary = out / ('journal-test' if args.module == 'journal' else 'darlingserver/darlingserver')
+                record = {'schema': 1, 'checked_at': datetime.now(timezone.utc).isoformat(),
+                          'module': args.module, 'commands': commands,
+                          'binary': str(binary.relative_to(workspace)), 'binary_sha256': sha(binary),
+                          'milestone': PIN['workspace'], 'default_runtime_changed': False,
+                          'host_regression_executed': args.action == 'test',
+                          'darling_runtime_execution_verified': False}
+                (out / 'build.json').write_text(json.dumps(record, indent=2) + '\n')
+        else:
+            run_commands([[sys.executable, *REGRESSIONS[args.module]]], workspace, args.plan)
+    elif args.action == 'shell':
+        env = developer_env(workspace)
+        for name in list(env):
+            if name.startswith('DYLD_') or name.startswith('LINUXCODE_'):
+                env.pop(name)
+        env.update(LINUXCODE_DEV_WORKSPACE=str(workspace), CC='clang-19', CXX='clang++-19')
+        command = args.command
+        if command and command[0] == '--':
+            command = command[1:]
+        command = command or ['/bin/bash', '--noprofile', '--norc']
+        if args.plan:
+            emit({'workspace': str(workspace), 'command': command,
+                  'environment': {'CC': env['CC'], 'CXX': env['CXX'], 'LINUXCODE_DEV_WORKSPACE': str(workspace)},
+                  'clears': ['DYLD_*', 'LINUXCODE_* runtime selectors'], 'host_shell': True})
+        else:
+            return subprocess.call(command, cwd=workspace, env=env)
+    elif args.action == 'evidence':
+        export_evidence(workspace, args.destination, args.report, args.source)
+    return 0
+
+
+if __name__ == '__main__':
+    try:
+        raise SystemExit(main())
+    except (OSError, ValueError, RuntimeError, subprocess.CalledProcessError) as error:
+        print('linuxcode-dev: ' + str(error), file=sys.stderr)
+        raise SystemExit(1)

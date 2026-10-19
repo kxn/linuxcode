@@ -1,0 +1,21 @@
+# Debian 13 amd64: host source build and inspection tools.
+# The developer CLI never installs these itself. Rootfs/XIP setup is handled by
+# the integration CLI; this list is not a complete Darling GUI rebuild image.
+build-essential
+cmake
+ninja-build
+clang-19
+lld-19
+llvm-19
+bison
+flex
+m4
+pkg-config
+git
+python3
+python3-venv
+ca-certificates
+file
+# Optional Linux zsign backend build dependencies:
+libssl-dev
+zlib1g-dev

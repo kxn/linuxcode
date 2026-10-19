@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "scope": "Distribution installer plus existing milestone candidate, not a fully cold-built CI environment.",
+  "standalone_repository": "https://github.com/kxn/linuxcode",
+  "validated_workspace_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+  "host_doctor": {
+    "host": "Linux-6.12.111+deb13-amd64-x86_64-with-glibc2.41",
+    "architecture": "x86_64",
+    "python": "3.13.5",
+    "missing_commands": [],
+    "user_namespace_available": true,
+    "user_namespace_error": null,
+    "haswell_cpu_flags": true,
+    "free_gib": 1405.4,
+    "workspace": "/home/dl/.local/share/linuxcode/workspace",
+    "full_candidate_cold_install_ready": false,
+    "baseline_ready": true
+  },
+  "tests": {
+    "count": 10,
+    "passed": true,
+    "log": "logs/distribution-installer-tests.log",
+    "sha256": "f4ce4c86ac97a611316d496f46d1775a2f60e83e439b9de7d780f1346ffadfee"
+  },
+  "independent_repository_fetch": {
+    "url": "https://github.com/kxn/linuxcode.git",
+    "strict_manifest_files": 1081,
+    "verified": true,
+    "log": "logs/distribution-final-tag-fetch.log",
+    "log_sha256": "ef1c0ddf052cec23782dbdb90e863cf1c9de3f0d92350a5fcb37cc893f2b8775"
+  },
+  "xip_install": {
+    "report": "artifacts/distribution-xip-r1-install-verification.json",
+    "report_sha256": "9ff157f9bc0be29b4b58513800a8851fa6419f09116cd03ebdce3a3a0ee6ad98",
+    "fresh_destination": true,
+    "original_xip_sha256_verified": true,
+    "tool_and_sdk_bytes_verified": true,
+    "idempotent_repeat_verified": true,
+    "darling_executed": false,
+    "sudo_bootstrap_executed": false,
+    "xcode_select_deferred": true
+  },
+  "launcher_version": {
+    "result": {
+      "native_exit_status": 0,
+      "outer_exit_status": 0,
+      "exit_status": 0,
+      "full_ci_ready": false,
+      "log_sha256": "8da9c8f110f695dd10da2cd63bb450a2d2391a8484036cab7abe9f0770c4c7ed"
+    },
+    "version": "26.6",
+    "build": "17F113",
+    "invocation": "runtime/linuxcode-cli/20261019T124140-ca0b999d"
+  },
+  "launcher_ios_new_derived_data": {
+    "result": {
+      "native_exit_status": 0,
+      "outer_exit_status": 0,
+      "exit_status": 0,
+      "full_ci_ready": false,
+      "log_sha256": "e87f097490f73fd3aae1e3ba1995aa471d5c07aa604cbde34e2d774132dcb25b"
+    },
+    "build_succeeded": true,
+    "actual_compile_c": true,
+    "actual_libtool": true,
+    "actual_link": true,
+    "invocation": "runtime/linuxcode-cli/20261019T124236-b142c0e5",
+    "signing_enabled": false,
+    "engine_exported_project": false,
+    "product_independently_verified": true,
+    "product_check": {
+      "checked_at": "2026-10-19T04:48:25.945385+00:00",
+      "verified": true,
+      "platform": "iPhoneOS",
+      "architecture": "arm64",
+      "bundle_identifier": "org.linuxcode.iOSCocoaPodsSmoke",
+      "minimum_OS": "15.0",
+      "build_version": [
+        2,
+        983040,
+        1705216
+      ],
+      "real_Pod_archive_member": "LocalMath.o",
+      "real_Pod_symbol_linked": "_local_add",
+      "UIKit_entry_import": "_UIApplicationMain",
+      "files": {
+        "runtime/distribution-test/DerivedData/Build/Products/Debug-iphoneos/iOSCocoaPodsSmoke.app/iOSCocoaPodsSmoke": "cefcca876c4b92d4e8bbe738dbf2fa9d247e05c4f42559bfe76f1eba92e35791",
+        "runtime/distribution-test/DerivedData/Build/Products/Debug-iphoneos/LocalMath/libLocalMath.a": "416fcba491408611d4df210f493b62a3e7d6f738930d2cec428596fa92ee4059",
+        "runtime/distribution-test/DerivedData/Build/Products/Debug-iphoneos/iOSCocoaPodsSmoke.app/Info.plist": "5589c41e4525860b72f98279cc1dd767db90897ee89a9a18682c0c4910d898d8",
+        "runtime/distribution-test/DerivedData/Build/Products/Debug-iphoneos/iOSCocoaPodsSmoke.app/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+        "fixtures/iOSCocoaPodsSmoke/main.m": "601bafb78cf8834705832e661ce7487e2e9de878b981f2e6d331d55d79670dcf",
+        "fixtures/iOSCocoaPodsSmoke/LocalMath/LocalMath.c": "6aa31024edb8294b31add77a5d8d39e2c6189e93ad70d59f72a6fbf4453fe7c2"
+      },
+      "device_execution_verified": false,
+      "signing_verified": false,
+      "engine_generated_project": false
+    }
+  },
+  "cold_install_gaps": [
+    "Full sudo/bootstrap sequence in a fresh host has not been rerun in this distribution test.",
+    "Complete clean dependency graph for the successful compatibility candidate remains unimplemented.",
+    "XIP alone does not contain the macOS reference frameworks used by the milestone.",
+    "Strict CoreServices policy, Unity/UE resources/build phases, trusted signing, archive/export remain incomplete."
+  ],
+  "code_frozen_files": {
+    ".gitignore": "470fb149ab4c82812332cb729e6b6fc2a6b4c7beae1729e87de45761491e9574",
+    "LICENSE": "46fe3b38b53a7ad193b9981b7dcb13bfe8feb650f03c1c180f4c9f38d11e82e3",
+    "README.md": "124002506c578cab80a3d6921040b1e6e34daf9b6005fbc5ccdee1b2cda6c09d",
+    "config/dependencies.lock.json": "6f965500bfd64d9204469af3edd114520bc9de37d8b185405f95d076bf893b33",
+    "config/runtime-recipe.json": "cf8d55a78889624b6bea344c1bc176e4fcc1967e49577845f5bff451a5e0b5bf",
+    "dev/README.md": "a2acbc7a1cf82592785a7e501ca1ce313ff42587d9b886d24e7acd39a47fc825",
+    "dev/debian-packages.txt": "5e102cb312075cb439b424962218f9608b400e7e4382e95dd715a3623b757c52",
+    "dev/linuxcode-dev": "a73a2d7ba918f58c4de66ef95a6a6bb23a8be684c6704e713b70c682139b1f99",
+    "dev/locks/developer.lock.json": "e6d961eb925c594efd0b23976df76e9ea449d0957b338a484bc3a0b406916662",
+    "dev/locks/source-manifest.json": "8f4f6954c146c5be4b7915d878377c9bac2bf0d2681df47f1ad4aa08937f823a",
+    "docs/install.md": "ec21d1bbbb0caf14cf8617bae0b0ce55f91fb47823cb1c16917033b49643f20a",
+    "docs/runtime-inputs.md": "aafbfc06fbd6adcb0edbb63f6cd5c07a7482788d5724dae3fcaa77cc37ba2c77",
+    "linuxcode/__init__.py": "74e8679ccc94d0e0ccfe4c2c17ac9f969ec29dafe1096a23bdb57ac0bcd9534d",
+    "linuxcode/cli.py": "db3dee00301f080c329b9cddd241f5c18f6ef8965d5c9cd7748ed844c34c20ea",
+    "linuxcode.py": "ad3b0f4d94d5bcf0fd4374fc002e77b153baa0b38c526a5ff933c67059c156e0",
+    "tests/test_installer.py": "ddc366c283c0bc7c95d8412034f45eedde29ea0c952fbb759d45ec59fe51146b"
+  },
+  "workspace_tag": "runtime-2026.10.19",
+  "commit_identity": "Comman Kang <kangxn@gmail.com>",
+  "github_account": "kxn",
+  "developer_environment": {
+    "validated_checks": 20,
+    "source_repositories": 17,
+    "modified_source_files": 247,
+    "journal_ASan_UBSan_checks": 6945,
+    "complete_private_server_build": true,
+    "complete_FSEvents_framework_source_build": true,
+    "original_FSEvents_exports_preserved": 29,
+    "source_patches_apply_to_all_17_bases": true,
+    "default_runtime_promoted": false,
+    "source_bytes_after_author_correction_identical": true
+  }
+}

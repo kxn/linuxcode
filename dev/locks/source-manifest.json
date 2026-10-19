@@ -1,0 +1,1206 @@
+{
+  "schema": 1,
+  "owner": "kxn",
+  "branch": "linuxcode/xcode-x86_64",
+  "checkpoint_date": "2026-10-19",
+  "repositories": [
+    {
+      "path": "vendor/darling/src/external/IOKitUser",
+      "upstream_url": "https://github.com/darlinghq/darling-iokituser.git",
+      "base_commit": "534684e6748dffbd875c6cd1942477a52b66a077",
+      "fork_url": "https://github.com/kxn/darling-iokituser.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "f9f511006d51695dfc451d02d02065f2839bae9d",
+      "patch": "checkpoint/sources/darling-iokituser.patch",
+      "patch_sha256": "c828687176f1110647e39ef82f0a1f040306c314a2aff7ee5a059e5339a16a40",
+      "files": {
+        "CMakeLists.txt": {
+          "sha256": "9aa24bee20d6c099325769014d906c0c549bc4d27927e482607a71d41c0dce6e",
+          "executable": false
+        },
+        "IOKitLib.c": {
+          "sha256": "6fa98aa9a848ff761f142feccfb633ec0f5e20d6799c0d943e1fa7800d5dd626",
+          "executable": false
+        },
+        "IOKitLib.h": {
+          "sha256": "69a512454bcf59dd7539eb6a1fca419697356d24404a0cddc24fdc6b08581c64",
+          "executable": false
+        },
+        "IOMainPort.c": {
+          "sha256": "fa4dd060acb17819ca1056480d9bfa157def71cf2a2985116b10dfb1014e5472",
+          "executable": false
+        }
+      },
+      "previous_saved_commit": "7618db68f9243c8a2bc7fdb5298e683e99a45a55"
+    },
+    {
+      "path": "vendor/darling/src/external/cocotron",
+      "upstream_url": "https://github.com/darlinghq/darling-cocotron.git",
+      "base_commit": "c8d38d16a9f613d300157bebbab2b9501bc0c274",
+      "fork_url": "https://github.com/kxn/darling-cocotron.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "fce79b4830179ee53452516adc99c27bdbf63ab2",
+      "patch": "checkpoint/sources/darling-cocotron.patch",
+      "patch_sha256": "e1cc62c675e93fa2b326f59fc253a54b6fb037d01d0ff8b6c6807cb3aeea2413",
+      "files": {
+        "CoreGraphics/CGContextNativeLayer.m": {
+          "sha256": "21c627c95d2fddcac24c28644cae0d844146a3cd8e966ada6d41db1b825ceca2",
+          "executable": false
+        },
+        "CoreGraphics/CGFloat.c": {
+          "sha256": "9168a0063ee099f61d47ec95d28a2467f19acee9071031baecf4bf2691a776d6",
+          "executable": false
+        },
+        "CoreGraphics/CGImageIOConstants.c": {
+          "sha256": "a2fa35046173ecca1c07845aaeff1ca8bde85a66d5a95e31ff360d979bcb474e",
+          "executable": false
+        },
+        "CoreGraphics/CGSAccelerator.c": {
+          "sha256": "fdf66d9caaef2711ae33f0c23c3936884d9ae27e8808909aacfc9b8804e37151",
+          "executable": false
+        },
+        "CoreGraphics/CMakeLists.txt": {
+          "sha256": "b83835dbdd4dd70ff4015e09bda3e9e0a661f465b041a1f29f430c86001aa1d9",
+          "executable": false
+        },
+        "CoreGraphics/include/CoreGraphics/CoreGraphicsPrivate.h": {
+          "sha256": "d9ed954196d7faa9cd85e680bff964d500d1fcdcb30252aa2566ba79dc62191f",
+          "executable": false
+        },
+        "QuartzCore/CALayerContextNative.m": {
+          "sha256": "90fed724eeb1f7ef5ae9731ba724259cd876536374c260836f3c53747a81d410",
+          "executable": false
+        },
+        "QuartzCore/CARenderServer.m": {
+          "sha256": "27b095c63159be12b1c224a58440508abda814970d93902a4a7d3b11afa508f7",
+          "executable": false
+        },
+        "QuartzCore/CMakeLists.txt": {
+          "sha256": "8fd1e32b7a0cf3197c6ded31b8309bc4ffd4cbca212001a6907e2bd54abd6cbf",
+          "executable": false
+        },
+        "QuartzCore/include/QuartzCore/CALayerContext.h": {
+          "sha256": "7451e690f069a6d9ccf989f032df7cbf0bf896f20536edadc3e81433f31d1b64",
+          "executable": false
+        },
+        "QuartzCore/private-include/QuartzCore/CARenderServer.h": {
+          "sha256": "cc1d315fb121266f8d8dc84e156e042749ffc617a82efb562a95e86aa327eb60",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/corecrypto",
+      "upstream_url": "https://github.com/darlinghq/darling-corecrypto.git",
+      "base_commit": "875f1cd9e75b0029d872b88ce8a77da276c00c84",
+      "fork_url": "https://github.com/kxn/darling-corecrypto.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "a38dc4eaf72b52828adba9f6ac9bd2b6ed456328",
+      "patch": "checkpoint/sources/darling-corecrypto.patch",
+      "patch_sha256": "59ffd7a03e7bbc978f450eac16219d4b3731124c2fb43db152ff580f60082df7",
+      "files": {
+        "CMakeLists.txt": {
+          "sha256": "18137cddebf06769337c53f56d6fea66b6ee89be16188764be570a310b336dfa",
+          "executable": false
+        },
+        "include/corecrypto/ccec25519.h": {
+          "sha256": "3986e9d784c6129cb47cd816dbc29def51d71a4dac7b7addfae5329ccdd7f834",
+          "executable": false
+        },
+        "include/corecrypto/ccmode_factory.h": {
+          "sha256": "8a1f21bd204bb665f54c437ac52b6695d8c1d4a941fc0d952d4a812d91debc9f",
+          "executable": false
+        },
+        "include/corecrypto/ccsha3.h": {
+          "sha256": "b4cbdb8f2fbe2e1c4074c8b457f2d91a542a3cc58052d100a32ea8b8279ff135",
+          "executable": false
+        },
+        "scripts/exported-symbols.exp": {
+          "sha256": "0cdf948a70b01d561c56be6ad100ae85794a19452d36be45d2e284bf97908dfb",
+          "executable": false
+        },
+        "src/ccctr.c": {
+          "sha256": "070dc53a7d5fef9b2439686d01295525c00db7d1f9fdaefad3aebde3e90875ca",
+          "executable": false
+        },
+        "src/ccec25519.c": {
+          "sha256": "cb550dfae25c1042f75fa49487b9152b32659ac4c6ee75b0434d4cae91658463",
+          "executable": false
+        },
+        "src/cchkdf.c": {
+          "sha256": "7e5828ca5e7f5666c2443eb3567a8ccb1ce841a042ff4b8c7d8a2d11a9e8783b",
+          "executable": false
+        },
+        "src/cchmac.c": {
+          "sha256": "3b65d4b9b7338554af9d7f747343a5d1935a015cda41754495ec19fd71455391",
+          "executable": false
+        },
+        "src/ccsha3.c": {
+          "sha256": "59ab9fe9767b96ae96ac03b57c6f04619ce6f4a34a4017ae939fd3694d217451",
+          "executable": false
+        }
+      },
+      "previous_saved_commit": "d81171be7ec7b9d5e0b5ad81b7f9fb2e43fffd7e"
+    },
+    {
+      "path": "vendor/darling/src/external/dyld",
+      "upstream_url": "https://github.com/darlinghq/darling-dyld.git",
+      "base_commit": "63f667cf06d7ed59553adebb0c8d70a117135ac9",
+      "fork_url": "https://github.com/kxn/darling-dyld.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "ad1e8b5e66f9f48ca2fb880176c02745f8a20c0d",
+      "patch": "checkpoint/sources/darling-dyld.patch",
+      "patch_sha256": "6882ca713cb5bb4e864e256c23f4c2df9c4f9d49eeb7e7793e2c01c9ab650a30",
+      "files": {
+        "CMakeLists.txt": {
+          "sha256": "939a60b639e665908bf67a05a89ec49c7866a676bab37c3ae028f03880ead86f",
+          "executable": false
+        },
+        "gen/usr/local/include/mach-o/dyld_priv.h": {
+          "sha256": "cd3538d61b5a25e2973d569a06b0b3cdcf10fceeaab2cd089eb57cd0bdc81767",
+          "executable": false
+        },
+        "include/mach-o/utils.h": {
+          "sha256": "0e79321291a1de35859123f4383d9995ff69746fad6a7fb6c3661df1a04c9356",
+          "executable": false
+        },
+        "src/dyldAPIsInLibSystem.cpp": {
+          "sha256": "38b2c4b2c07994d7a6e2953fe64af2e77cbe9c2433458656a96fd5f9b4c41831",
+          "executable": false
+        },
+        "src/runnable_archs.c": {
+          "sha256": "44c559bf143aae5d83c6b08c772afdc626b3f27852939df7c0d1cb3030c7ffd4",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/iokitd",
+      "upstream_url": "https://github.com/darlinghq/darling-iokitd.git",
+      "base_commit": "5549ac4cd2db923c256f016a1381b3bfb716730a",
+      "fork_url": "https://github.com/kxn/darling-iokitd.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "a2a34e0d78ee8590406398cac7c5ba4bf45233d3",
+      "patch": "checkpoint/sources/darling-iokitd.patch",
+      "patch_sha256": "5b0d8e9d60cf51c3c3edda98b540cf1ceaf86c652c5a2a9d0001470dccdcd62a",
+      "files": {
+        "CMakeLists.txt": {
+          "sha256": "45e94628eac4dc07219f491468ab9bbf2aed68c17c7bd449ac78d9c70fdecfc8",
+          "executable": false
+        },
+        "src/IOIterator.cpp": {
+          "sha256": "a0dd3938c74dc253c5a7b7d7e1ed0622b7e400584f8afa70b36c0162e7a56004",
+          "executable": false
+        },
+        "src/IOIterator.h": {
+          "sha256": "3df19106603bbeae57d672c1dc4e7ad1db9bba80510ba1d7352cbd3c540340a9",
+          "executable": false
+        },
+        "src/IOMatchingNotification.h": {
+          "sha256": "3775710a7b404ec36500fc925da6b07f52442446fbe770bd692c9c30cf124729",
+          "executable": false
+        },
+        "src/IOMatchingNotification.mm": {
+          "sha256": "379bf5fef60c5e1b3954f44c6af609d0155cc39291ef97b4eee72935a0abb5c1",
+          "executable": false
+        },
+        "src/IOObject.cpp": {
+          "sha256": "e4fb0a1619b4024eb28457c2291b0d11d82a88712d013291755a61e1937ca0ac",
+          "executable": false
+        },
+        "src/IOObject.h": {
+          "sha256": "e4966fc04e0f4b604095977ca5967c48d9aaf2bcef1a49916074a9a2b5f3c8e9",
+          "executable": false
+        },
+        "src/IOPowerRootDomain.h": {
+          "sha256": "e13303e89293d7c5940b05393e76677cb05a7601402b2b8fa5513809b16593df",
+          "executable": false
+        },
+        "src/IOPowerRootDomain.mm": {
+          "sha256": "1593f7392e565c3929361546acd7f4acb635d7f32b91bd3e152e5733eaeb4505",
+          "executable": false
+        },
+        "src/IORegistryEntry.mm": {
+          "sha256": "2908895c91c287190bbb9b546e59bda933390c500cab69324b6c7788c0ee94e1",
+          "executable": false
+        },
+        "src/IOService.h": {
+          "sha256": "fa6773744e8689bbe6b6f41b659f7b0f64c115dae6bdf11194430f9fab39c09d",
+          "executable": false
+        },
+        "src/IOService.mm": {
+          "sha256": "0246d7ad8924f4a78e100a4a3a4d62584c6d81634fddef138416ed900905283b",
+          "executable": false
+        },
+        "src/LinuxResumeClock.h": {
+          "sha256": "539e15cf30cb3a78013e93f362014034765c9c3bcaa63f061bb43ddf2f68517f",
+          "executable": false
+        },
+        "src/ServiceRegistry.h": {
+          "sha256": "918c83a5976a1414d3c77939aafc2763a4131e7e39f28fa0b7935198f1218a95",
+          "executable": false
+        },
+        "src/ServiceRegistry.mm": {
+          "sha256": "ab9c045231ba044ebc52af949b7be9367b8a0a2318857f462e28aefad607eed2",
+          "executable": false
+        },
+        "src/iokitd.h": {
+          "sha256": "37b774430e5e5a12e1770572f37d02734a00d133d8c7bafe36f5ff97bfed7538",
+          "executable": false
+        },
+        "src/main.mm": {
+          "sha256": "24defb3ac0058e3f156054b00811091959830f3d3dfed4c0f699bfa7e9568d4d",
+          "executable": false
+        },
+        "src/stubs.c": {
+          "sha256": "1a456acebfaf4de27ac58eedfd37efde8aabc6811815e03db52b92ee866b55df",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/libcxx",
+      "upstream_url": "https://github.com/darlinghq/darling-libcxx.git",
+      "base_commit": "c47677d3ba33bdabbfb07e75f531831579355a2d",
+      "fork_url": "https://github.com/kxn/darling-libcxx.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "aeca3c36634a159e753a3f7235df48974258dd6d",
+      "patch": "checkpoint/sources/darling-libcxx.patch",
+      "patch_sha256": "3b4947b60d00f4d6947f1814d51a5bfeb41fb5f7e14ab23aa0dde5337c3c4c19",
+      "files": {
+        "src/CMakeLists.txt": {
+          "sha256": "d202e48efd9c17d5cced3ed3f494815b2902123ae3be9bad755ad0b5dab08e91",
+          "executable": false
+        },
+        "src/expected_exception.cpp": {
+          "sha256": "bc3cec04876f481d0639dc69b02117b61ac0e3f9ed2858a632f014cb958b7bd6",
+          "executable": false
+        },
+        "src/include/expected_exception.h": {
+          "sha256": "937818c3e845041c5e85f541118e9d8430ae9b20b2bd5a5f71e7acf8ec5f4ecd",
+          "executable": false
+        },
+        "src/typed_new_delete.cpp": {
+          "sha256": "82746b4ea6b6120bac7804afa178400143d96712bed29bd62441e41db51849a1",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/libdispatch",
+      "upstream_url": "https://github.com/darlinghq/darling-libdispatch.git",
+      "base_commit": "380f03c180b80d940134fb35783ddc714784a53a",
+      "fork_url": "https://github.com/kxn/darling-libdispatch.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "d08d047fa9f843d0293b685396d51c798d300890",
+      "patch": "checkpoint/sources/darling-libdispatch.patch",
+      "patch_sha256": "39ea16aadc7bb66182fb458222862fe0884f4c617e09469534463cf3080a141e",
+      "files": {
+        "src/queue.c": {
+          "sha256": "697d19bf4039214564accf500aff853513ff25046558052286df82e98ca356d0",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/libmalloc",
+      "upstream_url": "https://github.com/darlinghq/darling-libmalloc.git",
+      "base_commit": "a57991e2651226a675654bd96e5d9ab6bec288c5",
+      "fork_url": "https://github.com/kxn/darling-libmalloc.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "a4c4c8bd247f1903fbf41c720ee2184bae27775b",
+      "patch": "checkpoint/sources/darling-libmalloc.patch",
+      "patch_sha256": "a70c92b0db13dc918b9291e1877c64f968c33ff88e4ab9f50444f78bc5a2a266",
+      "files": {
+        "src/malloc_type_stubs.c": {
+          "sha256": "9af0de0fc3a651c1ff9cb4dd58df2f6e116b2fb927654b76c0cf76d4df50174a",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/libnotify",
+      "upstream_url": "https://github.com/darlinghq/darling-Libnotify.git",
+      "base_commit": "98156d3f847a3ced6c5f52c12a889047bc4f9b20",
+      "fork_url": "https://github.com/kxn/darling-Libnotify.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "e58a7c516cac6d15a06640c810ea1463da047c5b",
+      "patch": "checkpoint/sources/darling-Libnotify.patch",
+      "patch_sha256": "dedc1ee86dd91ad9595bed031dba559f4848aa06c73e9b6c7a41a21011f691ba",
+      "files": {
+        "notifyd/CMakeLists.txt": {
+          "sha256": "5c13b0e9de8ae5e8d6758de224cafcdc6329f2761c7d2dac6b8ffbc92f6dab51",
+          "executable": false
+        },
+        "notifyd/mountwatch.c": {
+          "sha256": "542722493f6349206addeb783c69a8c3d983dda1d2e7878bf16c49eb4f3b3dec",
+          "executable": false
+        },
+        "notifyd/mountwatch_state.h": {
+          "sha256": "99b3894eaf665a951598b8bb5b1e005da67027c52901dd9aa4f3cd6d6aed413c",
+          "executable": false
+        },
+        "notifyd/notifyd.c": {
+          "sha256": "0989a7106074b45a16d70cc58b23735a4d37b1c2802a7d4a8edbb2c621c22b1a",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/libplatform",
+      "upstream_url": "https://github.com/darlinghq/darling-libplatform.git",
+      "base_commit": "5a3e5b529d25c70257dcfa97e94f1826e71e9f40",
+      "fork_url": "https://github.com/kxn/darling-libplatform.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "ba8d4994fa83502112c20a46076bd8a9e029a9d0",
+      "patch": "checkpoint/sources/darling-libplatform.patch",
+      "patch_sha256": "9573d8b06aac808a295637ffe9f84de0e32a1b1245613fca63afd9637dc46fae",
+      "files": {
+        "private/os/log_simple_private.h": {
+          "sha256": "578fd70953425185daf4c43713215002acdb2e53f368ff4e9d50bfb7e619a4a8",
+          "executable": false
+        },
+        "private/os/log_simple_private_impl.h": {
+          "sha256": "0e14c20619eae14a955fd48a1b87a9bd03a8a526518bc6ca1f147aed8f742ae9",
+          "executable": false
+        },
+        "src/simple/log_simple.c": {
+          "sha256": "6a12ca510b9bd218d6e3c1c4eb89532930e54ef9edb499c8a088437960a04e07",
+          "executable": false
+        },
+        "src/simple/log_simple_darling.h": {
+          "sha256": "56f02c0bbe7eda3a6e43583487b4039b8e96ab1328622e577daf83ade11eae95",
+          "executable": false
+        },
+        "src/simple/log_simple_transport.c": {
+          "sha256": "7a5e8ff45fd3f99415daadbb31861895aeefc7836ef3e110300a92914e545097",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/libtrace",
+      "upstream_url": "https://github.com/darlinghq/darling-libtrace.git",
+      "base_commit": "8cf07f02b15f7dca6436882a03678fff0392eaf6",
+      "fork_url": "https://github.com/kxn/darling-libtrace.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "594d30e0a1e923f5de3361fe6eb4e9d30467643a",
+      "patch": "checkpoint/sources/darling-libtrace.patch",
+      "patch_sha256": "921792540c6f30bc222116219cb5410785c0a9a291f0672b997400e17bb8bd64",
+      "files": {
+        "CMakeLists.txt": {
+          "sha256": "9931301704d8a8c796ef90b99fdf2ecb34c5f508ebb2c6f36f1517537652fdd2",
+          "executable": false
+        },
+        "include/os/log_private.h": {
+          "sha256": "937d65fbc87af012c948f605116bd8840e9e501de31822aa292a3393ac8ea630",
+          "executable": false
+        },
+        "libsbuf/libsbuf.c": {
+          "sha256": "8007678dc66cfeab60375719df850c33c32177e4e5546ab6370f3a8582774e3b",
+          "executable": false
+        },
+        "libsystem_trace/log_hooks.m": {
+          "sha256": "04a45d34880c779c85ba0c1f5a4af00a51cad8103651057ff76c437adba44264",
+          "executable": false
+        },
+        "libsystem_trace/os_log.c": {
+          "sha256": "328885e28bdfd552ffef4cb2469db9028770dbd3d3f45c8bcb91292317ff7ae9",
+          "executable": false
+        },
+        "libsystem_trace/stubs.c": {
+          "sha256": "f8f1f0e42d40d14c156ebb4b3cb0f18bfc8edb1c66b810a08063e64678d4693a",
+          "executable": false
+        },
+        "libsystem_trace/unpack_buffer.m": {
+          "sha256": "1dc00cdbb8059815130ae1467460414aeafe3087a885b46683e3a05052875c69",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/libxpc",
+      "upstream_url": "https://github.com/darlinghq/darling-libxpc.git",
+      "base_commit": "394e033333d3c253a12f08a99090c113b0917d00",
+      "fork_url": "https://github.com/kxn/darling-libxpc.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "8a0cc03f897b70befa7900bdfe3bf39e4b131a97",
+      "patch": "checkpoint/sources/darling-libxpc.patch",
+      "patch_sha256": "37d58108f6221c6dffcb6f56e2817b66ee1f4d771268e790ba767b256eac1f72",
+      "files": {
+        "include/xpc/connection.h": {
+          "sha256": "204008f0c7e6210e67e42c65bf4d66692165cbb12cc3436d21107e48113f6356",
+          "executable": false
+        },
+        "include/xpc/private.h": {
+          "sha256": "39b6d49d63383b8d9ebcd812599a9263d6a1a355d2732a17d3150aa43868cd4d",
+          "executable": false
+        },
+        "include/xpc/private/launch_service_stats.h": {
+          "sha256": "f9f45305c12f2263d527bac663c5c5a0851e7abe999eb9d786e5dc3e9bb1a8a7",
+          "executable": false
+        },
+        "include/xpc/private/service.h": {
+          "sha256": "880f54bc91de8b41ae9d239fb00f5a983192c2c3430665fa5c100e597ac78022",
+          "executable": false
+        },
+        "include/xpc/xpc.h": {
+          "sha256": "1949febe35b431a13e87dd3d33b8050ab5a62c12d4ae75d55922ad633e126100",
+          "executable": false
+        },
+        "internal-include/xpc/objects/connection.h": {
+          "sha256": "7773c080e0a57650f9e649c5b63d029d4db991c6ea9526f0ac10b9911928e5c8",
+          "executable": false
+        },
+        "internal-include/xpc/objects/pipe.h": {
+          "sha256": "a57518e192be885ca751288e50a61cf56cfae76a45bab23382f45727d661930b",
+          "executable": false
+        },
+        "internal-include/xpc/objects/service.h": {
+          "sha256": "9d3a31439b07abdb1ec1c182982710dc31a503fdda9d94f4470e7abddd0c087f",
+          "executable": false
+        },
+        "internal-include/xpc/objects/shmem.h": {
+          "sha256": "bdf3724659ec1bd59d401df477d3031919cb6f050c653ff4c012e45079103d27",
+          "executable": false
+        },
+        "src/array.m": {
+          "sha256": "db07db2f99e68883090a0678a95add4971aa7a12fd66efe61c7bfc0b2204cede",
+          "executable": false
+        },
+        "src/connection.m": {
+          "sha256": "da323293651ddbe2c24c26ad0915488aedb186430bb3c9c86abacc696d942a27",
+          "executable": false
+        },
+        "src/launchd.m": {
+          "sha256": "463bab32ad0a01d2dee538126ec692be15f32d5ad69b14ca87f395ac41587003",
+          "executable": false
+        },
+        "src/pipe.m": {
+          "sha256": "4d4e08c91dd73cbe857b1b6bca51624de5324a607d6b8ac9d231dc093e9e167e",
+          "executable": false
+        },
+        "src/runtime.m": {
+          "sha256": "874faf2e85c87f86651d0def795ff43f8f3735e819b5d27b186ff266e85c3d0b",
+          "executable": false
+        },
+        "src/serialization.m": {
+          "sha256": "d940997efe35a0f49767c83c03dc851965d6ed4252d19598ae09b0b228acbf1f",
+          "executable": false
+        },
+        "src/service.m": {
+          "sha256": "7b61c858b9558019d375bbfa610b635822dfa8a23bbe6e2e4f3b68526dd67567",
+          "executable": false
+        },
+        "src/shmem.m": {
+          "sha256": "7055b29cf0c81a56eff923285808186312681cd1508c17dac548ebfdf7efbd39",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/objc4",
+      "upstream_url": "https://github.com/darlinghq/darling-objc4.git",
+      "base_commit": "1a12df76d12bfc9fdfffadb290f7742763568765",
+      "fork_url": "https://github.com/kxn/darling-objc4.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "b631f54bb62f9479b7e3058ae923c69481806893",
+      "patch": "checkpoint/sources/darling-objc4.patch",
+      "patch_sha256": "283e93d0abdab92bc734010af148d2f800da6e23606cd5b15616572cd115f0b0",
+      "files": {
+        "runtime/NSObject.mm": {
+          "sha256": "6d6bacec18535f54351ec58236a40e148d90355ea9042354274f66eaab5e9de9",
+          "executable": false
+        },
+        "runtime/objc-object.h": {
+          "sha256": "9afd4947bd8bc0503f6b620c945b57b8f92ff46f0f2620191e0ddbddf3937a9c",
+          "executable": false
+        },
+        "runtime/objc-private.h": {
+          "sha256": "31b4b2b0faad247789aabb1c6210a5f1fc94bf36b7fb7e2e510cbf824fcd3da1",
+          "executable": false
+        },
+        "runtime/objc-sel.mm": {
+          "sha256": "b6251c2cfd53de194b0937240c8ecc863d6996d3e919a3f58793141be18b3617",
+          "executable": false
+        },
+        "runtime/objc.h": {
+          "sha256": "90e37892755a8b5f49e254b07d0e9e34193df3969ef2cf428e8aa1f4e9192342",
+          "executable": false
+        },
+        "unexported_symbols": {
+          "sha256": "4ff2dccdbb57503ce40c15a0ee42e08117304afc7eb7bbdffb154c22bdf6cfd8",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/security",
+      "upstream_url": "https://github.com/darlinghq/darling-security.git",
+      "base_commit": "3cfffcf2c5b5900169c964facdf42cc05c23005c",
+      "fork_url": "https://github.com/kxn/darling-security.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "9612bad213485de3b6f1e76365f4596382a82e57",
+      "patch": "checkpoint/sources/darling-security.patch",
+      "patch_sha256": "77e606ebe175fd82d98044d2c744235df92279f597272e4019a0c79cc9a23e49",
+      "files": {
+        "OSX/CMakeLists.txt": {
+          "sha256": "37355a8114b7477a7028561cb74e264bf274fdec350d4ec5b8fd7ad5dfe64b90",
+          "executable": false
+        },
+        "OSX/sec/Security/CMakeLists.txt": {
+          "sha256": "db1772a1fb2e00c8125cd24b5bc63604d311312f8d165f870eeefc75e6e67b01",
+          "executable": false
+        },
+        "OSX/sec/Security/SecCryptoKitConstants.c": {
+          "sha256": "99e419d242b323f633569973f704f22e93027a96e0203b1631aeeabc3f397b64",
+          "executable": false
+        },
+        "OSX/sec/Security/SecExports.exp-in": {
+          "sha256": "e5086a839133bcf5de0e9e1323dbc7979bc1c966058494aac439b5ac384105b7",
+          "executable": false
+        },
+        "OSX/sec/Security/SecItem.m": {
+          "sha256": "08476bb8957f4cd7ad0857776aa39ae7ce6dd53426abe1cde292d9b705726314",
+          "executable": false
+        },
+        "OSX/sec/Security/SecItemCloudRPC.h": {
+          "sha256": "16c3be7fbf90d93946ca18757577f09887a5ace566acde3992e1d7193fe02853",
+          "executable": false
+        },
+        "OSX/sec/Security/SecItemCloudRPC.m": {
+          "sha256": "d9d1b675ad909f39f407e957c09b632df4041e380e0f153dec20d4ba10f4e521",
+          "executable": false
+        },
+        "OSX/sec/Security/SecItemConstants.c": {
+          "sha256": "4a77fb868dfe00086556229c5388fb3094ec597d9c45a305becf72de2601214c",
+          "executable": false
+        },
+        "OSX/sec/Security/SecItemFetchOutOfBandValues.h": {
+          "sha256": "2f1b801a57ddf7c47b9b73c6131dce8b2c7dfa8ac2ad8ac0d0cdec36e0d16f3d",
+          "executable": false
+        },
+        "OSX/sec/Security/SecItemFetchOutOfBandValues.m": {
+          "sha256": "952a572af88fc877e10eb0d356958a6de8b3e8fceeed5d0f055cd8949c78c424",
+          "executable": false
+        },
+        "OSX/sec/Security/SecPolicyExternalDeveloper.c": {
+          "sha256": "8eaae7380c3555d2e56945f0b647a3b13d98876ba98414d13e0719d73b17ce9d",
+          "executable": false
+        },
+        "OSX/sec/ipc/client_endpoint.m": {
+          "sha256": "5243358bbd1e3fa0900cf2f02fc163397d6de8133036abbaedc0ade7171b1f9e",
+          "executable": false
+        },
+        "OSX/sec/ipc/securityd_client.h": {
+          "sha256": "9b9282411ae175e45d0a1f96e84b719f0df83b8b76eca0b7a1c27c10cff409a2",
+          "executable": false
+        },
+        "OSX/sec/ipc/server_xpc.m": {
+          "sha256": "836c65cd7c9559238dc66c7de9db39ef97968cb0d738416b0cc20a577495dcdb",
+          "executable": false
+        },
+        "Security.exp-in": {
+          "sha256": "3e93b57d5d377f074f1d7c84cc4c7cc0194ee23ab75dee0e01a16063ac6fa133",
+          "executable": false
+        },
+        "keychain/headers/SecItemPriv.h": {
+          "sha256": "52368ee126cf999181d9e440acb31ab2a86198a17b04367a92e385a15cc28ff3",
+          "executable": false
+        },
+        "trust/headers/SecPolicyPriv.h": {
+          "sha256": "56ae5b9e5c948f81ef68edce29b3cbc4f45fde6eb907bb9d388689d6920ca7ec",
+          "executable": false
+        }
+      }
+    },
+    {
+      "path": "vendor/darling/src/external/xnu",
+      "upstream_url": "https://github.com/darlinghq/darling-xnu.git",
+      "base_commit": "fa29287aa2f0115271e091f1031f53c9e024005d",
+      "fork_url": "https://github.com/kxn/darling-xnu.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "75eabd3bedadac9873f26002421787d685084d42",
+      "patch": "checkpoint/sources/darling-xnu.patch",
+      "patch_sha256": "c974c1d52ea2315e2e23408b3d048183d4591f67f423f53796d4b8cc37b2ec3c",
+      "files": {
+        "darling/src/libsystem_kernel/emulation/CMakeLists.txt": {
+          "sha256": "fd3f379a1bfc5c83c2292f18067da3c0bf54790ef3955f522e8ffab4822282cb",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/common/tsd.h": {
+          "sha256": "cd107db4a4ecd2639607d1943f5f7dc230603edcf3ae1427c80300d5942a407c",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/conversion/stat/common.h": {
+          "sha256": "22a21f887dd21345b4bdf740dbe365d15e8e5fe840d77198205428915c7acd43",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/conversion/stat/mount_flags.h": {
+          "sha256": "2ec20466186e6531eb320b827cab1419038534f50cc53406b0ba6fc104c84928",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/linux_premigration/vchroot_expand.h": {
+          "sha256": "4f25cbd169c2957eb2f232e8e36c41210ce6cdd045eb46feba03c5d1d5e2c924",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/misc/fsevents.h": {
+          "sha256": "2aca43084acbf9341202662e9b35718ad8e64504ab233a95cdab97ecbe26e379",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/misc/quarantine.h": {
+          "sha256": "ad2a1f4a68a02dd109352c12df5f38dfdd0dee18ddbc0be7d98c7851f26c394d",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/misc/sandbox_fs.h": {
+          "sha256": "92baeb89e2f279b42db596c3287dc2c973fba2d548fe0693212598d5d2a1f8da",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/stat/mounts.h": {
+          "sha256": "5efdf5cbb35cd07514999df8eeabe30224a23cecbc445526765371f211f2c37f",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/xattr/getattrlist_generic.c": {
+          "sha256": "fb3fb906889823e546a400bd53ee77801118fffdd0e5c5926c121ed0ab3b7077",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/xattr/metadata_linux.h": {
+          "sha256": "693f87bf153a3e03b74ca9b9d4e110ad4f5e07ef9f6aa0c5c8da3b948d4b1ecd",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/misc/mac_syscall.h": {
+          "sha256": "029a50ac026a4562c8bc698b1111b035fe748acd591520910d2d87910a127022",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/process/execve.h": {
+          "sha256": "5064f92c9f89f2a9d124e42909aea2ab3ad34071e7e07ef6839a6bd1fe588564",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/process/posix_spawn.h": {
+          "sha256": "c9f2a8ef4ee29236552695deda92b87dbe18011ef5036bb17a3e0c32816ce3ac",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/stat/quotactl.h": {
+          "sha256": "9f8317e524311b8fc30f58bef29fe5be4a9fea8aa3e40229f4ace68d35d4730f",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/xattr/getattrlistbulk.h": {
+          "sha256": "94b38c02c1d1aa17175912ecd44113fca8ce486c6422c7b4f6c19dca570a310d",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/conversion/stat/common.c": {
+          "sha256": "5fb4d8cf266446a342b998a7f672f916845caecda12484c8af4bfaa0fc1dce12",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/linux_premigration/signal/sigexc.c": {
+          "sha256": "a5beaa6b5756f67913a6f2c6a9bd548e5f45527fcd9721e7564190c607cd188c",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/linux_premigration/vchroot_userspace.c": {
+          "sha256": "74cd93a9df2fd77f1f3ee2576a45b6c38064aa9e42ba2655137b0a95e2265833",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/bsd_syscall_table.c": {
+          "sha256": "bf66ebf6630b2edc3293e6f74b69728cf9df2d641fffd69f2b48257d1135b1ba",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/helper/misc/fsevents.c": {
+          "sha256": "c999835bb9fddbd95df41373a52da3f4f3bf655de0d84bbb56f56182c5ecd547",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/helper/misc/quarantine.c": {
+          "sha256": "b7652eba9849b7ee38e23dab1faee78c724a5caf5f9ae036015fefa75dda40a7",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/helper/misc/sandbox_fs.c": {
+          "sha256": "39d30a1e3d1103528823b0530ca658e95fdf70f9b88b2b11a7523cbbb3b0fd73",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/bsdthread/bsdthread_register.c": {
+          "sha256": "baf911f927c1e4ab4deb9000bfacccca0940850b2d4c770495f0ed9895958a3c",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/fcntl/openat.c": {
+          "sha256": "3ee5e63588294f4233f3c3df672b72e6d4ea008c426aab8a2287357013b2e8ee",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/ioctl/ioctl.c": {
+          "sha256": "80cc504a18ced34774b1e58c97b61df3fc10fb71580d93cbecd721e35a04b3cf",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/abort_with_payload.c": {
+          "sha256": "5ffcf02c98fc226d92879e560525ec630938dd3efd2881ee43c739f91e34a2d7",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/iopolicysys.c": {
+          "sha256": "2c168de679908d72151ba95fe3edc9b412fb73dbb5f118f3774a921a2efe0ccb",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/mac_syscall.c": {
+          "sha256": "5f2d0c6ab9d1a1c24ed3e541c9119c6b396c5a7ee99c216958cb9dfdd358fb5d",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/proc_info.c": {
+          "sha256": "6dd22440c206be1e6434b828b64c9adf76f18d49c69978f86fdcb05878097f2c",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/execve.c": {
+          "sha256": "ff4bf4f48253fad95e060454efaf3d2cf749c1f1cef01f3f1c7e18406d581726",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/posix_spawn.c": {
+          "sha256": "e724e5500d1411743140106b4f7c97154e8c36e97a3e93d8d6d4ad890eba19b2",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/fstatat.c": {
+          "sha256": "687b9d05132e340b62706d659503c1327d18ac9bcc090aed590bdac0d0b99d7d",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/fstatfs.c": {
+          "sha256": "306c15bf0741737cb2c02f72492064d80295357b57c68b2b26b9bfb4e59e7b44",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/getfsstat.c": {
+          "sha256": "4282ba353555aad2fdc61ae754954c72643485056043d05ae1497f4eac9b6b37",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/lstat.c": {
+          "sha256": "9f173e8f5149b2884dfc70c3b91cdfb0f3fb31d53a76102839c8f9426f49924f",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/mkdirat.c": {
+          "sha256": "c1a3e78a29b40f14e79cf1a493a771a8828af77410d1e45335e6bbb262f91fc8",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/quotactl.c": {
+          "sha256": "942d5b4f10a33a39903496ad1464b1380bd574f7c98672ddfc92e38d96f79bca",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/rmdir.c": {
+          "sha256": "58c7edaa56a74174349c819512acabbc1e6f8c99c3073eecc60160cadbdaf236",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/statfs.c": {
+          "sha256": "be779bae7476c2ba971e672f252fdfe725869168cfbe2c8671873abfed08cc4e",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/unistd/linkat.c": {
+          "sha256": "7329190d7da429ffcab85cef2017c306884a44b40959cfc05c49b38dba8d79e3",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/unistd/read.c": {
+          "sha256": "daeee9a0716247f2a0535712567af86f2d28b4e40b31f431dbd01c1102cca220",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/unistd/renameat.c": {
+          "sha256": "d6a54a79919748ac823c578f35ce8b5d9cbe846b04ac86e23d89bc67f1f715b9",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/unistd/symlinkat.c": {
+          "sha256": "35fb2bac12d36fbb57cc79b452df190a1fe9193e9042ac4b11be3e3e3de160f7",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/unistd/unlinkat.c": {
+          "sha256": "e44e15392a9b847f3bf6ae9d9d83d48418d11f1b8e5f5e5e38397bdeb1e31cc1",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/fgetxattr.c": {
+          "sha256": "72e5a210af805616d72ff139f86924c16514885fc54c3a309e753a573d7474d0",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/fremovexattr.c": {
+          "sha256": "1f8a50f3c1ac4eae285080b1549940fb8de42099a5d36b4b98e455484a2b1c15",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/fsetxattr.c": {
+          "sha256": "378dea8d58c33c6116445326e748447c3842611ff6b6e8c5c660a8db32be84cd",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/getattrlistbulk.c": {
+          "sha256": "64e9a691244b775fb24f78932f13fac286895f67e4573e0cd5a902a4c9879b7f",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/getxattr.c": {
+          "sha256": "75a220e9a37e072cb2c418a81397fc50222832fdb392f3323caa3d8f1a79e903",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/removexattr.c": {
+          "sha256": "c862853a95809ba1d703873f91521aebdd4a5aa6d41d1c4fbae68cf8ed5572bf",
+          "executable": false
+        },
+        "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/setxattr.c": {
+          "sha256": "ad5653676334d69d9fca0a938e64403078a4a6b993cbd4af1ae33b1679de14e6",
+          "executable": false
+        },
+        "libsyscall/CMakeLists.txt": {
+          "sha256": "45339291e7fa5a1a10335abbba6a5ba5404fb932702939ecb25b3c5c6c0406c7",
+          "executable": true
+        },
+        "libsyscall/wrappers/getiopolicy_np.c": {
+          "sha256": "977ad18805b38b89e781c6ba4b6335f0f852945ab3d9caae9096a7b48004c4dc",
+          "executable": false
+        },
+        "libsyscall/wrappers/statfs_ext.c": {
+          "sha256": "f8caa71d941f162320236e569bb29ea796132484794d31caf78fada11655f760",
+          "executable": false
+        },
+        "libsyscall/wrappers/statfs_ext_compat.h": {
+          "sha256": "55d42d29e5406e44fa8e7e22d64f17226514a02f6a79885cf5ccb310ead1ffd3",
+          "executable": false
+        }
+      },
+      "previous_saved_commit": "d770e8d8b7e2e9c28c9eb47d67452aeb091d23a9"
+    },
+    {
+      "path": "vendor/darlingserver",
+      "upstream_url": "https://github.com/darlinghq/darlingserver.git",
+      "base_commit": "89751e64bc6c2082f7725061824ee0e33395b0de",
+      "fork_url": "https://github.com/kxn/darlingserver.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "f882ba62ce8efcd5769a7b874beeab4d59b11e19",
+      "patch": "checkpoint/sources/darlingserver.patch",
+      "patch_sha256": "ca89f7f0159cc9bae4c39e42889e9ec0cdf171756d02c3dbf4cd54ea9ee6324e",
+      "files": {
+        "CMakeLists.txt": {
+          "sha256": "1aa174157d33b798b863cb0d5474dc1d824737099ffb34eafbb6452fbb2da483",
+          "executable": false
+        },
+        "duct-tape/include/darlingserver/duct-tape.h": {
+          "sha256": "a40a715d44afa107d1d23f30795968ae6f4799bff478eb28a22fe98be9f71c23",
+          "executable": false
+        },
+        "duct-tape/include/darlingserver/duct-tape/hooks.h": {
+          "sha256": "2fb38d6159c5ceafe555d26d19f579aaf90fa897b79a192ff017d4a0e937e3d9",
+          "executable": false
+        },
+        "duct-tape/include/darlingserver/duct-tape/types.h": {
+          "sha256": "3664d7067e77ae68ccc451be143db6db1b19b52fcb7bc00260d00c754efcbc84",
+          "executable": false
+        },
+        "duct-tape/internal-include/darlingserver/duct-tape/memory.h": {
+          "sha256": "db631d6c96d0992cafcf9e9780ccd98686a5765ada4278b5441df323d75bbe1c",
+          "executable": false
+        },
+        "duct-tape/internal-include/darlingserver/duct-tape/processor.h": {
+          "sha256": "55988b0db89edf100e7dfaef34cfcbd093ed4502aedc30c44c8fb2bea82b277a",
+          "executable": false
+        },
+        "duct-tape/src/host.c": {
+          "sha256": "a222319db0a301bfa339216371d0672c35274b17074cbdb4c678f68b201cb48b",
+          "executable": false
+        },
+        "duct-tape/src/memory.c": {
+          "sha256": "2f244d60dca89274be879691022c98b5af884efe5629d9eacffd6239513b2577",
+          "executable": false
+        },
+        "duct-tape/src/processor.c": {
+          "sha256": "475b65d98caf7d48a5297863f03d1608519a8ef8e9c7e4705008a000aad37acb",
+          "executable": false
+        },
+        "duct-tape/src/task.c": {
+          "sha256": "7184f3258b458f58bd88e3c248585cb7fbce6328c64a33f5c29953e3162fb335",
+          "executable": false
+        },
+        "duct-tape/xnu/osfmk/ipc/ipc_kmsg.c": {
+          "sha256": "9f754b9cfe17b4ce268daba47251903d5c6fca656d23fd8d19036a98ebd8c116",
+          "executable": false
+        },
+        "internal-include/darlingserver/call.hpp": {
+          "sha256": "b1ded70aa88019e75b1dc2f8c66b1dcfb2e667d37f7768fb7f775d8eda585ed4",
+          "executable": false
+        },
+        "internal-include/darlingserver/fsevents-device.hpp": {
+          "sha256": "62b6ad4fad38088ea58054ee342dfeb49b879c59a3185657fae35d48827790aa",
+          "executable": false
+        },
+        "internal-include/darlingserver/fsevents-journal.hpp": {
+          "sha256": "54488a474c8fb9d00e9a8cbb111a5871de1c82a760aaa51f065e39797fc45a78",
+          "executable": false
+        },
+        "internal-include/darlingserver/process.hpp": {
+          "sha256": "cfe1872a0935d21b2a11c68de5d0d1ad26f9d79e2636454ec791b351981178a1",
+          "executable": false
+        },
+        "internal-include/darlingserver/sandbox-policy.hpp": {
+          "sha256": "408ea9ac38ce3d2af5cf344947faa103b28a4dba9da383c50a31c61122ee2055",
+          "executable": false
+        },
+        "scripts/generate-rpc-wrappers.py": {
+          "sha256": "8904656d79025fff82a1c1ed29c1e5cb267b7719cd177628dfbe4171d065fde0",
+          "executable": true
+        },
+        "src/call.cpp": {
+          "sha256": "97866f02a0a8bc856dcaf9301b139a85bfb45f4ca6a7191af607b303019f8dad",
+          "executable": false
+        },
+        "src/fsevents-device.cpp": {
+          "sha256": "62462c8c9e6de9f429232d1fcfd8c996dc74cdbd46983724f2f883c961d6b04a",
+          "executable": false
+        },
+        "src/fsevents-journal.cpp": {
+          "sha256": "6ef63c8d3ba2bfec58b11818bf9a5778c9577cede1789fc300b0990b16d573e9",
+          "executable": false
+        },
+        "src/process.cpp": {
+          "sha256": "af9cf20ed50b45bee34a8d90f4da9c5c52d8e332cbf285b55c888e1f153066fd",
+          "executable": false
+        },
+        "src/sandbox-operation-names.inc": {
+          "sha256": "79b8fd963c7f597369b9ea2393776df7f04cecf47f88096ce0a16eaf76c0238f",
+          "executable": false
+        },
+        "src/sandbox-policy.cpp": {
+          "sha256": "20c51d5ce74bf5b43181a0bc87d05d00d0fe17312fe2d9666a692188c4f6ba2e",
+          "executable": false
+        },
+        "src/server.cpp": {
+          "sha256": "86ba23d48dcf0c50fdd416170a117735feca495a7dbc0028b414e9c00c9ee311",
+          "executable": false
+        },
+        "src/thread.cpp": {
+          "sha256": "084e6ef56fbf7c969e6db908b15ea3b686ef546eca0c622f1543a0b4e020d05d",
+          "executable": false
+        }
+      },
+      "previous_saved_commit": "dce88c125be2aafb740621378a34d0489468a760"
+    },
+    {
+      "path": "vendor/darling",
+      "upstream_url": "https://github.com/darlinghq/darling.git",
+      "base_commit": "60ba801decee7a00782f74f6be4c8ffb013f79ff",
+      "fork_url": "https://github.com/kxn/darling.git",
+      "branch": "linuxcode/xcode-x86_64",
+      "commit": "6193e62314080949debb215e1b329906a8e8d2b4",
+      "patch": "checkpoint/sources/darling.patch",
+      "patch_sha256": "497d9af25645cd1729e5771a97bb82d5d2e65aacd57c84109803932b9d963605",
+      "files": {
+        "src/frameworks/CoreServices/include/FSEvents/FSEvents.h": {
+          "sha256": "d923f75b1ffb397722f59e5aacd5a484526da0cdb2391000e5c6bd981947d5b6",
+          "executable": false
+        },
+        "src/frameworks/CoreServices/src/FSEvents/CMakeLists.txt": {
+          "sha256": "5d24d5742143defc70c8deb082b7d2986a293cd78de8695b6cc4c78e038b2702",
+          "executable": false
+        },
+        "src/frameworks/CoreServices/src/FSEvents/FSEvents.m": {
+          "sha256": "05e234486cffcbad9b4137eee725049357528741e1dc65eafb3bb8c78dd6c990",
+          "executable": false
+        },
+        "src/frameworks/CoreServices/src/FSEvents/FSEventsImpl.h": {
+          "sha256": "c5dd0d2b7f318c7df33986c7cdeeed5a3515259850cf974d3669387449c0980d",
+          "executable": false
+        },
+        "src/frameworks/CoreServices/src/FSEvents/FSEventsImpl.m": {
+          "sha256": "c149bc09b355c227bb9c6fd55840359bf355e8bbadd8bacae8dd9eddae06ccce",
+          "executable": false
+        },
+        "src/frameworks/CryptoTokenKit/CMakeLists.txt": {
+          "sha256": "979d8ab6627760bb8eeae49cf40eaf981e88c0d4f28d696e512dfe1d442bfb58",
+          "executable": false
+        },
+        "src/frameworks/CryptoTokenKit/include/CryptoTokenKit/CryptoTokenKit.h": {
+          "sha256": "a238826aa18705fd4da4ab4bb85121b531c65125c497ec017100d4f27d203523",
+          "executable": false
+        },
+        "src/frameworks/CryptoTokenKit/include/CryptoTokenKit/TKClientTokenParameters.h": {
+          "sha256": "efca2cabd8a409ecbea75c54befe4af73f5c8a39764259b45dd8bf0a74123a53",
+          "executable": false
+        },
+        "src/frameworks/CryptoTokenKit/src/TKClientTokenParameters.m": {
+          "sha256": "f432a7f14b9fb7b184d0afdfc9a921d711c70bba7c1f149961bbf009f87454a1",
+          "executable": false
+        },
+        "src/frameworks/CryptoTokenKit/src/TKError.m": {
+          "sha256": "56b4720e80fc022263dcac85f2d9f59d54ee4b72b5a1be9f8b60ecbdab827c08",
+          "executable": false
+        },
+        "src/frameworks/ImageIO/CMakeLists.txt": {
+          "sha256": "8f2cee8435002051547d720cd8db84e4ad4dd884057915a0886e4d109423ed4e",
+          "executable": false
+        },
+        "src/frameworks/ImageIO/src/CGImageDestination.m": {
+          "sha256": "db2f9bad46b5d98ab5c9795886292a1df6a5cbb920b7a219c138272cc12ef095",
+          "executable": false
+        },
+        "src/frameworks/ImageIO/src/CGImageLegacyConstants.c": {
+          "sha256": "e3ccdc0c72bc1a5455cf19c6c251f49564f3bf61bc6511f60d42b7417de00f1b",
+          "executable": false
+        },
+        "src/frameworks/LocalAuthentication/CMakeLists.txt": {
+          "sha256": "33e64a6fbc87490495db020364e9bcb33aee318c6603d7d7afbe3e7f56373b8f",
+          "executable": false
+        },
+        "src/frameworks/LocalAuthentication/include/LocalAuthentication/LAError.h": {
+          "sha256": "d2847a5ce4691ef8ef9d53a72025f3297f1e0cc7798c5340b7a08bc897730e9c",
+          "executable": false
+        },
+        "src/frameworks/LocalAuthentication/src/LAError.m": {
+          "sha256": "0874585cf64a4802c18829edc431eeda6d804f575ed44d650b6c20f084090c2b",
+          "executable": false
+        },
+        "src/launchd/src/CMakeLists.txt": {
+          "sha256": "981c0bd13d6d9f54bbdb7ce20a9c145194956a152f73fc73ba43b13b91cb3b87",
+          "executable": false
+        },
+        "src/launchd/src/config.h": {
+          "sha256": "57e306fb0ec39f38b013baf1019f2110ca4176e49055a8dce5bbc340faf8dee2",
+          "executable": false
+        },
+        "src/launchd/src/core.c": {
+          "sha256": "6cac1fcd3d90a7c1a62b20429fddcd9b5664eecbf8a82ab0aa2749cbf5e1ca8d",
+          "executable": false
+        },
+        "src/launchd/src/core.h": {
+          "sha256": "475b026267b387d790cc6662ab9c7f90e8f1cdef6a3dcaad904e1c8f9979e2a8",
+          "executable": false
+        },
+        "src/launchd/src/runtime.c": {
+          "sha256": "fbce605cd034ad4f1a45fbfe26a6a688cfb808889d44eae561bb393d3292bc91",
+          "executable": false
+        },
+        "src/launchd/src/service_stats.c": {
+          "sha256": "de9e3ba3cc2ffd0fe3810228ecdb4651d0d434d3933d7e115f49ac8c40a5d9a0",
+          "executable": false
+        },
+        "src/launchd/src/service_stats.h": {
+          "sha256": "c24dd7c3046e35bdab0a74acb8d67e3053e13fc372730159055d75c7e2b07126",
+          "executable": false
+        },
+        "src/libMobileGestalt/CMakeLists.txt": {
+          "sha256": "af73ad07b15c6d286fda627b7c36fd34394dff3c1bdf551b1d055e117649374b",
+          "executable": false
+        },
+        "src/libMobileGestalt/include/MobileGestalt/MobileGestalt.h": {
+          "sha256": "0daa815bbf757073b2ba52ebbbac3c94204fbf6264c0feff604ff64fd16708dd",
+          "executable": false
+        },
+        "src/libMobileGestalt/src/MobileGestalt.m": {
+          "sha256": "39ffde262be7fb5dd4579d2452f83d99f5c67dad5a540c1cde4295cabf971bc0",
+          "executable": false
+        },
+        "src/libm/CMakeLists.txt": {
+          "sha256": "4b9ceea52972e9caa5a0dc7bb92db2e267e857d69f743ffa2d4cf62f6abca357",
+          "executable": false
+        },
+        "src/libm/Source/simd_constants.c": {
+          "sha256": "fff823c59e7edda8a0d16ed9e38ea3c730a4dff70f186bad43c8b20f27a10b20",
+          "executable": false
+        },
+        "src/libsystem_coreservices/CMakeLists.txt": {
+          "sha256": "b1e54b0116b8abe9f6265626b68eb4bbf1c76668d2791e6cdbf5ea3fe4ca62dc",
+          "executable": false
+        },
+        "src/libsystem_coreservices/dirhelper.c": {
+          "sha256": "30048ae905c8cdf912bc1c7b79c323123993e88d7802b1bec2ddcbea73149614",
+          "executable": false
+        },
+        "src/private-frameworks/CoreUtils/CMakeLists.txt": {
+          "sha256": "72b08e84ce6716dfdf1929dc1abc37f38d6db122a0cff6a95855e22842b4a408",
+          "executable": false
+        },
+        "src/private-frameworks/CoreUtils/include/CoreUtils/CoreUtils.h": {
+          "sha256": "f7a60ca57fd9c8b3f28f5a13be3be7715ff2bb1037ec4792e3bfc9990e50525a",
+          "executable": false
+        },
+        "src/private-frameworks/CoreUtils/include/CoreUtils/CryptoUtils.h": {
+          "sha256": "edb0a5150fb0db666f6be79ebc9b67cedae85358702b6b090841d8fdab7100d1",
+          "executable": false
+        },
+        "src/private-frameworks/CoreUtils/src/CoreUtils.m": {
+          "sha256": "9a9af191909c3c5552ae71b3634ee3c0e3789e3a8ae4daa089396b19068fd070",
+          "executable": false
+        },
+        "src/private-frameworks/CoreUtils/src/CryptoUtils.c": {
+          "sha256": "ff78626c41a8b3f7c2966d69c2c66a64f5c9d6c1a1832ae494a0daf0a66cf367",
+          "executable": false
+        },
+        "src/private-frameworks/DiskManagement/include/DiskManagement/DiskManagement.h": {
+          "sha256": "8398d3c4348a84e22ba47a45df33bdad67fa679dca7ab4980834a4c7bdda338e",
+          "executable": false
+        },
+        "src/private-frameworks/DiskManagement/src/DMNSError.m": {
+          "sha256": "9342db27515d0a22aa062ca3476052b04e2058ebe6417f6d31bdea6cfcbeb565",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/CMakeLists.txt": {
+          "sha256": "2263939242e8294ba3bad5cae18b87a7910fdd038402acb07956771aa5f0fcb4",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/include/MobileAsset/MAAsset.h": {
+          "sha256": "6c5e38577ef91d2a9d751bc0978551272170a14d60ecc67147799868f305ed52",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/include/MobileAsset/MAAssetQuery.h": {
+          "sha256": "a8288b7fda9e981f25b9375aa9a2d2dbcb2e5b42bc929ef1c0d1e70f1b0534f9",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/include/MobileAsset/MobileAsset.h": {
+          "sha256": "b8d32be51b6d2cf37343a967534522de0c65f68df6aead678638e127966519b6",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/src/ASAttributeConstants.m": {
+          "sha256": "48afa8802e07c45f29ce8e0b1b7d5b882c72c7d36853b7d83da57d0757f9b645",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/src/MAAsset.m": {
+          "sha256": "6ec248c149c20f4b9d8449f3ff04e8be45faf41ea646fd011c87cf075ea885da",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/src/MAAssetQuery.m": {
+          "sha256": "12047295d6c60cf750d0f458772344b5f095d8dbc1b52ade0801835ef500aff4",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/src/MobileAsset.m": {
+          "sha256": "ab8de613115bebbc011a76176b24fb64c9576328ffc8a720d945059908d03cee",
+          "executable": false
+        },
+        "src/private-frameworks/MobileAsset/src/Pallas.m": {
+          "sha256": "5a027bb34117f3b6e7a986f30eb462e763ba8563992a631dc2374ebd1a969241",
+          "executable": false
+        },
+        "src/quarantine/CMakeLists.txt": {
+          "sha256": "2f94adb374dd8d76804432e42f01a0159d6c1c3d5ae889a553fd306459a68db5",
+          "executable": false
+        },
+        "src/quarantine/include/responsibility.h": {
+          "sha256": "bee35b0a9f9800cf01361d842feca7efea92b32f523d7e269f307ee1a0501338",
+          "executable": false
+        },
+        "src/quarantine/responsibility.c": {
+          "sha256": "fb72b7cc6243e9258aabbc8500fbe885e9ee2f3941c3f513c9e28d8fe4ddb2fc",
+          "executable": false
+        },
+        "src/sandbox/CMakeLists.txt": {
+          "sha256": "7682bf8d7a590b5c73cb2847ad34663d7e4610f1fe96d1f499cb1b3cce15f78a",
+          "executable": false
+        },
+        "src/sandbox/check.c": {
+          "sha256": "457f2476596096671ed042128a817ce49a6739bb530c1d72d26b49b12dcc1bcc",
+          "executable": false
+        },
+        "src/sandbox/container.c": {
+          "sha256": "81da2e85fdc6b84957984b4ac4c35323e9061f747d5920335b42cbc65e129e9f",
+          "executable": false
+        },
+        "src/sandbox/extension.c": {
+          "sha256": "eb9a65809ffc8ddc1103d089edc56f78c5fdd3fa3d01af067ae4b49e51718814",
+          "executable": false
+        },
+        "src/sandbox/extension.h": {
+          "sha256": "e9d10467c2a7fd8ad33042d240c7d2592a647b5712e7a146637402507db11244",
+          "executable": false
+        },
+        "src/sandbox/sandbox.c": {
+          "sha256": "659936f6ab227328a31d7d5378c905169ca03ceea011e970177ca22e5462d7a6",
+          "executable": false
+        },
+        "src/sandbox/sandbox.h": {
+          "sha256": "470c29c35e7e1fa2e26c0c6f01f8e164ffd9a150df0248797ae92c2500e36b8f",
+          "executable": false
+        }
+      },
+      "previous_saved_commit": "6d94d32eb9d4a89882f3eff464fa9f759a7c32a7"
+    }
+  ],
+  "workspace_tag": "runtime-2026.10.19"
+}

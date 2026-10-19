@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "milestone": "original-xcodebuild-ios-cocoapods-unsigned",
+  "workspace_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+  "cold_install_complete": false,
+  "steps": [
+    {
+      "id": "base",
+      "automated": true,
+      "command": "linuxcode.py --workspace PATH setup --xip Xcode_26.6_Universal.xip",
+      "result": "Pinned Linux rootfs, upstream Darling packages, user-owned prefix, original Intel Xcode; this is not the successful compatibility candidate."
+    },
+    {
+      "id": "sources",
+      "automated": true,
+      "command": "linuxcode.py --workspace PATH restore-sources",
+      "result": "17 exact upstream base revisions plus checkpoint patches, verified file bytes."
+    },
+    {
+      "id": "recovery-reference",
+      "automated_upstream_entry": "scripts/prepare-recovery.sh",
+      "requires": [
+        "base",
+        "Apple public recovery download",
+        "pinned 7zip package"
+      ],
+      "cold_install_validated": false,
+      "gap": "Recovery 'latest' lookup may no longer yield 25G83; current cache-image pins reject changed input. Exact recovery metadata must be locked before this can be a stable cold recipe."
+    },
+    {
+      "id": "fullsystem-reference",
+      "automated_upstream_entry": "scripts/prepare-intel-system-image.sh",
+      "requires": [
+        "recovery-reference",
+        "18.38 GB pinned InstallAssistant.pkg",
+        "Darling reference decoding prerequisites"
+      ],
+      "cold_install_validated": false,
+      "gap": "Existing script requires previously built reference-decoding compatibility components. Cache code pages are independently checked, but full decoded image SHA384 mismatch remains unresolved."
+    },
+    {
+      "id": "compatibility-core",
+      "automated_upstream_entries": [
+        "scripts/apply-runtime-compat.sh",
+        "scripts/prepare-reference-resources.sh",
+        "scripts/build-global-fsevents-server.py",
+        "scripts/build-fsevents-source.py",
+        "scripts/build-libsystem-kernel-source.py",
+        "scripts/stage-global-fsevents-runtime.py",
+        "scripts/stage-vchroot-links-runtime.py",
+        "scripts/stage-metadata-root-name-runtime.py",
+        "scripts/stage-xcode-tool-dispatch-runtime.py"
+      ],
+      "cold_install_validated": false,
+      "gap": "The final stages require the entire earlier profile/report chain and exact generated inputs. The checkpoint preserves source and evidence, but does not yet contain a topologically complete clean reconstruction graph. Running only these listed late stages cannot reproduce the milestone."
+    },
+    {
+      "id": "cocoapods",
+      "automated_upstream_entry": "scripts/setup-cocoapods.sh",
+      "lock": "config/cocoapods-gems.lock.json",
+      "cold_install_validated": false,
+      "gap": "Run only after matching Ruby/OpenSSL and tool-specific DYLD scope are assembled. A local Pod was verified; arbitrary remote Pods are not proven."
+    },
+    {
+      "id": "attach-existing-candidate",
+      "automated": true,
+      "command": "linuxcode.py --workspace EXISTING_WORKSPACE adopt",
+      "requires": [
+        "already-built milestone runtime with its original evidence"
+      ],
+      "result": "Revalidates the actual tool-dispatch v2 profile and successful build evidence; exposes a user-level xcodebuild launcher for arbitrary arguments. Uses the same recorded permissive CoreServices diagnostic policy. Does not copy or distribute Apple components."
+    }
+  ],
+  "remaining_product_gaps": [
+    "Complete cold reconstruction DAG and verified reference-input acquisition",
+    "Strict CoreServices policy compatibility",
+    "Unity/UE exported project and engine build phases",
+    "Resource tools actool/ibtool and actual resources",
+    "Provisioned signing, archive/export and device trust",
+    "Projects outside the selected mounted workspace"
+  ],
+  "workspace_tag": "runtime-2026.10.19"
+}
