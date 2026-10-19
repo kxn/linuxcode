@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-10-19T12:10:08.168399+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "source_fork_commit": "9550252e0594e0a8e858c2b449c66d6e282140d5",
+  "source_fork_branch": "linuxcode/xcode-x86_64",
+  "author": "Comman Kang <kangxn@gmail.com>",
+  "sources": {
+    "vendor/darling/src/startup/mldr/mldr.c": "ec3d466c0ac13fd92973ebea5ba9e8a181b856c8b86c743260871282e0413ffe",
+    "scripts/build-mldr-source.py": "4e9e2c46b6b7f40129167914137cdee80b841272dc0e74b884f82ddc3ee1828f",
+    "scripts/test-mldr-dynamic-rlimit.py": "70ee80f3e68ce8131385c6aab6d32b1b557a9b40304ec8fcb3586b21ca06c69e",
+    "fixtures/hello/mldr-dynamic-rlimit.c": "86a857bfbbf3e60591f1a26864e14f0a213c5cd99905c81856c17fea36d97071",
+    "scripts/stage-mldr-dynamic-rlimit.py": "dfee977fd9073b257afa2a1f082f7d5eabee8164b9cadd4cea497769f37ca4c4",
+    "scripts/mldr-dynamic-rlimit-profile.py": "f068fac775a90ccb382f016cf83dd4a786c7eba429a20a60688626dcc9823835",
+    "scripts/probe-unity-export-host-tools.py": "e8199538f7f050ba287fac862b22230b8e432538955854ed5d473b09bc00b752",
+    "scripts/probe-xcode-service-runtime.py": "f5ecbc41c8515273a8b7f1e10b1bcb23d5f82fac8610f0000c0a0c0e8539ffaf",
+    "config/unity-device-gameassembly-v1-build-arguments.json": "260652884f345b06aa9d1f611b49c32637ad346b3962067a1155e64ed253bb7b",
+    "config/mldr-native-signing-profile-arguments.json": "ffc22b61a003677bbedf7a2e6a74d8213bd22d9ea3a78532fa8969952005fd1a",
+    "scripts/verify-unity-device-engine-input.py": "2baf3ccef5e2c267fd9d71f069b7a6da24e0907d4eb3e60423d9aac546a97322"
+  },
+  "evidence": {
+    "runtime/mldr-source-d_8sgxbz/build.json": "a6f0a27c24278d361e48b324e6320a6993cfc3767f5eb850b15606a3064b0a68",
+    "runtime/mldr-dynamic-rlimit-test-0ts9l9dp/result.json": "ddb81d52779e7787123e5f5f38dbfe8b57dc7c71e21384f659c28ffe36e46401",
+    "runtime/unity-export-host-tools-41s7i3zj/result.json": "531d7f501752f04aa0e344d173f23dab3e65efaa966a568f7f53f55089259fc8",
+    "runtime/unity-export-host-tools-z8xlyglg/result.json": "06786299706a5d7aab1ba9118eb9e4cfded30eeafd35c48dd8de1aa0c6d86e23",
+    "runtime/unity-export-host-tools-tjjutnqp/result.json": "fb911542d114796bcbe7ff9bb3c6e73763801e463e9b5359c482b26cc2ab0aaa",
+    "artifacts/mldr-dynamic-rlimit-v1-stage.json": "2177c9e470e7a4546c98940b2bae086b53a4e1dbeb06958690cea0665785ea2a",
+    "artifacts/mldr-dynamic-rlimit-v2-stage.json": "a54830b6fe642e5dbc5e14e98b2fe7b80d73871b74a24ec26b7816849cb66c20",
+    "artifacts/mldr-dynamic-rlimit-v3-stage.json": "678fc609c7bb0160a84285109858c3622a067878998ece0bb5b7a2526e85e88b",
+    "artifacts/ios-resource-lazy-v1-graphics-v40-security-headless-version-probes.json": "4c276758943b9a3790bc8474bb4991efebf83fc8f39f83f69d75a8d39db33c25",
+    "artifacts/appleidsso-pointer-addend-audit-v1.json": "7c9aedf388cd5cc288c1fab89890f9cde917949d3f6befd7d3d3e0f8130cffc3",
+    "runtime/mldr-dynamic-rlimit-test-672b21sh/result.json": "78d6db77221c731361acf0091f2f83be66e7089b89a901e62c2a208861e53132",
+    "runtime/unity-export-host-tools-q_8wpzqx/result.json": "ee1dfaa2b766b5824dcf18672cc3fc66c58c7f5adaed7685622bbcc9906d3e21",
+    "runtime/unity-device-engine-input-e94fxp2w/result.json": "b152c19a06e49ad1ec8970581c7bd1820c31eb4a83e092410a5db1b2d67c7273",
+    "artifacts/unity-device-engine-acquisition-v1.json": "895f6db0abe3a0decc31a41c2ec7d8134b2ebc05bb91d127d52d154b15efccd0",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-c5507b3a693d.json": "ceddcaebe67f239917bbc30dc13ac2187972c394758bd2362618e500282a6d5b",
+    "runtime/dotnet7-memory-abi-reference/source.json": "2e8e0ff9cfa2e938cfdee917290de67cc38161cec07f9fbbb59347cbdab5145f"
+  },
+  "loader_regression": {
+    "original_status": -6,
+    "fixed_status": 0,
+    "concurrent_real_socket_roundtrips": 256,
+    "checks": [
+      "lower_soft_limit",
+      "raise_soft_limit",
+      "preserve_open_descriptor",
+      "existing_socket_above_limit",
+      "zero_limit",
+      "descriptor_exhaustion",
+      "8_threads"
+    ]
+  },
+  "simulator_Unity_2022_host_tools": {
+    "il2cpp_help_native_status": 0,
+    "bee_help_native_status": 0,
+    "original_binaries_unmodified": true,
+    "framework": "net6.0"
+  },
+  "device_Unity_6_host_tools": {
+    "il2cpp_help_native_status": null,
+    "il2cpp_outer_status": -9,
+    "bee_help_native_status": 0,
+    "framework": "net7.0",
+    "startup_complete": false,
+    "server_unsupported_path": "mach_vm_remap_external_shared:Cannot complexly remap existing shared regions yet"
+  },
+  "scope": {
+    "full_Unity_build_verified": false,
+    "CocoaPods_engine_integration_verified": false,
+    "engine_signing_verified": false,
+    "default_installation_modified": false,
+    "full_cold_rebuild_verified": false
+  },
+  "resource_tool_blocker": "Original actool/ibtool v40 both require missing AppleIDSSOAuthentication. Reconstruction refuses unsupported instruction/data boundaries and unresolved encoded references; no guessed image emitted.",
+  "device_engine_input": {
+    "size": 217810216,
+    "sha256": "8f2d0dd1749da9fc055e87b2c6117b8dee68d41caa441b9521d272e88f8ab485",
+    "LFS_oid_verified": true,
+    "arm64_objects": 1640,
+    "iOS_build_version_objects": 1446,
+    "iOS_legacy_min_version_objects": 194,
+    "linked_product_verified": false
+  },
+  "actual_xcodebuild_GameAssembly": {
+    "original_project_read": true,
+    "build_plan_created": true,
+    "script_phase_reached": true,
+    "native_status": 132,
+    "outer_status": -9,
+    "server_unsupported_path": "mach_vm_remap_external_shared:Cannot complexly remap existing shared regions yet",
+    "build_verified": false,
+    "signing_attempted": false
+  },
+  "native_signing_profile_with_new_loader_host_tool_startup": {
+    "il2cpp_help_status": 0,
+    "bee_help_status": 0,
+    "signing_build_regression_verified": false
+  }
+}
