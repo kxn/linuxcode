@@ -416,6 +416,18 @@ def package(output):
                'tests/test_installer.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/locks/developer.lock.json',
                'dev/locks/source-manifest.json']
+    resource = 'dev/resource-runtime/'
+    overlay = json.loads((SOURCE / resource / 'overlay.json').read_text())
+    allowed += [resource + name for name in ('README.md', 'apply-overlay.py',
+        'build-resources.py', 'overlay.json', 'evidence/summary.json', 'tests/test_overlay.py')]
+    for relative, entry in overlay['files'].items():
+        name = Path(relative)
+        if name.is_absolute() or '..' in name.parts or name.suffix not in ('.py', '.json', '.swift'):
+            fail('Invalid developer source payload path: ' + relative)
+        payload = resource + 'payload/' + relative
+        if sha(SOURCE / payload) != entry['sha256']:
+            fail('Developer source payload checksum mismatch: ' + relative)
+        allowed.append(payload)
     output = output.resolve()
     if output.exists():
         fail('Refusing to replace an existing public source package.')

@@ -1,0 +1,655 @@
+{
+  "schema": 1,
+  "structural": {
+    "verified": true,
+    "checks": 22,
+    "cases": [
+      {
+        "target": "swiftui-resource-native",
+        "original_sha256": "143bb52dbe086e5e6f9451ca04f5592ff4cf48c4cc1ffa9d548ecd5fece1ac3b",
+        "patterns": 75,
+        "environments": 56,
+        "identity_patterns": 1,
+        "pinned_shorter_environment_extents": 1
+      },
+      {
+        "target": "swiftuicore-resource-native",
+        "original_sha256": "a5c2987beaaa2816976f78fa6c0f0dc5418937bbc847fcccc23dfdd9d97922a2",
+        "patterns": 27,
+        "environments": 20,
+        "identity_patterns": 2,
+        "pinned_shorter_environment_extents": 0
+      }
+    ],
+    "rejected_damaged_actual_records": [
+      "swiftui-resource-native:root_tag_removed",
+      "swiftui-resource-native:environment_pointer_outside_typeref",
+      "swiftui-resource-native:reserved_buffer_flag",
+      "swiftui-resource-native:buffer_outside_bound",
+      "swiftui-resource-native:unknown_component",
+      "swiftui-resource-native:duplicate_pattern",
+      "swiftui-resource-native:changed_environment_bytes",
+      "swiftui-resource-native:unrelated_boundary",
+      "swiftuicore-resource-native:root_tag_removed",
+      "swiftuicore-resource-native:environment_pointer_outside_typeref",
+      "swiftuicore-resource-native:reserved_buffer_flag",
+      "swiftuicore-resource-native:buffer_outside_bound",
+      "swiftuicore-resource-native:unknown_component",
+      "swiftuicore-resource-native:duplicate_pattern"
+    ],
+    "sources": {
+      "scripts/swift-keypath-environment-records.py": "174d93e492289d1863ba4fbb5eff49e9dd116b32cfed1b9e1736368296171c3f",
+      "scripts/test-swift-keypath-environments.py": "aaa2c4d0c9e8edf7b57bdae664bf8c3953a01b8964a8c9f3ceb9300f4333b0a4"
+    },
+    "full_SwiftUI_runtime_verified": false,
+    "resource_compilation_verified": false
+  },
+  "native_Apple_Swift": {
+    "verified": true,
+    "wrapper_exit_status": 0,
+    "original_Apple_compiler_used": true,
+    "original_IR_declared_requirements": 2,
+    "original_IR_emitted_requirements": 1,
+    "marker_only_declared_requirements": 1,
+    "marker_only_emitted_requirements": 0,
+    "original_metadata_edited": false,
+    "native_generic_KeyPath_projections": 3,
+    "full_resource_compilation_verified": false
+  },
+  "source_reports": {
+    "artifacts/swift-keypath-environment-layouts.json": "852e15549e131da0ae4a0ce8e1736689eb38b64e0ccc13ae301043c21ba741a3",
+    "artifacts/original-swift-keypath-environments.json": "3565c715223fe72c057ca0b045b1f644d48a61ae252288791b2ef3fcd964691a",
+    "artifacts/objc-protocol-got-relocation-v2.json": "938eac9fca51f710d4630da65ac773511870f722173a860a635d772f84f99a15",
+    "artifacts/pooled-objc-class-reference-relocation.json": "fb3b495feca2b2b342ad9340d447df348c201cb6478a15e65cccfd10c86335d9",
+    "artifacts/pooled-objc-class-reference-shared-regressions.json": "ba9509a2e8a2d486e5ac6b417526e001f95c3db285df9572b83f110a15e2ebd6",
+    "artifacts/ios-resource-class-cells-v1-headless-version-probes.json": "65f2c13b424a8143b66996b70d94f52263749939b62256d0be5443431b248e3f",
+    "artifacts/developer-resource-overlay-reproduction.json": "cbf1414ef8c8ed947e086892213093591105a2667c7d48961525911e40217a11"
+  },
+  "reconstructed_images": {
+    "coresvg-resource-native": {
+      "original_image_sha256": "08d30c150107a5ab0254e8dd9b5f80d0708df33f036e75341de06251471ff376",
+      "staged_image_sha256": "21e76ded47373cb7d8331aa3cafa951eed7463c726b06cd23845973f230ffedc",
+      "exports": 298,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "coretheme-resource-native": {
+      "original_image_sha256": "68b6d127eddf93d4d578413d7b9431bf933592e055383a86f0cbbd6421ffc6c1",
+      "staged_image_sha256": "6e6d13eafd32010d7d2cfd4d105f779a0af83401447f18cd7ce2b297c2790ce5",
+      "exports": 491,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "iconrendering-resource-native": {
+      "original_image_sha256": "29c3753ce993adb72c3a448c56c0ce6fe5657a13828cd6f3ab8fa53126c356ac",
+      "staged_image_sha256": "92843bffa5e6d03edc6bf123c836664e25dc3fbacc35d2ca60ac252239952a49",
+      "exports": 1302,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "renderbox-resource-native": {
+      "original_image_sha256": "3d489838a8c4c22554467cdd9599db5a0c0fe7bf8ab634369fad1a8140efc507",
+      "staged_image_sha256": "7ecfac9eea51ba76805a26aaeff16d18ff221abe96f8d7839a059263f8658aed",
+      "exports": 330,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "textureio-resource-native": {
+      "original_image_sha256": "1260ddc0e1010b1e3a15d889dae98b511eadbb997e4fa25c4473ffb993d89a9b",
+      "staged_image_sha256": "199bda79f594efa157bded940f18d93445a6054d4eaa392cadf20cb549384262",
+      "exports": 64,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "coreui-resource-native": {
+      "original_image_sha256": "aed960ae55d378437d52e8fd209acb0b58ccc58fcd427ea750cac7700ca0f3a4",
+      "staged_image_sha256": "a87c4234f7d65372c16bd6134c95696c7c4547b43cd48c45cc088412f894ba79",
+      "exports": 1601,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "featureflags-resource-native": {
+      "original_image_sha256": "0975335fdd62b9c6bfd871c57e29dd6c824cbd127c7c66d90fe6545c697d2f02",
+      "staged_image_sha256": "eb57a442d1c41727c3342759305d5ece4a8ca0b52a74a9373bdd878fbc61dd36",
+      "exports": 7,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "swiftui-resource-native": {
+      "original_image_sha256": "143bb52dbe086e5e6f9451ca04f5592ff4cf48c4cc1ffa9d548ecd5fece1ac3b",
+      "staged_image_sha256": "29772191c64a5518d9f03fa3b04f8f2aba2aa72e04034607f19cfd1db8668636",
+      "exports": 19480,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "swiftuicore-resource-native": {
+      "original_image_sha256": "a5c2987beaaa2816976f78fa6c0f0dc5418937bbc847fcccc23dfdd9d97922a2",
+      "staged_image_sha256": "648964b0c56a61fca3cd675f1e67bc6772e62e21952fad7615a947d0c8cdf2b6",
+      "exports": 46114,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "attributegraph-resource-native": {
+      "original_image_sha256": "92488809e0ecd858917cd64f5bb93a2c2ee7df56b55dd2ecd233726b9d942e6e",
+      "staged_image_sha256": "b9a811944e527e4875f49dd94188643aeed0261edacef2eebd4a316c3ea926d2",
+      "exports": 778,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "quicklookui-resource-native": {
+      "original_image_sha256": "672fe103288a9d0a34087f40f530cb23e134f5f5c55e7df056b5580dae1d8b88",
+      "staged_image_sha256": "188d77156790c3185ae35cd024879a3e2e07b67c2f15dd2ccc3d7ab7d8f22d5e",
+      "exports": 316,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "iconfoundation-resource-native": {
+      "original_image_sha256": "a2326202c17ba1942679aedf58bbc9f00345c2c025ec3553bb1e284bfa03fd66",
+      "staged_image_sha256": "52fea74f9ecc64d4ad0744d2aefc3bfd984da7946965a9cf7b35742a3a4a46ba",
+      "exports": 389,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "accessibility-resource-native": {
+      "original_image_sha256": "4d8947300467fd7554ad9542c072552da84089f7865600118f4fc90bc1d5163f",
+      "staged_image_sha256": "97d94899f911271615edb2d7cdef69f581085c61f3499c880b5b37cd17ffe7db",
+      "exports": 467,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "coretransferable-resource-native": {
+      "original_image_sha256": "6bd2229fd5387ea358a3156521b36c4aac4ed668582ea3448e96734394aef855",
+      "staged_image_sha256": "c12fc8d7f91c673b77217c7e4b4969d554ac29401195627b1dba84780522801c",
+      "exports": 282,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "developertoolssupport-resource-native": {
+      "original_image_sha256": "0544285d08ee34212785ada6a8ff3a442bd155c88ce8dc270d2a69f614a419ec",
+      "staged_image_sha256": "9e17fe38dbd9adf14965dfd70531609c923b21cfd57b9d100df3b454607553ae",
+      "exports": 459,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "quicklookthumbnailing-resource-native": {
+      "original_image_sha256": "6330e9b7071c75948fb3bfd5b47042ac6dd08f1470c20c18559072ed2db62dc5",
+      "staged_image_sha256": "e4557d9384fb38246b4da13461faa42e9ea0982a5e3a3845acb92fb4e5b16886",
+      "exports": 279,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "screencapturekit-resource-native": {
+      "original_image_sha256": "e909d61fb1df96f7b858618f167a6ffaa96c1dc2734c3b27dbe5419af72f7e51",
+      "staged_image_sha256": "38e2c5502cfd759397c7c2c3e59009b0aa9a701d2bee3d3ac6391173b9e95361",
+      "exports": 183,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "symbols-resource-native": {
+      "original_image_sha256": "6c466f35d513554be89cc8b2e48ffcf4b1b415c0aff9b864928e20d480b2f3bb",
+      "staged_image_sha256": "bf4643d4754f5ae9619f0d88b73b383d71c69ea80a32953beb90ee64f568bc56",
+      "exports": 711,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "tipkit-resource-native": {
+      "original_image_sha256": "2aa54b8acac3f3917dda1b5103058206cc0bcbbd690a292a96092fb940d9a283",
+      "staged_image_sha256": "f07813c2a515fb6ebb6daf88a8ec236c44e62448573acddcc10f15dd030240a9",
+      "exports": 725,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "quicklook-swiftui-resource-native": {
+      "original_image_sha256": "51aaeb86b8bb98435668480293ad7c00fa1c7444fefa40b04c8659b509edf4a7",
+      "staged_image_sha256": "59f09d762aab1aab654174b27ab8296ef055c4ccc51ec9d4249a9d30d2f4d958",
+      "exports": 4,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "categories-resource-native": {
+      "original_image_sha256": "5b14d407c3b67d62947ff379eb9db69160248d1b41b04ff639aeea519e82858f",
+      "staged_image_sha256": "e6d3076cd0df09d5b9726b8b9b02c9359b8ec0aabc32a3a0e2bba7718292b4a8",
+      "exports": 39,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "designlibrary-resource-native": {
+      "original_image_sha256": "e17c4b44b5a4a49b16171202aab81720455c344c4cdc5e0bbe8051bae6b86f10",
+      "staged_image_sha256": "b3651d054be4563ecc65c2635d1ae802d2d3cb9fea34d0267e76a4f743c4e13d",
+      "exports": 1363,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "devicemanagement-resource-native": {
+      "original_image_sha256": "09b97bb6a4503cd59699f4a63089b7b743049a3b5660d5da18b5ec867fa32d2d",
+      "staged_image_sha256": "3dae7b14a0f4dc8529444e7bdcd02898f8569431ce4f165e5b3e56efaa878257",
+      "exports": 651,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "feedback-resource-native": {
+      "original_image_sha256": "22dcd29396b24afbae9ee7f0d70ff2252cc20d85136d5410a806d1bbad822f0c",
+      "staged_image_sha256": "600f62d7ef9947aeb42e551e16464e5b83cfb7300e35601f875df64aebb521df",
+      "exports": 1097,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "gestures-resource-native": {
+      "original_image_sha256": "740b094baae1111d5ea60568df6457122da4c15d337f807325ddaeb4a5fe1187",
+      "staged_image_sha256": "f62638bcc439cbf44d147e94a80b6d61db8774410aa78766bbb71e2abf320361",
+      "exports": 1012,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "sfsymbols-resource-native": {
+      "original_image_sha256": "b4ab6ff2bc91f5ddee98eccc361efbebbdde2c389bb353799638e2fc3ac625ee",
+      "staged_image_sha256": "7a2adf7044c8c560fd477429022103ddfc18c21c9307e36d9e2b2d1c3b7777f1",
+      "exports": 310,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "screentimeui-resource-native": {
+      "original_image_sha256": "5fb98b50f9159b0494bfa5da5b1ea8488da714c06bc325539e8857bd312b86b6",
+      "staged_image_sha256": "12d7c9c1241ea39e838d2c06f027e37fc287f7c3f10e72498f05c501befdf441",
+      "exports": 73,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "signpostsupport-resource-native": {
+      "original_image_sha256": "5df958209b4213ffafa2f9c66a784aaf395b9096be15e4f0fddbabfed24569e0",
+      "staged_image_sha256": "c10528220d4b40473612fee7e2f174aa877893ca133c7716b2319f039a5a61b8",
+      "exports": 489,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "uiintelligencesupport-resource-native": {
+      "original_image_sha256": "9a7b963f0dc4b515d2d49da5c5812612173c85198e9ef9aeea3d55ab22321ea4",
+      "staged_image_sha256": "897e688fe1a5132c16a06173583128d23089b9d81ba20222336a2dc0a9a1bc90",
+      "exports": 2723,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "universalaccess-resource-native": {
+      "original_image_sha256": "4faaec59d192299d742e12fd1c4d9e86fe7b6e25309d59414ee6fcb25a3f7d9c",
+      "staged_image_sha256": "1588b8164ed5e09075aefa790ac7b38e7ca7e23d94c182d157e5a61d31003d07",
+      "exports": 98,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "extensionfoundation-resource-native": {
+      "original_image_sha256": "49adaf3baf6941bad290f119119e7fa011f7284a3fb0a06c621bb283ffe5c5d0",
+      "staged_image_sha256": "25278367a09d4279c3a4858c3803bd3e0da70ac72399bf3ef4578afca4b0a808",
+      "exports": 1526,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "extensionkit-resource-native": {
+      "original_image_sha256": "4dd5375d0217211d8f6c7a9c53cb1f1fb00d979e934665087ee63f8d7b176d5e",
+      "staged_image_sha256": "97689c01afe4c4141538066d40b4226bee8f1d2ea6beab54ed313ebd6c288ad7",
+      "exports": 465,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "fileprovider-resource-native": {
+      "original_image_sha256": "629c8f3f6fe696caed29c7ea87f07fe5f9f742ca6899e20dbc170c360359cb86",
+      "staged_image_sha256": "ca1b1d11f6f1bf8ecfcfc6abaefb442b9d930d4facc94422ff8750f652ec2b7d",
+      "exports": 1009,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "replaykit-resource-native": {
+      "original_image_sha256": "a1e1caa0bb7b29c09f84f75374203266bb1c04a0a2794d3869e76285e11d92e8",
+      "staged_image_sha256": "4e4502df4ba387a90b2acfd5cec9c24b09ad376f1308ea8ceff0472c9ec4fe89",
+      "exports": 134,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "locationessentials-resource-native": {
+      "original_image_sha256": "e87c223fb53f5c666285828cd575e863bed7190c20b09637a184d5ac1963cfe8",
+      "staged_image_sha256": "767069a6dbeb57ffaad0362b4850c81daa4b7c9fde7cc3ea3eb9223af0d6c02a",
+      "exports": 50,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "axcoreutilities-resource-native": {
+      "original_image_sha256": "c7ac32ac985d68857bb3f5e4b80b0b9093a466692bd613b9f7d7cac97a5145cb",
+      "staged_image_sha256": "9f99792b8c994fa46b04ceb93cafca559de95199aae8728f8bdce6edbd6ed3ba",
+      "exports": 2420,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "accessibilitysupport-resource-native": {
+      "original_image_sha256": "2464be255efadccffe747c0a2b7f255f51aa09e1209a0d4a9a2e1f832e457124",
+      "staged_image_sha256": "6c0380a6de209dc36abe2c1de9d0c1e86e8e53769f20256070e29ab8d060c47d",
+      "exports": 2,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "cmcapture-resource-native": {
+      "original_image_sha256": "b8a048f8ee575281b611a3241c1b89853208f425bdc10fa660b8152bfd5a6d0f",
+      "staged_image_sha256": "291b32ff69b843e39d7d5ce1b9a7c6ddeda3cfcff8291958c721755d0f753bfb",
+      "exports": 2081,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "catalyst-resource-native": {
+      "original_image_sha256": "79ac17bdecd3da67bea45ba337deba6b3a750556df48e52c8fb1dceb92b3db64",
+      "staged_image_sha256": "0ef5fb2ab250544ef02af6cab94469d60260fdb2ea6086d64ce2222a9bfd7600",
+      "exports": 251,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "contextkit-resource-native": {
+      "original_image_sha256": "5d82570e2bca9ae183c55949d640e73499492c036d556d930fa467a0ac1e7962",
+      "staged_image_sha256": "804276daab52f2b4be200dceb98e04d08bd8226709767fff1c13cc32d308b2d7",
+      "exports": 37,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "corebrightness-resource-native": {
+      "original_image_sha256": "cd2648432a51c1f5cd864349eee254e3c71a52913c15e9c8f4c88db02317c720",
+      "staged_image_sha256": "e0cc8524926012902787533a2a68efee4d8be20a94e06b63155c275d126e1ecc",
+      "exports": 45,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "familycircle-resource-native": {
+      "original_image_sha256": "9e74be06ec6f434574c4742ac5cb43399723dbfeeac40554f0539fea744955c7",
+      "staged_image_sha256": "6b203ec4826b96c236deed3cd2dca9cab91d0e220b284e104bb1af4d28d395ff",
+      "exports": 3066,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "feedbackcore-resource-native": {
+      "original_image_sha256": "999dda071948c66c62918cf7e66aaff8ab6442ea2e978ec76503cd9c4d6cb510",
+      "staged_image_sha256": "e2ef2c317baaeff9c95c18edfa8096f727eae7735ebecb1c0f73ad2d0755dbbe",
+      "exports": 1058,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "feedbackservice-resource-native": {
+      "original_image_sha256": "c1d21de99cec21f2fc15af24c95917ecba1072ef3e103e0bd76e27f2827d2805",
+      "staged_image_sha256": "f02ca4860b56ae9594be961abe3633364e4dbc9db006930e8d97815cf7d804c9",
+      "exports": 1523,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "generationalstorage-resource-native": {
+      "original_image_sha256": "4bfb6d886fac1a67fd92e84bad121a20a5227e78f087746418fa4e5b67e39b2d",
+      "staged_image_sha256": "96b29baa1abb68f8a837f7d63c6e9749bf431cc2b4eccbbd2f1074f88f8bf586",
+      "exports": 67,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "managedsettingsobjc-resource-native": {
+      "original_image_sha256": "93305243caf71e19ce499b43bbd82aecc0ab37b9f04ac4e9a64bfc42c0f968be",
+      "staged_image_sha256": "072c7b9052985ee367695a9a4bc0b4c11e82ab00906522105aa3a8f854bf8a43",
+      "exports": 351,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "onboardingkit-resource-native": {
+      "original_image_sha256": "3cd79fff45d234d57a30c5ed0871434a345633d853fbecf60d53a625da0d11fd",
+      "staged_image_sha256": "ebdbf70a80c6af43e78c9e16b2e70ff5cab9efde7ef9c2c16af4bb81eda904f4",
+      "exports": 134,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "photosformats-resource-native": {
+      "original_image_sha256": "8ca114dd6b669e457b259ff651cbdd045f6850cf7b7d493e61b4ce427c7c8997",
+      "staged_image_sha256": "acf0a1a4a1c5a8a16a69c6878af80adb1f47f3e2a8d694002751b7a99b4b34e3",
+      "exports": 1072,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "proactivesummarizationclient-resource-native": {
+      "original_image_sha256": "6489240bf2bad5c64dae1620891426698aded70b32577c2a9f325f2c5bed098e",
+      "staged_image_sha256": "058acd8989faae826bd9cd74142022c56367cebbfe791d8981b284c56c121955",
+      "exports": 1485,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "rtcreporting-resource-native": {
+      "original_image_sha256": "197705a8db4a00c54cf26149ce70b8473f7dd8800b0b71b083f0029af1b5b4c4",
+      "staged_image_sha256": "9c9dbfdc89d69fcbc326be0397c746c3f29580722a6b66f29a13487e7596c214",
+      "exports": 368,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "screentimecore-resource-native": {
+      "original_image_sha256": "30af469042985fcf46939550d308b1caf09461f77d72ce34cecd20c99cc7f597",
+      "staged_image_sha256": "04d90cbd3fb62f2f139a2d7010b99b0c2192b0cab5613078de8b3063d66ddaae",
+      "exports": 1278,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "screentimeserviceui-resource-native": {
+      "original_image_sha256": "a725d09857f7c4fd62fe76d3ac6587ee9cfddf48325ab6414cebfe4026b3b2c3",
+      "staged_image_sha256": "fc05845e3bb6c6176a0aab34f90dc64d637c18b0f91cf22191d1393ed2996beb",
+      "exports": 11,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "telephonyutilities-resource-native": {
+      "original_image_sha256": "c8f0c1f58f10835ee32824ac02affafeed8498e3643fcc177c9d45465ed5baf0",
+      "staged_image_sha256": "4f3a474bf93d0c3ee5c7ae5a621d1522a1e2bcf8a2cfde351993b55efb3307b7",
+      "exports": 1533,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "tipkitcore-resource-native": {
+      "original_image_sha256": "2955d599b4cc59675a9ff1b23c953f0327ac51d242eb784ab333cd2405574864",
+      "staged_image_sha256": "47dea24abd0b93275adca2a07a6c5efa437de6850d65c3ba505175732350de79",
+      "exports": 1586,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "urlformatting-resource-native": {
+      "original_image_sha256": "b134b8f82948fefd18f482df09ac96d359751e32fd6a8bc56e59d06f90f70e8e",
+      "staged_image_sha256": "6acf67cf31c374ec27c9f2436440044c98a488e2186496af5b63cdff32bf3d80",
+      "exports": 0,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "universalaccesscore-resource-native": {
+      "original_image_sha256": "b1a3ee4e43c398a456b9e4b678a3c7291ad925953f170da8b66b1561619cf3e8",
+      "staged_image_sha256": "f85168a28ba3d7ab1677b1a3c6faca2cb1ae8847f2edd33b653cf35bf79d9595",
+      "exports": 589,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "libuapreferences-dylib-resource-native": {
+      "original_image_sha256": "d70f798d65e06bcc87817fd24cb0baf69cb98bbec9fa56eb005fa229f9403b1c",
+      "staged_image_sha256": "ccd204b68f74433ffd46229ac32d53cf5a0ea7e51da51d785d43de7e7d0940e4",
+      "exports": 353,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "libuniversalaccess-dylib-resource-native": {
+      "original_image_sha256": "c737a517b7ae45fa3f17e9d3d4013171f91160ddc2bf9e9adfef92a2d70ca573",
+      "staged_image_sha256": "784c1d49c6ce9e59cdd0a6d0c5ec8f9e02674936ba9297684aac58b57e7bc8b1",
+      "exports": 27,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "libswiftsys-time-dylib-resource-native": {
+      "original_image_sha256": "b755730670c27cbf56601cc2b250f958f18fc345bef7718179a2aefb77115437",
+      "staged_image_sha256": "44bfe3fe7e1bf4516ccc597a47ef26ffa4df9eeabf0aadb8a3d578dc88054798",
+      "exports": 1,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "lightweightcoderequirements-resource-native": {
+      "original_image_sha256": "208412269e5742d50e3a65e3d88ee535ffca9811866121ea5a6f1c225e6c9927",
+      "staged_image_sha256": "16da0586c32e26256e50264eb833d7f547871256839f34cd1bd9b1c270c86ae6",
+      "exports": 692,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "libtle-dylib-resource-native": {
+      "original_image_sha256": "199f0a11b65f9d347e73324d61a130c6db5b67b7ce6a28d40277fca283c22547",
+      "staged_image_sha256": "03bf3ed6252157931ce8f0d53eec1e1b8653154b410a261620e923b72f006fe2",
+      "exports": 64,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "symptomdiagnosticreporter-resource-native": {
+      "original_image_sha256": "294c3373aa44c29c8c75fe24f58e784139e2db015e509a09295c684386fa53da",
+      "staged_image_sha256": "12ab38bb94c3e572c9b1a7ce59a59adad62aa2fe6d0357a4156aaada1fb5ed11",
+      "exports": 198,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "desktopservicespriv-resource-native": {
+      "original_image_sha256": "ff11b1378283fbc4fdc8a591ac21dce117e1773f23b8c9eb04cb27ccba506f7c",
+      "staged_image_sha256": "9ee695b851df84d1d5fb2df26482a10bda63e741b3b6243891a9e0e82e5252e9",
+      "exports": 497,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    },
+    "netauth-resource-native": {
+      "original_image_sha256": "dcd349ce243180245badb6ebe457ce3d3482ae4c9b22980651ea50d14c6d05f7",
+      "staged_image_sha256": "c89396b03b881871e83d9d33ac8056dbb0708260a724de4044d93cf3b843115c",
+      "exports": 70,
+      "modern_adapter": false,
+      "backend_call_overrides": [],
+      "redirected_imports": []
+    }
+  },
+  "shared_tool_regressions": [
+    {
+      "original_target": "swift-os",
+      "regression_target": "swift-os-keypath-regression",
+      "byte_identical": true,
+      "staged_image_sha256": "208825ed765c2b351fdd383760883cb2dba7ceec6bba06a0331f1cffc2a2eec9",
+      "log": "logs/swift-os-keypath-shared-tool-regression.log",
+      "log_sha256": "fece733a2fbbcec3fdab14888ce2cea527ca5a0464dafa4168a4fea3f16018e3",
+      "runtime_execution_proven_by_this_comparison": false
+    },
+    {
+      "original_target": "rsd-full-native",
+      "regression_target": "rsd-full-native-keypath-regression",
+      "byte_identical": true,
+      "staged_image_sha256": "fc3d5649dea2e7d7cab9052b9cd7a9068ddc8cf07134ecac3fe4bb95205a9e92",
+      "log": "logs/rsd-full-native-keypath-shared-tool-regression.log",
+      "log_sha256": "1d067864c84d0a19dc35fe1f7524e02f9b367170303bd3765112351521f8c4a1",
+      "runtime_execution_proven_by_this_comparison": false
+    }
+  ],
+  "resource_tool_version_checks_passed": false,
+  "next_observed_missing_dependency": "Sharing.framework",
+  "evidence_kind": "Summary of actual local experiments; binaries, raw cache bytes and SDKs are excluded.",
+  "original_protocol_pointer_checks": 6,
+  "pooled_class_reference_checks": 33,
+  "latest_tool_probe": "Original actool and ibtool --version; DISPLAY, WAYLAND_DISPLAY and XAUTHORITY removed; both fail loading Sharing.framework from DesktopServicesPriv.",
+  "fresh_fixed_snapshot_reproduction": {
+    "verified": true,
+    "base_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+    "image_count": 64,
+    "all_images_byte_identical_to_research_outputs": true,
+    "source_reconstruction_inputs": [
+      "scripts/rebuild-c-cache-image.py",
+      "scripts/restore-objc-metadata.py",
+      "scripts/restore-swift-metadata.py",
+      "config/ios-resource-image-pins.json"
+    ],
+    "shared_inputs": [
+      "original Intel cache/subcaches",
+      "original extracted images",
+      "existing DyldExtractor source"
+    ],
+    "new_project_local_Capstone_download_verified": true,
+    "Darling_executed": false,
+    "complete_cold_runtime_rebuild_verified": false
+  },
+  "fresh_structural_tests": {
+    "swift-keypath-environment-layouts.json": {
+      "verified": true,
+      "checks": 22,
+      "sha256": "e861cb74ff0b23f99f5432fc095f254013b3faceaa5af105e7eb99f3d85ce002"
+    },
+    "objc-protocol-got-relocation.json": {
+      "verified": true,
+      "checks": 6,
+      "sha256": "aae75e49c35deb823f1300d5403b3cf5c32a94e7ba6cb97ee9ffcbb8473be396"
+    },
+    "pooled-objc-class-reference-relocation.json": {
+      "verified": true,
+      "checks": 33,
+      "sha256": "c6aba9fe957132d6a8036305f988d93236442fb00bb764c81becc70e491a5ed3"
+    }
+  },
+  "overlay_isolation_tests": {
+    "passed": true,
+    "tests": 8
+  },
+  "selected_build_and_stage": {
+    "target": "netauth-resource-native",
+    "passed": true,
+    "Darling_executed": false
+  },
+  "full_resource_compilation_verified": false
+}

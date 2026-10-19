@@ -67,6 +67,8 @@ class InstallerChecks(unittest.TestCase):
             with tarfile.open(output) as archive:
                 names = archive.getnames()
                 self.assertIn('linuxcode/linuxcode/cli.py', names)
+                self.assertIn('linuxcode/dev/resource-runtime/apply-overlay.py', names)
+                self.assertIn('linuxcode/dev/resource-runtime/payload/scripts/rebuild-c-cache-image.py', names)
                 self.assertFalse(any('/.local/' in n or n.endswith(('.xip', '.dylib', '.p12')) for n in names))
                 self.assertTrue(all(i.isfile() for i in archive.getmembers()))
             with self.assertRaisesRegex(RuntimeError, 'replace'):

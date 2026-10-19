@@ -1,0 +1,31 @@
+{
+  "swift-os-resource-regression": {
+    "path": "/usr/lib/swift/libswiftos.dylib",
+    "sha256": "61251fe401a25f423a115e59187d87ded15671a36db254e6f1e7f32b6dda3ef5",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "recover_coalesced_data_exports": [
+      "/usr/lib/swift/libswiftCore.dylib"
+    ],
+    "describe_lazy_helpers": false,
+    "import_providers": {
+      "__os_metric_double_create_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "__os_metric_double_op_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "__os_metric_int64_create_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "__os_metric_int64_op_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "__os_metric_set_scale_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "__os_metric_set_unit_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "__os_metric_uint64_create_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "__os_metric_uint64_op_impl": "/usr/lib/libDarlingMetrics.dylib",
+      "_os_metric_dimensions_add": "/usr/lib/libDarlingMetrics.dylib",
+      "_os_metric_dimensions_create": "/usr/lib/libDarlingMetrics.dylib",
+      "_os_metric_group_create": "/usr/lib/libDarlingMetrics.dylib"
+    }
+  },
+  "rsd-full-native-resource-regression": {
+    "path": "/System/Library/PrivateFrameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery",
+    "sha256": "98f66f7158642ef7bd6e0a29907c0f6a4afc04d83d49e74b1765bc54ee5c7105",
+    "reference_set": "fullsystem",
+    "objc_classes": 7
+  }
+}

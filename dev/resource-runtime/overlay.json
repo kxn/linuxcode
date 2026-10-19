@@ -1,0 +1,513 @@
+{
+  "schema": 1,
+  "name": "resource-runtime-2026.10.19",
+  "base": {
+    "repository": "https://github.com/kxn/linuxcode.git",
+    "commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+    "tag": "runtime-2026.10.19",
+    "checkpoint": {
+      "source-manifest.json": "8f4f6954c146c5be4b7915d878377c9bac2bf0d2681df47f1ad4aa08937f823a",
+      "workspace-files.json": "f3ae46e47cef776d554a5a18271a91c9f183e9083105de49a1d135c8279a0f2e",
+      "restore-sources.py": "f535f4b6c081fba5aa5b6f2045ff8ba115d11406a2e23e92602d7b6b628cd5a2"
+    }
+  },
+  "targets": [
+    "coresvg-resource-native",
+    "coretheme-resource-native",
+    "iconrendering-resource-native",
+    "renderbox-resource-native",
+    "textureio-resource-native",
+    "coreui-resource-native",
+    "featureflags-resource-native",
+    "swiftui-resource-native",
+    "swiftuicore-resource-native",
+    "attributegraph-resource-native",
+    "quicklookui-resource-native",
+    "iconfoundation-resource-native",
+    "accessibility-resource-native",
+    "coretransferable-resource-native",
+    "developertoolssupport-resource-native",
+    "quicklookthumbnailing-resource-native",
+    "screencapturekit-resource-native",
+    "symbols-resource-native",
+    "tipkit-resource-native",
+    "quicklook-swiftui-resource-native",
+    "categories-resource-native",
+    "designlibrary-resource-native",
+    "devicemanagement-resource-native",
+    "feedback-resource-native",
+    "gestures-resource-native",
+    "sfsymbols-resource-native",
+    "screentimeui-resource-native",
+    "signpostsupport-resource-native",
+    "uiintelligencesupport-resource-native",
+    "universalaccess-resource-native",
+    "extensionfoundation-resource-native",
+    "extensionkit-resource-native",
+    "fileprovider-resource-native",
+    "replaykit-resource-native",
+    "locationessentials-resource-native",
+    "axcoreutilities-resource-native",
+    "accessibilitysupport-resource-native",
+    "cmcapture-resource-native",
+    "catalyst-resource-native",
+    "contextkit-resource-native",
+    "corebrightness-resource-native",
+    "familycircle-resource-native",
+    "feedbackcore-resource-native",
+    "feedbackservice-resource-native",
+    "generationalstorage-resource-native",
+    "managedsettingsobjc-resource-native",
+    "onboardingkit-resource-native",
+    "photosformats-resource-native",
+    "proactivesummarizationclient-resource-native",
+    "rtcreporting-resource-native",
+    "screentimecore-resource-native",
+    "screentimeserviceui-resource-native",
+    "telephonyutilities-resource-native",
+    "tipkitcore-resource-native",
+    "urlformatting-resource-native",
+    "universalaccesscore-resource-native",
+    "libuapreferences-dylib-resource-native",
+    "libuniversalaccess-dylib-resource-native",
+    "libswiftsys-time-dylib-resource-native",
+    "lightweightcoderequirements-resource-native",
+    "libtle-dylib-resource-native",
+    "symptomdiagnosticreporter-resource-native",
+    "desktopservicespriv-resource-native",
+    "netauth-resource-native"
+  ],
+  "files": {
+    "scripts/rebuild-c-cache-image.py": {
+      "sha256": "f71d9f5b5ed2628aca6c80ea9185d47482c0a82bf9e0eb4aafc6b18c38787f90",
+      "mode": 420,
+      "baseline_sha256": "6b8e11dbb3a177beff300e62d536fa9c333aa362bfcf1ce2912e16ca81c3b7a8",
+      "baseline_mode": 420
+    },
+    "scripts/restore-swift-metadata.py": {
+      "sha256": "6c91472fb643dd33a4e36512684f97d23396dcb97b8013eb566c17e764f10691",
+      "mode": 420,
+      "baseline_sha256": "4d94714da7b50ba92a217e7b5a9b2f1025436cf535a9d06e7cc59042c79d3ebb",
+      "baseline_mode": 420
+    },
+    "scripts/swift-keypath-environment-records.py": {
+      "sha256": "174d93e492289d1863ba4fbb5eff49e9dd116b32cfed1b9e1736368296171c3f",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/test-swift-keypath-environments.py": {
+      "sha256": "7dcc3fde9bb2828648f761c16bd5cc6fc6090fd14fee613fff22b26d2d8718ac",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/test-original-swift-keypath-environments.py": {
+      "sha256": "d301aae9b5bf43cce401957408ca469a5b5aa2f4ad7f434b6a6e521f6a547c89",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/stage-ios-resource-native.py": {
+      "sha256": "ef2044ed48290e13960bfc578297b5e9550bb92c2a7bf7228ce357e0226c4e72",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/ios-resource-native-profile.py": {
+      "sha256": "35630dd4921a14df573b7c02588bd5da911c603c21e25f44614bdc46638239ed",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/stage-ios-resource-closure.py": {
+      "sha256": "9a478ea6e800124f8897f51f676e58c64956a3dadc8ab6431641bc5d47fb24ed",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/ios-resource-closure-profile.py": {
+      "sha256": "9e0aa1c75fdc0ab6d233f072ac412ba71f0f5c102550c4d7b4934d0f826e8181",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/probe-ios-resource-tools.py": {
+      "sha256": "d4c0e89bf723a3fb511fba511b8e81cd509de6146b600890ba5283cc5d640465",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "fixtures/SwiftKeyPathEnvironment/MarkerKeyPath.swift": {
+      "sha256": "f096986c64d87169f120ec8706bb7bc6a6c227b178b2e6ff7c13c184be3fc72a",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "fixtures/SwiftKeyPathEnvironment/main.swift": {
+      "sha256": "cf7d91eb04d32e6536c1d96d76af1bdfaf599cf178d3d75908c18129ea0ac012",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "config/ios-resource-image-pins.json": {
+      "sha256": "e8bcd09da729e590b9927e05fbdb3392e222b734982fcddab6f7b41584af3421",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/prepare-ios-resource-probe.py": {
+      "sha256": "f4d86da543d8615569b52d74465eb688fad197465f45e9ccf335a458cd166f02",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/restore-objc-metadata.py": {
+      "sha256": "c904b092b16835410f7d1db7466ba21595907e4044ca72682adac300d4711e4e",
+      "mode": 420,
+      "baseline_sha256": "515e3b9b3c903037a819c7611ce99bbe7ec460e64185f29eb5befb3e377b5605",
+      "baseline_mode": 420
+    },
+    "scripts/test-pooled-objc-class-references.py": {
+      "sha256": "8012ee7df38321c30295ca7daf3d1787e06b8711559b060505a8f91a1fd34bda",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/test-objc-protocol-got.py": {
+      "sha256": "33a9e7f767044d6861b307cec0e775f6f802ed3587e329a0c23223df2c2d3e87",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "config/ios-resource-regression-pins.json": {
+      "sha256": "3ab6d9b480a67f9b813ce02c42687d69ecc38ee2a21521d6ae8543cef67d924f",
+      "mode": 420,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/prepare-capstone.py": {
+      "sha256": "c1a3180be1265fde0bbc3caada49d73d849056799fb93703455293dd43ef7e05",
+      "mode": 420,
+      "baseline_sha256": "09269ea2a6251c497ba1224e62ef405d5cc6d5be7059443a110e93b258e10df1",
+      "baseline_mode": 420
+    }
+  },
+  "baseline_dependencies": {
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab",
+    "scripts/inspect-dsc-constants.py": "9c50a90bc292c984137158c6dcc35686bd9ef388b27d959992d916696e5d5463",
+    "scripts/restore-tls-metadata.py": "4405d587f28ef2c8781aa71a7c83326cddcef9e1a7dad1e95553fd05bc5039b5",
+    "scripts/cache-code-analysis.py": "d10089d9f60dc36d02f0d4d86904a15d8e150c319779a5b0b3fe86ac09bf85a1",
+    "scripts/source-assembly-literals.py": "6cf3b5b115ba5dfb32c3ff775aac36e3730b68dd8de2607732581750f53e43ec",
+    "scripts/xcode-tool-dispatch-runtime-profile.py": "babaa737956d08b898e0bcc41ef6fce92d1423005a18ceccd6ad542357a099c4",
+    "config/capstone.json": "7ae645c2104e0651ce54fc368ce47f6995bf651895509ea99b2bb892084e0556"
+  },
+  "scope": "Developer source overlay for 64 specifically pinned original Intel resource images. Requires the existing compatibility candidate and local original OS reference inputs. Original actool/ibtool still fail during dependency loading; no successful resource compilation or cold installation claim.",
+  "build_arguments": {
+    "coresvg-resource-native": [
+      "--analyze-code"
+    ],
+    "coretheme-resource-native": [
+      "--analyze-code"
+    ],
+    "iconrendering-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "renderbox-resource-native": [
+      "--analyze-code"
+    ],
+    "textureio-resource-native": [
+      "--analyze-code"
+    ],
+    "coreui-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "featureflags-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "swiftui-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "swiftuicore-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "attributegraph-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "quicklookui-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "iconfoundation-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "accessibility-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "coretransferable-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "developertoolssupport-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "quicklookthumbnailing-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "screencapturekit-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "symbols-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "tipkit-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "quicklook-swiftui-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "categories-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "designlibrary-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "devicemanagement-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "feedback-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "gestures-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "sfsymbols-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "screentimeui-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "signpostsupport-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "uiintelligencesupport-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "universalaccess-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "extensionfoundation-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "extensionkit-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "fileprovider-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "replaykit-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "locationessentials-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "axcoreutilities-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "accessibilitysupport-resource-native": [],
+    "cmcapture-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "catalyst-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "contextkit-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "corebrightness-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "familycircle-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "feedbackcore-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "feedbackservice-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "generationalstorage-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "managedsettingsobjc-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "onboardingkit-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "photosformats-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "proactivesummarizationclient-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "rtcreporting-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "screentimecore-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "screentimeserviceui-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "telephonyutilities-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "tipkitcore-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "urlformatting-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "universalaccesscore-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "libuapreferences-dylib-resource-native": [
+      "--analyze-code"
+    ],
+    "libuniversalaccess-dylib-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "libswiftsys-time-dylib-resource-native": [],
+    "lightweightcoderequirements-resource-native": [
+      "--experimental-swift",
+      "--repair-swift-relative",
+      "--analyze-code"
+    ],
+    "libtle-dylib-resource-native": [
+      "--analyze-code"
+    ],
+    "symptomdiagnosticreporter-resource-native": [
+      "--analyze-code"
+    ],
+    "desktopservicespriv-resource-native": [
+      "--analyze-code"
+    ],
+    "netauth-resource-native": [
+      "--analyze-code"
+    ]
+  },
+  "analysis_dependencies": {
+    "DyldExtractor": {
+      "repository": "https://github.com/arandomdev/DyldExtractor.git",
+      "commit": "0e1b35a5f60e7041c51b57a54cc36d815fe7adf2"
+    },
+    "Capstone": {
+      "version": "5.0.9",
+      "lock": "config/capstone.json",
+      "preparation_script": "scripts/prepare-capstone.py"
+    }
+  }
+}
