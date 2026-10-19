@@ -143,3 +143,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 原版签名的后续里程碑已完成原版 Xcode 的三个 CodeSign 任务及 PATH 入口全新构建，详见 [原版 codesign 附件](research/native-codesign/README.md)。该可选候选不使用 zsign，仍仅验证简单 CocoaPods App 的 ad-hoc 签名。
 
 [Unity 宿主工具检查点](research/unity-host-tools/README.md) 保存 Darling 对动态描述符上限的源码修复、原版 IL2CPP/Bee 启动结果，以及 Unity 6 共享内存重映射的实际失败。尚未完成游戏 App 构建。
+
+[Unity 6 共享内存与启动修复](research/unity-shared-remap/README.md) 已通过原版 IL2CPP/Bee 启动和实际内存共享检查。GameAssembly 编译驱动仍因异步 socket 注册报错；Xcode 的成功横幅与缺失的实际产物被独立区分，尚未完成游戏编译。

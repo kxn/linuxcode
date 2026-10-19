@@ -47,3 +47,5 @@ python3 linuxcode.py package --output dist/linuxcode-0.1.0-source.tar.gz
 [后续资源依赖开发检查点](dev/resource-runtime/research/native-resource-dependencies/README.md) 保存 Swift 泛型环境和 accessible-function 表的解析修复、70 个原版依赖的延迟绑定恢复、原版 SIMD 数值检查及实际失败证据。CoreVideo CPU 缓冲区仍缺 IOSurface 服务；actool/ibtool 最新实验缺 AppleIDSSOAuthentication。它没有改变安装基线，也没有宣称资源编译已完成。
 
 [Unity 宿主工具检查点](dev/resource-runtime/research/unity-host-tools/README.md) 保存 Darling 对动态描述符上限的源码修复、原版 IL2CPP/Bee 启动结果，以及 Unity 6 共享内存重映射的实际失败。尚未完成游戏 App 构建。
+
+[Unity 6 共享内存与启动修复](dev/resource-runtime/research/unity-shared-remap/README.md) 已通过原版 IL2CPP/Bee 启动和实际内存共享检查。GameAssembly 编译驱动仍因异步 socket 注册报错；Xcode 的成功横幅与缺失的实际产物被独立区分，尚未完成游戏编译。
