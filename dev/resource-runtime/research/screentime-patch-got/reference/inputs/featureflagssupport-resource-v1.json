@@ -1,0 +1,37 @@
+{
+  "target": "featureflagssupport-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/FeatureFlagsSupport.framework/Versions/A/FeatureFlagsSupport",
+    "sha256": "bcb38deedf7a28442b6cf419335d34809786c6bcec340ade27c902826f960b36",
+    "reference_set": "fullsystem",
+    "objc_classes": 17,
+    "import_providers": {}
+  },
+  "original_bytes": 135168,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "b717ddbc372136960ae638ba7fb46fbb9e8975767bd90af02ac73f7ae1f3d07e",
+  "manifest_sha256": "6e8fef49503c3c9e09ccea353d61ad1b0a37d556ee523d9101848e1b7cd65f21",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "featureflagssupport-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "a58e309ed53389a95daeaca970dac33a6fbe4be96d0711b1909152012a703858",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/featureflagssupport-resource-v1-build.log",
+  "log_sha256": "8bb9e80f7201b94dc2a4ffb678efb136844b2bca1fdc249ca6baaa41ca55be7f"
+}

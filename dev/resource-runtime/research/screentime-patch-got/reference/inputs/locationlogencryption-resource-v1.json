@@ -1,0 +1,40 @@
+{
+  "target": "locationlogencryption-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/LocationLogEncryption.framework/Versions/A/LocationLogEncryption",
+    "sha256": "d5483c6ffba61f27e8a8a9b13ace0beac7e46bb547adcef565a7a1f13dd9dd41",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {}
+  },
+  "original_bytes": 32768,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "4c5f155dcb86540be6079b0ddb279b0370786ff90324ba54977065f8727e326f",
+  "manifest_sha256": "0614c1e5a3a2a5bf3e5afb4b177bddd09bf8c98757a027cc58c337fae1b7f5b7",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "locationlogencryption-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0544ea0011b6b5ffe7a051cff6ad976157c6c9e39eb72c49767575a750deea57",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/locationlogencryption-resource-v1-build.log",
+  "log_sha256": "867ec71c6cf07e5eae4fdac4fbe855f06dbfb74947bb2a7f121ed7bb39eeb833"
+}

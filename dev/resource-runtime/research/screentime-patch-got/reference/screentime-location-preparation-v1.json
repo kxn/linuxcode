@@ -1,0 +1,76 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/screentime-location-resource-batch-v1.json",
+  "configuration_sha256": "98c6670e94d1779bf73a0378106e95e5193404279555dd1d1d6c6a346a8c2d21",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "7692df9ffb83f77006a6c06fd212de444671b3237ac718863a1495ecb9e27254",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/FamilyControls.framework/Versions/A/FamilyControls",
+      "attempts": [],
+      "prepared_target": "familycontrols-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel",
+      "attempts": [
+        {
+          "target": "configurationenginemodel-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel",
+            "--target",
+            "configurationenginemodel-resource-v1",
+            "--build"
+          ],
+          "log": "logs/configurationenginemodel-resource-v1-batch-preparation.log",
+          "log_sha256": "27bf25c07accb462f2d58aeea677488a52800d9ee7e6a230e81cf120a0dc4129",
+          "preparation": "artifacts/configurationenginemodel-resource-v1-input.json"
+        },
+        {
+          "target": "configurationenginemodel-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel",
+            "--omit-lazy-helper-section",
+            "--target",
+            "configurationenginemodel-resource-v2",
+            "--build"
+          ],
+          "log": "logs/configurationenginemodel-resource-v2-batch-preparation.log",
+          "log_sha256": "fa46d43edb5527354fc9510d3ba7350406060374e2cbb7b5ee004459a24271a1",
+          "preparation": "artifacts/configurationenginemodel-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "configurationenginemodel-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleMediaServices.framework/Versions/A/AppleMediaServices",
+      "attempts": [
+        {
+          "target": "applemediaservices-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppleMediaServices.framework/Versions/A/AppleMediaServices",
+            "--target",
+            "applemediaservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/applemediaservices-resource-v1-batch-preparation.log",
+          "log_sha256": "bd12a648a6dffc7dd6edab3f6c6e0215083f94802b769e9679d2e0400c40c89b",
+          "preparation": "artifacts/applemediaservices-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null
+    }
+  ]
+}

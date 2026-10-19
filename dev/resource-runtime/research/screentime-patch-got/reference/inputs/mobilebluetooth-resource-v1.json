@@ -1,0 +1,37 @@
+{
+  "target": "mobilebluetooth-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/MobileBluetooth.framework/Versions/A/MobileBluetooth",
+    "sha256": "886d5f1b0c5c0e62e543ae252af5c1a8666f57db8403ec93a53261f829770c6f",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 413696,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libFDR.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "58682c4c16df1d0644da3514973d231876465a2dc08a6cb49edc88fb368f475d",
+  "manifest_sha256": "856e9c57c365147e3b9ae5e70a2b19e39dd7aeff5c7937ac864341d46548a4c1",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mobilebluetooth-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "2a76283d64a61ac705faa7728ccb4c61b147483463a37445273f6924fc340a7c",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/mobilebluetooth-resource-v1-build.log",
+  "log_sha256": "e62ccf72b300730f449b34c8346955f864ac093892fdd88846999c7f27e3b791"
+}

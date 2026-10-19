@@ -1,0 +1,39 @@
+{
+  "target": "bluetoothmanager-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/BluetoothManager.framework/Versions/A/BluetoothManager",
+    "sha256": "119c53af6225319fe22bec68d216f9c29b49f1662bdd06921ba8f3b10e73153f",
+    "reference_set": "fullsystem",
+    "objc_classes": 3,
+    "import_providers": {}
+  },
+  "original_bytes": 147456,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/MobileBluetooth.framework/Versions/A/MobileBluetooth",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "d309c70a7afc57ea8e667b8f442e291250c5682e6275a36cacf74a3aa865dc30",
+  "manifest_sha256": "58682c4c16df1d0644da3514973d231876465a2dc08a6cb49edc88fb368f475d",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "bluetoothmanager-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "2a76283d64a61ac705faa7728ccb4c61b147483463a37445273f6924fc340a7c",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/bluetoothmanager-resource-v1-build.log",
+  "log_sha256": "c5f6dfd6151569e5926982e0417b0b7e184ef396a76ec69022b6dd3103829979"
+}

@@ -1,0 +1,44 @@
+{
+  "target": "avrouting-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+    "sha256": "ab2226e0bc059544be16826c6f2e179fa411556b3dc38117004ce2adf9412835",
+    "reference_set": "fullsystem",
+    "objc_classes": 121,
+    "import_providers": {}
+  },
+  "original_bytes": 917504,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/PrivateFrameworks/CoreUtils.framework/Versions/A/CoreUtils",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "856e9c57c365147e3b9ae5e70a2b19e39dd7aeff5c7937ac864341d46548a4c1",
+  "manifest_sha256": "c54276c9717f6aa73513ef64c0932beea88a1a582f3ed3320dd86b47c440a84a",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "avrouting-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "2a76283d64a61ac705faa7728ccb4c61b147483463a37445273f6924fc340a7c",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/avrouting-resource-v1-build.log",
+  "log_sha256": "9d63853126af93bda5ae57dbabb39fb4a3e0d4a8012ea46338018503d9b21b3f"
+}

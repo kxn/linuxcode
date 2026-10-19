@@ -1,0 +1,42 @@
+{
+  "target": "persistentconnection-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/PersistentConnection.framework/Versions/A/PersistentConnection",
+    "sha256": "e35bade5ab9590ecc07357a8fb35c41c08b46c840a86006637f7d4ba3bcdce02",
+    "reference_set": "fullsystem",
+    "objc_classes": 20,
+    "import_providers": {}
+  },
+  "original_bytes": 237568,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/PrivateFrameworks/CommonUtilities.framework/Versions/A/CommonUtilities",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "97e80f98c2d7e00a0bee921f1e94a17419eff46076a1985682096ce90f2b57c8",
+  "manifest_sha256": "84c8be1beb64b5521b2b512ac8e330047ca9371cb65d36aaf418d7ee71ad318b",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "persistentconnection-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0544ea0011b6b5ffe7a051cff6ad976157c6c9e39eb72c49767575a750deea57",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/persistentconnection-resource-v1-build.log",
+  "log_sha256": "4264a377602fb2b22f06c3151aacdb5ca18ab498959f6fc85032187cc51a5c60"
+}

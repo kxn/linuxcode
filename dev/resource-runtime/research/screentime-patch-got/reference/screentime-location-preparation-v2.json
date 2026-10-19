@@ -1,0 +1,210 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/screentime-location-resource-batch-v2.json",
+  "configuration_sha256": "020676c358fc3e78d9adb8beef19cb034c00e3286ee415245ee85ca449a571fb",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "7692df9ffb83f77006a6c06fd212de444671b3237ac718863a1495ecb9e27254",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/FamilyControls.framework/Versions/A/FamilyControls",
+      "attempts": [],
+      "prepared_target": "familycontrols-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel",
+      "attempts": [],
+      "prepared_target": "configurationenginemodel-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTracking",
+      "attempts": [
+        {
+          "target": "usagetracking-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTracking",
+            "--target",
+            "usagetracking-resource-v1",
+            "--build"
+          ],
+          "log": "logs/usagetracking-resource-v1-batch-preparation.log",
+          "log_sha256": "ae27c32a0d8d939619dcd8944b475e6aac76205e7677fcf9743c37e37691ea8d",
+          "preparation": "artifacts/usagetracking-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "usagetracking-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/DeviceActivity.framework/Versions/A/DeviceActivity",
+      "attempts": [
+        {
+          "target": "deviceactivity-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/DeviceActivity.framework/Versions/A/DeviceActivity",
+            "--target",
+            "deviceactivity-resource-v1",
+            "--build"
+          ],
+          "log": "logs/deviceactivity-resource-v1-batch-preparation.log",
+          "log_sha256": "aa30547a5b33c91c0f79f3a8eaf65cf1ae87bf50c91ba8bdaf3c645fb6a69e14",
+          "preparation": "artifacts/deviceactivity-resource-v1-input.json"
+        },
+        {
+          "target": "deviceactivity-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "deviceactivity-resource-v1",
+            "--exact-import-audit",
+            "artifacts/deviceactivity-original-import-audit-v1.json",
+            "--target",
+            "deviceactivity-resource-v2",
+            "--build"
+          ],
+          "log": "logs/deviceactivity-resource-v2-batch-preparation.log",
+          "log_sha256": "f8f87d28f7bb0bdb51fa9d8b9996e8cab76c19d0518f9acc72592b20b48a3396",
+          "preparation": "artifacts/deviceactivity-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "deviceactivity-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+      "attempts": [
+        {
+          "target": "systemadministration-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+            "--target",
+            "systemadministration-resource-v1",
+            "--build"
+          ],
+          "log": "logs/systemadministration-resource-v1-batch-preparation.log",
+          "log_sha256": "3fbde4d34e782520fba83ca8e1d735391a9f7952334b0647fd67d261dd01e92f",
+          "preparation": "artifacts/systemadministration-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "systemadministration-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomPresentationFeed.framework/Versions/A/SymptomPresentationFeed",
+      "attempts": [
+        {
+          "target": "symptompresentationfeed-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomPresentationFeed.framework/Versions/A/SymptomPresentationFeed",
+            "--target",
+            "symptompresentationfeed-resource-v1",
+            "--build"
+          ],
+          "log": "logs/symptompresentationfeed-resource-v1-batch-preparation.log",
+          "log_sha256": "20b67f6b2c9563f480402c316a6d0a688ed338a378f9422ec48810cc084a9cd9",
+          "preparation": "artifacts/symptompresentationfeed-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "symptompresentationfeed-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CryptoKitPrivate.framework/Versions/A/CryptoKitPrivate",
+      "attempts": [
+        {
+          "target": "cryptokitprivate-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CryptoKitPrivate.framework/Versions/A/CryptoKitPrivate",
+            "--target",
+            "cryptokitprivate-resource-v1",
+            "--build"
+          ],
+          "log": "logs/cryptokitprivate-resource-v1-batch-preparation.log",
+          "log_sha256": "42d2b295b00dec565323e67e8d678a42788ab58adcf2edd6d95592ed431bde6d",
+          "preparation": "artifacts/cryptokitprivate-resource-v1-input.json"
+        },
+        {
+          "target": "cryptokitprivate-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "cryptokitprivate-resource-v1",
+            "--exact-import-audit",
+            "artifacts/cryptokitprivate-original-import-audit-v1.json",
+            "--target",
+            "cryptokitprivate-resource-v2",
+            "--build"
+          ],
+          "log": "logs/cryptokitprivate-resource-v2-batch-preparation.log",
+          "log_sha256": "9b407c2b64356fcdec74aea620ee3ffe3572c42cbe5781e00eaa231f6cd46571",
+          "preparation": "artifacts/cryptokitprivate-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "cryptokitprivate-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/FeatureFlagsSupport.framework/Versions/A/FeatureFlagsSupport",
+      "attempts": [
+        {
+          "target": "featureflagssupport-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/FeatureFlagsSupport.framework/Versions/A/FeatureFlagsSupport",
+            "--target",
+            "featureflagssupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/featureflagssupport-resource-v1-batch-preparation.log",
+          "log_sha256": "8c09aee2c1254dd611ceb09495b33523ee54c32dc1470739394e0d19124099bd",
+          "preparation": "artifacts/featureflagssupport-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "featureflagssupport-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleMediaServicesKitInternal.framework/Versions/A/AppleMediaServicesKitInternal",
+      "attempts": [
+        {
+          "target": "applemediaserviceskitinternal-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppleMediaServicesKitInternal.framework/Versions/A/AppleMediaServicesKitInternal",
+            "--target",
+            "applemediaserviceskitinternal-resource-v1",
+            "--build"
+          ],
+          "log": "logs/applemediaserviceskitinternal-resource-v1-batch-preparation.log",
+          "log_sha256": "173708f4f8e94fc22813366cb6db67d7bf152eeb6a25e02ab06ecd967a0e94a9",
+          "preparation": "artifacts/applemediaserviceskitinternal-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "target": "ftclientservices-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/FTClientServices.framework/Versions/A/FTClientServices",
+    "sha256": "41bc3c6e8e9cdbabb48d9baa4bd0c0d5d7378160b98a1d692637fa005c117776",
+    "reference_set": "fullsystem",
+    "objc_classes": 3,
+    "import_providers": {}
+  },
+  "original_bytes": 20480,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/usr/lib/libtidy.A.dylib",
+    "/System/Library/PrivateFrameworks/Marco.framework/Versions/A/Marco",
+    "/System/Library/PrivateFrameworks/IMFoundation.framework/Versions/A/IMFoundation",
+    "/System/Library/PrivateFrameworks/FTServices.framework/Versions/A/FTServices",
+    "/System/Library/PrivateFrameworks/CommonUtilities.framework/Versions/A/CommonUtilities",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "4582bd6f2fc7e954235bb633294b2d6aa09b622ef2a0cd33c41d5d025517f467",
+  "manifest_sha256": "3496f1bbff9f9aa5063b2338dfeb6ecc8aa9c7291c7ccccdd99354d02d64d851",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "ftclientservices-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "f29b16579dd9ac9769f62f0811d04d55f23615e3744616c67097b4955b6abdf7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/ftclientservices-resource-v1-build.log",
+  "log_sha256": "4028ab9cf817e29ce83eacc171b5abdd26cbf4f6fcc4da8c22befa9930df010b"
+}

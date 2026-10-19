@@ -1,0 +1,75 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "applemediaservices-patch-got-v5",
+      "candidate_sha256": "46e56457f5b872f34745b7428efd14e9af391dc9dee0eaa0a9d2c5eb5b9d3419",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 8083035,
+            "sha256": "a9150bf29b90298ad14ddd69cabdb7a44b89ebdc8a7dd349f72386532679a6ee"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 7032,
+            "sha256": "e068389d9ac5ca84ed7f51103b11dc7f490876d0480c85f11c46c8c094d2e3f3"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 2241,
+        "nonzero_addends_verified": 50,
+        "serialized_bindings": 11742,
+        "got_address_references_verified": 7,
+        "original_local_stub_cells_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_GOT_address_rejected": true
+    },
+    {
+      "target": "applemediaserviceskitinternal-patch-got-v5",
+      "candidate_sha256": "006ffd14fe280dbf9e9c121efaff21ed147ec22ed8751a080730172f4f7bb0e7",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 6269148,
+            "sha256": "e71a9f1de00e94783f1ce407e6bd15249ee03d7083a937c3d7940a673e9765c2"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 3570,
+            "sha256": "dbe1ebb67c5fc3bbcf152a317c7cc024970b7a4427fa1cb48514d8a769748a80"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 979,
+        "nonzero_addends_verified": 861,
+        "serialized_bindings": 2915,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 5,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "false_local_binding_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "de04fdb611caffa54107b5ee4d4ea7e357ff2aeaf3311711beb7cc050e753000",
+    "scripts/inspect-preserved-patch-got.py": "6f882f16a552859391b63852b667cac0510129c5e25d55a0be968b8d722d612b"
+  }
+}

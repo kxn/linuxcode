@@ -1,0 +1,38 @@
+{
+  "target": "symptomshared-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/SymptomShared.framework/Versions/A/SymptomShared",
+    "sha256": "41157f0ac614ea757bf08d40aa6cb2b3484bff38d6f44095e6783d5d6447d59a",
+    "reference_set": "fullsystem",
+    "objc_classes": 11,
+    "import_providers": {}
+  },
+  "original_bytes": 94208,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "214903285c81e5141a904ee76f8255a9eaeb76ba271aca53379610f68c6d2c9e",
+  "manifest_sha256": "dcf9090dcf38ec5a399e91aa068f583ab51a20e77b12a1b2c910dc6aa41a54d7",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "symptomshared-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "2a76283d64a61ac705faa7728ccb4c61b147483463a37445273f6924fc340a7c",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/symptomshared-resource-v1-build.log",
+  "log_sha256": "9d7cc19288f249e938a116ea220f3f5ca868904b877d2d74f9bbe33d41a9026c"
+}

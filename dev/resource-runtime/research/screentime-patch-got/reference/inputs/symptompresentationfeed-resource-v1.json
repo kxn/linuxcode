@@ -1,0 +1,41 @@
+{
+  "target": "symptompresentationfeed-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomPresentationFeed.framework/Versions/A/SymptomPresentationFeed",
+    "sha256": "4c0ab618279e6599ac36d555404709ca2b4f1d1a93e32ba7e554052d9f3fce07",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {}
+  },
+  "original_bytes": 221184,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/SymptomShared.framework/Versions/A/SymptomShared",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomAnalytics.framework/Versions/A/SymptomAnalytics",
+    "/System/Library/PrivateFrameworks/SymptomDiagnosticReporter.framework/Versions/A/SymptomDiagnosticReporter",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "67257097b309cff68c5e360fa5ba9681b3637b07852860d0cbc205a8d4852342",
+  "manifest_sha256": "7b1bbbddd7fc7c4c4a38c6a4d47be494ab696659d564b7555284e8a001deba86",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "symptompresentationfeed-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "a58e309ed53389a95daeaca970dac33a6fbe4be96d0711b1909152012a703858",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/symptompresentationfeed-resource-v1-build.log",
+  "log_sha256": "f513d437b22fb50e4a6d421e97b24c59d4ed86b94cbbdbfed45ec37f6e36878e"
+}

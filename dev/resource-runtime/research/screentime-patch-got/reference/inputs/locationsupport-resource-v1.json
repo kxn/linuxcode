@@ -1,0 +1,43 @@
+{
+  "target": "locationsupport-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/LocationSupport.framework/Versions/A/LocationSupport",
+    "sha256": "bb0a7f2c0deae8e0455420334c7090d1fb36e3e8d9afc52e8e34f2fd28766fba",
+    "reference_set": "fullsystem",
+    "objc_classes": 34,
+    "import_providers": {}
+  },
+  "original_bytes": 278528,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory",
+    "/System/Library/PrivateFrameworks/LocationLogEncryption.framework/Versions/A/LocationLogEncryption",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libobjc.A.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "84c8be1beb64b5521b2b512ac8e330047ca9371cb65d36aaf418d7ee71ad318b",
+  "manifest_sha256": "4c5f155dcb86540be6079b0ddb279b0370786ff90324ba54977065f8727e326f",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "locationsupport-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0544ea0011b6b5ffe7a051cff6ad976157c6c9e39eb72c49767575a750deea57",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/locationsupport-resource-v1-build.log",
+  "log_sha256": "263dc63f784c5b0605e8598c9acd93f2a47de56f41d1bae6931ba122a986c0ae"
+}

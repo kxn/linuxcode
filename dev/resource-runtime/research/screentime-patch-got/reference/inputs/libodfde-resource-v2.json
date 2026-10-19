@@ -1,0 +1,38 @@
+{
+  "target": "libodfde-resource-v2",
+  "pin": {
+    "path": "/usr/lib/libodfde.dylib",
+    "sha256": "16e3b0adb2fa40f1669a841e66ae761406fe566ea36bcdf4f00a8a6a3adc2797",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false
+  },
+  "original_bytes": 8192,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libCoreStorage.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "688039b0925feb6374c76c96c8df6b002414327837d2e7df485ea09f98d23df7",
+  "manifest_sha256": "214903285c81e5141a904ee76f8255a9eaeb76ba271aca53379610f68c6d2c9e",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libodfde-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "2a76283d64a61ac705faa7728ccb4c61b147483463a37445273f6924fc340a7c",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/libodfde-resource-v2-build.log",
+  "log_sha256": "efc662e75c715aa62f3e954a8223c0a1ee35144290c3d37d632f8ce39462c749"
+}

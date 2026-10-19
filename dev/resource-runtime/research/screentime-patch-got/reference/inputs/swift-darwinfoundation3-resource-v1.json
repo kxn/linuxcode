@@ -1,0 +1,35 @@
+{
+  "target": "swift-darwinfoundation3-resource-v1",
+  "pin": {
+    "path": "/usr/lib/swift/libswift_DarwinFoundation3.dylib",
+    "sha256": "24c6764c4b85de5208cb550895865a2be8aaf28f5494e98264e21feafe1917ce",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 4096,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/swift/libswiftCore.dylib"
+  ],
+  "previous_manifest_sha256": "2c9bdeae79bdd26badf7c758aff86e5d8d6dc26b2b0df78e9f6dcbdf19f786b8",
+  "manifest_sha256": "c4864f145dd19d59e3a4245b3fad9679e213ea6c546b3c7b17235e97d5535160",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "swift-darwinfoundation3-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ded3216cc9206f5e61a63ca4cd9e8864016450ba919f3ee8767b4f1f5d5a9795",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/swift-darwinfoundation3-resource-v1-build.log",
+  "log_sha256": "4b579d3cb0672ba044a8ab1f900ad2b25e5708744f118bc42bb635ff7dc4db20"
+}

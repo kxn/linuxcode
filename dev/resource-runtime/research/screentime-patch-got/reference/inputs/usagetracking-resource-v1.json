@@ -1,0 +1,49 @@
+{
+  "target": "usagetracking-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTracking",
+    "sha256": "d98190e86ef3a9805dbcd0a3b30d98c0c50b51435f8d59ee4ef2489796d4ceea",
+    "reference_set": "fullsystem",
+    "objc_classes": 24,
+    "import_providers": {}
+  },
+  "original_bytes": 454656,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/KnowledgeMonitor.framework/Versions/A/KnowledgeMonitor",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/PrivateFrameworks/BiomeLibrary.framework/Versions/A/BiomeLibrary",
+    "/System/Library/PrivateFrameworks/BiomeStreams.framework/Versions/A/BiomeStreams",
+    "/System/Library/PrivateFrameworks/Categories.framework/Versions/A/Categories",
+    "/System/Library/PrivateFrameworks/CoreDuet.framework/Versions/A/CoreDuet",
+    "/System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/CoreDuetContext",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libicucore.A.dylib",
+    "/System/Library/PrivateFrameworks/MediaRemote.framework/Versions/A/MediaRemote",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "faeaec7066a0956d687fe5dee09de853ee3f718d962487a40a968ec6f68ae863",
+  "manifest_sha256": "f6f5ae73e10cc257c84cb981ac46e76f2b3cd40f81a34f365538a554ed201bf5",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "usagetracking-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "a58e309ed53389a95daeaca970dac33a6fbe4be96d0711b1909152012a703858",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/usagetracking-resource-v1-build.log",
+  "log_sha256": "74f6d7be4faf74770238d8243ca529e7fe641fd28d74c2bdd225b3e55053abf4"
+}

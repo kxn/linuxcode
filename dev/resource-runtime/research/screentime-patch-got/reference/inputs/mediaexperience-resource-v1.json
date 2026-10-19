@@ -1,0 +1,47 @@
+{
+  "target": "mediaexperience-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+    "sha256": "4d657ff3dcd5a3cf27081b5b94879d9e3d3e02b9c09f140ea3f908ef3d4099e0",
+    "reference_set": "fullsystem",
+    "objc_classes": 29,
+    "import_providers": {}
+  },
+  "original_bytes": 1171456,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog",
+    "/System/Library/PrivateFrameworks/AudioAccessoryServices.framework/Versions/A/AudioAccessoryServices",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "d436d816b65217329f8eb2551771dc390c9a78c197661928d7aa118c5c69c1a4",
+  "manifest_sha256": "97e80f98c2d7e00a0bee921f1e94a17419eff46076a1985682096ce90f2b57c8",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mediaexperience-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0544ea0011b6b5ffe7a051cff6ad976157c6c9e39eb72c49767575a750deea57",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/mediaexperience-resource-v1-build.log",
+  "log_sha256": "ca45368d20af8fa01c1bf711f5afa859fb7bee265a25f81a44bcf3e648be0a6c"
+}

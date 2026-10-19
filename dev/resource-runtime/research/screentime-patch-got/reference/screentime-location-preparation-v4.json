@@ -1,0 +1,225 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/screentime-location-resource-batch-v4.json",
+  "configuration_sha256": "045339d7f1d6f7a50106e2ad47dac636e0be23bbfb71c5632d0609fd3771d175",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "7692df9ffb83f77006a6c06fd212de444671b3237ac718863a1495ecb9e27254",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/FamilyControls.framework/Versions/A/FamilyControls",
+      "attempts": [],
+      "prepared_target": "familycontrols-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel",
+      "attempts": [],
+      "prepared_target": "configurationenginemodel-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTracking",
+      "attempts": [],
+      "prepared_target": "usagetracking-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/DeviceActivity.framework/Versions/A/DeviceActivity",
+      "attempts": [],
+      "prepared_target": "deviceactivity-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+      "attempts": [],
+      "prepared_target": "systemadministration-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomPresentationFeed.framework/Versions/A/SymptomPresentationFeed",
+      "attempts": [],
+      "prepared_target": "symptompresentationfeed-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CryptoKitPrivate.framework/Versions/A/CryptoKitPrivate",
+      "attempts": [],
+      "prepared_target": "cryptokitprivate-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/FeatureFlagsSupport.framework/Versions/A/FeatureFlagsSupport",
+      "attempts": [],
+      "prepared_target": "featureflagssupport-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/KnowledgeMonitor.framework/Versions/A/KnowledgeMonitor",
+      "attempts": [],
+      "prepared_target": "knowledgemonitor-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaRemote.framework/Versions/A/MediaRemote",
+      "attempts": [],
+      "prepared_target": "mediaremote-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/ManagedSettings.framework/Versions/A/ManagedSettings",
+      "attempts": [],
+      "prepared_target": "managedsettings-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ManagedSettingsSupport.framework/Versions/A/ManagedSettingsSupport",
+      "attempts": [],
+      "prepared_target": "managedsettingssupport-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LoginUIKit.framework/Versions/A/Frameworks/LoginUICore.framework/Versions/A/LoginUICore",
+      "attempts": [],
+      "prepared_target": "loginuicore-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LocalAuthenticationCredentialServices.framework/Versions/A/LocalAuthenticationCredentialServices",
+      "attempts": [],
+      "prepared_target": "localauthenticationcredentialservices-resource-v2"
+    },
+    {
+      "image": "/usr/lib/libodfde.dylib",
+      "attempts": [],
+      "prepared_target": "libodfde-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SymptomShared.framework/Versions/A/SymptomShared",
+      "attempts": [],
+      "prepared_target": "symptomshared-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomAnalytics.framework/Versions/A/SymptomAnalytics",
+      "attempts": [],
+      "prepared_target": "symptomanalytics-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/BluetoothManager.framework/Versions/A/BluetoothManager",
+      "attempts": [],
+      "prepared_target": "bluetoothmanager-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MobileBluetooth.framework/Versions/A/MobileBluetooth",
+      "attempts": [],
+      "prepared_target": "mobilebluetooth-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+      "attempts": [],
+      "prepared_target": "avrouting-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport",
+      "attempts": [
+        {
+          "target": "loginsupport-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport",
+            "--target",
+            "loginsupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/loginsupport-resource-v1-batch-preparation.log",
+          "log_sha256": "babff0e34e27dca5890c7f926f746a317c567b252b6d40dd486a9450db79fbbb",
+          "preparation": "artifacts/loginsupport-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "loginsupport-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+      "attempts": [
+        {
+          "target": "mediaexperience-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+            "--target",
+            "mediaexperience-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mediaexperience-resource-v1-batch-preparation.log",
+          "log_sha256": "07a333a967c18765140032d959d67c429955f4ec77c113cda11bf42f6986cc52",
+          "preparation": "artifacts/mediaexperience-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mediaexperience-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PersistentConnection.framework/Versions/A/PersistentConnection",
+      "attempts": [
+        {
+          "target": "persistentconnection-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PersistentConnection.framework/Versions/A/PersistentConnection",
+            "--target",
+            "persistentconnection-resource-v1",
+            "--build"
+          ],
+          "log": "logs/persistentconnection-resource-v1-batch-preparation.log",
+          "log_sha256": "0d4b493552cfa0f606abdd5bcb81d5b3231fe3f9904cb5e364d4d8aa7d448f88",
+          "preparation": "artifacts/persistentconnection-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "persistentconnection-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/CoreLocation.framework/Versions/A/CoreLocation",
+      "attempts": [],
+      "prepared_target": "corelocation-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LocationSupport.framework/Versions/A/LocationSupport",
+      "attempts": [
+        {
+          "target": "locationsupport-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LocationSupport.framework/Versions/A/LocationSupport",
+            "--target",
+            "locationsupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/locationsupport-resource-v1-batch-preparation.log",
+          "log_sha256": "bc332e5d70321cc003b6a63994ba52a3bf390bbe852aaf7d2c693767f171b33a",
+          "preparation": "artifacts/locationsupport-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "locationsupport-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LocationLogEncryption.framework/Versions/A/LocationLogEncryption",
+      "attempts": [
+        {
+          "target": "locationlogencryption-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LocationLogEncryption.framework/Versions/A/LocationLogEncryption",
+            "--target",
+            "locationlogencryption-resource-v1",
+            "--build"
+          ],
+          "log": "logs/locationlogencryption-resource-v1-batch-preparation.log",
+          "log_sha256": "5887c8c0042f56527c774a4e8b3fa24765622b09a0343050bef87b0c0f203444",
+          "preparation": "artifacts/locationlogencryption-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "locationlogencryption-resource-v1"
+    }
+  ]
+}

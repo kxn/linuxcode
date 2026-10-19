@@ -1,0 +1,37 @@
+{
+  "target": "loginsupport-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport",
+    "sha256": "20bcdbad1ab36ebacb6852581a6a0a01432de317cca77fa7add8f93eb0b99605",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {}
+  },
+  "original_bytes": 20480,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "e8632db9e2b9fe4d6338dab9c32978fcbaf9a40eee19342c132f0bf1b5a87703",
+  "manifest_sha256": "d436d816b65217329f8eb2551771dc390c9a78c197661928d7aa118c5c69c1a4",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "loginsupport-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0544ea0011b6b5ffe7a051cff6ad976157c6c9e39eb72c49767575a750deea57",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/loginsupport-resource-v1-build.log",
+  "log_sha256": "ed20f3119c8510bad2c97a12cebd816f34f290dcabe81c341e24d7e2a5a6a347"
+}

@@ -1,0 +1,424 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/screentime-location-resource-batch-v3.json",
+  "configuration_sha256": "faf8ca26b3ed041193802a619e462544738cab1de863c97c61837843df88c691",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "7692df9ffb83f77006a6c06fd212de444671b3237ac718863a1495ecb9e27254",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/FamilyControls.framework/Versions/A/FamilyControls",
+      "attempts": [],
+      "prepared_target": "familycontrols-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/Versions/A/ConfigurationEngineModel",
+      "attempts": [],
+      "prepared_target": "configurationenginemodel-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTracking",
+      "attempts": [],
+      "prepared_target": "usagetracking-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/DeviceActivity.framework/Versions/A/DeviceActivity",
+      "attempts": [],
+      "prepared_target": "deviceactivity-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+      "attempts": [],
+      "prepared_target": "systemadministration-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomPresentationFeed.framework/Versions/A/SymptomPresentationFeed",
+      "attempts": [],
+      "prepared_target": "symptompresentationfeed-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CryptoKitPrivate.framework/Versions/A/CryptoKitPrivate",
+      "attempts": [],
+      "prepared_target": "cryptokitprivate-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/FeatureFlagsSupport.framework/Versions/A/FeatureFlagsSupport",
+      "attempts": [],
+      "prepared_target": "featureflagssupport-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/KnowledgeMonitor.framework/Versions/A/KnowledgeMonitor",
+      "attempts": [
+        {
+          "target": "knowledgemonitor-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/KnowledgeMonitor.framework/Versions/A/KnowledgeMonitor",
+            "--target",
+            "knowledgemonitor-resource-v1",
+            "--build"
+          ],
+          "log": "logs/knowledgemonitor-resource-v1-batch-preparation.log",
+          "log_sha256": "4093b541a1ef683aea298936080f47a12d96cfbe48c55ae96f4c6ea9dfdf1fee",
+          "preparation": "artifacts/knowledgemonitor-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "knowledgemonitor-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaRemote.framework/Versions/A/MediaRemote",
+      "attempts": [
+        {
+          "target": "mediaremote-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MediaRemote.framework/Versions/A/MediaRemote",
+            "--target",
+            "mediaremote-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mediaremote-resource-v1-batch-preparation.log",
+          "log_sha256": "a41959255c96b6489c46374b9c05fa6c61acbb5a2d03ad139188e4cb130d5315",
+          "preparation": "artifacts/mediaremote-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mediaremote-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/ManagedSettings.framework/Versions/A/ManagedSettings",
+      "attempts": [
+        {
+          "target": "managedsettings-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/ManagedSettings.framework/Versions/A/ManagedSettings",
+            "--target",
+            "managedsettings-resource-v1",
+            "--build"
+          ],
+          "log": "logs/managedsettings-resource-v1-batch-preparation.log",
+          "log_sha256": "110f7e1459a1bbdfbc9719dc7f7bec91c60c4b11eb97113c11d3fcec70f4764e",
+          "preparation": "artifacts/managedsettings-resource-v1-input.json"
+        },
+        {
+          "target": "managedsettings-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "managedsettings-resource-v1",
+            "--exact-import-audit",
+            "artifacts/managedsettings-original-import-audit-v1.json",
+            "--target",
+            "managedsettings-resource-v2",
+            "--build"
+          ],
+          "log": "logs/managedsettings-resource-v2-batch-preparation.log",
+          "log_sha256": "5bd2275955bfe731e7936637dd9303c2e08039ead9921351964dd0840f2058f2",
+          "preparation": "artifacts/managedsettings-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "managedsettings-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ManagedSettingsSupport.framework/Versions/A/ManagedSettingsSupport",
+      "attempts": [
+        {
+          "target": "managedsettingssupport-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ManagedSettingsSupport.framework/Versions/A/ManagedSettingsSupport",
+            "--target",
+            "managedsettingssupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/managedsettingssupport-resource-v1-batch-preparation.log",
+          "log_sha256": "c971169044c192403b2876e64cb4086870a0a4ac8b234cf93d1c92d81cc9a89f",
+          "preparation": "artifacts/managedsettingssupport-resource-v1-input.json"
+        },
+        {
+          "target": "managedsettingssupport-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "managedsettingssupport-resource-v1",
+            "--exact-import-audit",
+            "artifacts/managedsettingssupport-original-import-audit-v1.json",
+            "--target",
+            "managedsettingssupport-resource-v2",
+            "--build"
+          ],
+          "log": "logs/managedsettingssupport-resource-v2-batch-preparation.log",
+          "log_sha256": "b6067e0a805d5ee258193d73faed3714db902208be193881c030a6098aa5f07e",
+          "preparation": "artifacts/managedsettingssupport-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "managedsettingssupport-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LoginUIKit.framework/Versions/A/Frameworks/LoginUICore.framework/Versions/A/LoginUICore",
+      "attempts": [
+        {
+          "target": "loginuicore-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LoginUIKit.framework/Versions/A/Frameworks/LoginUICore.framework/Versions/A/LoginUICore",
+            "--target",
+            "loginuicore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/loginuicore-resource-v1-batch-preparation.log",
+          "log_sha256": "9241f817752e2a9ddd07ec82757da7a54aaaa6d068b745eb918ec7a178373733",
+          "preparation": "artifacts/loginuicore-resource-v1-input.json"
+        },
+        {
+          "target": "loginuicore-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LoginUIKit.framework/Versions/A/Frameworks/LoginUICore.framework/Versions/A/LoginUICore",
+            "--omit-lazy-helper-section",
+            "--target",
+            "loginuicore-resource-v2",
+            "--build"
+          ],
+          "log": "logs/loginuicore-resource-v2-batch-preparation.log",
+          "log_sha256": "c55bca7f186901a76f2dacd955b3652db9b588f4fedd5d3dfbbcab3b6b5e4ef7",
+          "preparation": "artifacts/loginuicore-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "loginuicore-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LocalAuthenticationCredentialServices.framework/Versions/A/LocalAuthenticationCredentialServices",
+      "attempts": [
+        {
+          "target": "localauthenticationcredentialservices-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LocalAuthenticationCredentialServices.framework/Versions/A/LocalAuthenticationCredentialServices",
+            "--target",
+            "localauthenticationcredentialservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/localauthenticationcredentialservices-resource-v1-batch-preparation.log",
+          "log_sha256": "0acd27a44b7c6b4b732cecf797e34a57ea992f10640c2fa4ba845ce9b2496e12",
+          "preparation": "artifacts/localauthenticationcredentialservices-resource-v1-input.json"
+        },
+        {
+          "target": "localauthenticationcredentialservices-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "localauthenticationcredentialservices-resource-v1",
+            "--exact-import-audit",
+            "artifacts/localauthenticationcredentialservices-original-import-audit-v1.json",
+            "--target",
+            "localauthenticationcredentialservices-resource-v2",
+            "--build"
+          ],
+          "log": "logs/localauthenticationcredentialservices-resource-v2-batch-preparation.log",
+          "log_sha256": "a2a36168556dcc45a08cb6f1074931987559efcd66166ba26f28281f448b1e0d",
+          "preparation": "artifacts/localauthenticationcredentialservices-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "localauthenticationcredentialservices-resource-v2"
+    },
+    {
+      "image": "/usr/lib/libodfde.dylib",
+      "attempts": [
+        {
+          "target": "libodfde-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libodfde.dylib",
+            "--target",
+            "libodfde-resource-v1",
+            "--build"
+          ],
+          "log": "logs/libodfde-resource-v1-batch-preparation.log",
+          "log_sha256": "d79a0e555ef5426c7dd958fd9a98f20b1bcbe6d4491fe9b4aed35384bd55d9cb",
+          "preparation": "artifacts/libodfde-resource-v1-input.json"
+        },
+        {
+          "target": "libodfde-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libodfde.dylib",
+            "--omit-lazy-helper-section",
+            "--target",
+            "libodfde-resource-v2",
+            "--build"
+          ],
+          "log": "logs/libodfde-resource-v2-batch-preparation.log",
+          "log_sha256": "cd7e72331a071045db4eb3e988abfbf0eec0f44d25faa71ba1eadbee5ef71500",
+          "preparation": "artifacts/libodfde-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "libodfde-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SymptomShared.framework/Versions/A/SymptomShared",
+      "attempts": [
+        {
+          "target": "symptomshared-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SymptomShared.framework/Versions/A/SymptomShared",
+            "--target",
+            "symptomshared-resource-v1",
+            "--build"
+          ],
+          "log": "logs/symptomshared-resource-v1-batch-preparation.log",
+          "log_sha256": "240967a0e08afc40475a3aa4fafa928dbdbe43344337023054448229c1907311",
+          "preparation": "artifacts/symptomshared-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "symptomshared-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomAnalytics.framework/Versions/A/SymptomAnalytics",
+      "attempts": [
+        {
+          "target": "symptomanalytics-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Symptoms.framework/Versions/A/Frameworks/SymptomAnalytics.framework/Versions/A/SymptomAnalytics",
+            "--target",
+            "symptomanalytics-resource-v1",
+            "--build"
+          ],
+          "log": "logs/symptomanalytics-resource-v1-batch-preparation.log",
+          "log_sha256": "912019100d50ae422885258ed4d17b96f09ec77ede443e13b4ab769f39e7ec89",
+          "preparation": "artifacts/symptomanalytics-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "symptomanalytics-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/BluetoothManager.framework/Versions/A/BluetoothManager",
+      "attempts": [
+        {
+          "target": "bluetoothmanager-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/BluetoothManager.framework/Versions/A/BluetoothManager",
+            "--target",
+            "bluetoothmanager-resource-v1",
+            "--build"
+          ],
+          "log": "logs/bluetoothmanager-resource-v1-batch-preparation.log",
+          "log_sha256": "c79e4c7c133f33b247539859b74f8bb75584ae98116ede33a90be24af2af9a21",
+          "preparation": "artifacts/bluetoothmanager-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "bluetoothmanager-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MobileBluetooth.framework/Versions/A/MobileBluetooth",
+      "attempts": [
+        {
+          "target": "mobilebluetooth-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MobileBluetooth.framework/Versions/A/MobileBluetooth",
+            "--target",
+            "mobilebluetooth-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mobilebluetooth-resource-v1-batch-preparation.log",
+          "log_sha256": "ed8b70a66b35eafa3708d30c002014b010726bac4997d3e88a9c8ffecaad3dd0",
+          "preparation": "artifacts/mobilebluetooth-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mobilebluetooth-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+      "attempts": [
+        {
+          "target": "avrouting-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+            "--target",
+            "avrouting-resource-v1",
+            "--build"
+          ],
+          "log": "logs/avrouting-resource-v1-batch-preparation.log",
+          "log_sha256": "5a6caeadfb2009e15336f45cfd8f2c0b28df2f4ff9c7be3f173be87eb57fc5c6",
+          "preparation": "artifacts/avrouting-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "avrouting-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaServices.framework/Versions/A/MediaServices",
+      "attempts": [
+        {
+          "target": "mediaservices-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MediaServices.framework/Versions/A/MediaServices",
+            "--target",
+            "mediaservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mediaservices-resource-v1-batch-preparation.log",
+          "log_sha256": "90f0e48726add81d713249309472d6cd946f2b5e0478c71d0ef57df098c1ca20",
+          "preparation": "artifacts/mediaservices-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null
+    }
+  ]
+}

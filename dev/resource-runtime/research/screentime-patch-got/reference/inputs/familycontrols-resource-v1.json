@@ -1,0 +1,46 @@
+{
+  "target": "familycontrols-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/FamilyControls.framework/Versions/A/FamilyControls",
+    "sha256": "50795467fe7164d068fed05c000064faf05f0df0079fe9076b771b4ff1deba69",
+    "reference_set": "fullsystem",
+    "objc_classes": 15,
+    "import_providers": {}
+  },
+  "original_bytes": 208896,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+    "/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Frameworks/CommerceCore.framework/Versions/A/CommerceCore",
+    "/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory",
+    "/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData",
+    "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices"
+  ],
+  "previous_manifest_sha256": "4bd30ce26d0a19d0880825bd1696dbc2c1cfb2ff6bea9afdd20368782802bb04",
+  "manifest_sha256": "a19abe0f6a19de6a6f98a08b4021ac4c07bb3452ba97726b4f335a333ed422b0",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "familycontrols-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "f29b16579dd9ac9769f62f0811d04d55f23615e3744616c67097b4955b6abdf7",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/familycontrols-resource-v1-build.log",
+  "log_sha256": "48000f1b5db6b8394202c6e706af1b7170619121ff8c2755686c56336925e5dc"
+}

@@ -155,3 +155,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [Unity 6 事件注册修复](research/unity-kqueue-receipts/README.md) 已让原版 IL2CPP 越过 EAGAIN，启动 Bee 和 il2cpp-compile。完整源码库通过事件、共享内存和原版 ad-hoc 签名回归；当前编译仍因子进程环境/`uname` 查找失败，实际 GameAssembly 产物尚未生成。
 
 [Unity 子进程环境与原版 plutil 修复](research/unity-exec-environment/README.md) 已恢复原版 .NET 环境枚举并补齐绝对路径 plutil，新的候选通过原版 ad-hoc 签名回归。最新构建在 Bee 因客体 `/proc` 判定 Linux 后拒绝 iOS 工具链，GameAssembly 仍未生成；包含源码、实际失败证据和后续定位。
+
+最新研究附件：[ScreenTime 依赖与 Swift 原指令保留](research/screentime-patch-got/README.md)，包含 33 个候选、批量准备/staging、实际二进制校验和完整 workspace 的失败证据；默认安装候选未升级。
