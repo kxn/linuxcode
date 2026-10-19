@@ -165,3 +165,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [AuthKit / Security 与缓存 ABI 检查点](research/authkit-security-abi/README.md) 保存八个保留原始指令的候选、原生 Security TLS / 类身份验证、URLFormatting 类别方法表恢复与候选发布写入锁。完整 Unity workspace 仍因 LocalAuthentication 的 LAUserStore 缺失而返回 65；默认安装环境未提升。
 
 [原版认证、目录与媒体依赖加载](research/local-auth-resource-loader/README.md) 保存 14 个保留原始指令的候选、嵌套 framework 搜索路径修正、原始跳转桩缺口诊断和损坏副本对照。资源工具已继续到 SkyLight 的 ProDisplayLibrary Swift 类型依赖；完整 Unity/UE 构建签名仍未完成，默认安装候选未提升。
+
+[原始 GOT 身份与 dispatch 类型](research/pooled-got-dispatch/README.md) 保存 `_scalbn` 原始符号校验、六个原版候选、完整 libdispatch 源码类型移植，以及避免旧兄弟库被一起选入的原生对照。最新完整 Unity workspace 返回 65，缺少 caulk 所需的 C++17 pmr 类型信息；尚无 CompileC 或最终 App，默认安装环境未提升。

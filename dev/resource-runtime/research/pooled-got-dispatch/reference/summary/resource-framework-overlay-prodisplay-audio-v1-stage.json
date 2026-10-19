@@ -1,0 +1,53 @@
+{
+  "installed": false,
+  "frameworks": "runtime/resource-framework-overlay-prodisplay-audio-v1/frameworks",
+  "libraries": "runtime/resource-framework-overlay-prodisplay-audio-v1/libraries",
+  "original_security_target": "security-resource-original-patch-got-v3",
+  "original_executable_bytes_preserved": true,
+  "required_exports": [
+    "_OBJC_CLASS_$_OTControlArguments",
+    "_kSecAttrSharingGroup"
+  ],
+  "exported_symbols": 6077,
+  "original_session_class_reexports": {
+    "original_export_payloads_preserved": 0,
+    "added_names": [
+      "_OBJC_CLASS_$_ExternalPreSharedKey",
+      "_OBJC_CLASS_$_OfferedEPSK",
+      "_OBJC_CLASS_$_SecExternalPreSharedKey",
+      "_OBJC_CLASS_$_SecOfferedEPSK",
+      "_OBJC_CLASS_$_SecSessionInfo",
+      "_OBJC_METACLASS_$_ExternalPreSharedKey",
+      "_OBJC_METACLASS_$_OfferedEPSK",
+      "_OBJC_METACLASS_$_SecExternalPreSharedKey",
+      "_OBJC_METACLASS_$_SecOfferedEPSK",
+      "_OBJC_METACLASS_$_SecSessionInfo"
+    ],
+    "original_instructions_and_other_bytes_preserved": true,
+    "provider_entire_namespace_reexported": false
+  },
+  "runtime_execution_verified": false,
+  "signing_with_original_security_verified": false,
+  "parent_overlay": "artifacts/resource-framework-overlay-prodisplay-weak-v1-stage.json",
+  "parent_overlay_sha256": "2761b6884fecd361f91a7967f5e3089a62ebace6d016961d52cb2d9013405533",
+  "graphics_stage": "artifacts/coregraphics-native-v114-stage.json",
+  "graphics_stage_sha256": "0ab0fa6cb62392c7d39d2e763fa239d872860a7a2d62502e62f8158532246d5a",
+  "added_original_frameworks": [
+    {
+      "target": "coreaudio-patch-got-v2",
+      "framework": "CoreAudio.framework",
+      "source": "runtime/coregraphics-native-v114/frameworks/CoreAudio.framework",
+      "image": "runtime/coregraphics-native-v114/frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+      "image_sha256": "149ef016191cebe5dd68d2dd3c108e81def28dcdd88008cf21c54c664948252e",
+      "reconstruction": "runtime/rebuilt-coreaudio-patch-got-v2/reconstruction.json"
+    }
+  ],
+  "extra_framework_paths": [
+    "runtime/resource-framework-overlay-prodisplay-audio-v1/frameworks/LocalAuthentication.framework/Support",
+    "runtime/resource-framework-overlay-prodisplay-audio-v1/frameworks/OpenDirectory.framework/Versions/A/Frameworks"
+  ],
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-framework-overlay-prodisplay-audio-v1-stage.json",
+  "full_local_report_sha256": "fba6b929796107f4142b64dbab531e365caba1b5209044fbd0f1abc610958c3c",
+  "full_local_file_count": 101
+}

@@ -1,0 +1,65 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 6427284,
+      "sha256": "187eeea40ab031899b77f083fd58127dfd27c88bbf63345fc3994205229a996e"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 4512,
+      "sha256": "8ba373c96f0c7e46fb1f5d8e0dc78d903fb362ea75260e819a0c17d05a248d1c"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__delay_stubs",
+      "bytes": 750,
+      "sha256": "df5dcf7866e6aad674355d9eb9c94a4ace35da5e27dfcce8254ef4c62ac65dbc"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__delay_helper",
+      "bytes": 102,
+      "sha256": "706101e575dedc7889a3fa850c20a9bc0019d5418940e70c3c422c3ce15e880b"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1071,
+  "nonzero_addends_verified": 3032,
+  "serialized_bindings": 5710,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 9,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x489d0",
+        "first_section_prefix": "0x40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coreaudio-patch-got-v2/CoreAudio': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x3a877)\n",
+    "original_validator": "runtime/original-dyld-validation-blauo4aj/result.json",
+    "original_validator_sha256": "ce1e0b0faccb62c819bb039deabc039c3e974147a771089ece9d2f20d15442be",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "17f6ea8670e9f6e2e636965e299bca349366f89c25f47ae6e8038dcab79b1adb",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "56c4d0421cd73bc577c8705f3148c3625c669e26da3e33b8abe59c98fda18d90",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio": "9c26ec46024dea726bbb44895073a4cda171ca983dfbaa9d510c162fee767e1c",
+    "runtime/rebuilt-coreaudio-patch-got-v2/CoreAudio": "149ef016191cebe5dd68d2dd3c108e81def28dcdd88008cf21c54c664948252e",
+    "runtime/rebuilt-coreaudio-patch-got-v2/reconstruction.json": "f6952a664d2936fd242701f203d2755bb676a877f1043b290272141833548947"
+  },
+  "verified": true
+}

@@ -1,0 +1,113 @@
+{
+  "target": "coreaudio-patch-got-v2",
+  "pin": {
+    "path": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "sha256": "9c26ec46024dea726bbb44895073a4cda171ca983dfbaa9d510c162fee767e1c",
+    "reference_set": "fullsystem",
+    "objc_classes": 22,
+    "import_providers": {},
+    "absent_weak_dependencies": [
+      "/System/Library/PrivateFrameworks/RemoteProcessingBlock.framework/Versions/A/RemoteProcessingBlock"
+    ],
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 3032,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 1071,
+    "patch_got_range": [
+      "0x7ff840002000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 12701696,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+    "/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport",
+    "/System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata",
+    "/System/Library/PrivateFrameworks/AudioDSPGraph.framework/Versions/A/AudioDSPGraph",
+    "/System/Library/PrivateFrameworks/RemoteProcessingBlock.framework/Versions/A/RemoteProcessingBlock",
+    "/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libbsm.0.dylib",
+    "/usr/lib/libAudioStatistics.dylib",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib"
+  ],
+  "previous_manifest_sha256": "220bafe93c24aa04115acc37d5a2580df02c18096f0b03f0579f82b0e681a43c",
+  "manifest_sha256": "56c4d0421cd73bc577c8705f3148c3625c669e26da3e33b8abe59c98fda18d90",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "coreaudio-patch-got-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 4655,
+    "nonzero_addends": 3032,
+    "got_cells": 1071,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "original_absent_weak_dependencies": {
+    "original_image_sha256": "9c26ec46024dea726bbb44895073a4cda171ca983dfbaa9d510c162fee767e1c",
+    "dependencies": [
+      {
+        "provider": "/System/Library/PrivateFrameworks/RemoteProcessingBlock.framework/Versions/A/RemoteProcessingBlock",
+        "ordinal": 5,
+        "load_command": "0x80000018",
+        "undefined_weak_symbols": [
+          "_RPBServerAddHost",
+          "_RPBServerGetSharedInstance",
+          "_RPBServerRemoveHost"
+        ],
+        "original_provider_absent": true
+      }
+    ]
+  },
+  "absent_weak_audit_source_sha256": "3af43b14df349e5e303cd28c459b0ac905aa81640b1ef277885a6f238708b1ad",
+  "build_returncode": 0,
+  "log": "logs/coreaudio-patch-got-v2-build.log",
+  "log_sha256": "18a99f91125313850dbb1d4e2029b1bea9dea4adb61ed760d09a0293c8cdf947"
+}

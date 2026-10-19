@@ -1,0 +1,56 @@
+{
+  "target": "watchdogclient-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient",
+    "sha256": "f577d18a5adc332b892065c4eee3a1e8231405fe926d662be98a132d231dd78e",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 48,
+    "patch_got_range": [
+      "0x7ff840052000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 16384,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "f7ec75b6f5c82c889be7f472c0bed073bee21df809c54753747dcefa5d8a2402",
+  "manifest_sha256": "a336776233a6f8e5f94a9b3eab8d33cacbe3ad810210fbbcc5550c7f94059bdf",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "watchdogclient-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "bacc25a7f17a511eb43f4d5e83f60c2a9cd70997d4ada75e56d7d52eba239f3a",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 0,
+    "nonzero_addends": 0,
+    "got_cells": 48,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/watchdogclient-patch-got-v1-build.log",
+  "log_sha256": "7a1b0cccb83164b1b4b0e63940b4c2ff1493d0133bc12f5f28133771ea895827"
+}

@@ -1,0 +1,59 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "coreaudio-patch-got-v2",
+      "candidate_sha256": "149ef016191cebe5dd68d2dd3c108e81def28dcdd88008cf21c54c664948252e",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 6427284,
+            "sha256": "187eeea40ab031899b77f083fd58127dfd27c88bbf63345fc3994205229a996e"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 4512,
+            "sha256": "8ba373c96f0c7e46fb1f5d8e0dc78d903fb362ea75260e819a0c17d05a248d1c"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__delay_stubs",
+            "bytes": 750,
+            "sha256": "df5dcf7866e6aad674355d9eb9c94a4ace35da5e27dfcce8254ef4c62ac65dbc"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__delay_helper",
+            "bytes": 102,
+            "sha256": "706101e575dedc7889a3fa850c20a9bc0019d5418940e70c3c422c3ce15e880b"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1071,
+        "nonzero_addends_verified": 3032,
+        "serialized_bindings": 5710,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 9,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2,
+      "false_local_binding_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c"
+  }
+}

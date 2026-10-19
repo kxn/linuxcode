@@ -1,0 +1,116 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "prodisplaylibrary-patch-got-v2",
+      "candidate_sha256": "cbd904bab85b7e8a487c898648f27298db1fd9496cf4dcd12f25c32733a9c8dc",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 1173951,
+            "sha256": "713e2b777f8396f2a76cdc0a829d14d030c64cd5aecbcfbe20abb339ce51c37d"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 2772,
+            "sha256": "cb23dd429ca422742c34f9af81b6d12192381186d1cc479482cc9301b6195265"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 694,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1485,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "watchdogclient-patch-got-v1",
+      "candidate_sha256": "809ff9ae383e88874de5a17a8fd832aa3f614bdf02bef1b46e35cbb3fff627f5",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 4688,
+            "sha256": "3edad5c4ee2c309c3b423b28c85292e7d79fef357edf02fdabf38a286b1d287b"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 216,
+            "sha256": "7f77852cd75b6668c247f11c2e4f8018706cc7fb2081abcd096afc0416079e94"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 48,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 49,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "swift-videotoolbox-patch-got-v1",
+      "candidate_sha256": "bf49630fe683073fba78c07ce2732c94b54df1b95255ed6b5ae9f3e7b2c38672",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 56352,
+            "sha256": "0c0340597652c935d414e0ad1d03ba64a4cdaa1a3f0f5247c87b7669e75438e1"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 780,
+            "sha256": "cdca0cdb281dfbf1c4a152e20fc07644750b3f0c172ce9784c482a01aaf45c4a"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 274,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 404,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c"
+  }
+}

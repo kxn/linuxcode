@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 82544,
+      "sha256": "2327e86801994598082c88c07542574c701fd120d4acd451cb978a6f6f98b7e9"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 780,
+      "sha256": "74f2bb81650b2920b1d0fc3e2a4bfa63f62a592e1891cab123a13d77f6b69b6c"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 303,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 612,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 60,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1e48",
+        "first_section_prefix": "0x808",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1e58",
+        "first_section_prefix": "0x808",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1e80",
+        "first_section_prefix": "0x808",
+        "symbol": "_$sBoWV"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1e98",
+        "first_section_prefix": "0x808",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1fc8",
+        "first_section_prefix": "0x808",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1fd0",
+        "first_section_prefix": "0x808",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1fd8",
+        "first_section_prefix": "0x808",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1fe0",
+        "first_section_prefix": "0x808",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-swift-coreaudio-patch-got-v1/libswiftCoreAudio.dylib': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x40c6)\n",
+    "original_validator": "runtime/original-dyld-validation-clryld8w/result.json",
+    "original_validator_sha256": "a6d2b50b17764eff34a7509f92de6207612cb8648144c8fb02a4b5f064c255ef",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "9b8bbda5c9a3047093c9043648d55bc76cb28ca5332efa27bbe102c6d9fe64d7",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "220bafe93c24aa04115acc37d5a2580df02c18096f0b03f0579f82b0e681a43c",
+    "runtime/fullsystem-libraries/usr/lib/swift/libswiftCoreAudio.dylib": "fdac484e2f00216fdadaec162391367c106cda2a6fc535f4f82937da4e52172b",
+    "runtime/rebuilt-swift-coreaudio-patch-got-v1/libswiftCoreAudio.dylib": "2626ee452859461445255b62930ad70c4118b72a1f628362a3417504b33a2f55",
+    "runtime/rebuilt-swift-coreaudio-patch-got-v1/reconstruction.json": "c4f2fd996488a02083ac5a550e2df36bb7606223ea7fde029b26b9e642ed79f2"
+  },
+  "verified": true
+}

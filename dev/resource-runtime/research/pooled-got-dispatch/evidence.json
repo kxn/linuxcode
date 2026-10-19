@@ -1,0 +1,256 @@
+{
+  "checked_at": "2026-10-19T23:15:35.431448+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "new_original_candidate_count": 6,
+  "candidates": [
+    {
+      "target": "prodisplaylibrary-patch-got-v2",
+      "path": "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary",
+      "original_sha256": "55d01ce61cedd7549a2d59db413c6aac58f93c5217453f57aa93d4911ab9a683",
+      "staged_sha256": "cbd904bab85b7e8a487c898648f27298db1fd9496cf4dcd12f25c32733a9c8dc",
+      "objc_classes": 22,
+      "exports": 2280,
+      "original_instruction_bytes_preserved": true,
+      "global_API_behavior_verified": false
+    },
+    {
+      "target": "watchdogclient-patch-got-v1",
+      "path": "/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient",
+      "original_sha256": "f577d18a5adc332b892065c4eee3a1e8231405fe926d662be98a132d231dd78e",
+      "staged_sha256": "809ff9ae383e88874de5a17a8fd832aa3f614bdf02bef1b46e35cbb3fff627f5",
+      "objc_classes": 0,
+      "exports": 9,
+      "original_instruction_bytes_preserved": true,
+      "global_API_behavior_verified": false
+    },
+    {
+      "target": "swift-videotoolbox-patch-got-v1",
+      "path": "/usr/lib/swift/libswiftVideoToolbox.dylib",
+      "original_sha256": "52f2a06772581dc656e974e96161083ce61d79c6571708c9cdcca80c3dce8856",
+      "staged_sha256": "bf49630fe683073fba78c07ce2732c94b54df1b95255ed6b5ae9f3e7b2c38672",
+      "objc_classes": 2,
+      "exports": 259,
+      "original_instruction_bytes_preserved": true,
+      "global_API_behavior_verified": false
+    },
+    {
+      "target": "swift-coremedia-patch-got-v1",
+      "path": "/usr/lib/swift/libswiftCoreMedia.dylib",
+      "original_sha256": "15b3e8cffae3948f178d77b56230039c47641fb66c3ea4115f413b47b8331d69",
+      "staged_sha256": "ada1ef2e84b6244dabb8d3e8b5cfd15dc6c0040e42e86d47eeb2dd7d3997d488",
+      "objc_classes": 3,
+      "exports": 2802,
+      "original_instruction_bytes_preserved": true,
+      "global_API_behavior_verified": false
+    },
+    {
+      "target": "swift-coreaudio-patch-got-v1",
+      "path": "/usr/lib/swift/libswiftCoreAudio.dylib",
+      "original_sha256": "fdac484e2f00216fdadaec162391367c106cda2a6fc535f4f82937da4e52172b",
+      "staged_sha256": "2626ee452859461445255b62930ad70c4118b72a1f628362a3417504b33a2f55",
+      "objc_classes": 13,
+      "exports": 775,
+      "original_instruction_bytes_preserved": true,
+      "global_API_behavior_verified": false
+    },
+    {
+      "target": "coreaudio-patch-got-v2",
+      "path": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+      "original_sha256": "9c26ec46024dea726bbb44895073a4cda171ca983dfbaa9d510c162fee767e1c",
+      "staged_sha256": "149ef016191cebe5dd68d2dd3c108e81def28dcdd88008cf21c54c664948252e",
+      "objc_classes": 22,
+      "exports": 643,
+      "original_instruction_bytes_preserved": true,
+      "global_API_behavior_verified": false
+    }
+  ],
+  "original_format_reports": [
+    "runtime/original-dyld-validation-vz21_qjn/result.json",
+    "runtime/original-dyld-validation-5csyf0ze/result.json",
+    "runtime/original-dyld-validation-pfyqwwm6/result.json",
+    "runtime/original-dyld-validation-cdl93bx2/result.json",
+    "runtime/original-dyld-validation-clryld8w/result.json",
+    "runtime/original-dyld-validation-blauo4aj/result.json"
+  ],
+  "original_format_positive_cases": 6,
+  "original_format_negative_cases": 12,
+  "actual_binary_corruption_control_cases": 6,
+  "source_guard_unit_tests": 32,
+  "source_guard_test_logs": [
+    "logs/original-pooled-import-unit-v1.log",
+    "logs/pooled-import-preparation-unit-v1.log",
+    "logs/pooled-import-old-preparation-regression-v1.log",
+    "logs/pooled-import-old-reexport-regression-v1.log"
+  ],
+  "configuration": "config/direct-resource-tool-environment-v65.json",
+  "graphics_stage": "artifacts/coregraphics-native-v114-stage.json",
+  "resource_overlay_stage": "artifacts/resource-framework-overlay-prodisplay-audio-v1-stage.json",
+  "typed_original_math_import_audit": "artifacts/prodisplaylibrary-original-import-audit-v3.json",
+  "dispatch_source_build": "artifacts/dispatch-exclaves-source-v2-build.json",
+  "dispatch_source_units": 32,
+  "dispatch_preserved_exports": 654,
+  "dispatch_added_exports": [
+    "__dispatch_source_type_exclaves_notification"
+  ],
+  "dispatch_native_probe": "runtime/dispatch-exclaves-type-ns3bxiju/result.json",
+  "dispatch_library_stage": "artifacts/dispatch-exclaves-resource-v1-stage.json",
+  "namespace_provider_paths_preserved": 7,
+  "workloop_FIFO_tasks": 1024,
+  "kernel_exclaves_event_delivery_implemented": false,
+  "kernel_unsupported_filter_errno": 22,
+  "source_fork_publication": "artifacts/dispatch-exclaves-source-publication-v1.json",
+  "direct_probes": [
+    {
+      "report": "runtime/direct-resource-tools-z8p3aq0j/result.json",
+      "configuration": "config/direct-resource-tool-environment-v61.json",
+      "cases": [
+        {
+          "tool": "actool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: _$s9CoreMedia14CMTaggedBufferVMn",
+          "original_executable_bytes_equal": true
+        },
+        {
+          "tool": "ibtool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: _$s9CoreMedia14CMTaggedBufferVMn",
+          "original_executable_bytes_equal": true
+        }
+      ]
+    },
+    {
+      "report": "runtime/direct-resource-tools-26amv_8i/result.json",
+      "configuration": "config/direct-resource-tool-environment-v62.json",
+      "cases": [
+        {
+          "tool": "actool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: _$s9CoreAudio07ManagedB13ChannelLayoutVMn",
+          "original_executable_bytes_equal": true
+        },
+        {
+          "tool": "ibtool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: _$s9CoreAudio07ManagedB13ChannelLayoutVMn",
+          "original_executable_bytes_equal": true
+        }
+      ]
+    },
+    {
+      "report": "runtime/direct-resource-tools-l7dnvit6/result.json",
+      "configuration": "config/direct-resource-tool-environment-v63.json",
+      "cases": [
+        {
+          "tool": "actool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: __xpc_error_peer_code_signing_requirement",
+          "original_executable_bytes_equal": true
+        },
+        {
+          "tool": "ibtool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: __xpc_error_peer_code_signing_requirement",
+          "original_executable_bytes_equal": true
+        }
+      ]
+    },
+    {
+      "report": "runtime/direct-resource-tools-elcbubhd/result.json",
+      "configuration": "config/direct-resource-tool-environment-v64.json",
+      "cases": [
+        {
+          "tool": "actool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: _AudioHardwareDestroyProcessTap",
+          "original_executable_bytes_equal": true
+        },
+        {
+          "tool": "ibtool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: _AudioHardwareDestroyProcessTap",
+          "original_executable_bytes_equal": true
+        }
+      ]
+    },
+    {
+      "report": "runtime/direct-resource-tools-1xq2j6gk/result.json",
+      "configuration": "config/direct-resource-tool-environment-v65.json",
+      "cases": [
+        {
+          "tool": "actool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: __ZTINSt3__13pmr15memory_resourceE",
+          "original_executable_bytes_equal": true
+        },
+        {
+          "tool": "ibtool",
+          "outer_status": 1,
+          "native_status": [],
+          "failure": "dyld: Symbol not found: __ZTINSt3__13pmr15memory_resourceE",
+          "original_executable_bytes_equal": true
+        }
+      ]
+    }
+  ],
+  "original_Unity_workspace_build": {
+    "report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-1ebd1ca5ffb4.json",
+    "native_status": [
+      "65"
+    ],
+    "outer_status": 65,
+    "UTI_preflight_verified": true,
+    "target_count": 5,
+    "compile_c_task_lines": 0,
+    "product_report": "artifacts/unity-ios-cocoapods-v18-product-inspection.json",
+    "headless_environment_removed": [
+      "DISPLAY",
+      "WAYLAND_DISPLAY",
+      "XAUTHORITY"
+    ]
+  },
+  "latest_actual_blocker": "caulk requires __ZTINSt3__13pmr15memory_resourceE; selected libc++ lacks standard C++17 pmr type identity.",
+  "next_work": "Port the actual standard-namespace memory_resource key function / compiler-generated RTTI and vtable from local LLVM source. Verify SDK-derived class ABI, lifetime and canonical identity; do not alias experimental::pmr.",
+  "resource_compilation_verified": false,
+  "complete_Unity_UE_linking_and_signing_verified": false,
+  "default_installer_promoted": false,
+  "evidence_sha256": {
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-1ebd1ca5ffb4.json": "d2d76053113470a1d3f6392d18963e0066813d8d3ef34cb0f078e26d2bf04084",
+    "logs/xcode-service-runtime-tool-dispatch-diagnostic-build-1ebd1ca5ffb4.log": "2eb26e50840f7fb47c640ac0f7a0f82b5b6ff83ce02d920b07fc6abfda7cb5cb",
+    "runtime/direct-resource-tools-z8p3aq0j/result.json": "d2834b4c6aef4d338ccda5c0e39574d4121ffd2b98e466c72ff4130c0b034caa",
+    "runtime/direct-resource-tools-z8p3aq0j/actool.log": "8a875ff039924d7dfa8b095f5f2d11528bb1f3e9b2bf4917bcddb298d92e2a0a",
+    "runtime/direct-resource-tools-z8p3aq0j/ibtool.log": "8a875ff039924d7dfa8b095f5f2d11528bb1f3e9b2bf4917bcddb298d92e2a0a",
+    "runtime/direct-resource-tools-26amv_8i/result.json": "cf3f67953579a886862c95730b3963da4d137f29f74bb5ce6abe82c45d96d15a",
+    "runtime/direct-resource-tools-26amv_8i/actool.log": "f32de19b2a75f7317e6654048d41e2af34df81ad366c37fee0e91a0ef2da4f5a",
+    "runtime/direct-resource-tools-26amv_8i/ibtool.log": "f32de19b2a75f7317e6654048d41e2af34df81ad366c37fee0e91a0ef2da4f5a",
+    "runtime/direct-resource-tools-l7dnvit6/result.json": "5c69b9f636ae0ef26f2e72da4f5abdc8b5141dc68e8ca065b33f9194f947f150",
+    "runtime/direct-resource-tools-l7dnvit6/actool.log": "67a9aa990bfb4590f70940e2993fbcf181f15728d1cd8c8fa4052d701531cb33",
+    "runtime/direct-resource-tools-l7dnvit6/ibtool.log": "67a9aa990bfb4590f70940e2993fbcf181f15728d1cd8c8fa4052d701531cb33",
+    "runtime/direct-resource-tools-elcbubhd/result.json": "a2b2126836aacd8206da4cfa8798b19410b9341f0c6248e3ab1156eabf43f293",
+    "runtime/direct-resource-tools-elcbubhd/actool.log": "f639f40b9f119f177b09c363d5f1828204b2221cd6616076b36f57c95feda412",
+    "runtime/direct-resource-tools-elcbubhd/ibtool.log": "f639f40b9f119f177b09c363d5f1828204b2221cd6616076b36f57c95feda412",
+    "runtime/direct-resource-tools-1xq2j6gk/result.json": "1acdae73212dc096193b4e69668b4bcd6a1c02d4b4f5fe7bb6500e85e074537d",
+    "runtime/direct-resource-tools-1xq2j6gk/actool.log": "78ce4eacbae27082d2d0aae2281c95bb8da5b35d04b2771e2f20db74fd91fada",
+    "runtime/direct-resource-tools-1xq2j6gk/ibtool.log": "78ce4eacbae27082d2d0aae2281c95bb8da5b35d04b2771e2f20db74fd91fada",
+    "runtime/dispatch-exclaves-type-ns3bxiju/result.json": "359271bb61062463e667ca9197e10c9e8b81413042f0903f8360ffdadbdff3ef",
+    "runtime/dispatch-exclaves-type-ns3bxiju/missing.log": "9f933438e52bcabb4fcf861704887562b86ba7477e2b13bea921be56442a1e73",
+    "runtime/dispatch-exclaves-type-ns3bxiju/present.log": "f04473cdbcb6e6856734223aa54bdf1c8fafa7f0ad7949f50cde86cf3b85cffc",
+    "runtime/dispatch-exclaves-type-ns3bxiju/workloop.log": "3c49152a1ed6995af48074ad70b454c616cc9de6bbc43bf41879c72635147d5d",
+    "artifacts/prodisplay-weak-dependency-binary-controls-v1.json": "e8d3a6d8227a3c1f494f73b4d95395b7e75fdad637973e9be67df79b230a9e29",
+    "artifacts/swift-media-audio-binary-controls-v1.json": "505a90351fc09fe4ffdacb8a63f19118c6fbc45a5477fce8f6be0f7d3ca2f52a",
+    "artifacts/coreaudio-binary-controls-v1.json": "39e9323bb05c1de250f044c9c228fcc54959dfaad63c3dd9182112bd865a9b01",
+    "logs/original-pooled-import-unit-v1.log": "da77ad8cc65e1961351ace180ecf4e9f618cf01129e8292646e3cc78c5e9292d",
+    "logs/pooled-import-preparation-unit-v1.log": "ba35b325d38aa6f3ec26098d700248681ef3ab1d622ec12039199f3c686f15c7",
+    "logs/pooled-import-old-preparation-regression-v1.log": "b71a280cc45af99a19f9bb6cd261104d7efa91317ab573bc51486ff0aa248dea",
+    "logs/pooled-import-old-reexport-regression-v1.log": "e86422dc0bfbe005021b65606c8de7d889fdabf8a62f6e2056d06001f9cfeefa"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "verified": true,
+  "source_initializer_byte_equal_upstream": true,
+  "upstream_repository": "https://github.com/apple-oss-distributions/libdispatch",
+  "upstream_commit": "2361ffb78a76f7ee488cd052eb0bc5c767118bf9",
+  "upstream_file": "src/event/event_kevent.c",
+  "initializer_sha256": "efe014717f1498c3920840a3d703fac41470f96197ad10d6ca0e6622c9abdea3",
+  "source": "vendor/darling/src/external/libdispatch/src/event/event_kevent.c",
+  "source_sha256": "9fc95e524a6e86b179c469d67b6e156ce135c9288d16c64b428606f4e3e12588",
+  "source_header": "vendor/darling/src/external/libdispatch/src/event/event_internal.h",
+  "source_header_sha256": "4383605d9e42a65af3da8958dcac9af701146c6bd4b8db097d63a6fdf3e2158c",
+  "previous_exports": 654,
+  "current_exports": 655,
+  "added_exports": [
+    "__dispatch_source_type_exclaves_notification"
+  ],
+  "old_library": "runtime/dispatch-workloop-source/libdispatch.dylib",
+  "library": "runtime/dispatch-exclaves-source-v2/libdispatch.dylib",
+  "library_sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+  "runtime_behavior_verified": false,
+  "exclaves_event_backend_added": false
+}
