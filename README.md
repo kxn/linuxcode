@@ -48,4 +48,6 @@ python3 linuxcode.py package --output dist/linuxcode-0.1.0-source.tar.gz
 
 [Unity 宿主工具检查点](dev/resource-runtime/research/unity-host-tools/README.md) 保存 Darling 对动态描述符上限的源码修复、原版 IL2CPP/Bee 启动结果，以及 Unity 6 共享内存重映射的实际失败。尚未完成游戏 App 构建。
 
-[Unity 6 共享内存与启动修复](dev/resource-runtime/research/unity-shared-remap/README.md) 已通过原版 IL2CPP/Bee 启动和实际内存共享检查。GameAssembly 编译驱动仍因异步 socket 注册报错；Xcode 的成功横幅与缺失的实际产物被独立区分，尚未完成游戏编译。
+[Unity 6 共享内存与启动修复](dev/resource-runtime/research/unity-shared-remap/README.md) 已通过原版 IL2CPP/Bee 启动和实际内存共享检查。该检查点记录了 GameAssembly 编译驱动的异步 socket 注册错误；Xcode 的成功横幅与缺失的实际产物被独立区分，尚未完成游戏编译。
+
+[Unity 6 事件注册修复](dev/resource-runtime/research/unity-kqueue-receipts/README.md) 已让原版 IL2CPP 越过 EAGAIN，启动 Bee 和 il2cpp-compile。完整源码库通过事件、共享内存和原版 ad-hoc 签名回归；当前编译仍因子进程环境/`uname` 查找失败，实际 GameAssembly 产物尚未生成。
