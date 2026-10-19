@@ -1,5 +1,7 @@
 # 资源工具和签名候选的开发源码
 
+[Unity 私有 procfs 与文件复制附件](research/unity-private-procfs/README.md) 保存原版 Bee 平台识别、完整源码运行候选和稀疏复制数据丢失的修复，附真实 Unity GameAssembly 构建和独立产物检查。它需要此前完整研究基线；完整 App 和资源链仍未完成。
+
 本目录在整合仓库的 `main` 维护，向固定的 `runtime-2026.10.19` 源码工作区应用一组可审阅、可回滚的更新。Darling 及其子模块仍在原有 fork 中维护，不新增开发分支或提交身份。
 
 这批固定 overlay 恢复 67 个明确锁定的原版 Intel 资源映像，补上 Swift KeyPath 二进制泛型环境、缓存合并的 Objective-C 协议引用和类引用表。它是资源工具兼容性的开发材料。**原版 actool/ibtool 尚未完成启动和资源编译**；固定 67 镜像候选仍缺 Sharing 所需的 CoreWiFi.framework。后续独立附件已经验证原版 ad-hoc 签名及 CPU 图像处理，Unity/UE 和完整冷安装仍未完成。
