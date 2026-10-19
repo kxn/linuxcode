@@ -2,7 +2,9 @@
 
 本目录在整合仓库的 `main` 维护，向固定的 `runtime-2026.10.19` 源码工作区应用一组可审阅、可回滚的更新。Darling 及其子模块仍在原有 fork 中维护，不新增开发分支或提交身份。
 
-这批代码恢复 67 个明确锁定的原版 Intel 资源映像，补上 Swift KeyPath 二进制泛型环境、缓存合并的 Objective-C 协议引用和类引用表。它是资源工具兼容性的开发材料。**原版 actool/ibtool 尚未完成启动和资源编译**；本次公开候选最新实际缺口是 Sharing 所需的 CoreWiFi.framework。没有完成 Unity/UE、签名或完整冷安装。
+这批固定 overlay 恢复 67 个明确锁定的原版 Intel 资源映像，补上 Swift KeyPath 二进制泛型环境、缓存合并的 Objective-C 协议引用和类引用表。它是资源工具兼容性的开发材料。**原版 actool/ibtool 尚未完成启动和资源编译**；固定 67 镜像候选仍缺 Sharing 所需的 CoreWiFi.framework。后续独立附件已经验证原版 ad-hoc 签名及 CPU 图像处理，Unity/UE 和完整冷安装仍未完成。
+
+[原版 CoreGraphics 附件](research/native-coregraphics/README.md) 保存真实位图绘制、原版 PNG 解码和字体链的后续进展。CPU 图像测试不需要图形界面；颜色转换对象创建仍失败，完整字体实验的最新工具缺口为 ATS 的 `_ATSFontFamilyFindFromQuickDrawName`。这些附件没有自动加入固定 overlay 或已成功的原版签名候选。
 
 ## 应用到开发工作区
 
