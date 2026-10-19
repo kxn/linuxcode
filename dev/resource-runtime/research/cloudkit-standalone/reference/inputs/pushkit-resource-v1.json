@@ -1,0 +1,38 @@
+{
+  "target": "pushkit-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/PushKit.framework/Versions/A/PushKit",
+    "sha256": "2a0c5d7f048d6666da6f400a9b89fcb397a0fb85967e50375fdb84139801b26a",
+    "reference_set": "fullsystem",
+    "objc_classes": 6,
+    "import_providers": {}
+  },
+  "original_bytes": 73728,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security"
+  ],
+  "previous_manifest_sha256": "e0f375c95d21f08181db23bce580a0430a7b5f2ccecf75dfa5daa4cd9069edc1",
+  "manifest_sha256": "661ccde369405dcfa1302fc68b216b4f742db49b9c2ac0e9e4d6cd3937bf5dc6",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "pushkit-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "0bdbb2eb9a3a63422f2ef6b2a92bb5a5c210c039decaafafaaa953f9dbe5b182",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/pushkit-resource-v1-build.log",
+  "log_sha256": "b433058fc1894f3a36b207de1ddbc6e92dde85955868976d210e3fbeb59e4fae"
+}

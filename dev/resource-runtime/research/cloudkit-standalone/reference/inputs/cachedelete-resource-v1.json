@@ -1,0 +1,45 @@
+{
+  "target": "cachedelete-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CacheDelete.framework/Versions/A/CacheDelete",
+    "sha256": "e45d3735ae7af4107db090c6a1c59ea6178f8f268b6c6d170bd6f7ac9b724f8b",
+    "reference_set": "fullsystem",
+    "objc_classes": 17,
+    "import_providers": {}
+  },
+  "original_bytes": 454656,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS",
+    "/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices",
+    "/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "ef3d839d4dbae0066af8d051bafbcad70ca42cf4d5534b7c5182fffdbfa40666",
+  "manifest_sha256": "e66957b4a17c993598d59a0be341661735465c7598f24d2e195a7915aa3cf68c",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "cachedelete-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "6885e0c206ebb227363270e6446a99109c6844b008b9badcd8f18da2a060db07",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 0,
+  "log": "logs/cachedelete-resource-v1-build.log",
+  "log_sha256": "1e5c1ebe13ef9602a69b3ae10071ab6dd551d403f8e11b50063ce7f02ab42a3e"
+}

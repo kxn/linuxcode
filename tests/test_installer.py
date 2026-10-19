@@ -77,6 +77,8 @@ class InstallerChecks(unittest.TestCase):
                 self.assertIn('linuxcode/dev/resource-runtime/research/unity-exec-environment/payload/fixtures/hello/ManagedProcessEnvironment.cs', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unity-private-procfs/payload/vendor/darling/src/include/darling-config.h.in', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unity-full-app-cocoapods/payload/scripts/inspect-unity-pods-project.rb', names)
+                self.assertIn('linuxcode/dev/resource-runtime/research/cloudkit-standalone/payload/vendor/darling/src/external/objc4/runtime/objc-os.mm', names)
+                self.assertIn('linuxcode/dev/resource-runtime/research/cloudkit-standalone/payload/vendor/darling/src/external/security/OSX/sec/Security/SecExports.exp-in', names)
                 self.assertFalse(any('/.local/' in n or n.endswith(('.xip', '.dylib', '.p12')) for n in names))
                 self.assertTrue(all(i.isfile() for i in archive.getmembers()))
             with self.assertRaisesRegex(RuntimeError, 'replace'):
