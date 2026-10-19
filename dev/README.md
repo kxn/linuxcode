@@ -102,4 +102,6 @@ shell 的工作目录为指定 workspace，设置 `CC=clang-19`、`CXX=clang++-1
 
 ## 继续开发原版资源工具
 
-新增的 [资源源码更新包](resource-runtime/README.md) 在本仓库 `main` 维护，可向固定源码快照应用并回滚。它带有 64 个原版 Intel 资源映像的锁定配置、重建参数和针对 Swift/Objective-C 缓存元数据的检查。资源工具仍停在实际依赖加载阶段；该目录明确列出额外原始输入、无显示环境测试和当前缺口。安装器的已验证编译基线保持原来的固定快照。
+新增的 [资源源码更新包](resource-runtime/README.md) 在本仓库 `main` 维护，可向固定源码快照应用并回滚。它带有 67 个原版 Intel 资源映像的锁定配置、重建参数和针对 Swift/Objective-C 缓存元数据的检查。资源工具仍停在实际依赖加载阶段；该目录明确列出额外原始输入、无显示环境测试和当前缺口。安装器的已验证编译基线保持原来的固定快照。
+
+[原版 codesign 附件](resource-runtime/research/native-codesign/README.md) 保存了后续内核扩展属性源码、缓存提示、新接口兼容、原版工具入口和实测证据。原版 xcodebuild 与原版 codesign 已一起完成简单 CocoaPods App 的 ad-hoc 构建，整合 PATH 入口也已复现。附件显式复制到对应工作区，不由较早固定 overlay 自动应用；仍需完整研究基线，不能把源码打包成功当作干净机器重建成功。

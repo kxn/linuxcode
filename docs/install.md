@@ -82,3 +82,20 @@ xcodebuild -workspace App.xcworkspace -scheme App -sdk iphoneos build
 ```
 
 默认 600 秒，可配置范围为 1–86,400 秒；超时会保留真实失败状态和调用日志，不会当作构建成功。
+
+## 选用原版签名候选
+
+在已有完整研究运行时中，先构造并实际验证 [原版 codesign 候选](../dev/resource-runtime/research/native-codesign/README.md)，再接入本机的成功报告：
+
+```bash
+python3 linuxcode.py --workspace /path/to/experiment adopt \
+  --native-codesign-stage artifacts/native-codesign-ci-v3-stage.json \
+  --identity-store runtime/local-identity-xcode-empty-v1/store.plist \
+  --build-report artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-270c91d1646a.json \
+  --product-report artifacts/ios-cocoapods-native-signed-product.json
+export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
+```
+
+报告路径以本机实际结果为准。入口核对产物、静态库签名扩展属性、同一候选和原生退出证据，再保留 CI 中的工作目录及 xcodebuild 参数。该入口已从项目目录、全新 DerivedData 实际完成 CocoaPods iOS App 编译和原版 ad-hoc 签名，且独立复核了 App 和两个静态库。主机与 Darling 内的显示相关环境变量均移除。
+
+`status` 会显示 `signing_scope: ad-hoc` 和 `certificate_signing_ready: false`。这不是开发者证书签名、Unity/UE 兼容性或完整冷安装成功的声明。

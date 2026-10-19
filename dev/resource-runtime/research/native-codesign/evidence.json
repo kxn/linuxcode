@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "original_codesign_app_sign_and_verify": true,
+  "original_xcodebuild_CocoaPods_build_and_native_CodeSign": true,
+  "native_PATH_launcher_fresh_build_and_sign": true,
+  "platform": "iPhoneOS",
+  "architecture": "arm64",
+  "signing_scope": "ad-hoc",
+  "native_entitlements_XML_and_legacy_DER_verified": true,
+  "native_and_independent_tamper_rejections": 4,
+  "native_xattr_checks": 39,
+  "real_Linux_xattrs_and_active_quarantine_regression_verified": true,
+  "full_kernel_source_files": 879,
+  "original_codesign_sha256": "2fc443773ac85d6640c08d54f7b572179a8490f429b2446f6de8cbf785b54d8d",
+  "original_allocator_sha256": "b22f65e9f3ac39e5d64a2b88b42d4b2571926f929fc8b6b57cfc10de6d0d16ac",
+  "zsign_execution_or_build_required": false,
+  "zsign_free_derq_staging_verified": true,
+  "persistent_codesign_unchanged": true,
+  "persistent_allocator_absent": true,
+  "source_reference": "runtime/security-upstream-reference/legacy-der-source.json",
+  "reports": {
+    "runtime/original-codesign-native-identity-9xe6xd8p/result.json": "44159cf04752dafb8a43f106126f458a089c52e9fff423e3c7a6ca718157f091",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-270c91d1646a.json": "4bbe74c76a37f6459afbbaf63904b9d9f4d198c909e4deaa6fdfad8382d40cd7",
+    "artifacts/ios-cocoapods-native-signed-product.json": "64c5c7f947c76b213d0a6358cdbe03b25f454a695f20edce1d2afa1852da0445",
+    "artifacts/native-codesign-launcher-progress.json": "0a02708930154ffb85f3264680adf8fd33e3c80307fbcd006c64755b016e2d45",
+    "runtime/darwin-xattr-test-zsce12vn/result.json": "81e8b04e6d877e8b28dbfc2195a1dadfe374cf5533e08c65d3648dc16c2a5d77",
+    "runtime/xattr-quarantine-regression-v9av_f8p/result.json": "9658aa784bd5ce2490e313c43941e61811f81d1f3d97e3bfd1b65570e05e0b10"
+  },
+  "native_stage": "artifacts/native-codesign-ci-v3-stage.json",
+  "native_stage_sha256": "1a72bf3761c0303bfa907101bdd9cb8fbba931d1dc0fb0d014d51aeb2c5024c7",
+  "limits": [
+    "CocoaPods/UIKit fixture only; actual Unity/UE export unverified",
+    "Ad-hoc only; developer certificate/provisioning/device trust not verified",
+    "Existing permissive CoreServices diagnostic policy remains necessary",
+    "Cold full-runtime reconstruction is incomplete",
+    "Remote signing and new launch/library constraints return unsupported errors",
+    "Original derq currently accepts malformed XML as an empty dictionary; rejection test failed"
+  ],
+  "full_goal_complete": false
+}

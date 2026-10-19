@@ -252,10 +252,31 @@ def setup(workspace, args):
     print('Next: python3 linuxcode.py --workspace ' + shlex.quote(str(workspace)) + ' recipe')
 
 
-def candidate(workspace):
-    module = runpy.run_path(str(workspace / LOCK['candidate']['profile']))
-    profile = module['profile'](diagnostic=True)
-    report_path = workspace / LOCK['candidate']['report']
+def candidate(workspace, native=None):
+    if native:
+        module = runpy.run_path(str(workspace / 'scripts/native-codesign-runtime-profile.py'))
+        profile = module['profile'](native_codesign_stage=native['stage'],
+                                   identity_store=native['identity_store'], diagnostic=True)
+        report_path = workspace / native['build_report']
+        signed = json.loads((workspace / native['product_report']).read_text())
+        if (not signed['verified'] or signed['zsign_used'] or not signed['ad_hoc_only']
+                or signed['build_report'] != native['build_report']
+                or signed['build_report_sha256'] != sha(report_path)
+                or signed['native_codesign_stage'] != native['stage']
+                or signed['stage_sha256'] != sha(workspace / native['stage'])
+                or signed['native_product_statuses'] != [['0', '0'], ['1', '0'], ['2', '0']]):
+            fail('Native signing evidence does not match this successful ad-hoc candidate.')
+        for name, digest in {**signed['files'], signed['log']: signed['log_sha256']}.items():
+            if sha(workspace / name) != digest:
+                fail('Native signing evidence changed: ' + name)
+        for name, attributes in signed['archive_signature_attributes'].items():
+            for attribute, digest in attributes.items():
+                if hashlib.sha256(os.getxattr(workspace / name, attribute)).hexdigest() != digest:
+                    fail('Native archive signature attribute changed: ' + name)
+    else:
+        module = runpy.run_path(str(workspace / LOCK['candidate']['profile']))
+        profile = module['profile'](diagnostic=True)
+        report_path = workspace / LOCK['candidate']['report']
     record = json.loads(report_path.read_text())
     if record['exit_status'] != 0 or not record['xcode_process_returned']:
         fail('Candidate evidence does not record successful native return.')
@@ -266,6 +287,8 @@ def candidate(workspace):
         fail('Candidate log does not contain the successful native build status.')
     if record['source_runtime'] != profile['source_runtime']:
         fail('Candidate evidence and runtime profile do not select identical source components.')
+    if native and record.get('native_codesign_stage') != native['stage']:
+        fail('Native signing stage differs from the actual Xcode build evidence.')
     if sha(workspace / 'runtime/state/prefix/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild') != LOCK['xcode']['xcodebuild_sha256']:
         fail('Installed original xcodebuild differs from the locked milestone.')
     for job in record['jobs']:
@@ -274,13 +297,15 @@ def candidate(workspace):
     return module, profile, record
 
 
-def adopt(workspace, state):
-    _, profile, record = candidate(workspace)
+def adopt(workspace, state, native=None):
+    _, profile, record = candidate(workspace, native=native) if native else candidate(workspace)
     state.mkdir(parents=True, exist_ok=True)
     save(state / 'adopted.json', {'workspace': str(workspace),
          'source_runtime': profile['source_runtime'],
-         'evidence_report_sha256': sha(workspace / LOCK['candidate']['report']),
-         'diagnostic_policy': True, 'signed_builds_ready': False})
+         'evidence_report_sha256': sha(workspace / (native['build_report'] if native else LOCK['candidate']['report'])),
+         'native_candidate': native, 'diagnostic_policy': True,
+         'signed_builds_ready': bool(native), 'signing_scope': 'ad-hoc' if native else 'unsigned',
+         'certificate_signing_ready': False})
     binary = state / 'bin/xcodebuild'
     binary.parent.mkdir(exist_ok=True)
     binary.write_text('#!/bin/sh\nexec ' + shlex.join([sys.executable, str(SOURCE / 'linuxcode.py'),
@@ -318,10 +343,11 @@ def build_timeout():
 
 def prepare_invocation(workspace, state, argv, dry_run=False):
     adopted = json.loads((state / 'adopted.json').read_text())
-    module, profile, record = candidate(workspace)
+    native = adopted.get('native_candidate')
+    module, profile, record = candidate(workspace, native=native) if native else candidate(workspace)
     if profile['source_runtime'] != adopted['source_runtime']:
         fail('Adopted runtime changed; inspect and adopt again.')
-    if sha(workspace / LOCK['candidate']['report']) != adopted['evidence_report_sha256']:
+    if sha(workspace / (native['build_report'] if native else LOCK['candidate']['report'])) != adopted['evidence_report_sha256']:
         fail('Adopted success evidence changed; inspect and adopt again.')
     timeout_seconds = build_timeout()
     cwd = guest_path(Path.cwd(), workspace)
@@ -333,7 +359,9 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
     plan = {'workspace': str(workspace), 'cwd': cwd, 'original_argv': argv, 'mapped_argv': mapped,
             'original_xcodebuild_sha256': LOCK['xcode']['xcodebuild_sha256'],
             'services': [job['job']['Label'] for job in record['jobs']],
-            'diagnostic_policy': True, 'signing_ready': False, 'timeout_seconds': timeout_seconds}
+            'diagnostic_policy': True, 'signing_ready': bool(native),
+            'signing_scope': 'ad-hoc' if native else 'unsigned', 'headless': True,
+            'certificate_signing_ready': False, 'timeout_seconds': timeout_seconds}
     if dry_run:
         return plan, None, None
     invocation = workspace / 'runtime/linuxcode-cli' / (time.strftime('%Y%m%dT%H%M%S') + '-' + uuid.uuid4().hex[:8])
@@ -349,7 +377,7 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
         session = '-S Background ' if existing['name'] in ['distnoted-agent', 'cfprefsd-agent'] else ''
         jobs.append((job['Label'], GUEST + str(path.relative_to(workspace)), session))
     script = invocation / 'run.sh'
-    script.write_text('#!/bin/bash\nset -e\nloaded=()\n' +
+    script.write_text('#!/bin/bash\nset -e\nunset DISPLAY WAYLAND_DISPLAY XAUTHORITY\nloaded=()\n' +
         'cleanup() { local i; for ((i=${#loaded[@]}-1; i>=0; i--)); do launchctl remove "${loaded[$i]}" >/dev/null 2>&1 || true; done; }\ntrap cleanup EXIT\n' +
         'launchctl remove com.apple.FileCoordination >/dev/null 2>&1 || true\n' +
         '\n'.join('launchctl load ' + session + shlex.quote(path) + '\nloaded+=(' + shlex.quote(label) + ')' for label, path, session in jobs) + '\n' +
@@ -364,7 +392,10 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
     # Preserve the verified launcher environment, with an explicit long build budget.
     command[3] = str(timeout_seconds)
     save(invocation / 'plan.json', plan)
-    return plan, invocation, (command, module['environment'](profile))
+    environment = module['environment'](profile)
+    for name in ('DISPLAY', 'WAYLAND_DISPLAY', 'XAUTHORITY'):
+        environment.pop(name, None)
+    return plan, invocation, (command, environment)
 
 
 def checked_exit_status(native, outer):
@@ -431,7 +462,7 @@ def package(output):
     for relative, digest in overlay.get('research_files', {}).items():
         name = Path(relative)
         if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
-                or name.suffix not in ('.py', '.json', '.m', '.c', '.md')):
+                or name.suffix not in ('.py', '.json', '.m', '.c', '.h', '.md')):
             fail('Invalid research source path: ' + relative)
         source = resource + relative
         if sha(SOURCE / source) != digest:
@@ -469,7 +500,11 @@ def main():
         p = sub.add_parser(name); p.add_argument('--xip', type=Path, required=True)
         p.add_argument('--sha256', help='expected SHA256 of locally supplied XIP')
     sub.add_parser('restore-sources', help='clone and apply the 17 locked source patches')
-    sub.add_parser('adopt', help='validate and attach an already-built milestone candidate')
+    p = sub.add_parser('adopt', help='validate and attach an already-built milestone candidate')
+    p.add_argument('--native-codesign-stage', type=Path)
+    p.add_argument('--identity-store', type=Path)
+    p.add_argument('--build-report', type=Path)
+    p.add_argument('--product-report', type=Path)
     sub.add_parser('status')
     sub.add_parser('recipe', help='show cold-build stages and exact outstanding gaps')
     p = sub.add_parser('package'); p.add_argument('--output', type=Path, required=True)
@@ -487,7 +522,14 @@ def main():
             verify_workspace(workspace)
             run([sys.executable, workspace / 'checkpoint/restore-sources.py', '--clone'], cwd=workspace)
             run([sys.executable, workspace / 'checkpoint/restore-sources.py', '--verify'], cwd=workspace)
-        elif args.command == 'adopt': adopt(workspace, state)
+        elif args.command == 'adopt':
+            native = None
+            choices = [args.native_codesign_stage, args.identity_store, args.build_report, args.product_report]
+            if any(choices):
+                if not all(choices): fail('Native adoption requires stage, identity store, build report and product report.')
+                native = {key: str((workspace / path).resolve().relative_to(workspace)) for key, path in zip(
+                    ['stage', 'identity_store', 'build_report', 'product_report'], choices)}
+            adopt(workspace, state, native)
         elif args.command == 'xcodebuild': return xcodebuild(state, args.argv, args.dry_run)
         elif args.command == 'dev':
             dev_args = args.argv[1:] if args.argv and args.argv[0] == '--' else args.argv
@@ -496,11 +538,15 @@ def main():
         elif args.command == 'recipe': print((SOURCE / 'config/runtime-recipe.json').read_text())
         elif args.command == 'package': package(args.output)
         elif args.command == 'status':
+            adopted = json.loads((state / 'adopted.json').read_text()) if (state / 'adopted.json').exists() else None
             print(json.dumps({'workspace': str(workspace),
                 'baseline_installed': (workspace / 'runtime/.installed').exists(),
                 'xcode_installed': (workspace / 'runtime/state/prefix/Applications/Xcode.app').exists(),
-                'adopted': json.loads((state / 'adopted.json').read_text()) if (state / 'adopted.json').exists() else None,
-                'cold_milestone_install_ready': False, 'signed_build_ready': False}, indent=2))
+                'adopted': adopted,
+                'cold_milestone_install_ready': False,
+                'signed_build_ready': bool(adopted and adopted.get('signed_builds_ready')),
+                'signing_scope': adopted.get('signing_scope', 'unsigned') if adopted else None,
+                'certificate_signing_ready': False}, indent=2))
         return 0
     except (OSError, RuntimeError, subprocess.CalledProcessError, ValueError, KeyError, AssertionError) as error:
         print(f'linuxcode: {error}', file=sys.stderr)

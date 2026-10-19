@@ -2,7 +2,7 @@
 
 在 Linux x86_64 上安装隔离的 Darling 和用户提供的原版 Xcode，并管理经过验证的兼容性里程碑。
 
-目前已经有**原版 xcodebuild 编译带 CocoaPod 的 iPhoneOS/arm64 App 成功**的研究里程碑；签名关闭，使用了单独的 CoreServices 诊断策略。这不是完整 Unity/UE CI 环境。本工程把安装、依赖锁定、候选运行入口和开发工具集中起来；完整成功候选的干净机器重建还没有自动化完毕。
+目前已有**原版 xcodebuild 编译并用原版 codesign 完成 CocoaPod iPhoneOS/arm64 App 的 ad-hoc 签名**的研究里程碑；整合工程的 PATH 入口也已从全新 DerivedData 复现。它使用单独的 CoreServices 诊断策略，尚不是完整 Unity/UE 或开发者证书 CI 环境。本工程把安装、依赖锁定、候选运行入口和开发工具集中起来；完整成功候选的干净机器重建还没有自动化完毕。
 
 ```bash
 git clone https://github.com/kxn/linuxcode.git
@@ -34,8 +34,10 @@ python3 linuxcode.py status
 python3 linuxcode.py package --output dist/linuxcode-0.1.0-source.tar.gz
 ```
 
-公开包只含安装器、文档和依赖锁定；不含 Xcode、SDK、Apple 框架、运行前缀、XIP、证书或私钥。离线安装、精确锁定、依赖说明见 [安装文档](docs/install.md)；系统参考输入与冷重建限制见 [运行时输入](docs/runtime-inputs.md)。
+公开包只含安装器、开发源码、文档和依赖锁定；不含 Xcode、SDK、Apple 框架、运行前缀、XIP、证书或私钥。离线安装、精确锁定、依赖说明见 [安装文档](docs/install.md)；系统参考输入与冷重建限制见 [运行时输入](docs/runtime-inputs.md)。
 
 研究代码锁定到 [运行时快照 runtime-2026.10.19](https://github.com/kxn/linuxcode/tree/375e52ea83e0f1a8dba3b16a0600d01292a9fe61)，其 `checkpoint/source-manifest.json` 记录了 17 个源码仓库的精确修订和补丁，`checkpoint/evidence/` 保存首次成功 iOS 编译日志与产物检查。后续里程碑应更新锁文件和证据，不追踪随时变化的分支。
 
 开发者可从 [开发环境说明](dev/README.md) 继续工作。新增的 [资源工具源码更新](dev/resource-runtime/README.md) 提供可回滚的源码应用器、67 个锁定映像的重建参数、私有 xcrun 分发、系统库版本回归及可选 ad-hoc codesign 命令候选，仍在本仓库 `main` 维护。它不代表原版资源编译已经完成，也不改变上述安装器的固定编译基线。
+
+最新的 [原版 codesign 源码附件和实测说明](dev/resource-runtime/research/native-codesign/README.md) 提供真实扩展属性支持、原生签名接口兼容和原版分配器入口。已有完整候选时，可通过 `adopt --native-codesign-stage … --identity-store … --build-report … --product-report …` 一次选用它；随后仍使用原来的 `xcodebuild` 命令和工程。此候选不需要 zsign；目前只验证 ad-hoc，尚未验证开发者证书、provisioning 或设备信任。默认不带这些选项的 adopt 继续选择旧的无签名基线。

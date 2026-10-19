@@ -1,6 +1,7 @@
 """Failure and isolation checks; no Darling session or Apple download is started."""
 from pathlib import Path
 import importlib.util
+import hashlib
 import json
 import os
 import struct
@@ -85,14 +86,53 @@ class InstallerChecks(unittest.TestCase):
             cli.save(state / 'adopted.json', {'source_runtime': {}, 'evidence_report_sha256': cli.sha(report_path)})
             previous = os.umask(0o002)
             try:
-                with patch.object(cli, 'candidate', return_value=({'environment': lambda p: {}}, profile, record)), patch.object(Path, 'cwd', return_value=workspace):
-                    _, invocation, _ = cli.prepare_invocation(workspace, state, ['-version'])
+                environment = {'DISPLAY': ':99', 'WAYLAND_DISPLAY': 'test', 'XAUTHORITY': '/tmp/test', 'KEEP': 'value'}
+                with patch.object(cli, 'candidate', return_value=({'environment': lambda p: dict(environment)}, profile, record)), patch.object(Path, 'cwd', return_value=workspace):
+                    _, invocation, execution = cli.prepare_invocation(workspace, state, ['-version'])
             finally:
                 os.umask(previous)
             self.assertEqual((invocation / 'service-0.plist').stat().st_mode & 0o777, 0o644)
             text = (invocation / 'run.sh').read_text()
             self.assertIn('launchctl load -S Background ', text)
             self.assertLess(text.index('trap cleanup EXIT'), text.index('launchctl load '))
+            self.assertIn('unset DISPLAY WAYLAND_DISPLAY XAUTHORITY', text)
+            self.assertFalse(set(environment.keys()) - {'KEEP'} & execution[1].keys())
+            self.assertEqual(execution[1]['KEEP'], 'value')
+
+    def _native_receipt(self, workspace):
+        native = {'stage': 'stage.json', 'identity_store': 'store.plist',
+                  'build_report': 'build.json', 'product_report': 'product.json'}
+        for name in ['stage.json', 'build.json']:
+            (workspace / name).write_text('{}')
+        (workspace / 'archive.a').write_bytes(b'archive payload')
+        (workspace / 'verify.log').write_text('verification evidence')
+        signed = {'verified': True, 'zsign_used': False, 'ad_hoc_only': True,
+                  'build_report': 'build.json', 'build_report_sha256': cli.sha(workspace / 'build.json'),
+                  'native_codesign_stage': 'stage.json', 'stage_sha256': cli.sha(workspace / 'stage.json'),
+                  'native_product_statuses': [['0', '0'], ['1', '0'], ['2', '0']],
+                  'files': {'archive.a': cli.sha(workspace / 'archive.a')},
+                  'log': 'verify.log', 'log_sha256': cli.sha(workspace / 'verify.log'),
+                  'archive_signature_attributes': {'archive.a': {'user.com.apple.cs.CodeDirectory': hashlib.sha256(b'original').hexdigest()}}}
+        cli.save(workspace / 'product.json', signed)
+        return native, signed
+
+    def test_native_adoption_rejects_receipt_for_another_stage(self):
+        with tempfile.TemporaryDirectory() as directory:
+            workspace = Path(directory)
+            native, signed = self._native_receipt(workspace)
+            signed['native_codesign_stage'] = 'another-stage.json'
+            cli.save(workspace / 'product.json', signed)
+            with patch.object(cli.runpy, 'run_path', return_value={'profile': lambda **kwargs: {}}):
+                with self.assertRaisesRegex(RuntimeError, 'does not match'):
+                    cli.candidate(workspace, native=native)
+
+    def test_native_adoption_rejects_changed_signature_xattr_even_when_file_bytes_match(self):
+        with tempfile.TemporaryDirectory() as directory:
+            workspace = Path(directory)
+            native, _ = self._native_receipt(workspace)
+            with patch.object(cli.runpy, 'run_path', return_value={'profile': lambda **kwargs: {}}), patch.object(cli.os, 'getxattr', return_value=b'changed'):
+                with self.assertRaisesRegex(RuntimeError, 'signature attribute changed'):
+                    cli.candidate(workspace, native=native)
 
     def test_offline_xcode_import_does_not_suppress_darling_prefix_initialization(self):
         with tempfile.TemporaryDirectory() as directory:

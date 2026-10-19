@@ -79,5 +79,17 @@
     "Provisioned signing, archive/export and device trust",
     "Projects outside the selected mounted workspace"
   ],
-  "workspace_tag": "runtime-2026.10.19"
+  "workspace_tag": "runtime-2026.10.19",
+  "optional_verified_milestones": [
+    {
+      "id": "original-codesign-ad-hoc",
+      "source": "dev/resource-runtime/research/native-codesign/README.md",
+      "original_xcodebuild_CocoaPods_build_and_CodeSign_verified": true,
+      "PATH_launcher_fresh_build_verified": true,
+      "zsign_required": false,
+      "scope": "CocoaPods/UIKit iPhoneOS arm64 fixture, ad-hoc only",
+      "cold_install_validated": false,
+      "developer_certificate_and_Unity_UE_verified": false
+    }
+  ]
 }

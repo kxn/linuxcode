@@ -137,3 +137,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 70 映像实验中的 CoreGraphics 源码和 pin 更新另外保存在 [研究附件](research/cg-colorspace-names/README.md)，不由固定的 67 项 overlay 自动应用。该附件记录实际名称 API 测试以及后续 GetType 缺口，供继续开发。
 
 本地原生身份查询的后续源码和证据见 [身份存储实验](research/local-identity-store/README.md)。该实验已使原版 Xcode 构建越过 GatherProvisioningInputs；补齐 derq 后进入了 CodeSign，当前因静态库签名尚未支持而失败。完整 App 签名仍在验证。
+
+原版签名的后续里程碑已完成原版 Xcode 的三个 CodeSign 任务及 PATH 入口全新构建，详见 [原版 codesign 附件](research/native-codesign/README.md)。该可选候选不使用 zsign，仍仅验证简单 CocoaPods App 的 ad-hoc 签名。
