@@ -1,0 +1,96 @@
+{
+  "target": "audiotoolbox-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+    "sha256": "cb7426d72e0aba6f9c2ae49d75100222dd36b22dff651b82dc183303679c703f",
+    "reference_set": "fullsystem",
+    "objc_classes": 23,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 27,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 1104,
+    "patch_got_range": [
+      "0x7ff840000000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 2719744,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+    "/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI",
+    "/usr/lib/libAudioStatistics.dylib",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libAudioToolboxUtility.dylib",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/swift/libswiftCoreAudio.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftCoreMIDI.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "56c4d0421cd73bc577c8705f3148c3625c669e26da3e33b8abe59c98fda18d90",
+  "manifest_sha256": "34b349ca1b27165aabaeca37d887247ab99b9c5dc1890d9341a38d591f7dfcb2",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "audiotoolbox-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 945,
+    "nonzero_addends": 27,
+    "got_cells": 1104,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/audiotoolbox-patch-got-v1-build.log",
+  "log_sha256": "6605291df1f69ca6467aa51ec81f38443ac4598de756555c79bd46b388bf40bb"
+}

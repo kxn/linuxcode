@@ -1,0 +1,128 @@
+{
+  "checked_at": "2026-10-19T23:40:20.132987+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "PMR_build": "artifacts/pmr-key-function-v1-build.json",
+  "PMR_native_probe": "runtime/pmr-native-m8wnompx/result.json",
+  "PMR_actual_checks": 274020,
+  "PMR_actual_allocations": 128,
+  "PMR_actual_destructions": 2,
+  "prior_expected_actual_checks": 3215,
+  "PMR_existing_direct_exports_preserved": 107,
+  "PMR_added_exports": [
+    "__ZNSt3__13pmr15memory_resourceD0Ev",
+    "__ZNSt3__13pmr15memory_resourceD1Ev",
+    "__ZNSt3__13pmr15memory_resourceD2Ev",
+    "__ZTINSt3__13pmr15memory_resourceE",
+    "__ZTSNSt3__13pmr15memory_resourceE",
+    "__ZTVNSt3__13pmr15memory_resourceE"
+  ],
+  "full_PMR_runtime_implemented": false,
+  "weak_bind_regression": "artifacts/pmr-empty-weak-normalization-v1.json",
+  "original_AudioToolbox_candidate": "audiotoolbox-patch-got-v1",
+  "original_AudioToolbox_independent_inspection": "artifacts/audiotoolbox-patch-got-v1-independent-inspection.json",
+  "original_AudioToolbox_format_probe": "runtime/original-dyld-validation-n9tlktk1/result.json",
+  "configuration": "config/direct-resource-tool-environment-v67.json",
+  "graphics_stage": "artifacts/coregraphics-native-v115-stage.json",
+  "resource_overlay_stage": "artifacts/resource-framework-overlay-pmr-audiotoolbox-v1-stage.json",
+  "direct_probes": [
+    {
+      "report": "runtime/direct-resource-tools-f7vwjb0f/result.json",
+      "cases": [
+        {
+          "tool": "actool",
+          "outer_status": 1,
+          "missing_symbol": "_kLoudnessInfoDictionary_MediaKindKey",
+          "original_extracted_bytes_equal": true
+        },
+        {
+          "tool": "ibtool",
+          "outer_status": 1,
+          "missing_symbol": "_kLoudnessInfoDictionary_MediaKindKey",
+          "original_extracted_bytes_equal": true
+        }
+      ]
+    },
+    {
+      "report": "runtime/direct-resource-tools-pd2sfnta/result.json",
+      "cases": [
+        {
+          "tool": "actool",
+          "outer_status": 1,
+          "missing_symbol": "__ZNSt3__17codecvtIDiDu11__mbstate_tE2idE",
+          "original_extracted_bytes_equal": true
+        },
+        {
+          "tool": "ibtool",
+          "outer_status": 1,
+          "missing_symbol": "__ZNSt3__17codecvtIDiDu11__mbstate_tE2idE",
+          "original_extracted_bytes_equal": true
+        }
+      ]
+    }
+  ],
+  "original_Unity_workspace_builds": [
+    {
+      "report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-98a274d04609.json",
+      "native_xcode_status": [
+        "65"
+      ],
+      "exit_status": 65,
+      "five_target_graph_verified": true,
+      "UTI_preflight_verified": true,
+      "product_inspection": "artifacts/unity-ios-cocoapods-v19-product-inspection.json",
+      "compile_c_task_lines": 0
+    },
+    {
+      "report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-12459ad8df84.json",
+      "native_xcode_status": [
+        "65"
+      ],
+      "exit_status": 65,
+      "five_target_graph_verified": true,
+      "UTI_preflight_verified": true,
+      "product_inspection": "artifacts/unity-ios-cocoapods-v20-product-inspection.json",
+      "compile_c_task_lines": 0
+    }
+  ],
+  "latest_actual_blocker": "__ZNSt3__17codecvtIDiDu11__mbstate_tE2idE",
+  "codecvt_original_source_compilation": "artifacts/codecvt-char8-source-v1-compile.json",
+  "codecvt_source_compile_only": true,
+  "codecvt_runtime_implemented": false,
+  "next_work": "Build genuine char8_t facets with coherent classic/named locale installation, verify UTF conversion and existing runtime, then retry original resources and complete Unity/UE builds and signing.",
+  "resource_compilation_verified": false,
+  "complete_Unity_UE_linking_and_signing_verified": false,
+  "default_installer_promoted": false,
+  "evidence_sha256": {
+    "artifacts/pmr-key-function-v1-build.json": "ecb5a095eae963f551347a4442fdb20d81ab3d2d167264a6cab4c026ed83007b",
+    "runtime/pmr-native-m8wnompx/result.json": "fc35c3545aad952010de41e0d218a546b88c8952324cd4a097217ec87d51ed4e",
+    "runtime/pmr-native-m8wnompx/missing.log": "faee8930b225a911d912e7924735cc12fe1d63f1d1145dd73b761d2df21cc30a",
+    "runtime/pmr-native-m8wnompx/present.log": "0d1fd44515e43339a2f356293a34ce1a34445981acb9e3db7e43a72a17adf40e",
+    "runtime/pmr-native-m8wnompx/expected.log": "ffdbcea4124458c42837f39110034d29d60934c3ef42d700c32da677b255e0e7",
+    "artifacts/pmr-empty-weak-normalization-v1.json": "778814cf67cef5f6749bcd6d88c813a34ba3371ca07744c646243d7b6128c216",
+    "artifacts/audiotoolbox-patch-got-v1-independent-inspection.json": "4c36c8118f74934bde730793637a8eb3a26dd23023e93c6b2a41019378a29f8c",
+    "runtime/original-dyld-validation-n9tlktk1/result.json": "9f8b4cc56bc57031c111dc35dbf83009d08dfd41177c46fa7dfeeb306b7559af",
+    "runtime/original-dyld-validation-n9tlktk1/run.log": "cd7a07d4ca3c8d16b8d8abdb0665c904e6c811837e4dd3521688a68739d5836e",
+    "artifacts/audiotoolbox-patch-got-v1-real-binary-tests.json": "7702a9596f51cbd0bbe710d0aff783637d66c6359850aa6a4c828948e33251ea",
+    "runtime/direct-resource-tools-f7vwjb0f/result.json": "c759cc89f82b61d8683e73f8ca56a9484b3d2bb3ef1919d59a798870ae77831d",
+    "runtime/direct-resource-tools-f7vwjb0f/actool.log": "64c298b79e4ff2cbd871ca814f8d1b82d4d3f73da90f0a780cd232d4014281e6",
+    "runtime/direct-resource-tools-f7vwjb0f/ibtool.log": "64c298b79e4ff2cbd871ca814f8d1b82d4d3f73da90f0a780cd232d4014281e6",
+    "runtime/direct-resource-tools-pd2sfnta/result.json": "13591177152e15550392819aa5d2bcf390b6d28ee3cc37c3d079801395d7e923",
+    "runtime/direct-resource-tools-pd2sfnta/actool.log": "404a411e11d856b4f0796aae9c82bcbad531d21ee7022356d63e17f701d21eea",
+    "runtime/direct-resource-tools-pd2sfnta/ibtool.log": "404a411e11d856b4f0796aae9c82bcbad531d21ee7022356d63e17f701d21eea",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-98a274d04609.json": "588ba6161247b01308fd91fa786d9c75f636594ad8219e895d7f35f2d9cb7e4d",
+    "logs/xcode-service-runtime-tool-dispatch-diagnostic-build-98a274d04609.log": "76c0d8a12bef83b277baee2be76a0e422e948dd044330001cd1f9658097d0739",
+    "artifacts/unity-ios-cocoapods-v19-product-inspection.json": "d44c8c553e4380c9485c780ee31156363da1367939b1b2b6d32dd5d1484a538e",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-12459ad8df84.json": "834d8fd098cef2d9d64c4354af3c03e024b2d42960a5547fd770f0de6d1fe622",
+    "logs/xcode-service-runtime-tool-dispatch-diagnostic-build-12459ad8df84.log": "36d985119fcb708ddb7925348469be736959142076eb73fb08af2888bc78b358",
+    "artifacts/unity-ios-cocoapods-v20-product-inspection.json": "9af6fdeb5d04303ed5fe8cb599618bcb0a9759249a174db43ee30cb02dea1d3d",
+    "artifacts/codecvt-char8-source-v1-compile.json": "f9b8cc7aefedbd8ffa701376278dac11a64ba06cc4af373b9a9ce2fdbf5cf1cc",
+    "runtime/codecvt-char8-source-v1/compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/codecvt-char8-actual-next-step-v1.json": "fc1adc6f91de11fe6ba0c3b34b451ae693a889c655cc9f17213c2cff458cbfb8",
+    "config/direct-resource-tool-environment-v67.json": "15e37109d8834e746b1511d9281224337fe192382958ea9551f5248a965a7d9c",
+    "artifacts/coregraphics-native-v115-stage.json": "7bd90df5139ce04378306371595286b9570f914d6ec844500730015416537175",
+    "artifacts/resource-framework-overlay-pmr-audiotoolbox-v1-stage.json": "65dabc36e883bda1aac1615a0e3e9e121ea872113efe611d06f465551409ccad",
+    "artifacts/audiotoolbox-patch-got-v1-input.json": "45965f7237566de48941d3ab7e577d9c0cb2435125b5cba81bf0a2553b636ad6",
+    "logs/audiotoolbox-patch-got-v1-build.log": "6605291df1f69ca6467aa51ec81f38443ac4598de756555c79bd46b388bf40bb"
+  }
+}

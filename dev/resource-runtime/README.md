@@ -1,5 +1,7 @@
 # 资源工具和签名候选的开发源码
 
+[PMR 类型 ABI 与 AudioToolbox 附件](research/pmr-runtime-abi/README.md) 保存真实标准 PMR key function、跨 DSO 分配/异常/析构回归及零长度 weak-bind 修复，并保留原版 AudioToolbox 指令与绑定。实际工具已越过这两处缺失，当前缺口为 C++20 char8_t locale facet；完整 Unity/UE App 和默认安装提升仍未完成。
+
 [完整 Unity/CocoaPods 构建附件](research/unity-full-app-cocoapods/README.md) 提供原始工程与真实 AFNetworking 的准备/安装入口，并修复资源工具直接调用的环境选择；实际完整 App 构建仍因 AppleIDSSOAuthentication 缺失而失败。
 
 [Unity 私有 procfs 与文件复制附件](research/unity-private-procfs/README.md) 保存原版 Bee 平台识别、完整源码运行候选和稀疏复制数据丢失的修复，附真实 Unity GameAssembly 构建和独立产物检查。它需要此前完整研究基线；完整 App 和资源链仍未完成。

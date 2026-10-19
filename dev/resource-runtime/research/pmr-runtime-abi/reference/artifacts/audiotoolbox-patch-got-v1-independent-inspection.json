@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1532250,
+      "sha256": "31ff40ecbe2648a63f855f34ef288d84063b01d0e03bbf54a5b626d874ef6816"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 4716,
+      "sha256": "51836e7efa849894d973779b3f8c1d1e85d82f3cfd1bc2ad84bccb1e67887c94"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1104,
+  "nonzero_addends_verified": 27,
+  "serialized_bindings": 2005,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 7,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 93,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x14198",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x141b0",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x141c8",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x141e0",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x141f8",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x14210",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x14228",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x14240",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-audiotoolbox-patch-got-v1/AudioToolbox': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xa8e9)\n",
+    "original_validator": "runtime/original-dyld-validation-n9tlktk1/result.json",
+    "original_validator_sha256": "9f8b4cc56bc57031c111dc35dbf83009d08dfd41177c46fa7dfeeb306b7559af",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "01b7aa6fb7748d8d65c6c8f77d3156390a9e1e5ac345dab7d60f4b093a60bfda",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "2eef866af74c0a66b05a12c3ee7e4a7c2429f9e3c28d5d6e53a18f2158ba4d7c",
+    "config/coregraphics-image-pins.json": "34b349ca1b27165aabaeca37d887247ab99b9c5dc1890d9341a38d591f7dfcb2",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox": "cb7426d72e0aba6f9c2ae49d75100222dd36b22dff651b82dc183303679c703f",
+    "runtime/rebuilt-audiotoolbox-patch-got-v1/AudioToolbox": "0b77885973ecb35d8b0aafda96e452a6a476d6ea9869799c3a0b12e9d7927306",
+    "runtime/rebuilt-audiotoolbox-patch-got-v1/reconstruction.json": "d2f8836bfe29585d876aa6ec1cc4fce5ce94d1380384f4e9d91312e0eb248fb2"
+  },
+  "verified": true
+}

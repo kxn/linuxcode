@@ -1,0 +1,24 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-framework-overlay-pmr-audiotoolbox-v1-stage.json",
+  "full_local_report_sha256": "65dabc36e883bda1aac1615a0e3e9e121ea872113efe611d06f465551409ccad",
+  "frameworks": "runtime/resource-framework-overlay-pmr-audiotoolbox-v1/frameworks",
+  "libraries": "runtime/resource-framework-overlay-pmr-audiotoolbox-v1/libraries",
+  "parent_overlay": "artifacts/resource-framework-overlay-prodisplay-audio-v1-stage.json",
+  "parent_overlay_sha256": "fba6b929796107f4142b64dbab531e365caba1b5209044fbd0f1abc610958c3c",
+  "graphics_stage": "artifacts/coregraphics-native-v115-stage.json",
+  "graphics_stage_sha256": "7bd90df5139ce04378306371595286b9570f914d6ec844500730015416537175",
+  "added_original_frameworks": [
+    {
+      "target": "audiotoolbox-patch-got-v1",
+      "framework": "AudioToolbox.framework",
+      "source": "runtime/coregraphics-native-v115/frameworks/AudioToolbox.framework",
+      "image": "runtime/coregraphics-native-v115/frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+      "image_sha256": "0b77885973ecb35d8b0aafda96e452a6a476d6ea9869799c3a0b12e9d7927306",
+      "reconstruction": "runtime/rebuilt-audiotoolbox-patch-got-v1/reconstruction.json"
+    }
+  ],
+  "installed": false,
+  "runtime_execution_verified": false,
+  "hashed_files_count": 123
+}

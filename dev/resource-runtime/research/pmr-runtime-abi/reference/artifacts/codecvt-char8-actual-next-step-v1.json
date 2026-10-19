@@ -1,0 +1,23 @@
+{
+  "diagnostic_only": true,
+  "observed_probe": "runtime/direct-resource-tools-pd2sfnta/result.json",
+  "missing_symbol": "__ZNSt3__17codecvtIDiDu11__mbstate_tE2idE",
+  "source_definition": "vendor/darling/src/external/libcxx/src/locale.cpp",
+  "guard": {
+    "config": "vendor/darling/src/external/libcxx/include/__config",
+    "condition": "_LIBCPP_STD_VER <= 17 || !defined(__cpp_char8_t)",
+    "effect": "_LIBCPP_HAS_NO_CHAR8_T disables both specializations and classic-locale installation"
+  },
+  "build_configuration": {
+    "path": "vendor/darling/src/external/libcxx/CMakeLists.txt",
+    "standard": "-std=c++11"
+  },
+  "required_followup": "Build the genuine char8_t locale facets and their classic/named-locale installation from source, validate identity, locale::has_facet/use_facet, UTF-8/UTF-16/UTF-32 valid/invalid/partial conversions and existing runtime consumers. Do not supply only an uninitialized exported symbol or alias distinct facet types. A full rebuilt libc++ backend may be required to keep one coherent locale implementation.",
+  "implemented": false,
+  "inputs": {
+    "vendor/darling/src/external/libcxx/src/locale.cpp": "fe1c5f69ec83c37e581e0beb86ebe558cd6999462ea80c38ebc8d1cc7094c512",
+    "vendor/darling/src/external/libcxx/include/__config": "58a267694b99fe93e82da67484b2614733546717c2b55c1a771676e235588828",
+    "vendor/darling/src/external/libcxx/CMakeLists.txt": "46b07227dc46349fc755893e5d2df7fd6ef0d25fe83a39ceec65651f933a1598",
+    "runtime/direct-resource-tools-pd2sfnta/result.json": "13591177152e15550392819aa5d2bcf390b6d28ee3cc37c3d079801395d7e923"
+  }
+}

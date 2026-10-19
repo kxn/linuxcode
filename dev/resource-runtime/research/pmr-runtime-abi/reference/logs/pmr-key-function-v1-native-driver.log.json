@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/pmr-key-function-v1-native-driver.log",
+  "original_sha256": "b7fbfec7691514385e6170fcf4cc7e00bd6fa37e0cd5d896526ad203a5a269fd",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/probe-pmr-key-function.py\", line 39, in <module>\n    binary.write_bytes(normalize(binary.read_bytes())[0])\n                       ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/dl/linuxcode/scripts/normalize-macho-weak-bind.py\", line 98, in normalize\n    assert not fileoff or fileoff<off,'Section in LINKEDIT is unsupported'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Section in LINKEDIT is unsupported\n"
+}

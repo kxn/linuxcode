@@ -1,0 +1,75 @@
+{
+  "verified": true,
+  "empty_stream_image_byte_equal": true,
+  "historical_failure_reproduced": true,
+  "nonempty_stream_all_binding_records_preserved": true,
+  "no_images_written": true,
+  "inputs": {
+    "runtime/pmr-native-m8wnompx/pmr-test": "855b67cd7ff19ab2d26294e5cc275770d4b2d03e43cb65168b9c1d5fc4b29028",
+    "runtime/source-input-history/2e4b6927876266db9de051f784dc343bd1573953df861e15c825e19fd7f50336": "2e4b6927876266db9de051f784dc343bd1573953df861e15c825e19fd7f50336",
+    "runtime/expected-access-source/unprocessed-libc++.1.dylib": "4ebea23d39e936c12921b65bc5f83ea5c310d22198c60078c8742d3da37d1d12",
+    "scripts/normalize-macho-weak-bind.py": "12044e0f38a9d6e098c0303206a1f3a1ce9f5530b4333c2bd2f0d75e4ba5f5f3",
+    "scripts/test-empty-weak-normalization.py": "5f88906e9370351b2a8d246856eaa530141038f80c7cb39c6a79653d13605a85"
+  },
+  "empty_stream_proof": {
+    "original_sha256": "855b67cd7ff19ab2d26294e5cc275770d4b2d03e43cb65168b9c1d5fc4b29028",
+    "normalized_sha256": "855b67cd7ff19ab2d26294e5cc275770d4b2d03e43cb65168b9c1d5fc4b29028",
+    "original_symbol_order": [],
+    "normalized_symbol_order": [],
+    "symbol_count": 0,
+    "binding_count": 0,
+    "all_symbol_flags_and_bindings_preserved": true,
+    "instructions_and_other_payloads_unchanged": true,
+    "following_linkedit_payload_preserved_byte_for_byte": true,
+    "old_weak_range": [
+      0,
+      0
+    ],
+    "new_weak_range": [
+      0,
+      0
+    ],
+    "linkedit_payload_shift": 0,
+    "no_weak_bind_stream": true
+  },
+  "nonempty_stream_proof": {
+    "original_sha256": "4ebea23d39e936c12921b65bc5f83ea5c310d22198c60078c8742d3da37d1d12",
+    "normalized_sha256": "1dd046aeab5668aaaf4fc116dbd2de7a2396c21e6504ea7b1bf13e7c7d5838d6",
+    "original_symbol_order": [
+      "__ZNSt3__125_General_precision_tablesIfE17_Ordinary_X_tableE",
+      "__ZNSt3__125_General_precision_tablesIfE16_Special_X_tableE",
+      "__ZNSt3__125_General_precision_tablesIdE17_Ordinary_X_tableE",
+      "__ZNSt3__125_General_precision_tablesIdE16_Special_X_tableE",
+      "__ZdlPvm",
+      "__Znwm",
+      "__Znam",
+      "__ZdlPv",
+      "__ZdaPv"
+    ],
+    "normalized_symbol_order": [
+      "__ZNSt3__125_General_precision_tablesIdE16_Special_X_tableE",
+      "__ZNSt3__125_General_precision_tablesIdE17_Ordinary_X_tableE",
+      "__ZNSt3__125_General_precision_tablesIfE16_Special_X_tableE",
+      "__ZNSt3__125_General_precision_tablesIfE17_Ordinary_X_tableE",
+      "__ZdaPv",
+      "__ZdlPv",
+      "__ZdlPvm",
+      "__Znam",
+      "__Znwm"
+    ],
+    "symbol_count": 9,
+    "binding_count": 9,
+    "all_symbol_flags_and_bindings_preserved": true,
+    "instructions_and_other_payloads_unchanged": true,
+    "following_linkedit_payload_preserved_byte_for_byte": true,
+    "old_weak_range": [
+      209520,
+      320
+    ],
+    "new_weak_range": [
+      209520,
+      352
+    ],
+    "linkedit_payload_shift": 32
+  }
+}
