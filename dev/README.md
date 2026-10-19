@@ -1,5 +1,7 @@
 # 开发者环境
 
+[完整 Unity/CocoaPods 入口](resource-runtime/research/unity-full-app-cocoapods/README.md) 新增真实工程准备、原版 CocoaPods 安装、项目结构对照和资源工具直接调用配置；完整 App 当前仍受资源依赖阻塞。
+
 后续 Unity 工具链兼容修复见 [私有 procfs 与文件复制附件](resource-runtime/research/unity-private-procfs/README.md)：包含四个现有 fork 的源码提交、原版工具探针和独立产物检查，继续使用 Linux x86_64 与原版 Xcode 工程。
 
 整合入口在独立的 [kxn/linuxcode](https://github.com/kxn/linuxcode) 工程；Darling 和各子模块的兼容性修改继续保存在各自的 fork。本目录提供 `linuxcode-dev`，在宿主 Linux 上构建和检查组件，帮助开发者接着完善编译流程。需要 Linux x86_64；不需要 Mac，也不使用 Darling 内核模块。

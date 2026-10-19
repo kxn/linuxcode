@@ -76,6 +76,7 @@ class InstallerChecks(unittest.TestCase):
                 self.assertIn('linuxcode/dev/resource-runtime/research/unity-shared-remap/payload/vendor/darlingserver/internal-include/darlingserver/proc-maps.hpp', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unity-exec-environment/payload/fixtures/hello/ManagedProcessEnvironment.cs', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unity-private-procfs/payload/vendor/darling/src/include/darling-config.h.in', names)
+                self.assertIn('linuxcode/dev/resource-runtime/research/unity-full-app-cocoapods/payload/scripts/inspect-unity-pods-project.rb', names)
                 self.assertFalse(any('/.local/' in n or n.endswith(('.xip', '.dylib', '.p12')) for n in names))
                 self.assertTrue(all(i.isfile() for i in archive.getmembers()))
             with self.assertRaisesRegex(RuntimeError, 'replace'):

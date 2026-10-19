@@ -462,7 +462,7 @@ def package(output):
     for relative, digest in overlay.get('research_files', {}).items():
         name = Path(relative)
         if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
-                or (name.suffix not in ('.py', '.json', '.m', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs')
+                or (name.suffix not in ('.py', '.json', '.m', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb')
                     and name.name != 'CMakeLists.txt' and not name.name.endswith('.h.in'))):
             fail('Invalid research source path: ' + relative)
         source = resource + relative

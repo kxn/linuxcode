@@ -1,5 +1,7 @@
 # 资源工具和签名候选的开发源码
 
+[完整 Unity/CocoaPods 构建附件](research/unity-full-app-cocoapods/README.md) 提供原始工程与真实 AFNetworking 的准备/安装入口，并修复资源工具直接调用的环境选择；实际完整 App 构建仍因 AppleIDSSOAuthentication 缺失而失败。
+
 [Unity 私有 procfs 与文件复制附件](research/unity-private-procfs/README.md) 保存原版 Bee 平台识别、完整源码运行候选和稀疏复制数据丢失的修复，附真实 Unity GameAssembly 构建和独立产物检查。它需要此前完整研究基线；完整 App 和资源链仍未完成。
 
 本目录在整合仓库的 `main` 维护，向固定的 `runtime-2026.10.19` 源码工作区应用一组可审阅、可回滚的更新。Darling 及其子模块仍在原有 fork 中维护，不新增开发分支或提交身份。
