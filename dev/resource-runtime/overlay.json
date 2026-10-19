@@ -202,7 +202,7 @@
       "baseline_mode": null
     },
     "scripts/resource-tool-dispatch-profile.py": {
-      "sha256": "da0b41ba2a6dd295a7a7283005e2203d994610fba6614cb85fc3eef96010f2fb",
+      "sha256": "d817711243e5f704d5cf43cc891e4ede239a623b19a90108ec1c6b90e7c27403",
       "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
@@ -232,7 +232,7 @@
       "baseline_mode": null
     },
     "scripts/probe-xcode-service-runtime.py": {
-      "sha256": "61639357e358d0362bfda806f7644eccfcf3671516bf9647c56516a8dea5904d",
+      "sha256": "076a42e42c43af05fd351df19557ca87e5d8bde48e8e68d7252daf3d3e99703f",
       "mode": 436,
       "baseline_sha256": "51566b236a8b0146f2f612fab444ebe9b780f4320d9a63d0ac788edc37712dd6",
       "baseline_mode": 420
@@ -260,6 +260,48 @@
       "mode": 436,
       "baseline_sha256": null,
       "baseline_mode": null
+    },
+    "scripts/codesign-zsign.rb": {
+      "sha256": "516be849daa0facd1a4de5e9963f6c4d3705efa41c4ee2009c95a258235ea18d",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/codesign-zsign-runtime-profile.py": {
+      "sha256": "950eb57bf288439cf6c4f7a0158a9048123b8b8b3f476e92de5d648b66350667",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/stage-codesign-zsign-runtime.py": {
+      "sha256": "7ed60bdeb619d519cb6deb4d51798cc9c55df827bcca694bb842601e70e6d183",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/build-zsign-linux-static.py": {
+      "sha256": "8a0abf6b650db94744a800c9431313862ebc99a341f443798855f27041b5998c",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/test-codesign-zsign-runtime.py": {
+      "sha256": "d9195efe8cd95f141e999648aa2aa778a679c7f3dff8b41830d57d3b1c7551f8",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "scripts/probe-securityd-identity-store.py": {
+      "sha256": "edbe73d5a50bdc80de0e4b423a8ba7823ef18b36847eeb9f06a26ba60cff2d85",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
+    },
+    "config/ios-cocoapods-zsign-adhoc-build-arguments.json": {
+      "sha256": "39b795de0b4a36781e1fa848a9259c640a848f6db852e9c270be9bd923c6f09d",
+      "mode": 436,
+      "baseline_sha256": null,
+      "baseline_mode": null
     }
   },
   "baseline_dependencies": {
@@ -271,9 +313,11 @@
     "scripts/xcode-tool-dispatch-runtime-profile.py": "babaa737956d08b898e0bcc41ef6fce92d1423005a18ceccd6ad542357a099c4",
     "config/capstone.json": "7ae645c2104e0651ce54fc368ce47f6995bf651895509ea99b2bb892084e0556",
     "config/libdyld-source-build.json": "357b44b6e6c48afd7ad26c9a3ffa218a94c2f7dde8ac77c0e8a3b7c03848fabc",
-    "fixtures/hello/dyld-dlopen-header.c": "8d1366ce04694dcfa906fcc654009161a2d32126e2fdd71dc56e1e409a57370d"
+    "fixtures/hello/dyld-dlopen-header.c": "8d1366ce04694dcfa906fcc654009161a2d32126e2fdd71dc56e1e409a57370d",
+    "config/zsign-source.json": "c3e61569e3c95aece3c196949574586fa6264f1b747f5fdef5fcf9f1f212218b",
+    "scripts/verify-adhoc-bundle.py": "4dc7a87391b083fa38a33965b2c5b24393171a42d46b40d97f04fa422c3769d1"
   },
-  "scope": "Developer sources for 67 pinned original Intel resource images and scoped xcrun environment dispatch. Private source-built libdyld guest identity verified through original xcrun compiler execution; resource tools still fail during dependency loading. No complete resource compilation, signing, Unity/UE or cold-installation claim.",
+  "scope": "Developer sources for 67 pinned Intel resource images, scoped xcrun dispatch and a tested private codesign command adapter backed by static Linux zsign. Real ad-hoc App signatures and XML/DER entitlements verified; original Xcode signing still stalls during native identity-store preparation. No certificate, nested-code, Unity/UE or complete cold-installation claim.",
   "build_arguments": {
     "coresvg-resource-native": [
       "--analyze-code"
@@ -591,5 +635,13 @@
       "lock": "config/capstone.json",
       "preparation_script": "scripts/prepare-capstone.py"
     }
+  },
+  "research_files": {
+    "research/cg-colorspace-names/CGColorSpaceNames.m": "bf8181fec77a72ce3ebc70114ec68406268d468d9dc0c83100b8e4f52887ea2a",
+    "research/cg-colorspace-names/cg-colorspace-names.c": "b0c27243c937a674035f06799dfc1d4c5a1d95e6052f490f236ac10e24de37a8",
+    "research/cg-colorspace-names/stage-cg-colorspace-names-v2.py": "622e75b886582c81d178af1f02086ebf74aaf0a21463a7dc7026b64b6e21d41d",
+    "research/cg-colorspace-names/cg-colorspace-names-profile.py": "22f3f0a3478a17dfce7294ddc1f5d38103f7de751e4c8745c4e40583f9d30b33",
+    "research/cg-colorspace-names/ios-resource-image-pins-progress.json": "6a5780b88461bc2d0ffcb84c30a51fb43dc2324d4ae87cfb2fd6a940d7224102",
+    "research/cg-colorspace-names/README.md": "703882d60cd34e6785539d23803d2820f52bd5ee8d6c8e98d49b774f7b702015"
   }
 }

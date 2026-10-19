@@ -1,4 +1,4 @@
-# 原版资源工具的开发源码
+# 资源工具和签名候选的开发源码
 
 本目录在整合仓库的 `main` 维护，向固定的 `runtime-2026.10.19` 源码工作区应用一组可审阅、可回滚的更新。Darling 及其子模块仍在原有 fork 中维护，不新增开发分支或提交身份。
 
@@ -101,6 +101,31 @@ python3 /path/to/workspace/scripts/test-libdyld-guest-identity.py \
 
 `evidence/summary.json` 是本机实际实验的摘要，只有哈希、计数和范围说明；没有包含 Apple 库、SDK、IR、XIP、证书或私钥。开发者应重新运行自己修改所涉及的检查，而不是把摘要当作本机验证结果。
 
+## Darwin 中的真实签名命令
+
+新增可选的 `codesign` 命令适配器：Darwin shell 保留调用参数，Ruby 解析已支持的签名选项，实际签名交给固定版本的静态 Linux zsign，通过 Darling 原有 ELF exec 路径执行。校验独立检查 Mach-O 页、Info.plist、资源封印以及 XML/DER entitlements；它不使用原版 codesign 前端。原版 xcodebuild 仍未修改。
+
+这一候选只支持 `--sign -` 的 ad-hoc 签名和单个平面、thin 64-bit bundle。entitlements 支持字符串、布尔值、数组和字典；整数、日期、data 类型以及证书身份、嵌套 code、`--deep` 和未知参数均返回错误。尚未实现的功能不会被当作成功。独立 Python 校验器复核实际签名，原生命令测试覆盖四种文件篡改与不支持参数、身份、entitlements 类型的拒绝。
+
+在已具备 CocoaPods 构建基线、原版 Ruby 和锁定 gems 的工作区中运行：
+
+```bash
+python3 /path/to/workspace/scripts/build-zsign-linux-static.py \
+  --output-dir runtime/zsign-static-dev-v1
+python3 /path/to/workspace/scripts/stage-codesign-zsign-runtime.py \
+  --tag signing-dev-v1 \
+  --dispatch-stage artifacts/resource-tool-dispatch-my-dispatch-stage.json \
+  --zsign-build runtime/zsign-static-dev-v1/build.json
+python3 /path/to/workspace/scripts/test-codesign-zsign-runtime.py \
+  --codesign-stage artifacts/codesign-zsign-signing-dev-v1-stage.json
+```
+
+最后一个命令默认使用最初 CocoaPods 编译基线的 App 副本；可用 `--source-app` 指定工作区内的测试 App 路径。测试始终签署私有副本。静态构建需要宿主 OpenSSL/zlib/zstd 开发库和 pkg-config；缺少 zsign 源码时，构建脚本检出 `config/zsign-source.json` 固定的公开提交。它不修改该源码。输出目录和 stage/tag 均须使用新名字。
+
+stage 冻结 Ruby 适配器、已验证的 CFPropertyList 3.0.6/REXML 3.3.9 gem 文件哈希、静态 ELF 后端与专用 namespace 入口。它只在这次 Darling 的挂载视图中绑定 `/usr/bin/codesign`；持久前缀中原有命令的哈希保持不变，默认启动器不受影响。源码包不包含这些 gems、Apple 文件或编译后的签名程序。
+
+`probe-xcode-service-runtime.py` 增加 `--codesign-stage`，可用 `config/ios-cocoapods-zsign-adhoc-build-arguments.json` 复现原版 Xcode 的签名构建尝试。**这条完整流程目前未成功**：原版 Xcode 停在 `GatherProvisioningInputs`，实际堆栈在 `SecItemCopyMatching` 等待配套 `SecurityServer`，尚未执行 CodeSign。`probe-securityd-identity-store.py` 可复现启动包内配套服务并查询不存在的测试标签；服务目前退出，查询不能完成。Darling 的相关 sandbox 初始化入口仍未实现，是后续需要继续定位的模块。命令适配器签署 App 副本成功，不证明这些准备步骤、证书/provisioning、设备信任或 Unity/UE 已完成。
+
 ## 应用器的隔离测试
 
 ```bash
@@ -108,3 +133,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 ```
 
 测试从固定 Git 对象创建临时检出，验证计划、重复应用、回滚、权限及开发修改保护。不运行 Darling、不读取 Apple 输入，也不修改 `--base` 的工作区或索引。
+
+70 映像实验中的 CoreGraphics 源码和 pin 更新另外保存在 [研究附件](research/cg-colorspace-names/README.md)，不由固定的 67 项 overlay 自动应用。该附件记录实际名称 API 测试以及后续 GetType 缺口，供继续开发。

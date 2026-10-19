@@ -59,6 +59,7 @@ parser.add_argument('--vchroot-links', action='store_true')
 parser.add_argument('--metadata-root-name', action='store_true')
 parser.add_argument('--tool-dispatch', action='store_true')
 parser.add_argument('--resource-tool-dispatch-stage', type=Path)
+parser.add_argument('--codesign-stage', type=Path)
 parser.add_argument('--filecoordination', action='store_true')
 parser.add_argument('--timeout-seconds', type=int, default=60)
 parser.add_argument('--xcode-arguments-file', type=Path)
@@ -66,7 +67,7 @@ parser.add_argument('--prebuild-command-file', type=Path)
 parser.add_argument('--skip-uti-diagnostic', action='store_true')
 parser.add_argument('--trace-sandbox', action='store_true')
 args = parser.parse_args()
-if args.resource_tool_dispatch_stage:args.tool_dispatch=True
+if args.resource_tool_dispatch_stage or args.codesign_stage:args.tool_dispatch=True
 if args.tool_dispatch:args.metadata_root_name=True
 if args.metadata_root_name:args.vchroot_links=True
 if args.vchroot_links:args.global_fsevents=True
@@ -117,6 +118,9 @@ p = m['profile'](diagnostic=args.core_volume_diagnostic) if args.s2c_lifecycle e
 if args.resource_tool_dispatch_stage:
     m=runpy.run_path(str(root/'scripts/resource-tool-dispatch-profile.py'))
     p=m['profile'](diagnostic=args.core_volume_diagnostic,dispatch_stage=str(args.resource_tool_dispatch_stage))
+if args.codesign_stage:
+    m=runpy.run_path(str(root/'scripts/codesign-zsign-runtime-profile.py'))
+    p=m['profile'](diagnostic=args.core_volume_diagnostic,codesign_stage=str(args.codesign_stage))
 verified = json.loads((root / 'artifacts/native-lsd-foundation-coherent-probe.json').read_text())
 assert verified['UTI_functional_execution_verified'] and verified['exit_status'] == 0
 for key in ['source_objc', 'source_selector', 'foundation_coherent']:

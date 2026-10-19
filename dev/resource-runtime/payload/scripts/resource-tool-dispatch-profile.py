@@ -5,7 +5,7 @@ import hashlib,json,runpy
 root=Path(__file__).resolve().parent.parent
 parent=runpy.run_path(str(root/'scripts/ios-resource-closure-profile.py'))
 base=runpy.run_path(str(root/'scripts/xcode-tool-dispatch-runtime-profile.py'))
-def profile(diagnostic=False,dispatch_stage='artifacts/resource-tool-dispatch-sharing-v1-stage.json',include_resource_environment=False):
+def profile(*,dispatch_stage,diagnostic=False,include_resource_environment=False):
  data=json.loads((root/dispatch_stage).read_text());sha=lambda name:hashlib.sha256((root/name).read_bytes()).hexdigest()
  assert sha(data['resource_stage'])==data['resource_stage_sha256']
  p=parent['profile'](diagnostic=diagnostic,stage=data['resource_stage']);chosen=data['runtimes']['diagnostic' if diagnostic else 'normal']

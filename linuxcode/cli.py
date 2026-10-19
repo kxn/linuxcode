@@ -422,12 +422,21 @@ def package(output):
         'build-resources.py', 'overlay.json', 'evidence/summary.json', 'tests/test_overlay.py')]
     for relative, entry in overlay['files'].items():
         name = Path(relative)
-        if name.is_absolute() or '..' in name.parts or name.suffix not in ('.py', '.json', '.swift', '.c'):
+        if name.is_absolute() or '..' in name.parts or name.suffix not in ('.py', '.json', '.swift', '.c', '.rb'):
             fail('Invalid developer source payload path: ' + relative)
         payload = resource + 'payload/' + relative
         if sha(SOURCE / payload) != entry['sha256']:
             fail('Developer source payload checksum mismatch: ' + relative)
         allowed.append(payload)
+    for relative, digest in overlay.get('research_files', {}).items():
+        name = Path(relative)
+        if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
+                or name.suffix not in ('.py', '.json', '.m', '.c', '.md')):
+            fail('Invalid research source path: ' + relative)
+        source = resource + relative
+        if sha(SOURCE / source) != digest:
+            fail('Research source checksum mismatch: ' + relative)
+        allowed.append(source)
     output = output.resolve()
     if output.exists():
         fail('Refusing to replace an existing public source package.')

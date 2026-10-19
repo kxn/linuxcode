@@ -71,7 +71,9 @@
     "artifacts/ios-cocoapods-resource-dispatch-product.json": "51337d66a394a8f436b9d43737f5c664a2453b4fdb5725af64cab1d909a85009",
     "artifacts/resource-tool-dispatch-progress.json": "b5b97458cba7595a8a98f3ab9629531a3be71ece5d9c1fc1e2e0403bea7488f4",
     "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-9ef790b4f92f.json": "ce25566d6cd0716d22bb51c95a81f63901905ce6182b8dd88f86c9ddb44d674a",
-    "artifacts/ios-cocoapods-guest-identity-product.json": "05e26296d3a61c0b2ab0472e8b4082ab85af9db7b7793914baa3b551e6a76daa"
+    "artifacts/ios-cocoapods-guest-identity-product.json": "05e26296d3a61c0b2ab0472e8b4082ab85af9db7b7793914baa3b551e6a76daa",
+    "artifacts/zsign-command-adapter-progress.json": "fb46c4d6587d50cdbbed9cbdffe73a2d0407e7b70b2bedcb013fb9352179499e",
+    "artifacts/developer-signing-static-reproduction.json": "c1844dbbd9554a469b50d0e11b3ea42f41b990370d05a012ab4586c22f43b10e"
   },
   "reconstructed_images": {
     "coresvg-resource-native": {
@@ -756,5 +758,53 @@
     "signing_verified": false,
     "engine_generated_project": false,
     "CoreServices_diagnostic_policy": true
+  },
+  "codesign_command_adapter": {
+    "verified": true,
+    "command_adapter_implemented": true,
+    "real_Darwin_to_static_Linux_zsign_dispatch_verified": true,
+    "real_plain_and_XML_DER_entitled_ad_hoc_App_signatures_verified": true,
+    "negative_cases": [
+      "code-page",
+      "info-plist",
+      "sealed-resource",
+      "added-resource",
+      "unsupported-identity",
+      "unsupported-option",
+      "unsupported-deep",
+      "unsupported-integer-entitlement",
+      "unsupported-data-entitlement"
+    ],
+    "native_command_cases": 13,
+    "static_binary_reproduced_byte_identically": true,
+    "static_binary_sha256": "b4d2b09e265e9b9f2ba3e2c9d4f72adfd8e7fe65932c218f67acd4e75e60bfe9",
+    "original_codesign_frontend_used": false,
+    "persistent_codesign_unchanged": true,
+    "default_entry_promoted": false,
+    "original_xcodebuild_signing_integrated": false,
+    "certificate_or_device_trust_verified": false,
+    "nested_code_signing_implemented": false,
+    "actual_Unity_UE_project_verified": false,
+    "original_Xcode_signing_attempt": "Failed to complete GatherProvisioningInputs; paired identity store unavailable; no CodeSign task observed.",
+    "fresh_source_only_static_reproduction": {
+      "verified": true,
+      "fixed_workspace_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "independent_workspace": "runtime/signing-overlay-tests/workspace",
+      "source_restored_automatically_from_pinned_upstream": true,
+      "zsign_source_revision": "614caa8d1ca949e260e5746144aa52d27a4b08d6",
+      "new_static_binary_byte_identical_to_native_tested_backend": true,
+      "binary_sha256": "b4d2b09e265e9b9f2ba3e2c9d4f72adfd8e7fe65932c218f67acd4e75e60bfe9",
+      "no_Apple_inputs_or_Darling_execution_needed_for_this_reconstruction": true,
+      "build_report": "runtime/signing-overlay-tests/workspace/runtime/zsign-static-source/build.json",
+      "build_report_sha256": "8c229fe61cb2eeb4a2fd5e65b2729227a93d11bed2c6c4c56c77a38db13d387e"
+    }
+  },
+  "experimental_CoreGraphics_names": {
+    "actual_source_facade_owner_verified": true,
+    "sRGB_DisplayP3_device_names_Copy_lifetime_NULL_and_unknown_name_cases_verified": true,
+    "source_file_sha256": "bf8181fec77a72ce3ebc70114ec68406268d468d9dc0c83100b8e4f52887ea2a",
+    "next_resource_loader_gap": "_CGColorSpaceGetType",
+    "resource_compilation_verified": false,
+    "ICC_conversion_and_complete_color_management_verified": false
   }
 }
