@@ -124,7 +124,7 @@ python3 /path/to/workspace/scripts/test-codesign-zsign-runtime.py \
 
 stage 冻结 Ruby 适配器、已验证的 CFPropertyList 3.0.6/REXML 3.3.9 gem 文件哈希、静态 ELF 后端与专用 namespace 入口。它只在这次 Darling 的挂载视图中绑定 `/usr/bin/codesign`；持久前缀中原有命令的哈希保持不变，默认启动器不受影响。源码包不包含这些 gems、Apple 文件或编译后的签名程序。
 
-`probe-xcode-service-runtime.py` 增加 `--codesign-stage`，可用 `config/ios-cocoapods-zsign-adhoc-build-arguments.json` 复现原版 Xcode 的签名构建尝试。**这条完整流程目前未成功**：原版 Xcode 停在 `GatherProvisioningInputs`，实际堆栈在 `SecItemCopyMatching` 等待配套 `SecurityServer`，尚未执行 CodeSign。`probe-securityd-identity-store.py` 可复现启动包内配套服务并查询不存在的测试标签；服务目前退出，查询不能完成。Darling 的相关 sandbox 初始化入口仍未实现，是后续需要继续定位的模块。命令适配器签署 App 副本成功，不证明这些准备步骤、证书/provisioning、设备信任或 Unity/UE 已完成。
+`probe-xcode-service-runtime.py` 增加 `--codesign-stage`，可用 `config/ios-cocoapods-zsign-adhoc-build-arguments.json` 复现原版 Xcode 的签名构建尝试。**该固定候选的首次完整尝试未成功**：当时原版 Xcode 停在 `GatherProvisioningInputs`，实际堆栈在 `SecItemCopyMatching` 等待配套 `SecurityServer`，尚未执行 CodeSign。`probe-securityd-identity-store.py` 可复现启动包内配套服务并查询不存在的测试标签；服务目前退出，查询不能完成。实际选定的 sandbox 初始化返回 Invalid argument；尚未确认失败位于 profile 编译还是策略应用，不能归因于未确认调用的源码占位入口。命令适配器签署 App 副本成功，不证明这些准备步骤、证书/provisioning、设备信任或 Unity/UE 已完成。
 
 ## 应用器的隔离测试
 
@@ -135,3 +135,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 测试从固定 Git 对象创建临时检出，验证计划、重复应用、回滚、权限及开发修改保护。不运行 Darling、不读取 Apple 输入，也不修改 `--base` 的工作区或索引。
 
 70 映像实验中的 CoreGraphics 源码和 pin 更新另外保存在 [研究附件](research/cg-colorspace-names/README.md)，不由固定的 67 项 overlay 自动应用。该附件记录实际名称 API 测试以及后续 GetType 缺口，供继续开发。
+
+本地原生身份查询的后续源码和证据见 [身份存储实验](research/local-identity-store/README.md)。该实验已使原版 Xcode 构建越过 GatherProvisioningInputs；补齐 derq 后进入了 CodeSign，当前因静态库签名尚未支持而失败。完整 App 签名仍在验证。
