@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/eventkit-original-closure-preparation-v2.json",
+  "configuration_sha256": "0e6eeee5209d2ce192c7d89fdba630b17f95081d07def59e0a35cab5850ea6ca",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/EventKit.framework/Versions/A/EventKit",
+      "attempts": [],
+      "prepared_target": "eventkit-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CalendarDaemon.framework/Versions/A/CalendarDaemon",
+      "attempts": [],
+      "prepared_target": "eventkit-closure-calendardaemon-resource-v1"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "verified": true,
+  "code_images": [
+    {
+      "target": "eventkit-patch-got-v2",
+      "inspection": "artifacts/eventkit-patch-got-v2-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-batch-u5yz6gxl/eventkit-patch-got-v2-result.json",
+      "corruption_tests": "artifacts/eventkit-original-closure-real-binary-tests-v1.json",
+      "got_cells": 1075,
+      "serialized_bindings": 3850
+    },
+    {
+      "target": "eventkit-closure-calendardaemon-resource-v1",
+      "inspection": "artifacts/eventkit-closure-calendardaemon-resource-v1-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-batch-u5yz6gxl/eventkit-closure-calendardaemon-resource-v1-result.json",
+      "corruption_tests": "artifacts/eventkit-original-closure-real-binary-tests-v1.json",
+      "got_cells": 1190,
+      "serialized_bindings": 2867
+    },
+    {
+      "target": "swift-quartzcore-patch-got-v1",
+      "inspection": "artifacts/swift-quartzcore-patch-got-v1-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-m7h63tj2/result.json",
+      "corruption_tests": "artifacts/swift-quartzcore-patch-got-v1-real-binary-tests.json",
+      "got_cells": 21,
+      "serialized_bindings": 33
+    }
+  ],
+  "original_executable_bytes_preserved": true,
+  "GOT_cells": 2286,
+  "serialized_bindings": 6750,
+  "format_positive_cases": 3,
+  "format_negative_cases": 6
+}

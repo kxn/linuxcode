@@ -1,0 +1,34 @@
+{
+  "diagnostic_only": true,
+  "original_API": "_class_setCustomDeallocInitiation",
+  "MachO_symbol": "__class_setCustomDeallocInitiation",
+  "original_source_available": true,
+  "implementation_verified": false,
+  "runtime_behavior_verified": false,
+  "source_sha256": {
+    "vendor/apple-objc4/runtime/objc-internal.h": "8562d82bf50f0e0f8751f97d45864789261780b9d12b9aeabac4c1fa0ae01a79",
+    "vendor/apple-objc4/runtime/objc-runtime-new.h": "6a27a1d709f81e7eb1383ca750650797e591896fbc101185ae674f08171659eb",
+    "vendor/apple-objc4/runtime/objc-runtime-new.mm": "53aca9332bafbd084cc0d353d3f80ddb9b5d33279719c480ad5b1e438acd20e3",
+    "vendor/apple-objc4/runtime/objc-object.h": "66d5b71adf82243b5dc78c75a67d6a31d6b632bbe000ac3d2aa9ca5214d72a95",
+    "vendor/apple-objc4/runtime/NSObject.mm": "0488b064f8d2465317a849fa997d2fa3ab8e67e870fcca5674aeffce6026e289",
+    "vendor/darling/src/external/objc4/runtime/objc-runtime-new.h": "f560d13d10f072e688ecdbc257cc4b35de8b519b5c2977054f87b19237bfdeef",
+    "vendor/darling/src/external/objc4/runtime/objc-runtime-new.mm": "5f63999b22b5cfd05f830560140b28e28dc6c20ada41e4b536fdddd590178dca",
+    "vendor/darling/src/external/objc4/runtime/objc-object.h": "9afd4947bd8bc0503f6b620c945b57b8f92ff46f0f2620191e0ddbddf3937a9c",
+    "vendor/darling/src/external/objc4/runtime/NSObject.mm": "6d6bacec18535f54351ec58236a40e148d90355ea9042354274f66eaab5e9de9"
+  },
+  "required_semantics": [
+    "Mark a realized class and existing subclasses under the runtime lock; future subclasses inherit the mark.",
+    "On the last release send _objc_initiateDealloc instead of dealloc while retaining the deallocating state.",
+    "The custom method eventually calls dealloc; retain/release must not resurrect or deallocate the object twice.",
+    "Weak loads return nil and deallocating instances must not enter autorelease pools."
+  ],
+  "required_native_checks": [
+    "Normal unmarked objects preserve existing deallocation.",
+    "Delayed custom deallocation works across threads.",
+    "Existing and future subclasses inherit the behavior.",
+    "Repeated retain/release and autorelease during deferred destruction do not resurrect or double free.",
+    "Weak reference behavior and final destruction remain correct."
+  ],
+  "source_reference": "https://github.com/apple-oss-distributions/objc4/tree/main/runtime",
+  "no_op_not_equivalent": true
+}

@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 561398,
+      "sha256": "738e8f37ee9244b560b2acc7fc7d3a264147c7e1404737310908be24bf239c38"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 5130,
+      "sha256": "1ab7d826b3b94fc07333010483b7f9b03522edb58ed0d49f377d555f0e692a08"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1190,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 2867,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 134,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d948",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d960",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d978",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d990",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d9a8",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d9c0",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d9d8",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1d9f0",
+        "first_section_prefix": "0x850",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-eventkit-closure-calendardaemon-resource-v1/CalendarDaemon': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xe905)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u5yz6gxl/eventkit-closure-calendardaemon-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xe905",
+        "segment": "__DATA_CONST",
+        "offset": "0x1d948",
+        "actual_address": "0x3e7f8948",
+        "LLVM_section_base_address": "0x3e7f9198",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "8f72f64e9b05a4621e1915cf0c76261802e3fa0eca872bb47901698b755ffa34",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "2d9c3636d685f25ecbbc0dba8d893f834683e0837a65978e333cf6c0565615e2",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "1dcd8095816dcbc735278ec001760af02c7b0b7d8f670a44413a2f037ff6b478",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CalendarDaemon.framework/Versions/A/CalendarDaemon": "8c6896354f13fc9895a8eb2b0279152c22d6edfe61aa54c1b169d5b68b391c11",
+    "runtime/rebuilt-eventkit-closure-calendardaemon-resource-v1/CalendarDaemon": "e768a068db028cc7120e914c7c4b744709bb01520677c09254544f1f892a4980",
+    "runtime/rebuilt-eventkit-closure-calendardaemon-resource-v1/reconstruction.json": "fff1ce026d3b4dd8856405b3e0feb978f55fc7dd3ca2bb3fc470b14ac1aa4c1a"
+  },
+  "verified": true
+}

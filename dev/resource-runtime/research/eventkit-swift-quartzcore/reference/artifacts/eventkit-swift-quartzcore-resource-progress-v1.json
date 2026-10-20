@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-10-20T08:13:49.238031+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "configuration": "config/direct-resource-tool-environment-v115.json",
+  "graphics_stage": "artifacts/coregraphics-native-v159-runtime-inputs-v1.json",
+  "resource_overlay_stage": "artifacts/resource-framework-overlay-eventkit-runtime-inputs-v1.json",
+  "new_original_images": {
+    "verified": true,
+    "code_images": [
+      {
+        "target": "eventkit-patch-got-v2",
+        "inspection": "artifacts/eventkit-patch-got-v2-independent-inspection.json",
+        "format_probe": "runtime/original-dyld-validation-batch-u5yz6gxl/eventkit-patch-got-v2-result.json",
+        "corruption_tests": "artifacts/eventkit-original-closure-real-binary-tests-v1.json",
+        "got_cells": 1075,
+        "serialized_bindings": 3850
+      },
+      {
+        "target": "eventkit-closure-calendardaemon-resource-v1",
+        "inspection": "artifacts/eventkit-closure-calendardaemon-resource-v1-independent-inspection.json",
+        "format_probe": "runtime/original-dyld-validation-batch-u5yz6gxl/eventkit-closure-calendardaemon-resource-v1-result.json",
+        "corruption_tests": "artifacts/eventkit-original-closure-real-binary-tests-v1.json",
+        "got_cells": 1190,
+        "serialized_bindings": 2867
+      },
+      {
+        "target": "swift-quartzcore-patch-got-v1",
+        "inspection": "artifacts/swift-quartzcore-patch-got-v1-independent-inspection.json",
+        "format_probe": "runtime/original-dyld-validation-m7h63tj2/result.json",
+        "corruption_tests": "artifacts/swift-quartzcore-patch-got-v1-real-binary-tests.json",
+        "got_cells": 21,
+        "serialized_bindings": 33
+      }
+    ],
+    "original_executable_bytes_preserved": true,
+    "GOT_cells": 2286,
+    "serialized_bindings": 6750,
+    "format_positive_cases": 3,
+    "format_negative_cases": 6
+  },
+  "EventKit_CFString_probe": "runtime/original-cfstring-native-dzcgybkh/result.json",
+  "EventKit_CFString_binding_mode": "lazy",
+  "EventKit_CFString_value": "EKEventStoreChangedNotification",
+  "EventKit_CFString_type_id": 7,
+  "EventKit_CFString_missing_and_wrong_value_controls_passed": true,
+  "strict_now_CFString_probe": "runtime/original-cfstring-native-ouhiwcw2/result.json",
+  "strict_now_pending_blocker": "_openat_authenticated_np",
+  "full_framework_API_compatibility_verified": false,
+  "Swift_QuartzCore_probe": "runtime/swift-quartzcore-native-fahjti11/result.json",
+  "original_Swift_compiler_bytes_equal_extracted": true,
+  "original_constructor_import_verified": true,
+  "original_constructor_provider_verified": true,
+  "native_frame_range_checks": 23,
+  "optional_nil_zero_negative_zero_NaN_infinity_and_getter_setter_verified": true,
+  "Swift_missing_and_wrong_value_controls_passed": true,
+  "direct_resource_probes": [
+    "runtime/direct-resource-tools-9sasbwxh/result.json",
+    "runtime/direct-resource-tools-9ha_46ri/result.json"
+  ],
+  "original_Unity_workspace_build": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-0e848db16f7b.json",
+  "original_Unity_exit_status": 65,
+  "original_Unity_native_status": [
+    "65"
+  ],
+  "original_Unity_dependency_graph_targets": 5,
+  "UTI_preflight_verified": true,
+  "compile_c_task_lines": 0,
+  "expected_product_binaries": {
+    "runtime/unity-ios-cocoapods-v65-build/DerivedData/Build/Products/Debug-iphoneos/uEmuera.app/uEmuera": {
+      "exists": false,
+      "bytes": null
+    },
+    "runtime/unity-ios-cocoapods-v65-build/DerivedData/Build/Products/Debug-iphoneos/UnityFramework.framework/UnityFramework": {
+      "exists": false,
+      "bytes": null
+    },
+    "runtime/unity-ios-cocoapods-v65-build/DerivedData/Build/Products/Debug-iphoneos/AFNetworking/libAFNetworking.a": {
+      "exists": false,
+      "bytes": null
+    }
+  },
+  "latest_actual_blocker": "__class_setCustomDeallocInitiation",
+  "resource_compilation_verified": false,
+  "complete_Unity_UE_linking_and_signing_verified": false,
+  "default_installer_promoted": false,
+  "original_JavaScriptCore_context_creation_verified": false,
+  "next_work": "Recover the next dependency actually required by original resource tools. Keep strict-now openat_authenticated_np and JavaScriptCore gaps recorded; complete real resource compilation and Unity/UE CocoaPods linking/signing."
+}

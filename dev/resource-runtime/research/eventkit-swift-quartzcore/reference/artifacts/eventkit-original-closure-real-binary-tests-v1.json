@@ -1,0 +1,81 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "eventkit-patch-got-v2",
+      "candidate_sha256": "aaa066b68710d981ab155d0d067fd4320d4c445f6baf42081176e392c23d05ca",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 1725168,
+            "sha256": "2faadb682e0a2186254cac0392034f2a450e95a9a56c7f738ad5937c3c2bdee2"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 2286,
+            "sha256": "4e2af7f8eff5334fbcddb79ee88f39940058a74aca75547cac2ea59768062d22"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1075,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 3850,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "eventkit-closure-calendardaemon-resource-v1",
+      "candidate_sha256": "e768a068db028cc7120e914c7c4b744709bb01520677c09254544f1f892a4980",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 561398,
+            "sha256": "738e8f37ee9244b560b2acc7fc7d3a264147c7e1404737310908be24bf239c38"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 5130,
+            "sha256": "1ab7d826b3b94fc07333010483b7f9b03522edb58ed0d49f377d555f0e692a08"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1190,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 2867,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a"
+  }
+}

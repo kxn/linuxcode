@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/eventkit-original-closure-preparation-v1.json",
+  "configuration_sha256": "697d3350ed7a61521015454133f87e5b1eb802da3ad3c91dadf1980c4c2aa35d",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/CalendarDaemon.framework/Versions/A/CalendarDaemon",
+      "attempts": [
+        {
+          "target": "eventkit-closure-calendardaemon-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CalendarDaemon.framework/Versions/A/CalendarDaemon",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "eventkit-closure-calendardaemon-resource-v1",
+            "--build"
+          ],
+          "log": "logs/eventkit-closure-calendardaemon-resource-v1-batch-preparation.log",
+          "log_sha256": "94a388618b5c8fe4036e198def5b06fc68cc881cfc3195026504aac62ed47224",
+          "preparation": "artifacts/eventkit-closure-calendardaemon-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "eventkit-closure-calendardaemon-resource-v1"
+    }
+  ]
+}
