@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 4689,
+      "sha256": "94d2d9ab2ca4621551614e580ed1aacdb47cf1b19f05d215c0f6ba48d42391f9"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 120,
+      "sha256": "240d988e5bd94323056e0234bbf08d0e5a15aadf506af98053fa37f0d88e8dde"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 48,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 193,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 32,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1db8",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1dd8",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1df8",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1e18",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1e38",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1e58",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1e78",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1e98",
+        "first_section_prefix": "0xcc8",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-contacts-closure-contactsmetrics-resource-v1/ContactsMetrics': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x13af)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-tpffvj7p/contacts-closure-contactsmetrics-resource-v1-result.json",
+    "original_validator_sha256": "09e7a8701613af93a6bf38f3d725d48a78509652adbdaa22d83ef348d8729b32",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "c44a45c7d9316c64f39d7016f0db29be52298df815b258a96b3fa7267d5972c3",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "b43b01c86baaedcc5645ed04011258de90eba83ac7d41241ae62564461f64c66",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/ContactsMetrics.framework/Versions/A/ContactsMetrics": "e32180d287e42913ad74424c15b8350b6f5d891140db1ea96fa1bf3567602756",
+    "runtime/rebuilt-contacts-closure-contactsmetrics-resource-v1/ContactsMetrics": "963e91d9c880b90f674f2fc12cc6df63e1fe112f4556c79294b1eceb11def717",
+    "runtime/rebuilt-contacts-closure-contactsmetrics-resource-v1/reconstruction.json": "bb7aa163e40c63aa1eef35dc99083979f5202ea353fb41fcc097904e446ecedd"
+  },
+  "verified": true
+}

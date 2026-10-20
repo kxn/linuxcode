@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 52090,
+      "sha256": "59abc5c19fdb6ffbfa01442dd81ec4013d7006350f368fa14ad3fc7c0fb57494"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1248,
+      "sha256": "b427bee2a2c7e89efc4e4a43400738c30372a78d3fa4749b9aaa9d35b28201e7"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 270,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 340,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 58,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3420",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3440",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3460",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3480",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x34a0",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x34c0",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x34e0",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3500",
+        "first_section_prefix": "0xd10",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-contacts-closure-appleldap-resource-v1/AppleLDAP': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x777)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-tpffvj7p/contacts-closure-appleldap-resource-v1-result.json",
+    "original_validator_sha256": "4ea22cb24e40de858caefa0dd37201db620cde680c78ec13e9dee71a4549214e",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "27ec3c4753aaf39efe475c25f250d03d4e1e5dce62ba942d510eefafd8232121",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "b43b01c86baaedcc5645ed04011258de90eba83ac7d41241ae62564461f64c66",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AppleLDAP.framework/Versions/A/AppleLDAP": "d5322a696c82338c92923445f5b652ae7fb27c812f882cde316d78a8ea39af03",
+    "runtime/rebuilt-contacts-closure-appleldap-resource-v1/AppleLDAP": "c2c08bf70d69c2e6cabed47ecd69ac3bc9a801e3b1d4d7a8498f660738e7a312",
+    "runtime/rebuilt-contacts-closure-appleldap-resource-v1/reconstruction.json": "ca380c35df54324b0772f868d0ed353d368172ae4a32967dbfe2574026354540"
+  },
+  "verified": true
+}

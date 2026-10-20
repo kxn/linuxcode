@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 2137184,
+      "sha256": "c1f3e02c78fd5b1bc73610b1467fa21b69ee71ba3cd802107a6c993dbc9f0504"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3384,
+      "sha256": "229cbdf9820da85b81b42b6b17dda311c430ccf52d1f2854f8781726cce73ad0"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1284,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 6605,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 96,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59408",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59420",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59438",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59450",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59468",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59480",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59498",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x594b0",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-contacts-patch-got-v2/Contacts': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x240b8)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-tpffvj7p/contacts-patch-got-v2-result.json",
+    "original_validator_sha256": "3d5ed1e3798bfcb4b5979792ba7db9962a828284d7518fd3a5d933f5b1543e87",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "17b6725377bf8275e049b50a924a5ac6b4d98b7617ca40a66f1ca7518c7f0351",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "b43b01c86baaedcc5645ed04011258de90eba83ac7d41241ae62564461f64c66",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts": "ffba721363cc0a614449dc10d1ffb05b996f77854aecbddd6cd9264136ead85b",
+    "runtime/rebuilt-contacts-patch-got-v2/Contacts": "725a7baa6501fd2187d2e7559ce210acca6cefc1dccf0745c82170cc808a7f51",
+    "runtime/rebuilt-contacts-patch-got-v2/reconstruction.json": "c9a8f93984719a4e85d82773aacf4bd9d890f4df5f299dcdefe6e1f8c8d0fd7e"
+  },
+  "verified": true
+}

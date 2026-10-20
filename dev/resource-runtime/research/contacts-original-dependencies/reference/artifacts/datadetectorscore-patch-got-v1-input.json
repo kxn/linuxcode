@@ -1,0 +1,69 @@
+{
+  "target": "datadetectorscore-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore",
+    "sha256": "9b0ce82386fd999d52e6a495b5552cea140e66b8c04d6ae5c17cbf25d91de7d6",
+    "reference_set": "fullsystem",
+    "objc_classes": 12,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 445,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 450560,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/Montreal.framework/Versions/A/Montreal",
+    "/System/Library/Frameworks/NaturalLanguage.framework/Versions/A/NaturalLanguage",
+    "/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData",
+    "/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+    "/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libicucore.A.dylib",
+    "/usr/lib/libxml2.2.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "b43b01c86baaedcc5645ed04011258de90eba83ac7d41241ae62564461f64c66",
+  "manifest_sha256": "340109bd2838605929d19bd2b58d267e9413fdd5ef2f0263c50ad3e5c2532861",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "datadetectorscore-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1227,
+    "nonzero_addends": 0,
+    "got_cells": 445,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/datadetectorscore-patch-got-v1-build.log",
+  "log_sha256": "960bf38805ceaf4e5c13882dd3fab5a6b548f06880f27d83ac1e375ad4e01ee5"
+}

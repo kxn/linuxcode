@@ -1,0 +1,46 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts",
+      "stem": "contacts-closure-contacts",
+      "existing_target": "contacts-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ContactsPersistence.framework/Versions/A/ContactsPersistence",
+      "stem": "contacts-closure-contactspersistence"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleLDAP.framework/Versions/A/AppleLDAP",
+      "stem": "contacts-closure-appleldap"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/CoreSuggestions",
+      "stem": "contacts-closure-coresuggestions"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ContactsFoundation.framework/Versions/A/ContactsFoundation",
+      "stem": "contacts-closure-contactsfoundation"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/vCard.framework/Versions/A/vCard",
+      "stem": "contacts-closure-vcard"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ContactsMetrics.framework/Versions/A/ContactsMetrics",
+      "stem": "contacts-closure-contactsmetrics"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ProactiveEventTracker.framework/Versions/A/ProactiveEventTracker",
+      "stem": "contacts-closure-proactiveeventtracker"
+    }
+  ]
+}

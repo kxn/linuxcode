@@ -1,0 +1,318 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/contacts-original-dependency-batch-v1.json",
+  "configuration_sha256": "7bde6fc99cfa9f5e31234ba2c95a0513653b0c1dcbd86b9cdfbd44edb63de4d3",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts",
+      "attempts": [],
+      "prepared_target": "contacts-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ContactsPersistence.framework/Versions/A/ContactsPersistence",
+      "attempts": [
+        {
+          "target": "contacts-closure-contactspersistence-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ContactsPersistence.framework/Versions/A/ContactsPersistence",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-contactspersistence-resource-v1",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-contactspersistence-resource-v1-batch-preparation.log",
+          "log_sha256": "33b7ba995866bb08766719efc99ac57502cac6a16f58979aec3baac0f7d39b30",
+          "preparation": "artifacts/contacts-closure-contactspersistence-resource-v1-input.json"
+        },
+        {
+          "target": "contacts-closure-contactspersistence-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "contacts-closure-contactspersistence-resource-v1",
+            "--exact-import-audit",
+            "artifacts/contacts-closure-contactspersistence-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-contactspersistence-resource-v2",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-contactspersistence-resource-v2-batch-preparation.log",
+          "log_sha256": "220afd672951bfb58637587d56de45cf3e14c12ec9a25fa5d0df02de85664a93",
+          "preparation": "artifacts/contacts-closure-contactspersistence-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "contacts-closure-contactspersistence-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleLDAP.framework/Versions/A/AppleLDAP",
+      "attempts": [
+        {
+          "target": "contacts-closure-appleldap-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppleLDAP.framework/Versions/A/AppleLDAP",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-appleldap-resource-v1",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-appleldap-resource-v1-batch-preparation.log",
+          "log_sha256": "e87f95e7a5d55691dabe353a2ee16662dde9a336ca7ed283980214ecaf2cfe33",
+          "preparation": "artifacts/contacts-closure-appleldap-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "contacts-closure-appleldap-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/CoreSuggestions",
+      "attempts": [
+        {
+          "target": "contacts-closure-coresuggestions-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/CoreSuggestions",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-coresuggestions-resource-v1",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-coresuggestions-resource-v1-batch-preparation.log",
+          "log_sha256": "4022fac1afd3c4d81e5a9a47b52a1e9456b22bd29162125142402fc9e7547ba3",
+          "preparation": "artifacts/contacts-closure-coresuggestions-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "contacts-closure-coresuggestions-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ContactsFoundation.framework/Versions/A/ContactsFoundation",
+      "attempts": [
+        {
+          "target": "contacts-closure-contactsfoundation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ContactsFoundation.framework/Versions/A/ContactsFoundation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-contactsfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-contactsfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "7fc9eb45a1ffea319340843dfc20272e77fe7bd1644913ada82953ed9cef304a",
+          "preparation": "artifacts/contacts-closure-contactsfoundation-resource-v1-input.json"
+        },
+        {
+          "target": "contacts-closure-contactsfoundation-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "contacts-closure-contactsfoundation-resource-v1",
+            "--exact-import-audit",
+            "artifacts/contacts-closure-contactsfoundation-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-contactsfoundation-resource-v2",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-contactsfoundation-resource-v2-batch-preparation.log",
+          "log_sha256": "f3cbec071ded5831d21365ff597ec809fb9d4288b397db86b7f155444b548023",
+          "preparation": "artifacts/contacts-closure-contactsfoundation-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "contacts-closure-contactsfoundation-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/vCard.framework/Versions/A/vCard",
+      "attempts": [
+        {
+          "target": "contacts-closure-vcard-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/vCard.framework/Versions/A/vCard",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-vcard-resource-v1",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-vcard-resource-v1-batch-preparation.log",
+          "log_sha256": "4ad09e5e6892352c2d5e832d012692546e5cc51b8b949624dc486bc9e10857ab",
+          "preparation": "artifacts/contacts-closure-vcard-resource-v1-input.json"
+        },
+        {
+          "target": "contacts-closure-vcard-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "contacts-closure-vcard-resource-v1",
+            "--exact-import-audit",
+            "artifacts/contacts-closure-vcard-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-vcard-resource-v2",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-vcard-resource-v2-batch-preparation.log",
+          "log_sha256": "2ccf16066174b7684cf6ea4482e739306bb5e2c3f344fbd04f366820c8e3ecac",
+          "preparation": "artifacts/contacts-closure-vcard-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "contacts-closure-vcard-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ContactsMetrics.framework/Versions/A/ContactsMetrics",
+      "attempts": [
+        {
+          "target": "contacts-closure-contactsmetrics-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ContactsMetrics.framework/Versions/A/ContactsMetrics",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-contactsmetrics-resource-v1",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-contactsmetrics-resource-v1-batch-preparation.log",
+          "log_sha256": "df7f8ae84bde8d1eb0a1b17a67c3104b244a2f8e0b5f519da4c2b6b09aaa0539",
+          "preparation": "artifacts/contacts-closure-contactsmetrics-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "contacts-closure-contactsmetrics-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ProactiveEventTracker.framework/Versions/A/ProactiveEventTracker",
+      "attempts": [
+        {
+          "target": "contacts-closure-proactiveeventtracker-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ProactiveEventTracker.framework/Versions/A/ProactiveEventTracker",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-proactiveeventtracker-resource-v1",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-proactiveeventtracker-resource-v1-batch-preparation.log",
+          "log_sha256": "03c8b14115bfa35bf9e9a8706234a41eb4509087cf3e9afa98e1c49f2f8cd39b",
+          "preparation": "artifacts/contacts-closure-proactiveeventtracker-resource-v1-input.json"
+        },
+        {
+          "target": "contacts-closure-proactiveeventtracker-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "contacts-closure-proactiveeventtracker-resource-v1",
+            "--exact-import-audit",
+            "artifacts/contacts-closure-proactiveeventtracker-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "contacts-closure-proactiveeventtracker-resource-v2",
+            "--build"
+          ],
+          "log": "logs/contacts-closure-proactiveeventtracker-resource-v2-batch-preparation.log",
+          "log_sha256": "49e7e1881c0bb89614bc5fa4c76f26904a29013a1e4044545193b45397176fd7",
+          "preparation": "artifacts/contacts-closure-proactiveeventtracker-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "contacts-closure-proactiveeventtracker-resource-v2"
+    }
+  ]
+}
