@@ -1,0 +1,138 @@
+{
+  "target": "vision-closure-libfacecore-resource-v2",
+  "pin": {
+    "path": "/System/Library/Frameworks/Vision.framework/libfaceCore.dylib",
+    "sha256": "6281ebaac1a0e169154c4d46af81013acc33f855a2ecca145d57351c71425134",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib",
+      "_scalbn": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 31,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 239,
+    "patch_got_range": [
+      "0x7ff940000000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 13185024,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "d42383691482d4861f86564cd2874fd31bce5ae31e45f37253f4eef60d09ccc3",
+  "manifest_sha256": "6515ece84cd164227863f84ec6cae54e5fb2f7382b05107223ca6845bac0389b",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "vision-closure-libfacecore-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "vision-closure-libfacecore-resource-v1",
+  "exact_import_audit": "artifacts/vision-closure-libfacecore-original-import-audit-v2.json",
+  "exact_import_audit_sha256": "a12970e485dac02b56b0a43dfd99621f1a6d8470476263ce34c3ba986dd5146b",
+  "typed_class_aliases": [],
+  "typed_pooled_imports": [
+    {
+      "kind": "original-stub-GOT-and-reexport-route",
+      "target": "0x7ff812dd9e6b",
+      "slots": [
+        "0x7ff94007d630"
+      ],
+      "selected": [
+        "_scalbn",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "stubs": [
+        {
+          "address": "0x7ff91899f5a8",
+          "slot": "0x7ff94007d630",
+          "bytes": "ff2582e06d27"
+        }
+      ],
+      "route": [
+        {
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "symbol": "_scalbn",
+          "kind": "whole-library-reexport",
+          "ordinal": 25,
+          "dependency": "/usr/lib/system/libsystem_m.dylib"
+        },
+        {
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "symbol": "_scalbn",
+          "kind": "address",
+          "export": [
+            "address",
+            140703445130859,
+            0
+          ]
+        }
+      ],
+      "original_file_sha256": {
+        "/System/Library/Frameworks/Vision.framework/libfaceCore.dylib": "6281ebaac1a0e169154c4d46af81013acc33f855a2ecca145d57351c71425134",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+        "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+      },
+      "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+      "records": [
+        {
+          "symbol": "_scalbn",
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "kind": 0,
+          "implementation": 140703445130859,
+          "matching_import_names": [
+            "_scalbn"
+          ],
+          "slot": 140708497839664,
+          "addend": 0,
+          "weak_import": false,
+          "high7": 0,
+          "target": 140703445130859,
+          "target_matches_patch": true,
+          "export_matches_patch": true,
+          "provider_index": 155,
+          "export_index": 53708,
+          "location_index": 107101
+        }
+      ]
+    }
+  ],
+  "pooled_import_validator_sha256": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+  "original_patch_contract": {
+    "original_records": 227,
+    "nonzero_addends": 31,
+    "got_cells": 239,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/vision-closure-libfacecore-resource-v2-build.log",
+  "log_sha256": "88f0554c4508f1776263c76c61b26a031e9b2e12341e445cd21f7c8757168dc7"
+}

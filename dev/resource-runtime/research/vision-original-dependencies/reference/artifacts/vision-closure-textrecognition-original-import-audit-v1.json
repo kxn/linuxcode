@@ -1,0 +1,7082 @@
+{
+  "target": "vision-closure-textrecognition-resource-v1",
+  "original_image_sha256": "64d2365ab68934fbc55c5e2fdb4d58fd346f23050e14164920449db7d94caad9",
+  "missing_imports_sha256": "d9cb1dfdfe4afa582143f941b18b5ac4b3e214b67c2fb03c49c030cc56155160",
+  "original_dependency_sha256": {
+    "/usr/lib/libc++.1.dylib": "98a388765e2b9a56940265d09723d2b1fccb9db63953157e5c6006089cab3ac8",
+    "/System/Library/PrivateFrameworks/TextInput.framework/Versions/A/TextInput": "b81b6a5fc4e572e912a42cff62eb109e66ca619e5a56002e0564ec28b8a7b18d",
+    "/usr/lib/libMobileGestalt.dylib": "815426d5978f7c89cef097d72806185b6e12ebd509896a22b63adb911d4aa8c1",
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers": "148dcf6c821f4ab1d90a9fc525cf184edef737fd8620897ea1e8a61b19110704",
+    "/System/Library/PrivateFrameworks/CVNLP.framework/Versions/A/CVNLP": "b3f0bb7af311917ef6e2228a4ab1ac90796653b9893558f241b937d70f4ae406",
+    "/usr/lib/libicucore.A.dylib": "69b94683e593fe62e9bd0f7e59deebd6119580aebb568a0e4b6f79afa3e3351c",
+    "/System/Library/PrivateFrameworks/LanguageModeling.framework/Versions/A/LanguageModeling": "9a4f52e303432cca8ab56d2efb0633f748875958ed691056f00c0302e1071198",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics": "0d0af817945ce26823a7653c1e29a0444b124b78565666e37c5b7dcedf5cd039",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo": "675a42d831ec0b1f3439a985ff6f35d1426e22ec2a183e70c275a0dac9ec0692",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO": "2c7f541f2ee144959cf2e7f1f55496f6e03ef9a4fdc5c0b744b2a91088fb46e4",
+    "/usr/lib/libperfcheck.dylib": "b464efdaf3358cd14d6fb6b2d6dcec33798bf1b9e77b32f77a02294ef0bffc39",
+    "/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore": "9b0ce82386fd999d52e6a495b5552cea140e66b8c04d6ae5c17cbf25d91de7d6",
+    "/System/Library/PrivateFrameworks/Futhark.framework/Versions/A/Futhark": "db4cd5a11a7b06653ea2d4ccede6ba3e7824e6f6565c04a25655706564fbac3a",
+    "/System/Library/PrivateFrameworks/VisionCore.framework/Versions/A/VisionCore": "a2753fe52304a565f7266d180126f4de12065a1aa2680b9191b69317619d6b0e",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia": "f498b2518c2a775c9c1768c5d3451285f1ee86a497f5918c5f1b1499651c55bf",
+    "/usr/lib/libcompression.dylib": "3ff7670e9b414e3f8523a0f2563989720dbf023b0e7ad04794ffab531c61e7a9",
+    "/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData": "198c85e1b8f88a27d892d43f47e5da34435c49df4389f10759c1adbc1eb766a7",
+    "/System/Library/Frameworks/Metal.framework/Versions/A/Metal": "f9287f12f4ed6247d53cf322c468db96ed877abe54912c990f5697e916b45ec8",
+    "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML": "f7937f076ae18420bc74a7cf862b82d256aa4eee6143ed314b26beec7647a64b",
+    "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox": "9a4082c7533fc9fe8fcb4cb1aa17f3eb2ad09ae41794439c6f214bc2cb50f152",
+    "/System/Library/Frameworks/NaturalLanguage.framework/Versions/A/NaturalLanguage": "6f4b1dddee880f98cddd92e1d61df723f7013bf7dc83ec3737767f2b431b99e4",
+    "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText": "1198d39059cfa712d3ad274d95a712a5159c42814c2e749eeba1e39c6a4e28f6",
+    "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage": "ffd3476e46fbc7b4eb05bb35fb26fe5e4346762103ad38762e26d61559ced563",
+    "/System/Library/PrivateFrameworks/Espresso.framework/Versions/A/Espresso": "9a78a07b9567e8e23961bfd285cee226a98785502ddd24908f107579336b97f8",
+    "/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon": "c90284b0fa47290cb6ccdb8743d1a8f2ea4f59ef60b37493e9b944a78455c161",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation": "37aa85f7da365c9c81244c8dc67c95362edef4dacf495db2fa7655840a254c7d",
+    "/usr/lib/libobjc.A.dylib": "4000ce8b03a7d56a55dff36cb37589cbd42ab4412262f2ac98cfa3eff9475b23",
+    "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate": "491b89f6919d3e972a0e53333d4beb9886c9f5b0554468c76dcd3db7d410c3b2",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation": "a8d086449ef65851a190c862ffbd57d663b2b731bac9126c35e501cfe8ecbfd8",
+    "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection": "227fc17839fdfbcd8018406ea15258179154ab5bff9ef328bdf43e04f973656a",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface": "6d39195ea5a07009c12a5bf20b7ab52b1264ddf261152302c641ca62ca761699",
+    "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags": "0975335fdd62b9c6bfd871c57e29dd6c824cbd127c7c66d90fe6545c697d2f02",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking": "80c566cdab18503a09d5ebe32a6f25e84322c06b700c448965af9cb2003be4ac",
+    "/usr/lib/swift/libswiftAccelerate.dylib": "158384b8762db1bf42d0d1022f8ccd5347e2a124d3b35f56e31f3683b622b662",
+    "/usr/lib/swift/libswiftCore.dylib": "f35f878e8efd184709ffb0f21a41172de69b8083ad89fa0f758379d38d1224a5",
+    "/usr/lib/swift/libswiftCoreAudio.dylib": "fdac484e2f00216fdadaec162391367c106cda2a6fc535f4f82937da4e52172b",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib": "d907f618c87a5b8709956a4b19262cdcaf7ec2e0e73ba390a9fd5268a9b29859",
+    "/usr/lib/swift/libswiftCoreImage.dylib": "638088bded9c50c2b23f311b442a7b9591cd2f6251703ba2f78ed02c6bddbd76",
+    "/usr/lib/swift/libswiftCoreMedia.dylib": "15b3e8cffae3948f178d77b56230039c47641fb66c3ea4115f413b47b8331d69",
+    "/usr/lib/swift/libswiftDispatch.dylib": "d86226f24682ae6be9163622cd27a5b29a03a12731c05f687e39a482184ab030",
+    "/usr/lib/swift/libswiftIOKit.dylib": "3ad0885499ddd6d2d8fae705502f9ac16d6bc1b8ac195e9ad8f4f21d0a5a90a1",
+    "/usr/lib/swift/libswiftMLCompute.dylib": "f7560d1b1b2b8280cea04fb9a546c9b555a0aefaa889f3e8e95853879ce82eed",
+    "/usr/lib/swift/libswiftMetal.dylib": "7a040e8c28b5e3bb3b97ca1ac0b46a6f29f043875ff4257538521a11dfbb80f4",
+    "/usr/lib/swift/libswiftNaturalLanguage.dylib": "f3a27d86212ae21eef5ae00b67317e5bca44a5e421a7f847371277cc417edbdd",
+    "/usr/lib/swift/libswiftObjectiveC.dylib": "716192b71712e60541bce08dbf1f0f535b6bc22256951cc20fba8b601b978202",
+    "/usr/lib/swift/libswiftQuartzCore.dylib": "c832dfcae58cbf207f44adc6ef889c6172f2db7a16da2f88b2e6d88d87cd848f",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib": "7b0dafab8b75bf8179a0c938b4ade797548cf42a5cfec5912c63f4b1cf6e9b2c",
+    "/usr/lib/swift/libswiftXPC.dylib": "cf876a5d6d18b3859c386ea58d3d266aad6204e97dbe8764ff43efd2a1a656b7",
+    "/usr/lib/swift/libswift_Builtin_float.dylib": "8d55d6a28d5aeede3f4611abdaea2ea85db2f47b456f4b996fc9dcb504e8e6e1",
+    "/usr/lib/swift/libswift_Concurrency.dylib": "87d7e3d6b886df3a2b49c5d82a6f3e8199f209298b45ef95ad9de4f8ac72abb4",
+    "/usr/lib/swift/libswift_StringProcessing.dylib": "e14f2e5730dc6fbbcf3531bf0f370892c3d747b5884258830690a5783a7040ed",
+    "/usr/lib/swift/libswiftos.dylib": "61251fe401a25f423a115e59187d87ded15671a36db254e6f1e7f32b6dda3ef5",
+    "/usr/lib/swift/libswiftsimd.dylib": "d7a5a3239f0f4d37064a322eec4b1b9bf06291c62230f85c4679ac81712bc96a"
+  },
+  "unresolved": 2,
+  "rows": [
+    {
+      "target": "0x7ff8042f5a10",
+      "slots": [
+        "0x7ff9400157d8"
+      ],
+      "exports": [
+        [
+          "_$sSo7CGPointV10FoundationE19_bridgeToObjectiveCSo7NSValueCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSo7CGPointV10FoundationE19_bridgeToObjectiveCSo7NSValueCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8042f5a50",
+      "slots": [
+        "0x7ff9400157e0"
+      ],
+      "exports": [
+        [
+          "_$sSo7CGPointV10FoundationE26_forceBridgeFromObjectiveC_6resultySo7NSValueC_ABSgztFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSo7CGPointV10FoundationE26_forceBridgeFromObjectiveC_6resultySo7NSValueC_ABSgztFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430a820",
+      "slots": [
+        "0x7ff9400125b0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV12charactersInACSSh_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV12charactersInACSSh_tcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430aa60",
+      "slots": [
+        "0x7ff9400125a0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV11whitespacesACvgZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV11whitespacesACvgZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430aa70",
+      "slots": [
+        "0x7ff940012618"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV22whitespacesAndNewlinesACvgZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV22whitespacesAndNewlinesACvgZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430aa80",
+      "slots": [
+        "0x7ff9400125c8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV13decimalDigitsACvgZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV13decimalDigitsACvgZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430aaa0",
+      "slots": [
+        "0x7ff9400125f0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV16lowercaseLettersACvgZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV16lowercaseLettersACvgZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430ab20",
+      "slots": [
+        "0x7ff940012668"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV7symbolsACvgZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV7symbolsACvgZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430b070",
+      "slots": [
+        "0x7ff940012680"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV8containsySbs7UnicodeO6ScalarVF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV8containsySbs7UnicodeO6ScalarVF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430b090",
+      "slots": [
+        "0x7ff940012630"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV5unionyA2CF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV5unionyA2CF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430bb30",
+      "slots": [
+        "0x7ff940012600"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetV19_bridgeToObjectiveCSo011NSCharacterC0CyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetV19_bridgeToObjectiveCSo011NSCharacterC0CyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80430c840",
+      "slots": [
+        "0x7ff9400126a0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation12CharacterSetVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation12CharacterSetVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804326a10",
+      "slots": [
+        "0x7ff9400154c0"
+      ],
+      "exports": [
+        [
+          "_$sSa10FoundationE36_unconditionallyBridgeFromObjectiveCySayxGSo7NSArrayCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSa10FoundationE36_unconditionallyBridgeFromObjectiveCySayxGSo7NSArrayCSgFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804326b10",
+      "slots": [
+        "0x7ff940015498"
+      ],
+      "exports": [
+        [
+          "_$sSa10FoundationE19_bridgeToObjectiveCSo7NSArrayCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSa10FoundationE19_bridgeToObjectiveCSo7NSArrayCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80432a910",
+      "slots": [
+        "0x7ff940015640"
+      ],
+      "exports": [
+        [
+          "_$sSo12NSOrderedSetC10FoundationE12makeIteratorAC017NSFastEnumerationE0VyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSo12NSOrderedSetC10FoundationE12makeIteratorAC017NSFastEnumerationE0VyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804364c90",
+      "slots": [
+        "0x7ff940014ee0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetVACycfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetVACycfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804364d20",
+      "slots": [
+        "0x7ff940014e78"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetV5countSivg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetV5countSivg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804364d40",
+      "slots": [
+        "0x7ff940014e50"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetV12makeIterators08IndexingE0VyACGyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetV12makeIterators08IndexingE0VyACGyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804367350",
+      "slots": [
+        "0x7ff940014e90"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetV6insertySb8inserted_Si17memberAfterInserttSiF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetV6insertySb8inserted_Si17memberAfterInserttSiF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804367a00",
+      "slots": [
+        "0x7ff940014ed8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetV9removeAllyyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetV9removeAllyyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804367e70",
+      "slots": [
+        "0x7ff940014eb0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetV7isEmptySbvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetV7isEmptySbvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80436b2a0",
+      "slots": [
+        "0x7ff940014ee8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80436b3a0",
+      "slots": [
+        "0x7ff940014e30"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetV0B0VMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetV0B0VMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8045f5160",
+      "slots": [
+        "0x7ff940015b68"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorP10FoundationE20localizedDescriptionSSvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorP10FoundationE20localizedDescriptionSSvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8047199e0",
+      "slots": [
+        "0x7ff940014820"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV10identifierSSvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV10identifierSSvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804719ce0",
+      "slots": [
+        "0x7ff940014ba0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV8languageAC8LanguageVvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV8languageAC8LanguageVvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804719d20",
+      "slots": [
+        "0x7ff940014808"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV10identifierACSS_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV10identifierACSS_tcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804723ba0",
+      "slots": [
+        "0x7ff940014bd0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804743b40",
+      "slots": [
+        "0x7ff9400148a8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV12LanguageCodeVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV12LanguageCodeVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804745060",
+      "slots": [
+        "0x7ff940014870"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV12LanguageCodeV10identifierSSvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV12LanguageCodeV10identifierSSvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8047492f0",
+      "slots": [
+        "0x7ff940014b78"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV8LanguageVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV8LanguageVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8048f5ae0",
+      "slots": [
+        "0x7ff9400149d0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV36_unconditionallyBridgeFromObjectiveCyACSo8NSLocaleCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV36_unconditionallyBridgeFromObjectiveCyACSo8NSLocaleCSgFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804904680",
+      "slots": [
+        "0x7ff940014b30"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV8LanguageV12languageCodeAC0cE0VSgvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV8LanguageV12languageCodeAC0cE0VSgvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8049d8b00",
+      "slots": [
+        "0x7ff940015370"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE36_unconditionallyBridgeFromObjectiveCySSSo8NSStringCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE36_unconditionallyBridgeFromObjectiveCySSSo8NSStringCSgFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8049d8ec0",
+      "slots": [
+        "0x7ff940015338"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8049e1f40",
+      "slots": [
+        "0x7ff9400153e8"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE8EncodingV4utf8ACvgZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE8EncodingV4utf8ACvgZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8049e2690",
+      "slots": [
+        "0x7ff940015408"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE8EncodingVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE8EncodingVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8049f09f0",
+      "slots": [
+        "0x7ff9400153a0"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE5bytes8encodingSSSgxh_SSAAE8EncodingVtcSTRzs5UInt8V7ElementRtzlufC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE5bytes8encodingSSSgxh_SSAAE8EncodingVtcSTRzs5UInt8V7ElementRtzlufC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a07750",
+      "slots": [
+        "0x7ff9400159d8"
+      ],
+      "exports": [
+        [
+          "_$sSy10FoundationE10components11separatedBySaySSGqd___tSyRd__lF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSy10FoundationE10components11separatedBySaySSGqd___tSyRd__lF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a1f7d0",
+      "slots": [
+        "0x7ff940013f18"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV15fileURLWithPathACSSh_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV15fileURLWithPathACSSh_tcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a1faa0",
+      "slots": [
+        "0x7ff940014028"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV4pathSSvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV4pathSSvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a1fae0",
+      "slots": [
+        "0x7ff940013f50"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV19_bridgeToObjectiveCSo5NSURLCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV19_bridgeToObjectiveCSo5NSURLCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a1fc00",
+      "slots": [
+        "0x7ff940013ff8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV36_unconditionallyBridgeFromObjectiveCyACSo5NSURLCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV36_unconditionallyBridgeFromObjectiveCyACSo5NSURLCSgFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a21470",
+      "slots": [
+        "0x7ff940014018"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV4path14percentEncodedSSSb_tF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV4path14percentEncodedSSSb_tF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a21920",
+      "slots": [
+        "0x7ff940013f30"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV17lastPathComponentSSvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV17lastPathComponentSSvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a21a10",
+      "slots": [
+        "0x7ff940013ec8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV14absoluteStringSSvg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV14absoluteStringSSvg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a25520",
+      "slots": [
+        "0x7ff940013f88"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV22appendingPathComponentyACSSF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV22appendingPathComponentyACSSF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a25690",
+      "slots": [
+        "0x7ff940013f68"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLV21deletingPathExtensionACyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLV21deletingPathExtensionACyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804a2b080",
+      "slots": [
+        "0x7ff9400140b0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804adfef0",
+      "slots": [
+        "0x7ff940014520"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4DateV19_bridgeToObjectiveCSo6NSDateCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4DateV19_bridgeToObjectiveCSo6NSDateCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804ae18b0",
+      "slots": [
+        "0x7ff940014610"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4DateVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4DateVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804ae1950",
+      "slots": [
+        "0x7ff940014600"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4DateVACycfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4DateVACycfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804aeab10",
+      "slots": [
+        "0x7ff940015148"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation9SortOrderO2eeoiySbAC_ACtFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation9SortOrderO2eeoiySbAC_ACtFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804aeab20",
+      "slots": [
+        "0x7ff940015150"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation9SortOrderO4hash4intoys6HasherVz_tF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation9SortOrderO4hash4intoys6HasherVz_tF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804aebd80",
+      "slots": [
+        "0x7ff940015468"
+      ],
+      "exports": [
+        [
+          "_$sST10FoundationE6sorted5usingSay7ElementQzGqd___tAA14SortComparatorRd__8ComparedQyd__AERSlF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sST10FoundationE6sorted5usingSay7ElementQzGqd___tAA14SortComparatorRd__8ComparedQyd__AERSlF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804aecd60",
+      "slots": [
+        "0x7ff940014708"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4UUIDVACycfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4UUIDVACycfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804aed990",
+      "slots": [
+        "0x7ff940014710"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4UUIDVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4UUIDVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804aed9d0",
+      "slots": [
+        "0x7ff9400146b0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4UUIDV19_bridgeToObjectiveCSo6NSUUIDCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4UUIDV19_bridgeToObjectiveCSo6NSUUIDCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804aeda60",
+      "slots": [
+        "0x7ff9400146d8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4UUIDV36_unconditionallyBridgeFromObjectiveCyACSo6NSUUIDCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4UUIDV36_unconditionallyBridgeFromObjectiveCyACSo6NSUUIDCSgFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804b33460",
+      "slots": [
+        "0x7ff940013b28"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation22_convertNSErrorToErrorys0E0_pSo0C0CSgF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation22_convertNSErrorToErrorys0E0_pSo0C0CSgF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804b334c0",
+      "slots": [
+        "0x7ff940013b18"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation22_convertErrorToNSErrorySo0E0Cs0C0_pF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation22_convertErrorToNSErrorySo0E0Cs0C0_pF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804b4a910",
+      "slots": [
+        "0x7ff940013c70"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation25NSFastEnumerationIteratorV4nextypSgyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation25NSFastEnumerationIteratorV4nextypSgyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804b4af50",
+      "slots": [
+        "0x7ff940013c80"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation25NSFastEnumerationIteratorVMa",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation25NSFastEnumerationIteratorVMa",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804b4cef0",
+      "slots": [
+        "0x7ff9400142e8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4DataV36_unconditionallyBridgeFromObjectiveCyACSo6NSDataCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4DataV36_unconditionallyBridgeFromObjectiveCyACSo6NSDataCSgFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804b52d30",
+      "slots": [
+        "0x7ff940015268"
+      ],
+      "exports": [
+        [
+          "_$sSD10FoundationE36_unconditionallyBridgeFromObjectiveCySDyxq_GSo12NSDictionaryCSgFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSD10FoundationE36_unconditionallyBridgeFromObjectiveCySDyxq_GSo12NSDictionaryCSgFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804b53260",
+      "slots": [
+        "0x7ff940015240"
+      ],
+      "exports": [
+        [
+          "_$sSD10FoundationE19_bridgeToObjectiveCSo12NSDictionaryCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSD10FoundationE19_bridgeToObjectiveCSo12NSDictionaryCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804ba12d0",
+      "slots": [
+        "0x7ff940012230"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation10NSNotFoundSivg",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation10NSNotFoundSivg",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804ba6660",
+      "slots": [
+        "0x7ff940015b00"
+      ],
+      "exports": [
+        [
+          "_$sSy10FoundationE8containsySbqd__SyRd__lF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSy10FoundationE8containsySbqd__SyRd__lF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804ba66b0",
+      "slots": [
+        "0x7ff9400152c0"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE14utf16CodeUnits5countSSSPys6UInt16VG_SitcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE14utf16CodeUnits5countSSSPys6UInt16VG_SitcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804ba6ba0",
+      "slots": [
+        "0x7ff9400152b8"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE10utf8StringSSSgSPys4Int8VG_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE10utf8StringSSSgSPys4Int8VG_tcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804bad980",
+      "slots": [
+        "0x7ff9400153c8"
+      ],
+      "exports": [
+        [
+          "_$sSS10FoundationE6format_S2Sh_s7CVarArg_pdtcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSS10FoundationE6format_S2Sh_s7CVarArg_pdtcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804bb1f70",
+      "slots": [
+        "0x7ff940015ae8"
+      ],
+      "exports": [
+        [
+          "_$sSy10FoundationE7folding7options6localeSSSo22NSStringCompareOptionsV_AA6LocaleVSgtF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSy10FoundationE7folding7options6localeSSSo22NSStringCompareOptionsV_AA6LocaleVSgtF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804bb3280",
+      "slots": [
+        "0x7ff940015a48"
+      ],
+      "exports": [
+        [
+          "_$sSy10FoundationE18trimmingCharacters2inSSAA12CharacterSetV_tF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSy10FoundationE18trimmingCharacters2inSSAA12CharacterSetV_tF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804bcdc10",
+      "slots": [
+        "0x7ff9400158d8"
+      ],
+      "exports": [
+        [
+          "_$sSo8_NSRangeV10FoundationE_2inABx_q_tcSXRzSyR_SS5IndexV5BoundRtzr0_lufC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSo8_NSRangeV10FoundationE_2inABx_q_tcSXRzSyR_SS5IndexV5BoundRtzr0_lufC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804bce150",
+      "slots": [
+        "0x7ff9400155c0"
+      ],
+      "exports": [
+        [
+          "_$sSn10FoundationSS5IndexVRszrlE_2inSnyACGSgSo8_NSRangeV_SShtcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSn10FoundationSS5IndexVRszrlE_2inSnyACGSgSo8_NSRangeV_SShtcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c2f0b0",
+      "slots": [
+        "0x7ff940015588"
+      ],
+      "exports": [
+        [
+          "_$sSi10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSi10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c300e0",
+      "slots": [
+        "0x7ff940015b90"
+      ],
+      "exports": [
+        [
+          "_$ss5Int32V10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$ss5Int32V10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c302b0",
+      "slots": [
+        "0x7ff940015bc8"
+      ],
+      "exports": [
+        [
+          "_$ss6UInt32V10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$ss6UInt32V10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c30c30",
+      "slots": [
+        "0x7ff940015598"
+      ],
+      "exports": [
+        [
+          "_$sSi10FoundationE26_forceBridgeFromObjectiveC_6resultySo8NSNumberC_SiSgztFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSi10FoundationE26_forceBridgeFromObjectiveC_6resultySo8NSNumberC_SiSgztFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c30c40",
+      "slots": [
+        "0x7ff9400155a0"
+      ],
+      "exports": [
+        [
+          "_$sSi10FoundationE34_conditionallyBridgeFromObjectiveC_6resultSbSo8NSNumberC_SiSgztFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSi10FoundationE34_conditionallyBridgeFromObjectiveC_6resultSbSo8NSNumberC_SiSgztFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c30e80",
+      "slots": [
+        "0x7ff940015520"
+      ],
+      "exports": [
+        [
+          "_$sSf10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSf10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c31100",
+      "slots": [
+        "0x7ff9400154f0"
+      ],
+      "exports": [
+        [
+          "_$sSb10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSb10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c31290",
+      "slots": [
+        "0x7ff940015180"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics7CGFloatV10FoundationE26_forceBridgeFromObjectiveC_6resultySo8NSNumberC_ACSgztFZ",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics7CGFloatV10FoundationE26_forceBridgeFromObjectiveC_6resultySo8NSNumberC_ACSgztFZ",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c31300",
+      "slots": [
+        "0x7ff940015860"
+      ],
+      "exports": [
+        [
+          "_$sSo8NSNumberC10FoundationE12floatLiteralABSd_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSo8NSNumberC10FoundationE12floatLiteralABSd_tcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c31340",
+      "slots": [
+        "0x7ff940015868"
+      ],
+      "exports": [
+        [
+          "_$sSo8NSNumberC10FoundationE14booleanLiteralABSb_tcfC",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSo8NSNumberC10FoundationE14booleanLiteralABSb_tcfC",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff804c33160",
+      "slots": [
+        "0x7ff940015508"
+      ],
+      "exports": [
+        [
+          "_$sSd10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$sSd10FoundationE19_bridgeToObjectiveCSo8NSNumberCyF",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff805105f88",
+      "slots": [
+        "0x7ff918ceaf78"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation8IndexSetVMn",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation8IndexSetVMn",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff805108f60",
+      "slots": [
+        "0x7ff918ceb040"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleVMn",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleVMn",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8051093cc",
+      "slots": [
+        "0x7ff918ceb050"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation6LocaleV12LanguageCodeVMn",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation6LocaleV12LanguageCodeVMn",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510f460",
+      "slots": [
+        "0x7ff918ceaff0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation3URLVMn",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation3URLVMn",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff1c",
+      "slots": [
+        "0x7ff918ceada8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation14SortComparatorMp",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation14SortComparatorMp",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff40",
+      "slots": [
+        "0x7ff918ceadb0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation14SortComparatorPSHTb",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation14SortComparatorPSHTb",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff48",
+      "slots": [
+        "0x7ff918ceadb8"
+      ],
+      "exports": [
+        [
+          "_$s8Compared10Foundation14SortComparatorPTl",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s8Compared10Foundation14SortComparatorPTl",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff50",
+      "slots": [
+        "0x7ff918ceadc0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation14SortComparatorP7compareySo18NSComparisonResultV8ComparedQz_AHtFTq",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation14SortComparatorP7compareySo18NSComparisonResultV8ComparedQz_AHtFTq",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff58",
+      "slots": [
+        "0x7ff918ceadc8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation14SortComparatorP5orderAA0B5OrderOvgTq",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation14SortComparatorP5orderAA0B5OrderOvgTq",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff60",
+      "slots": [
+        "0x7ff918ceadd0"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation14SortComparatorP5orderAA0B5OrderOvsTq",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation14SortComparatorP5orderAA0B5OrderOvsTq",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff68",
+      "slots": [
+        "0x7ff918ceadd8"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation14SortComparatorP5orderAA0B5OrderOvMTq",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation14SortComparatorP5orderAA0B5OrderOvMTq",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80510ff70",
+      "slots": [
+        "0x7ff918ceaf80"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation9SortOrderOMn",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation9SortOrderOMn",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff805110020",
+      "slots": [
+        "0x7ff918ceaf68"
+      ],
+      "exports": [
+        [
+          "_$s10Foundation4UUIDVMn",
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ]
+      ],
+      "selected": [
+        "_$s10Foundation4UUIDVMn",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80987d290",
+      "slots": [
+        "0x7ff940009bb8"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionVyACSo6CGRectVcfC",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionVyACSo6CGRectVcfC",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80987d2f0",
+      "slots": [
+        "0x7ff940009b90"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionV5rectsACx_tcSTRzSo6CGRectV7ElementRtzlufC",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionV5rectsACx_tcSTRzSo6CGRectV7ElementRtzlufC",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8098817e0",
+      "slots": [
+        "0x7ff940009b88"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionV5applyyySo17CGAffineTransformVF",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionV5applyyySo17CGAffineTransformVF",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff809881ca0",
+      "slots": [
+        "0x7ff940009b30"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionV10boundsRectSo6CGRectVvg",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionV10boundsRectSo6CGRectVvg",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80988c000",
+      "slots": [
+        "0x7ff940009ba8"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionVMa",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionVMa",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8098ad900",
+      "slots": [
+        "0x7ff940009b98"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionV7isEmptySbvg",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionV7isEmptySbvg",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8098b2130",
+      "slots": [
+        "0x7ff940009b80"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionV16formIntersectionyyACF",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionV16formIntersectionyyACF",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80a055cc0",
+      "slots": [
+        "0x7ff918ceafa8"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics6RegionVMn",
+          "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics6RegionVMn",
+        "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80df4e8e0",
+      "slots": [
+        "0x7ff94000cbb0"
+      ],
+      "exports": [
+        [
+          "_$s6CoreML15MLComputeDeviceO11descriptionSSvg",
+          "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML"
+        ]
+      ],
+      "selected": [
+        "_$s6CoreML15MLComputeDeviceO11descriptionSSvg",
+        "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80df4ef20",
+      "slots": [
+        "0x7ff94000cbd0"
+      ],
+      "exports": [
+        [
+          "_$s6CoreML15MLComputeDeviceOMa",
+          "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML"
+        ]
+      ],
+      "selected": [
+        "_$s6CoreML15MLComputeDeviceOMa",
+        "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff80e3e3ea0",
+      "slots": [
+        "0x7ff918ceafe8"
+      ],
+      "exports": [
+        [
+          "_$s6CoreML15MLComputeDeviceOMn",
+          "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML"
+        ]
+      ],
+      "selected": [
+        "_$s6CoreML15MLComputeDeviceOMn",
+        "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abb0c0",
+      "slots": [
+        "0x7ff940078248"
+      ],
+      "exports": [
+        [
+          "_$ss28__ContiguousArrayStorageBaseCMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss28__ContiguousArrayStorageBaseCMa",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abb560",
+      "slots": [
+        "0x7ff9400774b0"
+      ],
+      "exports": [
+        [
+          "_$ss17_bridgeCocoaArrayySayxGyXllF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17_bridgeCocoaArrayySayxGyXllF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abb580",
+      "slots": [
+        "0x7ff9400775c8"
+      ],
+      "exports": [
+        [
+          "_$ss18_CocoaArrayWrapperV8endIndexSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18_CocoaArrayWrapperV8endIndexSivg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abb590",
+      "slots": [
+        "0x7ff940077180"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayVMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayVMa",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abb5e0",
+      "slots": [
+        "0x7ff940077138"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV15reserveCapacityyySiF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV15reserveCapacityyySiF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abdd80",
+      "slots": [
+        "0x7ff940078020"
+      ],
+      "exports": [
+        [
+          "_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abf9e0",
+      "slots": [
+        "0x7ff9400779f0"
+      ],
+      "exports": [
+        [
+          "_$ss23CustomStringConvertibleP11descriptionSSvgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss23CustomStringConvertibleP11descriptionSSvgTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816abfa50",
+      "slots": [
+        "0x7ff940077158"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV28_allocateBufferUninitialized15minimumCapacitys01_abD0VyxGSi_tFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV28_allocateBufferUninitialized15minimumCapacitys01_abD0VyxGSi_tFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac0de0",
+      "slots": [
+        "0x7ff940075f40"
+      ],
+      "exports": [
+        [
+          "_$sSaMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSaMa",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac0e20",
+      "slots": [
+        "0x7ff940076c00"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac1ea0",
+      "slots": [
+        "0x7ff940076cc8"
+      ],
+      "exports": [
+        [
+          "_$ss11AnyHashableV13_rawHashValue4seedS2i_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11AnyHashableV13_rawHashValue4seedS2i_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac1f20",
+      "slots": [
+        "0x7ff940078a40"
+      ],
+      "exports": [
+        [
+          "_$ss6HasherV5_seedABSi_tcfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6HasherV5_seedABSi_tcfC",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac1f70",
+      "slots": [
+        "0x7ff940078a48"
+      ],
+      "exports": [
+        [
+          "_$ss6HasherV8_combineyySuF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6HasherV8_combineyySuF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac4590",
+      "slots": [
+        "0x7ff9400775e8"
+      ],
+      "exports": [
+        [
+          "_$ss18_DictionaryStorageC6resize8original8capacity4moveAByxq_Gs05__RawaB0C_SiSbtFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18_DictionaryStorageC6resize8original8capacity4moveAByxq_Gs05__RawaB0C_SiSbtFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac5a80",
+      "slots": [
+        "0x7ff940078010"
+      ],
+      "exports": [
+        [
+          "_$ss27_bridgeAnythingToObjectiveCyyXlxlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss27_bridgeAnythingToObjectiveCyyXlxlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac5b50",
+      "slots": [
+        "0x7ff940078708"
+      ],
+      "exports": [
+        [
+          "_$ss38_bridgeAnythingNonVerbatimToObjectiveCyyXlxnlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss38_bridgeAnythingNonVerbatimToObjectiveCyyXlxnlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac6830",
+      "slots": [
+        "0x7ff9400769b8"
+      ],
+      "exports": [
+        [
+          "_$ss018_bridgeAnyObjectToB0yypyXlSgF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss018_bridgeAnyObjectToB0yypyXlSgF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac7320",
+      "slots": [
+        "0x7ff9400769c0"
+      ],
+      "exports": [
+        [
+          "_$ss042_stdlib_isOSVersionAtLeastOrVariantVersiondE0yBi1_Bw_BwBwBwBwBwtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss042_stdlib_isOSVersionAtLeastOrVariantVersiondE0yBi1_Bw_BwBwBwBwBwtF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac8740",
+      "slots": [
+        "0x7ff940075a48"
+      ],
+      "exports": [
+        [
+          "_$sSS5index5afterSS5IndexVAD_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS5index5afterSS5IndexVAD_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac9220",
+      "slots": [
+        "0x7ff9400775f8"
+      ],
+      "exports": [
+        [
+          "_$ss18_DictionaryStorageC8allocate8capacityAByxq_GSi_tFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18_DictionaryStorageC8allocate8capacityAByxq_GSi_tFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ac95c0",
+      "slots": [
+        "0x7ff940075980"
+      ],
+      "exports": [
+        [
+          "_$sSS10lowercasedSSyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS10lowercasedSSyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad0140",
+      "slots": [
+        "0x7ff940076e18"
+      ],
+      "exports": [
+        [
+          "_$ss11_StringGutsV4growyySiF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11_StringGutsV4growyySiF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad04d0",
+      "slots": [
+        "0x7ff940075970"
+      ],
+      "exports": [
+        [
+          "_$sSS10describingSSx_tclufC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS10describingSSx_tclufC",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad1170",
+      "slots": [
+        "0x7ff9400760d0"
+      ],
+      "exports": [
+        [
+          "_$sSf5write2toyxz_ts16TextOutputStreamRzlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSf5write2toyxz_ts16TextOutputStreamRzlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad4220",
+      "slots": [
+        "0x7ff940075f08"
+      ],
+      "exports": [
+        [
+          "_$sSa6appendyyxnF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSa6appendyyxnF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad5230",
+      "slots": [
+        "0x7ff9400772a8"
+      ],
+      "exports": [
+        [
+          "_$ss15_print_unlockedyyx_q_zts16TextOutputStreamR_r0_lF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15_print_unlockedyyx_q_zts16TextOutputStreamR_r0_lF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad8320",
+      "slots": [
+        "0x7ff940075c98"
+      ],
+      "exports": [
+        [
+          "_$sSTsE10compactMapySayqd__Gqd__Sg7ElementQzKXEKlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSTsE10compactMapySayqd__Gqd__Sg7ElementQzKXEKlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad9030",
+      "slots": [
+        "0x7ff9400779d0"
+      ],
+      "exports": [
+        [
+          "_$ss22_minimumMergeRunLengthyS2iF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss22_minimumMergeRunLengthyS2iF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ad9670",
+      "slots": [
+        "0x7ff940078030"
+      ],
+      "exports": [
+        [
+          "_$ss28CustomDebugStringConvertibleP16debugDescriptionSSvgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss28CustomDebugStringConvertibleP16debugDescriptionSSvgTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816adb9e0",
+      "slots": [
+        "0x7ff940077758"
+      ],
+      "exports": [
+        [
+          "_$ss21_findStringSwitchCase5cases6stringSiSays06StaticB0VG_SStF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss21_findStringSwitchCase5cases6stringSiSays06StaticB0VG_SStF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816addf60",
+      "slots": [
+        "0x7ff940077478"
+      ],
+      "exports": [
+        [
+          "_$ss17__CocoaDictionaryV6lookupyyXlSgyXlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17__CocoaDictionaryV6lookupyyXlSgyXlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae0340",
+      "slots": [
+        "0x7ff940077548"
+      ],
+      "exports": [
+        [
+          "_$ss18EnumeratedSequenceVMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18EnumeratedSequenceVMa",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae0350",
+      "slots": [
+        "0x7ff940075ca0"
+      ],
+      "exports": [
+        [
+          "_$sSTsE10enumerateds18EnumeratedSequenceVyxGyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSTsE10enumerateds18EnumeratedSequenceVyxGyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae0370",
+      "slots": [
+        "0x7ff940077538"
+      ],
+      "exports": [
+        [
+          "_$ss18EnumeratedSequenceV8IteratorVMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18EnumeratedSequenceV8IteratorVMa",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae03d0",
+      "slots": [
+        "0x7ff940077528"
+      ],
+      "exports": [
+        [
+          "_$ss18EnumeratedSequenceV12makeIteratorAB0D0Vyx_GyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18EnumeratedSequenceV12makeIteratorAB0D0Vyx_GyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae2690",
+      "slots": [
+        "0x7ff9400752a0"
+      ],
+      "exports": [
+        [
+          "_$sSD16debugDescriptionSSvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSD16debugDescriptionSSvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae5320",
+      "slots": [
+        "0x7ff940075ac8"
+      ],
+      "exports": [
+        [
+          "_$sSS8UTF8ViewV13_foreignCountSiyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS8UTF8ViewV13_foreignCountSiyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae5f20",
+      "slots": [
+        "0x7ff940076038"
+      ],
+      "exports": [
+        [
+          "_$sSd5write2toyxz_ts16TextOutputStreamRzlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSd5write2toyxz_ts16TextOutputStreamRzlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ae8060",
+      "slots": [
+        "0x7ff940076e00"
+      ],
+      "exports": [
+        [
+          "_$ss11_StringGutsV18foreignScalarAlignySS5IndexVAEF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11_StringGutsV18foreignScalarAlignySS5IndexVAEF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816af0a90",
+      "slots": [
+        "0x7ff940076f10"
+      ],
+      "exports": [
+        [
+          "_$ss12_ArrayBufferV18_typeCheckSlowPathyySiF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss12_ArrayBufferV18_typeCheckSlowPathyySiF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816af19a0",
+      "slots": [
+        "0x7ff940077088"
+      ],
+      "exports": [
+        [
+          "_$ss13_StringObjectV10sharedUTF8SRys5UInt8VGvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss13_StringObjectV10sharedUTF8SRys5UInt8VGvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816af4d90",
+      "slots": [
+        "0x7ff940077458"
+      ],
+      "exports": [
+        [
+          "_$ss17__CocoaDictionaryV5countSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17__CocoaDictionaryV5countSivg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816af4dc0",
+      "slots": [
+        "0x7ff940077430"
+      ],
+      "exports": [
+        [
+          "_$ss17__CocoaDictionaryV12makeIteratorAB0D0CyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17__CocoaDictionaryV12makeIteratorAB0D0CyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816bddd00",
+      "slots": [
+        "0x7ff940076f28"
+      ],
+      "exports": [
+        [
+          "_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816bdfba0",
+      "slots": [
+        "0x7ff9400775d0"
+      ],
+      "exports": [
+        [
+          "_$ss18_CocoaArrayWrapperVys12_SliceBufferVyyXlGSnySiGcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18_CocoaArrayWrapperVys12_SliceBufferVyyXlGSnySiGcig",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be0570",
+      "slots": [
+        "0x7ff940076f20"
+      ],
+      "exports": [
+        [
+          "_$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be3030",
+      "slots": [
+        "0x7ff940077178"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayVAByxGycfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayVAByxGycfC",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be3040",
+      "slots": [
+        "0x7ff940077140"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV15reserveCapacityyySiFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV15reserveCapacityyySiFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be31d0",
+      "slots": [
+        "0x7ff940077170"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV6appendyyxnF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV6appendyyxnF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be51b0",
+      "slots": [
+        "0x7ff940075180"
+      ],
+      "exports": [
+        [
+          "_$sS2ayxGycfC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sS2ayxGycfC",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be5350",
+      "slots": [
+        "0x7ff940075ed0"
+      ],
+      "exports": [
+        [
+          "_$sSa22_allocateUninitializedySayxG_SpyxGtSiFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSa22_allocateUninitializedySayxG_SpyxGtSiFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be5810",
+      "slots": [
+        "0x7ff940075eb0"
+      ],
+      "exports": [
+        [
+          "_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSa16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be5900",
+      "slots": [
+        "0x7ff940075e68"
+      ],
+      "exports": [
+        [
+          "_$sSa034_makeUniqueAndReserveCapacityIfNotB0yyFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSa034_makeUniqueAndReserveCapacityIfNotB0yyFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816be59f0",
+      "slots": [
+        "0x7ff940075ee8"
+      ],
+      "exports": [
+        [
+          "_$sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSa37_appendElementAssumeUniqueAndCapacity_03newB0ySi_xntFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816bef490",
+      "slots": [
+        "0x7ff940078a78"
+      ],
+      "exports": [
+        [
+          "_$ss6HasherV9_finalizeSiyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6HasherV9_finalizeSiyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816bf9060",
+      "slots": [
+        "0x7ff9400774a0"
+      ],
+      "exports": [
+        [
+          "_$ss17_assertionFailure__4file4line5flagss5NeverOs12StaticStringV_SSAHSus6UInt32VtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17_assertionFailure__4file4line5flagss5NeverOs12StaticStringV_SSAHSus6UInt32VtF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c05b30",
+      "slots": [
+        "0x7ff940075a10"
+      ],
+      "exports": [
+        [
+          "_$sSS4hash4intoys6HasherVz_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS4hash4intoys6HasherVz_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c11d30",
+      "slots": [
+        "0x7ff9400757e0"
+      ],
+      "exports": [
+        [
+          "_$sSKsSS7ElementRtzrlE6joined9separatorS2S_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSKsSS7ElementRtzrlE6joined9separatorS2S_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c14c90",
+      "slots": [
+        "0x7ff940075aa0"
+      ],
+      "exports": [
+        [
+          "_$sSS6insert_2atySJ_SS5IndexVtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS6insert_2atySJ_SS5IndexVtF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c1a640",
+      "slots": [
+        "0x7ff9400787e0"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorPsE19_getEmbeddedNSErroryXlSgyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorPsE19_getEmbeddedNSErroryXlSgyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c46510",
+      "slots": [
+        "0x7ff940077130"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV12_endMutationyyFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV12_endMutationyyFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c487f0",
+      "slots": [
+        "0x7ff9400779c8"
+      ],
+      "exports": [
+        [
+          "_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c48db0",
+      "slots": [
+        "0x7ff940077128"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c48e10",
+      "slots": [
+        "0x7ff940077160"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c48ea0",
+      "slots": [
+        "0x7ff940077168"
+      ],
+      "exports": [
+        [
+          "_$ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntFyXl_Ts5",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntFyXl_Ts5",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c5ce00",
+      "slots": [
+        "0x7ff940075a40"
+      ],
+      "exports": [
+        [
+          "_$sSS5countSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS5countSivg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c639d0",
+      "slots": [
+        "0x7ff940075d38"
+      ],
+      "exports": [
+        [
+          "_$sSTsSQ7ElementRpzrlE8containsySbABF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSTsSQ7ElementRpzrlE8containsySbABF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c6a710",
+      "slots": [
+        "0x7ff940077488"
+      ],
+      "exports": [
+        [
+          "_$ss17__CocoaDictionaryV8IteratorC4nextyXl3key_yXl5valuetSgyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17__CocoaDictionaryV8IteratorC4nextyXl3key_yXl5valuetSgyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c6ed10",
+      "slots": [
+        "0x7ff940075280"
+      ],
+      "exports": [
+        [
+          "_$sSD11descriptionSSvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSD11descriptionSSvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c70a20",
+      "slots": [
+        "0x7ff9400787f0"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorPsE7_domainSSvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorPsE7_domainSSvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c70ac0",
+      "slots": [
+        "0x7ff9400787e8"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorPsE5_codeSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorPsE5_codeSivg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c70ae0",
+      "slots": [
+        "0x7ff9400787f8"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorPsE9_userInfoyXlSgvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorPsE9_userInfoyXlSgvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c725f0",
+      "slots": [
+        "0x7ff940076c10"
+      ],
+      "exports": [
+        [
+          "_$ss10_HashTableV11startBucketAB0D0Vvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10_HashTableV11startBucketAB0D0Vvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c77d90",
+      "slots": [
+        "0x7ff9400775e0"
+      ],
+      "exports": [
+        [
+          "_$ss18_DictionaryStorageC4copy8originalAByxq_Gs05__RawaB0C_tFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18_DictionaryStorageC4copy8originalAByxq_Gs05__RawaB0C_tFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c78b20",
+      "slots": [
+        "0x7ff9400775f0"
+      ],
+      "exports": [
+        [
+          "_$ss18_DictionaryStorageC7convert_8capacityAByxq_Gs07__CocoaA0V_SitFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18_DictionaryStorageC7convert_8capacityAByxq_Gs07__CocoaA0V_SitFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c7c4e0",
+      "slots": [
+        "0x7ff940077408"
+      ],
+      "exports": [
+        [
+          "_$ss17_NativeDictionaryV9removeAll8isUniqueySb_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17_NativeDictionaryV9removeAll8isUniqueySb_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816c838d0",
+      "slots": [
+        "0x7ff940077530"
+      ],
+      "exports": [
+        [
+          "_$ss18EnumeratedSequenceV8IteratorV4nextSi6offset_7ElementQz7elementtSgyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18EnumeratedSequenceV8IteratorV4nextSi6offset_7ElementQz7elementtSgyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816cc48b0",
+      "slots": [
+        "0x7ff940076d10"
+      ],
+      "exports": [
+        [
+          "_$ss11AnyHashableVyABxcSHRzlufC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11AnyHashableVyABxcSHRzlufC",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816cc4ab0",
+      "slots": [
+        "0x7ff940076cd0"
+      ],
+      "exports": [
+        [
+          "_$ss11AnyHashableV2eeoiySbAB_ABtFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11AnyHashableV2eeoiySbAB_ABtFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816cc5950",
+      "slots": [
+        "0x7ff940078a50"
+      ],
+      "exports": [
+        [
+          "_$ss6HasherV8_combineyys5UInt8VF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6HasherV8_combineyys5UInt8VF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816cc5ae0",
+      "slots": [
+        "0x7ff940078a28"
+      ],
+      "exports": [
+        [
+          "_$ss6HasherV5_hash4seed5bytes5countS2i_s6UInt64VSitFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6HasherV5_hash4seed5bytes5countS2i_s6UInt64VSitFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816cc6bd0",
+      "slots": [
+        "0x7ff940076c18"
+      ],
+      "exports": [
+        [
+          "_$ss10_HashTableV12previousHole6beforeAB6BucketVAF_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10_HashTableV12previousHole6beforeAB6BucketVAF_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816cc6ca0",
+      "slots": [
+        "0x7ff940076c28"
+      ],
+      "exports": [
+        [
+          "_$ss10_HashTableV8nextHole9atOrAfterAB6BucketVAF_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10_HashTableV8nextHole9atOrAfterAB6BucketVAF_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d0f6a0",
+      "slots": [
+        "0x7ff9400787b0"
+      ],
+      "exports": [
+        [
+          "_$ss53KEY_TYPE_OF_DICTIONARY_VIOLATES_HASHABLE_REQUIREMENTSys5NeverOypXpF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss53KEY_TYPE_OF_DICTIONARY_VIOLATES_HASHABLE_REQUIREMENTSys5NeverOypXpF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d237c0",
+      "slots": [
+        "0x7ff940075c00"
+      ],
+      "exports": [
+        [
+          "_$sSSySJSS5IndexVcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSSySJSS5IndexVcig",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d246f0",
+      "slots": [
+        "0x7ff940075998"
+      ],
+      "exports": [
+        [
+          "_$sSS11utf8CStrings15ContiguousArrayVys4Int8VGvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS11utf8CStrings15ContiguousArrayVys4Int8VGvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d3ef80",
+      "slots": [
+        "0x7ff940076be8"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraPsEyxqd__ncSTRd__7ElementQyd__ACRtzlufC",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraPsEyxqd__ncSTRd__7ElementQyd__ACRtzlufC",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d41a80",
+      "slots": [
+        "0x7ff940075b28"
+      ],
+      "exports": [
+        [
+          "_$sSS9UTF16ViewV5countSivg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS9UTF16ViewV5countSivg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d63330",
+      "slots": [
+        "0x7ff940075cf8"
+      ],
+      "exports": [
+        [
+          "_$sSTsE6sorted2bySay7ElementQzGSbAD_ADtKXE_tKF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSTsE6sorted2bySay7ElementQzGSbAD_ADtKXE_tKF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d6f180",
+      "slots": [
+        "0x7ff9400759e0"
+      ],
+      "exports": [
+        [
+          "_$sSS17UnicodeScalarViewV6append10contentsOfyx_tSTRzs0A0O0B0V7ElementRtzlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS17UnicodeScalarViewV6append10contentsOfyx_tSTRzs0A0O0B0V7ElementRtzlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d73680",
+      "slots": [
+        "0x7ff940075d40"
+      ],
+      "exports": [
+        [
+          "_$sSTsSy7ElementRpzrlE6joined9separatorS2S_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSTsSy7ElementRpzrlE6joined9separatorS2S_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d7a4a0",
+      "slots": [
+        "0x7ff940075c18"
+      ],
+      "exports": [
+        [
+          "_$sSSySsSnySS5IndexVGcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSSySsSnySS5IndexVGcig",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d7a6f0",
+      "slots": [
+        "0x7ff940075ac0"
+      ],
+      "exports": [
+        [
+          "_$sSS8IteratorV4nextSJSgyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS8IteratorV4nextSJSgyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d7f480",
+      "slots": [
+        "0x7ff940076df0"
+      ],
+      "exports": [
+        [
+          "_$ss11_StringGutsV16_foreignCopyUTF84intoSiSgSrys5UInt8VG_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11_StringGutsV16_foreignCopyUTF84intoSiSgSrys5UInt8VG_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d7f8f0",
+      "slots": [
+        "0x7ff940075b30"
+      ],
+      "exports": [
+        [
+          "_$sSS9UTF16ViewV5index_8offsetBySS5IndexVAF_SitF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS9UTF16ViewV5index_8offsetBySS5IndexVAF_SitF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d803a0",
+      "slots": [
+        "0x7ff940076e10"
+      ],
+      "exports": [
+        [
+          "_$ss11_StringGutsV27foreignErrorCorrectedScalar10startingAts7UnicodeO0F0V_Si12scalarLengthtSS5IndexV_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11_StringGutsV27foreignErrorCorrectedScalar10startingAts7UnicodeO0F0V_Si12scalarLengthtSS5IndexV_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d94250",
+      "slots": [
+        "0x7ff940075a18"
+      ],
+      "exports": [
+        [
+          "_$sSS5IndexV11utf16Offset2inSix_tSyRzlF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS5IndexV11utf16Offset2inSix_tSyRzlF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d96450",
+      "slots": [
+        "0x7ff940075b50"
+      ],
+      "exports": [
+        [
+          "_$sSS9hasSuffixySbSSF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS9hasSuffixySbSSF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d9a0c0",
+      "slots": [
+        "0x7ff940078668"
+      ],
+      "exports": [
+        [
+          "_$ss30_findStringSwitchCaseWithCache5cases6string5cacheSiSays06StaticB0VG_SSs07_OpaquebcF0VztF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss30_findStringSwitchCaseWithCache5cases6string5cacheSiSays06StaticB0VG_SSs07_OpaquebcF0VztF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d9ac40",
+      "slots": [
+        "0x7ff9400759d0"
+      ],
+      "exports": [
+        [
+          "_$sSS17UnicodeScalarViewV13_foreignIndex5afterSS0E0VAF_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS17UnicodeScalarViewV13_foreignIndex5afterSS0E0VAF_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d9ac80",
+      "slots": [
+        "0x7ff9400759d8"
+      ],
+      "exports": [
+        [
+          "_$sSS17UnicodeScalarViewV13_foreignIndex6beforeSS0E0VAF_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS17UnicodeScalarViewV13_foreignIndex6beforeSS0E0VAF_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d9e710",
+      "slots": [
+        "0x7ff940075b10"
+      ],
+      "exports": [
+        [
+          "_$sSS9UTF16ViewV13_foreignIndex5afterSS0D0VAF_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS9UTF16ViewV13_foreignIndex5afterSS0D0VAF_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d9ee40",
+      "slots": [
+        "0x7ff940075b40"
+      ],
+      "exports": [
+        [
+          "_$sSS9UTF16ViewV8distance4from2toSiSS5IndexV_AGtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS9UTF16ViewV8distance4from2toSiSS5IndexV_AGtF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816d9f940",
+      "slots": [
+        "0x7ff940075b20"
+      ],
+      "exports": [
+        [
+          "_$sSS9UTF16ViewV17_foreignSubscript8positions6UInt16VSS5IndexV_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS9UTF16ViewV17_foreignSubscript8positions6UInt16VSS5IndexV_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816da0820",
+      "slots": [
+        "0x7ff940075b38"
+      ],
+      "exports": [
+        [
+          "_$sSS9UTF16ViewV8IteratorV4nexts6UInt16VSgyF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS9UTF16ViewV8IteratorV4nexts6UInt16VSgyF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816da2350",
+      "slots": [
+        "0x7ff940075ae0"
+      ],
+      "exports": [
+        [
+          "_$sSS8UTF8ViewV13_foreignIndex_8offsetBySS0D0VAF_SitF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS8UTF8ViewV13_foreignIndex_8offsetBySS0D0VAF_SitF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816da7a40",
+      "slots": [
+        "0x7ff9400767e8"
+      ],
+      "exports": [
+        [
+          "_$sSs5index5afterSS5IndexVAD_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSs5index5afterSS5IndexVAD_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816da84b0",
+      "slots": [
+        "0x7ff9400767f8"
+      ],
+      "exports": [
+        [
+          "_$sSs5index_8offsetBy07limitedC0SS5IndexVSgAE_SiAEtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSs5index_8offsetBy07limitedC0SS5IndexVSgAE_SiAEtF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816da8c10",
+      "slots": [
+        "0x7ff940076808"
+      ],
+      "exports": [
+        [
+          "_$sSs8distance4from2toSiSS5IndexV_AEtF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSs8distance4from2toSiSS5IndexV_AEtF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816da9360",
+      "slots": [
+        "0x7ff940076848"
+      ],
+      "exports": [
+        [
+          "_$sSsySJSS5IndexVcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSsySJSS5IndexVcig",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816db0d60",
+      "slots": [
+        "0x7ff940076858"
+      ],
+      "exports": [
+        [
+          "_$sSsySsSnySS5IndexVGcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSsySsSnySS5IndexVGcig",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816db52a0",
+      "slots": [
+        "0x7ff940076818"
+      ],
+      "exports": [
+        [
+          "_$sSs9UTF16ViewVys6UInt16VSS5IndexVcig",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSs9UTF16ViewVys6UInt16VSS5IndexVcig",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816db5730",
+      "slots": [
+        "0x7ff940076810"
+      ],
+      "exports": [
+        [
+          "_$sSs9UTF16ViewV9formIndex5afterySS0D0Vz_tF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSs9UTF16ViewV9formIndex5afterySS0D0Vz_tF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816de7ba0",
+      "slots": [
+        "0x7ff940076018"
+      ],
+      "exports": [
+        [
+          "_$sSd11descriptionSSvg",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSd11descriptionSSvg",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816e94850",
+      "slots": [
+        "0x7ff940076768"
+      ],
+      "exports": [
+        [
+          "_$sSqMa",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSqMa",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb32f0",
+      "slots": [
+        "0x7ff940076370"
+      ],
+      "exports": [
+        [
+          "_$sSl10startIndex0B0QzvgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSl10startIndex0B0QzvgTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb3300",
+      "slots": [
+        "0x7ff940076440"
+      ],
+      "exports": [
+        [
+          "_$sSl8endIndex0B0QzvgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSl8endIndex0B0QzvgTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb3310",
+      "slots": [
+        "0x7ff940076540"
+      ],
+      "exports": [
+        [
+          "_$sSly7ElementQz5IndexQzcirTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSly7ElementQz5IndexQzcirTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb3350",
+      "slots": [
+        "0x7ff9400763c8"
+      ],
+      "exports": [
+        [
+          "_$sSl5countSivgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSl5countSivgTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb33f0",
+      "slots": [
+        "0x7ff940076450"
+      ],
+      "exports": [
+        [
+          "_$sSl9formIndex5aftery0B0Qzz_tFTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSl9formIndex5aftery0B0Qzz_tFTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb4660",
+      "slots": [
+        "0x7ff940075940"
+      ],
+      "exports": [
+        [
+          "_$sSQ2eeoiySbx_xtFZTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSQ2eeoiySbx_xtFZTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb7820",
+      "slots": [
+        "0x7ff940075648"
+      ],
+      "exports": [
+        [
+          "_$sSH4hash4intoys6HasherVz_tFTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSH4hash4intoys6HasherVz_tFTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816eb7830",
+      "slots": [
+        "0x7ff940075638"
+      ],
+      "exports": [
+        [
+          "_$sSH13_rawHashValue4seedS2i_tFTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSH13_rawHashValue4seedS2i_tFTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ebef80",
+      "slots": [
+        "0x7ff940075c48"
+      ],
+      "exports": [
+        [
+          "_$sST22_copyToContiguousArrays0cD0Vy7ElementQzGyFTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sST22_copyToContiguousArrays0cD0Vy7ElementQzGyFTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ec4500",
+      "slots": [
+        "0x7ff940078240"
+      ],
+      "exports": [
+        [
+          "_$ss28__ContiguousArrayStorageBaseC17staticElementTypeypXpvgTj",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss28__ContiguousArrayStorageBaseC17staticElementTypeypXpvgTj",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ed5e30",
+      "slots": [
+        "0x7ff940078a38"
+      ],
+      "exports": [
+        [
+          "_$ss6HasherV5_hash4seed_S2i_s6UInt64VtFZ",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6HasherV5_hash4seed_S2i_s6UInt64VtFZ",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816ed7370",
+      "slots": [
+        "0x7ff940075a88"
+      ],
+      "exports": [
+        [
+          "_$sSS6appendyySSF",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS6appendyySSF",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbd924",
+      "slots": [
+        "0x7ff918ceaf70"
+      ],
+      "exports": [
+        [
+          "_$ss16IndexingIteratorVMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss16IndexingIteratorVMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdafc",
+      "slots": [
+        "0x7ff918ceae18"
+      ],
+      "exports": [
+        [
+          "_$sSYMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSYMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdb14",
+      "slots": [
+        "0x7ff918ceae20"
+      ],
+      "exports": [
+        [
+          "_$s8RawValueSYTl",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s8RawValueSYTl",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdb1c",
+      "slots": [
+        "0x7ff918ceae28"
+      ],
+      "exports": [
+        [
+          "_$sSY8rawValuexSg03RawB0Qz_tcfCTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSY8rawValuexSg03RawB0Qz_tcfCTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdb24",
+      "slots": [
+        "0x7ff918ceae30"
+      ],
+      "exports": [
+        [
+          "_$sSY8rawValue03RawB0QzvgTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSY8rawValue03RawB0QzvgTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdb2c",
+      "slots": [
+        "0x7ff918ceae38"
+      ],
+      "exports": [
+        [
+          "_$ss12CaseIterableMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss12CaseIterableMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdb5c",
+      "slots": [
+        "0x7ff918ceae40"
+      ],
+      "exports": [
+        [
+          "_$ss12CaseIterableP8AllCasesAB_SlTn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss12CaseIterableP8AllCasesAB_SlTn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdb64",
+      "slots": [
+        "0x7ff918ceae48"
+      ],
+      "exports": [
+        [
+          "_$s8AllCasess12CaseIterablePTl",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s8AllCasess12CaseIterablePTl",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbdb6c",
+      "slots": [
+        "0x7ff918ceae50"
+      ],
+      "exports": [
+        [
+          "_$ss12CaseIterableP8allCases03AllD0QzvgZTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss12CaseIterableP8allCases03AllD0QzvgZTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbde18",
+      "slots": [
+        "0x7ff918ceaf28"
+      ],
+      "exports": [
+        [
+          "_$ss25ExpressibleByArrayLiteralMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss25ExpressibleByArrayLiteralMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbde30",
+      "slots": [
+        "0x7ff918ceaf30"
+      ],
+      "exports": [
+        [
+          "_$s19ArrayLiteralElements013ExpressibleByaB0PTl",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s19ArrayLiteralElements013ExpressibleByaB0PTl",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbde38",
+      "slots": [
+        "0x7ff918ceaf38"
+      ],
+      "exports": [
+        [
+          "_$ss25ExpressibleByArrayLiteralP05arrayD0x0cD7ElementQzd_tcfCTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss25ExpressibleByArrayLiteralP05arrayD0x0cD7ElementQzd_tcfCTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbe2d4",
+      "slots": [
+        "0x7ff918ceb068"
+      ],
+      "exports": [
+        [
+          "_$sSD4KeysVMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSD4KeysVMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbea50",
+      "slots": [
+        "0x7ff918cead98"
+      ],
+      "exports": [
+        [
+          "_$sSQMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSQMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbea68",
+      "slots": [
+        "0x7ff918ceada0"
+      ],
+      "exports": [
+        [
+          "_$sSQ2eeoiySbx_xtFZTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSQ2eeoiySbx_xtFZTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbea70",
+      "slots": [
+        "0x7ff918ceaf40"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbea88",
+      "slots": [
+        "0x7ff918ceaf48"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorP7_domainSSvgTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorP7_domainSSvgTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbea90",
+      "slots": [
+        "0x7ff918ceaf50"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorP5_codeSivgTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorP5_codeSivgTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbea98",
+      "slots": [
+        "0x7ff918ceaf58"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorP9_userInfoyXlSgvgTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorP9_userInfoyXlSgvgTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbeaa0",
+      "slots": [
+        "0x7ff918ceaf60"
+      ],
+      "exports": [
+        [
+          "_$ss5ErrorP19_getEmbeddedNSErroryXlSgyFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5ErrorP19_getEmbeddedNSErroryXlSgyFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbf6d4",
+      "slots": [
+        "0x7ff918ceb010"
+      ],
+      "exports": [
+        [
+          "_$ss15FlattenSequenceVMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss15FlattenSequenceVMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbfb0c",
+      "slots": [
+        "0x7ff918cead70"
+      ],
+      "exports": [
+        [
+          "_$sSHMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSHMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbfb30",
+      "slots": [
+        "0x7ff918cead78"
+      ],
+      "exports": [
+        [
+          "_$sSHSQTb",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSHSQTb",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbfb38",
+      "slots": [
+        "0x7ff918cead80"
+      ],
+      "exports": [
+        [
+          "_$sSH9hashValueSivgTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSH9hashValueSivgTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbfb40",
+      "slots": [
+        "0x7ff918cead88"
+      ],
+      "exports": [
+        [
+          "_$sSH4hash4intoys6HasherVz_tFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSH4hash4intoys6HasherVz_tFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbfb48",
+      "slots": [
+        "0x7ff918cead90"
+      ],
+      "exports": [
+        [
+          "_$sSH13_rawHashValue4seedS2i_tFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSH13_rawHashValue4seedS2i_tFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fbfbc8",
+      "slots": [
+        "0x7ff918ceafa0"
+      ],
+      "exports": [
+        [
+          "_$ss11AnyHashableVMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss11AnyHashableVMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc08fc",
+      "slots": [
+        "0x7ff918ceb018"
+      ],
+      "exports": [
+        [
+          "_$ss7UnicodeO6ScalarVMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss7UnicodeO6ScalarVMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc09d0",
+      "slots": [
+        "0x7ff918ceb048"
+      ],
+      "exports": [
+        [
+          "_$ss17_NativeDictionaryVMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss17_NativeDictionaryVMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc0b38",
+      "slots": [
+        "0x7ff918ceae58"
+      ],
+      "exports": [
+        [
+          "_$ss9OptionSetMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss9OptionSetMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc0b68",
+      "slots": [
+        "0x7ff918ceae60"
+      ],
+      "exports": [
+        [
+          "_$ss9OptionSetPSYTb",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss9OptionSetPSYTb",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc0b70",
+      "slots": [
+        "0x7ff918ceae68"
+      ],
+      "exports": [
+        [
+          "_$ss9OptionSetPs0B7AlgebraTb",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss9OptionSetPs0B7AlgebraTb",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc0b78",
+      "slots": [
+        "0x7ff918ceae70"
+      ],
+      "exports": [
+        [
+          "_$ss9OptionSetP8rawValuex03RawD0Qz_tcfCTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss9OptionSetP8rawValuex03RawD0Qz_tcfCTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc0c2c",
+      "slots": [
+        "0x7ff918ceae08"
+      ],
+      "exports": [
+        [
+          "_$ss28CustomDebugStringConvertibleMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss28CustomDebugStringConvertibleMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc0c44",
+      "slots": [
+        "0x7ff918ceae10"
+      ],
+      "exports": [
+        [
+          "_$ss28CustomDebugStringConvertibleP16debugDescriptionSSvgTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss28CustomDebugStringConvertibleP16debugDescriptionSSvgTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc0ccc",
+      "slots": [
+        "0x7ff918ceafb0"
+      ],
+      "exports": [
+        [
+          "_$ss5NeverOMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5NeverOMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc1824",
+      "slots": [
+        "0x7ff918ceae78"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc1854",
+      "slots": [
+        "0x7ff918ceae80"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraPSQTb",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraPSQTb",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc185c",
+      "slots": [
+        "0x7ff918ceae88"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraPs25ExpressibleByArrayLiteralTb",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraPs25ExpressibleByArrayLiteralTb",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc1864",
+      "slots": [
+        "0x7ff918ceae90"
+      ],
+      "exports": [
+        [
+          "_$s7Elements10SetAlgebraPTl",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s7Elements10SetAlgebraPTl",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc186c",
+      "slots": [
+        "0x7ff918ceae98"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraPxycfCTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraPxycfCTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc1874",
+      "slots": [
+        "0x7ff918ceaea0"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP8containsySb7ElementQzFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP8containsySb7ElementQzFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc187c",
+      "slots": [
+        "0x7ff918ceaea8"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP5unionyxxnFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP5unionyxxnFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc1884",
+      "slots": [
+        "0x7ff918ceaeb0"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP12intersectionyxxFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP12intersectionyxxFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc188c",
+      "slots": [
+        "0x7ff918ceaeb8"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP19symmetricDifferenceyxxnFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP19symmetricDifferenceyxxnFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc1894",
+      "slots": [
+        "0x7ff918ceaec0"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP6insertySb8inserted_7ElementQz17memberAfterInserttAFnFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP6insertySb8inserted_7ElementQz17memberAfterInserttAFnFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc189c",
+      "slots": [
+        "0x7ff918ceaec8"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP6removey7ElementQzSgAEFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP6removey7ElementQzSgAEFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18a4",
+      "slots": [
+        "0x7ff918ceaed0"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP6update4with7ElementQzSgAFn_tFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP6update4with7ElementQzSgAFn_tFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18ac",
+      "slots": [
+        "0x7ff918ceaed8"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP9formUnionyyxnFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP9formUnionyyxnFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18b4",
+      "slots": [
+        "0x7ff918ceaee0"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP16formIntersectionyyxFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP16formIntersectionyyxFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18bc",
+      "slots": [
+        "0x7ff918ceaee8"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP23formSymmetricDifferenceyyxnFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP23formSymmetricDifferenceyyxnFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18c4",
+      "slots": [
+        "0x7ff918ceaef0"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP11subtractingyxxFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP11subtractingyxxFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18cc",
+      "slots": [
+        "0x7ff918ceaef8"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP8isSubset2ofSbx_tFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP8isSubset2ofSbx_tFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18d4",
+      "slots": [
+        "0x7ff918ceaf00"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP10isDisjoint4withSbx_tFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP10isDisjoint4withSbx_tFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18dc",
+      "slots": [
+        "0x7ff918ceaf08"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP10isSuperset2ofSbx_tFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP10isSuperset2ofSbx_tFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18e4",
+      "slots": [
+        "0x7ff918ceaf10"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP7isEmptySbvgTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP7isEmptySbvgTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18ec",
+      "slots": [
+        "0x7ff918ceaf18"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc18f4",
+      "slots": [
+        "0x7ff918ceaf20"
+      ],
+      "exports": [
+        [
+          "_$ss10SetAlgebraP8subtractyyxFTq",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss10SetAlgebraP8subtractyyxFTq",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc224c",
+      "slots": [
+        "0x7ff918ceafd8"
+      ],
+      "exports": [
+        [
+          "_$sSS5IndexVMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSS5IndexVMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc3218",
+      "slots": [
+        "0x7ff918ceaff8"
+      ],
+      "exports": [
+        [
+          "_$ss7CVarArgMp",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss7CVarArgMp",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc3448",
+      "slots": [
+        "0x7ff918ceaf90"
+      ],
+      "exports": [
+        [
+          "_$ss5UInt8VMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss5UInt8VMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc34b8",
+      "slots": [
+        "0x7ff918ceb060"
+      ],
+      "exports": [
+        [
+          "_$ss6UInt16VMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6UInt16VMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc3528",
+      "slots": [
+        "0x7ff918ceb000"
+      ],
+      "exports": [
+        [
+          "_$ss6UInt32VMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6UInt32VMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc4bd4",
+      "slots": [
+        "0x7ff918ceaf88"
+      ],
+      "exports": [
+        [
+          "_$ss23_ContiguousArrayStorageCMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss23_ContiguousArrayStorageCMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc4d84",
+      "slots": [
+        "0x7ff918ceaf98"
+      ],
+      "exports": [
+        [
+          "_$ss18_DictionaryStorageCMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss18_DictionaryStorageCMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1b030",
+      "slots": [
+        "0x7ff940079980"
+      ],
+      "exports": [
+        [
+          "_$sSo21OS_dispatch_semaphoreC8DispatchE4waityyF",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo21OS_dispatch_semaphoreC8DispatchE4waityyF",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1b0b0",
+      "slots": [
+        "0x7ff9400796c8"
+      ],
+      "exports": [
+        [
+          "_$s8Dispatch0A13WorkItemFlagsVMa",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s8Dispatch0A13WorkItemFlagsVMa",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1b0e0",
+      "slots": [
+        "0x7ff9400798c8"
+      ],
+      "exports": [
+        [
+          "_$sSo17OS_dispatch_queueC8DispatchE20AutoreleaseFrequencyOMa",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo17OS_dispatch_queueC8DispatchE20AutoreleaseFrequencyOMa",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1b0f0",
+      "slots": [
+        "0x7ff940079848"
+      ],
+      "exports": [
+        [
+          "_$sSo17OS_dispatch_queueC8DispatchE10AttributesVMa",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo17OS_dispatch_queueC8DispatchE10AttributesVMa",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1b200",
+      "slots": [
+        "0x7ff940079738"
+      ],
+      "exports": [
+        [
+          "_$s8Dispatch0A3QoSV11unspecifiedACvgZ",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s8Dispatch0A3QoSV11unspecifiedACvgZ",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1b2d0",
+      "slots": [
+        "0x7ff940079838"
+      ],
+      "exports": [
+        [
+          "_$sSo17OS_dispatch_queueC8DispatchE10AttributesV10concurrentAEvgZ",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo17OS_dispatch_queueC8DispatchE10AttributesV10concurrentAEvgZ",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1b6c0",
+      "slots": [
+        "0x7ff940079988"
+      ],
+      "exports": [
+        [
+          "_$sSo21OS_dispatch_semaphoreC8DispatchE6signalSiyF",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo21OS_dispatch_semaphoreC8DispatchE6signalSiyF",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db1ee10",
+      "slots": [
+        "0x7ff9400798f8"
+      ],
+      "exports": [
+        [
+          "_$sSo17OS_dispatch_queueC8DispatchE5label3qos10attributes20autoreleaseFrequency6targetABSS_AC0D3QoSVAbCE10AttributesVAbCE011AutoreleaseI0OABSgtcfC",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo17OS_dispatch_queueC8DispatchE5label3qos10attributes20autoreleaseFrequency6targetABSS_AC0D3QoSVAbCE10AttributesVAbCE011AutoreleaseI0OABSgtcfC",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db21b00",
+      "slots": [
+        "0x7ff9400798e8"
+      ],
+      "exports": [
+        [
+          "_$sSo17OS_dispatch_queueC8DispatchE5async5group3qos5flags7executeySo0a1_b1_F0CSg_AC0D3QoSVAC0D13WorkItemFlagsVyyXBtF",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo17OS_dispatch_queueC8DispatchE5async5group3qos5flags7executeySo0a1_b1_F0CSg_AC0D3QoSVAC0D13WorkItemFlagsVyyXBtF",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db27f10",
+      "slots": [
+        "0x7ff940079768"
+      ],
+      "exports": [
+        [
+          "_$s8Dispatch0A3QoSVMa",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s8Dispatch0A3QoSVMa",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff81db2d744",
+      "slots": [
+        "0x7ff918ceafc8"
+      ],
+      "exports": [
+        [
+          "_$s8Dispatch0A13WorkItemFlagsVMn",
+          "/usr/lib/swift/libswiftDispatch.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s8Dispatch0A13WorkItemFlagsVMn",
+        "/usr/lib/swift/libswiftDispatch.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a17e20",
+      "slots": [
+        "0x7ff940079a88"
+      ],
+      "exports": [
+        [
+          "_$sSo8NSObjectC10ObjectiveCE2eeoiySbAB_ABtFZ",
+          "/usr/lib/swift/libswiftObjectiveC.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo8NSObjectC10ObjectiveCE2eeoiySbAB_ABtFZ",
+        "/usr/lib/swift/libswiftObjectiveC.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a17e40",
+      "slots": [
+        "0x7ff940079a80"
+      ],
+      "exports": [
+        [
+          "_$sSo8NSObjectC10ObjectiveCE13_rawHashValue4seedS2i_tF",
+          "/usr/lib/swift/libswiftObjectiveC.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo8NSObjectC10ObjectiveCE13_rawHashValue4seedS2i_tF",
+        "/usr/lib/swift/libswiftObjectiveC.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a19c64",
+      "slots": [
+        "0x7ff918ceb058"
+      ],
+      "exports": [
+        [
+          "_$s10ObjectiveC8ObjCBoolVMn",
+          "/usr/lib/swift/libswiftObjectiveC.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s10ObjectiveC8ObjCBoolVMn",
+        "/usr/lib/swift/libswiftObjectiveC.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1bf20",
+      "slots": [
+        "0x7ff94007ac88"
+      ],
+      "exports": [
+        [
+          "_$sSo13os_log_type_ta0A0E7defaultABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo13os_log_type_ta0A0E7defaultABvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1d880",
+      "slots": [
+        "0x7ff94007ac70"
+      ],
+      "exports": [
+        [
+          "_$sSo13os_log_type_ta0A0E5debugABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo13os_log_type_ta0A0E5debugABvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1d890",
+      "slots": [
+        "0x7ff94007ab98"
+      ],
+      "exports": [
+        [
+          "_$s2os12OSSignpostIDVMa",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os12OSSignpostIDVMa",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1d8a0",
+      "slots": [
+        "0x7ff94007ac98"
+      ],
+      "exports": [
+        [
+          "_$sSo18os_signpost_type_ta0A0E5beginABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo18os_signpost_type_ta0A0E5beginABvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1d8b0",
+      "slots": [
+        "0x7ff94007ab90"
+      ],
+      "exports": [
+        [
+          "_$s2os12OSSignpostIDV9exclusiveACvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os12OSSignpostIDV9exclusiveACvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1dab0",
+      "slots": [
+        "0x7ff94007ac90"
+      ],
+      "exports": [
+        [
+          "_$sSo18os_signpost_type_ta0A0E3endABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo18os_signpost_type_ta0A0E3endABvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1dac0",
+      "slots": [
+        "0x7ff94007ac78"
+      ],
+      "exports": [
+        [
+          "_$sSo13os_log_type_ta0A0E5errorABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo13os_log_type_ta0A0E5errorABvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1daf0",
+      "slots": [
+        "0x7ff94007ac68"
+      ],
+      "exports": [
+        [
+          "_$sSo13os_log_type_ta0A0E4infoABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo13os_log_type_ta0A0E4infoABvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a1ee60",
+      "slots": [
+        "0x7ff94007ac80"
+      ],
+      "exports": [
+        [
+          "_$sSo13os_log_type_ta0A0E5faultABvgZ",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo13os_log_type_ta0A0E5faultABvgZ",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a21140",
+      "slots": [
+        "0x7ff94007aca8"
+      ],
+      "exports": [
+        [
+          "_$sSo9OS_os_logC0B0E16signpostsEnabledSbvg",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo9OS_os_logC0B0E16signpostsEnabledSbvg",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a229d0",
+      "slots": [
+        "0x7ff94007ab88"
+      ],
+      "exports": [
+        [
+          "_$s2os12OSSignpostIDV8rawValues6UInt64Vvg",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os12OSSignpostIDV8rawValues6UInt64Vvg",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a2aa20",
+      "slots": [
+        "0x7ff94007ac38"
+      ],
+      "exports": [
+        [
+          "_$s2os6LoggerV9logObjectSo03OS_a1_C0Cvg",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os6LoggerV9logObjectSo03OS_a1_C0Cvg",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a2aa60",
+      "slots": [
+        "0x7ff94007ac40"
+      ],
+      "exports": [
+        [
+          "_$s2os6LoggerV9subsystem8categoryACSS_SStcfC",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os6LoggerV9subsystem8categoryACSS_SStcfC",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a2b870",
+      "slots": [
+        "0x7ff94007ac50"
+      ],
+      "exports": [
+        [
+          "_$s2os6LoggerVMa",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os6LoggerVMa",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a2cb10",
+      "slots": [
+        "0x7ff94007abc8"
+      ],
+      "exports": [
+        [
+          "_$s2os12OSSignposterV9logHandleSo03OS_a1_C0Cvg",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os12OSSignposterV9logHandleSo03OS_a1_C0Cvg",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a2cb60",
+      "slots": [
+        "0x7ff94007abd0"
+      ],
+      "exports": [
+        [
+          "_$s2os12OSSignposterV9subsystem8categoryACSS_SStcfC",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os12OSSignposterV9subsystem8categoryACSS_SStcfC",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a2ed30",
+      "slots": [
+        "0x7ff94007ac08"
+      ],
+      "exports": [
+        [
+          "_$s2os23OSSignpostIntervalStateC10signpostIDAA0bF0Vvg",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os23OSSignpostIntervalStateC10signpostIDAA0bF0Vvg",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a2ff70",
+      "slots": [
+        "0x7ff94007ac10"
+      ],
+      "exports": [
+        [
+          "_$s2os23OSSignpostIntervalStateC2id6isOpenAcA0B2IDV_Sbtcfc",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os23OSSignpostIntervalStateC2id6isOpenAcA0B2IDV_Sbtcfc",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a304f0",
+      "slots": [
+        "0x7ff94007ac28"
+      ],
+      "exports": [
+        [
+          "_$s2os28checkForErrorAndConsumeState5stateAA010OSSignpostD0OAA0i8IntervalG0C_tF",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os28checkForErrorAndConsumeState5stateAA010OSSignpostD0OAA0i8IntervalG0C_tF",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a30580",
+      "slots": [
+        "0x7ff94007ac18"
+      ],
+      "exports": [
+        [
+          "_$s2os23OSSignpostIntervalStateCMa",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os23OSSignpostIntervalStateCMa",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a30690",
+      "slots": [
+        "0x7ff94007abd8"
+      ],
+      "exports": [
+        [
+          "_$s2os12OSSignposterVMa",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os12OSSignposterVMa",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a306a0",
+      "slots": [
+        "0x7ff94007abf0"
+      ],
+      "exports": [
+        [
+          "_$s2os15OSSignpostErrorOMa",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os15OSSignpostErrorOMa",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff820a34724",
+      "slots": [
+        "0x7ff918ceb030"
+      ],
+      "exports": [
+        [
+          "_$s2os23OSSignpostIntervalStateCMn",
+          "/usr/lib/swift/libswiftos.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s2os23OSSignpostIntervalStateCMn",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff842260750",
+      "slots": [
+        "0x7ff94264c6d0",
+        "0x7ff94264d370"
+      ],
+      "exports": [
+        [
+          "_$sBi32_WV",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sBi32_WV",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff842260800",
+      "slots": [
+        "0x7ff94264c6f0",
+        "0x7ff94264d588",
+        "0x7ff94264dd60",
+        "0x7ff94264dd80",
+        "0x7ff94264e688",
+        "0x7ff94264e970"
+      ],
+      "exports": [
+        [
+          "_$sBi64_WV",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sBi64_WV",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff842260b70",
+      "slots": [
+        "0x7ff943538c88",
+        "0x7ff943538dd0",
+        "0x7ff943538f78",
+        "0x7ff9435390a8",
+        "0x7ff9435391d8",
+        "0x7ff9435392f8",
+        "0x7ff9435393d8",
+        "0x7ff943539480",
+        "0x7ff943539540",
+        "0x7ff943539620",
+        "0x7ff9435397d0",
+        "0x7ff9435398a8",
+        "0x7ff943539b08",
+        "0x7ff943539e90",
+        "0x7ff944459e50"
+      ],
+      "exports": [
+        [
+          "_$sBoWV",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sBoWV",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff842260cd0",
+      "slots": [
+        "0x7ff94264d8f8",
+        "0x7ff94264dfc8",
+        "0x7ff9435350f8",
+        "0x7ff943537208",
+        "0x7ff943537270",
+        "0x7ff9435372d8",
+        "0x7ff943537b60",
+        "0x7ff943537be0",
+        "0x7ff943537c48",
+        "0x7ff943537cb0",
+        "0x7ff943537d18",
+        "0x7ff944458ea8",
+        "0x7ff944458f70"
+      ],
+      "exports": [
+        [
+          "_$sBOWV",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sBOWV",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff842261f08",
+      "slots": [
+        "0x7ff94264d740",
+        "0x7ff94264d760",
+        "0x7ff94264dcc8",
+        "0x7ff94264dfa8",
+        "0x7ff94264e740",
+        "0x7ff94264f098"
+      ],
+      "exports": [
+        [
+          "_$sytWV",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sytWV",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff8438a29e0",
+      "slots": [
+        "0x7ff94264c488",
+        "0x7ff94264d070",
+        "0x7ff94264d3a0",
+        "0x7ff94264d3c8",
+        "0x7ff94264d3f0",
+        "0x7ff94264d418",
+        "0x7ff94264d440",
+        "0x7ff94264d468",
+        "0x7ff94264d490",
+        "0x7ff94264d4c8",
+        "0x7ff94264dff0",
+        "0x7ff94264e030",
+        "0x7ff94264e1d0",
+        "0x7ff94264e4c0",
+        "0x7ff94264e758",
+        "0x7ff94264f128",
+        "0x7ff94264f198",
+        "0x7ff94264f1e0"
+      ],
+      "exports": [
+        [
+          "_$ss20__StaticArrayStorageCN",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ],
+        [
+          "_OBJC_CLASS_$__TtCs20__StaticArrayStorage",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss20__StaticArrayStorageCN",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": true
+    },
+    {
+      "target": "0x7ff90edf98b4",
+      "slots": [
+        "0x7ff918ceafe0"
+      ],
+      "exports": [
+        [
+          "_$s12CoreGraphics7CGFloatVMn",
+          "/usr/lib/swift/libswiftCoreFoundation.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s12CoreGraphics7CGFloatVMn",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffa1cf4d650",
+      "slots": [
+        "0x7ff940055e60"
+      ],
+      "exports": [
+        [
+          "_$s12FeatureFlags02isA7EnabledySbAA0aB3Key_pF",
+          "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+        ]
+      ],
+      "selected": [
+        "_$s12FeatureFlags02isA7EnabledySbAA0aB3Key_pF",
+        "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffa1cf4d9c8",
+      "slots": [
+        "0x7ff918ceadf0"
+      ],
+      "exports": [
+        [
+          "_$s12FeatureFlags0aB3KeyMp",
+          "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+        ]
+      ],
+      "selected": [
+        "_$s12FeatureFlags0aB3KeyMp",
+        "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffa1cf4d9e0",
+      "slots": [
+        "0x7ff918ceadf8"
+      ],
+      "exports": [
+        [
+          "_$s12FeatureFlags0aB3KeyP6domains12StaticStringVvgTq",
+          "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+        ]
+      ],
+      "selected": [
+        "_$s12FeatureFlags0aB3KeyP6domains12StaticStringVvgTq",
+        "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffa1cf4d9e8",
+      "slots": [
+        "0x7ff918ceae00"
+      ],
+      "exports": [
+        [
+          "_$s12FeatureFlags0aB3KeyP7features12StaticStringVvgTq",
+          "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+        ]
+      ],
+      "selected": [
+        "_$s12FeatureFlags0aB3KeyP7features12StaticStringVvgTq",
+        "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffa1cf5e1f0",
+      "slots": [
+        "0x7ff940079a10"
+      ],
+      "exports": [
+        [
+          "_$sSo20NLLanguageRecognizerC15NaturalLanguageE18languageHypotheses11withMaximumSDySo0A0aSdGSi_tF",
+          "/usr/lib/swift/libswiftNaturalLanguage.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSo20NLLanguageRecognizerC15NaturalLanguageE18languageHypotheses11withMaximumSDySo0A0aSdGSi_tF",
+        "/usr/lib/swift/libswiftNaturalLanguage.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe0b0",
+      "slots": [
+        "0x7ff940011640"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV4linkAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV4linkAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe0c0",
+      "slots": [
+        "0x7ff940011618"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV12emailAddressAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV12emailAddressAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe0d0",
+      "slots": [
+        "0x7ff940011610"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV11phoneNumberAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV11phoneNumberAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe0e0",
+      "slots": [
+        "0x7ff940011630"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV13postalAddressAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV13postalAddressAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe0f0",
+      "slots": [
+        "0x7ff940011628"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV13calendarEventAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV13calendarEventAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe100",
+      "slots": [
+        "0x7ff940011608"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV11moneyAmountAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV11moneyAmountAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe110",
+      "slots": [
+        "0x7ff940011600"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV11measurementAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV11measurementAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe120",
+      "slots": [
+        "0x7ff940011620"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV12flightNumberAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV12flightNumberAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe130",
+      "slots": [
+        "0x7ff940011638"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeV22shipmentTrackingNumberAEvgZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeV22shipmentTrackingNumberAEvgZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe4d0",
+      "slots": [
+        "0x7ff9400115f0"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO7OptionsVAEycfC",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO7OptionsVAEycfC",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebe590",
+      "slots": [
+        "0x7ff9400115f8"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO7OptionsVMa",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO7OptionsVMa",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebf0e0",
+      "slots": [
+        "0x7ff9400115e8"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO5MatchVMa",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO5MatchVMa",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ebf120",
+      "slots": [
+        "0x7ff9400115e0"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO5MatchV18matchesFromResults_5types7options9forAPIUse14originalString13rangeAdjusterSayAEGSaySo15DDScannerResultCG_AC0D4TypeVAC7OptionsVSbSSSgSnySS5IndexVGSgAWcSgtFZ",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO5MatchV18matchesFromResults_5types7options9forAPIUse14originalString13rangeAdjusterSayAEGSaySo15DDScannerResultCG_AC0D4TypeVAC7OptionsVSbSSSgSnySS5IndexVGSgAWcSgtFZ",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ec3c00",
+      "slots": [
+        "0x7ff940011648"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeVMa",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeVMa",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffb12ec6d3c",
+      "slots": [
+        "0x7ff918ceafd0"
+      ],
+      "exports": [
+        [
+          "_$s13DataDetection0A8DetectorO9MatchTypeVMn",
+          "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+        ]
+      ],
+      "selected": [
+        "_$s13DataDetection0A8DetectorO9MatchTypeVMn",
+        "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c052490",
+      "slots": [
+        "0x7ff94007a370"
+      ],
+      "exports": [
+        [
+          "_$sScS12ContinuationV5yieldyAB11YieldResultOyx__GxnF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS12ContinuationV5yieldyAB11YieldResultOyx__GxnF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c053370",
+      "slots": [
+        "0x7ff94007a378"
+      ],
+      "exports": [
+        [
+          "_$sScS12ContinuationV6finishyyF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS12ContinuationV6finishyyF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0536d0",
+      "slots": [
+        "0x7ff94007a348"
+      ],
+      "exports": [
+        [
+          "_$sScS12ContinuationV13onTerminationyAB0C0Oyx__GYbcSgvs",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS12ContinuationV13onTerminationyAB0C0Oyx__GYbcSgvs",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0546d0",
+      "slots": [
+        "0x7ff94007a3a0"
+      ],
+      "exports": [
+        [
+          "_$sScS8IteratorV4next9isolationxSgScA_pSgYi_tYaF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS8IteratorV4next9isolationxSgScA_pSgYi_tYaF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0548c0",
+      "slots": [
+        "0x7ff94007a398"
+      ],
+      "exports": [
+        [
+          "_$sScS17makeAsyncIteratorScS0C0Vyx_GyF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS17makeAsyncIteratorScS0C0Vyx_GyF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0549f0",
+      "slots": [
+        "0x7ff94007a310"
+      ],
+      "exports": [
+        [
+          "_$sScS10makeStream2of15bufferingPolicyScSyxG6stream_ScS12ContinuationVyx_G12continuationtxm_AG09BufferingE0Oyx__GtFZ",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS10makeStream2of15bufferingPolicyScSyxG6stream_ScS12ContinuationVyx_G12continuationtxm_AG09BufferingE0Oyx__GtFZ",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c061900",
+      "slots": [
+        "0x7ff94007a188"
+      ],
+      "exports": [
+        [
+          "_$sScC12continuation8functionScCyxq_GSccyxq_G_SStcfC",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScC12continuation8functionScCyxq_GSccyxq_G_SStcfC",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c061950",
+      "slots": [
+        "0x7ff94007a198"
+      ],
+      "exports": [
+        [
+          "_$sScC6resume9returningyxn_tF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScC6resume9returningyxn_tF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c061ac0",
+      "slots": [
+        "0x7ff94007a190"
+      ],
+      "exports": [
+        [
+          "_$sScC6resume8throwingyq_n_tF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScC6resume8throwingyq_n_tF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c061c20",
+      "slots": [
+        "0x7ff94007a800"
+      ],
+      "exports": [
+        [
+          "_$ss23withCheckedContinuation9isolation8function_xScA_pSgYi_SSyScCyxs5NeverOGXEtYalF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss23withCheckedContinuation9isolation8function_xScA_pSgYi_SSyScCyxs5NeverOGXEtYalF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c061f10",
+      "slots": [
+        "0x7ff94007a850"
+      ],
+      "exports": [
+        [
+          "_$ss31withCheckedThrowingContinuation9isolation8function_xScA_pSgYi_SSyScCyxs5Error_pGXEtYaKlF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss31withCheckedThrowingContinuation9isolation8function_xScA_pSgYi_SSyScCyxs5Error_pGXEtYaKlF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0718d0",
+      "slots": [
+        "0x7ff94007a160"
+      ],
+      "exports": [
+        [
+          "_$sS2cEycfC",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sS2cEycfC",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0718e0",
+      "slots": [
+        "0x7ff94007a480"
+      ],
+      "exports": [
+        [
+          "_$sScTss5NeverORszABRs_rlE5yieldyyYaFZ",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScTss5NeverORszABRs_rlE5yieldyyYaFZ",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c071d20",
+      "slots": [
+        "0x7ff94007a438"
+      ],
+      "exports": [
+        [
+          "_$sScTss5NeverORs_rlE5valuexvg",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScTss5NeverORs_rlE5valuexvg",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c072920",
+      "slots": [
+        "0x7ff94007a410"
+      ],
+      "exports": [
+        [
+          "_$sScT6cancelyyF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScT6cancelyyF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0729f0",
+      "slots": [
+        "0x7ff94007a3f8"
+      ],
+      "exports": [
+        [
+          "_$sScT2eeoiySbScTyxq_G_ABtFZ",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScT2eeoiySbScTyxq_G_ABtFZ",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c072a10",
+      "slots": [
+        "0x7ff94007a2f8"
+      ],
+      "exports": [
+        [
+          "_$sScP8rawValues5UInt8Vvg",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScP8rawValues5UInt8Vvg",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0740c0",
+      "slots": [
+        "0x7ff94007a448"
+      ],
+      "exports": [
+        [
+          "_$sScTss5NeverORszABRs_rlE11isCancelledSbvgZ",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScTss5NeverORszABRs_rlE11isCancelledSbvgZ",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c074100",
+      "slots": [
+        "0x7ff94007a458"
+      ],
+      "exports": [
+        [
+          "_$sScTss5NeverORszABRs_rlE17checkCancellationyyKFZ",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScTss5NeverORszABRs_rlE17checkCancellationyyKFZ",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0746f0",
+      "slots": [
+        "0x7ff94007a538"
+      ],
+      "exports": [
+        [
+          "_$sScg5groupScgyxq_GBp_tcfC",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg5groupScgyxq_GBp_tcfC",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c074700",
+      "slots": [
+        "0x7ff94007a518"
+      ],
+      "exports": [
+        [
+          "_$sScg22awaitAllRemainingTasksyyYaF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg22awaitAllRemainingTasksyyYaF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c074760",
+      "slots": [
+        "0x7ff94007a560"
+      ],
+      "exports": [
+        [
+          "_$sScg9cancelAllyyF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg9cancelAllyyF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c074770",
+      "slots": [
+        "0x7ff94007a7d8"
+      ],
+      "exports": [
+        [
+          "_$ss21withThrowingTaskGroup2of9returning9isolation4bodyq_xm_q_mScA_pSgYiq_Scgyxs5Error_pGzYaKXEtYaKs8SendableRzr0_lF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss21withThrowingTaskGroup2of9returning9isolation4bodyq_xm_q_mScA_pSgYiq_Scgyxs5Error_pGzYaKXEtYaKs8SendableRzr0_lF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c075520",
+      "slots": [
+        "0x7ff94007a528"
+      ],
+      "exports": [
+        [
+          "_$sScg4next9isolationxSgScA_pSgYi_tYaKF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg4next9isolationxSgScA_pSgYi_tYaKF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c075610",
+      "slots": [
+        "0x7ff94007a540"
+      ],
+      "exports": [
+        [
+          "_$sScg7isEmptySbvg",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg7isEmptySbvg",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c076060",
+      "slots": [
+        "0x7ff94007a510"
+      ],
+      "exports": [
+        [
+          "_$sScg17makeAsyncIteratorScg0C0Vyxq__GyF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg17makeAsyncIteratorScg0C0Vyxq__GyF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c076380",
+      "slots": [
+        "0x7ff94007a548"
+      ],
+      "exports": [
+        [
+          "_$sScg8IteratorV4next9isolationxSgScA_pSgYi_tYaq_YKF",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg8IteratorV4next9isolationxSgScA_pSgYi_tYaq_YKF",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c07c120",
+      "slots": [
+        "0x7ff94007a568"
+      ],
+      "exports": [
+        [
+          "_$sScgMa",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScgMa",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c07c980",
+      "slots": [
+        "0x7ff94007a168"
+      ],
+      "exports": [
+        [
+          "_$sScA15unownedExecutorScevgTj",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScA15unownedExecutorScevgTj",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c084500",
+      "slots": [
+        "0x7ff94007a1a0"
+      ],
+      "exports": [
+        [
+          "_$sScCMa",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScCMa",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c084ba0",
+      "slots": [
+        "0x7ff94007a300"
+      ],
+      "exports": [
+        [
+          "_$sScPMa",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScPMa",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c084c60",
+      "slots": [
+        "0x7ff94007a1a8"
+      ],
+      "exports": [
+        [
+          "_$sScEMa",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScEMa",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c084db0",
+      "slots": [
+        "0x7ff94007a558"
+      ],
+      "exports": [
+        [
+          "_$sScg8IteratorVMa",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScg8IteratorVMa",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0941a4",
+      "slots": [
+        "0x7ff918ceade0"
+      ],
+      "exports": [
+        [
+          "_$sScAMp",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScAMp",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0941c8",
+      "slots": [
+        "0x7ff918ceade8"
+      ],
+      "exports": [
+        [
+          "_$sScA15unownedExecutorScevgTq",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScA15unownedExecutorScevgTq",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c094688",
+      "slots": [
+        "0x7ff918ceb028"
+      ],
+      "exports": [
+        [
+          "_$sScS12ContinuationVMn",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS12ContinuationVMn",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c0946e8",
+      "slots": [
+        "0x7ff918ceb038"
+      ],
+      "exports": [
+        [
+          "_$sScS12ContinuationV11YieldResultOMn",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS12ContinuationV11YieldResultOMn",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c094718",
+      "slots": [
+        "0x7ff918ceb020"
+      ],
+      "exports": [
+        [
+          "_$sScS12ContinuationV15BufferingPolicyOMn",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS12ContinuationV15BufferingPolicyOMn",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c094798",
+      "slots": [
+        "0x7ff918ceb070"
+      ],
+      "exports": [
+        [
+          "_$sScS8IteratorVMn",
+          "/usr/lib/swift/libswift_Concurrency.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sScS8IteratorVMn",
+        "/usr/lib/swift/libswift_Concurrency.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c159c10",
+      "slots": [
+        "0x7ff94007ab48"
+      ],
+      "exports": [
+        [
+          "_$sSm17_StringProcessingSs11SubSequenceRtzrlE9replacing_4with15maxReplacementsxqd_0__qd__SitSlRd__AA14RegexComponentRd_0_SJ7ElementRtd__r0_lF",
+          "/usr/lib/swift/libswift_StringProcessing.dylib"
+        ]
+      ],
+      "selected": [
+        "_$sSm17_StringProcessingSs11SubSequenceRtzrlE9replacing_4with15maxReplacementsxqd_0__qd__SitSlRd__AA14RegexComponentRd_0_SJ7ElementRtd__r0_lF",
+        "/usr/lib/swift/libswift_StringProcessing.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c1991e0",
+      "slots": [
+        "0x7ff94007aa78"
+      ],
+      "exports": [
+        [
+          "_$s17_StringProcessing5RegexV06_regexA07versionACyxGSS_SitcfC",
+          "/usr/lib/swift/libswift_StringProcessing.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s17_StringProcessing5RegexV06_regexA07versionACyxGSS_SitcfC",
+        "/usr/lib/swift/libswift_StringProcessing.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ffe0c1cbc18",
+      "slots": [
+        "0x7ff918ceb008"
+      ],
+      "exports": [
+        [
+          "_$s17_StringProcessing5RegexVMn",
+          "/usr/lib/swift/libswift_StringProcessing.dylib"
+        ]
+      ],
+      "selected": [
+        "_$s17_StringProcessing5RegexVMn",
+        "/usr/lib/swift/libswift_StringProcessing.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x894c18678d4d1077",
+      "slots": [
+        "0x7ff918ceafc0"
+      ],
+      "exports": [],
+      "selected": null,
+      "same_class_alias": false
+    },
+    {
+      "target": "0xb8002fd9cc00f573",
+      "slots": [
+        "0x7ff918ceafb8"
+      ],
+      "exports": [],
+      "selected": null,
+      "same_class_alias": false
+    }
+  ],
+  "sources": {
+    "scripts/audit-resource-image-imports.py": "fdd6f0f7fe7691f1b577476d7adc75c8a76fe6b24a611d6d3b054b724c115a81",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab"
+  },
+  "image_emitted": false,
+  "runtime_execution_verified": false
+}

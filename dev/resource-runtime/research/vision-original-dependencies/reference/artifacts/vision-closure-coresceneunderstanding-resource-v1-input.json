@@ -1,0 +1,136 @@
+{
+  "target": "vision-closure-coresceneunderstanding-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CoreSceneUnderstanding.framework/Versions/A/CoreSceneUnderstanding",
+    "sha256": "c082cf90294cab1492c331b6566cf1b86174e249b67f784c32e68619e8497613",
+    "reference_set": "fullsystem",
+    "objc_classes": 98,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 116,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 395,
+    "patch_got_range": [
+      "0x7ffc40000000",
+      "0x7ffc40092000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 1196032,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData",
+    "/System/Library/Frameworks/CoreML.framework/Versions/A/CoreML",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+    "/System/Library/PrivateFrameworks/Espresso.framework/Versions/A/Espresso",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/ModelCatalog.framework/Versions/A/ModelCatalog",
+    "/usr/lib/swift/libswiftAccelerate.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftMLCompute.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "previous_manifest_sha256": "b9f133a62d8ae79704e95a262fa5d95a330031ae58c67192622255e6c3fcc8bd",
+  "manifest_sha256": "c981249fbfe65663086b5f49b5ead8f30d49ece84a3d3fa1362b3aa2b25fa108",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "vision-closure-coresceneunderstanding-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1431,
+    "nonzero_addends": 116,
+    "got_cells": 395,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffc4008f828",
+          "0x7ffc4008f838"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "original_cache_TLV_optimizations": [
+    {
+      "slot": "0x7ffc42e0a318",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ffc42e0a380",
+      "template_size": 2576,
+      "variable_offset": 72,
+      "cache_key": 181,
+      "template_delta": 88,
+      "raw_original_descriptor": "c853a90200060000b50000004800000058000000100a0000",
+      "requires_disk_ABI_restoration": true
+    },
+    {
+      "slot": "0x7ffc42e0a330",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ffc42e0a380",
+      "template_size": 2576,
+      "variable_offset": 64,
+      "cache_key": 181,
+      "template_delta": 64,
+      "raw_original_descriptor": "c853a90200060000b50000004000000040000000100a0000",
+      "requires_disk_ABI_restoration": true
+    },
+    {
+      "slot": "0x7ffc42e0a348",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ffc42e0a380",
+      "template_size": 2576,
+      "variable_offset": 0,
+      "cache_key": 181,
+      "template_delta": 40,
+      "raw_original_descriptor": "c853a90200000000b50000000000000028000000100a0000",
+      "requires_disk_ABI_restoration": true
+    }
+  ],
+  "TLV_validator_sha256": "f89e05dfff195dcdd772fa227229a7e5c471fcfadbc748c45944c0a778920535",
+  "build_returncode": 1,
+  "log": "logs/vision-closure-coresceneunderstanding-resource-v1-build.log",
+  "log_sha256": "748488caaca65e6b0f63fc162a4a4fa49f4c85ae3c3739f05f30cf7dc41720bf"
+}

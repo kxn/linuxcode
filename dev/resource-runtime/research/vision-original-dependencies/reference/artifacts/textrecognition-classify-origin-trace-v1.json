@@ -1,0 +1,134 @@
+{
+  "diagnostic_only": true,
+  "source_unmodified": true,
+  "classified_slots": [
+    {
+      "slot": "0x7ff918ceafb8",
+      "target": "0xb8002fd9cc00f573",
+      "owners": [
+        {
+          "segment": "__COMPAT",
+          "base": "0x7ff918cbb000",
+          "offset": 196536,
+          "staged_bytes": "0000000000000000",
+          "original_size": 0
+        }
+      ],
+      "stack": [
+        {
+          "path": "<frozen runpy>",
+          "line": 287,
+          "function": "run_path",
+          "source": ""
+        },
+        {
+          "path": "<frozen runpy>",
+          "line": 98,
+          "function": "_run_module_code",
+          "source": ""
+        },
+        {
+          "path": "<frozen runpy>",
+          "line": 88,
+          "function": "_run_code",
+          "source": ""
+        },
+        {
+          "path": "scripts/rebuild-c-cache-image.py",
+          "line": 583,
+          "function": "<module>",
+          "source": "swift_report=swift_restore(segments,ns,allocate,store,classify,own)"
+        },
+        {
+          "path": "/home/dl/linuxcode/scripts/restore-swift-metadata.py",
+          "line": 343,
+          "function": "restore",
+          "source": "if kind==2:relative(start+index+1,'slot','symbolic indirect context')"
+        },
+        {
+          "path": "/home/dl/linuxcode/scripts/restore-swift-metadata.py",
+          "line": 51,
+          "function": "relative",
+          "source": "try:replacement=bound_cell(pointer(target),mode=='objc-slot')"
+        },
+        {
+          "path": "/home/dl/linuxcode/scripts/restore-swift-metadata.py",
+          "line": 37,
+          "function": "bound_cell",
+          "source": "cell=allocate(bytes(8));classify(cell,target);cells[target]=cell"
+        },
+        {
+          "path": "scripts/rebuild-c-cache-image.py",
+          "line": 358,
+          "function": "classify",
+          "source": "def classify(slot,target,selector=False,lazy_stub=False):"
+        }
+      ]
+    },
+    {
+      "slot": "0x7ff918ceafc0",
+      "target": "0x894c18678d4d1077",
+      "owners": [
+        {
+          "segment": "__COMPAT",
+          "base": "0x7ff918cbb000",
+          "offset": 196544,
+          "staged_bytes": "0000000000000000",
+          "original_size": 0
+        }
+      ],
+      "stack": [
+        {
+          "path": "<frozen runpy>",
+          "line": 287,
+          "function": "run_path",
+          "source": ""
+        },
+        {
+          "path": "<frozen runpy>",
+          "line": 98,
+          "function": "_run_module_code",
+          "source": ""
+        },
+        {
+          "path": "<frozen runpy>",
+          "line": 88,
+          "function": "_run_code",
+          "source": ""
+        },
+        {
+          "path": "scripts/rebuild-c-cache-image.py",
+          "line": 583,
+          "function": "<module>",
+          "source": "swift_report=swift_restore(segments,ns,allocate,store,classify,own)"
+        },
+        {
+          "path": "/home/dl/linuxcode/scripts/restore-swift-metadata.py",
+          "line": 343,
+          "function": "restore",
+          "source": "if kind==2:relative(start+index+1,'slot','symbolic indirect context')"
+        },
+        {
+          "path": "/home/dl/linuxcode/scripts/restore-swift-metadata.py",
+          "line": 51,
+          "function": "relative",
+          "source": "try:replacement=bound_cell(pointer(target),mode=='objc-slot')"
+        },
+        {
+          "path": "/home/dl/linuxcode/scripts/restore-swift-metadata.py",
+          "line": 37,
+          "function": "bound_cell",
+          "source": "cell=allocate(bytes(8));classify(cell,target);cells[target]=cell"
+        },
+        {
+          "path": "scripts/rebuild-c-cache-image.py",
+          "line": 358,
+          "function": "classify",
+          "source": "def classify(slot,target,selector=False,lazy_stub=False):"
+        }
+      ]
+    }
+  ],
+  "source_sha256": "8bb6da9e85601689417096686871d079513e4b3716760b53ec568d5bc36fcbdb",
+  "image_emitted": false
+}

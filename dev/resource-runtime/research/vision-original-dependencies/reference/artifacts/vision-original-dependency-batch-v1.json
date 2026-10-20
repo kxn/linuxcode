@@ -1,0 +1,284 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/vision-original-dependency-batch-v1.json",
+  "configuration_sha256": "628e74859c117ae77eb4a14968dd49de1d50b292a2c95450586128fbae98e7e5",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/Vision.framework/Versions/A/Vision",
+      "attempts": [],
+      "prepared_target": "vision-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreSceneUnderstanding.framework/Versions/A/CoreSceneUnderstanding",
+      "attempts": [
+        {
+          "target": "vision-closure-coresceneunderstanding-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CoreSceneUnderstanding.framework/Versions/A/CoreSceneUnderstanding",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-coresceneunderstanding-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-coresceneunderstanding-resource-v1-batch-preparation.log",
+          "log_sha256": "d8dd023a66883efcbf6b35803c9c2b24d08f47b731cd44f25fbb6ee03fc02507",
+          "preparation": "artifacts/vision-closure-coresceneunderstanding-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'vision-closure-coresceneunderstanding-resource-v1', '--output', 'artifacts/vision-closure-coresceneunderstanding-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VisionCore.framework/Versions/A/VisionCore",
+      "attempts": [
+        {
+          "target": "vision-closure-visioncore-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/VisionCore.framework/Versions/A/VisionCore",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-visioncore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-visioncore-resource-v1-batch-preparation.log",
+          "log_sha256": "9dd8cacfbaa1a4c721445bacc5820791bfd0b6c69cf6fd2140b09fba5af2a555",
+          "preparation": "artifacts/vision-closure-visioncore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "vision-closure-visioncore-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/Vision.framework/libfaceCore.dylib",
+      "attempts": [
+        {
+          "target": "vision-closure-libfacecore-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/Vision.framework/libfaceCore.dylib",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-libfacecore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-libfacecore-resource-v1-batch-preparation.log",
+          "log_sha256": "e3f76ee4f26378a9156e0b948cb860706ba2c304947b48300e9154c8623e7a42",
+          "preparation": "artifacts/vision-closure-libfacecore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'vision-closure-libfacecore-resource-v1', '--output', 'artifacts/vision-closure-libfacecore-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Futhark.framework/Versions/A/Futhark",
+      "attempts": [
+        {
+          "target": "vision-closure-futhark-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Futhark.framework/Versions/A/Futhark",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-futhark-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-futhark-resource-v1-batch-preparation.log",
+          "log_sha256": "681f0b4468f8d564f06f196a6a9a59e2b4266f917073ff2156e793f59ee68a39",
+          "preparation": "artifacts/vision-closure-futhark-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "vision-closure-futhark-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/InertiaCam.framework/Versions/A/InertiaCam",
+      "attempts": [
+        {
+          "target": "vision-closure-inertiacam-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/InertiaCam.framework/Versions/A/InertiaCam",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-inertiacam-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-inertiacam-resource-v1-batch-preparation.log",
+          "log_sha256": "87108f5ba8ed66296bcfeee59d258a5cc1616472eaaf52a633b0f0d6fc46e38f",
+          "preparation": "artifacts/vision-closure-inertiacam-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "vision-closure-inertiacam-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/TextRecognition.framework/Versions/A/TextRecognition",
+      "attempts": [
+        {
+          "target": "vision-closure-textrecognition-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/TextRecognition.framework/Versions/A/TextRecognition",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-textrecognition-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-textrecognition-resource-v1-batch-preparation.log",
+          "log_sha256": "9e4fce4249934ea7adc83e0be3760d6ae9ce470a791c22f6078900a2c5e42fae",
+          "preparation": "artifacts/vision-closure-textrecognition-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'vision-closure-textrecognition-resource-v1', '--output', 'artifacts/vision-closure-textrecognition-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection",
+      "attempts": [
+        {
+          "target": "vision-closure-datadetection-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-datadetection-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-datadetection-resource-v1-batch-preparation.log",
+          "log_sha256": "a812a4d4a03e3792b4c04acf04959565cc67d18e38ac070790d9ab16fd301942",
+          "preparation": "artifacts/vision-closure-datadetection-resource-v1-input.json"
+        },
+        {
+          "target": "vision-closure-datadetection-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "vision-closure-datadetection-resource-v1",
+            "--exact-import-audit",
+            "artifacts/vision-closure-datadetection-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-datadetection-resource-v2",
+            "--build"
+          ],
+          "log": "logs/vision-closure-datadetection-resource-v2-batch-preparation.log",
+          "log_sha256": "d11b5b8dffdf9aa604c852447dffabe974914992f7c984152ee2589fe3b4c1c0",
+          "preparation": "artifacts/vision-closure-datadetection-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "vision-closure-datadetection-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CVNLP.framework/Versions/A/CVNLP",
+      "attempts": [
+        {
+          "target": "vision-closure-cvnlp-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CVNLP.framework/Versions/A/CVNLP",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "vision-closure-cvnlp-resource-v1",
+            "--build"
+          ],
+          "log": "logs/vision-closure-cvnlp-resource-v1-batch-preparation.log",
+          "log_sha256": "d8e15cb331512ae0c008cf9a414ed9357593ec394455c4e0ae76506f50dde18f",
+          "preparation": "artifacts/vision-closure-cvnlp-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "vision-closure-cvnlp-resource-v1"
+    }
+  ]
+}

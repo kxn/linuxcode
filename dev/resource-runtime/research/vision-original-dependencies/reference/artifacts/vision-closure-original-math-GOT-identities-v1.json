@@ -1,0 +1,182 @@
+{
+  "verified": true,
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreSceneUnderstanding.framework/Versions/A/CoreSceneUnderstanding",
+      "candidates": [
+        {
+          "symbol": "_ldexp",
+          "verified": false,
+          "reason": ""
+        },
+        {
+          "symbol": "_ldexp$fenv_access_off",
+          "verified": false,
+          "reason": ""
+        },
+        {
+          "symbol": "_scalbn",
+          "verified": true,
+          "proof": {
+            "kind": "original-stub-GOT-and-reexport-route",
+            "target": "0x7ff812dd9e6b",
+            "slots": [
+              "0x7ffc40090db8"
+            ],
+            "selected": [
+              "_scalbn",
+              "/usr/lib/libSystem.B.dylib"
+            ],
+            "stubs": [
+              {
+                "address": "0x7ffc0980a43e",
+                "slot": "0x7ffc40090db8",
+                "bytes": "ff2574698836"
+              }
+            ],
+            "route": [
+              {
+                "provider": "/usr/lib/libSystem.B.dylib",
+                "symbol": "_scalbn",
+                "kind": "whole-library-reexport",
+                "ordinal": 25,
+                "dependency": "/usr/lib/system/libsystem_m.dylib"
+              },
+              {
+                "provider": "/usr/lib/system/libsystem_m.dylib",
+                "symbol": "_scalbn",
+                "kind": "address",
+                "export": [
+                  "address",
+                  140703445130859,
+                  0
+                ]
+              }
+            ],
+            "original_file_sha256": {
+              "/System/Library/PrivateFrameworks/CoreSceneUnderstanding.framework/Versions/A/CoreSceneUnderstanding": "c082cf90294cab1492c331b6566cf1b86174e249b67f784c32e68619e8497613",
+              "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+              "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+            },
+            "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+            "records": [
+              {
+                "symbol": "_scalbn",
+                "provider": "/usr/lib/system/libsystem_m.dylib",
+                "kind": 0,
+                "implementation": 140703445130859,
+                "matching_import_names": [
+                  "_scalbn"
+                ],
+                "slot": 140721382821304,
+                "addend": 0,
+                "weak_import": false,
+                "high7": 0,
+                "target": 140703445130859,
+                "target_matches_patch": true,
+                "export_matches_patch": true,
+                "provider_index": 155,
+                "export_index": 53708,
+                "location_index": 107104
+              }
+            ]
+          }
+        },
+        {
+          "symbol": "_scalbn$fenv_access_off",
+          "verified": false,
+          "reason": ""
+        }
+      ]
+    },
+    {
+      "image": "/System/Library/Frameworks/Vision.framework/libfaceCore.dylib",
+      "candidates": [
+        {
+          "symbol": "_ldexp",
+          "verified": false,
+          "reason": ""
+        },
+        {
+          "symbol": "_ldexp$fenv_access_off",
+          "verified": false,
+          "reason": ""
+        },
+        {
+          "symbol": "_scalbn",
+          "verified": true,
+          "proof": {
+            "kind": "original-stub-GOT-and-reexport-route",
+            "target": "0x7ff812dd9e6b",
+            "slots": [
+              "0x7ff94007d630"
+            ],
+            "selected": [
+              "_scalbn",
+              "/usr/lib/libSystem.B.dylib"
+            ],
+            "stubs": [
+              {
+                "address": "0x7ff91899f5a8",
+                "slot": "0x7ff94007d630",
+                "bytes": "ff2582e06d27"
+              }
+            ],
+            "route": [
+              {
+                "provider": "/usr/lib/libSystem.B.dylib",
+                "symbol": "_scalbn",
+                "kind": "whole-library-reexport",
+                "ordinal": 25,
+                "dependency": "/usr/lib/system/libsystem_m.dylib"
+              },
+              {
+                "provider": "/usr/lib/system/libsystem_m.dylib",
+                "symbol": "_scalbn",
+                "kind": "address",
+                "export": [
+                  "address",
+                  140703445130859,
+                  0
+                ]
+              }
+            ],
+            "original_file_sha256": {
+              "/System/Library/Frameworks/Vision.framework/libfaceCore.dylib": "6281ebaac1a0e169154c4d46af81013acc33f855a2ecca145d57351c71425134",
+              "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+              "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+            },
+            "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+            "records": [
+              {
+                "symbol": "_scalbn",
+                "provider": "/usr/lib/system/libsystem_m.dylib",
+                "kind": 0,
+                "implementation": 140703445130859,
+                "matching_import_names": [
+                  "_scalbn"
+                ],
+                "slot": 140708497839664,
+                "addend": 0,
+                "weak_import": false,
+                "high7": 0,
+                "target": 140703445130859,
+                "target_matches_patch": true,
+                "export_matches_patch": true,
+                "provider_index": 155,
+                "export_index": 53708,
+                "location_index": 107101
+              }
+            ]
+          }
+        },
+        {
+          "symbol": "_scalbn$fenv_access_off",
+          "verified": false,
+          "reason": ""
+        }
+      ]
+    }
+  ],
+  "image_emitted": false
+}

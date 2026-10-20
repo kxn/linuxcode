@@ -1,0 +1,339 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "vision-patch-got-v2",
+      "candidate_sha256": "cbf1c09ed4f5eecf23fc32dd476e740db284f9359d511cf2e49066046835d581",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 5129466,
+            "sha256": "b83fe699b33cd2915d5d8110d1a3d40a935b1218c8aa21d7895b6e1b3d5d77ac"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 7326,
+            "sha256": "b44a520ac961765a01fc8e5b7a186bdd955b60e88ca735a7c87300b307fc95ca"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 2026,
+        "nonzero_addends_verified": 144,
+        "serialized_bindings": 10754,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 6,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "vision-closure-coresceneunderstanding-resource-v2",
+      "candidate_sha256": "63ace61f4dfd670d44f6f67f02192f827b5938a363cf6d7e5bd99235fbae6017",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 845034,
+            "sha256": "934f9fa72d52e43ad4d4815d109299fbf2396d3e456a8ff1a2866ee6392c2237"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1872,
+            "sha256": "7b0520f7b5169b22c88be40b97dbf339656e1ab09c78a7082e6aa3ab7dfa93a9"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 489,
+        "nonzero_addends_verified": 116,
+        "serialized_bindings": 1651,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 7,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 3,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true,
+      "changed_TLV_key_rejected": true,
+      "changed_TLV_offset_rejected": true,
+      "missing_original_TLV_cache_proof_rejected": true
+    },
+    {
+      "target": "vision-closure-visioncore-resource-v1",
+      "candidate_sha256": "dade54d7b6273874e9264a9a3b2dc24d5416317c3a533b23b2973437648caaf8",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 223974,
+            "sha256": "87f5f303f2380d8fcc4c9d4a68ddefbd227abe6203e8792d3c0f3e5061f53f4b"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1248,
+            "sha256": "99e1d0cbd20a979bb85d3d679eddb3ca4651c5dd02b7142565e5c1d551d404a9"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 295,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1096,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 2,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "vision-closure-libfacecore-resource-v2",
+      "candidate_sha256": "52d8b3d62f2f3f9458da449890b983bd8a99c4818a3e2e44ddb9dcf00b0d1dac",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 10507191,
+            "sha256": "17d96161068f2c9fbf39d8c3373a8adf4fb9377d16ce42fc64f4709bd7b9a242"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 990,
+            "sha256": "df9df1f65e1712f0dd6dff4546b1af835b428b1884218bb470e692220351a221"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 239,
+        "nonzero_addends_verified": 31,
+        "serialized_bindings": 456,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 4,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "vision-closure-futhark-resource-v1",
+      "candidate_sha256": "72f892db06ce2f4dcf61c4f007422853b4a1172f5b1d13e4125fffe3a3e56ae7",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 84075,
+            "sha256": "bb9be644bf9526f6dcd376734977bab7d800ea43c1d15e7ae10293b68dd0340f"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 432,
+            "sha256": "591476b7686e19ce141826b0a112b881891fa459699dcd77331d0f3b92a86cfb"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 115,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 147,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "vision-closure-inertiacam-resource-v1",
+      "candidate_sha256": "b87a9dd84ac76ac181490c661b448d1d0d7dc88084cda1adb4791b6f554711ce",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 463472,
+            "sha256": "ef7940052269bfd50eedafd3fcec42fe84d99b1a73f6dbe26cc96c9712c65845"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1764,
+            "sha256": "e7496ffe97a190832a5305fa483bfa68afb1f468f5813348fc49e11b2b00fdee"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 422,
+        "nonzero_addends_verified": 59,
+        "serialized_bindings": 1723,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 5,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "vision-closure-textrecognition-resource-v2",
+      "candidate_sha256": "70b9b58a63b0f55fd159c2c5d91c807056c03d270f4fd4b1a191b383101b8ce4",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 2170236,
+            "sha256": "c9cfd97d496db8fb6ca2286592effa8a0260da7de5dbdb98065b87795d4599f9"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 5136,
+            "sha256": "a46c088aabc997f782318b11869e6ec66e96e51013645f5aacbc3b6bac7d56da"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1324,
+        "nonzero_addends_verified": 45,
+        "serialized_bindings": 10418,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 6,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "vision-closure-datadetection-resource-v2",
+      "candidate_sha256": "ebbcbdf4494ffe737e9238ef5fd0d5d58dc32b921c6c665753ef44a3baae9941",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 35202,
+            "sha256": "ff6ee2122719fce729ea71d06b927b381623501065e1be4d7b6066a5d599b367"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 522,
+            "sha256": "25604816588743d283a9caccecc9b96b3a63983160952ce3c26db1dc8554d1f7"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 175,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 348,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "vision-closure-cvnlp-resource-v1",
+      "candidate_sha256": "3dd28eb0ef7bec351713cfee660c0fb8d968ed269a53d16662a5fa2745ece8e6",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 858304,
+            "sha256": "414109dfb7d6f1c11932a4f4cae2a8d5b3189469a03ed842d487601d318ebf3a"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1902,
+            "sha256": "17f6196de1cbf3d26057eb801e4ed8a6e5cccba0431c48a0b01754cf80d8cc8f"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 526,
+        "nonzero_addends_verified": 143,
+        "serialized_bindings": 1087,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 7,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 3,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2,
+      "false_local_binding_proof_rejected": true,
+      "changed_TLV_key_rejected": true,
+      "changed_TLV_offset_rejected": true,
+      "missing_original_TLV_cache_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

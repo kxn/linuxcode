@@ -1,0 +1,94 @@
+{
+  "verified": true,
+  "original_same_address_aliases": [
+    {
+      "symbol": "_ldexp",
+      "verified": false,
+      "reason": ""
+    },
+    {
+      "symbol": "_ldexp$fenv_access_off",
+      "verified": false,
+      "reason": ""
+    },
+    {
+      "symbol": "_scalbn",
+      "verified": true,
+      "proof": {
+        "kind": "original-stub-GOT-and-reexport-route",
+        "target": "0x7ff812dd9e6b",
+        "slots": [
+          "0x7ff840056630"
+        ],
+        "selected": [
+          "_scalbn",
+          "/usr/lib/libSystem.B.dylib"
+        ],
+        "stubs": [
+          {
+            "address": "0x7ff81c2c90cc",
+            "slot": "0x7ff840056630",
+            "bytes": "ff255ed5d823"
+          }
+        ],
+        "route": [
+          {
+            "provider": "/usr/lib/libSystem.B.dylib",
+            "symbol": "_scalbn",
+            "kind": "whole-library-reexport",
+            "ordinal": 25,
+            "dependency": "/usr/lib/system/libsystem_m.dylib"
+          },
+          {
+            "provider": "/usr/lib/system/libsystem_m.dylib",
+            "symbol": "_scalbn",
+            "kind": "address",
+            "export": [
+              "address",
+              140703445130859,
+              0
+            ]
+          }
+        ],
+        "original_file_sha256": {
+          "/System/Library/Frameworks/Vision.framework/Versions/A/Vision": "28a1ef6db741f0d5e47bde019a82ce0ca862bc00be5f1e97d643be8613b9e691",
+          "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+          "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+        },
+        "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+        "records": [
+          {
+            "symbol": "_scalbn",
+            "provider": "/usr/lib/system/libsystem_m.dylib",
+            "kind": 0,
+            "implementation": 140703445130859,
+            "matching_import_names": [
+              "_scalbn"
+            ],
+            "slot": 140704202712624,
+            "addend": 0,
+            "weak_import": false,
+            "high7": 0,
+            "target": 140703445130859,
+            "target_matches_patch": true,
+            "export_matches_patch": true,
+            "provider_index": 155,
+            "export_index": 53708,
+            "location_index": 107099
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "_scalbn$fenv_access_off",
+      "verified": false,
+      "reason": ""
+    }
+  ],
+  "image_emitted": false,
+  "sources": {
+    "scripts/verify-original-pooled-import.py": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+    "scripts/cache-patch-metadata.py": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab"
+  }
+}

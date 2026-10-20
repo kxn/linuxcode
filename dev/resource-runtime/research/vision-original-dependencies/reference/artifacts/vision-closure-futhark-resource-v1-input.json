@@ -1,0 +1,63 @@
+{
+  "target": "vision-closure-futhark-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/Futhark.framework/Versions/A/Futhark",
+    "sha256": "db4cd5a11a7b06653ea2d4ccede6ba3e7824e6f6565c04a25655706564fbac3a",
+    "reference_set": "fullsystem",
+    "objc_classes": 3,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 115,
+    "patch_got_range": [
+      "0x7ff940000000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 122880,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/Espresso.framework/Versions/A/Espresso",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "033b6cf4ec51c0bc485468ed136315462d038564fcf3ccf5c30d0c4554010a98",
+  "manifest_sha256": "ef6e1d42a7fd99cedcdcd33e632f481431279b0ce40bc3bc8cefe506dbe87585",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "vision-closure-futhark-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 42,
+    "nonzero_addends": 0,
+    "got_cells": 115,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/vision-closure-futhark-resource-v1-build.log",
+  "log_sha256": "3c34478eff959b744ac613a083115caafd31be8643a85619c4415e39887a047d"
+}

@@ -1,0 +1,5 @@
+let integer = MarkerOuter<String>.Pair<Int>("first", 42)
+precondition(integer[keyPath: MarkerOuter<String>.Pair<Int>.path()] == 42)
+let string = MarkerOuter<Int>.Pair<String>(17, "second")
+precondition(string[keyPath: MarkerOuter<Int>.Pair<String>.path()] == "second")
+print("ORIGINAL_SWIFT_NESTED_MARKER_KEYPATH_OK 2")

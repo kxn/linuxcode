@@ -1,0 +1,70 @@
+{
+  "target": "vision-closure-datadetection-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection",
+    "sha256": "227fc17839fdfbcd8018406ea15258179154ab5bff9ef328bdf43e04f973656a",
+    "reference_set": "fullsystem",
+    "objc_classes": 9,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 74,
+    "patch_got_range": [
+      "0x7ffb40045000",
+      "0x7ffb4009a000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 81920,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/DataDetectorsCore.framework/Versions/A/DataDetectorsCore",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "0c3e2cf390a22d6fa2adc7fee2a277b621a30dfb7f453b63f578d34fc011578a",
+  "manifest_sha256": "80d5d92792384e9be811b845e997eaf11e3bf644238964eaf4f78121c43960ff",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "vision-closure-datadetection-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 167,
+    "nonzero_addends": 0,
+    "got_cells": 74,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/vision-closure-datadetection-resource-v1-build.log",
+  "log_sha256": "748488caaca65e6b0f63fc162a4a4fa49f4c85ae3c3739f05f30cf7dc41720bf"
+}

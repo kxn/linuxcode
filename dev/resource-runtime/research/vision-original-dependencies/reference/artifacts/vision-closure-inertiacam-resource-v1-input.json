@@ -1,0 +1,83 @@
+{
+  "target": "vision-closure-inertiacam-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/InertiaCam.framework/Versions/A/InertiaCam",
+    "sha256": "e9dfbb1a45b264333cf00bf7e309227f56e2b600152259c4245110c3d6b3019d",
+    "reference_set": "fullsystem",
+    "objc_classes": 10,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 59,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 422,
+    "patch_got_range": [
+      "0x7ff940000000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 827392,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+    "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText",
+    "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+    "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "ef6e1d42a7fd99cedcdcd33e632f481431279b0ce40bc3bc8cefe506dbe87585",
+  "manifest_sha256": "433c63548d6e73712b7aa60cfcb6e638d8d8c795e476041af2a9bddc75666b31",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "vision-closure-inertiacam-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1321,
+    "nonzero_addends": 59,
+    "got_cells": 422,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff94007c070",
+          "0x7ff94007c080",
+          "0x7ff94007d9d0"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/vision-closure-inertiacam-resource-v1-build.log",
+  "log_sha256": "37a0579cc8c1ebf95ff1b1142183a342fcd42e53fe48bd3155ad774f59ef2376"
+}

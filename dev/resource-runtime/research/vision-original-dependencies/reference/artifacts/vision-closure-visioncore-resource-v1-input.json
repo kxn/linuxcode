@@ -1,0 +1,82 @@
+{
+  "target": "vision-closure-visioncore-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/VisionCore.framework/Versions/A/VisionCore",
+    "sha256": "a2753fe52304a565f7266d180126f4de12065a1aa2680b9191b69317619d6b0e",
+    "reference_set": "fullsystem",
+    "objc_classes": 65,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 295,
+    "patch_got_range": [
+      "0x7ffe40000000",
+      "0x7ffe400bd000"
+    ]
+  },
+  "original_bytes": 540672,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/PrivateFrameworks/Espresso.framework/Versions/A/Espresso",
+    "/usr/lib/libz.1.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "c981249fbfe65663086b5f49b5ead8f30d49ece84a3d3fa1362b3aa2b25fa108",
+  "manifest_sha256": "3fdf2b7ee9aa9087ddb603f24f5ad06b88714949a0a7995647acc1fe13f399ed",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "vision-closure-visioncore-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1045,
+    "nonzero_addends": 0,
+    "got_cells": 295,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffe400bb3d0",
+          "0x7ffe400bb3d8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/vision-closure-visioncore-resource-v1-build.log",
+  "log_sha256": "958f7183a1b151f723f84a1c5ce577b8f52bedfa6346ca1cec8701209906085a"
+}

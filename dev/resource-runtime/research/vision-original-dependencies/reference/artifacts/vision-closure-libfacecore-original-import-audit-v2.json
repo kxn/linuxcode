@@ -1,0 +1,101 @@
+{
+  "target": "vision-closure-libfacecore-resource-v1",
+  "original_image_sha256": "6281ebaac1a0e169154c4d46af81013acc33f855a2ecca145d57351c71425134",
+  "missing_imports_sha256": "795dcadd38cacf0bcb79eb5617122e904c240b6a73e14a61053666830100e8e2",
+  "original_dependency_sha256": {
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo": "675a42d831ec0b1f3439a985ff6f35d1426e22ec2a183e70c275a0dac9ec0692",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate": "491b89f6919d3e972a0e53333d4beb9886c9f5b0554468c76dcd3db7d410c3b2",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics": "0d0af817945ce26823a7653c1e29a0444b124b78565666e37c5b7dcedf5cd039",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation": "a8d086449ef65851a190c862ffbd57d663b2b731bac9126c35e501cfe8ecbfd8",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation": "37aa85f7da365c9c81244c8dc67c95362edef4dacf495db2fa7655840a254c7d",
+    "/usr/lib/libobjc.A.dylib": "4000ce8b03a7d56a55dff36cb37589cbd42ab4412262f2ac98cfa3eff9475b23",
+    "/usr/lib/libc++.1.dylib": "98a388765e2b9a56940265d09723d2b1fccb9db63953157e5c6006089cab3ac8",
+    "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4"
+  },
+  "unresolved": 0,
+  "rows": [
+    {
+      "target": "0x7ff812dd9e6b",
+      "slots": [
+        "0x7ff94007d630"
+      ],
+      "exports": [],
+      "selected": [
+        "_scalbn",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "same_class_alias": false,
+      "original_GOT_import_proof": {
+        "kind": "original-stub-GOT-and-reexport-route",
+        "target": "0x7ff812dd9e6b",
+        "slots": [
+          "0x7ff94007d630"
+        ],
+        "selected": [
+          "_scalbn",
+          "/usr/lib/libSystem.B.dylib"
+        ],
+        "stubs": [
+          {
+            "address": "0x7ff91899f5a8",
+            "slot": "0x7ff94007d630",
+            "bytes": "ff2582e06d27"
+          }
+        ],
+        "route": [
+          {
+            "provider": "/usr/lib/libSystem.B.dylib",
+            "symbol": "_scalbn",
+            "kind": "whole-library-reexport",
+            "ordinal": 25,
+            "dependency": "/usr/lib/system/libsystem_m.dylib"
+          },
+          {
+            "provider": "/usr/lib/system/libsystem_m.dylib",
+            "symbol": "_scalbn",
+            "kind": "address",
+            "export": [
+              "address",
+              140703445130859,
+              0
+            ]
+          }
+        ],
+        "original_file_sha256": {
+          "/System/Library/Frameworks/Vision.framework/libfaceCore.dylib": "6281ebaac1a0e169154c4d46af81013acc33f855a2ecca145d57351c71425134",
+          "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+          "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+        },
+        "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+        "records": [
+          {
+            "symbol": "_scalbn",
+            "provider": "/usr/lib/system/libsystem_m.dylib",
+            "kind": 0,
+            "implementation": 140703445130859,
+            "matching_import_names": [
+              "_scalbn"
+            ],
+            "slot": 140708497839664,
+            "addend": 0,
+            "weak_import": false,
+            "high7": 0,
+            "target": 140703445130859,
+            "target_matches_patch": true,
+            "export_matches_patch": true,
+            "provider_index": 155,
+            "export_index": 53708,
+            "location_index": 107101
+          }
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "scripts/audit-resource-image-imports.py": "fdd6f0f7fe7691f1b577476d7adc75c8a76fe6b24a611d6d3b054b724c115a81",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab",
+    "scripts/verify-original-pooled-import.py": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5"
+  },
+  "image_emitted": false,
+  "runtime_execution_verified": false
+}
