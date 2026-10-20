@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/avfaudio-reexport-native-v1-driver.log",
+  "original_sha256": "2d97c37d970575690319836aa856f3fdc21532493b8a1d270bd126f3fe71f6cc",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/probe-avfaudio-reexport.py\", line 34, in <module>\n    binary.write_bytes(normalize(binary.read_bytes())[0])\n                       ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/dl/linuxcode/scripts/normalize-macho-weak-bind.py\", line 64, in normalize\n    assert weak is not None and link is not None\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

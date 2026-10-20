@@ -1,0 +1,83 @@
+{
+  "target": "avfaudio-patch-got-v1",
+  "original_image_sha256": "01f5078e3ffe5d04bb34d329f179baae96d663178e5a8a81cd5057a74c0996c7",
+  "missing_imports_sha256": "5fa5f750082a66e9c3578087554b8a2446b0f2f668cc734948ee7115bf4c1f4c",
+  "original_dependency_sha256": {
+    "/System/Library/PrivateFrameworks/IsolatedCoreAudioClient.framework/Versions/A/IsolatedCoreAudioClient": "97351deecafce43f163903fa27b11681db57d101f207249762f47801445df4a4",
+    "/usr/lib/libAudioStatistics.dylib": "d6a30fad12aa18a74b49950f9a4dc1102b99176b8e18e85c75a6e30a82618704",
+    "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk": "7413a14b08c3b499940dbb56cf4f398a7fd0f977902622b1a609264ae35d2213",
+    "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore": "f9bcfa2ad0cba4663dd715efd14df20b569281a39b4c081e9b67b8122e1d7495",
+    "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox": "cb7426d72e0aba6f9c2ae49d75100222dd36b22dff651b82dc183303679c703f",
+    "/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI": "3b19ae6b39072334fb42b347b5c694b0ca662196636dd812b63c613f0455551c",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking": "80c566cdab18503a09d5ebe32a6f25e84322c06b700c448965af9cb2003be4ac",
+    "/usr/lib/libMobileGestalt.dylib": "815426d5978f7c89cef097d72806185b6e12ebd509896a22b63adb911d4aa8c1",
+    "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession": "4c735c33fe21a5f09ac0629a6f0b3b011855df1bc16c2d8736cc8d8476475d2e",
+    "/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth": "0c0457c59962af3f77b09362fc28ad44ae6dfba5b2601059df2943d85eab4aae",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate": "491b89f6919d3e972a0e53333d4beb9886c9f5b0554468c76dcd3db7d410c3b2",
+    "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience": "4d657ff3dcd5a3cf27081b5b94879d9e3d3e02b9c09f140ea3f908ef3d4099e0",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio": "9c26ec46024dea726bbb44895073a4cda171ca983dfbaa9d510c162fee767e1c",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation": "37aa85f7da365c9c81244c8dc67c95362edef4dacf495db2fa7655840a254c7d",
+    "/usr/lib/libobjc.A.dylib": "4000ce8b03a7d56a55dff36cb37589cbd42ab4412262f2ac98cfa3eff9475b23",
+    "/usr/lib/libc++.1.dylib": "98a388765e2b9a56940265d09723d2b1fccb9db63953157e5c6006089cab3ac8",
+    "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation": "a8d086449ef65851a190c862ffbd57d663b2b731bac9126c35e501cfe8ecbfd8",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface": "6d39195ea5a07009c12a5bf20b7ab52b1264ddf261152302c641ca62ca761699",
+    "/usr/lib/swift/libswiftCore.dylib": "f35f878e8efd184709ffb0f21a41172de69b8083ad89fa0f758379d38d1224a5",
+    "/usr/lib/swift/libswiftCoreAudio.dylib": "fdac484e2f00216fdadaec162391367c106cda2a6fc535f4f82937da4e52172b",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib": "d907f618c87a5b8709956a4b19262cdcaf7ec2e0e73ba390a9fd5268a9b29859",
+    "/usr/lib/swift/libswiftCoreMIDI.dylib": "e6af66c4dfda6bcb6c208db1bc25b175e2512ca8597d1b13bac543840d8c7f66",
+    "/usr/lib/swift/libswiftCoreMedia.dylib": "15b3e8cffae3948f178d77b56230039c47641fb66c3ea4115f413b47b8331d69",
+    "/usr/lib/swift/libswiftDispatch.dylib": "d86226f24682ae6be9163622cd27a5b29a03a12731c05f687e39a482184ab030",
+    "/usr/lib/swift/libswiftIOKit.dylib": "3ad0885499ddd6d2d8fae705502f9ac16d6bc1b8ac195e9ad8f4f21d0a5a90a1",
+    "/usr/lib/swift/libswiftMetal.dylib": "7a040e8c28b5e3bb3b97ca1ac0b46a6f29f043875ff4257538521a11dfbb80f4",
+    "/usr/lib/swift/libswiftObjectiveC.dylib": "716192b71712e60541bce08dbf1f0f535b6bc22256951cc20fba8b601b978202",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib": "7b0dafab8b75bf8179a0c938b4ade797548cf42a5cfec5912c63f4b1cf6e9b2c",
+    "/usr/lib/swift/libswiftXPC.dylib": "cf876a5d6d18b3859c386ea58d3d266aad6204e97dbe8764ff43efd2a1a656b7",
+    "/usr/lib/swift/libswift_Builtin_float.dylib": "8d55d6a28d5aeede3f4611abdaea2ea85db2f47b456f4b996fc9dcb504e8e6e1",
+    "/usr/lib/swift/libswiftos.dylib": "61251fe401a25f423a115e59187d87ded15671a36db254e6f1e7f32b6dda3ef5",
+    "/usr/lib/swift/libswiftsimd.dylib": "d7a5a3239f0f4d37064a322eec4b1b9bf06291c62230f85c4679ac81712bc96a"
+  },
+  "unresolved": 0,
+  "rows": [
+    {
+      "target": "0x7ff816fc3528",
+      "slots": [
+        "0x7ffb118249c8"
+      ],
+      "exports": [
+        [
+          "_$ss6UInt32VMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss6UInt32VMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    },
+    {
+      "target": "0x7ff816fc4bd4",
+      "slots": [
+        "0x7ffb118249c0"
+      ],
+      "exports": [
+        [
+          "_$ss23_ContiguousArrayStorageCMn",
+          "/usr/lib/swift/libswiftCore.dylib"
+        ]
+      ],
+      "selected": [
+        "_$ss23_ContiguousArrayStorageCMn",
+        "/usr/lib/swift/libswiftCore.dylib"
+      ],
+      "same_class_alias": false
+    }
+  ],
+  "sources": {
+    "scripts/audit-resource-image-imports.py": "fdd6f0f7fe7691f1b577476d7adc75c8a76fe6b24a611d6d3b054b724c115a81",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab"
+  },
+  "image_emitted": false,
+  "runtime_execution_verified": false
+}

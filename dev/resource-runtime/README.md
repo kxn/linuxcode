@@ -1,5 +1,7 @@
 # 资源工具和签名候选的开发源码
 
+[AVFAudio 转导出与符号表修复附件](research/avfaudio-reexport-symbol-tables/README.md) 保存原版 AVFAudio 和 AudioSession 的真实对象/CFString 对照，并修复提取件追加转导出别名未计入动态符号表的问题。原版 dyld 校验、独立分组/索引检查及真实 Unity/CocoaPods 构建已越过此前缺口，当前缺 Contacts 类；完整 App 仍未生成。
+
 [完整 libc++ 后端与字符转换附件](research/codecvt-char8-backend/README.md) 以未修改的 38 个源码单元启用 C++20 facet 和 locale 安装，用原版链接器保留全部旧导出属性，并通过全部 Unicode 标量及既有消费者的原生回归。原版 UserNotifications 候选和完整 Unity/CocoaPods 构建已继续推进到 AVFAudio 转导出缺口；完整 App 仍未生成。
 
 [PMR 类型 ABI 与 AudioToolbox 附件](research/pmr-runtime-abi/README.md) 保存真实标准 PMR key function、跨 DSO 分配/异常/析构回归及零长度 weak-bind 修复，并保留原版 AudioToolbox 指令与绑定。实际工具已越过这两处缺失，当前缺口为 C++20 char8_t locale facet；完整 Unity/UE App 和默认安装提升仍未完成。

@@ -1,0 +1,82 @@
+{
+  "verified": true,
+  "positive": {
+    "verified": true,
+    "symbol_count": 7328,
+    "actual_type_groups": [
+      6090,
+      435,
+      803
+    ],
+    "external_aliases": 166,
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 1179,
+    "remapped_indirect_entries": 0,
+    "original_sha256": "01f5078e3ffe5d04bb34d329f179baae96d663178e5a8a81cd5057a74c0996c7",
+    "candidate_sha256": "3b55321c300103261ee0e0807576e573eeb2527270c617df0f1cd0569593779e"
+  },
+  "corruption_controls": [
+    {
+      "case": "stale_defined_count",
+      "rejected": true
+    },
+    {
+      "case": "changed_alias_target",
+      "rejected": true
+    },
+    {
+      "case": "changed_undefined_weak_flag",
+      "rejected": true
+    },
+    {
+      "case": "changed_defined_address",
+      "rejected": true
+    },
+    {
+      "case": "changed_symbol_string",
+      "rejected": true
+    },
+    {
+      "case": "changed_special_indirect_marker",
+      "rejected": true
+    },
+    {
+      "case": "omitted_symbol_record",
+      "rejected": true
+    }
+  ],
+  "seeded_undefined_reference_fixture": {
+    "positive": {
+      "verified": true,
+      "symbol_count": 7328,
+      "actual_type_groups": [
+        6090,
+        435,
+        803
+      ],
+      "external_aliases": 166,
+      "symbol_names_descriptors_and_alias_targets_preserved": true,
+      "defined_addresses_normalized": true,
+      "indirect_entries": 1179,
+      "remapped_indirect_entries": 1,
+      "original_sha256": "24eca23564ef81aa22bc19291e3f5fff696dc40aaa8af17cad76fb468cd41a45",
+      "candidate_sha256": "b40bca1125c75fcd09d1b8d08381013a5cded11d51f07316cb93ccb31b3df4a7"
+    },
+    "stale_index_rejected": true,
+    "original_image_reference": false
+  },
+  "well_formed_real_image_byte_preserving": true,
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "inputs": {
+    "runtime/fullsystem-libraries/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio": "01f5078e3ffe5d04bb34d329f179baae96d663178e5a8a81cd5057a74c0996c7",
+    "runtime/rebuilt-avfaudio-patch-got-v4/AVFAudio": "3b55321c300103261ee0e0807576e573eeb2527270c617df0f1cd0569593779e",
+    "runtime/rebuilt-usernotifications-patch-got-v1/UserNotifications": "8ca613e9a7342d1190b464bd5c11707b3eaabef07cd73dd6d25587928b604627"
+  },
+  "sources": {
+    "scripts/test-dysymtab-alias-binary.py": "38890e063a67f3b8ecc03ec262b32d29c221feaab4734bf0d42ee0f5f3fd7b32",
+    "scripts/normalize-dysymtab-aliases.py": "f183a71315116694715ab2b28f20e297693102fbc89f377f9da56fa8bf5a0744",
+    "scripts/verify-dysymtab-alias-repair.py": "7574f93bf8b65d498e4bbad65b0f2ea6e7304463fcc711e740daf0197649c683"
+  }
+}

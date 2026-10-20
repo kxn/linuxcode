@@ -1,0 +1,21 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-framework-overlay-avfaudio-reexport-v1-stage.json",
+  "full_local_report_sha256": "e60c25412bf23d27b42728d6d1b22ba6b7d66734ced45dc68158157fc19192a7",
+  "frameworks": "runtime/resource-framework-overlay-avfaudio-reexport-v1/frameworks",
+  "libraries": "runtime/resource-framework-overlay-avfaudio-reexport-v1/libraries",
+  "parent_overlay": "artifacts/resource-framework-overlay-codecvt-usernotifications-v1-stage.json",
+  "graphics_stage": "artifacts/coregraphics-native-v118-stage.json",
+  "added_original_frameworks": [
+    {
+      "target": "avfaudio-patch-got-v4",
+      "framework": "AVFAudio.framework",
+      "source": "runtime/coregraphics-native-v118/frameworks/AVFAudio.framework",
+      "image": "runtime/coregraphics-native-v118/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+      "image_sha256": "3b55321c300103261ee0e0807576e573eeb2527270c617df0f1cd0569593779e",
+      "reconstruction": "runtime/rebuilt-avfaudio-patch-got-v4/reconstruction.json"
+    }
+  ],
+  "installed": false,
+  "runtime_execution_verified": false
+}

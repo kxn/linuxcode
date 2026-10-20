@@ -1,0 +1,323 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-pir021ls/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v116-stage.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "avfaudio-patch-got-v2"
+  ],
+  "images": {
+    "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio": {
+      "original_sha256": "01f5078e3ffe5d04bb34d329f179baae96d663178e5a8a81cd5057a74c0996c7",
+      "original_bytes": 1904640,
+      "dependencies": [
+        {
+          "path": "/System/Library/PrivateFrameworks/IsolatedCoreAudioClient.framework/Versions/A/IsolatedCoreAudioClient",
+          "load_command": "0x80000018",
+          "file_candidates": []
+        },
+        {
+          "path": "/usr/lib/libAudioStatistics.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/coregraphics-native-v116/libraries/libAudioStatistics.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v116/frameworks/caulk.framework/Versions/A/caulk",
+            "runtime/coregraphics-native-v116/frameworks/caulk.framework/caulk"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v116/frameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore",
+            "runtime/coregraphics-native-v116/frameworks/AudioToolboxCore.framework/AudioToolboxCore"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/resource-framework-overlay-codecvt-usernotifications-v1/frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/coregraphics-native-v116/frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/resource-framework-overlay-codecvt-usernotifications-v1/frameworks/AudioToolbox.framework/AudioToolbox",
+            "runtime/coregraphics-native-v116/frameworks/AudioToolbox.framework/AudioToolbox"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v116/frameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v116/frameworks/SoftLinking.framework/SoftLinking"
+          ]
+        },
+        {
+          "path": "/usr/lib/libMobileGestalt.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libMobileGestalt.dylib",
+            "runtime/mobilegestalt-native/libraries/libMobileGestalt.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v116/frameworks/AudioSession.framework/Versions/A/AudioSession",
+            "runtime/coregraphics-native-v116/frameworks/AudioSession.framework/AudioSession"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+            "runtime/native-framework-stage/Accelerate.framework/Versions/A/Accelerate",
+            "runtime/native-framework-stage/Accelerate.framework/Accelerate"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v116/frameworks/MediaExperience.framework/Versions/A/MediaExperience",
+            "runtime/coregraphics-native-v116/frameworks/MediaExperience.framework/MediaExperience"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+            "runtime/resource-framework-overlay-codecvt-usernotifications-v1/frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+            "runtime/coregraphics-native-v116/frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+            "runtime/resource-framework-overlay-codecvt-usernotifications-v1/frameworks/CoreAudio.framework/CoreAudio",
+            "runtime/coregraphics-native-v116/frameworks/CoreAudio.framework/CoreAudio"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libc++.1.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libc++.1.dylib",
+            "runtime/pmr-key-function-v1/libraries/libc++.1.dylib",
+            "runtime/expected-access-source/libraries/libc++.1.dylib",
+            "runtime/typed-new-delete-source/libraries/libc++.1.dylib",
+            "runtime/native-library-stage/libc++.1.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v116/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+            "runtime/native-framework-stage/IOSurface.framework/Versions/A/IOSurface",
+            "runtime/native-framework-stage/IOSurface.framework/IOSurface"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreAudio.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreAudio.dylib",
+            "runtime/coregraphics-native-v116/libraries/libswiftCoreAudio.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreMIDI.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": []
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreMedia.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreMedia.dylib",
+            "runtime/coregraphics-native-v116/libraries/libswiftCoreMedia.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftMetal.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftMetal.dylib",
+            "runtime/native-library-stage/libswiftMetal.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/uniform-type-identifiers-native/libraries/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftos.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftos.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftsimd.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftsimd.dylib"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [
+    "/System/Library/PrivateFrameworks/IsolatedCoreAudioClient.framework/Versions/A/IsolatedCoreAudioClient",
+    "/usr/lib/swift/libswiftCoreMIDI.dylib"
+  ],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-pir021ls/result.json": "f8276cfb278877aabedd34ac954d9e585de3782f1779bcf915dcd9c4b3b51a5b",
+    "artifacts/coregraphics-native-v116-stage.json": "b2d603106ff7d6719e9f9f6a961173c8315003292ebb07df68c90f5e3741ef1f",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "26f4d8f3aa443f8f2c741c7b8de0998f14585a032ba5737905efd864efcdb7cd",
+    "scripts/plan-original-resource-dependencies.py": "01f469fa4793c07b1e243792c27bf9cfd2a98e40d22c2ce570d4d79f8013874c"
+  }
+}
