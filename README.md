@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[Unity 编译与 Unicode 路径检查点](dev/resource-runtime/research/unity-compile-unicode/README.md)已产出并独立核验原版签名的 UnityFramework 与两个 Pod 静态库，58 个编译对象为 iPhoneOS/arm64；完整 App 仍未完成。资源复制的 NFC/NFD 路径问题已在 Darling 源码修复，原版 Swift 遍历 3041 项及 176 项原生路径回归通过。 后续完整重跑暴露的旧等待计时器问题已独立复现，并按 XNU 取消规则修复，39 项公有信号量检查通过。
+最新的[Unity Data、线程池和 PNG 检查点](dev/resource-runtime/research/unity-data-png-workqueue/README.md)已在实际工作区完整复制2880个资源文件并逐文件比对一致，补齐已复现的线程池信号量竞态；原版 PNG 工具的新环境通过190个像素的独立比较。最终 Unity App 与 Storyboard 输出仍未完成验证。
+
+此前的[Unity 编译与 Unicode 路径检查点](dev/resource-runtime/research/unity-compile-unicode/README.md)已产出并独立核验原版签名的 UnityFramework 与两个 Pod 静态库，58 个编译对象为 iPhoneOS/arm64；完整 App 仍未完成。资源复制的 NFC/NFD 路径问题已在 Darling 源码修复，原版 Swift 遍历 3041 项及 176 项原生路径回归通过。 后续完整重跑暴露的旧等待计时器问题已独立复现，并按 XNU 取消规则修复，39 项公有信号量检查通过。
 
 此前的[系统框架路径检查点](dev/resource-runtime/research/canonical-system-frameworks/README.md)修复 PlugInKit 被当成 Xcode 插件加载的问题，原版 actool / ibtool 版本查询均返回 0。完整 App 与签名仍未验证。
 

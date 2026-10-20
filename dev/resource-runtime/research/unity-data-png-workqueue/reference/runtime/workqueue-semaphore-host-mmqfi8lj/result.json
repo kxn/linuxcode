@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "baseline": false,
+  "outer_status": 0,
+  "log": "runtime/workqueue-semaphore-host-mmqfi8lj/run.log",
+  "log_sha256": "85fede195585f9ba46a47db9b2cb1d367b8ffa8eeb8963f48efafcaeaa7c9d82",
+  "compile_command": [
+    "clang-19",
+    "-O2",
+    "-pthread",
+    "-I",
+    "/home/dl/linuxcode/runtime/workqueue-semaphore-host-mmqfi8lj",
+    "/home/dl/linuxcode/fixtures/hello/workqueue-semaphore-host.c",
+    "-o",
+    "/home/dl/linuxcode/runtime/workqueue-semaphore-host-mmqfi8lj/test"
+  ],
+  "exact_production_function_fragment_sha256": "ac1207f84a4f9287b9e66c3d69c132fd0130a369d80f4e36ad1010a95c41234b",
+  "source_files": {
+    "scripts/test-workqueue-semaphore-host.py": "17e5b1a6867a5aee81f02745e54b0c5891ee8a9a3b1fb53929d529ca701bebe6",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/bsdthread/workq_kernreturn.c": "d7d25ac43186df38959055982291e235c9b681025c27b77f8b15ebdc12054ba3",
+    "fixtures/hello/workqueue-semaphore-host.c": "37694bc3f7c0bd3cc5865675af6c0300c65a9b7373c986b53bb81dda2aabd79b"
+  },
+  "host_only": true,
+  "native_Darling_verified": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "diagnosis": "artifacts/DD73-workqueue-crash-diagnosis-v1.json",
+  "baseline_exact_production_functions": "runtime/workqueue-semaphore-host-a__yr88p/result.json",
+  "fixed_exact_production_functions": "runtime/workqueue-semaphore-host-yvlhit3f/result.json",
+  "fixed_handshakes": 50000,
+  "fixed_multiple_waiters": 512,
+  "fixed_interrupted_wait_and_monotonic_deadline": true,
+  "baseline_native_GCD": "runtime/workqueue-recycling-jzbi8qu3/result.json",
+  "fixed_native_GCD": "runtime/workqueue-recycling-mwc4szn6/result.json",
+  "baseline_native_GCD_also_passed": true,
+  "native_GCD_callbacks": 9216,
+  "native_idle_expiry_seconds": 17,
+  "full_source_build": "artifacts/workqueue-credit-kernel-v1-build.json",
+  "build_controls": "artifacts/workqueue-credit-kernel-v1-controls.json",
+  "source_publication": {
+    "repository": "https://github.com/kxn/darling-xnu",
+    "branch": "linuxcode/xcode-x86_64",
+    "commit": "4d20a63011c1d7caf22ad4915e1ec7dc5c6f9c83",
+    "remote_commit_verified": true,
+    "author": "Comman Kang <kangxn@gmail.com>",
+    "committer": "Comman Kang <kangxn@gmail.com>"
+  },
+  "full_build_candidate_arguments": "config/unity-ios-cocoapods-v82-probe-arguments.json",
+  "all_workqueue_lifecycle_races_proven": false,
+  "full_goal_complete": false
+}

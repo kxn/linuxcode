@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/xcode-DD73-crash-v1/read-workqueue-locks.py",
+  "original_sha256": "4ec855c0b6026da865f973bf745a0bcf1f69a1c426c571439c03026449ff6ae0",
+  "encoding": "utf-8",
+  "text": "import gdb,struct\np=gdb.selected_inferior();base=0x7f5b324b0000\nfor name,offset in [('lock_import',0xb70b8),('unlock_import',0xb70c0),('parked_head',0xbf368)]:\n x=struct.unpack('<Q',p.read_memory(base+offset,8).tobytes())[0];print(name,hex(x),'offset_from_kernel',hex(x-base))\n print('PC',hex(x))\n if name!='parked_head':\n  try:print('CODE',p.read_memory(x,16).tobytes().hex())\n  except Exception as e:print(e)\n"
+}

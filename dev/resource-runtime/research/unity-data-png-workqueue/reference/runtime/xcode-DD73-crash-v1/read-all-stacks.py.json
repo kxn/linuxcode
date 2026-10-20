@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/xcode-DD73-crash-v1/read-all-stacks.py",
+  "original_sha256": "02b83bb13b8a9c8104aa70a9beb518301ab99ebcd7c66be22dab7fa9be83c0f0",
+  "encoding": "utf-8",
+  "text": "import gdb,struct\np=gdb.selected_inferior()\nfor thread in p.threads():\n thread.switch();print('THREAD',thread.num,thread.ptid)\n print('PC',hex(int(gdb.parse_and_eval('$rip'))));print('STACK_POINTER',hex(int(gdb.parse_and_eval('$rsp'))));fp=int(gdb.parse_and_eval('$rbp'));seen=set()\n for i in range(40):\n  if fp in seen or not fp:break\n  seen.add(fp)\n  try:\n   prior,pc=struct.unpack('<QQ',p.read_memory(fp,16).tobytes());print('FRAME',i,hex(pc));fp=prior\n  except Exception as e:print('END',str(e));break\n"
+}

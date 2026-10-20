@@ -1,0 +1,32 @@
+{
+  "verified": true,
+  "build_report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-f2cc09e1af44.json",
+  "native_xcode_status": 139,
+  "server_did_not_abort": true,
+  "core": "runtime/xcode-DD73-crash-v1/xcodebuild.core",
+  "initial_core_current_thread_is_signal_recipient_not_original_fault": true,
+  "original_fault_thread_namespace_tid": 81,
+  "signal_ucontext_decoded_from_handler_frame": true,
+  "original_fault_pc": "0x7f5b324e1d73",
+  "original_fault_image_VM": "0x31d73",
+  "original_fault_function": "sys_workq_kernreturn+0x133",
+  "original_fault_instruction": "movl %r15d, 4(%rdi)",
+  "parked_entry_pointer": "0x7f1d782b7ec8",
+  "fault_address": "0x7f1d782b7ecc",
+  "evidence": {
+    "logs/xcode-dd73-allthreads-v2.nlist-symbolicated.log": "284d41a8f253f8a54545bcad259e1ac7af8bb54be53484aa144124a349904fe9",
+    "logs/xcode-dd73-signal-context-v2.nlist-symbolicated.log": "313e58df0c9b912646d02f8035a400e05810e2215b629e8f75faf6c9c560dd9d",
+    "logs/xcode-DD73-workqueue-locks-v1-raw-gdb.log": "7522d765b26112a846c675d6d696f1f053b5d219df1854c01437c38f8956a544"
+  },
+  "weak_noop_lock_was_not_selected": true,
+  "lock_import_actual_pointer": "0x7f5b321a83b0",
+  "semaphore_race_explanation": "The old waiter decrements to -1 then overwrites the counter with -1; a concurrent post between those steps can be lost. A timed-out parked worker can then remove an entry already dequeued by its requester. The actual core shows a stale stack-backed parked entry; this causal sequence is an inference supported by the independent production-function failure.",
+  "production_function_baseline": "runtime/workqueue-semaphore-host-a__yr88p/result.json",
+  "baseline_handshakes_before_failure": 2484,
+  "baseline_counter_observation": {
+    "request": -1,
+    "reply": 2
+  },
+  "all_workqueue_lifecycle_races_proven": false,
+  "full_goal_complete": false
+}

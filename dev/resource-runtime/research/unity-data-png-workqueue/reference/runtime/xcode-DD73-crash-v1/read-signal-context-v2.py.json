@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/xcode-DD73-crash-v1/read-signal-context-v2.py",
+  "original_sha256": "580aa1ef2171840095064dfaa5eb693a4a9e5796640eda6ad015d05f3f277293",
+  "encoding": "utf-8",
+  "text": "import gdb,struct\np=gdb.selected_inferior();thread=next(t for t in p.threads() if t.ptid[1]==81);thread.switch();fp=int(gdb.parse_and_eval('$rbp'))\nfor i in range(4):\n prior,pc=struct.unpack('<QQ',p.read_memory(fp,16).tobytes());print('FP',i,hex(fp),'return',hex(pc))\n if i==3:\n  ctxt=fp+16;raw=p.read_memory(ctxt,256).tobytes();regs=struct.unpack_from('<23Q',raw,40);print('CONTEXT',hex(ctxt));print('REGISTERS',dict(zip(['r8','r9','r10','r11','r12','r13','r14','r15','rdi','rsi','rbp','rbx','rdx','rax','rcx','rsp','rip','efl','segments','err','trapno','oldmask','cr2'],[hex(x) for x in regs])));print('PC',hex(regs[16]));print('FRAME',0,hex(regs[16]));print('ORIGINAL_STACK',p.read_memory(regs[15],64).tobytes().hex())\n fp=prior\n"
+}
