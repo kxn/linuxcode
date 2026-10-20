@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "baseline": "runtime/wait-timer-isolation-hqmtm7e4/result.json",
+  "fixed": "runtime/wait-timer-isolation-cmxbqs6b/result.json",
+  "baseline_wrong_untimed_status": 49,
+  "fixed_successful_trials": 4,
+  "native_checks": 39,
+  "genuine_timeout_control_passed": true,
+  "server_build": "runtime/shared-remap-server-u7hf8hv1/stage.json",
+  "source_publication": {
+    "repository": "https://github.com/kxn/darlingserver",
+    "commit": "bbc98906758b0be71271fe9f171824c1148e25b9",
+    "branch": "linuxcode/xcode-x86_64",
+    "remote_commit_verified": true,
+    "author": "Comman Kang <kangxn@gmail.com>",
+    "committer": "Comman Kang <kangxn@gmail.com>"
+  },
+  "source_files": {
+    "vendor/darlingserver/duct-tape/src/thread.c": "877f0ce0b3a4bbf6e9365f054989e00a2b1c884df37ad3d1cb3d114337c1bbb0",
+    "vendor/darlingserver/duct-tape/xnu/osfmk/kern/sched_prim.c": "2037c60c90c4e8e0277ed293d3e47f2fb90ed585d00d9f37cfa8d101593039d7"
+  },
+  "core_diagnosis": "artifacts/DD72-darlingserver-wait-timer-crash-v1.json",
+  "implementation": "Cancel the pending wait timer and clear its armed flag while holding the thread lock; decrement the active count only when timer_call_cancel succeeds, matching existing XNU thread_unblock.",
+  "all_wait_cancellation_races_proven": false,
+  "full_goal_complete": false
+}

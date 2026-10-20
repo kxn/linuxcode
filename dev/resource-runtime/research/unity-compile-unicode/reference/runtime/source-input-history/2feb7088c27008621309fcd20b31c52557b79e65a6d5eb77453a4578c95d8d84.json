@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/2feb7088c27008621309fcd20b31c52557b79e65a6d5eb77453a4578c95d8d84",
+  "original_sha256": "2feb7088c27008621309fcd20b31c52557b79e65a6d5eb77453a4578c95d8d84",
+  "encoding": "utf-8",
+  "text": "#define _GNU_SOURCE\n#include <stddef.h>\n#include <stdint.h>\n#include <stdlib.h>\n#define TEST\n#define LINUX_AT_FDCWD -100\n#define LINUX_AT_SYMLINK_NOFOLLOW 0x100\n#define __simple_abort abort\nstatic int dserver_rpc_vchroot_path(char* a, size_t b, uint64_t* c) { abort(); }\n#define main vchroot_old_test_main\n#include \"../../vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/linux_premigration/vchroot_userspace.c\"\n#undef main\nint main(int argc,char** argv) {\n if(argc!=5) return 2;\n int fd=open(argv[1],O_RDONLY|O_DIRECTORY);\n if(fd<0) return 3;\n if(__darling_vchroot(fd)) return 4;\n close(fd);\n icase_enabled=atoi(argv[3]);\n struct vchroot_expand_args a={0};a.dfd=-100;a.flags=atoi(argv[4]);\n if(strlen(argv[2])>=1024)return 5;\n strcpy(a.path,argv[2]);int result=vchroot_expand(&a);\n printf(\"%d\\n%s\\n\",result,a.path);return 0;\n}\n"
+}

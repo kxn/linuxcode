@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "full_build_report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-8aa4e307dc70.json",
+  "native_xcode_status": 132,
+  "outer_status": -9,
+  "outer_status_reason": "Own failed-run timeout process was terminated after preserving cores; normal teardown could not communicate with the aborted server.",
+  "server_core": "runtime/darlingserver-DD72-crash-v1/darlingserver.core",
+  "xcode_core": "runtime/darlingserver-DD72-crash-v1/xcodebuild.core",
+  "server_signal": "SIGABRT",
+  "panic": "Failed to lower up-count of duct-taped XNU semaphore",
+  "server_frame": "Thread::_s2cPerform waiting on mmap S2C reply, reached from mach_vm_remap_external_shared",
+  "core_wait_result": 1,
+  "core_wait_result_name": "THREAD_TIMED_OUT",
+  "core_wait_timer_is_set": false,
+  "core_wait_timer_active": 0,
+  "core_reply_semaphore_active": true,
+  "core_reply_semaphore_count": 1,
+  "core_reply_present": true,
+  "evidence": {
+    "logs/darlingserver-DD72-crash-v2-gdb.log": "57a0d28862e7f0ced58de5422b88f47b9d0b79f24635778e7c51307bf3f0942e",
+    "logs/darlingserver-DD72-crash-v4-gdb.log": "2a854b0b2b80c2ff34d4c1e976cf8ca6cc44f9a3a9a28faeed12d66f9c312c78",
+    "logs/darlingserver-DD72-crash-v6-gdb.log": "5b2504c5147dff97f29281c892dc1f4cdeda4fc64b7d143b151b9a934fca3537",
+    "runtime/darlingserver-DD72-crash-v1/dserver.log": "ca610d0e702706f03ee2ddd5953591da640b2d22c02d9cbad1b40dda8cf02492"
+  },
+  "hypothesis": "Missing cancellation in thread_unblock lets a previous timed wait expire an unrelated subsequent untimed semaphore wait.",
+  "hypothesis_independently_reproduced": false,
+  "full_goal_complete": false
+}
