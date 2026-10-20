@@ -26,6 +26,8 @@ graphics v123 / avfoundation-closure-v1 overlay 加入三份原版候选后，�
 
 保存的 PC/映像按实际 x86_64 fat slice 与段映射重新符号化，核对映像 inode 和 SHA；初次最近符号注释只是诊断线索。相同运行层的串行/四工作线程共十六次 usleep 实测通过，不能据此证明 CoreSimulator 等待的原因。启动可靠性仍需继续排查。
 
+随后使用 CoreMediaIO 候选和全新 DerivedData 重跑完整 workspace：原版 xcodebuild 返回 65，五 target 依赖图及 UTI 预检通过，原版资源工具报告与独立探测相同的 Swift AVFoundation 类型元数据缺失，仍无 CompileC 或最终 App。此结果证明本次完整调用已返回，不能据此声称此前的启动等待已修复；两次实验和产品检查均保留。
+
 ## 开发者复现
 
 payload 相对于完整开发工作区，需要此前附件、锁定的 Intel cache/提取件、Xcode/SDK 和 LLVM。清单是实验快照，合并时保留其他 target；运行时使用自己的新 target/tag，不覆盖已映射库或旧证据。
