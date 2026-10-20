@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/callhistory-original-dependency-batch-v1.json",
+  "configuration_sha256": "ac409b4901afc259da9a985838260ee322ac8fc763d31daf12085bf34ef5e483",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/CallsUtilities.framework/Versions/A/CallsUtilities",
+      "attempts": [],
+      "prepared_target": "callsutilities-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/Frameworks/LiveCommunicationKit.framework/Versions/A/LiveCommunicationKit",
+      "attempts": [],
+      "prepared_target": "livecommunicationkit-patch-got-v2"
+    }
+  ]
+}

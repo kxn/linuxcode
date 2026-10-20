@@ -1,0 +1,81 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "callsutilities-patch-got-v2",
+      "candidate_sha256": "73bc72901034aac3af10a75907d6811370914e02742f13067bd6374df8438319",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 30080,
+            "sha256": "22a56d4d8b1ff70b4be8df1292e0c52dbc183725758c8d0240998cc7a7a670ec"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 654,
+            "sha256": "497fbe5f916fc83be0d023e355bd94d697aae36fc00c9d1836f894ad12ab905b"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 163,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 189,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "livecommunicationkit-patch-got-v2",
+      "candidate_sha256": "c5bfc202cbc2cfa0d9b4d058e84948a916df61a532a46044a56055ee62520d27",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 178816,
+            "sha256": "366c51782bc5797d1f511e77795c1a1136d45d1da34eab920f23fadd705c7659"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1422,
+            "sha256": "d418c36bb27e2327d359768bb4f04183ed1ada1b936f298a0cef8e0280837814"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 381,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 754,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

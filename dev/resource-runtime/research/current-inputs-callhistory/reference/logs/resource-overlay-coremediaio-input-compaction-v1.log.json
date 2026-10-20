@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/resource-overlay-coremediaio-input-compaction-v1.log",
+  "original_sha256": "effd20cbc93a556198fb3203d8412d7f7849ca213f05b79d17c170d5257705ce",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/compact-resource-stage-inputs.py\", line 115, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/home/dl/linuxcode/scripts/compact-resource-stage-inputs.py\", line 112, in main\n    proof=compact(root,args.stage,args.output,resolve)\n  File \"/home/dl/linuxcode/scripts/compact-resource-stage-inputs.py\", line 57, in compact\n    folder,parent_kind,parent_field=stage_root(entry)\n                                    ~~~~~~~~~~^^^^^^^\n  File \"/home/dl/linuxcode/scripts/compact-resource-stage-inputs.py\", line 31, in stage_root\n    raise ValueError('Unsupported resource overlay layout')\nValueError: Unsupported resource overlay layout\n"
+}

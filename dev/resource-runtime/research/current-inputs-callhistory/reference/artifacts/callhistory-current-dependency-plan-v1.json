@@ -1,0 +1,394 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-mkf61ogf/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v126-runtime-inputs-v1.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "callhistory-resource-v2"
+  ],
+  "images": {
+    "/System/Library/PrivateFrameworks/CallHistory.framework/Versions/A/CallHistory": {
+      "original_sha256": "7ceaf1c2d753baf69163652380488e63468dddc302f14c330fff56a066da2121",
+      "original_bytes": 2883584,
+      "dependencies": [
+        {
+          "path": "/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/native-framework-stage/BaseBoard.framework/Versions/A/BaseBoard",
+            "runtime/native-framework-stage/BaseBoard.framework/BaseBoard"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts",
+            "runtime/resource-framework-overlay-callsxpc-v1/frameworks/Contacts.framework/Versions/A/Contacts",
+            "runtime/coregraphics-native-v126/frameworks/Contacts.framework/Versions/A/Contacts",
+            "runtime/resource-framework-overlay-callsxpc-v1/frameworks/Contacts.framework/Contacts",
+            "runtime/coregraphics-native-v126/frameworks/Contacts.framework/Contacts"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData",
+            "runtime/foundation-native-framework-stage/CoreData.framework/Versions/A/CoreData",
+            "runtime/foundation-native-framework-stage/CoreData.framework/CoreData"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v126/frameworks/GeoServices.framework/Versions/A/GeoServices",
+            "runtime/coregraphics-native-v126/frameworks/GeoServices.framework/GeoServices"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/PhoneNumbers",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v126/frameworks/PhoneNumbers.framework/Versions/A/PhoneNumbers",
+            "runtime/coregraphics-native-v126/frameworks/PhoneNumbers.framework/PhoneNumbers"
+          ]
+        },
+        {
+          "path": "/usr/lib/libTelephonyUtilDynamic.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v126/libraries/libTelephonyUtilDynamic.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/LiveCommunicationKit.framework/Versions/A/LiveCommunicationKit",
+          "load_command": "0x80000018",
+          "file_candidates": []
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v126/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreSpotlight.framework/Versions/A/CoreSpotlight",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v126/frameworks/CoreSpotlight.framework/Versions/A/CoreSpotlight",
+            "runtime/coregraphics-native-v126/frameworks/CoreSpotlight.framework/CoreSpotlight"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Intents.framework/Versions/A/Intents",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v126/frameworks/Intents.framework/Versions/A/Intents",
+            "runtime/coregraphics-native-v126/frameworks/Intents.framework/Intents"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Security.framework/Versions/A/Security",
+            "runtime/resource-framework-overlay-callsxpc-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/coregraphics-native-v126/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Versions/A/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Versions/A/Security",
+            "runtime/resource-framework-overlay-callsxpc-v1/frameworks/Security.framework/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Security",
+            "runtime/coregraphics-native-v126/frameworks/Security.framework/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Security"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/SwiftData.framework/Versions/A/SwiftData",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/foundation-native-framework-stage/SwiftData.framework/Versions/A/SwiftData",
+            "runtime/foundation-native-framework-stage/SwiftData.framework/SwiftData"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/ArgumentParserInternal.framework/Versions/A/ArgumentParserInternal",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/argument-parser-native/frameworks/ArgumentParserInternal.framework/Versions/A/ArgumentParserInternal",
+            "runtime/argument-parser-native/frameworks/ArgumentParserInternal.framework/ArgumentParserInternal"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CallsUtilities.framework/Versions/A/CallsUtilities",
+          "load_command": "0x80000018",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CallsXPC.framework/Versions/A/CallsXPC",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/resource-framework-overlay-callsxpc-v1/frameworks/CallsXPC.framework/Versions/A/CallsXPC",
+            "runtime/coregraphics-native-v126/frameworks/CallsXPC.framework/Versions/A/CallsXPC",
+            "runtime/resource-framework-overlay-callsxpc-v1/frameworks/CallsXPC.framework/CallsXPC",
+            "runtime/coregraphics-native-v126/frameworks/CallsXPC.framework/CallsXPC"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v126/frameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+            "runtime/coregraphics-native-v126/frameworks/CorePhoneNumbers.framework/CorePhoneNumbers"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v126/frameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v126/frameworks/SoftLinking.framework/SoftLinking"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftAccelerate.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftAccelerate.dylib",
+            "runtime/native-library-stage/libswiftAccelerate.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreLocation.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreLocation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIntents.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIntents.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftMetal.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftMetal.dylib",
+            "runtime/native-library-stage/libswiftMetal.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftOSLog.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftOSLog.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObservation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftQuartzCore.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftQuartzCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftSynchronization.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftSynchronization.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftSynchronization.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/uniform-type-identifiers-native/libraries/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Concurrency.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftos.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftos.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftsimd.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftsimd.dylib"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [
+    "/System/Library/Frameworks/LiveCommunicationKit.framework/Versions/A/LiveCommunicationKit",
+    "/System/Library/PrivateFrameworks/CallsUtilities.framework/Versions/A/CallsUtilities"
+  ],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-mkf61ogf/result.json": "102130089cdb3a0bbd64a3e8d43e158c2a352b360776f3fdec05220eee133641",
+    "artifacts/coregraphics-native-v126-runtime-inputs-v1.json": "f603dd17e225503331c5b0279d19f232b031604f0735e7fe211d393a6cf41103",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "1794033d526bb3b92ccad6db1b5cb8903110f50393b061ce9fe05cee81b96733",
+    "scripts/plan-original-resource-dependencies.py": "01f469fa4793c07b1e243792c27bf9cfd2a98e40d22c2ce570d4d79f8013874c"
+  }
+}

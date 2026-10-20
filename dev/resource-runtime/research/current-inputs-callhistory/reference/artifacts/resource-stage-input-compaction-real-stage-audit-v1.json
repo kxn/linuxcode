@@ -1,0 +1,81 @@
+{
+  "verified": true,
+  "scope": "Selected bytes, paths and dependency metadata are unchanged; historical runtime hashes retained. Current producer version changes resolve to exact archived source.",
+  "cases": [
+    {
+      "report": "artifacts/coregraphics-native-v125-runtime-inputs-v1.json",
+      "source_report": "artifacts/coregraphics-native-v125-stage.json",
+      "selected_paths_and_dependencies_unchanged": true,
+      "selected_runtime_files_byte_verified": 391,
+      "historical_runtime_hashes_preserved": true,
+      "metadata_producer_source_updates": [],
+      "old_launch_files": 21194,
+      "new_launch_files": 1384,
+      "old_runtime_copies_moved": 19812,
+      "old_runtime_bytes_moved": 21161438923
+    },
+    {
+      "report": "artifacts/coregraphics-native-v126-runtime-inputs-v1.json",
+      "source_report": "artifacts/coregraphics-native-v126-stage.json",
+      "selected_paths_and_dependencies_unchanged": true,
+      "selected_runtime_files_byte_verified": 392,
+      "historical_runtime_hashes_preserved": true,
+      "metadata_producer_source_updates": [
+        {
+          "path": "scripts/compact-resource-stage-inputs.py",
+          "previous_sha256": "e0fce3d781b7a92abbc5ec52c92e636457367f5b45e9d3bb89da440372c43d04",
+          "current_sha256": "e913938b92abfb3c6153d8c66f640a60ace98e671c1ed68a6abfc48bb9cd81ac",
+          "exact_old_source": "runtime/source-input-history/e0fce3d781b7a92abbc5ec52c92e636457367f5b45e9d3bb89da440372c43d04"
+        }
+      ],
+      "old_launch_files": 1780,
+      "new_launch_files": 1390,
+      "old_runtime_copies_moved": 391,
+      "old_runtime_bytes_moved": 574049003
+    },
+    {
+      "report": "artifacts/resource-framework-overlay-coremediaio-runtime-inputs-v2.json",
+      "source_report": "artifacts/resource-framework-overlay-coremediaio-closure-v1-stage.json",
+      "selected_paths_and_dependencies_unchanged": true,
+      "selected_runtime_files_byte_verified": 45,
+      "historical_runtime_hashes_preserved": true,
+      "metadata_producer_source_updates": [],
+      "old_launch_files": 412,
+      "new_launch_files": 86,
+      "old_runtime_copies_moved": 328,
+      "old_runtime_bytes_moved": 973481755
+    },
+    {
+      "report": "artifacts/resource-framework-overlay-callsxpc-runtime-inputs-v1.json",
+      "source_report": "artifacts/resource-framework-overlay-callsxpc-v1-stage.json",
+      "selected_paths_and_dependencies_unchanged": true,
+      "selected_runtime_files_byte_verified": 46,
+      "historical_runtime_hashes_preserved": true,
+      "metadata_producer_source_updates": [],
+      "old_launch_files": 134,
+      "new_launch_files": 90,
+      "old_runtime_copies_moved": 45,
+      "old_runtime_bytes_moved": 133058009
+    }
+  ],
+  "timing_observation": [
+    {
+      "folder": "runtime/direct-resource-tools-pjs4_8n2",
+      "directory_birth_epoch_seconds": 1792460908,
+      "first_tool_script_mtime": 1792460965.007325,
+      "approximate_profile_setup_seconds": 57.00732493400574
+    },
+    {
+      "folder": "runtime/direct-resource-tools-uz06pvfb",
+      "directory_birth_epoch_seconds": 1792461460,
+      "first_tool_script_mtime": 1792461477.9691398,
+      "approximate_profile_setup_seconds": 17.96913981437683
+    }
+  ],
+  "timing_method": "Directory birth time has one-second precision. First script is written after profile setup; one observed pair, not a controlled benchmark.",
+  "full_resource_compilation_verified": false,
+  "sources": {
+    "scripts/compact-resource-stage-inputs.py": "e913938b92abfb3c6153d8c66f640a60ace98e671c1ed68a6abfc48bb9cd81ac",
+    "scripts/test-resource-stage-input-compaction.py": "2dbbaf210b255ea5cb3c80dc8dbfb5c64e365b206381481b2095c359ac08a3ac"
+  }
+}

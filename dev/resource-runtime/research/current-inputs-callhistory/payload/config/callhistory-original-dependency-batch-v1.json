@@ -1,0 +1,23 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/CallsUtilities.framework/Versions/A/CallsUtilities",
+      "stem": "callsutilities-closure",
+      "existing_target": "callsutilities-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/Frameworks/LiveCommunicationKit.framework/Versions/A/LiveCommunicationKit",
+      "stem": "livecommunicationkit-closure",
+      "existing_target": "livecommunicationkit-patch-got-v2"
+    }
+  ]
+}

@@ -8,7 +8,9 @@
 
 此前的[原版 Vision 依赖组检查点](dev/resource-runtime/research/vision-original-dependencies/README.md)恢复九个原始映像，并通过原版 dyld 的九个正例和十八个损坏对照。TextRecognition 的二进制泛型环境边界已根据原始 KeyPath 引用校验；原版 Swift 编译器也复现了相同布局和两次实际 KeyPath 访问。原版资源工具继续推进到 MobileAsset 类缺失，完整游戏 App 仍未构建成功。
 
-最新的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
+此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
+
+最新的[当前运行输入与 CallHistory 依赖检查点](dev/resource-runtime/research/current-inputs-callhistory/README.md)选用四个原版映像，并将约 22 GB 未使用的祖先副本从启动校验表分离，保留历史哈希及当前库校验。整理前后原版工具日志逐字节一致；后续完整 Unity/CocoaPods workspace 进入五 target 图，因 CoreTelephony 常量缺失返回 65，仍未产出 App。所需原版 CoreTelephony 已有验证候选。
 
 ```bash
 git clone https://github.com/kxn/linuxcode.git
