@@ -1,0 +1,447 @@
+{
+  "checked_at": "2026-10-16T13:38:38.056172+00:00",
+  "provider": "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+  "provider_sha256": "50f840c3ea81c25e8270e45fd654bc5e39eabd3be98e7336a399f2e8dc340085",
+  "native_execution": false,
+  "source_implementation_added": false,
+  "private_native_layout_reused": false,
+  "image_class_count": 79,
+  "dependencies": [
+    "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport",
+    "/System/Library/PrivateFrameworks/SoftwareUpdateCoreConnect.framework/Versions/A/SoftwareUpdateCoreConnect",
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/StreamingZip",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "classes": [
+    {
+      "name": "MAAsset",
+      "address": "0x7ff8438c94a0",
+      "superclass": "NSObject",
+      "instance_size": 48,
+      "methods": [
+        {
+          "selector": "description",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ca702",
+          "length": 53,
+          "sha256": "95ed2889312063cc820b794e045a755fee50c49628142201822051cd6b7ac3f3"
+        },
+        {
+          "selector": "hash",
+          "types": "Q16@0:8",
+          "implementation": "0x7ff8177ca4a3",
+          "length": 22,
+          "sha256": "b58541f3f9540545ccab5440aab65e10ee48dd818ee81091112e738bab1c5349"
+        },
+        {
+          "selector": "isEqual:",
+          "types": "c24@0:8@16",
+          "implementation": "0x7ff8177cd6f5",
+          "length": 181,
+          "sha256": "218a3b9e98e1593f5077a741ae3f7ad3e85b74422a90839d63a86d32d480859b"
+        },
+        {
+          "selector": ".cxx_destruct",
+          "types": "v16@0:8",
+          "implementation": "0x7ff8177cd7c8",
+          "length": 62,
+          "sha256": "134e7948214da5d6c1ea8211c21d79d6e3fdc567602b7584bb1232eaab4132f8"
+        },
+        {
+          "selector": "state",
+          "types": "q16@0:8",
+          "implementation": "0x7ff8177ad936",
+          "length": 10,
+          "sha256": "47376954ec28261769945b3b6bcdce4c2fa8f847b7e86ed6f4a42ce18282e567"
+        },
+        {
+          "selector": "attributes",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ad92c",
+          "length": 10,
+          "sha256": "e65d0e5b3e004bca7221190010f8d17cf9cccee4894c85ad38b21fc472e35095"
+        },
+        {
+          "selector": "assetId",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177cd7b4",
+          "length": 10,
+          "sha256": "18f8ca8f045e7e5bfd8001a5097aeffe0de32b78982eb6d0d25bd36db2963bf5"
+        },
+        {
+          "selector": "cancelDownload:",
+          "types": "v24@0:8@?16",
+          "implementation": "0x7ff8177cc162",
+          "length": 445,
+          "sha256": "feea00d5b8c2c32a5b3b9c9cd1e4dbd84d148d7d6595522dc07abfeb7d107d1e"
+        },
+        {
+          "selector": "getLocalFileUrl",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ca68b",
+          "length": 101,
+          "sha256": "5f0feb72831a150dd818508684d4c8a7b18d2c780e38e4a11ac6bd2a22f6ac3a"
+        },
+        {
+          "selector": "attachProgressCallBack:",
+          "types": "v24@0:8@?16",
+          "implementation": "0x7ff8177ca59a",
+          "length": 103,
+          "sha256": "7ab2b9604f98d268d14ca845a820f92d97adea8d0ec9ccef981b1340a324a480"
+        },
+        {
+          "selector": "nonUserInitiatedDownloadsAllowed",
+          "types": "c16@0:8",
+          "implementation": "0x7ff8177ca465",
+          "length": 62,
+          "sha256": "3fb3792b159dfa8692408ecaa8f2f68020cb3a399002867189264fdfa59acbbb"
+        },
+        {
+          "selector": "purgeSync",
+          "types": "q16@0:8",
+          "implementation": "0x7ff8177cbc91",
+          "length": 673,
+          "sha256": "67d1baeec91edd1cf462894ed7a1de51f59f6d23cff22429c57e700ee07c4336"
+        },
+        {
+          "selector": "startDownload:then:",
+          "types": "v32@0:8@16@?24",
+          "implementation": "0x7ff8177ad957",
+          "length": 157,
+          "sha256": "11471872704dd12ad087a4153314a16ff4f177990f01b55ad73cb2ad2a7df94d"
+        },
+        {
+          "selector": "initWithAttributes:",
+          "types": "@24@0:8@16",
+          "implementation": "0x7ff8177ad78e",
+          "length": 404,
+          "sha256": "f4d6021a36ffd7ac451d1c03923a387e5db9369ff24c9d7c6a971a1d668c2830"
+        },
+        {
+          "selector": "purpose",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177cd7be",
+          "length": 10,
+          "sha256": "e1dc7d0c440da051e8baed7de939c2f1b0950c04ccf99aa8c03f3d65a58ab50d"
+        },
+        {
+          "selector": "startDownload:",
+          "types": "v24@0:8@?16",
+          "implementation": "0x7ff8177ad940",
+          "length": 23,
+          "sha256": "9c1418fbba7f1cd262f94f0a0cc81d1507e1eaff7d47f880966c1894e031d134"
+        },
+        {
+          "selector": "refreshState",
+          "types": "B16@0:8",
+          "implementation": "0x7ff8177cd249",
+          "length": 1196,
+          "sha256": "df375af1584f1153d04b4606a69388391d412382dec65793927a4905cbff3540"
+        },
+        {
+          "selector": "wasLocal",
+          "types": "c16@0:8",
+          "implementation": "0x7ff8177c9606",
+          "length": 42,
+          "sha256": "deb0bf03e6fdc1296060f9861c931a56385401e16e736b09fe0c11b21cbcc477"
+        },
+        {
+          "selector": "wasPurgeable",
+          "types": "c16@0:8",
+          "implementation": "0x7ff8177c9647",
+          "length": 42,
+          "sha256": "e1769f8926f05abc9f95c07c1f0f819ea07b40875a04b44211509e40bc4dc784"
+        },
+        {
+          "selector": "absoluteAssetId",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ca8bd",
+          "length": 183,
+          "sha256": "06655f2df3285681b85376146ad240b1cc5ad7555cea46a233df203f4de2098a"
+        },
+        {
+          "selector": "purgeWithError:",
+          "types": "v24@0:8@?16",
+          "implementation": "0x7ff8177cb89f",
+          "length": 329,
+          "sha256": "fb2291ae7270a5adffcbafe836a0c52c2b008b0588c3a318fe48695fa8528cd4"
+        },
+        {
+          "selector": "wasDownloadable",
+          "types": "c16@0:8",
+          "implementation": "0x7ff8177c969b",
+          "length": 29,
+          "sha256": "9f97b51717514646eef9e3d49e571282cdb7e9ecabd0369ab4579d0b09087552"
+        },
+        {
+          "selector": "wasPreinstalled",
+          "types": "c16@0:8",
+          "implementation": "0x7ff8177c9630",
+          "length": 23,
+          "sha256": "483e84a914ea99e8210d266b418c3729486693de2e6c2e49adff51a2fd48faa5"
+        },
+        {
+          "selector": "_invokeClientDownloadCompletionAlreadyOnQueue:asset:completionBlockWithError:",
+          "types": "v40@0:8q16@24@?32",
+          "implementation": "0x7ff8177ca9f6",
+          "length": 304,
+          "sha256": "3a1fb9a8fdfee1ffcab7fe1203956aaf729047a82e5196a93f8a532490123bd5"
+        },
+        {
+          "selector": "assetProperty:",
+          "types": "@24@0:8@16",
+          "implementation": "0x7ff8177adfe2",
+          "length": 22,
+          "sha256": "3e2ab3e20a691b447592790315e172633bd57cf97a4eff7d09decd0d3a2a2c49"
+        },
+        {
+          "selector": "assetServerUrl",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ca4b9",
+          "length": 225,
+          "sha256": "0da45d4f0b9338bf5b03b4c7891af20124e4ebdafd4e0cbcc684a59b25557e0c"
+        },
+        {
+          "selector": "assetType",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177cd7aa",
+          "length": 10,
+          "sha256": "5841b566469bdc3bad638a449edce48b8f5abee5f34c698288df2f938f11877f"
+        },
+        {
+          "selector": "calculateTimeout",
+          "types": "q16@0:8",
+          "implementation": "0x7ff8177ae0b9",
+          "length": 84,
+          "sha256": "3611345178d015ee205ae2e1997f22af824f66d327d508ab80d47fcc593ad40c"
+        },
+        {
+          "selector": "cancelDownloadSync",
+          "types": "q16@0:8",
+          "implementation": "0x7ff8177cc514",
+          "length": 467,
+          "sha256": "c7ecf158936f51fb1ef4b69c480f71f32fe851cde0ac2826995f844c11ff1ff2"
+        },
+        {
+          "selector": "commonAssetDownload:options:then:",
+          "types": "v40@0:8@16@24@?32",
+          "implementation": "0x7ff8177adaad",
+          "length": 1333,
+          "sha256": "9ebf0d71b259114cda322d40e3baa7dd366faed9300a8102e9c95eb11ea7b4de"
+        },
+        {
+          "selector": "configDownload:completion:",
+          "types": "v32@0:8@16@?24",
+          "implementation": "0x7ff8177cc6e7",
+          "length": 211,
+          "sha256": "1c00df9571b733618268112714b59af66b3882f8a63e5bfd915bc26aca0efe41"
+        },
+        {
+          "selector": "configDownloadSync:",
+          "types": "q24@0:8@16",
+          "implementation": "0x7ff8177cc941",
+          "length": 769,
+          "sha256": "30c633c5185db298effd0965478f056b2d69f12ce52254ae0765473182a103c3"
+        },
+        {
+          "selector": "getBaseAssetRepositoryPath",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177cce6d",
+          "length": 133,
+          "sha256": "0a9e8f0e2c4aaf8ac32983efe87741d5bdf64c7aa11c374507d129a02b1bc061"
+        },
+        {
+          "selector": "getLocalFilePath",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ca601",
+          "length": 138,
+          "sha256": "cafc7c07219e6a779821cb144e0722ff168a9325751898a7e0c908db3aeea05c"
+        },
+        {
+          "selector": "getLocalUrl",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ca6f0",
+          "length": 18,
+          "sha256": "1b64a4b14dfa42293f837499c2668666e0a2396a4c65a41f4cedcbf73c4c41c8"
+        },
+        {
+          "selector": "hashToString:",
+          "types": "@24@0:8@16",
+          "implementation": "0x7ff8177ad9f4",
+          "length": 185,
+          "sha256": "67c20ca3dfd2eb96cad7d2925d2cafb1443cb553030f7e29c137296449379ae2"
+        },
+        {
+          "selector": "invokeClientDownloadCompletion:asset:completionBlockWithError:",
+          "types": "v40@0:8q16@24@?32",
+          "implementation": "0x7ff8177cab26",
+          "length": 212,
+          "sha256": "932bbba8aa4cbea711b505c166c439074c63aab1e8ff7f0f03574d03505592ec"
+        },
+        {
+          "selector": "logAsset",
+          "types": "v16@0:8",
+          "implementation": "0x7ff8177ca737",
+          "length": 390,
+          "sha256": "260edb56e6811ad468a704c7084d5daacdc67b2c15a4ab0e873e3f032b4a05e7"
+        },
+        {
+          "selector": "overrideGarbageCollectionThreshold:",
+          "types": "B24@0:8Q16",
+          "implementation": "0x7ff8177ccc42",
+          "length": 555,
+          "sha256": "14b33e42cca804efa0c523fca7014de6417c54821b8d294af71698bc3973e3b4"
+        },
+        {
+          "selector": "purge:",
+          "types": "v24@0:8@?16",
+          "implementation": "0x7ff8177cb7f5",
+          "length": 148,
+          "sha256": "d1c2d1e3c770ab3cca9987e512c3b6df9af9b09e33e4ea72c7318e25aacea2af"
+        },
+        {
+          "selector": "spaceCheck:",
+          "types": "B24@0:8^q16",
+          "implementation": "0x7ff8177ccef2",
+          "length": 855,
+          "sha256": "dec5637b80c6a15f10749b4f6f00dc8bc2f1a5ff0e1e15717f5c10bba5d8ed70"
+        },
+        {
+          "selector": "startDownload:completionWithError:",
+          "types": "v32@0:8@16@?24",
+          "implementation": "0x7ff8177ca98a",
+          "length": 108,
+          "sha256": "bf6fcf838bc3952b244cdfbe7c897868677e5fff84aa756c26776518cac0f479"
+        },
+        {
+          "selector": "wasInCatalog",
+          "types": "c16@0:8",
+          "implementation": "0x7ff8177c9671",
+          "length": 42,
+          "sha256": "30360e98e55c3565573cd0c9b2dfaf0f47a4f835901574b2ea144c4cc2dd0ef2"
+        }
+      ],
+      "class_methods": [
+        {
+          "selector": "startCatalogDownload:options:then:",
+          "types": "v40@0:8@16@24@?32",
+          "implementation": "0x7ff8177af94f",
+          "length": 164,
+          "sha256": "04a3da525b89f8c3a69a31ffa5675cb789f95fb97eb3c1b695509f9c6e0fd1ba"
+        },
+        {
+          "selector": "startCatalogDownload:then:",
+          "types": "v32@0:8@16@?24",
+          "implementation": "0x7ff8177af931",
+          "length": 30,
+          "sha256": "45f9d2e60d4ba6ee4cce185171fd86615ca8b7bad0f0ce351fb0cb01a0cdf4e6"
+        },
+        {
+          "selector": "loadSync:error:",
+          "types": "@32@0:8@16^@24",
+          "implementation": "0x7ff8177c9c03",
+          "length": 26,
+          "sha256": "3517525faa2332baa7ce4eeaf2d7559467d7e027c4a40e17175f66f31f201733"
+        },
+        {
+          "selector": "cancelCatalogDownload:then:",
+          "types": "v32@0:8@16@?24",
+          "implementation": "0x7ff8177cc144",
+          "length": 30,
+          "sha256": "8a4f30e9fcd9ed5128d2a37663114cefa1705a62a38d95ade04cfe9a7fdac212"
+        },
+        {
+          "selector": "cancelCatalogDownload:withPurpose:then:",
+          "types": "v40@0:8@16@24@?32",
+          "implementation": "0x7ff8177cbf32",
+          "length": 203,
+          "sha256": "cd080d6ecc1fa56523bcfb0c0c75b9a171273ad8d80605aa976658c09e3744ff"
+        },
+        {
+          "selector": "getClientIdentifierForSelf",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177c9c4f",
+          "length": 175,
+          "sha256": "7a5aea7dff25019e00e512bec0d9dfe52522efab986ced9d30ab2e3f8ca5cd03"
+        },
+        {
+          "selector": "getLoadResultFromMessage:",
+          "types": "@24@0:8@16",
+          "implementation": "0x7ff8177c96b8",
+          "length": 1355,
+          "sha256": "233cea1c892c1c85cff1e04da1eff8157bc1487e45a05c7f82df94e9e7558503"
+        },
+        {
+          "selector": "loadSync:allowingDifferences:error:",
+          "types": "@40@0:8@16@24^@32",
+          "implementation": "0x7ff8177c9c37",
+          "length": 24,
+          "sha256": "8067873e224c4f2fd822d636c209846998f3a3323ce4978b213437672379f465"
+        },
+        {
+          "selector": "loadSync:allowingDifferences:withPurpose:error:",
+          "types": "@48@0:8@16@24@32^@40",
+          "implementation": "0x7ff8177c9cfe",
+          "length": 1895,
+          "sha256": "f6b7fd3c70038107d57deafb4490f964cfe548d9829e68c29f91e0e19410af5c"
+        },
+        {
+          "selector": "loadSync:withPurpose:error:",
+          "types": "@40@0:8@16@24^@32",
+          "implementation": "0x7ff8177c9c1d",
+          "length": 26,
+          "sha256": "a067398d3b72528a8a108f5a9ef2b4980331688dd1f1167d7f6a505c88a6f4ab"
+        },
+        {
+          "selector": "startCatalogDownload:options:completionWithError:",
+          "types": "v40@0:8@16@24@?32",
+          "implementation": "0x7ff8177cac1f",
+          "length": 435,
+          "sha256": "2bbdc305df0a53ddc4974f41e377bb04ea90f26666b0e97163d6288fc4ed3e73"
+        }
+      ],
+      "ivars": [
+        {
+          "name": "_attributes",
+          "type": "@\"NSDictionary\"",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "name": "_assetType",
+          "type": "@\"NSString\"",
+          "offset": 16,
+          "size": 8
+        },
+        {
+          "name": "_assetId",
+          "type": "@\"NSString\"",
+          "offset": 24,
+          "size": 8
+        },
+        {
+          "name": "_state",
+          "type": "q",
+          "offset": 32,
+          "size": 8
+        },
+        {
+          "name": "_purpose",
+          "type": "@\"NSString\"",
+          "offset": 40,
+          "size": 8
+        }
+      ]
+    }
+  ],
+  "log": "logs/mobileasset-asset-native-methods.log",
+  "log_sha256": "2fdf3361e0cf930cbb091c3cf444869d5ff3a416b94240b0f83e323208db4d73",
+  "existing_darling_note": "Static metadata and original method behavior only."
+}

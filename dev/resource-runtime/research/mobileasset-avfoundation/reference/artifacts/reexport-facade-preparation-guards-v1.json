@@ -1,0 +1,43 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "case": "coded-framework",
+      "command": [
+        "/usr/bin/python3",
+        "scripts/prepare-resource-image-candidate.py",
+        "--image",
+        "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+        "--target",
+        "reexport-facade-negative-coded-framework-v1",
+        "--reexport-facade"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/prepare-resource-image-candidate.py\", line 92, in <module>\n    facade_validation = runpy.run_path(str(root/'scripts/original-reexport-facade.py'))['validate_original'](data)\n  File \"/home/dl/linuxcode/scripts/original-reexport-facade.py\", line 47, in validate_original\n    raise ValueError('Unsupported facade section set')\nValueError: Unsupported facade section set\n",
+      "manifest_unchanged": true,
+      "no_candidate_emitted": true
+    },
+    {
+      "case": "mixed-got-mode",
+      "command": [
+        "/usr/bin/python3",
+        "scripts/prepare-resource-image-candidate.py",
+        "--image",
+        "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+        "--target",
+        "reexport-facade-negative-mixed-got-mode-v1",
+        "--reexport-facade",
+        "--preserve-code-with-patch-got"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/prepare-resource-image-candidate.py\", line 53, in <module>\n    assert not args.reexport_facade or not (args.preserve_code_with_patch_got or args.from_target)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "manifest_unchanged": true,
+      "no_candidate_emitted": true
+    }
+  ],
+  "manifest_sha256": "4b9ab6d60cf5cbb9134d88b2ba864649ba719454daade915ab16a201a8ae37b1",
+  "sources": {
+    "scripts/prepare-resource-image-candidate.py": "088a596729d4c11085423cb4e83ca3410c2680456a3b210ab5cf59bfeed19345",
+    "scripts/original-reexport-facade.py": "56b6c66be96c3787e7c115befec540c77f0ab2297c1906480623dafd9e061995"
+  }
+}

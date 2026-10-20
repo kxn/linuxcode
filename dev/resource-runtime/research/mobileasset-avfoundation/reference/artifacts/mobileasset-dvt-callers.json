@@ -1,0 +1,117 @@
+{
+  "checked_at": "2026-10-16T13:55:47.288260+00:00",
+  "native_execution": false,
+  "original_DVTFoundation": "runtime/state/prefix/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation",
+  "original_DVTFoundation_sha256": "d5441c8335f76c44d03f62e5dec2d5e073cef83b97aa08623cdc66509bf3dad6",
+  "intel_slice": "runtime/mobileasset-source/DVTFoundation.x86_64",
+  "intel_slice_sha256": "517d703192ffcd915b3c98d2f235545c330024226a36a941187e261c12eb55df",
+  "intel_slice_matches_original": true,
+  "required_functions": [
+    "_MAGetPallasAudience",
+    "_MAGetPallasEnabled",
+    "_MASetPallasAudienceForType",
+    "_MASetPallasEnabled",
+    "_MASetPallasUrlForType"
+  ],
+  "calls": [
+    {
+      "address": "0x3035eb",
+      "symbol": "_MAGetPallasEnabled",
+      "function_begin": "0x3035b0"
+    },
+    {
+      "address": "0x303615",
+      "symbol": "_MAGetPallasAudience",
+      "function_begin": "0x3035b0"
+    },
+    {
+      "address": "0x30375a",
+      "symbol": "_MASetPallasEnabled",
+      "function_begin": "0x3036d0"
+    },
+    {
+      "address": "0x303795",
+      "symbol": "_MASetPallasAudienceForType",
+      "function_begin": "0x3036d0"
+    },
+    {
+      "address": "0x303834",
+      "symbol": "_MASetPallasUrlForType",
+      "function_begin": "0x3036d0"
+    }
+  ],
+  "caller_functions": [
+    {
+      "begin": "0x3035b0",
+      "length": 288,
+      "sha256": "342e584b26fd339916bf6eb61d8d8e894c5ec5f24c8ae7f5e9457945e9111e99"
+    },
+    {
+      "begin": "0x3036d0",
+      "length": 416,
+      "sha256": "0afe50a04c0da52870ed1f20fd98dc2389815eb66514ad06c9d9993ae6da2ae2"
+    }
+  ],
+  "original_MobileAsset": "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+  "original_MobileAsset_sha256": "50f840c3ea81c25e8270e45fd654bc5e39eabd3be98e7336a399f2e8dc340085",
+  "native_functions": [
+    {
+      "symbol": "_MAGetPallasAudience",
+      "address": "0x7ff817820977",
+      "length": 10,
+      "sha256": "839ef7e0994f9211ea0ba281939c33923b320e8ba59668470b76e42dbd90cf8c"
+    },
+    {
+      "symbol": "_MAGetPallasEnabled",
+      "address": "0x7ff817820927",
+      "length": 38,
+      "sha256": "2b77fcaf07aa1d25683929ac5856755bea7485c417be347bbd268d039b172a0f"
+    },
+    {
+      "symbol": "_MASetPallasAudienceForType",
+      "address": "0x7ff81782096d",
+      "length": 10,
+      "sha256": "d1eaed9959b66f06704e7af2cba0b47f8ec8bec111b5d78c306e921cf5583368"
+    },
+    {
+      "symbol": "_MASetPallasEnabled",
+      "address": "0x7ff81782094d",
+      "length": 20,
+      "sha256": "6518b03670683ea0538702ca2e221eed8c05a1469127036d521b807ead63ffe6"
+    },
+    {
+      "symbol": "_MASetPallasUrlForType",
+      "address": "0x7ff81782098b",
+      "length": 10,
+      "sha256": "daf6f8f1e53322a3de08ad4727bc865ab001a0b6c11944a0617ad29e39064e2f"
+    },
+    {
+      "symbol": "__MAsendGetPallasAudience",
+      "address": "0x7ff8177b9cf2",
+      "length": 450,
+      "sha256": "65f5a4dee6cb136325ca6546cd19e6f666fd0bd872bcb460d0e34dfdbaf51cba"
+    },
+    {
+      "symbol": "__MAsendSetPallasAudience",
+      "address": "0x7ff8177b9b81",
+      "length": 369,
+      "sha256": "9f617f557e55c74fe64dca0ff646ea0192613ca6d6a3859b0ed34ee5eb5578ac"
+    },
+    {
+      "symbol": "__MAsendSetPallasEnabled",
+      "address": "0x7ff8177b991e",
+      "length": 291,
+      "sha256": "75418b1c095d316b515b4b2fa72291a148b83d9d997e197ad2f6483d1a0ce61c"
+    },
+    {
+      "symbol": "__MAsendSetPallasUrlForType",
+      "address": "0x7ff8177b9ec0",
+      "length": 702,
+      "sha256": "5d34421a927b667c147c79cf398c42634e81798be9fbbd3b2de9e425921e814a"
+    }
+  ],
+  "source_execution_report": "artifacts/mobileasset-pallas-source.json",
+  "note": "This is static caller/native ABI evidence. Source execution and protocol results are recorded separately, and must match the current source/framework hashes; a bound name alone does not prove the operation behavior.",
+  "log": "logs/mobileasset-dvt-callers.log",
+  "log_sha256": "94df15ca9227541a7ada4b1a786466483c7880b63107f57d59884fdfb0dc07e3"
+}

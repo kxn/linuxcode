@@ -1,0 +1,148 @@
+{
+  "checked_at": "2026-10-16T13:55:22.947025+00:00",
+  "runtime_execution_verified": true,
+  "framework": "runtime/mobileasset-source/frameworks/MobileAsset.framework/Versions/A/MobileAsset",
+  "framework_sha256": "26b3bc89fd8df1ef91d52b08868ac2209354f362a704adef492b7b06549275b5",
+  "selected_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/darlingserver-source-build/darlingserver/darlingserver",
+      "sha256": "ae78babd377dd542788f321752b11e9dea6413ee49d1009f00df825fdd9efd6b"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/libxpc-source/libxpc.dylib",
+      "sha256": "a5ef29a32f000ed41b15b429e987357c795e748aee3713c7f76f560e6cbf188e"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/launchd-source/launchd",
+      "sha256": "f8500434446bd490af768a1a0a051a0073a0330f65b9dae1170ea78838bf471f"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/libsystem-kernel-source/libsystem_kernel.dylib",
+      "sha256": "b51317a143657852f3aec7a50a0f25d595ee550d151d7c698a04bef2d459c3d2"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/quarantine-source/libquarantine.dylib",
+      "sha256": "da7bee840c07661b8c9a2a24ff1102f81b5a7882c84395c927617453b2f77df2"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/sandbox-source/libsystem_sandbox.dylib",
+      "sha256": "dee2a5ad670c8bb7eb12c30d89c5c4f7b8b71bc6d9221ba613af2c7a5c270bf3"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/libdyld-source/libdyld.dylib",
+      "sha256": "817d4cc7198e90b2c4dd9827ac6268960fd1a1da096612e96be17cd82e92b745"
+    }
+  },
+  "source_files": {
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MobileAsset.m": "ab8de613115bebbc011a76176b24fb64c9576328ffc8a720d945059908d03cee",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/Pallas.m": "5a027bb34117f3b6e7a986f30eb462e763ba8563992a631dc2374ebd1a969241",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAProgressHandler.m": "1c498025a79e4ea60e4a08cb8cd9ca85fd61544903c08cf2665fee290273df4e",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAAsset.m": "c0b76880463f2f2c4843eacabe16f360e7018391b3b8f1ddf44a8d05c569b577",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAAssetQuery.m": "11a1b4f79c1e0e511191ed88790947f1783c0499a9d8d30312fd587209a092c9",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/ASAsset.m": "afc2f2a2baeca627a6f93e7e36e9a3a552fb305b1647f521d041f0617eeeba8d",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/ASAssetQuery.m": "985eae5eb853fe90c9dc7a709a43b45fffb57a7f2baaab84ca6b4e9e491b20f8",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAXpcManager.m": "912ed5dde75b640cbd50e2eed3fc27e4cadb2508bcba1d2caec556285e083f62",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAAbsoluteAssetId.m": "b143ae7af69e28b800f4ec71517ecaafe69e0f19a802813875b394b2cb2e81ce",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MADownloadOptions.m": "ca27942462523b948e88d114bb45aa473a0375fbebd99d2713b92d264a1a41ac",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAMsuDownloadOptions.m": "ce635c1d2136e504caf8124ff0bac7edf92b69b910967c930c5a397edc92cfb2",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MADownloadConfig.m": "fa4456c66badb9e9eb606f872f0f697072b91be673ab700d0dd193ee429df147",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAProgressNotification.m": "750ea4926248e2f42f70ba7c37e6c30a47cab6c1b72d3f0cfa47db7b0f3649ba",
+    "vendor/darling/src/private-frameworks/MobileAsset/src/MAXpcConnection.m": "8f850c2c7781ced3e319091b864181fa5ef449877542e7c4ae054605a9af6cbd",
+    "vendor/darling/src/private-frameworks/MobileAsset/CMakeLists.txt": "976952c99f610bcf7c6534dfefbf31875d85d1b44a58a7de4fbe84276689651c",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/ASAsset.h": "d11e8842e9b160c2e1d35b23281fe3fec9a9b29ac85a621065703ddaa660f44f",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/ASAssetQuery.h": "436b9557b44acdd42e5d66fec939c7eed24c02f7f06284b228cf25dbfb51caa5",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAAbsoluteAssetId.h": "2806a189715cda70cb219afbb47fd57cea2c05d6bfbd4b4ed1ab7f807aab8a8d",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAAsset.h": "9051f97e42db8dff5adb480dd004903e19cde8212e7f69511567cd14f0175fc8",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAAssetQuery.h": "c04197c3de3f24eea7b1da28df64bb4b1c7764a11d3a8af8ebbe47403df95229",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MADownloadConfig.h": "5adfb9b52555cc4b83da697ebda5224337806dd274a34fe651565b7edc24e2de",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MADownloadOptions.h": "abe7c183800c5889ff5b66dc4f812f702a071cbd62305736bc538aa88ad82938",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAMsuDownloadOptions.h": "e8c89fff4406d249f551e7b8451126a4454f112c85a694bf7942655ba728d32b",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAProgressHandler.h": "056f259310d8f5dff826a9b06f7549391b2c68b8ff2538f7e61892261e4b2b06",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAProgressNotification.h": "c3c23af456a0c3dad3cb6781422d2b256040198345a2c11323128cfad7e6f325",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAXpcConnection.h": "a638614bf7edff77adab04679d9e064cf8e3f2a3cde4c82d44203aff1c8d3dfd",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAXpcManager.h": "861510d17b10101a361947cfa34cd12b8b706c636302345f7dfb44dd757c85c2",
+    "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MobileAsset.h": "571f3c17ead7911305b38df2115d21d413506d281be35ed29418e91720280d79"
+  },
+  "test_source_sha256": "d08a1d5b80f52a0ba1842ecfce142a44d08364f4932a975597c0aa871112985c",
+  "test_binary_sha256": "fc2003e5adc912651afa1f3cf9caea6ae3c230f5a26f437709dec47c41a23011",
+  "test_driver_sha256": "275e13b06c5553bd8f51b5e446f39ed009db1f1d3b08f3b15a043656335e6e86",
+  "tested_files": {
+    "fixtures/hello/mobileasset-pallas.m": "d08a1d5b80f52a0ba1842ecfce142a44d08364f4932a975597c0aa871112985c",
+    "artifacts/mobileasset-pallas": "fc2003e5adc912651afa1f3cf9caea6ae3c230f5a26f437709dec47c41a23011",
+    "fixtures/hello/mobileasset-pallas-operations.m": "27d2f948564c678d875b454485343bf44a0f2781efa0852e05688e562c465d3d",
+    "artifacts/mobileasset-pallas-operations": "0c7e503bb92763e92b821db7a5e1abef6c24125da75dfc4b3065b25f6d6a5bff"
+  },
+  "native_analysis_sha256": "db3221d54dedf91389ac7573f71bd45730c56275aa29081b4a60822ace6a20f9",
+  "commands": {
+    "legacy/mobileasset-pallas": [
+      "timeout",
+      "-k",
+      "5",
+      "90",
+      "bin/darling",
+      "shell",
+      "/Volumes/SystemRoot/workspace/artifacts/mobileasset-pallas",
+      "/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks/MobileAsset.framework/Versions/A/MobileAsset"
+    ],
+    "legacy/mobileasset-pallas-operations": [
+      "timeout",
+      "-k",
+      "5",
+      "90",
+      "bin/darling",
+      "shell",
+      "/Volumes/SystemRoot/workspace/artifacts/mobileasset-pallas-operations",
+      "/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks/MobileAsset.framework/Versions/A/MobileAsset"
+    ],
+    "native/mobileasset-pallas": [
+      "timeout",
+      "-k",
+      "5",
+      "60",
+      "bin/darling",
+      "shell",
+      "/usr/bin/env",
+      "OBJC_DISABLE_TAGGED_POINTERS=YES",
+      "DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/frameworks:/Volumes/SystemRoot/workspace/runtime/logging-support-native/frameworks:/Volumes/SystemRoot/workspace/runtime/foundation-native-framework-stage:/Volumes/SystemRoot/workspace/runtime/native-framework-stage",
+      "DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/quartzcore-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-native-library-stage:/Volumes/SystemRoot/workspace/runtime/native-library-stage:/Volumes/SystemRoot/workspace/runtime/rebuilt-der:/usr/lib/swift",
+      "/Volumes/SystemRoot/workspace/artifacts/mobileasset-pallas",
+      "/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks/MobileAsset.framework/Versions/A/MobileAsset"
+    ],
+    "native/mobileasset-pallas-operations": [
+      "timeout",
+      "-k",
+      "5",
+      "60",
+      "bin/darling",
+      "shell",
+      "/usr/bin/env",
+      "OBJC_DISABLE_TAGGED_POINTERS=YES",
+      "DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/frameworks:/Volumes/SystemRoot/workspace/runtime/logging-support-native/frameworks:/Volumes/SystemRoot/workspace/runtime/foundation-native-framework-stage:/Volumes/SystemRoot/workspace/runtime/native-framework-stage",
+      "DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/quartzcore-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-native-library-stage:/Volumes/SystemRoot/workspace/runtime/native-library-stage:/Volumes/SystemRoot/workspace/runtime/rebuilt-der:/usr/lib/swift",
+      "/Volumes/SystemRoot/workspace/artifacts/mobileasset-pallas-operations",
+      "/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks/MobileAsset.framework/Versions/A/MobileAsset"
+    ]
+  },
+  "logs": {
+    "logs/mobileasset-pallas-legacy.log": "827dd0ce5ceb93248b94ab0530c9a27a425c31e82e02c29294ef8c5a1bd9774f",
+    "logs/mobileasset-pallas-operations-legacy.log": "6c7f416d16e3bd5d66bec8f029338eb7d0b9ad3b7c6c9d526f692e48c9e2624a",
+    "logs/mobileasset-pallas-native.log": "827dd0ce5ceb93248b94ab0530c9a27a425c31e82e02c29294ef8c5a1bd9774f",
+    "logs/mobileasset-pallas-operations-native.log": "6c7f416d16e3bd5d66bec8f029338eb7d0b9ad3b7c6c9d526f692e48c9e2624a"
+  },
+  "actual_named_xpc_transport_verified": true,
+  "absent_service_is_failure_verified": true,
+  "boolean_and_signed_64bit_status_independent_verified": true,
+  "legacy_and_original_foundation_verified": true,
+  "requests_per_mode": 174,
+  "concurrent_threads_per_mode": 8,
+  "all_five_DVT_operations_and_legacy_aliases_verified": true,
+  "string_return_utf8_autorelease_lifetime_verified": true,
+  "url_class_validation_and_nil_clear_verified": true,
+  "concurrent_requests_per_mode": 128,
+  "real_Apple_daemon_interoperation_verified": false,
+  "MobileAsset_download_daemon_implemented": false,
+  "connection_interruption_retry_execution_verified": true,
+  "retry_limit_execution_verified": true,
+  "full_xcode_build_ready": false,
+  "signing_ready": false
+}

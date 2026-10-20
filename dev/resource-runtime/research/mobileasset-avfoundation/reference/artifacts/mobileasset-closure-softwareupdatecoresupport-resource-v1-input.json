@@ -1,0 +1,65 @@
+{
+  "target": "mobileasset-closure-softwareupdatecoresupport-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport",
+    "sha256": "695348ffbc9769c4efb42cac2aa9aa149ba628f863c71532e331f49c2769f4ed",
+    "reference_set": "fullsystem",
+    "objc_classes": 26,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 181,
+    "patch_got_range": [
+      "0x7ff940005000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 614400,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery",
+    "/System/Library/PrivateFrameworks/MSUDataAccessor.framework/Versions/A/MSUDataAccessor",
+    "/usr/lib/libbootpolicy.dylib",
+    "/System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "018b36664d8ec652f13f269989f6fa2a6bc79d10d80c55e1b0774356249b9817",
+  "manifest_sha256": "616a2af4f5075e49924e685cef60208200c1ed9b657a4e2d6ed2e7e35ce71818",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mobileasset-closure-softwareupdatecoresupport-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "48f04129a7f28573dc8d81d1f5c23d7d302c356298c9d32fc685aa9d76ee55e5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1292,
+    "nonzero_addends": 0,
+    "got_cells": 181,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/mobileasset-closure-softwareupdatecoresupport-resource-v1-build.log",
+  "log_sha256": "810eac635f6ed47b5e8d331b69070fbac1313b286cc9b8a46b4579eb60245275"
+}

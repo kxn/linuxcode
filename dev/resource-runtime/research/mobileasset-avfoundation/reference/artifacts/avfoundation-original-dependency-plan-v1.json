@@ -1,0 +1,941 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-31n8ymgl/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v122-stage.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "avfoundation-reexport-facade-v1"
+  ],
+  "images": {
+    "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation": {
+      "original_sha256": "3ae9547dd198e4544bed0caee7badabc83b67afaa87864d062a2a138c018c1c1",
+      "original_bytes": 4096,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+          "load_command": "0x8000001f",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/coregraphics-native-v122/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AVFAudio.framework/AVFAudio",
+            "runtime/coregraphics-native-v122/frameworks/AVFAudio.framework/AVFAudio"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore",
+          "load_command": "0x8000001f",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture",
+          "load_command": "0x8000001f",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+          "load_command": "0x8000001f",
+          "file_candidates": [
+            "runtime/coregraphics-native-v122/frameworks/AVRouting.framework/Versions/A/AVRouting",
+            "runtime/coregraphics-native-v122/frameworks/AVRouting.framework/AVRouting"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v122/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        }
+      ]
+    },
+    "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore": {
+      "original_sha256": "cc1b538a571b0ab9cc0326cb9d0a8a4e998925aabfae1e5f59e5d3c58b21d680",
+      "original_bytes": 4628480,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/coregraphics-native-v122/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AVFAudio.framework/AVFAudio",
+            "runtime/coregraphics-native-v122/frameworks/AVFAudio.framework/AVFAudio"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+            "runtime/uniform-type-identifiers-native/frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+            "runtime/uniform-type-identifiers-native/frameworks/UniformTypeIdentifiers.framework/UniformTypeIdentifiers"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v122/frameworks/AVRouting.framework/Versions/A/AVRouting",
+            "runtime/coregraphics-native-v122/frameworks/AVRouting.framework/AVRouting"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/CoreServices"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+            "runtime/imageio-legacy-key/frameworks/ImageIO.framework/Versions/A/ImageIO",
+            "runtime/imageio-native/frameworks/ImageIO.framework/Versions/A/ImageIO",
+            "runtime/imageio-legacy-key/frameworks/ImageIO.framework/ImageIO",
+            "runtime/imageio-native/frameworks/ImageIO.framework/ImageIO"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v122/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v122/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/CoreGraphics"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+            "runtime/foundation-native-framework-stage/CFNetwork.framework/Versions/A/CFNetwork",
+            "runtime/foundation-native-framework-stage/CFNetwork.framework/CFNetwork"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+            "runtime/coregraphics-native-v122/frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+            "runtime/coregraphics-native-v122/frameworks/CoreVideo.framework/CoreVideo"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+            "runtime/coregraphics-native-v122/frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/CoreMedia.framework/CoreMedia",
+            "runtime/coregraphics-native-v122/frameworks/CoreMedia.framework/CoreMedia"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v122/frameworks/MediaExperience.framework/Versions/A/MediaExperience",
+            "runtime/coregraphics-native-v122/frameworks/MediaExperience.framework/MediaExperience"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+            "runtime/coregraphics-native-v122/frameworks/CoreImage.framework/Versions/A/CoreImage",
+            "runtime/coregraphics-native-v122/frameworks/CoreImage.framework/CoreImage"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/coregraphics-native-v122/frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AudioToolbox.framework/AudioToolbox",
+            "runtime/coregraphics-native-v122/frameworks/AudioToolbox.framework/AudioToolbox"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+            "runtime/coregraphics-native-v122/frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/MediaToolbox.framework/MediaToolbox",
+            "runtime/coregraphics-native-v122/frameworks/MediaToolbox.framework/MediaToolbox"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+            "runtime/coregraphics-native-v122/frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/VideoToolbox.framework/VideoToolbox",
+            "runtime/coregraphics-native-v122/frameworks/VideoToolbox.framework/VideoToolbox"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/native-layer-context/frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/quartzcore-native/frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/foundation-native-framework-stage/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/native-layer-context/frameworks/QuartzCore.framework/QuartzCore",
+            "runtime/quartzcore-native/frameworks/QuartzCore.framework/QuartzCore",
+            "runtime/foundation-native-framework-stage/QuartzCore.framework/QuartzCore"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Security.framework/Versions/A/Security",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/coregraphics-native-v122/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Versions/A/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Versions/A/Security",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/Security.framework/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Security",
+            "runtime/coregraphics-native-v122/frameworks/Security.framework/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Security"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v122/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreAudio.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreAudio.dylib",
+            "runtime/coregraphics-native-v122/libraries/libswiftCoreAudio.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreMIDI.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": []
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreMedia.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreMedia.dylib",
+            "runtime/coregraphics-native-v122/libraries/libswiftCoreMedia.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftMetal.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftMetal.dylib",
+            "runtime/native-library-stage/libswiftMetal.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObservation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftQuartzCore.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftQuartzCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/uniform-type-identifiers-native/libraries/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftos.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftos.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftsimd.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftsimd.dylib"
+          ]
+        }
+      ]
+    },
+    "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture": {
+      "original_sha256": "b78e2ccd7652d0204cd184052952ec13f1d2138e15ca1806feeb1f8cede5b05d",
+      "original_bytes": 4112384,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/coregraphics-native-v122/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/Versions/A/IOKit",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/IOKit.framework/IOKit",
+            "runtime/coregraphics-native-v122/frameworks/IOKit.framework/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/IOKit"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v122/frameworks/AVRouting.framework/Versions/A/AVRouting",
+            "runtime/coregraphics-native-v122/frameworks/AVRouting.framework/AVRouting"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+            "runtime/uniform-type-identifiers-native/frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+            "runtime/uniform-type-identifiers-native/frameworks/UniformTypeIdentifiers.framework/UniformTypeIdentifiers"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CMPhoto.framework/Versions/A/CMPhoto",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v122/frameworks/CMPhoto.framework/Versions/A/CMPhoto",
+            "runtime/coregraphics-native-v122/frameworks/CMPhoto.framework/CMPhoto"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CMImaging.framework/Versions/A/CMImaging",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v122/frameworks/CMImaging.framework/Versions/A/CMImaging",
+            "runtime/coregraphics-native-v122/frameworks/CMImaging.framework/CMImaging"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/native-layer-context/frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/quartzcore-native/frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/foundation-native-framework-stage/QuartzCore.framework/Versions/A/QuartzCore",
+            "runtime/native-layer-context/frameworks/QuartzCore.framework/QuartzCore",
+            "runtime/quartzcore-native/frameworks/QuartzCore.framework/QuartzCore",
+            "runtime/foundation-native-framework-stage/QuartzCore.framework/QuartzCore"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+            "runtime/coregraphics-native-v122/frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/VideoToolbox.framework/VideoToolbox",
+            "runtime/coregraphics-native-v122/frameworks/VideoToolbox.framework/VideoToolbox"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore",
+          "load_command": "0xc",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/CoreServices"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Security.framework/Versions/A/Security",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Versions/A/Security",
+            "runtime/coregraphics-native-v122/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Versions/A/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Versions/A/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Versions/A/Security",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/Security.framework/Security",
+            "runtime/original-codesign-closure-native-local-signer-v1/frameworks/Security.framework/Security",
+            "runtime/coregraphics-native-v122/frameworks/Security.framework/Security",
+            "runtime/security-cryptokit-constants/frameworks/Security.framework/Security",
+            "runtime/security-device-constants/frameworks/Security.framework/Security",
+            "runtime/security-cloud-rpc-stage/frameworks/Security.framework/Security",
+            "runtime/mdns-native/frameworks/Security.framework/Security",
+            "runtime/security-policy-source/frameworks/Security.framework/Security"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/Quagga.framework/Versions/A/Quagga",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v122/frameworks/Quagga.framework/Versions/A/Quagga",
+            "runtime/coregraphics-native-v122/frameworks/Quagga.framework/Quagga"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/coregraphics-native-v122/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AVFAudio.framework/AVFAudio",
+            "runtime/coregraphics-native-v122/frameworks/AVFAudio.framework/AVFAudio"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/coregraphics-native-v122/frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/AudioToolbox.framework/AudioToolbox",
+            "runtime/coregraphics-native-v122/frameworks/AudioToolbox.framework/AudioToolbox"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v122/frameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v122/frameworks/SoftLinking.framework/SoftLinking"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v122/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v122/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/CoreGraphics"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CMCapture.framework/Versions/A/CMCapture",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/CMCapture.framework/Versions/A/CMCapture",
+            "runtime/ios-resource-lazy-v1/frameworks/CMCapture.framework/CMCapture"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+            "runtime/coregraphics-native-v122/frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/CoreAudio.framework/CoreAudio",
+            "runtime/coregraphics-native-v122/frameworks/CoreAudio.framework/CoreAudio"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+            "runtime/coregraphics-native-v122/frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/CoreMedia.framework/CoreMedia",
+            "runtime/coregraphics-native-v122/frameworks/CoreMedia.framework/CoreMedia"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+            "runtime/imageio-legacy-key/frameworks/ImageIO.framework/Versions/A/ImageIO",
+            "runtime/imageio-native/frameworks/ImageIO.framework/Versions/A/ImageIO",
+            "runtime/imageio-legacy-key/frameworks/ImageIO.framework/ImageIO",
+            "runtime/imageio-native/frameworks/ImageIO.framework/ImageIO"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+            "runtime/native-framework-stage/IOSurface.framework/Versions/A/IOSurface",
+            "runtime/native-framework-stage/IOSurface.framework/IOSurface"
+          ]
+        },
+        {
+          "path": "/usr/lib/libMobileGestalt.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libMobileGestalt.dylib",
+            "runtime/mobilegestalt-native/libraries/libMobileGestalt.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+            "runtime/coregraphics-native-v122/frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+            "runtime/resource-framework-overlay-mobileasset-closure-v1/frameworks/MediaToolbox.framework/MediaToolbox",
+            "runtime/coregraphics-native-v122/frameworks/MediaToolbox.framework/MediaToolbox"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreMediaIO.framework/Versions/A/CoreMediaIO",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreMediaIO.framework/Versions/A/CoreMediaIO"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+            "runtime/coregraphics-native-v122/frameworks/TCC.framework/Versions/A/TCC",
+            "runtime/coregraphics-native-v122/frameworks/TCC.framework/TCC"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v122/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+            "runtime/coregraphics-native-v122/frameworks/CoreImage.framework/Versions/A/CoreImage",
+            "runtime/coregraphics-native-v122/frameworks/CoreImage.framework/CoreImage"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+            "runtime/coregraphics-native-v122/frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+            "runtime/coregraphics-native-v122/frameworks/CoreVideo.framework/CoreVideo"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreAudio.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreAudio.dylib",
+            "runtime/coregraphics-native-v122/libraries/libswiftCoreAudio.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreMIDI.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": []
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreMedia.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreMedia.dylib",
+            "runtime/coregraphics-native-v122/libraries/libswiftCoreMedia.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftMetal.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftMetal.dylib",
+            "runtime/native-library-stage/libswiftMetal.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObservation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftQuartzCore.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftQuartzCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/uniform-type-identifiers-native/libraries/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftos.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftos.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftsimd.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftsimd.dylib"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [
+    "/usr/lib/swift/libswiftCoreMIDI.dylib"
+  ],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-31n8ymgl/result.json": "a8a233b65b45c2a4f48fde77cc7626212bb58285e285cbdff5a9f49950fba5f2",
+    "artifacts/coregraphics-native-v122-stage.json": "771c97183f75000c8bef139db135bfd294751b57f42f36826ac5de949ae6cae7",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "a664e8201ad78423dbdc0ae7567e1393466b5679aaf59a0d96d038bbaa6ccc3b",
+    "scripts/plan-original-resource-dependencies.py": "01f469fa4793c07b1e243792c27bf9cfd2a98e40d22c2ce570d4d79f8013874c"
+  }
+}

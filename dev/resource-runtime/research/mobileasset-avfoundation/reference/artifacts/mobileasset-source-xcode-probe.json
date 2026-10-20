@@ -1,0 +1,253 @@
+{
+  "checked_at": "2026-10-16T13:55:42.563025+00:00",
+  "installed": false,
+  "full_compatibility": false,
+  "framework_execution_verified": false,
+  "original_framework": {
+    "path": "/System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport",
+    "sha256": "87e0b86a7a8308725f88679fea6994a12c8e35b1606e8ab517b35994b2da7fd8",
+    "reference_set": "fullsystem",
+    "objc_classes": 78,
+    "import_providers": {}
+  },
+  "restored_original_objc_classes": 78,
+  "source_private_class_replacement_added": false,
+  "staged_framework": "runtime/logging-support-native/frameworks/LoggingSupport.framework/Versions/A/LoggingSupport",
+  "staged_framework_sha256": "e7c446d44b79b8180fe7dd005a60288d161383f1ba3b76322ec29d39d024763e",
+  "reconstruction_report": "runtime/rebuilt-logging-support-native/reconstruction.json",
+  "reconstruction_report_sha256": "cc163532195e18d1d0dbafb29f3e40465c22f2c83f66ba66f3f545709f3e90ce",
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/darlingserver-source-build/darlingserver/darlingserver",
+      "sha256": "ae78babd377dd542788f321752b11e9dea6413ee49d1009f00df825fdd9efd6b"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/libxpc-source/libxpc.dylib",
+      "sha256": "a5ef29a32f000ed41b15b429e987357c795e748aee3713c7f76f560e6cbf188e"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/launchd-source/launchd",
+      "sha256": "f8500434446bd490af768a1a0a051a0073a0330f65b9dae1170ea78838bf471f"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/libsystem-kernel-source/libsystem_kernel.dylib",
+      "sha256": "b51317a143657852f3aec7a50a0f25d595ee550d151d7c698a04bef2d459c3d2"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/quarantine-source/libquarantine.dylib",
+      "sha256": "da7bee840c07661b8c9a2a24ff1102f81b5a7882c84395c927617453b2f77df2"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/sandbox-source/libsystem_sandbox.dylib",
+      "sha256": "dee2a5ad670c8bb7eb12c30d89c5c4f7b8b71bc6d9221ba613af2c7a5c270bf3"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/libdyld-source/libdyld.dylib",
+      "sha256": "817d4cc7198e90b2c4dd9827ac6268960fd1a1da096612e96be17cd82e92b745"
+    }
+  },
+  "original_xcodebuild_sha256": "d6ceec0a4fa47e3f7a20c712d960ffb954b2246a2c94a0bf0818b2e8344065c5",
+  "command": [
+    "timeout",
+    "-k",
+    "5",
+    "60",
+    "bin/darling",
+    "shell",
+    "/usr/bin/env",
+    "OBJC_DISABLE_TAGGED_POINTERS=YES",
+    "DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/frameworks:/Volumes/SystemRoot/workspace/runtime/logging-support-native/frameworks:/Volumes/SystemRoot/workspace/runtime/foundation-native-framework-stage:/Volumes/SystemRoot/workspace/runtime/native-framework-stage",
+    "DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/quartzcore-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-native-library-stage:/Volumes/SystemRoot/workspace/runtime/native-library-stage:/Volumes/SystemRoot/workspace/runtime/rebuilt-der:/usr/lib/swift",
+    "/usr/bin/xcodebuild",
+    "-showsdks"
+  ],
+  "native_quartzcore": {
+    "staged_framework": "runtime/quartzcore-native/frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "staged_framework_sha256": "703c9aba9892a2182cc2d921dafda5f90aed265a0dc335a46d100a05e82447a7",
+    "original_framework": {
+      "path": "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+      "sha256": "b6e47648862adba21bd3940dc2383ca467d8ca971537f1284b2cc66adfdd096d",
+      "reference_set": "fullsystem",
+      "objc_classes": 145,
+      "import_providers": {
+        "_kCVImageBufferAmbientViewingEnvironmentKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferCGColorSpaceKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferCleanApertureHeightKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferCleanApertureHorizontalOffsetKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferCleanApertureKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferCleanApertureVerticalOffsetKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferCleanApertureWidthKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferColorPrimaries_DCI_P3": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferColorPrimaries_ITU_R_2020": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferColorPrimaries_P22": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferColorPrimaries_P3_D65": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferPreferredCleanApertureKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferTransferFunction_sRGB": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferYCbCrMatrix_IPT": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferYCbCrMatrix_ITU_R_2020": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferYCbCrMatrix_ITU_R_2100_ICtCp": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCVImageBufferYCbCrMatrix_Identity": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGApplyFlexLumaScaling": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGApplyReferenceWhiteToneMapping": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceDisplayP3_HLG": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceDisplayP3_PQ": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceExtendedDisplayP3": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceExtendedITUR_2020": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceExtendedLinearDisplayP3": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceExtendedLinearITUR_2020": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceITUR_2020_sRGBGamma": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceITUR_2100_HLG": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceITUR_2100_PQ": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceITUR_709_PQ": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceLinearDisplayP3": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceLinearITUR_2020": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceUncalibratedGray": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGColorSpaceUncalibratedRGB": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGContentEDRStrength": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGContextClear": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGFlexGTCTargetHeadroom": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGGradientInterpolatesPremultiplied": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageBlockBaseAddressAlignmentRequest": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageBlockBytesPerRowAlignmentRequest": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageBlockFormatBGRx8": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageBlockFormatRequest": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageBlockMarkAsReadOnlyRequest": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageBlockSingletonRequest": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImagePropertyIOSurface": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageProviderAlphaIsPremultiplied": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageWillDeallocate": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGPatternWillDeallocate": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGRWTMEDRHeadroom": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGRWTMSourcePeak": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGRWTMVersion": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGLineWidthHairline": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIAttributeSliderMax": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIAttributeSliderMin": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIContextWorkingFormat": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIImageColorSpace": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIInputTargetImageKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIInputTimeKey": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIFormatBGRA8": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCIFormatRGBA8": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImagePreferGPUForColorConversion": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageSourceDecodeRequest": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageSourceDecodeToHDR": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageSourceMemoryMapAsShared": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageSourceShouldPreferRGB32": "/usr/lib/libDarlingNativeConstants.dylib",
+        "_kCGImageSourceSkipMetadata": "/usr/lib/libDarlingNativeConstants.dylib"
+      }
+    },
+    "reconstruction_report": "runtime/rebuilt-quartzcore-native/reconstruction.json",
+    "reconstruction_report_sha256": "93448a0891da59c254f1a89584826d056664e6cfdd571bbbe766154eff13022f",
+    "restored_original_objc_classes": 145,
+    "framework_execution_verified": false,
+    "dependency_images": {
+      "symbolication-native": {
+        "staged_path": "runtime/quartzcore-native/frameworks/Symbolication.framework/Versions/A/Symbolication",
+        "staged_sha256": "84d0da1d8b17c69932e87496e255eec5759bf27dee0951478ecd686dca163e30",
+        "original_image": {
+          "path": "/System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication",
+          "sha256": "1c410850e2d722e6183a6e20c899d3cd688778b2d60dbe103781ffb8be72a376",
+          "reference_set": "fullsystem",
+          "objc_classes": 100,
+          "import_providers": {},
+          "recover_coalesced_data_exports": [
+            "/usr/lib/swift/libswiftCore.dylib",
+            "/usr/lib/swift/libswiftos.dylib"
+          ],
+          "recover_coalesced_function_exports": [
+            "/usr/lib/swift/libswiftCore.dylib",
+            "/usr/lib/swift/libswiftos.dylib",
+            "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+          ]
+        },
+        "swift_relative": true,
+        "execution_verified": false,
+        "reconstruction_report": "runtime/rebuilt-symbolication-native/reconstruction.json",
+        "reconstruction_report_sha256": "1a3d654c07fb928b6a0883d97e972a45863d071c85701432e5ad17c87bf884f8"
+      },
+      "core-symbolication-native": {
+        "staged_path": "runtime/quartzcore-native/frameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication",
+        "staged_sha256": "9608d70aa0d781ef45cb0bc8c1880fb0ff5a8982de776100c3bedbe4b1fa879f",
+        "original_image": {
+          "path": "/System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication",
+          "sha256": "0f4cfe6fc245bbf4300804510ddaa130b7b01fff8cb30d94680a932e6a45e120",
+          "reference_set": "fullsystem",
+          "objc_classes": 3,
+          "import_providers": {}
+        },
+        "swift_relative": false,
+        "execution_verified": false,
+        "reconstruction_report": "runtime/rebuilt-core-symbolication-native/reconstruction.json",
+        "reconstruction_report_sha256": "27b20ea23bf06e121c4cd1e6bd7da969581e2882a60f79fcee202c68fa407838"
+      }
+    },
+    "constants_compatibility": {
+      "path": "artifacts/quartzcore-native-constants.json",
+      "report_sha256": "33d59b353ea973716ffd342d886852e137f7c298e8264b8d06f29b160a3f0595",
+      "helper": "runtime/native-library-stage/libDarlingNativeConstants.dylib",
+      "helper_sha256": "d247c6ce936ad1f3129c1d6132bb911bea6748a2f2cb600ca7eb657754f4eec8",
+      "verified_cfstring_count": 143,
+      "verified_extra_identifier_count": 6
+    }
+  },
+  "source_mobileasset": {
+    "installed": false,
+    "full_framework_source_build": true,
+    "complete_source_files": 14,
+    "source_revision": "60ba801decee7a00782f74f6be4c8ffb013f79ff",
+    "source_files": {
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MobileAsset.m": "ab8de613115bebbc011a76176b24fb64c9576328ffc8a720d945059908d03cee",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/Pallas.m": "5a027bb34117f3b6e7a986f30eb462e763ba8563992a631dc2374ebd1a969241",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAProgressHandler.m": "1c498025a79e4ea60e4a08cb8cd9ca85fd61544903c08cf2665fee290273df4e",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAAsset.m": "c0b76880463f2f2c4843eacabe16f360e7018391b3b8f1ddf44a8d05c569b577",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAAssetQuery.m": "11a1b4f79c1e0e511191ed88790947f1783c0499a9d8d30312fd587209a092c9",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/ASAsset.m": "afc2f2a2baeca627a6f93e7e36e9a3a552fb305b1647f521d041f0617eeeba8d",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/ASAssetQuery.m": "985eae5eb853fe90c9dc7a709a43b45fffb57a7f2baaab84ca6b4e9e491b20f8",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAXpcManager.m": "912ed5dde75b640cbd50e2eed3fc27e4cadb2508bcba1d2caec556285e083f62",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAAbsoluteAssetId.m": "b143ae7af69e28b800f4ec71517ecaafe69e0f19a802813875b394b2cb2e81ce",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MADownloadOptions.m": "ca27942462523b948e88d114bb45aa473a0375fbebd99d2713b92d264a1a41ac",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAMsuDownloadOptions.m": "ce635c1d2136e504caf8124ff0bac7edf92b69b910967c930c5a397edc92cfb2",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MADownloadConfig.m": "fa4456c66badb9e9eb606f872f0f697072b91be673ab700d0dd193ee429df147",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAProgressNotification.m": "750ea4926248e2f42f70ba7c37e6c30a47cab6c1b72d3f0cfa47db7b0f3649ba",
+      "vendor/darling/src/private-frameworks/MobileAsset/src/MAXpcConnection.m": "8f850c2c7781ced3e319091b864181fa5ef449877542e7c4ae054605a9af6cbd",
+      "vendor/darling/src/private-frameworks/MobileAsset/CMakeLists.txt": "976952c99f610bcf7c6534dfefbf31875d85d1b44a58a7de4fbe84276689651c",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/ASAsset.h": "d11e8842e9b160c2e1d35b23281fe3fec9a9b29ac85a621065703ddaa660f44f",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/ASAssetQuery.h": "436b9557b44acdd42e5d66fec939c7eed24c02f7f06284b228cf25dbfb51caa5",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAAbsoluteAssetId.h": "2806a189715cda70cb219afbb47fd57cea2c05d6bfbd4b4ed1ab7f807aab8a8d",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAAsset.h": "9051f97e42db8dff5adb480dd004903e19cde8212e7f69511567cd14f0175fc8",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAAssetQuery.h": "c04197c3de3f24eea7b1da28df64bb4b1c7764a11d3a8af8ebbe47403df95229",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MADownloadConfig.h": "5adfb9b52555cc4b83da697ebda5224337806dd274a34fe651565b7edc24e2de",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MADownloadOptions.h": "abe7c183800c5889ff5b66dc4f812f702a071cbd62305736bc538aa88ad82938",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAMsuDownloadOptions.h": "e8c89fff4406d249f551e7b8451126a4454f112c85a694bf7942655ba728d32b",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAProgressHandler.h": "056f259310d8f5dff826a9b06f7549391b2c68b8ff2538f7e61892261e4b2b06",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAProgressNotification.h": "c3c23af456a0c3dad3cb6781422d2b256040198345a2c11323128cfad7e6f325",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAXpcConnection.h": "a638614bf7edff77adab04679d9e064cf8e3f2a3cde4c82d44203aff1c8d3dfd",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MAXpcManager.h": "861510d17b10101a361947cfa34cd12b8b706c636302345f7dfb44dd757c85c2",
+      "vendor/darling/src/private-frameworks/MobileAsset/include/MobileAsset/MobileAsset.h": "571f3c17ead7911305b38df2115d21d413506d281be35ed29418e91720280d79"
+    },
+    "baseline": "runtime/rootfs/usr/libexec/darling/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+    "baseline_sha256": "2c2a934f16de5a16fe414b4779d5e7055eea28206c323bf1b39b850a22e1b193",
+    "framework": "runtime/mobileasset-source/frameworks/MobileAsset.framework/Versions/A/MobileAsset",
+    "framework_sha256": "26b3bc89fd8df1ef91d52b08868ac2209354f362a704adef492b7b06549275b5",
+    "original_exports_preserved": 75,
+    "source_exports": 82,
+    "runtime_execution_verified": true,
+    "protocol_scope": "All five DVT Pallas client operations over genuine named XPC transport, plus default audience/URL wrappers and their internal aliases. No MobileAsset daemon, catalog, download or installation implementation. Other generic framework stubs remain.",
+    "connection_scope": "One connection/UUID per call; one retry on interruption. No persistent MAXpcManager cache or general service manager implementation.",
+    "known_limits": [
+      "Bootstrap preflight handles an absent service without entering the old unconnected-channel backend. A service disappearing between lookup and XPC activation remains a backend race to resolve.",
+      "Other MobileAsset APIs remain legacy stubs. No real Apple daemon interoperation or end-to-end download proof."
+    ],
+    "full_xcode_build_ready": false,
+    "signing_ready": false,
+    "execution_report": "artifacts/mobileasset-pallas-source.json"
+  },
+  "exit_status": 255,
+  "sdk_listing_succeeded": false,
+  "log": "logs/xcode-source-mobileasset-showsdks.log",
+  "log_sha256": "4c7db63f1bb61647e5aef2db4d6c3bc7b7646b7afac9f59354770716301a3d30",
+  "diagnostic": "Warning: failed to increase FD rlimit: Operation not permitted\nError loading required libraries. If there is an ongoing installation please wait for it to complete. Otherwise reinstall. (dlopen(@rpath/libxcodebuildLoader.dylib, 1): Symbol not found: _ASI_GetCurrentCPUDescriptionWithFormat\n  Referenced from: /Applications/Xcode.app/Contents/Frameworks/../SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation (which was built for Mac OS X 14.0)\n  Expected in: /System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo\n)\n",
+  "full_xcode_build_ready": false,
+  "signing_ready": false
+}

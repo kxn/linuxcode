@@ -1,0 +1,92 @@
+{
+  "target": "coremediaio-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/CoreMediaIO.framework/Versions/A/CoreMediaIO",
+    "sha256": "7713a3a0bbc47a22d8994f51f8326e8cf25c756e05afa52a8747d262357e5954",
+    "reference_set": "fullsystem",
+    "objc_classes": 29,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 42,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 645,
+    "patch_got_range": [
+      "0x7ff840006000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 1613824,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+    "/System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+    "/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL",
+    "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "4b9ab6d60cf5cbb9134d88b2ba864649ba719454daade915ab16a201a8ae37b1",
+  "manifest_sha256": "68b054fb72d17e20ee76364dcdb2531db79b9bbf4da6f70afdfdcce062fb8706",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "coremediaio-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "088a596729d4c11085423cb4e83ca3410c2680456a3b210ab5cf59bfeed19345",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 891,
+    "nonzero_addends": 42,
+    "got_cells": 645,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/coremediaio-patch-got-v1-build.log",
+  "log_sha256": "705ff8f086cdd384ac086b2023b2874e6207a6a389d988b1b33b0c8760849238"
+}

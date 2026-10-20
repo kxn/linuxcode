@@ -1,0 +1,44 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/mobileasset-original-dependency-batch-v1.json",
+  "configuration_sha256": "b2bf26837c7067e656c866f53293660238304860c5bd9298bfeca5b5a4971a90",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+      "attempts": [],
+      "prepared_target": "mobileasset-patch-got-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport",
+      "attempts": [
+        {
+          "target": "mobileasset-closure-softwareupdatecoresupport-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mobileasset-closure-softwareupdatecoresupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mobileasset-closure-softwareupdatecoresupport-resource-v1-batch-preparation.log",
+          "log_sha256": "bccfcec9215a0f99ea07f1b07fa5c17dd9c2723a1e22dfc259d1358b4a3230c2",
+          "preparation": "artifacts/mobileasset-closure-softwareupdatecoresupport-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mobileasset-closure-softwareupdatecoresupport-resource-v1"
+    }
+  ]
+}

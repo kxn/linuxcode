@@ -6,7 +6,9 @@
 
 游戏工程的后续研究已通过原版 Unity 6 IL2CPP/Bee 生成并独立核对 377 个 iPhoneOS/arm64 静态库对象，并将真实 CocoaPods/AFNetworking 接入完整 workspace；**完整 Unity/UE App 尚未构建成功**。此前的[XPC 后端与资源依赖检查点](dev/resource-runtime/research/xpc-peer-error/README.md)补齐九个后续原版依赖候选，并通过后端单例与 160 项实际错误对象检查；完整 workspace 进入五 target 依赖图和原版资源查询，因缺 CloudKit 通知符号返回 65，尚无 CompileC 或最终 App。前一批 [12 个依赖和严格准备工具](dev/resource-runtime/research/resource-image-preparation/README.md)也已保存。此前的[时钟修正](dev/resource-runtime/research/stable-boottime/README.md)已解决一秒级启动时间跳变。此前的[原始绑定表检查点](dev/resource-runtime/research/native-cache-patch-got/README.md)保留 AppleIDSSO 恢复与初始化超时的历史证据。研究附件没有升级默认安装候选。
 
-最新的[原版 Vision 依赖组检查点](dev/resource-runtime/research/vision-original-dependencies/README.md)恢复九个原始映像，并通过原版 dyld 的九个正例和十八个损坏对照。TextRecognition 的二进制泛型环境边界已根据原始 KeyPath 引用校验；原版 Swift 编译器也复现了相同布局和两次实际 KeyPath 访问。原版资源工具继续推进到 MobileAsset 类缺失，完整游戏 App 仍未构建成功。
+此前的[原版 Vision 依赖组检查点](dev/resource-runtime/research/vision-original-dependencies/README.md)恢复九个原始映像，并通过原版 dyld 的九个正例和十八个损坏对照。TextRecognition 的二进制泛型环境边界已根据原始 KeyPath 引用校验；原版 Swift 编译器也复现了相同布局和两次实际 KeyPath 访问。原版资源工具继续推进到 MobileAsset 类缺失，完整游戏 App 仍未构建成功。
+
+最新的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。本轮还保留了一次完整工程在启动服务查询期间超时的失败及实时栈，完整游戏 App 仍未构建成功。
 
 ```bash
 git clone https://github.com/kxn/linuxcode.git

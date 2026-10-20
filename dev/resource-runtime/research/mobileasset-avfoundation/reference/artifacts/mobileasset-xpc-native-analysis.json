@@ -1,0 +1,242 @@
+{
+  "checked_at": "2026-10-16T13:35:35.312387+00:00",
+  "provider": "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+  "provider_sha256": "50f840c3ea81c25e8270e45fd654bc5e39eabd3be98e7336a399f2e8dc340085",
+  "native_execution": false,
+  "source_implementation_added": false,
+  "private_native_layout_reused": false,
+  "image_class_count": 79,
+  "dependencies": [
+    "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport",
+    "/System/Library/PrivateFrameworks/SoftwareUpdateCoreConnect.framework/Versions/A/SoftwareUpdateCoreConnect",
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/StreamingZip",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "classes": [
+    {
+      "name": "MAXpcManager",
+      "address": "0x7ff8438c9568",
+      "superclass": "NSObject",
+      "instance_size": 72,
+      "methods": [
+        {
+          "selector": ".cxx_destruct",
+          "types": "v16@0:8",
+          "implementation": "0x7ff8177eb876",
+          "length": 95,
+          "sha256": "6a3715b0121dffb4935fc2169fcffdf630e709fc5e02d7698726e68a409a49e4"
+        },
+        {
+          "selector": "setClientName:",
+          "types": "v24@0:8@16",
+          "implementation": "0x7ff8177aca94",
+          "length": 132,
+          "sha256": "e8dd7d75ce467a584e026990095976aaea789d889286d0ff329217ed7643c384"
+        },
+        {
+          "selector": "attachProgressHandler:assetId:callBack:withPurpose:",
+          "types": "v48@0:8@16@24@?32@40",
+          "implementation": "0x7ff8177eafc5",
+          "length": 265,
+          "sha256": "c3eba236025497c468f064ca8604396e415a6c59e782291317168c7c42a66521"
+        },
+        {
+          "selector": "clearConnection:",
+          "types": "v24@0:8@16",
+          "implementation": "0x7ff8177e94a2",
+          "length": 609,
+          "sha256": "7f422c020eae098b26bf15307e19395451558df728d19cb48bcca791229b8d17"
+        },
+        {
+          "selector": "ensureConnection",
+          "types": "v16@0:8",
+          "implementation": "0x7ff8177acb18",
+          "length": 425,
+          "sha256": "62499b77ddcb4b73ace762321aaac5747396b0dcc5a609914ab3245b6bc58eb5"
+        },
+        {
+          "selector": "initWithServiceName:callbackQueue:",
+          "types": "@32@0:8@16@24",
+          "implementation": "0x7ff8177ac85f",
+          "length": 565,
+          "sha256": "1b2b42eae7d53c02a56e820006ebc4c9f9a8e3a56f8549f5b6548f06651465a2"
+        },
+        {
+          "selector": "notifyClientsOfProgress:",
+          "types": "v24@0:8@16",
+          "implementation": "0x7ff8177eaa1b",
+          "length": 152,
+          "sha256": "a9fe2f20703abc3c3c2f01ee60df82155d9d9a25ac4bc64d17e05dd30ce2cb10"
+        },
+        {
+          "selector": "progressCallbacksForAssetType:assetId:withPurpose:",
+          "types": "@40@0:8@16@24@32",
+          "implementation": "0x7ff8177eb691",
+          "length": 415,
+          "sha256": "7e74cfb5393d99ec296b2a4c64279b6ae19cfd3c6f422aa883343eb186fb17d6"
+        },
+        {
+          "selector": "restoreProgressCallbacks:assetType:assetId:withPurpose:",
+          "types": "v48@0:8@16@24@32@40",
+          "implementation": "0x7ff8177eb24c",
+          "length": 314,
+          "sha256": "6cb4360e3e8c9e482ca08c857acbc4b270051aba9090deae4eef8e32f0e943cc"
+        },
+        {
+          "selector": "sendAsync:clientHandler:taskDescriptor:",
+          "types": "v40@0:8@16@?24@32",
+          "implementation": "0x7ff8177af41a",
+          "length": 24,
+          "sha256": "2f4dcb66e438cd7ef2c7a368d13482659ab1808d6cee377f8444a557d25ba2b2"
+        },
+        {
+          "selector": "sendAsync:clientHandler:taskDescriptor:withRetry:",
+          "types": "v44@0:8@16@?24@32B40",
+          "implementation": "0x7ff8177e9ce9",
+          "length": 35,
+          "sha256": "62dd17fba58c1a760fb73dbef8f26c8aa476c2b92f86fc648c91476536ab639e"
+        },
+        {
+          "selector": "sendAsync:clientHandler:taskDescriptor:withRetry:retryInitialReconnectionCount:",
+          "types": "v52@0:8@16@?24@32B40Q44",
+          "implementation": "0x7ff8177e9d0c",
+          "length": 575,
+          "sha256": "26cb1a31e70b8231d1d5d4a8ed016559661779ebb224ad8af5c8a756c3ce38cf"
+        },
+        {
+          "selector": "sendSync:gettingResponseCode:codeForXpcError:loggingName:",
+          "types": "@48@0:8@16^q24q32@40",
+          "implementation": "0x7ff8177e9703",
+          "length": 684,
+          "sha256": "af913648264eda8a3e3068e7bd9ee1e1f4f49c7f3ced83867644aa9cae82b086"
+        },
+        {
+          "selector": "setClientConnectionHandler",
+          "types": "v16@0:8",
+          "implementation": "0x7ff8177acd9e",
+          "length": 117,
+          "sha256": "645ee7346b740bd925c7b2567ab91a1e37809a43b04419ea817e1bf6b8cd0f68"
+        }
+      ],
+      "class_methods": [],
+      "ivars": [
+        {
+          "name": "_maConnection",
+          "type": "@\"MAXpcConnection\"",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "name": "_stateQueue",
+          "type": "@\"NSObject<OS_dispatch_queue>\"",
+          "offset": 16,
+          "size": 8
+        },
+        {
+          "name": "_callbackQueue",
+          "type": "@\"NSObject<OS_dispatch_queue>\"",
+          "offset": 24,
+          "size": 8
+        },
+        {
+          "name": "_progressQueue",
+          "type": "@\"NSObject<OS_dispatch_queue>\"",
+          "offset": 32,
+          "size": 8
+        },
+        {
+          "name": "_serviceName",
+          "type": "@\"NSString\"",
+          "offset": 40,
+          "size": 8
+        },
+        {
+          "name": "_progressHandlers",
+          "type": "@\"NSMutableDictionary\"",
+          "offset": 48,
+          "size": 8
+        },
+        {
+          "name": "_connectionRetryCount",
+          "type": "Q",
+          "offset": 56,
+          "size": 8
+        },
+        {
+          "name": "_postConnectionRetryCallbacks",
+          "type": "@\"NSMutableArray\"",
+          "offset": 64,
+          "size": 8
+        }
+      ]
+    },
+    {
+      "name": "MAXpcConnection",
+      "address": "0x7ff8438c9590",
+      "superclass": "NSObject",
+      "instance_size": 24,
+      "methods": [
+        {
+          "selector": ".cxx_destruct",
+          "types": "v16@0:8",
+          "implementation": "0x7ff81784908a",
+          "length": 40,
+          "sha256": "9cda7a7aa27caa4835103d70e7867c8dca32314e9999ff717780abb80c04f19f"
+        },
+        {
+          "selector": "connection",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ace13",
+          "length": 10,
+          "sha256": "e65d0e5b3e004bca7221190010f8d17cf9cccee4894c85ad38b21fc472e35095"
+        },
+        {
+          "selector": "initWithServiceName:",
+          "types": "@24@0:8@16",
+          "implementation": "0x7ff8177accc1",
+          "length": 221,
+          "sha256": "2e3a365536a3a31d5d789298df8fbf5af5c035b703c831ac846bfa0ef38efdab"
+        },
+        {
+          "selector": "connectionId",
+          "types": "@16@0:8",
+          "implementation": "0x7ff8177ace1d",
+          "length": 10,
+          "sha256": "5841b566469bdc3bad638a449edce48b8f5abee5f34c698288df2f938f11877f"
+        },
+        {
+          "selector": "notValid",
+          "types": "B16@0:8",
+          "implementation": "0x7ff817849070",
+          "length": 26,
+          "sha256": "0f8260fc0d4f2d9b120b72f290fbd8c1966cbe973fb6b775b14bf8996187fa94"
+        }
+      ],
+      "class_methods": [],
+      "ivars": [
+        {
+          "name": "_connection",
+          "type": "@\"NSObject<OS_xpc_object>\"",
+          "offset": 8,
+          "size": 8
+        },
+        {
+          "name": "_connectionId",
+          "type": "@\"NSString\"",
+          "offset": 16,
+          "size": 8
+        }
+      ]
+    }
+  ],
+  "log": "logs/mobileasset-xpc-native-methods.log",
+  "log_sha256": "b31f7068d1119f7d581ebf732075ffbe1b6a714a6ae59a63e509ced92c38b9f4",
+  "existing_darling_note": "Darling MAXpcManager/MAXpcConnection are generic forwarding stubs; the Pallas getter is absent. This is static protocol evidence, not daemon execution proof."
+}

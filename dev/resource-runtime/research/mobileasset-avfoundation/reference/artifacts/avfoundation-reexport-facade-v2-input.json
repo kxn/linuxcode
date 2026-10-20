@@ -1,0 +1,110 @@
+{
+  "target": "avfoundation-reexport-facade-v2",
+  "pin": {
+    "path": "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+    "sha256": "3ae9547dd198e4544bed0caee7badabc83b67afaa87864d062a2a138c018c1c1",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "original_reexport_facade": {
+      "original_sha256": "3ae9547dd198e4544bed0caee7badabc83b67afaa87864d062a2a138c018c1c1",
+      "original_uuid": "9f192f005055382b8f0bbfcaf0840b19",
+      "original_executable_bytes": 0,
+      "original_dependencies": [
+        [
+          2147483679,
+          "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio"
+        ],
+        [
+          2147483679,
+          "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore"
+        ],
+        [
+          2147483679,
+          "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture"
+        ],
+        [
+          2147483679,
+          "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting"
+        ],
+        [
+          12,
+          "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+        ],
+        [
+          12,
+          "/usr/lib/libSystem.B.dylib"
+        ]
+      ],
+      "original_imageinfo": "0000000049000000",
+      "reexport_count": 4
+    },
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true
+  },
+  "original_bytes": 4096,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+    "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore",
+    "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture",
+    "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "4bbd569167b1a315f3cb31c8bf5bb6e7d6f623418a38dff270dd3ab104d7dada",
+  "manifest_sha256": "4b9ab6d60cf5cbb9134d88b2ba864649ba719454daade915ab16a201a8ae37b1",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "avfoundation-reexport-facade-v2",
+    "--lazy-functions",
+    "--collect-missing-imports"
+  ],
+  "preparation_source_sha256": "088a596729d4c11085423cb4e83ca3410c2680456a3b210ab5cf59bfeed19345",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_reexport_facade": {
+    "original_sha256": "3ae9547dd198e4544bed0caee7badabc83b67afaa87864d062a2a138c018c1c1",
+    "original_uuid": "9f192f005055382b8f0bbfcaf0840b19",
+    "original_executable_bytes": 0,
+    "original_dependencies": [
+      [
+        2147483679,
+        "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio"
+      ],
+      [
+        2147483679,
+        "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore"
+      ],
+      [
+        2147483679,
+        "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture"
+      ],
+      [
+        2147483679,
+        "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting"
+      ],
+      [
+        12,
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      [
+        12,
+        "/usr/lib/libSystem.B.dylib"
+      ]
+    ],
+    "original_imageinfo": "0000000049000000",
+    "reexport_count": 4
+  },
+  "facade_validator_sha256": "8d702ceb1d4abdf2a1db2516e51262ff8b7eb1d46461328f09cb9100ba4258f0",
+  "build_returncode": 0,
+  "log": "logs/avfoundation-reexport-facade-v2-build.log",
+  "log_sha256": "724e9ceabe3a94a8c2e9d06d04b26ae9bc585e9d172021f9222d00fa4561b011"
+}

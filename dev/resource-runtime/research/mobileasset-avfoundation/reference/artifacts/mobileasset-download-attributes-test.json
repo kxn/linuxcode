@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-17T02:14:20.987674+00:00",
+  "build": "artifacts/mobileasset-download-attributes-build.json",
+  "build_sha256": "76f585990b275ae46698b1562ffc2ab03b3f52a89a730ad28402cc2c19c60337",
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/quarantine-vfs-kernel-source/darlingserver",
+      "sha256": "85a1f81617e5155ffeb967d75560d327564e5a0db69e759004f3e3c12f499cae"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/quarantine-vfs-kernel-source/libxpc.dylib",
+      "sha256": "c0e51500fe09a376d64664c8c96e7605997b07922394f82a8aa18b56e1451fe0"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/quarantine-vfs-kernel-source/launchd",
+      "sha256": "f8500434446bd490af768a1a0a051a0073a0330f65b9dae1170ea78838bf471f"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/quarantine-vfs-kernel-source/libsystem_kernel.dylib",
+      "sha256": "454b0fdbc171b72b05cc44fa678e3ce84738e6c0515cef53869a70273f27cb6d"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/quarantine-vfs-kernel-source/libquarantine.dylib",
+      "sha256": "f5d4ce528e6497057c2b5716d20f10a4a8fd63db2dce3245023a4311b93efac5"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/quarantine-vfs-kernel-source/libsystem_sandbox.dylib",
+      "sha256": "29d0e03f98463ac1d908c81e3dedf5cb7c092c6d85bb647cf409e55122030242"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/quarantine-vfs-kernel-source/libdyld.dylib",
+      "sha256": "6759bcb8d9383a4d1a4f1d38dcb0e39eac818d4d7d2c775db89a2f6d317c1032"
+    }
+  },
+  "checks": [
+    {
+      "source": "fixtures/hello/mobileasset-pallas.m",
+      "source_sha256": "d08a1d5b80f52a0ba1842ecfce142a44d08364f4932a975597c0aa871112985c",
+      "binary": "runtime/mobileasset-download-attributes/tests/mobileasset-pallas",
+      "binary_sha256": "35aa99fe2722de767a8f1e9616f3c7beb641c38658edae45c4b219444012adcc",
+      "command": [
+        "timeout",
+        "-k",
+        "5",
+        "60",
+        "bin/darling",
+        "shell",
+        "/usr/bin/env",
+        "OBJC_DISABLE_TAGGED_POINTERS=NO",
+        "DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/mobileasset-download-attributes/frameworks:/Volumes/SystemRoot/workspace/runtime/cryptex-native/frameworks:/Volumes/SystemRoot/workspace/runtime/device-identity-native/frameworks:/Volumes/SystemRoot/workspace/runtime/iokit-main-port-source/frameworks:/Volumes/SystemRoot/workspace/runtime/security-device-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/frameworks:/Volumes/SystemRoot/workspace/runtime/coreutils-crypto-source/frameworks:/Volumes/SystemRoot/workspace/runtime/security-cloud-rpc-stage/frameworks:/Volumes/SystemRoot/workspace/runtime/mdns-native/frameworks:/Volumes/SystemRoot/workspace/runtime/fsevents-heap-source/frameworks:/Volumes/SystemRoot/workspace/runtime/combine-native/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-legacy-key/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-cg-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-native/frameworks:/Volumes/SystemRoot/workspace/runtime/mobilegestalt-native/frameworks:/Volumes/SystemRoot/workspace/runtime/native-layer-context/frameworks:/Volumes/SystemRoot/workspace/runtime/native-layer-support/frameworks:/Volumes/SystemRoot/workspace/runtime/uniform-type-identifiers-native/frameworks:/Volumes/SystemRoot/workspace/runtime/security-policy-source/frameworks:/Volumes/SystemRoot/workspace/runtime/apple-system-info-native/frameworks:/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/frameworks:/Volumes/SystemRoot/workspace/runtime/logging-support-native/frameworks:/Volumes/SystemRoot/workspace/runtime/foundation-native-framework-stage:/Volumes/SystemRoot/workspace/runtime/native-framework-stage",
+        "DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/cryptex-native/libraries:/Volumes/SystemRoot/workspace/runtime/device-identity-native/libraries:/Volumes/SystemRoot/workspace/runtime/security-device-constants/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-quarantine-runtime/libraries:/Volumes/SystemRoot/workspace/runtime/expected-access-source/libraries:/Volumes/SystemRoot/workspace/runtime/typed-new-delete-source/libraries:/Volumes/SystemRoot/workspace/runtime/security-cloud-rpc-stage/libraries:/Volumes/SystemRoot/workspace/runtime/mdns-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-coherent/libraries:/Volumes/SystemRoot/workspace/runtime/objc-selector-source/libraries:/Volumes/SystemRoot/workspace/runtime/objc-selector-source:/Volumes/SystemRoot/workspace/runtime/imageio-legacy-key/libraries:/Volumes/SystemRoot/workspace/runtime/simd-matrix-source/libraries:/Volumes/SystemRoot/workspace/runtime/imageio-cg-constants/libraries:/Volumes/SystemRoot/workspace/runtime/imageio-native/libraries:/Volumes/SystemRoot/workspace/runtime/runnable-archs-source/libraries:/Volumes/SystemRoot/workspace/runtime/mobilegestalt-native/libraries:/Volumes/SystemRoot/workspace/runtime/container-persona/libraries:/Volumes/SystemRoot/workspace/runtime/log-hooks/libraries:/Volumes/SystemRoot/workspace/runtime/native-log-message/libraries:/Volumes/SystemRoot/workspace/runtime/log-enablement/libraries:/Volumes/SystemRoot/workspace/runtime/libtrace-pack-source/libraries:/Volumes/SystemRoot/workspace/runtime/native-layer-context/libraries:/Volumes/SystemRoot/workspace/runtime/native-layer-support/libraries:/Volumes/SystemRoot/workspace/runtime/container-manager-export/libraries:/Volumes/SystemRoot/workspace/runtime/sysdir-native-export/libraries:/Volumes/SystemRoot/workspace/runtime/sandbox-container-source/libraries:/Volumes/SystemRoot/workspace/runtime/rootless-nounlink-export/libraries:/Volumes/SystemRoot/workspace/runtime/typed-malloc-source/libraries:/Volumes/SystemRoot/workspace/runtime/os-log-simple-source/libraries:/Volumes/SystemRoot/workspace/runtime/rootless-datavault-export/libraries:/Volumes/SystemRoot/workspace/runtime/user-local-dir-export/libraries:/Volumes/SystemRoot/workspace/runtime/libtrace-source/libraries:/Volumes/SystemRoot/workspace/runtime/objc-source:/Volumes/SystemRoot/workspace/runtime/uti-runtime-support/libraries:/Volumes/SystemRoot/workspace/runtime/uniform-type-identifiers-native/libraries:/Volumes/SystemRoot/workspace/runtime/pthread-yield-export/libraries:/Volumes/SystemRoot/workspace/runtime/security-policy-source/libraries:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-native-library-stage:/Volumes/SystemRoot/workspace/runtime/native-library-stage:/Volumes/SystemRoot/workspace/runtime/rebuilt-der:/usr/lib/swift",
+        "/Volumes/SystemRoot/workspace/runtime/mobileasset-download-attributes/tests/mobileasset-pallas",
+        "/Volumes/SystemRoot/workspace/runtime/mobileasset-download-attributes/frameworks/MobileAsset.framework/Versions/A/MobileAsset"
+      ],
+      "log": "logs/mobileasset-download-attributes-mobileasset-pallas.log",
+      "log_sha256": "827dd0ce5ceb93248b94ab0530c9a27a425c31e82e02c29294ef8c5a1bd9774f",
+      "exit_status": 0
+    },
+    {
+      "source": "fixtures/hello/mobileasset-pallas-operations.m",
+      "source_sha256": "27d2f948564c678d875b454485343bf44a0f2781efa0852e05688e562c465d3d",
+      "binary": "runtime/mobileasset-download-attributes/tests/mobileasset-pallas-operations",
+      "binary_sha256": "527e8441fb51f06bcfe19238132b62dfb8c69bbb9ee47eb63aa6225b7a62aa13",
+      "command": [
+        "timeout",
+        "-k",
+        "5",
+        "60",
+        "bin/darling",
+        "shell",
+        "/usr/bin/env",
+        "OBJC_DISABLE_TAGGED_POINTERS=NO",
+        "DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/mobileasset-download-attributes/frameworks:/Volumes/SystemRoot/workspace/runtime/cryptex-native/frameworks:/Volumes/SystemRoot/workspace/runtime/device-identity-native/frameworks:/Volumes/SystemRoot/workspace/runtime/iokit-main-port-source/frameworks:/Volumes/SystemRoot/workspace/runtime/security-device-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/frameworks:/Volumes/SystemRoot/workspace/runtime/coreutils-crypto-source/frameworks:/Volumes/SystemRoot/workspace/runtime/security-cloud-rpc-stage/frameworks:/Volumes/SystemRoot/workspace/runtime/mdns-native/frameworks:/Volumes/SystemRoot/workspace/runtime/fsevents-heap-source/frameworks:/Volumes/SystemRoot/workspace/runtime/combine-native/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-legacy-key/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-cg-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-native/frameworks:/Volumes/SystemRoot/workspace/runtime/mobilegestalt-native/frameworks:/Volumes/SystemRoot/workspace/runtime/native-layer-context/frameworks:/Volumes/SystemRoot/workspace/runtime/native-layer-support/frameworks:/Volumes/SystemRoot/workspace/runtime/uniform-type-identifiers-native/frameworks:/Volumes/SystemRoot/workspace/runtime/security-policy-source/frameworks:/Volumes/SystemRoot/workspace/runtime/apple-system-info-native/frameworks:/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/frameworks:/Volumes/SystemRoot/workspace/runtime/logging-support-native/frameworks:/Volumes/SystemRoot/workspace/runtime/foundation-native-framework-stage:/Volumes/SystemRoot/workspace/runtime/native-framework-stage",
+        "DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/cryptex-native/libraries:/Volumes/SystemRoot/workspace/runtime/device-identity-native/libraries:/Volumes/SystemRoot/workspace/runtime/security-device-constants/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-quarantine-runtime/libraries:/Volumes/SystemRoot/workspace/runtime/expected-access-source/libraries:/Volumes/SystemRoot/workspace/runtime/typed-new-delete-source/libraries:/Volumes/SystemRoot/workspace/runtime/security-cloud-rpc-stage/libraries:/Volumes/SystemRoot/workspace/runtime/mdns-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-coherent/libraries:/Volumes/SystemRoot/workspace/runtime/objc-selector-source/libraries:/Volumes/SystemRoot/workspace/runtime/objc-selector-source:/Volumes/SystemRoot/workspace/runtime/imageio-legacy-key/libraries:/Volumes/SystemRoot/workspace/runtime/simd-matrix-source/libraries:/Volumes/SystemRoot/workspace/runtime/imageio-cg-constants/libraries:/Volumes/SystemRoot/workspace/runtime/imageio-native/libraries:/Volumes/SystemRoot/workspace/runtime/runnable-archs-source/libraries:/Volumes/SystemRoot/workspace/runtime/mobilegestalt-native/libraries:/Volumes/SystemRoot/workspace/runtime/container-persona/libraries:/Volumes/SystemRoot/workspace/runtime/log-hooks/libraries:/Volumes/SystemRoot/workspace/runtime/native-log-message/libraries:/Volumes/SystemRoot/workspace/runtime/log-enablement/libraries:/Volumes/SystemRoot/workspace/runtime/libtrace-pack-source/libraries:/Volumes/SystemRoot/workspace/runtime/native-layer-context/libraries:/Volumes/SystemRoot/workspace/runtime/native-layer-support/libraries:/Volumes/SystemRoot/workspace/runtime/container-manager-export/libraries:/Volumes/SystemRoot/workspace/runtime/sysdir-native-export/libraries:/Volumes/SystemRoot/workspace/runtime/sandbox-container-source/libraries:/Volumes/SystemRoot/workspace/runtime/rootless-nounlink-export/libraries:/Volumes/SystemRoot/workspace/runtime/typed-malloc-source/libraries:/Volumes/SystemRoot/workspace/runtime/os-log-simple-source/libraries:/Volumes/SystemRoot/workspace/runtime/rootless-datavault-export/libraries:/Volumes/SystemRoot/workspace/runtime/user-local-dir-export/libraries:/Volumes/SystemRoot/workspace/runtime/libtrace-source/libraries:/Volumes/SystemRoot/workspace/runtime/objc-source:/Volumes/SystemRoot/workspace/runtime/uti-runtime-support/libraries:/Volumes/SystemRoot/workspace/runtime/uniform-type-identifiers-native/libraries:/Volumes/SystemRoot/workspace/runtime/pthread-yield-export/libraries:/Volumes/SystemRoot/workspace/runtime/security-policy-source/libraries:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-native-library-stage:/Volumes/SystemRoot/workspace/runtime/native-library-stage:/Volumes/SystemRoot/workspace/runtime/rebuilt-der:/usr/lib/swift",
+        "/Volumes/SystemRoot/workspace/runtime/mobileasset-download-attributes/tests/mobileasset-pallas-operations",
+        "/Volumes/SystemRoot/workspace/runtime/mobileasset-download-attributes/frameworks/MobileAsset.framework/Versions/A/MobileAsset"
+      ],
+      "log": "logs/mobileasset-download-attributes-mobileasset-pallas-operations.log",
+      "log_sha256": "6c7f416d16e3bd5d66bec8f029338eb7d0b9ad3b7c6c9d526f692e48c9e2624a",
+      "exit_status": 0
+    }
+  ],
+  "actual_Pallas_client_transport_regression_verified": true,
+  "actual_Apple_download_daemon_verified": false,
+  "asset_download_implemented": false
+}

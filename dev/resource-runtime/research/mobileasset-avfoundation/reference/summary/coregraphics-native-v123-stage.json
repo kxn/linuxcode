@@ -1,0 +1,27 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/coregraphics-native-v123-stage.json",
+  "full_local_report_sha256": "b7a247feb043aa0b2e9dd7e040bd8c51bb9568e3e4b04927d6ed1f9c54937867",
+  "library": "runtime/coregraphics-native-v123/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+  "parent_stage": "artifacts/coregraphics-native-v122-stage.json",
+  "installed": false,
+  "runtime_execution_verified": false,
+  "resource_compilation_verified": false,
+  "added_install_paths": [
+    {
+      "target": "avfoundation-reexport-facade-v2",
+      "install_name": "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+      "destination": "runtime/coregraphics-native-v123/frameworks/AVFoundation.framework/Versions/A/AVFoundation"
+    },
+    {
+      "target": "avfoundation-closure-avfcore-resource-v2",
+      "install_name": "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore",
+      "destination": "runtime/coregraphics-native-v123/frameworks/AVFCore.framework/Versions/A/AVFCore"
+    },
+    {
+      "target": "avfoundation-closure-avfcapture-resource-v2",
+      "install_name": "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture",
+      "destination": "runtime/coregraphics-native-v123/frameworks/AVFCapture.framework/Versions/A/AVFCapture"
+    }
+  ]
+}

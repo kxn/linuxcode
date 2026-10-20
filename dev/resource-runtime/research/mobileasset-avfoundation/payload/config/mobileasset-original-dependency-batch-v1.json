@@ -1,0 +1,22 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+      "stem": "mobileasset-closure-mobileasset",
+      "existing_target": "mobileasset-patch-got-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport",
+      "stem": "mobileasset-closure-softwareupdatecoresupport"
+    }
+  ]
+}

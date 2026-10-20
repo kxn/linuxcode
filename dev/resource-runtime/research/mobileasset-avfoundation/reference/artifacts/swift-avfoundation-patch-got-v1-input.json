@@ -1,0 +1,99 @@
+{
+  "target": "swift-avfoundation-patch-got-v1",
+  "pin": {
+    "path": "/usr/lib/swift/libswiftAVFoundation.dylib",
+    "sha256": "8c3e6f9c3bc5efc11f644f46e23b283ccd21bffa461f0c019c8b6787ae3bdf00",
+    "reference_set": "fullsystem",
+    "objc_classes": 9,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 474,
+    "patch_got_range": [
+      "0x7ffa4000a000",
+      "0x7ffa400a1000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 651264,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+    "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+    "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreAudio.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftCoreImage.dylib",
+    "/usr/lib/swift/libswiftCoreMIDI.dylib",
+    "/usr/lib/swift/libswiftCoreMedia.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftQuartzCore.dylib",
+    "/usr/lib/swift/libswiftSynchronization.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "previous_manifest_sha256": "68b054fb72d17e20ee76364dcdb2531db79b9bbf4da6f70afdfdcce062fb8706",
+  "manifest_sha256": "16af6a570433248f2326ef7d8be2d793b297177f399b475e26e4de064bba63b3",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "swift-avfoundation-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "088a596729d4c11085423cb4e83ca3410c2680456a3b210ab5cf59bfeed19345",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 315,
+    "nonzero_addends": 0,
+    "got_cells": 474,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffa4009e970",
+          "0x7ffa4009e980"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/swift-avfoundation-patch-got-v1-build.log",
+  "log_sha256": "d259caeeb58f55cf4b832c12d58e5ac7491fc062b3fb027d44be758ab6dc1782"
+}

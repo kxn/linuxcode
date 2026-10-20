@@ -1,0 +1,44 @@
+{
+  "target": "avfoundation-reexport-facade-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+    "sha256": "3ae9547dd198e4544bed0caee7badabc83b67afaa87864d062a2a138c018c1c1",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true
+  },
+  "original_bytes": 4096,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+    "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore",
+    "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture",
+    "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "616a2af4f5075e49924e685cef60208200c1ed9b657a4e2d6ed2e7e35ce71818",
+  "manifest_sha256": "a664e8201ad78423dbdc0ae7567e1393466b5679aaf59a0d96d038bbaa6ccc3b",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "avfoundation-reexport-facade-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "48f04129a7f28573dc8d81d1f5c23d7d302c356298c9d32fc685aa9d76ee55e5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 1,
+  "log": "logs/avfoundation-reexport-facade-v1-build.log",
+  "log_sha256": "2ff6754fc4f11f87f31f6eff71631c927722aa959c74195d7b381e6d7fcfe05f"
+}

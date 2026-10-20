@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-16T13:56:13.523546+00:00",
+  "original_xcode_version_verified": true,
+  "exit_status": 0,
+  "command": [
+    "timeout",
+    "-k",
+    "5",
+    "60",
+    "bin/darling",
+    "shell",
+    "/usr/bin/env",
+    "OBJC_DISABLE_TAGGED_POINTERS=YES",
+    "DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/frameworks:/Volumes/SystemRoot/workspace/runtime/logging-support-native/frameworks:/Volumes/SystemRoot/workspace/runtime/foundation-native-framework-stage:/Volumes/SystemRoot/workspace/runtime/native-framework-stage",
+    "DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/quartzcore-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-native-library-stage:/Volumes/SystemRoot/workspace/runtime/native-library-stage:/Volumes/SystemRoot/workspace/runtime/rebuilt-der:/usr/lib/swift",
+    "/usr/bin/xcodebuild",
+    "-version"
+  ],
+  "selected_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/darlingserver-source-build/darlingserver/darlingserver",
+      "sha256": "ae78babd377dd542788f321752b11e9dea6413ee49d1009f00df825fdd9efd6b"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/libxpc-source/libxpc.dylib",
+      "sha256": "a5ef29a32f000ed41b15b429e987357c795e748aee3713c7f76f560e6cbf188e"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/launchd-source/launchd",
+      "sha256": "f8500434446bd490af768a1a0a051a0073a0330f65b9dae1170ea78838bf471f"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/libsystem-kernel-source/libsystem_kernel.dylib",
+      "sha256": "b51317a143657852f3aec7a50a0f25d595ee550d151d7c698a04bef2d459c3d2"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/quarantine-source/libquarantine.dylib",
+      "sha256": "da7bee840c07661b8c9a2a24ff1102f81b5a7882c84395c927617453b2f77df2"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/sandbox-source/libsystem_sandbox.dylib",
+      "sha256": "dee2a5ad670c8bb7eb12c30d89c5c4f7b8b71bc6d9221ba613af2c7a5c270bf3"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/libdyld-source/libdyld.dylib",
+      "sha256": "817d4cc7198e90b2c4dd9827ac6268960fd1a1da096612e96be17cd82e92b745"
+    }
+  },
+  "probe_sha256": "2c2c1733b0e7ad6860d8d016f894715b87a6b196be74b977a40623a516ae6365",
+  "driver_sha256": "d77b0d85019c9b3ff2e909a4550b46d2a125630dd899805c8c06480b36d4969e",
+  "log": "logs/mobileasset-source-xcode-version.log",
+  "log_sha256": "a9098b92aabe2d3e0a8ae48aeff5e2558f2ee363a73a62b5e10a9ff64f1ab96c",
+  "full_xcode_build_ready": false,
+  "signing_ready": false
+}

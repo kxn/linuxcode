@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-16T14:12:50.921542+00:00",
+  "evidence": {
+    "artifacts/mobileasset-source.json": "f4315bd2fae31f6cc51b5db9af816b0a8fac1cbbfcdd52f5abd4dc7b1acae7d5",
+    "artifacts/mobileasset-pallas-source.json": "f71dfbffa7c00d0a2c62c53c31c9f2c49c2958d59310d605ccc16ab85b89c57a",
+    "artifacts/mobileasset-source-xcode-probe.json": "2c2c1733b0e7ad6860d8d016f894715b87a6b196be74b977a40623a516ae6365",
+    "artifacts/mobileasset-source-xcode-version.json": "62437a972953eeb6cd382b0afaed92563a3c5dcd310900b79ac1dfbffed62e41",
+    "artifacts/mobileasset-pallas-native-analysis.json": "db3221d54dedf91389ac7573f71bd45730c56275aa29081b4a60822ace6a20f9",
+    "artifacts/mobileasset-dvt-callers.json": "934ecd7664cebac793b4199e0696d2b6678bdffcaf60ceb99a3eecd62ff01a15",
+    "artifacts/mobileasset-xpc-native-analysis.json": "ef2cd88c618e9d5ed895f04bc39b3873694790737010bd9ade28bfc8e5a989b3",
+    "artifacts/darling-mobileasset-pallas.patch": "52cb8a66975ebf2b6691b548224a114fe2952796132af63fc415d51e0855d73a",
+    "artifacts/libdyld-source-progress.json": "b0c55b15e93b2c852d101ba67f2b314e36eb2dcc62a001cbb7f3b57ed2bd2e61"
+  },
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/darlingserver-source-build/darlingserver/darlingserver",
+      "sha256": "ae78babd377dd542788f321752b11e9dea6413ee49d1009f00df825fdd9efd6b"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/libxpc-source/libxpc.dylib",
+      "sha256": "a5ef29a32f000ed41b15b429e987357c795e748aee3713c7f76f560e6cbf188e"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/launchd-source/launchd",
+      "sha256": "f8500434446bd490af768a1a0a051a0073a0330f65b9dae1170ea78838bf471f"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/libsystem-kernel-source/libsystem_kernel.dylib",
+      "sha256": "b51317a143657852f3aec7a50a0f25d595ee550d151d7c698a04bef2d459c3d2"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/quarantine-source/libquarantine.dylib",
+      "sha256": "da7bee840c07661b8c9a2a24ff1102f81b5a7882c84395c927617453b2f77df2"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/sandbox-source/libsystem_sandbox.dylib",
+      "sha256": "dee2a5ad670c8bb7eb12c30d89c5c4f7b8b71bc6d9221ba613af2c7a5c270bf3"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/libdyld-source/libdyld.dylib",
+      "sha256": "817d4cc7198e90b2c4dd9827ac6268960fd1a1da096612e96be17cd82e92b745"
+    }
+  },
+  "complete_source_framework_build": true,
+  "source_framework": {
+    "path": "runtime/mobileasset-source/frameworks/MobileAsset.framework/Versions/A/MobileAsset",
+    "sha256": "26b3bc89fd8df1ef91d52b08868ac2209354f362a704adef492b7b06549275b5"
+  },
+  "actual_protocol_fixture_requests": 348,
+  "actual_concurrent_protocol_fixture_requests": 256,
+  "real_Apple_service_daemon_implemented": false,
+  "original_xcode_version_verified": true,
+  "original_sdk_listing_exit_status": 255,
+  "current_missing_symbol": "_ASI_GetCurrentCPUDescriptionWithFormat",
+  "remaining_DVT_MobileAsset_API_semantics": [],
+  "all_five_client_operation_protocols_verified": true,
+  "implementation_form": "Complete Darling source framework plus existing seven source runtime components, selected by per-invocation framework path. All five DVT Pallas clients use real named XPC transport, not hooks or fixed-result stubs. Audience string ownership and true connection-interruption retry/limit are tested. Other external compatibility adapters remain.",
+  "limitations": [
+    "Bootstrap preflight handles an absent service without entering the old unconnected-channel backend. A service disappearing between lookup and XPC activation remains a backend race to resolve.",
+    "Other MobileAsset APIs remain legacy stubs. No real Apple daemon interoperation or end-to-end download proof.",
+    "Positive replies came from a separate test protocol server over real Mach/XPC, not the original Apple daemon.",
+    "Tests exercise a controlled protocol server, not daemon authorization, catalog or download semantics."
+  ],
+  "full_xcode_build_ready": false,
+  "signing_ready": false
+}

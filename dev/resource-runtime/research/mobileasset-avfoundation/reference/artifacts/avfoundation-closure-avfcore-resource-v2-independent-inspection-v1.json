@@ -1,0 +1,115 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1791942,
+      "sha256": "acff49739f56512d51b6e248f08f77a5f469ec242971eda4d002d58f77a9e245"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 5580,
+      "sha256": "4907649819582df5060ae0f044931de28f3542a00d8b779d21c0add0b9faad98"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 3051,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 9072,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "dysymtab_alias_repair": {
+    "verified": true,
+    "symbol_count": 23707,
+    "actual_type_groups": [
+      18666,
+      2111,
+      2930
+    ],
+    "external_aliases": 4,
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 4122,
+    "remapped_indirect_entries": 3771,
+    "original_sha256": "cc1b538a571b0ab9cc0326cb9d0a8a4e998925aabfae1e5f59e5d3c58b21d680",
+    "candidate_sha256": "2120011c748d6a9e158f8bec02a792c32f3a868e77392eb7ffc1adb3040bd41c"
+  },
+  "dysymtab_alias_verifier": {
+    "source": "scripts/verify-dysymtab-alias-repair.py",
+    "sha256": "7574f93bf8b65d498e4bbad65b0f2ea6e7304463fcc711e740daf0197649c683"
+  },
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 64,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65af0",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65b08",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65b20",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65b38",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65b50",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65b68",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65b80",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x65b98",
+        "first_section_prefix": "0xbe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-avfoundation-closure-avfcore-resource-v2/AVFCore': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x419fc)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-jo0e_tfb/avfoundation-closure-avfcore-resource-v2-result.json",
+    "original_validator_sha256": "faf5edbf7e3b69951cc20d32abc752d51ec1a9e69908c241696c9ed15adf1f84",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "619df23700aa0c8f62b3dcf7f74811bca8f9a3ab848132567518f6b02f789937",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "4b9ab6d60cf5cbb9134d88b2ba864649ba719454daade915ab16a201a8ae37b1",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore": "cc1b538a571b0ab9cc0326cb9d0a8a4e998925aabfae1e5f59e5d3c58b21d680",
+    "runtime/rebuilt-avfoundation-closure-avfcore-resource-v2/AVFCore": "2120011c748d6a9e158f8bec02a792c32f3a868e77392eb7ffc1adb3040bd41c",
+    "runtime/rebuilt-avfoundation-closure-avfcore-resource-v2/reconstruction.json": "293bc9e78d14f3a5986f0db86e3c9bc81e9c2449a1ddba83dd0cb600b7a3d97c"
+  },
+  "verified": true
+}
