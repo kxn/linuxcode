@@ -10,7 +10,7 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[SIMD 与原版 AppKit 检查点](dev/resource-runtime/research/simd-appkit-singletons/README.md)通过 60 项 SIMD 原生检查，选入原版 AppKit 与九项强依赖，并恢复 32 个 Swift 单例类元数据。完整 Unity/CocoaPods 工程已越过 AppKit 协议缺失，现停在 ApplicationServices 的 AX 常量；仍无 CompileC 或最终 App。
+最新的[SIMD 与原版 AppKit 检查点](dev/resource-runtime/research/simd-appkit-singletons/README.md)通过 60 项 SIMD 原生检查，选入原版 AppKit 与九项强依赖，核验 32 个 Swift 单例类，并补回类表外的 4 个。完整 Unity/CocoaPods 工程已越过 AppKit 协议缺失，现停在 ApplicationServices 的 AX 常量；仍无 CompileC 或最终 App。
 
 此前的[原版资源依赖与符号表检查点](dev/resource-runtime/research/accessibility-runtime-inventory/README.md)选入七个原版映像，修复改名符号别名、嵌入 dylib 搜索及纯数据映像恢复。完整 Unity/CocoaPods workspace 正常返回 65，资源工具当前缺少 libSystem 的 double4x4 矩阵常量；尚无 CompileC 或最终 App。
 

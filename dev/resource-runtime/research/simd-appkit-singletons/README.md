@@ -10,7 +10,7 @@
 
 AppKit 的首次恢复暴露了两类真实数据：lround 的原版跳转桩/GOT 身份，以及不在 objc_classlist 中的 Swift 单例类。lround 经原版缓存 patch 记录、GOT 单元及 libSystem 到 libm 的重导出链核对，不按折叠后的相同函数地址猜名字。另外两个未识别指针来自 TrustedUIServiceProxy 的共享缓存方法/协议列表，随后由真实的单例类元数据恢复处理；没有把它们绑定到猜测的导出，也没有关闭未知跳转桩检查。
 
-Swift ABI 的 TargetSingletonMetadataInitialization 对无 resilient ancestry 的类存储 IncompleteMetadata，对另一类存储 ResilientPattern。新增检查器验证前一种布局的 descriptor 身份、Swift 类标志、元类和双方 ro-data。恢复覆盖 AppKit 中 32 个单例类及其元类，共 64 个对象。独立读取原始 cache 与实际候选，逐项比对 277 个方法的名称、类型、实现地址，以及 10 个协议名称和正确的空方法缓存绑定。八项损坏的解码引用夹具、四项实际候选字节篡改被拒绝；既有 Foundation 的 pack/environment 元数据与五项损坏记录检查也通过。这些是结构与身份核验，不是全部 AppKit API 的运行证明。
+Swift ABI 的 TargetSingletonMetadataInitialization 对无 resilient ancestry 的类存储 IncompleteMetadata，对另一类存储 ResilientPattern。新增检查器验证前一种布局的 descriptor 身份、Swift 类标志、元类和双方 ro-data。核验覆盖 AppKit 中 32 个单例类及其元类，共 64 个对象。其中 28 个类原已由 objc_classlist 路径覆盖，新增恢复的是其余 4 个类及元类，共 8 个对象。独立读取原始 cache 与实际候选，逐项比对 277 个方法的名称、类型、实现地址，以及 10 个协议名称和正确的空方法缓存绑定。八项损坏的解码引用夹具、四项实际候选字节篡改被拒绝；既有 Foundation 的 pack/environment 元数据与五项损坏记录检查也通过。这些是结构与身份核验，不是全部 AppKit API 的运行证明。
 
 暂存工具还修复了将所有框架写为 Versions/A 的问题。AppKit 现在保留原始 Versions/C，Current 链接指向 C，未版本化入口解析到相同原版字节。错误的 v135 阶段和失败 overlay 日志保留；选中的 v136 从 v134 扩展，不继承错误的 AppKit 路径。
 
@@ -42,3 +42,5 @@ python3 scripts/probe-direct-resource-tools.py \
 最后一个命令当前应报告 kAXElementOrderHorizontalKey 缺失。不要把工具的版本查询、格式检查或元数据检查当作资源编译成功。新的 tag、报告和阶段目录必须采用新名字，不能覆盖已映射库和既有证据。所有原生命令串行使用同一会话锁，清除 DISPLAY、WAYLAND_DISPLAY、XAUTHORITY。
 
 reference/original-file-map.json 保存原始文件路径与 SHA；日志和历史源码用 JSON text 封装，解码后可核对原始 SHA。reference/summary 仅是本地大报告的摘要，不能直接作为运行配置输入。Foundation 回归测试只将原有测试输出路径换成新名字，保留旧结果；没有改变其断言或测试逻辑。
+
+当前进度以 reference/artifacts/simd-appkit-resource-progress-v2.json 为准，类表成员核对见 appkit-singleton-registration-inventory-v1.json。v1 记录保留原始字节；其 additional 字段将全部核验范围标成新增范围，已在 v2 分开统计。
