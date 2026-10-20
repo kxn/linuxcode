@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v122.json",
+    "--tool",
+    "ibtool"
+  ],
+  "outer_status": 1,
+  "capture": {
+    "pid": 255214,
+    "gdb_status": 0,
+    "gdb_log": "logs/mach-msg2-ibtool-fault-v1.gdb.log",
+    "maps": "logs/mach-msg2-ibtool-fault-v1.maps.log"
+  },
+  "log": "logs/mach-msg2-ibtool-fault-v1-driver.log",
+  "log_sha256": "9ecb1214ffc3590d7caf2ca6add5e07b8d2f94f21e5f149044345b0a65dfffe5",
+  "source_sha256": "e11345702a4ca9252bdcb8e00d23a31d26164a644ffd64ae2c5f03ebb4495e84"
+}

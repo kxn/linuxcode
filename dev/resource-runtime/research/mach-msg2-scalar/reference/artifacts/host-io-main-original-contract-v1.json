@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "old_name": "host_get_io_master",
+  "new_name": "host_get_io_main",
+  "MIG_message_id": 205,
+  "SDK_uses_preprocessor_to_select_name_for_same_routine": true,
+  "implementation": "Forward same typed arguments to existing MIG client; preserve kernel validation, message transport, return status and port right ownership.",
+  "files": {
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/mach_host.defs": "2a10de1ef0c788c237e29d9e1562c33f0499fa406ead33be7925e7446f5b450e",
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/mach/mach_host.h": "f21f7dd7863270a154498a34ead50197fe13d4aa24e8475dcb30f4175f6b3a4a",
+    "runtime/host-io-main-kernel-v1/generated/libsyscall/mach/mach_hostUser.c": "149486e869a3b983cf87d2723938cd4fafd0440b6ca886ed8ce1aad87d2a6aa3",
+    "vendor/darling/src/external/xnu/libsyscall/mach/host.c": "f991007b3cc6920a07926838ad6f304c38f02edc8913e4b62652da0436922354"
+  },
+  "runtime_verified": false
+}

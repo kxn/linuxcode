@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "repository": "https://github.com/apple-oss-distributions/xnu",
+    "commit": "f6217f891ac0bb64f3d375211650a4c1ff8ca1ea",
+    "files": {
+      "libsyscall/mach/mach_msg.c": {
+        "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/f6217f891ac0bb64f3d375211650a4c1ff8ca1ea/libsyscall/mach/mach_msg.c",
+        "sha256": "d2b9f677f8ed2e3338c23ace865a889208a5d2a0147f05d6e0b82115703b5cfa"
+      },
+      "osfmk/mach/message.h": {
+        "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/f6217f891ac0bb64f3d375211650a4c1ff8ca1ea/osfmk/mach/message.h",
+        "sha256": "ad64b7b413b42e196dc43a54a5978aa049b9133db1fe9369893f12ad4718c615"
+      },
+      "osfmk/ipc/mach_msg.c": {
+        "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/f6217f891ac0bb64f3d375211650a4c1ff8ca1ea/osfmk/ipc/mach_msg.c",
+        "sha256": "85a96ee426f6a2efb5eb12b5747e77315091d22ea330a26a88abf67883569609"
+      },
+      "osfmk/ipc/ipc_kmsg.c": {
+        "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/f6217f891ac0bb64f3d375211650a4c1ff8ca1ea/osfmk/ipc/ipc_kmsg.c",
+        "sha256": "0b7ee06c334d9b891ec3643c0b68f20bc419225ff6f3413e6bb7e5b05bcdeea2"
+      },
+      "osfmk/ipc/ipc_policy.c": {
+        "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/f6217f891ac0bb64f3d375211650a4c1ff8ca1ea/osfmk/ipc/ipc_policy.c",
+        "sha256": "161a01701b634adc21607969d417d2a54f5e15c6f6f57eea4b2521a0e09e2309"
+      }
+    },
+    "reference_only": true
+  },
+  "classification": "partial scalar backend implementation",
+  "kernel_source_build": "artifacts/mach-msg2-kernel-v1-build.json",
+  "server_source_build": "runtime/shared-remap-server-96t446yt/stage.json",
+  "stage": "artifacts/private-procfs-auditsession6-stage.json",
+  "native_probe": "runtime/mach-msg2-scalar-e_20zbxu/result.json",
+  "native_checks_per_positive": 115,
+  "baseline_missing_status": 12,
+  "positive_status": 0,
+  "wrong_count_status": 15,
+  "captured_header_from_register_arguments": true,
+  "readonly_send_buffer_verified": true,
+  "packed_descriptor_count_authoritative": true,
+  "real_kernel_MIG_combined_send_receive_verified": true,
+  "kobject_messagequeue_selector_mismatch_rejected": true,
+  "invalid_data_size_destination_timeout_and_option_errors_verified": true,
+  "vector_auxiliary_DriverKit_and_new_unsupported_low_options_rejected": true,
+  "vector_and_auxiliary_implemented": false,
+  "full_modern_guard_exception_and_hardened_policy_implemented": false,
+  "interruption_restart_native_tested": false,
+  "full_goal_complete": false
+}

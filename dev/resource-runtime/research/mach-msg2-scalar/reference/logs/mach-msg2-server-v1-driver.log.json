@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/mach-msg2-server-v1-driver.log",
+  "original_sha256": "3861d3869809a3d9927c20b3782c072f809f588e900fdd527b2d8b6ff44162ab",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/build-shared-remap-server.py\", line 35, in <module>\n    subprocess.run(command, cwd=root, stdout=stream, stderr=subprocess.STDOUT, check=True)\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 577, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['cmake', '--build', '/home/dl/linuxcode/runtime/darlingserver-source-build', '--target', 'darlingserver', '-j', '8']' returned non-zero exit status 1.\n"
+}
