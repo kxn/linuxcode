@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--configuration",
+    "config/direct-resource-tool-environment-v123.json",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--tool",
+    "ibtool",
+    "--dvt-raw-backtraces"
+  ],
+  "capture": {
+    "pid": 271790,
+    "gdb_status": 0,
+    "entry_runtime_address": "0x7f7beaaa4a5a",
+    "original_entry_bytes": "554889e541574156",
+    "gdb_log": "logs/swift-any-ibtool-primary-assertion-v3.gdb.log",
+    "maps": "logs/swift-any-ibtool-primary-assertion-v3.maps.log"
+  },
+  "outer_status": 1,
+  "log": "logs/swift-any-ibtool-primary-assertion-v3-driver.log",
+  "log_sha256": "37857b3d1911f1ed15e4a73e5687ac8e702825fdfcae4669ba1df3baeaf9b4cb",
+  "sources": {
+    "scripts/capture-ibtool-dvt-assertion.py": "2fcbd0da4228d1109eb426afa89d18a62c9b7d389b5b525d013171fd58600393",
+    "scripts/gdb-dvt-assertion-arguments.py": "ec65be78b0c64f0382ee4d299c19dd8e9c0ec7d099325db1153c0f9176c8bd0b",
+    "runtime/state/prefix/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation": "d5441c8335f76c44d03f62e5dec2d5e073cef83b97aa08623cdc66509bf3dad6"
+  }
+}

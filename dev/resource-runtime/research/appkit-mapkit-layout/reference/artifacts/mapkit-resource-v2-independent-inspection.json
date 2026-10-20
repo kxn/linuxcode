@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 2150751,
+      "sha256": "8453285a469e5f65a8c8aa338b0721dc3696dc14e77f7eafec470132c0b0665e"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2484,
+      "sha256": "63f9da047cd25488ceb4b95f4eadd2d50006402c082cf9107bcb9e3b49e162a8"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1106,
+  "nonzero_addends_verified": 2,
+  "serialized_bindings": 5747,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 3,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 169,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c1a0",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c1b8",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c1d0",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c1e8",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c200",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c218",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c230",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6c248",
+        "first_section_prefix": "0xf40",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-mapkit-resource-v2/MapKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1fb89)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ofkveix9/mapkit-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1fb89",
+        "segment": "__DATA_CONST",
+        "offset": "0x6c1a0",
+        "actual_address": "0x272851a0",
+        "LLVM_section_base_address": "0x272860e0",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "287b5b7c0ae7b6e317b95b5646d05c17641fb0087e24dafea8d17a2c60cb70b5",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "782dd0e14e7d9b250ed90e499d0fc2208dd50d3ddba5dfa350f4f029903181c2",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "5e84926f1054e5ae1002b3f00e75465d21e0c2561a5ae5ad9251dd842d3d1cf3",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/MapKit.framework/Versions/A/MapKit": "677251869a7dbe63aba5ccb6c88c78697de55608d4973079de8249bdd3ccd443",
+    "runtime/rebuilt-mapkit-resource-v2/MapKit": "34c35b3e6cb7383e16095b720a2a891b24bf7841b6eff0ff4c4edc1cecf6c72f",
+    "runtime/rebuilt-mapkit-resource-v2/reconstruction.json": "b44288aa2c7301788020e8b9f25154a6510ee803d86443eff8d6643396429144"
+  },
+  "verified": true
+}

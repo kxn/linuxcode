@@ -1,0 +1,40 @@
+{
+  "classification": "progress",
+  "full_goal_complete": false,
+  "configuration": "config/direct-resource-tool-environment-v126.json",
+  "backend_stage": "artifacts/private-procfs-auditsession6-stage.json",
+  "nil_path_capture": "artifacts/mapkit-ibtool-nil-data-v2.json",
+  "nil_path_symbolication": "artifacts/mapkit-ibtool-nil-data-v2-nlist-symbolication.json",
+  "original_caller": "IBInterfaceBuilderPlugin initializeLayoutRules -> IBLayoutRuleManager addLayoutRulesFromFile -> NSData initWithContentsOfFile",
+  "original_lookup": {
+    "bundleForClass": "NSUserInterfaceTheme",
+    "resource": "AquaGuideRules",
+    "type": "plist",
+    "reference_Xcode_thin": "runtime/ib-layout-rule-inspection-v1/IDEInterfaceBuilderKit",
+    "reference_binary_sha256": "59c711f5c2e1d88b535851e939a78c0d4c167188ff84538c6472c4ad836cedc2",
+    "call_vmaddr": "0x1fc133",
+    "layout_rule_call_vmaddr": "0x1fc187",
+    "resource_name_CFString_vmaddr": "0x5b2d90"
+  },
+  "original_resources": {
+    "source_OS_build": "25G83",
+    "bundle_identifier": "com.apple.AppKit",
+    "files": {
+      "runtime/recovery/macOS Base System/System/Library/Frameworks/AppKit.framework/Versions/C/Resources/Info.plist": "be449ca086b5d5f6596f29a4df2cd562a303b9d14c053cf8ae275dcda0f4221e",
+      "runtime/recovery/macOS Base System/System/Library/Frameworks/AppKit.framework/Versions/C/Resources/AquaGuideRules.plist": "95723308c5bf5ea0173d4abffdd51f3fb6fa0940edae8fcd2e96f44321681f6c"
+    },
+    "original_binary_changed": false,
+    "runtime_execution_verified": false
+  },
+  "native_probe": "runtime/appkit-layout-resource-euw7ugtb/result.json",
+  "expected_bytes": 9699,
+  "parsed_rule_groups": 28,
+  "existing_overlay_files_byte_equal": 181,
+  "only_added_original_data": true,
+  "default_direct_tool_probe": "runtime/direct-resource-tools-_yeiznu_/result.json",
+  "raw_diagnostic_tool_probe": "runtime/direct-resource-tools-2mmrs92y/result.json",
+  "next_blocker": "Original tools still abort 134 after loading layout resources; default failure formatting enters CoreSymbolication and the cache adapter assertion. Diagnostic raw invocation also aborts 134 without printing a primary message. Capturing the original exception or abort stack next.",
+  "resource_compilation_verified": false,
+  "full_Unity_UE_App_build_and_signing_verified": false,
+  "default_installer_promoted": false
+}

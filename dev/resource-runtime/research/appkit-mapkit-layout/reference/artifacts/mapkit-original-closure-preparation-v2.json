@@ -1,0 +1,217 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/mapkit-original-closure-preparation-v2.json",
+  "configuration_sha256": "4a407faa405934c715b4aa30809e1dcf715f25bcd20684b9320968972a3964ee",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+      "attempts": [
+        {
+          "target": "mapkit-closure-geoanalytics-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-closure-geoanalytics-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mapkit-closure-geoanalytics-resource-v1-batch-preparation.log",
+          "log_sha256": "27ef282c092f9d19940fc4a5902587406d636fe9edba4dd7209de01d21d01b38",
+          "preparation": "artifacts/mapkit-closure-geoanalytics-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'mapkit-closure-geoanalytics-resource-v1', '--output', 'artifacts/mapkit-closure-geoanalytics-original-import-audit-v1.json', '--follow-explicit-reexports', '--coalesce-equivalent-reexports']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Navigation.framework/Versions/A/Navigation",
+      "attempts": [
+        {
+          "target": "mapkit-closure-navigation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Navigation.framework/Versions/A/Navigation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-closure-navigation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mapkit-closure-navigation-resource-v1-batch-preparation.log",
+          "log_sha256": "7a06a42f4a98ecdb340005a04816212dd0661307be5ce223a8c0beb3e790c78d",
+          "preparation": "artifacts/mapkit-closure-navigation-resource-v1-input.json"
+        },
+        {
+          "target": "mapkit-closure-navigation-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "mapkit-closure-navigation-resource-v1",
+            "--exact-import-audit",
+            "artifacts/mapkit-closure-navigation-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-closure-navigation-resource-v2",
+            "--build"
+          ],
+          "log": "logs/mapkit-closure-navigation-resource-v2-batch-preparation.log",
+          "log_sha256": "da92b20abf495b2fac193471d78b6f7c5f04fca1228a88b5d446c1548320d4b2",
+          "preparation": "artifacts/mapkit-closure-navigation-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "mapkit-closure-navigation-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit",
+      "attempts": [
+        {
+          "target": "mapkit-closure-vectorkit-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-closure-vectorkit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mapkit-closure-vectorkit-resource-v1-batch-preparation.log",
+          "log_sha256": "0d441332e1688eb9ddfc2a1ea99f49659672b9129c9a2c8a12be05b67f4cbeb4",
+          "preparation": "artifacts/mapkit-closure-vectorkit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'mapkit-closure-vectorkit-resource-v1', '--output', 'artifacts/mapkit-closure-vectorkit-original-import-audit-v1.json', '--follow-explicit-reexports', '--coalesce-equivalent-reexports']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VirtualGarage.framework/Versions/A/VirtualGarage",
+      "attempts": [
+        {
+          "target": "mapkit-closure-virtualgarage-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/VirtualGarage.framework/Versions/A/VirtualGarage",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-closure-virtualgarage-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mapkit-closure-virtualgarage-resource-v1-batch-preparation.log",
+          "log_sha256": "d0b4d444b893b68031d75cbef042dfc9fbffe9d40c1cb804acdac357596e9cdd",
+          "preparation": "artifacts/mapkit-closure-virtualgarage-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mapkit-closure-virtualgarage-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory",
+      "attempts": [
+        {
+          "target": "mapkit-closure-externalaccessory-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-closure-externalaccessory-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mapkit-closure-externalaccessory-resource-v1-batch-preparation.log",
+          "log_sha256": "04e64e7a94418e98fbf7f2cf3716963324047f4dea09f33a27dc5f1a3f2e2728",
+          "preparation": "artifacts/mapkit-closure-externalaccessory-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mapkit-closure-externalaccessory-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IAP.framework/Versions/A/IAP",
+      "attempts": [
+        {
+          "target": "mapkit-closure-iap-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/IAP.framework/Versions/A/IAP",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-closure-iap-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mapkit-closure-iap-resource-v1-batch-preparation.log",
+          "log_sha256": "167929ff39e53b41664bec19d4b9ec85e3769b1cdb853116418d6e217c5c23ba",
+          "preparation": "artifacts/mapkit-closure-iap-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "mapkit-closure-iap-resource-v1"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "target": "mapkit-closure-geoanalytics-resource-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+    "sha256": "d909c81b409592f9dbea69f3a548058846d12dd478638253eda20a273c238c57",
+    "reference_set": "fullsystem",
+    "objc_classes": 28,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 1,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 347,
+    "patch_got_range": [
+      "0x7ffc40005000",
+      "0x7ffc40092000"
+    ],
+    "preserve_swift_code_with_patch_got": true,
+    "cache_imports": {
+      "_$s10Foundation4UUIDVMa": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation4UUIDV36_unconditionallyBridgeFromObjectiveCyACSo6NSUUIDCSgFZ": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation4UUIDVMn": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_scalbn": "/usr/lib/libSystem.B.dylib",
+      "_$ss6UInt32VMn": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss6UInt64VMn": "/usr/lib/swift/libswiftCore.dylib"
+    }
+  },
+  "original_bytes": 1400832,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/usr/lib/libcompression.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/GeoServicesCore.framework/Versions/A/GeoServicesCore",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "f0b8a3807247ffc62f7d9cb704e529e93847ca449e6f11e655ef89ed6d2f25a8",
+  "manifest_sha256": "ba6e607c88930c6a88463f273005552f0f9759c6c44905a493f18a8549f5c2ff",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mapkit-closure-geoanalytics-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "mapkit-closure-geoanalytics-resource-v1",
+  "exact_import_audit": "artifacts/mapkit-closure-geoanalytics-original-import-audit-v2.json",
+  "exact_import_audit_sha256": "8c8ca53260e4c1305cc4ab95a3d7dd63e7e000d93f62dde8590a831c3e171eec",
+  "typed_class_aliases": [],
+  "explicit_reexports": {
+    "chains": [],
+    "original_provider_sha256": {}
+  },
+  "typed_pooled_imports": [
+    {
+      "kind": "original-stub-GOT-and-reexport-route",
+      "target": "0x7ff812dd9e6b",
+      "slots": [
+        "0x7ffc40090db8"
+      ],
+      "selected": [
+        "_scalbn",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "stubs": [
+        {
+          "address": "0x7ffc1571706a",
+          "slot": "0x7ffc40090db8",
+          "bytes": "ff25489d972a"
+        }
+      ],
+      "route": [
+        {
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "symbol": "_scalbn",
+          "kind": "whole-library-reexport",
+          "ordinal": 25,
+          "dependency": "/usr/lib/system/libsystem_m.dylib"
+        },
+        {
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "symbol": "_scalbn",
+          "kind": "address",
+          "export": [
+            "address",
+            140703445130859,
+            0
+          ]
+        }
+      ],
+      "original_file_sha256": {
+        "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics": "d909c81b409592f9dbea69f3a548058846d12dd478638253eda20a273c238c57",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+        "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+      },
+      "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+      "records": [
+        {
+          "symbol": "_scalbn",
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "kind": 0,
+          "implementation": 140703445130859,
+          "matching_import_names": [
+            "_scalbn"
+          ],
+          "slot": 140721382821304,
+          "addend": 0,
+          "weak_import": false,
+          "high7": 0,
+          "target": 140703445130859,
+          "target_matches_patch": true,
+          "export_matches_patch": true,
+          "provider_index": 155,
+          "export_index": 53708,
+          "location_index": 107104
+        }
+      ]
+    }
+  ],
+  "pooled_import_validator_sha256": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+  "original_patch_contract": {
+    "original_records": 3450,
+    "nonzero_addends": 1,
+    "got_cells": 347,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/mapkit-closure-geoanalytics-resource-v2-build.log",
+  "log_sha256": "dc232aee38e21ad77e1b5ef7fc84bcebb7a5c2f5467d93d4b53b6d9aaa586cd9"
+}

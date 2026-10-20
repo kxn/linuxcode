@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 788502,
+      "sha256": "e7b9d32d78cc455f36f5d0138a635071352477d397e4ab9136a80faff3580f03"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 690,
+      "sha256": "5072539e0b7f4b704be92b08723b487a6bc08704d9ad81a623651d871156377d"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 347,
+  "nonzero_addends_verified": 1,
+  "serialized_bindings": 3742,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 141,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27170",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27198",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x271c0",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x271e8",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27210",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27238",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27260",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x27288",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-mapkit-closure-geoanalytics-resource-v2/GeoAnalytics': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x246cf)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ofkveix9/mapkit-closure-geoanalytics-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x246cf",
+        "segment": "__DATA_CONST",
+        "offset": "0x27170",
+        "actual_address": "0x2c884170",
+        "LLVM_section_base_address": "0x2c884660",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      }
+    ],
+    "original_validator_sha256": "ae1f0ddc022745b152adef42b97d83d6433ce0d884976688c55f3df67e338c99",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "8ac1d71a26d14337ceaed2d4219ca86a5d0bfc69dbabd66fd23ff900e37d85c1",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "5e84926f1054e5ae1002b3f00e75465d21e0c2561a5ae5ad9251dd842d3d1cf3",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics": "d909c81b409592f9dbea69f3a548058846d12dd478638253eda20a273c238c57",
+    "runtime/rebuilt-mapkit-closure-geoanalytics-resource-v2/GeoAnalytics": "a71b331fb234276eae0df3c8df9eafe356ee83b782010de32a6b8dac42f69391",
+    "runtime/rebuilt-mapkit-closure-geoanalytics-resource-v2/reconstruction.json": "8634c7448351ded8d86cee836897cc588e53547614e0648c72a7d343abcf41b3"
+  },
+  "verified": true
+}

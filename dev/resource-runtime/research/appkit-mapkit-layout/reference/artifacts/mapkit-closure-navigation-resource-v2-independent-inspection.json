@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1594663,
+      "sha256": "8f4ce8882085c32d965e76136365a680be00df663e49f95bf633cc7c1436027d"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3426,
+      "sha256": "5e30ffb418f042693aea4aa4873f8574955f2a4469b50da32f3c052a7301f9ec"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1056,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 5083,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 2,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 44,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x45580",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x45598",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x455b0",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x455c8",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x455e0",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x455f8",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x45610",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x45628",
+        "first_section_prefix": "0x6d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-mapkit-closure-navigation-resource-v2/Navigation': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1e581)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ofkveix9/mapkit-closure-navigation-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1e581",
+        "segment": "__DATA_CONST",
+        "offset": "0x45580",
+        "actual_address": "0x2c0b8580",
+        "LLVM_section_base_address": "0x2c0b8c50",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "0f6d1d4a76dbba1f0f9b195db33e2965203b785d27453a6eef6ba219a7ead594",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "e8dd298ad39379adbcf989584c1d45ca2eb9cf5a8f1349a0c509fae0761bdc52",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "5e84926f1054e5ae1002b3f00e75465d21e0c2561a5ae5ad9251dd842d3d1cf3",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/Navigation.framework/Versions/A/Navigation": "395f9b5f662d062d45aad96ca38eb7c2c57103ede931312299053472885f7a1c",
+    "runtime/rebuilt-mapkit-closure-navigation-resource-v2/Navigation": "1b4e72588817eb0350045bbba2e4b83cdf3a95a39a9508c8e554dc6f4b61c837",
+    "runtime/rebuilt-mapkit-closure-navigation-resource-v2/reconstruction.json": "7af5f28ace7a5a3447462b2cb989cab727d5fa168ddcd2dfd338ead0648c60fa"
+  },
+  "verified": true
+}

@@ -1,0 +1,62 @@
+{
+  "target": "mapkit-closure-externalaccessory-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory",
+    "sha256": "c1587e39f98cf2f49418f9e3224957c6418ee11132fb73d9f9a76e6a63b8d692",
+    "reference_set": "fullsystem",
+    "objc_classes": 10,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 241,
+    "patch_got_range": [
+      "0x7ff940007000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 192512,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/IAP.framework/Versions/A/IAP",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "c8edc1e601902e339e056b88f368324e2b1d873bc0168038687890d485162ac5",
+  "manifest_sha256": "81525dbb642a1c399604d0b1d2bd4d873b09f4055062c3ba1e35386d1eec6a37",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mapkit-closure-externalaccessory-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 470,
+    "nonzero_addends": 0,
+    "got_cells": 241,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/mapkit-closure-externalaccessory-resource-v1-build.log",
+  "log_sha256": "cb628ffc2c83a1a80448919427a2eb21dd1b14f813d0dd6c821b85d29a537c99"
+}

@@ -1,0 +1,51 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/mapkit-original-closure-preparation-v2.json",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/MapKit.framework/Versions/A/MapKit",
+      "prepared_target": "mapkit-resource-v2",
+      "attempts": []
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+      "prepared_target": "mapkit-closure-geoanalytics-resource-v2",
+      "attempts": []
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Navigation.framework/Versions/A/Navigation",
+      "prepared_target": "mapkit-closure-navigation-resource-v2",
+      "attempts": []
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit",
+      "prepared_target": "mapkit-closure-vectorkit-resource-v2",
+      "attempts": []
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VirtualGarage.framework/Versions/A/VirtualGarage",
+      "prepared_target": "mapkit-closure-virtualgarage-resource-v1",
+      "attempts": []
+    },
+    {
+      "image": "/System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory",
+      "prepared_target": "mapkit-closure-externalaccessory-resource-v1",
+      "attempts": []
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IAP.framework/Versions/A/IAP",
+      "prepared_target": "mapkit-closure-iap-resource-v1",
+      "attempts": []
+    }
+  ],
+  "previous_preparation_reports": [
+    "artifacts/mapkit-original-closure-preparation-v1.json",
+    "artifacts/mapkit-original-closure-preparation-v2.json"
+  ],
+  "exact_math_GOT_import_proofs": [
+    "artifacts/mapkit-original-import-audit-v2.json",
+    "artifacts/mapkit-closure-geoanalytics-original-import-audit-v2.json",
+    "artifacts/mapkit-closure-vectorkit-original-import-audit-v2.json"
+  ]
+}

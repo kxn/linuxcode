@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v123.json",
+    "--tool",
+    "ibtool"
+  ],
+  "outer_status": 1,
+  "capture": {
+    "pid": 262713,
+    "gdb_status": 0,
+    "gdb_log": "logs/swift-any-ibtool-cache-abort-v2.gdb.log",
+    "maps": "logs/swift-any-ibtool-cache-abort-v2.maps.log"
+  },
+  "signal": "SIGABRT",
+  "log": "logs/swift-any-ibtool-cache-abort-v2-driver.log",
+  "log_sha256": "1f1d5256a4c30400b4dace932cb40e1432f1a6fca5d08ca1a4133ef1141ccc96",
+  "source_sha256": "e4a4f91b1ab355b0c8dabc561015b4c599fe949c636759e1832e4bc0ed8d2011"
+}

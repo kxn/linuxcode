@@ -1,0 +1,43 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/mapkit-original-closure-preparation-v1.json",
+  "configuration_sha256": "5a65904490b4d4281113dd900eebbc671b35d2b69f66ea0cdfba21885b308a56",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/MapKit.framework/Versions/A/MapKit",
+      "attempts": [
+        {
+          "target": "mapkit-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/MapKit.framework/Versions/A/MapKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "mapkit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/mapkit-resource-v1-batch-preparation.log",
+          "log_sha256": "153e074cdfbae9454a27380c7543904d2e970f71f0dfdd256f9da6effba853d4",
+          "preparation": "artifacts/mapkit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'mapkit-resource-v1', '--output', 'artifacts/mapkit-original-import-audit-v1.json', '--follow-explicit-reexports', '--coalesce-equivalent-reexports']' returned non-zero exit status 1."
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 13682928,
+      "sha256": "bce5b1796ce485f6f7514a78d77a6c4e31d96c85c909ed57d94db1ed739ea417"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 5448,
+      "sha256": "d29f2e9b4767ab631495db091bcb345f4837b8c73ba13dcf92f7a3f8edbe8df8"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1188,
+  "nonzero_addends_verified": 38,
+  "serialized_bindings": 4669,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 6,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 2,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 72,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc4640",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc4658",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc4670",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc4688",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc46a0",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc46b8",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc46d0",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc46e8",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-mapkit-closure-vectorkit-resource-v2/VectorKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x24a10)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ofkveix9/mapkit-closure-vectorkit-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x24a10",
+        "segment": "__DATA_CONST",
+        "offset": "0xc4640",
+        "actual_address": "0x400e1640",
+        "LLVM_section_base_address": "0x400e2270",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "bef03913e6406d93fd205f8ffa5768c8fae8ddcc8ee247e390b3aaff0e7d46be",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "9300d9da4c1225eceead29366b808b1dfadf084a43e208270600c897267c65af",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "5e84926f1054e5ae1002b3f00e75465d21e0c2561a5ae5ad9251dd842d3d1cf3",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit": "6e2c0a94df7b8671275a24ebce821e5e4ab56815387a8305c4fe04483e46eb23",
+    "runtime/rebuilt-mapkit-closure-vectorkit-resource-v2/VectorKit": "950bae53c269874fa518efebe429e2de73a6edecbf8cd48363de26e87a025404",
+    "runtime/rebuilt-mapkit-closure-vectorkit-resource-v2/reconstruction.json": "60da96ca767a1e063c09bd204566720695ed752cfa397711d702c36d6e7235e7"
+  },
+  "verified": true
+}

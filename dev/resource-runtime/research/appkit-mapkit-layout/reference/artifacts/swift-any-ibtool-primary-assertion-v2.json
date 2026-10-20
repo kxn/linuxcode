@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--configuration",
+    "config/direct-resource-tool-environment-v123.json",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--tool",
+    "ibtool",
+    "--dvt-raw-backtraces"
+  ],
+  "capture": null,
+  "outer_status": 1,
+  "log": "logs/swift-any-ibtool-primary-assertion-v2-driver.log",
+  "log_sha256": "0fb3a447b9b2f2a4540458c806b5cf1adf5d4760fc4075f2b25b042d4c08e232",
+  "sources": {
+    "scripts/capture-ibtool-dvt-assertion.py": "f4bfcb7f58a06fc115b4bfd13d172d4c6d1ce3ff8e813672b86e2d864d21e1c0",
+    "scripts/gdb-dvt-assertion-arguments.py": "ec65be78b0c64f0382ee4d299c19dd8e9c0ec7d099325db1153c0f9176c8bd0b",
+    "runtime/state/prefix/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation": "d5441c8335f76c44d03f62e5dec2d5e073cef83b97aa08623cdc66509bf3dad6"
+  }
+}

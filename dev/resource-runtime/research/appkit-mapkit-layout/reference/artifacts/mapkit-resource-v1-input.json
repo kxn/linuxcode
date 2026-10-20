@@ -1,0 +1,100 @@
+{
+  "target": "mapkit-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/MapKit.framework/Versions/A/MapKit",
+    "sha256": "677251869a7dbe63aba5ccb6c88c78697de55608d4973079de8249bdd3ccd443",
+    "reference_set": "fullsystem",
+    "objc_classes": 473,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 2,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 1104,
+    "patch_got_range": [
+      "0x7ff840002000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 4829184,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/ViewBridge",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation",
+    "/System/Library/Frameworks/ExtensionKit.framework/Versions/A/ExtensionKit",
+    "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/PrivateFrameworks/SearchFoundation.framework/Versions/A/SearchFoundation",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/PrivateFrameworks/Navigation.framework/Versions/A/Navigation",
+    "/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts",
+    "/System/Library/PrivateFrameworks/CoreWiFi.framework/Versions/A/CoreWiFi",
+    "/usr/lib/libicucore.A.dylib",
+    "/System/Library/Frameworks/Accounts.framework/Versions/A/Accounts",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices",
+    "/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit",
+    "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+    "/System/Library/Frameworks/CoreLocation.framework/Versions/A/CoreLocation",
+    "/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/PerformanceAnalysis",
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+    "/System/Library/Frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials"
+  ],
+  "previous_manifest_sha256": "0138ad78bb75a223bc738775a4ee3d84992f59b3fd4d0d70f7860be4e15e7b44",
+  "manifest_sha256": "0ce10356f4afc8f8b32e96dd47ea4a89a73babb95830f17874c5deea39d6fc22",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mapkit-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 5791,
+    "nonzero_addends": 2,
+    "got_cells": 1104,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/mapkit-resource-v1-build.log",
+  "log_sha256": "afedc8c483bfd6912ff50e2966014ef635ac01e71a3834aee334a45d6bc32f55"
+}

@@ -1,0 +1,61 @@
+{
+  "target": "mapkit-closure-iap-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/IAP.framework/Versions/A/IAP",
+    "sha256": "0b4ac023f7a23fad8eb8fc471cf3fa5a1ca4ba902159d4cc12ad88aeb1871a57",
+    "reference_set": "fullsystem",
+    "objc_classes": 6,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 169,
+    "patch_got_range": [
+      "0x7ff940007000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 184320,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "81525dbb642a1c399604d0b1d2bd4d873b09f4055062c3ba1e35386d1eec6a37",
+  "manifest_sha256": "d977768d9e9125cbc55866045e6da041658fe8357715620a4b06736dc7ccb10b",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mapkit-closure-iap-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 475,
+    "nonzero_addends": 0,
+    "got_cells": 169,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/mapkit-closure-iap-resource-v1-build.log",
+  "log_sha256": "eff4d888c0d50383aae86eda36caebee92c6e9c1ac228fda43bbff7efda5b711"
+}

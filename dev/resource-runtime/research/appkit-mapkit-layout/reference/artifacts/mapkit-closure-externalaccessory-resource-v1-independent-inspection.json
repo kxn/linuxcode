@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 57451,
+      "sha256": "92f0a7d525fad65e9c1a494cc51db46ef8683e15abdfd18d2c4a76b309600090"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 720,
+      "sha256": "d1dd58bd2d14285bea2b098709e4988369177f6ada0dbb398782417e8f9e079c"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 241,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 678,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 27,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x7198",
+        "first_section_prefix": "0xc48",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x360",
+        "first_section_prefix": "0x240",
+        "symbol": "_OBJC_METACLASS_$_NSInputStream"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x3d8",
+        "first_section_prefix": "0x240",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x3e0",
+        "first_section_prefix": "0x240",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x3f8",
+        "first_section_prefix": "0x240",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x400",
+        "first_section_prefix": "0x240",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x408",
+        "first_section_prefix": "0x240",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x428",
+        "first_section_prefix": "0x240",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-mapkit-closure-externalaccessory-resource-v1/ExternalAccessory': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x541a)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ofkveix9/mapkit-closure-externalaccessory-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x541a",
+        "segment": "__DATA_CONST",
+        "offset": "0x7198",
+        "actual_address": "0x2beb5198",
+        "LLVM_section_base_address": "0x2beb5de0",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      }
+    ],
+    "original_validator_sha256": "7cb05071559cb6dc3655c954d7ceddd61b6f5439f28079f87553e1e934b24330",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "1d5bbe7ec291507b0725bcba5e02a94955c90016c0f22bc5f2b83450e6241825",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "5e84926f1054e5ae1002b3f00e75465d21e0c2561a5ae5ad9251dd842d3d1cf3",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/ExternalAccessory.framework/ExternalAccessory": "c1587e39f98cf2f49418f9e3224957c6418ee11132fb73d9f9a76e6a63b8d692",
+    "runtime/rebuilt-mapkit-closure-externalaccessory-resource-v1/ExternalAccessory": "682b7007bef54a1b1f7d64c19b7b51b06f3f37daf633259f42415d7487c6a66b",
+    "runtime/rebuilt-mapkit-closure-externalaccessory-resource-v1/reconstruction.json": "9ba4ab1a02ac30a999dce533f969dd22ff89a389755fc563068079ff3b5b76ed"
+  },
+  "verified": true
+}

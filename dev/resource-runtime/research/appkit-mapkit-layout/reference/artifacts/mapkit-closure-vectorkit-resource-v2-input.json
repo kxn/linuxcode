@@ -1,0 +1,306 @@
+{
+  "target": "mapkit-closure-vectorkit-resource-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit",
+    "sha256": "6e2c0a94df7b8671275a24ebce821e5e4ab56815387a8305c4fe04483e46eb23",
+    "reference_set": "fullsystem",
+    "objc_classes": 171,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib",
+      "__ZTSSt9exception": "/usr/lib/libc++.1.dylib",
+      "_scalbn": "/usr/lib/libSystem.B.dylib",
+      "_scalbnf": "/usr/lib/libSystem.B.dylib",
+      "__ZTISt9exception": "/usr/lib/libc++.1.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 38,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 1188,
+    "patch_got_range": [
+      "0x7ffa40000000",
+      "0x7ffa400a1000"
+    ]
+  },
+  "original_bytes": 29937664,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/liblzma.5.dylib",
+    "/usr/lib/libxml2.2.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+    "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+    "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/PrivateFrameworks/CMPhoto.framework/Versions/A/CMPhoto",
+    "/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface",
+    "/System/Library/PrivateFrameworks/IOPlatformPluginFamily.framework/Versions/A/IOPlatformPluginFamily",
+    "/usr/lib/libcompression.dylib",
+    "/usr/lib/libAccessibility.dylib",
+    "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+    "/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo"
+  ],
+  "previous_manifest_sha256": "ba6e607c88930c6a88463f273005552f0f9759c6c44905a493f18a8549f5c2ff",
+  "manifest_sha256": "5e84926f1054e5ae1002b3f00e75465d21e0c2561a5ae5ad9251dd842d3d1cf3",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "mapkit-closure-vectorkit-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "mapkit-closure-vectorkit-resource-v1",
+  "exact_import_audit": "artifacts/mapkit-closure-vectorkit-original-import-audit-v2.json",
+  "exact_import_audit_sha256": "07fce46247f3684c9a77c882756e562fd03ba0749ea094b257eb6814f087e079",
+  "typed_class_aliases": [],
+  "explicit_reexports": {
+    "chains": [
+      {
+        "target": "0x7ff8400914a0",
+        "symbol": "__ZTISt9exception",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTISt9exception",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTISt9exception",
+            "export": [
+              "address",
+              140704202953888,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ff802e5f8d8",
+        "symbol": "__ZTSSt9exception",
+        "provider": "/usr/lib/libc++.1.dylib",
+        "chain": [
+          {
+            "provider": "/usr/lib/libc++.1.dylib",
+            "symbol": "__ZTSSt9exception",
+            "export": [
+              "reexport",
+              1,
+              ""
+            ]
+          },
+          {
+            "provider": "/usr/lib/libc++abi.dylib",
+            "symbol": "__ZTSSt9exception",
+            "export": [
+              "address",
+              140703177242840,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "original_provider_sha256": {
+      "/usr/lib/libc++.1.dylib": "98a388765e2b9a56940265d09723d2b1fccb9db63953157e5c6006089cab3ac8",
+      "/usr/lib/libc++abi.dylib": "3677d04224c9ef31032048951fdc0531994cb4ce8c5247b95c00f95388672670"
+    }
+  },
+  "typed_pooled_imports": [
+    {
+      "kind": "original-stub-GOT-and-reexport-route",
+      "target": "0x7ff812dd9e6b",
+      "slots": [
+        "0x7ffa4009fda0"
+      ],
+      "selected": [
+        "_scalbn",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "stubs": [
+        {
+          "address": "0x7ffa00d932b0",
+          "slot": "0x7ffa4009fda0",
+          "bytes": "ff25eaca303f"
+        }
+      ],
+      "route": [
+        {
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "symbol": "_scalbn",
+          "kind": "whole-library-reexport",
+          "ordinal": 25,
+          "dependency": "/usr/lib/system/libsystem_m.dylib"
+        },
+        {
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "symbol": "_scalbn",
+          "kind": "address",
+          "export": [
+            "address",
+            140703445130859,
+            0
+          ]
+        }
+      ],
+      "original_file_sha256": {
+        "/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit": "6e2c0a94df7b8671275a24ebce821e5e4ab56815387a8305c4fe04483e46eb23",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+        "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+      },
+      "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+      "records": [
+        {
+          "symbol": "_scalbn",
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "kind": 0,
+          "implementation": 140703445130859,
+          "matching_import_names": [
+            "_scalbn"
+          ],
+          "slot": 140712792948128,
+          "addend": 0,
+          "weak_import": false,
+          "high7": 0,
+          "target": 140703445130859,
+          "target_matches_patch": true,
+          "export_matches_patch": true,
+          "provider_index": 155,
+          "export_index": 53708,
+          "location_index": 107102
+        }
+      ]
+    },
+    {
+      "kind": "original-stub-GOT-and-reexport-route",
+      "target": "0x7ff812ddd560",
+      "slots": [
+        "0x7ffa4009fda8"
+      ],
+      "selected": [
+        "_scalbnf",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "stubs": [
+        {
+          "address": "0x7ffa00d932b6",
+          "slot": "0x7ffa4009fda8",
+          "bytes": "ff25ecca303f"
+        }
+      ],
+      "route": [
+        {
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "symbol": "_scalbnf",
+          "kind": "whole-library-reexport",
+          "ordinal": 25,
+          "dependency": "/usr/lib/system/libsystem_m.dylib"
+        },
+        {
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "symbol": "_scalbnf",
+          "kind": "address",
+          "export": [
+            "address",
+            140703445144928,
+            0
+          ]
+        }
+      ],
+      "original_file_sha256": {
+        "/System/Library/PrivateFrameworks/VectorKit.framework/Versions/A/VectorKit": "6e2c0a94df7b8671275a24ebce821e5e4ab56815387a8305c4fe04483e46eb23",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+        "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+      },
+      "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+      "records": [
+        {
+          "symbol": "_scalbnf",
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "kind": 0,
+          "implementation": 140703445144928,
+          "matching_import_names": [
+            "_scalbnf"
+          ],
+          "slot": 140712792948136,
+          "addend": 0,
+          "weak_import": false,
+          "high7": 0,
+          "target": 140703445144928,
+          "target_matches_patch": true,
+          "export_matches_patch": true,
+          "provider_index": 155,
+          "export_index": 53770,
+          "location_index": 107410
+        }
+      ]
+    }
+  ],
+  "pooled_import_validator_sha256": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+  "original_patch_contract": {
+    "original_records": 3843,
+    "nonzero_addends": 38,
+    "got_cells": 1188,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "original_cache_TLV_optimizations": [
+    {
+      "slot": "0x7ffa42f75250",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ffa42f75280",
+      "template_size": 521,
+      "variable_offset": 0,
+      "cache_key": 156,
+      "template_delta": 32,
+      "raw_original_descriptor": "c853a902000600009c000000000000002000000009020000",
+      "requires_disk_ABI_restoration": true
+    },
+    {
+      "slot": "0x7ffa42f75268",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ffa42f75280",
+      "template_size": 521,
+      "variable_offset": 520,
+      "cache_key": 156,
+      "template_delta": 8,
+      "raw_original_descriptor": "c853a902000000009c000000080200000800000009020000",
+      "requires_disk_ABI_restoration": true
+    }
+  ],
+  "TLV_validator_sha256": "f89e05dfff195dcdd772fa227229a7e5c471fcfadbc748c45944c0a778920535",
+  "build_returncode": 0,
+  "log": "logs/mapkit-closure-vectorkit-resource-v2-build.log",
+  "log_sha256": "691b06b13828c8f0101e7b173e7f8a24f521c341358bfc2f53a4e7a40f66fa9d"
+}

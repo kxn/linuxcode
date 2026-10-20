@@ -1,0 +1,28 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--configuration",
+    "config/direct-resource-tool-environment-v124.json",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--tool",
+    "ibtool",
+    "--dvt-raw-backtraces"
+  ],
+  "capture": {
+    "pid": 285001,
+    "gdb_status": 0,
+    "entry_runtime_address": "0x7f7f230ead04",
+    "original_entry_bytes": "554889e541574156",
+    "gdb_log": "logs/mapkit-ibtool-nil-data-v1.gdb.log",
+    "maps": "logs/mapkit-ibtool-nil-data-v1.maps.log"
+  },
+  "outer_status": 1,
+  "log": "logs/mapkit-ibtool-nil-data-v1-driver.log",
+  "log_sha256": "336a37c5002464b2136bcbab078227930144ae065ac3367bd614adcb82b1ce0e",
+  "sources": {
+    "scripts/capture-ibtool-nil-data.py": "4f789253cb2915d880427280c41afaff4e769f48f2312764ac14449db4241b4e",
+    "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation": "5007842d25682120326541352006cbd192872c4c15f414d50fc66058a30661af"
+  }
+}

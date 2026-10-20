@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 211441,
+      "sha256": "b78c06ea807019dd76b29840be2c5cf77df74b3a76f65fe94024f4b911d45b05"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 498,
+      "sha256": "497d6d91d52f162eeff886f8011c798a3f2074ad1d5013949589fd8ab3b41f34"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 200,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 551,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 47,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x79b0",
+        "first_section_prefix": "0xf8",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x79c8",
+        "first_section_prefix": "0xf8",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x79e0",
+        "first_section_prefix": "0xf8",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x79f8",
+        "first_section_prefix": "0xf8",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x7a10",
+        "first_section_prefix": "0xf8",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x7a28",
+        "first_section_prefix": "0xf8",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x7a88",
+        "first_section_prefix": "0xf8",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x630",
+        "first_section_prefix": "0x238",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-mapkit-closure-virtualgarage-resource-v1/VirtualGarage': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x38c6)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ofkveix9/mapkit-closure-virtualgarage-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x38c6",
+        "segment": "__DATA_CONST",
+        "offset": "0x79b0",
+        "actual_address": "0x39d609b0",
+        "LLVM_section_base_address": "0x39d60aa8",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "6bd4ac977f649fa0b27f9edd103c5ee34b0d54326bb9369c606ae2e40a3ba26d",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "b5a6e72085876e8f896072137ab6b28ac9cb2b94eed78379e4408eff2859aa94",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "5e84926f1054e5ae1002b3f00e75465d21e0c2561a5ae5ad9251dd842d3d1cf3",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/VirtualGarage.framework/Versions/A/VirtualGarage": "0ba7f59efe32cf84a35b97debb7b8d87226a1431e4d9f8101c930f9ea925a573",
+    "runtime/rebuilt-mapkit-closure-virtualgarage-resource-v1/VirtualGarage": "971718ba2609c0d5d6621ed4b45d93870de9358d11b4aa4cd876fc139caca130",
+    "runtime/rebuilt-mapkit-closure-virtualgarage-resource-v1/reconstruction.json": "e97d1af37809ad8a6e32359c15416256747dbdcba40ef83f434baa4a4bf2b0ac"
+  },
+  "verified": true
+}
