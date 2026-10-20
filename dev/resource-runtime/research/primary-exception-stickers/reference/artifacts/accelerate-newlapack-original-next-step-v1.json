@@ -1,0 +1,40 @@
+{
+  "diagnostic_only": true,
+  "actual_direct_probe": "runtime/direct-resource-tools-79ga4vse/result.json",
+  "requested_symbol": "_dgesvd$NEWLAPACK",
+  "consumer": "Xcode/SharedFrameworks/ODTDevTool.framework/ODTDevTool",
+  "expected_provider": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+  "original_address": "0x7ff8137f3cac",
+  "original_reexport_route": [
+    {
+      "provider": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+      "symbol": "_dgesvd$NEWLAPACK",
+      "kind": "whole-library-reexport",
+      "dependency": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib"
+    },
+    {
+      "provider": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib",
+      "symbol": "_dgesvd$NEWLAPACK",
+      "kind": "whole-library-reexport",
+      "dependency": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib"
+    },
+    {
+      "provider": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib",
+      "symbol": "_dgesvd$NEWLAPACK",
+      "kind": "address",
+      "export": [
+        "address",
+        140703455722668,
+        0
+      ]
+    }
+  ],
+  "original_provider_sha256": {
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate": "491b89f6919d3e972a0e53333d4beb9886c9f5b0554468c76dcd3db7d410c3b2",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib": "b2c484379c4aa6d6c882d4cb682e58ad09a5d9fecfc49aa0b560607c3f097ae5",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib": "6c12d33c0924c6284a5ece7197acc97282cc7466b28885ec2c459c256fdd7eff"
+  },
+  "next_work": "Recover and independently validate the original provider and dependency closure; verify the SDK NEWLAPACK ABI and run a native singular-value decomposition accuracy/residual test before selection.",
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false
+}

@@ -1,0 +1,82 @@
+{
+  "verified": true,
+  "actual_candidate_reports_used": true,
+  "positive_controls": 1,
+  "negative_controls": 8,
+  "cases": [
+    {
+      "mode": "valid",
+      "rejected": false,
+      "build": "runtime/primary-input-controls-ifjiuvky/valid/build.json",
+      "build_sha256": "0195028d9cb7aa337fbdd46be90af81adce717e436f247b5b0fc18a5abba3860",
+      "probe": "runtime/primary-input-controls-ifjiuvky/valid/probe.json",
+      "probe_sha256": "7241989f8582a71d99a04b409871401e1dd5bc01c6766ba66648e3ca0a0f02c6"
+    },
+    {
+      "mode": "partial-source-list",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/partial-source-list/build.json",
+      "build_sha256": "8f20ed744f1b6a307aa97f303f5162da27eca9ac161161ea6e51cb6b5b3d3253",
+      "probe": "runtime/primary-input-controls-ifjiuvky/partial-source-list/probe.json",
+      "probe_sha256": "bc204acfa5058d89ea0dc10729d96841e35d1b8fa9044a5ce7cf673c85fd6d6d"
+    },
+    {
+      "mode": "missing-existing-export",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/missing-existing-export/build.json",
+      "build_sha256": "cb24530ca680ca8c732fadd51922074bfe8c5fa0379bf4a53c50da4a30a96b4b",
+      "probe": "runtime/primary-input-controls-ifjiuvky/missing-existing-export/probe.json",
+      "probe_sha256": "2e052fa9d6071dd5e048f1335a634860164fc33eaac1847dab5a18e74a109cc5"
+    },
+    {
+      "mode": "extra-unreviewed-export",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/extra-unreviewed-export/build.json",
+      "build_sha256": "6dbabc630b0c8d00edfcfc1710b89b5fafd0b3c1b5ff0b71301a9f8843080dbd",
+      "probe": "runtime/primary-input-controls-ifjiuvky/extra-unreviewed-export/probe.json",
+      "probe_sha256": "205929c85151bb516f201d67b6822610d5c061047b34dc947725fc72382c6d2c"
+    },
+    {
+      "mode": "baseline-ABI-mismatch",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/baseline-ABI-mismatch/build.json",
+      "build_sha256": "5e750866fc08dab1c58d798838649132db703e3f47180648c0f4469ea38f6a40",
+      "probe": "runtime/primary-input-controls-ifjiuvky/baseline-ABI-mismatch/probe.json",
+      "probe_sha256": "6a1bb08377c506e2331c55e421a2d884b3ed7db5bf8bb314c7f5d6264a7ecac7"
+    },
+    {
+      "mode": "unexecuted-primary",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/unexecuted-primary/build.json",
+      "build_sha256": "0195028d9cb7aa337fbdd46be90af81adce717e436f247b5b0fc18a5abba3860",
+      "probe": "runtime/primary-input-controls-ifjiuvky/unexecuted-primary/probe.json",
+      "probe_sha256": "1e2c8e5bbbe22f33cc21ae90d934300b48d1e8de764c7eeafe495e8a1f619fa9"
+    },
+    {
+      "mode": "changed-primary-log",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/changed-primary-log/build.json",
+      "build_sha256": "0195028d9cb7aa337fbdd46be90af81adce717e436f247b5b0fc18a5abba3860",
+      "probe": "runtime/primary-input-controls-ifjiuvky/changed-primary-log/probe.json",
+      "probe_sha256": "39f5cec646d0eca5a946e468bffef1ad4d950a24120f92d83433ee8bf6e12dbd"
+    },
+    {
+      "mode": "changed-fixture",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/changed-fixture/build.json",
+      "build_sha256": "0195028d9cb7aa337fbdd46be90af81adce717e436f247b5b0fc18a5abba3860",
+      "probe": "runtime/primary-input-controls-ifjiuvky/changed-fixture/probe.json",
+      "probe_sha256": "09589cf5aa618d5adf5762fa13b6175199e0ead0268c51ccfea13dd95ac52396"
+    },
+    {
+      "mode": "changed-regression-command",
+      "rejected": true,
+      "build": "runtime/primary-input-controls-ifjiuvky/changed-regression-command/build.json",
+      "build_sha256": "0195028d9cb7aa337fbdd46be90af81adce717e436f247b5b0fc18a5abba3860",
+      "probe": "runtime/primary-input-controls-ifjiuvky/changed-regression-command/probe.json",
+      "probe_sha256": "638339e8a62829d64c4c8852f04bcdf25f475d7e7b421340bbcdd24d92f24307"
+    }
+  ],
+  "validator": "scripts/primary-exception-runtime-inputs.py",
+  "validator_sha256": "234f05f9867c6beb8d034220a866b79051bc0e96e2b312c6c4601790007fdfeb"
+}

@@ -1,0 +1,43 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService",
+      "stem": "stickers-closure-recencyservice",
+      "existing_target": "stickers-closure-recencyservice-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Coherence.framework/Versions/A/Coherence",
+      "stem": "stickers-closure-coherence",
+      "existing_target": "stickers-closure-coherence-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmojiFoundation.framework/Versions/A/EmojiFoundation",
+      "stem": "stickers-closure-emojifoundation",
+      "existing_target": "stickers-closure-emojifoundation-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/ServiceShared.framework/Versions/A/ServiceShared",
+      "stem": "stickers-closure-serviceshared",
+      "existing_target": "stickers-closure-serviceshared-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DifferentialPrivacy.framework/Versions/A/DifferentialPrivacy",
+      "stem": "stickers-closure-differentialprivacy",
+      "existing_target": "stickers-closure-differentialprivacy-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VDAF.framework/Versions/A/VDAF",
+      "stem": "stickers-closure-vdaf",
+      "existing_target": "stickers-closure-vdaf-resource-v1"
+    }
+  ]
+}

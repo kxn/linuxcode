@@ -1,0 +1,61 @@
+{
+  "target": "stickers-closure-serviceshared-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/Stickers.framework/Support/ServiceShared.framework/Versions/A/ServiceShared",
+    "sha256": "0790fcdab24688b969b7f9dbc19fa075ca4f84e25299d0f74f92da3727d18944",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 2,
+    "patch_got_range": [
+      "0x7ffd400bc000",
+      "0x7ffd400bd000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 4096,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib"
+  ],
+  "previous_manifest_sha256": "552f5689bba5848b9de93899759e03c85f3cbe738956664378b93b1f9e96175d",
+  "manifest_sha256": "c25a0d45b706ae0b3ede4d11e077325959c4a26393dd83824fc902d3460c7197",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "stickers-closure-serviceshared-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 0,
+    "nonzero_addends": 0,
+    "got_cells": 2,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/stickers-closure-serviceshared-resource-v1-build.log",
+  "log_sha256": "2f63cc401fea2e0eaed8e8024b4737a0c417b37d3052bb2c572b05f31d5b0d37"
+}

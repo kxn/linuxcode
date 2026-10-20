@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "powerlog-patch-got-v1",
+      "candidate_sha256": "98a9f0e1d01016f4a88765cd9ba8da4167c83f8acb9b1d23c9cbb09b8441ba25",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 135250,
+            "sha256": "dba46bf02699a4f445d05f973dd202a3249e7dc56e2c03cd16ad6fe56e7b174d"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 636,
+            "sha256": "c44ca89693b21881d235428aa3f8c246286edbb47baed2510436b6b3e51bde84"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 176,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 658,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

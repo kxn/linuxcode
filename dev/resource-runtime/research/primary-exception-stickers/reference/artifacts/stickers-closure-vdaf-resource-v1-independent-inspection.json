@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 909040,
+      "sha256": "68ee7507529c6a9c56d1da76e154650ff077b78500b7c1c2ba184b5b945bd3c9"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1920,
+      "sha256": "9833fccd565ea4531e732f8e56bdb2791041a08b2f69215b45881a9a88fffc3b"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 646,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1232,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 12,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xc08",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xc10",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xc18",
+        "first_section_prefix": "0x5a0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xc50",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_$sBoWV"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xc60",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_OBJC_CLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xc68",
+        "first_section_prefix": "0x5a0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xcd8",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xce0",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-stickers-closure-vdaf-resource-v1/VDAF': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x88d4)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ga5r2pq4/stickers-closure-vdaf-resource-v1-result.json",
+    "original_validator_sha256": "394d949a0157432e362f538117d175fbb82ea1c63619f46c5a7bb43c8345a00f",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "5f6c47b228911bd0038b202bf55fceba0914f03d3f391c5cfd273f113488b914",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "cf2f13b538fa3a68bcf86c597b212c9925cfa3e30825fb7e2125fbb93aa27ab0",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/VDAF.framework/Versions/A/VDAF": "eb8686a5b5f63fa527e3a2fdfd5008676b5998e5e69205bad93d987f337472f6",
+    "runtime/rebuilt-stickers-closure-vdaf-resource-v1/VDAF": "4dd02aaf1d433a23d4e06c0ce9c440b4f4c18e5087b9ec63480f1c97e1fde8b8",
+    "runtime/rebuilt-stickers-closure-vdaf-resource-v1/reconstruction.json": "11ee800542a938f9d53b725600dcae036ef2a6882f3bbee4b71093e63877f8b5"
+  },
+  "verified": true
+}

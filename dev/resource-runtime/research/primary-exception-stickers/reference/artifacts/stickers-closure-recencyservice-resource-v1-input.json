@@ -1,0 +1,91 @@
+{
+  "target": "stickers-closure-recencyservice-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService",
+    "sha256": "ce0156872a577454be3cf052a1c0031c304485ce2b99c783c1f5e66e60b2a986",
+    "reference_set": "fullsystem",
+    "objc_classes": 11,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 81,
+    "patch_got_range": [
+      "0x7ffd40013000",
+      "0x7ffd400c0000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 225280,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/Stickers.framework/Support/ServiceShared.framework/Versions/A/ServiceShared",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/Combine.framework/Versions/A/Combine",
+    "/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji",
+    "/System/Library/PrivateFrameworks/EmojiFoundation.framework/Versions/A/EmojiFoundation",
+    "/usr/lib/swift/libswiftAccelerate.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "previous_manifest_sha256": "276d22e44377cbf828acba8231af1082d80668db9c1da579d55713063c24d5f8",
+  "manifest_sha256": "e31af096f23d5071ee87abd6c38fd4fbdfdb22a12ffe9c41a2367144d5cee0fb",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "stickers-closure-recencyservice-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 137,
+    "nonzero_addends": 0,
+    "got_cells": 81,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffd400bdf28",
+          "0x7ffd400bdf38"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/stickers-closure-recencyservice-resource-v1-build.log",
+  "log_sha256": "41ec6ed37125d7d16d8170518d8810248757e171f1e31ee9084b31112cbcbdb2"
+}

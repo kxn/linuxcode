@@ -1,0 +1,40 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/stickers-original-closure-preparation-v2.json",
+  "configuration_sha256": "d217fac6122c38f139587f4af296de7fae0a199d0b29a146517d3036aa26dc0e",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService",
+      "attempts": [],
+      "prepared_target": "stickers-closure-recencyservice-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Coherence.framework/Versions/A/Coherence",
+      "attempts": [],
+      "prepared_target": "stickers-closure-coherence-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmojiFoundation.framework/Versions/A/EmojiFoundation",
+      "attempts": [],
+      "prepared_target": "stickers-closure-emojifoundation-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/ServiceShared.framework/Versions/A/ServiceShared",
+      "attempts": [],
+      "prepared_target": "stickers-closure-serviceshared-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DifferentialPrivacy.framework/Versions/A/DifferentialPrivacy",
+      "attempts": [],
+      "prepared_target": "stickers-closure-differentialprivacy-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VDAF.framework/Versions/A/VDAF",
+      "attempts": [],
+      "prepared_target": "stickers-closure-vdaf-resource-v1"
+    }
+  ]
+}

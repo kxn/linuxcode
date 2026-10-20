@@ -1,0 +1,83 @@
+{
+  "target": "stickers-closure-vdaf-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/VDAF.framework/Versions/A/VDAF",
+    "sha256": "eb8686a5b5f63fa527e3a2fdfd5008676b5998e5e69205bad93d987f337472f6",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 646,
+    "patch_got_range": [
+      "0x7ffe4000a000",
+      "0x7ffe400bd000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 1708032,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "ca7fb7c63f370dbf51d6c081da11122ed6fa74a51af7830e4c62970a3a6ac40c",
+  "manifest_sha256": "cf2f13b538fa3a68bcf86c597b212c9925cfa3e30825fb7e2125fbb93aa27ab0",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "stickers-closure-vdaf-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 367,
+    "nonzero_addends": 0,
+    "got_cells": 646,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffe400bb3d0",
+          "0x7ffe400bb3d8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/stickers-closure-vdaf-resource-v1-build.log",
+  "log_sha256": "d44df9d2e4107f8aabc5b09d90e3c00bbf4ea784d9fa3ed67f9f7a6a2fc0999b"
+}

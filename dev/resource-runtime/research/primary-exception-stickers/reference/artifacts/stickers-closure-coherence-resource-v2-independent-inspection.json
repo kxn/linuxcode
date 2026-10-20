@@ -1,0 +1,53 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 4139392,
+      "sha256": "da436cd33a6b19d87bd8d320e61badcbdc2b097732f9e8d707b2361bd2541683"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 5358,
+      "sha256": "f9c322875866d83d13396d96b23b60188e0d93d078ade1c8d7e23812e7547025"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1521,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 4774,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 4,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xdf8",
+        "first_section_prefix": "0x870",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-stickers-closure-coherence-resource-v2/Coherence': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1e2b7)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ga5r2pq4/stickers-closure-coherence-resource-v2-result.json",
+    "original_validator_sha256": "7c9fca05ef3561eb3215ee1fd7a0ef2673a27ee99298edec6a6ef28919ddfeaa",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "8343a05214cbd482c3b366ec2e3ac14fb3d898b96de892d6ce7fe8ba5745ddca",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "cf2f13b538fa3a68bcf86c597b212c9925cfa3e30825fb7e2125fbb93aa27ab0",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/Coherence.framework/Versions/A/Coherence": "62da4a414ffba3c43c4f26a7ee1b780c8811ae89fc16ef97e10a3468db3381a8",
+    "runtime/rebuilt-stickers-closure-coherence-resource-v2/Coherence": "0b53c152c3c3e1fd9b143f676742523a336a4d25b908e4d79a63ecb816e225de",
+    "runtime/rebuilt-stickers-closure-coherence-resource-v2/reconstruction.json": "ff4ed2283786c6d10680753377ca10139148f727d1c9f724b8fc5a58225761ad"
+  },
+  "verified": true
+}

@@ -1,0 +1,284 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/stickers-original-closure-preparation-v1.json",
+  "configuration_sha256": "7a30381ef096b156aff741badd0088aa0c95fc9acba6e289439d578b46084158",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService",
+      "attempts": [
+        {
+          "target": "stickers-closure-recencyservice-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-recencyservice-resource-v1",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-recencyservice-resource-v1-batch-preparation.log",
+          "log_sha256": "2d7ac41e489b51c93fdff426cb99f18533fff8869f68a40ced4954702cd1e0b4",
+          "preparation": "artifacts/stickers-closure-recencyservice-resource-v1-input.json"
+        },
+        {
+          "target": "stickers-closure-recencyservice-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "stickers-closure-recencyservice-resource-v1",
+            "--exact-import-audit",
+            "artifacts/stickers-closure-recencyservice-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-recencyservice-resource-v2",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-recencyservice-resource-v2-batch-preparation.log",
+          "log_sha256": "06f2047d302ad081aa6faf133c015a8087329744d55135504efe646ff3bea7c3",
+          "preparation": "artifacts/stickers-closure-recencyservice-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "stickers-closure-recencyservice-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Coherence.framework/Versions/A/Coherence",
+      "attempts": [
+        {
+          "target": "stickers-closure-coherence-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Coherence.framework/Versions/A/Coherence",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-coherence-resource-v1",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-coherence-resource-v1-batch-preparation.log",
+          "log_sha256": "342340dcbacaba5c722b3a87a6cd001e080728e76b8d3d5786f23b9e5c598bb0",
+          "preparation": "artifacts/stickers-closure-coherence-resource-v1-input.json"
+        },
+        {
+          "target": "stickers-closure-coherence-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "stickers-closure-coherence-resource-v1",
+            "--exact-import-audit",
+            "artifacts/stickers-closure-coherence-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-coherence-resource-v2",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-coherence-resource-v2-batch-preparation.log",
+          "log_sha256": "9a6a49b9290f90320f487d581e506fc1a7d46b06e10e5c981e94d709ebfcf8f4",
+          "preparation": "artifacts/stickers-closure-coherence-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "stickers-closure-coherence-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmojiFoundation.framework/Versions/A/EmojiFoundation",
+      "attempts": [
+        {
+          "target": "stickers-closure-emojifoundation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/EmojiFoundation.framework/Versions/A/EmojiFoundation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-emojifoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-emojifoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "08d4460898e8bfa07a9ccf92625512014b677f5cebd8e006797b96d3d661f5d3",
+          "preparation": "artifacts/stickers-closure-emojifoundation-resource-v1-input.json"
+        },
+        {
+          "target": "stickers-closure-emojifoundation-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "stickers-closure-emojifoundation-resource-v1",
+            "--exact-import-audit",
+            "artifacts/stickers-closure-emojifoundation-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-emojifoundation-resource-v2",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-emojifoundation-resource-v2-batch-preparation.log",
+          "log_sha256": "8b9e69d607957ebc67dc51ab2ad8eefe78aecda62d317f24dcdd172e3128a59f",
+          "preparation": "artifacts/stickers-closure-emojifoundation-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "stickers-closure-emojifoundation-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/ServiceShared.framework/Versions/A/ServiceShared",
+      "attempts": [
+        {
+          "target": "stickers-closure-serviceshared-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Stickers.framework/Support/ServiceShared.framework/Versions/A/ServiceShared",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-serviceshared-resource-v1",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-serviceshared-resource-v1-batch-preparation.log",
+          "log_sha256": "f7bdc5afb1271a6aad013a3c7e0277788fb636bc33d74c0468afbe249cbe96e5",
+          "preparation": "artifacts/stickers-closure-serviceshared-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "stickers-closure-serviceshared-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DifferentialPrivacy.framework/Versions/A/DifferentialPrivacy",
+      "attempts": [
+        {
+          "target": "stickers-closure-differentialprivacy-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/DifferentialPrivacy.framework/Versions/A/DifferentialPrivacy",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-differentialprivacy-resource-v1",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-differentialprivacy-resource-v1-batch-preparation.log",
+          "log_sha256": "c6dfa8917078831e6dc9381f8f65edff20f11cc318296704eed4bc1584d29696",
+          "preparation": "artifacts/stickers-closure-differentialprivacy-resource-v1-input.json"
+        },
+        {
+          "target": "stickers-closure-differentialprivacy-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "stickers-closure-differentialprivacy-resource-v1",
+            "--exact-import-audit",
+            "artifacts/stickers-closure-differentialprivacy-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-differentialprivacy-resource-v2",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-differentialprivacy-resource-v2-batch-preparation.log",
+          "log_sha256": "18f11cdd8961919fdaf468e849045a937c285647b32a7ce7668464c16d5804ec",
+          "preparation": "artifacts/stickers-closure-differentialprivacy-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "stickers-closure-differentialprivacy-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VDAF.framework/Versions/A/VDAF",
+      "attempts": [
+        {
+          "target": "stickers-closure-vdaf-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/VDAF.framework/Versions/A/VDAF",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "stickers-closure-vdaf-resource-v1",
+            "--build"
+          ],
+          "log": "logs/stickers-closure-vdaf-resource-v1-batch-preparation.log",
+          "log_sha256": "b46479f202e8e04e2f761695731ec61462a7c6c9394ac819eb2dc7617cfbcaaa",
+          "preparation": "artifacts/stickers-closure-vdaf-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "stickers-closure-vdaf-resource-v1"
+    }
+  ]
+}
