@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/canonical-pluginkit-v1/darling",
+  "original_sha256": "9dab9769823165ac23379090d424d64f315fc74a6ab419c5cf1b0ed32f7f379c",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env bash\nset -euo pipefail\nproject=$(cd -- \"$(dirname -- \"${BASH_SOURCE[0]}\")/../..\" && pwd -P)\nif [[ ! -x \"$project/runtime/rootfs/usr/bin/darling\" ]]; then\n    echo \"Darling runtime is not installed in $project/runtime/rootfs\" >&2\n    exit 1\nfi\nexec 9>\"$project/runtime/session.lock\"\nflock 9\nif [[ -f \"$project/runtime/state/host-cpu-haswell.json\" ]]; then\n    if [[ ! -x \"$project/runtime/tools/check-haswell-host\" ]]; then\n        echo \"The project x86_64h runtime requires its CPU/OS launch guard.\" >&2\n        exit 1\n    fi\n    \"$project/runtime/tools/check-haswell-host\" --require\nfi\nif [[ ${1:-} == shell ]]; then\n    shift\nfi\nexec unshare --user --map-root-user --mount --pid --fork --kill-child \\\n    \"$project/runtime/canonical-pluginkit-v1/runtime-ns.sh\" \"$project\" \"$@\"\n"
+}

@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[原版 Automator 类继承检查点](dev/resource-runtime/research/automator-original-class/README.md)恢复 Interface Builder 需要的真实控件继承链及 coder 方法，三组原生检查通过；完整 App 与签名仍未验证。
+最新的[系统框架路径检查点](dev/resource-runtime/research/canonical-system-frameworks/README.md)修复 PlugInKit 被当成 Xcode 插件加载的问题，原版 actool / ibtool 版本查询均返回 0。完整 App 与签名仍未验证。
+
+此前的[原版 Automator 类继承检查点](dev/resource-runtime/research/automator-original-class/README.md)恢复 Interface Builder 需要的真实控件继承链及 coder 方法，三组原生检查通过；完整 App 与签名仍未验证。
 
 此前的[原版 AppKit / MapKit / 布局资源检查点](dev/resource-runtime/research/appkit-mapkit-layout/README.md)恢复 Swift Any 命名 binding、七个原始依赖映像及缺失的布局资源。完整 App 和资源编译仍未通过。
 

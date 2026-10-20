@@ -1,0 +1,32 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/automator-ibtool-application-init-v1.gdb.log",
+  "raw_sha256": "74cd083bd648aab815764bd0c5787988a50cc27fd841ca973986e2486e49516c",
+  "maps": "logs/automator-ibtool-application-init-v1.maps.log",
+  "maps_sha256": "6ebc5d8440e6200f739caca2ea56b4aa8acc4f269ace03bc76bc32a144067089",
+  "output": "logs/automator-ibtool-application-init-v1.nlist-symbolicated.log",
+  "output_sha256": "e0ab48efa5dc75e3dbb4a9ab1461264cbfd763dc06d46513dfeba16ee7359f60",
+  "images": {
+    "runtime/resource-framework-overlay-automator-osakit-v1/frameworks/AppKit.framework/Versions/C/AppKit": {
+      "sha256": "e307c42a55528ea3f7d07d7d274c6a73521eddf971288447c45b70906cc19566",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 143608
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation": {
+      "sha256": "d5441c8335f76c44d03f62e5dec2d5e073cef83b97aa08623cdc66509bf3dad6",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 45014
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework/Versions/A/IDEFoundation": {
+      "sha256": "7d174076e18a4043fa5b1f8aac3a323dd39735fb4d52f575475dcef4b43d2a49",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 113784
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Developer/usr/bin/ibtoold": {
+      "sha256": "5aba0dcc45c8386ae1a1577457dfb1ecb5c68d840d9658794c176cc7f9f46d3b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 732
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "read_only_debugger_observation": true,
+  "configuration": "config/direct-resource-tool-environment-v128.json",
+  "capture": "artifacts/automator-ibtool-application-init-v1.json",
+  "symbolication": "artifacts/automator-ibtool-application-init-v1-nlist-symbolication.json",
+  "first_class": "NSApplication",
+  "first_NSApp_value": "0x0",
+  "first_shared_flag": 0,
+  "first_init_state": 0,
+  "first_creator": "-[DVTPlugIn _instantiatePrincipalClass]",
+  "first_creator_vmaddr": "0x185bd7",
+  "first_direct_return_vmaddr": "0x185c19",
+  "second_class": "IBCLIServerApplication",
+  "second_shared_flag": 0,
+  "second_init_state": 1,
+  "second_caller": "IBIDEInitialize -> NSApplication sharedApplication -> IBCLIServerApplication init -> NSApplication init",
+  "plugin_identity_verified": false,
+  "next_work": "Read plugin object and principal-class metadata before instantiation; do not reset NSApp or suppress the exception.",
+  "full_goal_complete": false
+}

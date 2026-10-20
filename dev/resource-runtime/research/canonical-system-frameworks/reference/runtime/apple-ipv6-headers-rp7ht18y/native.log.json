@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/apple-ipv6-headers-rp7ht18y/native.log",
+  "original_sha256": "b20f37fc6c65b263927306851b4ac114e76e845ea55d1bf5582969bd2a039f09",
+  "encoding": "utf-8",
+  "text": "Warning: failed to increase FD rlimit: Operation not permitted\nnotifyd: XPC matching publisher unavailable; direct Mach notification transport active\n/Volumes/SystemRoot/workspace/fixtures/hello/ios-public-ipv6-header.m:3:9: error: use of private header from outside its module: 'netinet6/in6.h' [-Wprivate-header]\n    3 | #import <netinet6/in6.h>\n      |         ^\nIn file included from /Volumes/SystemRoot/workspace/fixtures/hello/ios-public-ipv6-header.m:3:\n/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/usr/include/netinet6/in6.h:94:2: error: \"do not include netinet6/in6.h directly, include netinet/in.h. \"         \" see RFC2553\"\n   94 | #error \"do not include netinet6/in6.h directly, include netinet/in.h. \" \\\n      |  ^\n2 errors generated.\nAPPLE_IPV6_HEADER private 1\nAPPLE_IPV6_HEADER public 0\n"
+}

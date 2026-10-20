@@ -1,0 +1,29 @@
+{
+  "classification": "progress",
+  "full_goal_complete": false,
+  "configuration": "config/direct-resource-tool-environment-v130.json",
+  "backend_stage": "artifacts/private-procfs-auditsession6-stage.json",
+  "root_cause": "DVT includes DYLD_FRAMEWORK_PATH directories in additional plugin search paths. Staged PlugInKit was therefore preloaded as a plugin whose authentic NSPrincipalClass is NSApplication, creating the wrong first application instance.",
+  "original_metadata_source": "artifacts/fullsystem-pluginkit-resources-v1.json",
+  "full_installer_info_byte_equal_Recovery": true,
+  "original_info_sha256": "b89ac0070a7a2c64083d84550f9157912f3ad722802d756321b8eb075e81b0ad",
+  "metadata_changed": false,
+  "original_tool_binaries_changed": false,
+  "fix": "Remove PlugInKit from framework override directories and bind its original complete tree at the canonical system path inside a fresh private Darling namespace.",
+  "canonical_stage": "artifacts/canonical-pluginkit-v1-stage.json",
+  "framework_scope": "artifacts/canonical-pluginkit-framework-scope-v1.json",
+  "live_provider": "artifacts/canonical-pluginkit-live-provider-v1.json",
+  "host_isolation": "artifacts/canonical-pluginkit-host-isolation-v1.json",
+  "ibtool_version_probe": "runtime/direct-resource-tools-tfzq9x7m/result.json",
+  "actool_version_probe": "runtime/direct-resource-tools-8u7__onh/result.json",
+  "version_probe_statuses": [
+    0,
+    0
+  ],
+  "resource_compilation_verified": false,
+  "full_Unity_UE_App_build_and_signing_verified": false,
+  "active_full_workspace": "Unity/CocoaPods DD70 / v77",
+  "full_build_arguments": "config/unity-ios-cocoapods-v70-build-arguments.json",
+  "full_probe_arguments": "config/unity-ios-cocoapods-v77-probe-arguments.json",
+  "default_installer_promoted": false
+}

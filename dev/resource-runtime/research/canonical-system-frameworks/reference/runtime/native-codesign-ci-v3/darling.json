@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/native-codesign-ci-v3/darling",
+  "original_sha256": "45a88bce3f7fc58fc2ebcdcb5d61a9fc9115cbd59d0d605bf677208e8fbe63e4",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env bash\nset -euo pipefail\nproject=$(cd -- \"$(dirname -- \"${BASH_SOURCE[0]}\")/../..\" && pwd -P)\nif [[ ! -x \"$project/runtime/rootfs/usr/bin/darling\" ]]; then\n    echo \"Darling runtime is not installed in $project/runtime/rootfs\" >&2\n    exit 1\nfi\nexec 9>\"$project/runtime/session.lock\"\nflock 9\nif [[ -f \"$project/runtime/state/host-cpu-haswell.json\" ]]; then\n    if [[ ! -x \"$project/runtime/tools/check-haswell-host\" ]]; then\n        echo \"The project x86_64h runtime requires its CPU/OS launch guard.\" >&2\n        exit 1\n    fi\n    \"$project/runtime/tools/check-haswell-host\" --require\nfi\nif [[ ${1:-} == shell ]]; then\n    shift\nfi\nexec unshare --user --map-root-user --mount --pid --fork --kill-child \\\n    \"$project/runtime/native-codesign-ci-v3/runtime-ns.sh\" \"$project\" \"$@\"\n"
+}
