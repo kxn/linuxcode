@@ -1,0 +1,76 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "tag": "original-regression",
+      "status": -6,
+      "command": [
+        "clang-19",
+        "-D_GNU_SOURCE=1",
+        "-DMLDR_BUILD=1",
+        "-DINSTALL_PREFIX=\"/usr\"",
+        "-std=gnu11",
+        "-O2",
+        "-g",
+        "-pthread",
+        "-fno-strict-aliasing",
+        "-I/home/dl/linuxcode/vendor/darling/src/startup/mldr/include",
+        "-I/home/dl/linuxcode/vendor/darling/src/startup/mldr",
+        "-I/home/dl/linuxcode/vendor/darling/src/external/xnu/EXTERNAL_HEADERS",
+        "-I/home/dl/linuxcode/runtime/darlingserver-source-build/include",
+        "-I/home/dl/linuxcode/runtime/darlingserver-source-build/darlingserver/include",
+        "-I/home/dl/linuxcode/vendor/darlingserver/include",
+        "-I/home/dl/linuxcode/runtime/darlingserver-source-build/src/startup",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wl,--gc-sections",
+        "-DMLDR_SOURCE_FILE=\"/home/dl/linuxcode/runtime/source-input-history/de07d3198792372c19a3a85b41fdd7b683ff25c3131a464a60a6cdd7bbaf7a26/mldr.c\"",
+        "/home/dl/linuxcode/fixtures/hello/mldr-dynamic-rlimit.c",
+        "-o",
+        "/home/dl/linuxcode/runtime/mldr-dynamic-rlimit-test-35_tamy7/original-regression"
+      ]
+    },
+    {
+      "tag": "fixed",
+      "status": 0,
+      "command": [
+        "clang-19",
+        "-D_GNU_SOURCE=1",
+        "-DMLDR_BUILD=1",
+        "-DINSTALL_PREFIX=\"/usr\"",
+        "-std=gnu11",
+        "-O2",
+        "-g",
+        "-pthread",
+        "-fno-strict-aliasing",
+        "-I/home/dl/linuxcode/vendor/darling/src/startup/mldr/include",
+        "-I/home/dl/linuxcode/vendor/darling/src/startup/mldr",
+        "-I/home/dl/linuxcode/vendor/darling/src/external/xnu/EXTERNAL_HEADERS",
+        "-I/home/dl/linuxcode/runtime/darlingserver-source-build/include",
+        "-I/home/dl/linuxcode/runtime/darlingserver-source-build/darlingserver/include",
+        "-I/home/dl/linuxcode/vendor/darlingserver/include",
+        "-I/home/dl/linuxcode/runtime/darlingserver-source-build/src/startup",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wl,--gc-sections",
+        "-DMLDR_SOURCE_FILE=\"/home/dl/linuxcode/vendor/darling/src/startup/mldr/mldr.c\"",
+        "/home/dl/linuxcode/fixtures/hello/mldr-dynamic-rlimit.c",
+        "-o",
+        "/home/dl/linuxcode/runtime/mldr-dynamic-rlimit-test-35_tamy7/fixed"
+      ]
+    }
+  ],
+  "build": "runtime/mldr-source-xqm92o1w/build.json",
+  "files": {
+    "scripts/test-mldr-dynamic-rlimit.py": "70ee80f3e68ce8131385c6aab6d32b1b557a9b40304ec8fcb3586b21ca06c69e",
+    "fixtures/hello/mldr-dynamic-rlimit.c": "86a857bfbbf3e60591f1a26864e14f0a213c5cd99905c81856c17fea36d97071",
+    "vendor/darling/src/startup/mldr/mldr.c": "5bd725e0d5092d3359b31a9bc7b9e4853d02451e2a44372430bbe904efaba117",
+    "runtime/source-input-history/de07d3198792372c19a3a85b41fdd7b683ff25c3131a464a60a6cdd7bbaf7a26/mldr.c": "de07d3198792372c19a3a85b41fdd7b683ff25c3131a464a60a6cdd7bbaf7a26",
+    "runtime/mldr-dynamic-rlimit-test-35_tamy7/original-regression-build.log": "58763e40b3b8d286cf8f4271b96b184405dda6154d8546934a01e4506e000f14",
+    "runtime/mldr-dynamic-rlimit-test-35_tamy7/original-regression": "47f797a81edc335a62c539387ec85d6e4f9c0d9850d14d800fdf7ce10bcc7c9d",
+    "runtime/mldr-dynamic-rlimit-test-35_tamy7/original-regression.log": "d2e3ec91c66eadd57c63a5e528a420a63cece7267db3dd50e42c75b1ad52845a",
+    "runtime/mldr-dynamic-rlimit-test-35_tamy7/fixed-build.log": "c717ae4440b564b89282a7db6ad540fe4d0276ef2afd27ecbe457ccd69389bc5",
+    "runtime/mldr-dynamic-rlimit-test-35_tamy7/fixed": "39825c46fbef0f006d28c13673a19bf53d3183232323496357a776e6c2a84273",
+    "runtime/mldr-dynamic-rlimit-test-35_tamy7/fixed.log": "78a5d325e9f1d05725e122f8b4b1bc13f9d3c09e45ed429f06a8fe9c433fe08e"
+  }
+}
