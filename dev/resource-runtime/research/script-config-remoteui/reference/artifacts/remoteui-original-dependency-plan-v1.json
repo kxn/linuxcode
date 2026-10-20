@@ -1,0 +1,891 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-0kp_2ycc/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v152-runtime-inputs-v1.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "remoteui-patch-got-v1"
+  ],
+  "images": {
+    "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI": {
+      "original_sha256": "c632c5ff30332abe903ff7d8afadf3db9c2d0a8759ef1b4de464975a361b153b",
+      "original_bytes": 3534848,
+      "dependencies": [
+        {
+          "path": "/System/Library/PrivateFrameworks/OnBoardingKit.framework/Versions/A/OnBoardingKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/OnBoardingKit.framework/Versions/A/OnBoardingKit",
+            "runtime/ios-resource-lazy-v1/frameworks/OnBoardingKit.framework/OnBoardingKit"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/LiftUI.framework/Versions/A/LiftUI",
+          "load_command": "0xc",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AAAFoundationSwift.framework/Versions/A/AAAFoundationSwift",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v152/frameworks/AAAFoundationSwift.framework/Versions/A/AAAFoundationSwift",
+            "runtime/coregraphics-native-v152/frameworks/AAAFoundationSwift.framework/AAAFoundationSwift"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/resource-script-config-v2/libraries/libSystem.B.dylib",
+            "runtime/coregraphics-native-v152/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/coregraphics-native-v152/frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/AppKit.framework/AppKit",
+            "runtime/coregraphics-native-v152/frameworks/AppKit.framework/AppKit"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Combine.framework/Versions/A/Combine",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/Frameworks/Combine.framework/Versions/A/Combine",
+            "runtime/combine-native/frameworks/Combine.framework/Versions/A/Combine",
+            "runtime/combine-native/frameworks/Combine.framework/Combine"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v152/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v152/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/CoreGraphics"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/CoreServices"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+            "runtime/coregraphics-native-v152/frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/JavaScriptCore.framework/JavaScriptCore",
+            "runtime/coregraphics-native-v152/frameworks/JavaScriptCore.framework/JavaScriptCore"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "runtime/ios-resource-lazy-v1/frameworks/SwiftUI.framework/SwiftUI"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v152/frameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+            "runtime/coregraphics-native-v152/frameworks/AAAFoundation.framework/AAAFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit",
+            "runtime/coregraphics-native-v152/frameworks/AuthKit.framework/Versions/A/AuthKit",
+            "runtime/coregraphics-native-v152/frameworks/AuthKit.framework/AuthKit"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/FeatureFlags.framework/Versions/A/FeatureFlags",
+            "runtime/ios-resource-lazy-v1/frameworks/FeatureFlags.framework/FeatureFlags"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/IconFoundation.framework/Versions/A/IconFoundation",
+            "runtime/ios-resource-lazy-v1/frameworks/IconFoundation.framework/IconFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices",
+            "runtime/coregraphics-native-v152/frameworks/IconServices.framework/Versions/A/IconServices",
+            "runtime/coregraphics-native-v152/frameworks/IconServices.framework/IconServices"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/Settings.framework/Versions/A/Settings",
+          "load_command": "0x80000018",
+          "file_candidates": []
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI",
+          "load_command": "0xc",
+          "file_candidates": []
+        },
+        {
+          "path": "/usr/lib/libMobileGestalt.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libMobileGestalt.dylib",
+            "runtime/mobilegestalt-native/libraries/libMobileGestalt.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftAccelerate.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftAccelerate.dylib",
+            "runtime/native-library-stage/libswiftAccelerate.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCompression.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCompression.dylib",
+            "runtime/applearchive-native/libraries/libswiftCompression.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreAudio.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreAudio.dylib",
+            "runtime/coregraphics-native-v152/libraries/libswiftCoreAudio.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreImage.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreImage.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreLocation.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreLocation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIntents.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIntents.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftMetal.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftMetal.dylib",
+            "runtime/native-library-stage/libswiftMetal.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftOSLog.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftOSLog.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObservation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftQuartzCore.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftQuartzCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftSpatial.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/coregraphics-native-v152/libraries/libswiftSpatial.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/uniform-type-identifiers-native/libraries/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Concurrency.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_StringProcessing.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_StringProcessing.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_StringProcessing.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftos.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftos.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftsimd.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftsimd.dylib"
+          ]
+        }
+      ]
+    },
+    "/System/Library/PrivateFrameworks/LiftUI.framework/Versions/A/LiftUI": {
+      "original_sha256": "1e85b906b228569de8886e2620179a05a7ec85cf956db167c5f59f6db7f40feb",
+      "original_bytes": 1769472,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/resource-script-config-v2/libraries/libSystem.B.dylib",
+            "runtime/coregraphics-native-v152/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/coregraphics-native-v152/frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/AppKit.framework/AppKit",
+            "runtime/coregraphics-native-v152/frameworks/AppKit.framework/AppKit"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Combine.framework/Versions/A/Combine",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/Frameworks/Combine.framework/Versions/A/Combine",
+            "runtime/combine-native/frameworks/Combine.framework/Versions/A/Combine",
+            "runtime/combine-native/frameworks/Combine.framework/Combine"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "runtime/ios-resource-lazy-v1/frameworks/SwiftUI.framework/SwiftUI"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftAccelerate.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftAccelerate.dylib",
+            "runtime/native-library-stage/libswiftAccelerate.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreAudio.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreAudio.dylib",
+            "runtime/coregraphics-native-v152/libraries/libswiftCoreAudio.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreImage.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreImage.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftMetal.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftMetal.dylib",
+            "runtime/native-library-stage/libswiftMetal.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftOSLog.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftOSLog.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObservation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftObservation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftQuartzCore.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftQuartzCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftSpatial.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/coregraphics-native-v152/libraries/libswiftSpatial.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/uniform-type-identifiers-native/libraries/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Concurrency.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_StringProcessing.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_StringProcessing.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_StringProcessing.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftos.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftos.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftsimd.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftsimd.dylib"
+          ]
+        }
+      ]
+    },
+    "/System/Library/PrivateFrameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI": {
+      "original_sha256": "f3a1a58cd1cdba44301138ec4d106421251a9b7754012440fc47cd8069cd50b3",
+      "original_bytes": 77824,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/resource-script-config-v2/libraries/libSystem.B.dylib",
+            "runtime/coregraphics-native-v152/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/coregraphics-native-v152/frameworks/AppKit.framework/Versions/C/AppKit",
+            "runtime/resource-framework-overlay-crashreportersupport-v1/frameworks/AppKit.framework/AppKit",
+            "runtime/coregraphics-native-v152/frameworks/AppKit.framework/AppKit"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v152/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/Versions/A/CoreGraphics",
+            "runtime/coregraphics-native-v152/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/imageio-cg-constants/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/native-layer-support/frameworks/CoreGraphics.framework/CoreGraphics",
+            "runtime/foundation-native-framework-stage/CoreGraphics.framework/CoreGraphics"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "runtime/ios-resource-lazy-v1/frameworks/SwiftUI.framework/SwiftUI"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/IconFoundation.framework/Versions/A/IconFoundation",
+            "runtime/ios-resource-lazy-v1/frameworks/IconFoundation.framework/IconFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices",
+            "runtime/coregraphics-native-v152/frameworks/IconServices.framework/Versions/A/IconServices",
+            "runtime/coregraphics-native-v152/frameworks/IconServices.framework/IconServices"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftAccelerate.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftAccelerate.dylib",
+            "runtime/native-library-stage/libswiftAccelerate.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreImage.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreImage.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftMetal.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftMetal.dylib",
+            "runtime/native-library-stage/libswiftMetal.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftOSLog.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftOSLog.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftQuartzCore.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftQuartzCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftSpatial.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/coregraphics-native-v152/libraries/libswiftSpatial.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/uniform-type-identifiers-native/libraries/libswiftUniformTypeIdentifiers.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Concurrency.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswift_Concurrency.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftos.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftos.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftos.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftsimd.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftsimd.dylib"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [
+    "/System/Library/PrivateFrameworks/Settings.framework/Versions/A/Settings"
+  ],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-0kp_2ycc/result.json": "eccdf4a05135c7d46f36a5cf23acc71150398a31e31226502ab93fe21b5f125a",
+    "artifacts/coregraphics-native-v152-runtime-inputs-v1.json": "5babe9d7157b30d4f772205b00a375510b04779e385900292921acd50c29663e",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "f25cc60e787d325bf79bd64462e3ca219e44dcbdbfc865111458b20f7b2caf60",
+    "scripts/plan-original-resource-dependencies.py": "01f469fa4793c07b1e243792c27bf9cfd2a98e40d22c2ce570d4d79f8013874c"
+  }
+}

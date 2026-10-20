@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "diagnostic_only": true,
+  "provider": "/usr/lib/system/libsystem_platform.dylib",
+  "provider_sha256": "f090b688d134b6e5a7bf2d60bbcdd753b4bf62d1152a43f6b54e686396cea804",
+  "symbol": "_os_script_config_storage",
+  "original_address": "0x7ff843a07000",
+  "original_section": "__script_config",
+  "original_section_bytes": 32768,
+  "offset_within_original_section": 16384,
+  "storage_bytes": 16384,
+  "original_zero_initialized": true,
+  "required_x86_page_alignment": 4096,
+  "export_is_data": true,
+  "upstream_commit": "3d023cd1e358acd0ab194640ea997d61e2e8e074",
+  "upstream_sources": {
+    "runtime/webkit-script-config-reference-v1/LLIntData.h": {
+      "url": "https://raw.githubusercontent.com/WebKit/WebKit/3d023cd1e358acd0ab194640ea997d61e2e8e074/Source/JavaScriptCore/llint/LLIntData.h",
+      "sha256": "a7a0146fc1afe984050e0e68a09e80c07429d99bf92a0fadd37bca5e64ded240"
+    },
+    "runtime/webkit-script-config-reference-v1/LLIntData.cpp": {
+      "url": "https://raw.githubusercontent.com/WebKit/WebKit/3d023cd1e358acd0ab194640ea997d61e2e8e074/Source/JavaScriptCore/llint/LLIntData.cpp",
+      "sha256": "8375c169c49bbd57d237c2733911b76448ce250cf78dd10e0a380a333ebdaa92"
+    }
+  },
+  "consumer_owns_initialization_and_freezing": true,
+  "implementation_verified": false,
+  "runtime_behavior_verified": false,
+  "next_work": "Add the real zero-initialized page-aligned storage to libplatform, stage it without changing existing libSystem code, and verify memory isolation/protection and original JavaScriptCore initialization before selecting it."
+}

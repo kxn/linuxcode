@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/remoteui-original-closure-preparation-v2.json",
+  "configuration_sha256": "caee25a7acbcdd5b5caf4215fa428e00af48bf16d317dc2e81ef4388b7c90bf9",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "attempts": [],
+      "prepared_target": "remoteui-patch-got-v3"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LiftUI.framework/Versions/A/LiftUI",
+      "attempts": [],
+      "prepared_target": "remoteui-closure-liftui-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI",
+      "attempts": [],
+      "prepared_target": "remoteui-closure-iconservices-swiftui-resource-v2"
+    }
+  ]
+}

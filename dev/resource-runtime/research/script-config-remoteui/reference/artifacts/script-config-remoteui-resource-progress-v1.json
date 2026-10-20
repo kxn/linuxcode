@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-10-20T06:28:15.187754+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "configuration": "config/direct-resource-tool-environment-v108.json",
+  "graphics_stage": "artifacts/coregraphics-native-v153-runtime-inputs-v1.json",
+  "resource_overlay_stage": "artifacts/resource-framework-overlay-remoteui-runtime-inputs-v1.json",
+  "storage_build": "runtime/resource-script-config-v2/build.json",
+  "storage_probe": "runtime/script-config-native-xu5_oyc5/result.json",
+  "storage_bytes": 16384,
+  "storage_alignment": 4096,
+  "initial_zero_and_writes_verified": true,
+  "fresh_process_zero_verified": true,
+  "fork_copy_on_write_verified": true,
+  "four_readonly_pages_verified": true,
+  "permanent_freeze_verified": false,
+  "source_commit": "https://github.com/kxn/darling-libplatform/commit/f0e056d175881f43eb115442dba84e051891c035",
+  "original_JavaScriptCore_probe": "runtime/original-jsc-native-78p4ka4n/result.json",
+  "original_JavaScriptCore_context_creation_verified": false,
+  "original_JavaScriptCore_probe_blocker": "_dyld_shared_cache_for_each_subcache4Rosetta",
+  "new_original_images": {
+    "verified": true,
+    "code_images": [
+      {
+        "target": "remoteui-patch-got-v3",
+        "inspection": "artifacts/remoteui-patch-got-v3-independent-inspection.json",
+        "corruption_tests": "artifacts/remoteui-patch-got-v3-real-binary-tests.json",
+        "format_probe": "runtime/original-dyld-validation-batch-jx86c_s0/remoteui-patch-got-v3-result.json",
+        "got_cells": 1807,
+        "serialized_bindings": 3061
+      },
+      {
+        "target": "remoteui-closure-liftui-resource-v2",
+        "inspection": "artifacts/remoteui-closure-liftui-resource-v2-independent-inspection.json",
+        "corruption_tests": "artifacts/remoteui-closure-liftui-resource-v2-real-binary-tests.json",
+        "format_probe": "runtime/original-dyld-validation-batch-jx86c_s0/remoteui-closure-liftui-resource-v2-result.json",
+        "got_cells": 1224,
+        "serialized_bindings": 2731
+      },
+      {
+        "target": "remoteui-closure-iconservices-swiftui-resource-v2",
+        "inspection": "artifacts/remoteui-closure-iconservices-swiftui-resource-v2-independent-inspection.json",
+        "corruption_tests": "artifacts/remoteui-closure-iconservices-swiftui-resource-v2-real-binary-tests.json",
+        "format_probe": "runtime/original-dyld-validation-batch-jx86c_s0/remoteui-closure-iconservices-swiftui-resource-v2-result.json",
+        "got_cells": 260,
+        "serialized_bindings": 358
+      }
+    ],
+    "original_code_bytes_equal": true,
+    "GOT_cells": 3291,
+    "serialized_bindings": 6150,
+    "format_positive_cases": 3,
+    "format_negative_cases": 6
+  },
+  "equivalent_reexport_controls": "artifacts/equivalent-original-reexports-controls-v1.json",
+  "legacy_namespace_controls": "artifacts/whole-library-reexport-import-controls-v2.json",
+  "direct_resource_probes": [
+    "runtime/direct-resource-tools-0kp_2ycc/result.json",
+    "runtime/direct-resource-tools-97tylwrz/result.json"
+  ],
+  "original_Unity_workspace_build": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-9bfab3e5a50d.json",
+  "original_Unity_exit_status": 65,
+  "original_Unity_native_status": [
+    "65"
+  ],
+  "original_Unity_dependency_graph_targets": 5,
+  "UTI_preflight_verified": true,
+  "compile_c_task_lines": 0,
+  "expected_product_binaries": {
+    "runtime/unity-ios-cocoapods-v58-build/DerivedData/Build/Products/Debug-iphoneos/uEmuera.app/uEmuera": {
+      "exists": false,
+      "bytes": null
+    },
+    "runtime/unity-ios-cocoapods-v58-build/DerivedData/Build/Products/Debug-iphoneos/UnityFramework.framework/UnityFramework": {
+      "exists": false,
+      "bytes": null
+    },
+    "runtime/unity-ios-cocoapods-v58-build/DerivedData/Build/Products/Debug-iphoneos/AFNetworking/libAFNetworking.a": {
+      "exists": false,
+      "bytes": null
+    }
+  },
+  "latest_actual_blocker": "_$s8Settings0A8IconViewV5StyleOMa",
+  "resource_compilation_verified": false,
+  "complete_Unity_UE_linking_and_signing_verified": false,
+  "default_installer_promoted": false,
+  "next_work": "Recover the next original dependency shown by original resource tools, continue real JavaScriptCore initialization and resource compilation, then full Unity/UE CocoaPods linking and signing."
+}

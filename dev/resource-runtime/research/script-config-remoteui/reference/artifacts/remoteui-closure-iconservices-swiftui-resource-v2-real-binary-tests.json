@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "remoteui-closure-iconservices-swiftui-resource-v2",
+      "candidate_sha256": "fba5deeb8a222551d2f5df925827a4ec145b2292e9814e2a1dd3cac6d3790be2",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 34186,
+            "sha256": "f7c7383aac34364434359a7a26c2354c3911fedf9a81683c9cf2396ce3a5e37d"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 768,
+            "sha256": "bb01f0d0736390343b9f408abc0084672abc0483696ccbb7f1de55cccf99a145"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 260,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 358,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/remoteui-original-closure-preparation-v1.json",
+  "configuration_sha256": "0694bc9c84791d8c6441f186c9947707b44f95ea409c99b6e688aee7e5ef9528",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/LiftUI.framework/Versions/A/LiftUI",
+      "attempts": [
+        {
+          "target": "remoteui-closure-liftui-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LiftUI.framework/Versions/A/LiftUI",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "remoteui-closure-liftui-resource-v1",
+            "--build"
+          ],
+          "log": "logs/remoteui-closure-liftui-resource-v1-batch-preparation.log",
+          "log_sha256": "3559bf4cd5555c226ac22de3cd09cdd64cba0329be0254d49789de854f783e98",
+          "preparation": "artifacts/remoteui-closure-liftui-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'remoteui-closure-liftui-resource-v1', '--output', 'artifacts/remoteui-closure-liftui-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI",
+      "attempts": [
+        {
+          "target": "remoteui-closure-iconservices-swiftui-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "remoteui-closure-iconservices-swiftui-resource-v1",
+            "--build"
+          ],
+          "log": "logs/remoteui-closure-iconservices-swiftui-resource-v1-batch-preparation.log",
+          "log_sha256": "7fac5a4c2c37139e4942f8395e2a650cdf4be79ca36fc6d3845877223ddba237",
+          "preparation": "artifacts/remoteui-closure-iconservices-swiftui-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'remoteui-closure-iconservices-swiftui-resource-v1', '--output', 'artifacts/remoteui-closure-iconservices-swiftui-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    }
+  ]
+}

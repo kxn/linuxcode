@@ -1,0 +1,28 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "stem": "remoteui",
+      "existing_target": "remoteui-patch-got-v3"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LiftUI.framework/Versions/A/LiftUI",
+      "stem": "remoteui-closure-liftui",
+      "existing_target": "remoteui-closure-liftui-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI",
+      "stem": "remoteui-closure-iconservices-swiftui",
+      "existing_target": "remoteui-closure-iconservices-swiftui-resource-v2"
+    }
+  ]
+}

@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[Swift NaturalLanguage 与 AuthKitUI 检查点](dev/resource-runtime/research/naturallanguage-authkitui/README.md)恢复七个原版映像，核实 25 个整库重导出导入，并验证真实 CFString 常量及错误值对照。完整 Unity/CocoaPods workspace 已越过这些加载缺口，当前停在 JavaScriptCore 所需的系统存储符号；仍无 CompileC 或最终 App。
+最新的[系统脚本存储与 RemoteUI 检查点](dev/resource-runtime/research/script-config-remoteui/README.md)实现真实 16 KB 存储并验证写读、进程隔离及页面保护，恢复三个原版映像并验证同名重导出身份。完整 Unity/CocoaPods 构建当前停在 `_$s8Settings0A8IconViewV5StyleOMa`；仍无 CompileC 或最终 App。
+
+此前的[Swift NaturalLanguage 与 AuthKitUI 检查点](dev/resource-runtime/research/naturallanguage-authkitui/README.md)恢复七个原版映像，核实 25 个整库重导出导入，并验证真实 CFString 常量及错误值对照。完整 Unity/CocoaPods workspace 已越过这些加载缺口，当前停在 JavaScriptCore 所需的系统存储符号；仍无 CompileC 或最终 App。
 
 此前的[原版 NEWLAPACK 检查点](dev/resource-runtime/research/native-newlapack/README.md)恢复原版 LAPACK/BLAS 及 Accelerate/vecLib 转发框架，通过 12 个矩阵的 638 项奇异值分解检查和既有 CPU 回归。完整 Unity/CocoaPods workspace 已越过 NEWLAPACK，当前停在 Swift NaturalLanguage 接口缺失；仍无 CompileC 或最终 App。
 
