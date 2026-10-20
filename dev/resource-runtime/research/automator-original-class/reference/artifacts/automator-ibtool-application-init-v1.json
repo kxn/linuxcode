@@ -1,0 +1,30 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--configuration",
+    "config/direct-resource-tool-environment-v128.json",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--tool",
+    "ibtool",
+    "--dvt-raw-backtraces"
+  ],
+  "capture": {
+    "pid": 311430,
+    "gdb_status": 0,
+    "breakpoint_hit": true,
+    "first_init_observed": true,
+    "entry_runtime_address": "0x7f33eac81dba",
+    "original_entry_bytes": "554889e541574156",
+    "gdb_log": "logs/automator-ibtool-application-init-v1.gdb.log",
+    "maps": "logs/automator-ibtool-application-init-v1.maps.log"
+  },
+  "outer_status": 1,
+  "log": "logs/automator-ibtool-application-init-v1-driver.log",
+  "log_sha256": "3ef0861d2dbbd0250eae7a740d7669450e0f72af250a1f6ae100024fdd1282b9",
+  "sources": {
+    "scripts/capture-ibtool-application-init.py": "a3bd146b8557b2d81ad401ec698ad78ef94af0e352042d99f8827ae0b3139e09",
+    "runtime/rebuilt-appkit-swift-any-patch-got-v1/AppKit": "e307c42a55528ea3f7d07d7d274c6a73521eddf971288447c45b70906cc19566"
+  }
+}

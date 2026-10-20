@@ -1,0 +1,64 @@
+{
+  "target": "automator-closure-applescriptobjc-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/AppleScriptObjC.framework/Versions/A/AppleScriptObjC",
+    "sha256": "5789c3d528d70bd35c99fbcf715a9e3d377819ee0b54406b1f5b74c57c049c8c",
+    "reference_set": "fullsystem",
+    "objc_classes": 12,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 191,
+    "patch_got_range": [
+      "0x7ffb40004000",
+      "0x7ffb4009a000"
+    ]
+  },
+  "original_bytes": 110592,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libDiagnosticMessagesClient.dylib",
+    "/usr/lib/libffi.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices"
+  ],
+  "previous_manifest_sha256": "c47f903ca95ac681d53fd8381b51492be507914b0e4c3e40ba79b566515a79c0",
+  "manifest_sha256": "908797604fd1e95d9c980408f41a41c1fd2b62531777ad542944f3892b9ff02a",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "automator-closure-applescriptobjc-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 154,
+    "nonzero_addends": 0,
+    "got_cells": 191,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/automator-closure-applescriptobjc-resource-v1-build.log",
+  "log_sha256": "92bc8e5cae5c30df79583c2f7b148a8e040db7d6c0f8a28e4ee8ca6252a8e15a"
+}

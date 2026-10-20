@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--configuration",
+    "config/direct-resource-tool-environment-v128.json",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--tool",
+    "ibtool",
+    "--dvt-raw-backtraces"
+  ],
+  "capture": {
+    "pid": 310710,
+    "gdb_status": 0,
+    "breakpoint_hit": true,
+    "entry_runtime_address": "0x7fce24691bc0",
+    "original_entry_bytes": "554889e541574156",
+    "gdb_log": "logs/automator-ibtool-application-singleton-v1.gdb.log",
+    "maps": "logs/automator-ibtool-application-singleton-v1.maps.log"
+  },
+  "outer_status": 1,
+  "log": "logs/automator-ibtool-application-singleton-v1-driver.log",
+  "log_sha256": "1858c089f933c3cfc6cfbb7a072d6234ff74fdb771b134139831eb4fdbac4cdb",
+  "sources": {
+    "scripts/capture-ibtool-application-singleton.py": "0b21ba3fcbd3e8980dddf209643c6ebc678efb3980d54010789ef757e0694291",
+    "runtime/objc-custom-dealloc-source-v4/libobjc.A.dylib": "e2d0171c086b308eaae3573af23e6a6b79384890f54ac6442e43f53455ed63b0"
+  }
+}

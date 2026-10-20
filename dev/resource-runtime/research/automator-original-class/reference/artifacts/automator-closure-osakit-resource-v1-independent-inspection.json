@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 167528,
+      "sha256": "8cdc2bbce8870b87f024d0f0316862c41934fd133b475afd3060dc5d9d035414"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 690,
+      "sha256": "6f46de2f710ba5cd4e13a4a3c40c6be938e35548139df939971e326ac89eb465"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 230,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 993,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 61,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xd2a8",
+        "first_section_prefix": "0x5a0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xd2b0",
+        "first_section_prefix": "0x5a0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xd2b8",
+        "first_section_prefix": "0x5a0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xd2c0",
+        "first_section_prefix": "0x5a0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xd2c8",
+        "first_section_prefix": "0x5a0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xd2d0",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xd2f8",
+        "first_section_prefix": "0x5a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x29c8",
+        "first_section_prefix": "0xa38",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-automator-closure-osakit-resource-v1/OSAKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x522f)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-okao3hup/automator-closure-osakit-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x522f",
+        "segment": "__DATA_CONST",
+        "offset": "0xd2a8",
+        "actual_address": "0x2b5dd2a8",
+        "LLVM_section_base_address": "0x2b5dd848",
+        "reported_error": "not in section",
+        "symbol": "___kCFBooleanTrue"
+      }
+    ],
+    "original_validator_sha256": "e9a8b9763e2e1412051cf8d2177eee1ffaf3058004356ac08af7ade793a8347e",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "af7cc7de767a9116abe47685b13bee5ae5b3469a199a694a9b286afacf13f7bb",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "eef904fa64d58e796646e67aa9d91599e531111ab28edc3158635a881c3d42b1",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/OSAKit.framework/Versions/A/OSAKit": "713ce47ea15f4ca7968aaab35251545c43d4d20aa5a01716e8f56849db375d58",
+    "runtime/rebuilt-automator-closure-osakit-resource-v1/OSAKit": "45f17e8546eb9059c00b401c3eb5ea9e569ae7196986a7a6d22e6999f43cf555",
+    "runtime/rebuilt-automator-closure-osakit-resource-v1/reconstruction.json": "687475d1f39eb787657269444fb5aafdd44e36ab889da5ffef2b36195f988aff"
+  },
+  "verified": true
+}

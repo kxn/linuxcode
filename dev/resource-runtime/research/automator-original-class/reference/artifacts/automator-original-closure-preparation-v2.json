@@ -1,0 +1,130 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/automator-original-closure-preparation-v2.json",
+  "configuration_sha256": "a0afae4712842d7cd02759b1f4e6edba8a43aca304103b60f9d7f026450053d7",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/AppleScriptObjC.framework/Versions/A/AppleScriptObjC",
+      "attempts": [
+        {
+          "target": "automator-closure-applescriptobjc-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/AppleScriptObjC.framework/Versions/A/AppleScriptObjC",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "automator-closure-applescriptobjc-resource-v1",
+            "--build"
+          ],
+          "log": "logs/automator-closure-applescriptobjc-resource-v1-batch-preparation.log",
+          "log_sha256": "c8bbe82e5400dd60b4582c38ff662aed60929d49f0d1ad694f9398c9e1c0a74b",
+          "preparation": "artifacts/automator-closure-applescriptobjc-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "automator-closure-applescriptobjc-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XprotectFramework",
+      "attempts": [
+        {
+          "target": "automator-closure-xprotect-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XprotectFramework",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "automator-closure-xprotect-resource-v1",
+            "--build"
+          ],
+          "log": "logs/automator-closure-xprotect-resource-v1-batch-preparation.log",
+          "log_sha256": "8f1eb47fa5b21e03fc11751da5039c773f1a5ba6221c31744ede674246a3726f",
+          "preparation": "artifacts/automator-closure-xprotect-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "automator-closure-xprotect-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/yara.framework/Versions/A/yara",
+      "attempts": [
+        {
+          "target": "automator-closure-yara-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/yara.framework/Versions/A/yara",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "automator-closure-yara-resource-v1",
+            "--build"
+          ],
+          "log": "logs/automator-closure-yara-resource-v1-batch-preparation.log",
+          "log_sha256": "132fd1f4259f66c6fea2fbf2a860b2eb6de1fc6d7290e4c3810f05fef2eb527a",
+          "preparation": "artifacts/automator-closure-yara-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "automator-closure-yara-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libEndpointSecuritySystem.dylib",
+      "attempts": [
+        {
+          "target": "automator-closure-endpoint-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libEndpointSecuritySystem.dylib",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "automator-closure-endpoint-resource-v1",
+            "--build"
+          ],
+          "log": "logs/automator-closure-endpoint-resource-v1-batch-preparation.log",
+          "log_sha256": "995955ebbbe803f9163a5c16b5cf1f64d1efdf16334f402535dcbcf81327b2f8",
+          "preparation": "artifacts/automator-closure-endpoint-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'automator-closure-endpoint-resource-v1', '--output', 'artifacts/automator-closure-endpoint-original-import-audit-v1.json', '--follow-explicit-reexports', '--coalesce-equivalent-reexports']' returned non-zero exit status 1."
+      }
+    }
+  ]
+}

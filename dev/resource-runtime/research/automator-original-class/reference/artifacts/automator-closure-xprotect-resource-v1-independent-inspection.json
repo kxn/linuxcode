@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 47856,
+      "sha256": "eb432a952c2879fd77c3d5ac5f4b9fcd1ebcc145b93cb07dd06cf61854ba875f"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 588,
+      "sha256": "37a0f8da2dde9b19b97333109c1630091dc3e7a6ba49d365430a7cd17a20e80a"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 145,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 382,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 31,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4030",
+        "first_section_prefix": "0x448",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4048",
+        "first_section_prefix": "0x448",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4060",
+        "first_section_prefix": "0x448",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4078",
+        "first_section_prefix": "0x448",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x40f0",
+        "first_section_prefix": "0x448",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4108",
+        "first_section_prefix": "0x448",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4120",
+        "first_section_prefix": "0x448",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x5c8",
+        "first_section_prefix": "0x5c8",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-automator-closure-xprotect-resource-v1/XprotectFramework': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x20ae)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-5gmk98ef/automator-closure-xprotect-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x20ae",
+        "segment": "__DATA_CONST",
+        "offset": "0x4030",
+        "actual_address": "0x3bf7d030",
+        "LLVM_section_base_address": "0x3bf7d478",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "307329ff15aad2164fa28091c02cad8f53b0503ea7bf00b4b39efcf2b6486e5f",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "a3870ec1f419f6b4c9e5808573c94b5dc7c7dba37b07f58196aa8d026f4a6092",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "fa895b7de2d66ac1c7413421d203b939f3366733ab1cdd4d0f31b7a98a36f54a",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XprotectFramework": "ac954809c8b84121ff8ca84bb39bce70dd73185ec0613f44d26ed90663cddf59",
+    "runtime/rebuilt-automator-closure-xprotect-resource-v1/XprotectFramework": "4e8a0d1f753cfac0fc8600a959fd876f0ae8fa3faccf59241d20a44e0fcca231",
+    "runtime/rebuilt-automator-closure-xprotect-resource-v1/reconstruction.json": "93248e6abecc761f4f9b0bf0533fc582e10e459a661e034139d5dd36a75fd923"
+  },
+  "verified": true
+}

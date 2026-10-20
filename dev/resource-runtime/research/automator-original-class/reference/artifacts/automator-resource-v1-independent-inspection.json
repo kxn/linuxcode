@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1829567,
+      "sha256": "a410f9c1315160bf5fc418cebb9d70cf344f7e233028a84eb072b80f34bc58e1"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1572,
+      "sha256": "5ae4195f6fa3462cf84987859569616c69f5a0064fdabbbc88380ec61d4d247d"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 641,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 6816,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 50,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6ac80",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6ac98",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6acb0",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6acc8",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6ace0",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6acf8",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6ad10",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6ad28",
+        "first_section_prefix": "0x4c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-automator-resource-v1/Automator': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x2c058)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-5gmk98ef/automator-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x2c058",
+        "segment": "__DATA_CONST",
+        "offset": "0x6ac80",
+        "actual_address": "0x2fc53c80",
+        "LLVM_section_base_address": "0x2fc54140",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "2369b85d3f59d2d7cbca3183cb6f72bf4489118467c961694c6f31f26af4a03a",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "a165efa38301da1658370c382eba78c157fc4a47badadd6536091782997dde3f",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "fa895b7de2d66ac1c7413421d203b939f3366733ab1cdd4d0f31b7a98a36f54a",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/Automator.framework/Versions/A/Automator": "7a3f95611538640760efc86d1dd4c68de943de88cd349cd0ec91a77e3cba82d8",
+    "runtime/rebuilt-automator-resource-v1/Automator": "e23e807c3e59b92956a9a034124327cf2aaeea8821f7501c36dedcfef22bebf9",
+    "runtime/rebuilt-automator-resource-v1/reconstruction.json": "b00693bc0dbe1ec400d9be96b86c5f5d8ebdef2fec8671e07672aa337aa8fae1"
+  },
+  "verified": true
+}

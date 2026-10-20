@@ -1,0 +1,56 @@
+{
+  "target": "automator-closure-yara-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/yara.framework/Versions/A/yara",
+    "sha256": "72a0fbdfcaf5172594017eb213dbf59d1c13046ad380181185e788f9681eb652",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 117,
+    "patch_got_range": [
+      "0x7ff94007a000",
+      "0x7ff94007e000"
+    ]
+  },
+  "original_bytes": 356352,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "d022667fd2a5b648e1ce82a9387997d0149b6b003ce90c4b6a95dc4ad99359b9",
+  "manifest_sha256": "a4a280245460708114eb70f9b1f2db6c3ac5b72756bb2a315ff4af87d9023f10",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "automator-closure-yara-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 0,
+    "nonzero_addends": 0,
+    "got_cells": 117,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/automator-closure-yara-resource-v1-build.log",
+  "log_sha256": "f1d846c273328ac9204c35290f90089821644d79da86f6b4ab4c7a118b2f0943"
+}

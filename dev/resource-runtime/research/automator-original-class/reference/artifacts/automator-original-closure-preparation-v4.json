@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/automator-original-closure-preparation-v4.json",
+  "configuration_sha256": "b2e79b59bfbae78c91da8f630a6c11a947a525764978481d292a84bdf123c98f",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/Automator.framework/Versions/A/Automator",
+      "attempts": [],
+      "prepared_target": "automator-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/AppleScriptObjC.framework/Versions/A/AppleScriptObjC",
+      "attempts": [],
+      "prepared_target": "automator-closure-applescriptobjc-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XprotectFramework",
+      "attempts": [],
+      "prepared_target": "automator-closure-xprotect-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/yara.framework/Versions/A/yara",
+      "attempts": [],
+      "prepared_target": "automator-closure-yara-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libEndpointSecuritySystem.dylib",
+      "attempts": [],
+      "prepared_target": "automator-closure-endpoint-resource-v3"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "target": "automator-closure-endpoint-resource-v2",
+  "pin": {
+    "path": "/usr/lib/libEndpointSecuritySystem.dylib",
+    "sha256": "38e85893cb48fd70f1c6eea67a84c398a8d5b920b89cd73054c3660c22fbfaa5",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 3,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 66,
+    "patch_got_range": [
+      "0x7ffe40005000",
+      "0x7ffe400bd000"
+    ],
+    "cache_imports": {
+      "___sandbox_ms": "/usr/lib/libSystem.B.dylib"
+    }
+  },
+  "original_bytes": 57344,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libc++.1.dylib"
+  ],
+  "previous_manifest_sha256": "320a717e592c46728aaf04f10bd6d6a4e30282f6203f84df82960bf9092b720c",
+  "manifest_sha256": "47f943e11e3783eb00ab733588cda0bedcd79a740969aed330199589c9102ceb",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "automator-closure-endpoint-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "automator-closure-endpoint-resource-v1",
+  "exact_import_audit": "artifacts/automator-closure-endpoint-original-import-audit-v2.json",
+  "exact_import_audit_sha256": "393adc1705e35217e093a2ab547992109abfed4107e2a0d55abf3bac4b15da96",
+  "typed_class_aliases": [],
+  "explicit_reexports": {
+    "chains": [],
+    "original_provider_sha256": {}
+  },
+  "typed_pooled_imports": [
+    {
+      "kind": "original-stub-GOT-and-reexport-route",
+      "target": "0x7ff802e630ac",
+      "slots": [
+        "0x7ffe400bbb50"
+      ],
+      "selected": [
+        "___sandbox_ms",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "stubs": [
+        {
+          "address": "0x7ffe0a4bbaca",
+          "slot": "0x7ffe400bbb50",
+          "bytes": "ff258000c035"
+        }
+      ],
+      "route": [
+        {
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "symbol": "___sandbox_ms",
+          "kind": "whole-library-reexport",
+          "ordinal": 32,
+          "dependency": "/usr/lib/system/libsystem_kernel.dylib"
+        },
+        {
+          "provider": "/usr/lib/system/libsystem_kernel.dylib",
+          "symbol": "___sandbox_ms",
+          "kind": "address",
+          "export": [
+            "address",
+            140703177257132,
+            0
+          ]
+        }
+      ],
+      "original_file_sha256": {
+        "/usr/lib/libEndpointSecuritySystem.dylib": "38e85893cb48fd70f1c6eea67a84c398a8d5b920b89cd73054c3660c22fbfaa5",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+        "/usr/lib/system/libsystem_kernel.dylib": "5241ba0bea493c54551b9ce8774f578fa48e9d0260f14f09d902e14849d33c8d"
+      },
+      "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+      "records": [
+        {
+          "symbol": "___sandbox_ms",
+          "provider": "/usr/lib/system/libsystem_kernel.dylib",
+          "kind": 0,
+          "implementation": 140703177257132,
+          "matching_import_names": [
+            "___sandbox_ms"
+          ],
+          "slot": 140729972931408,
+          "addend": 0,
+          "weak_import": false,
+          "high7": 0,
+          "target": 140703177257132,
+          "target_matches_patch": true,
+          "export_matches_patch": true,
+          "provider_index": 13,
+          "export_index": 3504,
+          "location_index": 11415
+        }
+      ]
+    }
+  ],
+  "pooled_import_validator_sha256": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+  "build_returncode": 1,
+  "log": "logs/automator-closure-endpoint-resource-v2-build.log",
+  "log_sha256": "c57f3c3115f3411632a7bd74c322b92d1980cc7edf66c776af8f71680a6a2590"
+}

@@ -1,0 +1,21 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/OSAKit.framework/Versions/A/OSAKit",
+      "stem": "automator-closure-osakit",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    }
+  ]
+}

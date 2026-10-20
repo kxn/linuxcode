@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/automator-original-closure-preparation-v1.json",
+  "configuration_sha256": "5bf8d3f44a31ab1cb2cb1910aaf7a3f1b382e8c02e678098dc8113a08a750ab0",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/Automator.framework/Versions/A/Automator",
+      "attempts": [
+        {
+          "target": "automator-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/Automator.framework/Versions/A/Automator",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "automator-resource-v1",
+            "--build"
+          ],
+          "log": "logs/automator-resource-v1-batch-preparation.log",
+          "log_sha256": "eb4384d29b6793a23cfa948350ec42bc639595370c8d84eb847ddc9930825232",
+          "preparation": "artifacts/automator-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "automator-resource-v1"
+    }
+  ]
+}

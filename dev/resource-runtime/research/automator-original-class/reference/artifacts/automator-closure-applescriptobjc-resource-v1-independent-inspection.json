@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 46560,
+      "sha256": "33393b8ac4d8bd66ec6ed29550e95f282411fe2b4aee9cca620412b49cf22e4d"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 744,
+      "sha256": "500bc4a2987a0e361e597ef151a04a2d6c8f651f3338091fa6078dc1fda72a1d"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 191,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 346,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 52,
+    "examples": [
+      {
+        "segment": "__DATA",
+        "offset": "0x8d8",
+        "first_section_prefix": "0x7b8",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x8e0",
+        "first_section_prefix": "0x7b8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x900",
+        "first_section_prefix": "0x7b8",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x908",
+        "first_section_prefix": "0x7b8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x930",
+        "first_section_prefix": "0x7b8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x958",
+        "first_section_prefix": "0x7b8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x978",
+        "first_section_prefix": "0x7b8",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x980",
+        "first_section_prefix": "0x7b8",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-automator-closure-applescriptobjc-resource-v1/AppleScriptObjC': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x197b)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-5gmk98ef/automator-closure-applescriptobjc-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x197b",
+        "segment": "__DATA",
+        "offset": "0x8d8",
+        "actual_address": "0x31c168d8",
+        "LLVM_section_base_address": "0x31c17090",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      }
+    ],
+    "original_validator_sha256": "79cc08d89ea75849d8aa09c9d68d7d3ab54c2cd5fdfffb52afbb1a75238c7dbf",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "fda16ec5f656a977eec3bb085562c34dd31c7fc93621f98b5a2248b5bc1943e1",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "fa895b7de2d66ac1c7413421d203b939f3366733ab1cdd4d0f31b7a98a36f54a",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/AppleScriptObjC.framework/Versions/A/AppleScriptObjC": "5789c3d528d70bd35c99fbcf715a9e3d377819ee0b54406b1f5b74c57c049c8c",
+    "runtime/rebuilt-automator-closure-applescriptobjc-resource-v1/AppleScriptObjC": "54293b24f054b5a8c12ef4f22d49002238e239068a0b46df6cc0a7ebb60fa839",
+    "runtime/rebuilt-automator-closure-applescriptobjc-resource-v1/reconstruction.json": "e8bf1e37045bc1b78edc393716e6fcc983c1b29b7ab750c3320a0b81c875cdda"
+  },
+  "verified": true
+}

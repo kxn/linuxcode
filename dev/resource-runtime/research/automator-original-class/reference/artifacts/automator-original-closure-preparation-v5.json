@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/automator-original-closure-preparation-v5.json",
+  "configuration_sha256": "674aeb12ace5829b7647c6711a1d48198d0767b87909720467d34b106dbbd913",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/OSAKit.framework/Versions/A/OSAKit",
+      "attempts": [
+        {
+          "target": "automator-closure-osakit-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/OSAKit.framework/Versions/A/OSAKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "automator-closure-osakit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/automator-closure-osakit-resource-v1-batch-preparation.log",
+          "log_sha256": "a7f40d6f2ae11022e5e2ceb7ec8c68d0c8ea24028dbbde34a3dcd1d4bc2df87f",
+          "preparation": "artifacts/automator-closure-osakit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "automator-closure-osakit-resource-v1"
+    }
+  ]
+}

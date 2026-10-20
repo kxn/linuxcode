@@ -1,0 +1,45 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/AppleScriptObjC.framework/Versions/A/AppleScriptObjC",
+      "stem": "automator-closure-applescriptobjc",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XprotectFramework",
+      "stem": "automator-closure-xprotect",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/yara.framework/Versions/A/yara",
+      "stem": "automator-closure-yara",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    },
+    {
+      "image": "/usr/lib/libEndpointSecuritySystem.dylib",
+      "stem": "automator-closure-endpoint",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    }
+  ]
+}

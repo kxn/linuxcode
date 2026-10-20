@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "root_cause": "Legacy Darling Automator AMPathPopUpButton directly inherits NSObject, lacking encodeWithCoder:. Original Cocoa plugin category is attached and ibSwizzledEncodeWithCoder: has its real type encoding.",
+  "native_probe": "runtime/ib-cocoa-category-0sqolcxc/result.json",
+  "native_log_sha256": "01ba1db29dbddbd9f4ccfe69ae22c3128587a0bf6ee66f164f203f795c9e0eac",
+  "assertion_capture": "artifacts/appkit-layout-ibtool-function-assertion-v1.json",
+  "original_class_contract": "artifacts/automator-original-AMPath-class-contract-v1.json",
+  "original_method_and_category_present_in_Xcode": true,
+  "category_attachment_failure_ruled_out": true,
+  "prior_inference_corrected": "A return PC at the next cold-branch label was initially read as that branch executing. The standalone class/method query shows the missing original method, while the replacement category method is present.",
+  "required_original_method": "encodeWithCoder:",
+  "original_category_method": "ibSwizzledEncodeWithCoder:",
+  "replacement_plan": "Select original Automator and its real dependencies; preserve original executable code and superclass chain.",
+  "full_goal_complete": false
+}

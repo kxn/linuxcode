@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 33368,
+      "sha256": "87763c896bf57c551ce2e75765d15635522003ff2a64fad6f044ff10bd91023d"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 312,
+      "sha256": "f2a88e0df29fde8e923a1f79989f9582d881bf547846173b75afb598b98fea18"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 67,
+  "nonzero_addends_verified": 3,
+  "serialized_bindings": 79,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 3,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 2,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 8,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc68",
+        "first_section_prefix": "0x538",
+        "symbol": "__ZNKSt3__119__shared_weak_count13__get_deleterERKSt9type_info"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc78",
+        "first_section_prefix": "0x538",
+        "symbol": "__ZTVN10__cxxabiv120__si_class_type_infoE"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc88",
+        "first_section_prefix": "0x538",
+        "symbol": "__ZTINSt3__119__shared_weak_countE"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xcb8",
+        "first_section_prefix": "0x538",
+        "symbol": "__ZTVN10__cxxabiv120__si_class_type_infoE"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xcd0",
+        "first_section_prefix": "0x538",
+        "symbol": "__ZTVN10__cxxabiv117__class_type_infoE"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x340",
+        "first_section_prefix": "0x340",
+        "symbol": "__os_log_default"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x348",
+        "first_section_prefix": "0x340",
+        "symbol": "__tlv_bootstrap"
+      },
+      {
+        "segment": "__DATA",
+        "offset": "0x360",
+        "first_section_prefix": "0x340",
+        "symbol": "__tlv_bootstrap"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-automator-closure-endpoint-resource-v3/libEndpointSecuritySystem.dylib': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x2ac)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-5gmk98ef/automator-closure-endpoint-resource-v3-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x2ac",
+        "segment": "__DATA_CONST",
+        "offset": "0xc68",
+        "actual_address": "0x373a6c68",
+        "LLVM_section_base_address": "0x373a71a0",
+        "reported_error": "not in section",
+        "symbol": "__ZNKSt3__119__shared_weak_count13__get_deleterERKSt9type_info"
+      }
+    ],
+    "original_validator_sha256": "85228a8e4cb4e1300a5588f7545abe3df473d7bf3446fd1fb94e9521fc4a79bc",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "37a25d7e5953a737f4fd5f4f0479cd47a8e62b51f49501fd6b3676c36a3583c0",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "fa895b7de2d66ac1c7413421d203b939f3366733ab1cdd4d0f31b7a98a36f54a",
+    "runtime/fullsystem-libraries/usr/lib/libEndpointSecuritySystem.dylib": "38e85893cb48fd70f1c6eea67a84c398a8d5b920b89cd73054c3660c22fbfaa5",
+    "runtime/rebuilt-automator-closure-endpoint-resource-v3/libEndpointSecuritySystem.dylib": "9638f361442949f6768fd7bcda113696a3f564a63f4be4275e1dc2d5815ea48b",
+    "runtime/rebuilt-automator-closure-endpoint-resource-v3/reconstruction.json": "566de5d525ff7d30f1c01804755e9784dd83cce229322df54f5240c2f69794bc"
+  },
+  "verified": true
+}

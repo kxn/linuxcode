@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--configuration",
+    "config/direct-resource-tool-environment-v126.json",
+    "--stage",
+    "artifacts/private-procfs-auditsession6-stage.json",
+    "--tool",
+    "ibtool",
+    "--dvt-raw-backtraces"
+  ],
+  "capture": {
+    "pid": 295963,
+    "gdb_status": 0,
+    "breakpoint_hit": false,
+    "entry_runtime_address": "0x7f76c1248bc0",
+    "original_entry_bytes": "554889e541574156",
+    "gdb_log": "logs/appkit-layout-ibtool-exception-v1.gdb.log",
+    "maps": "logs/appkit-layout-ibtool-exception-v1.maps.log"
+  },
+  "outer_status": 1,
+  "log": "logs/appkit-layout-ibtool-exception-v1-driver.log",
+  "log_sha256": "2ab658b03b039efcbc8686c2ff279889710e379f9bb842cbc50e2d0a4b16b488",
+  "sources": {
+    "scripts/capture-ibtool-objc-exception.py": "d1b2f73eed8527a5ce1aad60164f2cf4e276d17dc321ed93217a838f64ea3404",
+    "runtime/objc-custom-dealloc-source-v4/libobjc.A.dylib": "e2d0171c086b308eaae3573af23e6a6b79384890f54ac6442e43f53455ed63b0"
+  }
+}
