@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/uifoundation-original-import-audit-v1-driver.log",
+  "original_sha256": "f751842a2cd3eba711146ed814efe82e6673a51eb41bda0e37434d504c0fae4d",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/audit-resource-image-imports.py\", line 33, in <module>\n    missing = json.loads(missing_path.read_text())\n                         ~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 548, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 539, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/home/dl/linuxcode/runtime/rebuilt-uifoundation-patch-got-v1/missing-cache-imports.json'\n"
+}

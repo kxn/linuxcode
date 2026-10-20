@@ -1,0 +1,75 @@
+{
+  "target": "swiftspatial-patch-got-v1",
+  "pin": {
+    "path": "/usr/lib/swift/libswiftSpatial.dylib",
+    "sha256": "fb7a1771ba4af8610d6bf555829baf18fe84def30c882c48261bb6a19b788455",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 227,
+    "patch_got_range": [
+      "0x7ffe400b1000",
+      "0x7ffe400bd000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 1376256,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/usr/lib/libSpatial.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "previous_manifest_sha256": "11c0f4378b238787c085a092a6f991df3c5ada2c42aee9a2c41f678284cbedc7",
+  "manifest_sha256": "e985f294dd91586829c08d355fb5152ac058b454e9bb6661c65ac7f239589269",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "swiftspatial-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "088a596729d4c11085423cb4e83ca3410c2680456a3b210ab5cf59bfeed19345",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 105,
+    "nonzero_addends": 0,
+    "got_cells": 227,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffe400bb3d0",
+          "0x7ffe400bb3d8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/swiftspatial-patch-got-v1-build.log",
+  "log_sha256": "e987ed55ae424fc1a14956b5268e78cf6dd3e1b43422f2ad2b7b90a65b4beff0"
+}

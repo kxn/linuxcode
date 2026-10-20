@@ -1,0 +1,39 @@
+{
+  "target": "libspatial-original-data-v1",
+  "pin": {
+    "path": "/usr/lib/libSpatial.dylib",
+    "sha256": "3a3864a239a62a5b7d49ed38214eeaf135cc82f60747f7b7f4be685bb7da4fba",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true
+  },
+  "original_bytes": 4096,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "e985f294dd91586829c08d355fb5152ac058b454e9bb6661c65ac7f239589269",
+  "manifest_sha256": "817db3b86869d52a90d6b2e0c5349354ce0c97b0a2c5d6cfd882a9f62ab0a9f2",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libspatial-original-data-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "088a596729d4c11085423cb4e83ca3410c2680456a3b210ab5cf59bfeed19345",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "build_returncode": 1,
+  "log": "logs/libspatial-original-data-v1-build.log",
+  "log_sha256": "2ff6754fc4f11f87f31f6eff71631c927722aa959c74195d7b381e6d7fcfe05f"
+}

@@ -1,0 +1,133 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1599451,
+      "sha256": "409d8303a1d5a2696b58e7d9f87aa392e90343dea2aef319772cb5b4c6644bef"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3798,
+      "sha256": "137087923385c538145c229f80c11a850c03bc61040fc0f55b6f682d1dc8b651"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 948,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 3939,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "dysymtab_alias_repair": {
+    "verified": true,
+    "symbol_count": 11376,
+    "actual_type_groups": [
+      9493,
+      985,
+      898
+    ],
+    "external_aliases": 4,
+    "renamed_aliases_preserved": [
+      {
+        "name": "_OBJC_CLASS_$_NSEmojiImageAsset",
+        "target": "_OBJC_CLASS_$_CTEmojiImageAsset"
+      },
+      {
+        "name": "_OBJC_CLASS_$_NSEmojiImageStrike",
+        "target": "_OBJC_CLASS_$_CTEmojiImageStrike"
+      },
+      {
+        "name": "_OBJC_METACLASS_$_NSEmojiImageAsset",
+        "target": "_OBJC_METACLASS_$_CTEmojiImageAsset"
+      },
+      {
+        "name": "_OBJC_METACLASS_$_NSEmojiImageStrike",
+        "target": "_OBJC_METACLASS_$_CTEmojiImageStrike"
+      }
+    ],
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 1614,
+    "remapped_indirect_entries": 1507,
+    "original_sha256": "250e7fd5387e1d641fcfcd3b8bdc8089874f7c318b9a5083cfedfc78bd469712",
+    "candidate_sha256": "6f02260df88afcabd51c0c8751acd6ad4188ee962393ff9ca22ba8cdae0f2686"
+  },
+  "dysymtab_alias_verifier": {
+    "source": "scripts/verify-dysymtab-alias-repair.py",
+    "sha256": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  },
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 26,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ac20",
+        "first_section_prefix": "0xaf0",
+        "symbol": "_OBJC_CLASS_$_NSAttributedString"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ae30",
+        "first_section_prefix": "0xaf0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ae38",
+        "first_section_prefix": "0xaf0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ae40",
+        "first_section_prefix": "0xaf0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ae50",
+        "first_section_prefix": "0xaf0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ae58",
+        "first_section_prefix": "0xaf0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ae80",
+        "first_section_prefix": "0xaf0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3aea8",
+        "first_section_prefix": "0xaf0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-uifoundation-patch-got-v2/UIFoundation': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1ab5a)\n",
+    "original_validator": "runtime/original-dyld-validation-j8renaxf/result.json",
+    "original_validator_sha256": "8f60565ed889ff3c23a1c188a34c665ed09c4137983f083406eadc020a6038d4",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "01dc19954522e1acd2dda464483bd164f9e29438d5a2d29ca27fcfd58a275b8d",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "11c0f4378b238787c085a092a6f991df3c5ada2c42aee9a2c41f678284cbedc7",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation": "250e7fd5387e1d641fcfcd3b8bdc8089874f7c318b9a5083cfedfc78bd469712",
+    "runtime/rebuilt-uifoundation-patch-got-v2/UIFoundation": "6f02260df88afcabd51c0c8751acd6ad4188ee962393ff9ca22ba8cdae0f2686",
+    "runtime/rebuilt-uifoundation-patch-got-v2/reconstruction.json": "6fc45ad9ed497009db335004a014e171519ee8674dff959e2a6fd6fc7f5330cb"
+  },
+  "verified": true
+}

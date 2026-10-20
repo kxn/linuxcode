@@ -1,0 +1,73 @@
+{
+  "target": "libspatial-original-data-v2",
+  "pin": {
+    "path": "/usr/lib/libSpatial.dylib",
+    "sha256": "3a3864a239a62a5b7d49ed38214eeaf135cc82f60747f7b7f4be685bb7da4fba",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "original_constant_only_image": {
+      "original_sha256": "3a3864a239a62a5b7d49ed38214eeaf135cc82f60747f7b7f4be685bb7da4fba",
+      "original_uuid": "47d7f920ae9435a3b8df675c48aaa55c",
+      "original_executable_bytes": 0,
+      "constants_sha256": "eb9f95bbb4f63a2a87eae1981e9d5738ce799dc6d77188690d9d1328bff2f8b0",
+      "constant_bytes": 48,
+      "private_version_symbols": [
+        "_SpatialVersionString",
+        "_SpatialVersionNumber"
+      ],
+      "original_dependencies": [
+        [
+          12,
+          "/usr/lib/libSystem.B.dylib"
+        ]
+      ]
+    },
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true
+  },
+  "original_bytes": 4096,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "817db3b86869d52a90d6b2e0c5349354ce0c97b0a2c5d6cfd882a9f62ab0a9f2",
+  "manifest_sha256": "e0752b6593bc82c1c0118e2bfcdd9ae823507fb3feb297cf082f9c36432a0ded",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "libspatial-original-data-v2",
+    "--lazy-functions",
+    "--collect-missing-imports"
+  ],
+  "preparation_source_sha256": "d783764774373f9878b13d91d1c46cac5bb65beb18cce4d011ad05b01bda822b",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_constant_only_image": {
+    "original_sha256": "3a3864a239a62a5b7d49ed38214eeaf135cc82f60747f7b7f4be685bb7da4fba",
+    "original_uuid": "47d7f920ae9435a3b8df675c48aaa55c",
+    "original_executable_bytes": 0,
+    "constants_sha256": "eb9f95bbb4f63a2a87eae1981e9d5738ce799dc6d77188690d9d1328bff2f8b0",
+    "constant_bytes": 48,
+    "private_version_symbols": [
+      "_SpatialVersionString",
+      "_SpatialVersionNumber"
+    ],
+    "original_dependencies": [
+      [
+        12,
+        "/usr/lib/libSystem.B.dylib"
+      ]
+    ]
+  },
+  "constant_validator_sha256": "0fb29a8f21a00abeb0465d4091d09aa5cddc0d356d289b4ea1b80a1d6139f18e",
+  "build_returncode": 0,
+  "log": "logs/libspatial-original-data-v2-build.log",
+  "log_sha256": "57eb5fcffdb26c61b6fa716035ad42581c99081f7cf08235c73d3c56729d6a1b"
+}

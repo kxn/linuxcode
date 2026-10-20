@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 638336,
+      "sha256": "9827106f3ab854b08665546e873e561a4a4f340b3df54418ae2b3d1ee1f4aeba"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 684,
+      "sha256": "836628ebda1161a494911391926d44684bd6be3b41390f109925046d41f0c013"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 227,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 417,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 30,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x54d0",
+        "first_section_prefix": "0xa78",
+        "symbol": "_$ss20__StaticArrayStorageCN"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56b8",
+        "first_section_prefix": "0xa78",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56c0",
+        "first_section_prefix": "0xa78",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56c8",
+        "first_section_prefix": "0xa78",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56d0",
+        "first_section_prefix": "0xa78",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56d8",
+        "first_section_prefix": "0xa78",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56e0",
+        "first_section_prefix": "0xa78",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x56e8",
+        "first_section_prefix": "0xa78",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-swiftspatial-patch-got-v1/libswiftSpatial.dylib': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x2a2d)\n",
+    "original_validator": "runtime/original-dyld-validation-bu0dp_f8/result.json",
+    "original_validator_sha256": "8431860488b6143f2e700fff1ca1ffc0b198105996d06febeb809f4beb2dad58",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "4d0fbcb140c1f036c1ebd46b707122897d706b29564278a46de1bc2076bda278",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "e985f294dd91586829c08d355fb5152ac058b454e9bb6661c65ac7f239589269",
+    "runtime/fullsystem-libraries/usr/lib/swift/libswiftSpatial.dylib": "fb7a1771ba4af8610d6bf555829baf18fe84def30c882c48261bb6a19b788455",
+    "runtime/rebuilt-swiftspatial-patch-got-v1/libswiftSpatial.dylib": "6b82f80bd836ed2756f46a55316ee241def3526900eb7e00884d11fe500a57c4",
+    "runtime/rebuilt-swiftspatial-patch-got-v1/reconstruction.json": "8aafcbbb6bc7f61dc6e4d17a7522d59ffeaf2ea89dcb4b0ed1dabba1436686a1"
+  },
+  "verified": true
+}

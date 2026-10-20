@@ -1,0 +1,118 @@
+{
+  "verified": true,
+  "positive": {
+    "verified": true,
+    "symbol_count": 11376,
+    "actual_type_groups": [
+      9493,
+      985,
+      898
+    ],
+    "external_aliases": 4,
+    "renamed_aliases_preserved": [
+      {
+        "name": "_OBJC_CLASS_$_NSEmojiImageAsset",
+        "target": "_OBJC_CLASS_$_CTEmojiImageAsset"
+      },
+      {
+        "name": "_OBJC_CLASS_$_NSEmojiImageStrike",
+        "target": "_OBJC_CLASS_$_CTEmojiImageStrike"
+      },
+      {
+        "name": "_OBJC_METACLASS_$_NSEmojiImageAsset",
+        "target": "_OBJC_METACLASS_$_CTEmojiImageAsset"
+      },
+      {
+        "name": "_OBJC_METACLASS_$_NSEmojiImageStrike",
+        "target": "_OBJC_METACLASS_$_CTEmojiImageStrike"
+      }
+    ],
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 1614,
+    "remapped_indirect_entries": 1507,
+    "original_sha256": "250e7fd5387e1d641fcfcd3b8bdc8089874f7c318b9a5083cfedfc78bd469712",
+    "candidate_sha256": "6f02260df88afcabd51c0c8751acd6ad4188ee962393ff9ca22ba8cdae0f2686"
+  },
+  "corruption_controls": [
+    {
+      "case": "stale_defined_count",
+      "rejected": true
+    },
+    {
+      "case": "changed_alias_target",
+      "rejected": true
+    },
+    {
+      "case": "changed_undefined_weak_flag",
+      "rejected": true
+    },
+    {
+      "case": "changed_defined_address",
+      "rejected": true
+    },
+    {
+      "case": "changed_symbol_string",
+      "rejected": true
+    },
+    {
+      "case": "changed_special_indirect_marker",
+      "rejected": true
+    },
+    {
+      "case": "omitted_symbol_record",
+      "rejected": true
+    }
+  ],
+  "seeded_undefined_reference_fixture": {
+    "positive": {
+      "verified": true,
+      "symbol_count": 11376,
+      "actual_type_groups": [
+        9493,
+        985,
+        898
+      ],
+      "external_aliases": 4,
+      "renamed_aliases_preserved": [
+        {
+          "name": "_OBJC_CLASS_$_NSEmojiImageAsset",
+          "target": "_OBJC_CLASS_$_CTEmojiImageAsset"
+        },
+        {
+          "name": "_OBJC_CLASS_$_NSEmojiImageStrike",
+          "target": "_OBJC_CLASS_$_CTEmojiImageStrike"
+        },
+        {
+          "name": "_OBJC_METACLASS_$_NSEmojiImageAsset",
+          "target": "_OBJC_METACLASS_$_CTEmojiImageAsset"
+        },
+        {
+          "name": "_OBJC_METACLASS_$_NSEmojiImageStrike",
+          "target": "_OBJC_METACLASS_$_CTEmojiImageStrike"
+        }
+      ],
+      "symbol_names_descriptors_and_alias_targets_preserved": true,
+      "defined_addresses_normalized": true,
+      "indirect_entries": 1614,
+      "remapped_indirect_entries": 1507,
+      "original_sha256": "f8dfdf7182122d32049187bc866575a360d58405bc04ec9073407dd0f1a025b1",
+      "candidate_sha256": "cc4a848b3df65ace7c0e36b293cc5e89a1f99142cb4ffd213e1d0701ab838c87"
+    },
+    "stale_index_rejected": true,
+    "original_image_reference": false
+  },
+  "well_formed_real_image_byte_preserving": true,
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "inputs": {
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/UIFoundation": "250e7fd5387e1d641fcfcd3b8bdc8089874f7c318b9a5083cfedfc78bd469712",
+    "runtime/rebuilt-uifoundation-patch-got-v2/UIFoundation": "6f02260df88afcabd51c0c8751acd6ad4188ee962393ff9ca22ba8cdae0f2686",
+    "runtime/rebuilt-usernotifications-patch-got-v1/UserNotifications": "8ca613e9a7342d1190b464bd5c11707b3eaabef07cd73dd6d25587928b604627"
+  },
+  "sources": {
+    "scripts/test-dysymtab-alias-binary.py": "38890e063a67f3b8ecc03ec262b32d29c221feaab4734bf0d42ee0f5f3fd7b32",
+    "scripts/normalize-dysymtab-aliases.py": "bf2323278a9ac92efd955802614378996c97ae66b1a79d5b0afba8e32c86aa46",
+    "scripts/verify-dysymtab-alias-repair.py": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  }
+}

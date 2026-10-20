@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/uifoundation-patch-got-v1-build.log",
+  "original_sha256": "f7ed0eb23e196e1f021b45b6bdafbcc484b401ccc4199b16ab37d7fe77ffcc69",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/rebuild-c-cache-image.py\", line 1051, in <module>\n    symbol_data,dysymtab_command,indirect_data,dysymtab_alias_repair=runpy.run_path(\n                                                                     ~~~~~~~~~~~~~~~\n        str(project/alias_normalizer))['normalize'](symbol_data,string_data,dysymtab_command,indirect_data)\n        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/dl/linuxcode/scripts/normalize-dysymtab-aliases.py\", line 67, in normalize\n    raise ValueError('Only extractor self-name reexport aliases are supported')\nValueError: Only extractor self-name reexport aliases are supported\n"
+}

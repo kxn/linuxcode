@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1142000,
+      "sha256": "150f647fba93357caaba4cf7fa1b7eb64c7c74043a0082b763c1a722b03b135b"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2796,
+      "sha256": "13aecebc8dc316f494b682a9df20817aa1abe6d80c06e387416b722d2fa2b62f"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 684,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1376,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 54,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6668",
+        "first_section_prefix": "0xd38",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6678",
+        "first_section_prefix": "0xd38",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6828",
+        "first_section_prefix": "0xd38",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6830",
+        "first_section_prefix": "0xd38",
+        "symbol": "_swift_cvw_destroy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6838",
+        "first_section_prefix": "0xd38",
+        "symbol": "_swift_cvw_initWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6840",
+        "first_section_prefix": "0xd38",
+        "symbol": "_swift_cvw_assignWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6850",
+        "first_section_prefix": "0xd38",
+        "symbol": "_swift_cvw_assignWithTake"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x68b8",
+        "first_section_prefix": "0xd38",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-tabulardata-patch-got-v2/TabularData': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x84dc)\n",
+    "original_validator": "runtime/original-dyld-validation-pj0mwvag/result.json",
+    "original_validator_sha256": "b684aaac146d4f913b0291c48b0e997a924c98fe123e8541d468692d7a665839",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "791e84c14ec17a8e18fd19af40cfc7781b6fead96e17cfa6a9285da015973e8a",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "cdf5e10719f253befdb2064a62ce6697cefc49f14c47e25fc884353443f2e577",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/TabularData.framework/Versions/A/TabularData": "3b8750becc7cee6a9e246f2452697a4206f393ed76e34ca31bce13541d85b376",
+    "runtime/rebuilt-tabulardata-patch-got-v2/TabularData": "99d31d4cf4579319ffe81cd7241940e22c53ec53e6b16c83115305ef7164bc1f",
+    "runtime/rebuilt-tabulardata-patch-got-v2/reconstruction.json": "b214f044aa59e67e9bff32d7a24142dd25b8dc56510ddf02bc3e550a1a2360ef"
+  },
+  "verified": true
+}

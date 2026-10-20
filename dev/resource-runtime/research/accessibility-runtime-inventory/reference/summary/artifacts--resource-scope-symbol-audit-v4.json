@@ -1,0 +1,17 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-scope-symbol-audit-v4.json",
+  "full_local_report_sha256": "26d6043fb4bc1525f59872ac5ce8c9d8e5f087bdde58f80d3983e2013db750e1",
+  "checked_at": "2026-10-20T03:00:53.923755+00:00",
+  "scope": "Audit actual eager/lazy dyld bindings in an already inventoried closure.\n\nStatic diagnosis only: exported names do not establish ABI/API compatibility.\nUses the exact host images selected by inventory-runtime-dependencies.py, with\ntheir re-export chains, rather than the exports of the original Apple cache.\n",
+  "inventory": "artifacts/resource-scope-inventory-v4.json",
+  "images": 710,
+  "binding_slots_checked": 987368,
+  "full_compatibility": false,
+  "unresolved_binding_counts": {
+    "('eager', False)": 337,
+    "('eager', True)": 503,
+    "('lazy', False)": 857,
+    "('lazy', True)": 265
+  }
+}

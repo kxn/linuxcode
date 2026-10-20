@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[当前运行输入与 CallHistory 依赖检查点](dev/resource-runtime/research/current-inputs-callhistory/README.md)选用四个原版映像，并将约 22 GB 未使用的祖先副本从启动校验表分离，保留历史哈希及当前库校验。整理前后原版工具日志逐字节一致；后续完整 Unity/CocoaPods workspace 进入五 target 图，因 CoreTelephony 常量缺失返回 65，仍未产出 App。所需原版 CoreTelephony 已有验证候选。
+最新的[原版资源依赖与符号表检查点](dev/resource-runtime/research/accessibility-runtime-inventory/README.md)选入七个原版映像，修复改名符号别名、嵌入 dylib 搜索及纯数据映像恢复。完整 Unity/CocoaPods workspace 正常返回 65，资源工具当前缺少 libSystem 的 double4x4 矩阵常量；尚无 CompileC 或最终 App。
+
+此前的[当前运行输入与 CallHistory 依赖检查点](dev/resource-runtime/research/current-inputs-callhistory/README.md)选用四个原版映像，并将约 22 GB 未使用的祖先副本从启动校验表分离，保留历史哈希及当前库校验。整理前后原版工具日志逐字节一致；后续完整 Unity/CocoaPods workspace 进入五 target 图，因 CoreTelephony 常量缺失返回 65，仍未产出 App。所需原版 CoreTelephony 已有验证候选。
 
 ```bash
 git clone https://github.com/kxn/linuxcode.git
