@@ -1,0 +1,38 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/AuthKitUI.framework/Versions/A/AuthKitUI",
+      "stem": "authkitui-patch-got-v2",
+      "existing_target": "authkitui-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/IASUtilities",
+      "stem": "authkitui-closure-iasutilities-resource-v2",
+      "existing_target": "authkitui-closure-iasutilities-resource-v2"
+    },
+    {
+      "image": "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+      "stem": "authkitui-closure-javascriptcore-resource-v2",
+      "existing_target": "authkitui-closure-javascriptcore-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IASUtilitiesCore.framework/Versions/A/IASUtilitiesCore",
+      "stem": "authkitui-closure-iasutilitiescore-resource-v1",
+      "existing_target": "authkitui-closure-iasutilitiescore-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libParallelCompression.dylib",
+      "stem": "authkitui-closure-libparallelcompression-resource-v1",
+      "existing_target": "authkitui-closure-libparallelcompression-resource-v1"
+    }
+  ]
+}

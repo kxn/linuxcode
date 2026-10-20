@@ -1,0 +1,193 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "authkitui-patch-got-v2",
+      "candidate_sha256": "53d133f1a11db659520fe973128fe372aebd84631a139d82e79d544ec9b6ed42",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 1028320,
+            "sha256": "c3cf905dcac2650e83fc04f21fd411c7273022f7005a03521ce08c1a82fb29d0"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1944,
+            "sha256": "2708c486a21a68a9037ebb37948a02fa5f438697ef78b564bdd9631a01bcb888"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 759,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 2174,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "authkitui-closure-iasutilities-resource-v2",
+      "candidate_sha256": "d751570041bdbd575fc8f52c2f94cad0536ea327e292b677de5e8c69da67ad69",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 99429,
+            "sha256": "89c6ce3f4ef347ed4c1f2f994197922b1d1cb2ecf49a9e3f45bc550673c59324"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1440,
+            "sha256": "4cc3b346baa60c7f7a7d74a6a539fd8486bc0d767941c8af7c084b63f6ecfdbc"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 397,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 800,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "authkitui-closure-javascriptcore-resource-v2",
+      "candidate_sha256": "f2eb116b9f59c1700655462daf58760e4dc967208429d54dc502a1e177d0401f",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 36241210,
+            "sha256": "f237e9d49b757d975ecb837259c45265d5e4687521e8599797d088806dd0b0f7"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__jsc_int",
+            "bytes": 321040,
+            "sha256": "f31dd3c96cb56136e619f5b6bbe25ed9b3debff3cb95f81c9067e6f26c84dde6"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 4392,
+            "sha256": "7633b4c64b0fd4ec47f9fa6d6ed57b89526fe939de3aad6b81d95b9ceea3479a"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 853,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1485,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 3,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "authkitui-closure-iasutilitiescore-resource-v1",
+      "candidate_sha256": "eeb092102ad401526d46cf1fbf912ae9c00a5f5c5dfa9c346d14037299175797",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 95039,
+            "sha256": "767c584e98400b70ea8d4825dc48ab797066c3cb3882496ab59c28e5a2531572"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1038,
+            "sha256": "33b9ab424e1eb6d94fe27301f153768b4bbc20592bfd8241afa58601ff052c2f"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 268,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 542,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "authkitui-closure-libparallelcompression-resource-v1",
+      "candidate_sha256": "34dbde2a56c793f1020e6869469d5c5a004da6b44d5d6189e243aa793a649160",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 363823,
+            "sha256": "4d4d078753f26a5aac936c1856ee7c0b82e342e8414125388b9c95516831ff85"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1278,
+            "sha256": "500aedeee4a151434d69a259ae44cd07869cd476ea8524c4390555b20b9a2b55"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 240,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 242,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

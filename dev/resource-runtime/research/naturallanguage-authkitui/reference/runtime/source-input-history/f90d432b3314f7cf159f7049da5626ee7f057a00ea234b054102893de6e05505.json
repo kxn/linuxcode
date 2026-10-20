@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/f90d432b3314f7cf159f7049da5626ee7f057a00ea234b054102893de6e05505",
+  "original_sha256": "f90d432b3314f7cf159f7049da5626ee7f057a00ea234b054102893de6e05505",
+  "encoding": "utf-8",
+  "text": "#include <CoreFoundation/CoreFoundation.h>\n#include <dlfcn.h>\n#include <stdio.h>\n#include <string.h>\n\nint main(int argc,char** argv) {\n    if(argc!=5) return 10;\n    void* framework=dlopen(argv[1],RTLD_NOW|RTLD_GLOBAL);\n    if(!framework) { fprintf(stderr,\"CFSTRING_DLOPEN_FAILED %s\\n\",dlerror()); return 11; }\n    const CFStringRef* cell=(const CFStringRef*)dlsym(framework,argv[2]);\n    if(!cell || !*cell) { puts(\"CFSTRING_MISSING_SYMBOL\"); return 12; }\n    if(dlsym(RTLD_DEFAULT,argv[2])!=cell) return 13;\n    if(CFGetTypeID(*cell)!=CFStringGetTypeID()) return 14;\n    char text[1024];\n    if(!CFStringGetCString(*cell,text,sizeof(text),kCFStringEncodingUTF8) || strcmp(text,argv[3])) return 15;\n    Dl_info owner;\n    if(!dladdr(cell,&owner) || !owner.dli_fname || !strstr(owner.dli_fname,argv[4])) return 16;\n    printf(\"CFSTRING_VALUE %s %s\\n\",argv[2],text);\n    printf(\"CFSTRING_PROVIDER %s\\n\",owner.dli_fname);\n    puts(\"ORIGINAL_CFSTRING_TYPE_UTF8_VALUE_PROVIDER_AND_GLOBAL_IDENTITY_OK\");\n    return 0;\n}\n"
+}

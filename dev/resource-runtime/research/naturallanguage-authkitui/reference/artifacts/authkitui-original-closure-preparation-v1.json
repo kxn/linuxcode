@@ -1,0 +1,134 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/authkitui-original-closure-preparation-v1.json",
+  "configuration_sha256": "b2b55bc0e1abc6902474305d103de0b24021df76eea14155fa564c365b05b955",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/IASUtilities",
+      "attempts": [
+        {
+          "target": "authkitui-closure-iasutilities-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/IASUtilities",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "authkitui-closure-iasutilities-resource-v1",
+            "--build"
+          ],
+          "log": "logs/authkitui-closure-iasutilities-resource-v1-batch-preparation.log",
+          "log_sha256": "3517459f3cf375d55ddb2eab707eb76c747fe94f1ab7e36f792625936d17682e",
+          "preparation": "artifacts/authkitui-closure-iasutilities-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'authkitui-closure-iasutilities-resource-v1', '--output', 'artifacts/authkitui-closure-iasutilities-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+      "attempts": [
+        {
+          "target": "authkitui-closure-javascriptcore-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "authkitui-closure-javascriptcore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/authkitui-closure-javascriptcore-resource-v1-batch-preparation.log",
+          "log_sha256": "8dcf7e06f6fff3de9ea8c64d03642d18b2fc55a717765e16a3e83d3ced46eb55",
+          "preparation": "artifacts/authkitui-closure-javascriptcore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'authkitui-closure-javascriptcore-resource-v1', '--output', 'artifacts/authkitui-closure-javascriptcore-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IASUtilitiesCore.framework/Versions/A/IASUtilitiesCore",
+      "attempts": [
+        {
+          "target": "authkitui-closure-iasutilitiescore-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/IASUtilitiesCore.framework/Versions/A/IASUtilitiesCore",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "authkitui-closure-iasutilitiescore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/authkitui-closure-iasutilitiescore-resource-v1-batch-preparation.log",
+          "log_sha256": "625cf7c081d7d2637d2c319103eb5695900b515da77179d812e777b52d1a1715",
+          "preparation": "artifacts/authkitui-closure-iasutilitiescore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "authkitui-closure-iasutilitiescore-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libParallelCompression.dylib",
+      "attempts": [
+        {
+          "target": "authkitui-closure-libparallelcompression-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libParallelCompression.dylib",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "authkitui-closure-libparallelcompression-resource-v1",
+            "--build"
+          ],
+          "log": "logs/authkitui-closure-libparallelcompression-resource-v1-batch-preparation.log",
+          "log_sha256": "37ac017b6404e943bfd4a8b9b3b29b8ff896928e3d5db4a5c7dc755537c33546",
+          "preparation": "artifacts/authkitui-closure-libparallelcompression-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "authkitui-closure-libparallelcompression-resource-v1"
+    }
+  ]
+}

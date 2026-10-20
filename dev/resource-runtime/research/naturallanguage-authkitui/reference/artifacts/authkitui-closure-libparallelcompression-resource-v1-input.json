@@ -1,0 +1,74 @@
+{
+  "target": "authkitui-closure-libparallelcompression-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libParallelCompression.dylib",
+    "sha256": "49f90b2b5fc6401bf357741b27a9ca90282ab6e55512de4e0f463d151e096312",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 240,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 479232,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/liblzma.5.dylib",
+    "/usr/lib/libbz2.1.0.dylib",
+    "/usr/lib/libcompression.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "681523c99b71c826555d3f35f3f33c32e3dfd5cb1c054e4680f33cabb1fb12f4",
+  "manifest_sha256": "5247a02d382733648a52359af8750ff0df14484b63eebad7163bf56756132fb9",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "authkitui-closure-libparallelcompression-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "6636ea69bd533f986e4f8f11fabc27f46dfcf67742b6f667f72d475955433f61",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1,
+    "nonzero_addends": 0,
+    "got_cells": 240,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/authkitui-closure-libparallelcompression-resource-v1-build.log",
+  "log_sha256": "0d558ae194b66308b30aeda03a26a91194106941c33ea787871c8f9fd00c855f"
+}

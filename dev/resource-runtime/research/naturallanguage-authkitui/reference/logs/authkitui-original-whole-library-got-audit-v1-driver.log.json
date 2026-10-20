@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/authkitui-original-whole-library-got-audit-v1-driver.log",
+  "original_sha256": "fdabf0b1951bd3703eba238254b517dab376d02a470be595b687fddf19075337",
+  "encoding": "utf-8",
+  "text": "CLAIMS 25\nTraceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/audit-resource-image-imports.py\", line 90, in <module>\n    proof = verifier(ns, pin['path'], address, item['slots'], name, provider,\n                     root/'runtime/fullsystem-libraries')\n  File \"/home/dl/linuxcode/scripts/verify-original-pooled-import.py\", line 64, in verify\n    assert set(slots) == {int(row['slot'], 16) for row in stubs}, 'Import lacks original stub'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Import lacks original stub\n"
+}

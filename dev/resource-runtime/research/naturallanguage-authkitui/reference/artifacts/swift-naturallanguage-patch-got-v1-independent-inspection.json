@@ -1,0 +1,59 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 21760,
+      "sha256": "560f351b3f007410980a989b11c5b6537d69d5a82dfb4145ff75e78a7a71aa6d"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 420,
+      "sha256": "7edd8d98288b8922c7d18b975fda3ab330829bc63d70c631d5d01c344ebfd3cc"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 118,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 149,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 2,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x9e0",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_$sBOWV"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xa88",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_$sBi64_WV"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-swift-naturallanguage-patch-got-v1/libswiftNaturalLanguage.dylib': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xce9)\n",
+    "original_validator": "runtime/original-dyld-validation-pnoaf3cd/result.json",
+    "original_validator_sha256": "421ecbe09e9fe6ebea335f5b5459f410d1a7cf341e25a85fe9db0ebb41699be4",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "a283e93969cc2a06336c5cbe16e56ebf87f3550a23335a3f1a6ce073789f56d2",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "c1cc9ed744ed60966b1e70a8f37007b81fc38da6cfdfb45618d6bb863d717aaa",
+    "runtime/fullsystem-libraries/usr/lib/swift/libswiftNaturalLanguage.dylib": "f3a27d86212ae21eef5ae00b67317e5bca44a5e421a7f847371277cc417edbdd",
+    "runtime/rebuilt-swift-naturallanguage-patch-got-v1/libswiftNaturalLanguage.dylib": "93d0533a8cce0876478bee9dbba1335cefaafb46c9fc8bf5bfbd6ab31220b8ae",
+    "runtime/rebuilt-swift-naturallanguage-patch-got-v1/reconstruction.json": "81a6098977288fda3be3f5c9c779d2cdd8c046f2d3bfb44dbbd32e122e9e442b"
+  },
+  "verified": true
+}

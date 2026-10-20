@@ -1,0 +1,141 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-phwgzgym/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v151-runtime-inputs-v1.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "crashreportersupport-patch-got-v1"
+  ],
+  "images": {
+    "/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport": {
+      "original_sha256": "8fd5c322a0d24535570bf9a8f5bf9c56f0d62c13f2839adde63a105360ff6fe7",
+      "original_bytes": 122880,
+      "dependencies": [
+        {
+          "path": "/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics",
+          "load_command": "0x8000001f",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics",
+            "runtime/coregraphics-native-v151/frameworks/OSAnalytics.framework/Versions/A/OSAnalytics",
+            "runtime/coregraphics-native-v151/frameworks/OSAnalytics.framework/OSAnalytics"
+          ]
+        },
+        {
+          "path": "/usr/lib/libDiagnosticMessagesClient.dylib",
+          "load_command": "0x8000001f",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libDiagnosticMessagesClient.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/resource-framework-overlay-authkitui-v1/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/coregraphics-native-v151/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/Versions/A/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/Versions/A/IOKit",
+            "runtime/resource-framework-overlay-authkitui-v1/frameworks/IOKit.framework/IOKit",
+            "runtime/coregraphics-native-v151/frameworks/IOKit.framework/IOKit",
+            "runtime/iokit-main-port-source/frameworks/IOKit.framework/IOKit",
+            "runtime/foundation-native-framework-stage/IOKit.framework/IOKit"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/CoreServices"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+            "runtime/foundation-native-framework-stage/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+            "runtime/foundation-native-framework-stage/SystemConfiguration.framework/SystemConfiguration"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/resource-double4-matrix-v1/libraries/libSystem.B.dylib",
+            "runtime/coregraphics-native-v151/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-phwgzgym/result.json": "aa51b2f695a4b113f744ab42458992ede7714525b27791a0b6f12a52d62ec916",
+    "artifacts/coregraphics-native-v151-runtime-inputs-v1.json": "01129b06465af1e1388a757b7c4d321dbe90694b0448444d929205975516d02c",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "63abcec20fde347456ce0c9d518fa17d25bd0edcb2da244880ce995dc29b9176",
+    "scripts/plan-original-resource-dependencies.py": "01f469fa4793c07b1e243792c27bf9cfd2a98e40d22c2ce570d4d79f8013874c"
+  }
+}

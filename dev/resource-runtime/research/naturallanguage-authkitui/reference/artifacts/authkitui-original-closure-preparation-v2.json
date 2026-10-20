@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/authkitui-original-closure-preparation-v2.json",
+  "configuration_sha256": "a9c7321182014b067fbc3283e91655d79779e26001b5367bea2990ac483c1374",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/AuthKitUI.framework/Versions/A/AuthKitUI",
+      "attempts": [],
+      "prepared_target": "authkitui-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/IASUtilities",
+      "attempts": [],
+      "prepared_target": "authkitui-closure-iasutilities-resource-v2"
+    },
+    {
+      "image": "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+      "attempts": [],
+      "prepared_target": "authkitui-closure-javascriptcore-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IASUtilitiesCore.framework/Versions/A/IASUtilitiesCore",
+      "attempts": [],
+      "prepared_target": "authkitui-closure-iasutilitiescore-resource-v1"
+    },
+    {
+      "image": "/usr/lib/libParallelCompression.dylib",
+      "attempts": [],
+      "prepared_target": "authkitui-closure-libparallelcompression-resource-v1"
+    }
+  ]
+}

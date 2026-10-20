@@ -1,0 +1,840 @@
+{
+  "target": "authkitui-patch-got-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AuthKitUI.framework/Versions/A/AuthKitUI",
+    "sha256": "172003e79230ce84f826fe28f336a3d039c5096b2da21694e212a3fb23ff0f51",
+    "reference_set": "fullsystem",
+    "objc_classes": 144,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib",
+      "_$s10Foundation4DataV11descriptionSSvg": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$sSS10FoundationE36_unconditionallyBridgeFromObjectiveCySSSo8NSStringCSgFZ": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation3URLV19_bridgeToObjectiveCSo5NSURLCyF": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation3URLV36_unconditionallyBridgeFromObjectiveCyACSo5NSURLCSgFZ": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation3URLV14absoluteStringSSvg": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation3URLVMa": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation10URLRequestV19_bridgeToObjectiveCSo12NSURLRequestCyF": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation10URLRequestV36_unconditionallyBridgeFromObjectiveCyACSo12NSURLRequestCSgFZ": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation4DataV36_unconditionallyBridgeFromObjectiveCyACSo6NSDataCSgFZ": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$sSD10FoundationE36_unconditionallyBridgeFromObjectiveCySDyxq_GSo12NSDictionaryCSgFZ": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$sSD10FoundationE19_bridgeToObjectiveCSo12NSDictionaryCyF": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation4DataVMn": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$s10Foundation3URLVMn": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "_$ss27_stringCompareWithSmolCheck__9expectingSbs11_StringGutsV_ADs01_G16ComparisonResultOtF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss11_SetStorageC8allocate8capacityAByxGSi_tFZ": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss11AnyHashableV13_rawHashValue4seedS2i_tF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss6HasherV5_seedABSi_tcfC": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss18_DictionaryStorageC6resize8original8capacity4moveAByxq_Gs05__RawaB0C_SiSbtFZ": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss18_DictionaryStorageC8allocate8capacityAByxq_GSi_tFZ": "/usr/lib/swift/libswiftCore.dylib",
+      "_$sSS10describingSSx_tclufC": "/usr/lib/swift/libswiftCore.dylib",
+      "_$sSS8UTF8ViewV13_foreignCountSiyF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss13_StringObjectV10sharedUTF8SRys5UInt8VGvg": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss6HasherV9_finalizeSiyF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$sSS4hash4intoys6HasherVz_tF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorPsE19_getEmbeddedNSErroryXlSgyF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorPsE7_domainSSvg": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorPsE5_codeSivg": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorPsE9_userInfoyXlSgvg": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss18_DictionaryStorageC4copy8originalAByxq_Gs05__RawaB0C_tFZ": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss11AnyHashableVyABxcSHRzlufC": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss11AnyHashableV2eeoiySbAB_ABtFZ": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss10_HashTableV12previousHole6beforeAB6BucketVAF_tF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss53KEY_TYPE_OF_DICTIONARY_VIOLATES_HASHABLE_REQUIREMENTSys5NeverOypXpF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$sSh11descriptionSSvg": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss11_StringGutsV16_foreignCopyUTF84intoSiSgSrys5UInt8VG_tF": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorMp": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorP7_domainSSvgTq": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorP5_codeSivgTq": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorP9_userInfoyXlSgvgTq": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5ErrorP19_getEmbeddedNSErroryXlSgyFTq": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss11AnyHashableVMn": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss5UInt8VMn": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss23_ContiguousArrayStorageCMn": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss18_DictionaryStorageCMn": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss11_SetStorageCMn": "/usr/lib/swift/libswiftCore.dylib",
+      "_$sSo13os_log_type_ta0A0E5debugABvgZ": "/usr/lib/swift/libswiftos.dylib",
+      "_$sSo13os_log_type_ta0A0E5errorABvgZ": "/usr/lib/swift/libswiftos.dylib",
+      "_$s2os6LoggerV9logObjectSo03OS_a1_C0Cvg": "/usr/lib/swift/libswiftos.dylib",
+      "_$s2os6LoggerV9subsystem8categoryACSS_SStcfC": "/usr/lib/swift/libswiftos.dylib",
+      "_$s2os6LoggerVMa": "/usr/lib/swift/libswiftos.dylib",
+      "_$sBoWV": "/usr/lib/swift/libswiftCore.dylib",
+      "_$sBOWV": "/usr/lib/swift/libswiftCore.dylib",
+      "_$sytWV": "/usr/lib/swift/libswiftCore.dylib",
+      "_$ss20__StaticArrayStorageCN": "/usr/lib/swift/libswiftCore.dylib",
+      "_$s7SwiftUI13NSHostingViewC04rootD0ACyxGx_tcfc": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI15NavigationStackV4path4rootACyxq_GAA7BindingVyxG_q_yXEtcSMRzSkRzSmRzSH7ElementSTRpzrlufC": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI13NSHostingViewCMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI15NavigationStackVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewPAAE05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZ": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewPAAE05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZ": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewPAAE14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZ": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI9AlignmentV6centerACvgZ": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI7BindingV12wrappedValuexvs": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI7BindingV3get3setACyxGxyc_yxctcfC": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI16_FlexFrameLayoutV8minWidth05idealG003maxG00F6Height0hJ00iJ09alignmentAC12CoreGraphics7CGFloatVSg_A5nA9AlignmentVtcfC": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI5StateV12wrappedValueACyxGx_tcfC": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI5StateV14projectedValueAA7BindingVyxGvg": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI19_ConditionalContentVA2A4ViewRzAaDR_rlE7storageACyxq_GAC7StorageOyxq__G_tcfC": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI30_EnvironmentKeyWritingModifierVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI7BindingVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI17EnvironmentValuesVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI16_FlexFrameLayoutVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewMp": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewP4BodyAC_AaBTn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s4Body7SwiftUI4ViewPTl": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewP05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZTq": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewP05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZTq": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewP14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZTq": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI4ViewP4body4BodyQzvgTq": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI15ModifiedContentVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI5StateVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI19_ConditionalContentVMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s7SwiftUI19_ConditionalContentV7StorageOMn": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+      "_$s8RemoteUI0A12UIAttributesV13rawAttributesSDySSypGvg": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A14UIHookResponseV010skipServerD0ACvgZ": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A6UIHookPAAE16shouldMatchModel4name10attributesSbSS_AA0A12UIAttributesVtF": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A6UIHookPAAE18processObjectModel4name10attributes6windowAA0aC8ResponseVSS_AA0A12UIAttributesVSo8NSWindowCSgtYaKF": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI11UnknownHookVACycfC": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI11UnknownHookVMa": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s7SwiftUI17EnvironmentValuesV06RemoteB0E17ruiURLLoadingModeAD0gH0Ovg": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s7SwiftUI17EnvironmentValuesV06RemoteB0E17ruiURLLoadingModeAD0gH0Ovs": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI14URLLoadingModeOMa": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s7SwiftUI4ViewP06RemoteB0E23initialBackButtonAction7handlerQryyc_tF": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A23UIDataSourceWithContextPAAE7request3for10Foundation10URLRequestVAF3URLV_tYaKF": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A23UIDataSourceWithContextPAAE4data3for10Foundation4DataVAF10URLRequestV_tYaKF": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A19UIDataSourceContextV10clientInfoSDySSypGvg": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A19UIDataSourceContextV18postbackDictionarySDySSypGvg": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A19UIDataSourceContextV8userInfoSDys11AnyHashableVypGvM": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A19UIDataSourceContextVMa": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s7SwiftUI4ViewP06RemoteB0E7addHookyQrAD0D6UIHook_pF": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI11BuddyMLViewV14navigationPath3url10dataSource5hooksAC05SwiftB07BindingVySaySSGG_10Foundation3URLVAA0a6UIDataI0_pSgAA0A6UIHook_pSgtcfC": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A12UIDataSourcePAAE4data3for10Foundation4DataVAF3URLV_tYaKF": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A6UIHookMp": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A6UIHookP16shouldMatchModel4name10attributesSbSS_AA0A12UIAttributesVtFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A6UIHookP13performAction4name10attributes6windowAA0aC8ResponseVSS_AA0A12UIAttributesVSo8NSWindowCSgtYaKFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A6UIHookP18processObjectModel4name10attributes6windowAA0aC8ResponseVSS_AA0A12UIAttributesVSo8NSWindowCSgtYaKFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI14URLLoadingModeOMn": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s7SwiftUI4ViewP06RemoteB0E23initialBackButtonAction7handlerQryyc_tFQOMQ": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A23UIDataSourceWithContextMp": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A23UIDataSourceWithContextPAA0acD0Tb": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A23UIDataSourceWithContextP7request3for7context10Foundation10URLRequestVAG3URLV_AA0acdF0VtYaKFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A23UIDataSourceWithContextP4data3for7context10Foundation4DataVAG10URLRequestV_AA0acdF0VtYaKFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A19UIDataSourceContextVMn": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s7SwiftUI4ViewP06RemoteB0E7addHookyQrAD0D6UIHook_pFQOMQ": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI11BuddyMLViewVMn": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A12UIDataSourceMp": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A12UIDataSourceP7request3for10Foundation10URLRequestVAF3URLV_tYaKFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A12UIDataSourceP4data3for10Foundation4DataVAF10URLRequestV_tYaKFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$s8RemoteUI0A12UIDataSourceP4data3for10Foundation4DataVAF3URLV_tYaKFTq": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "_$sScC6resume9returningyxn_tF": "/usr/lib/swift/libswift_Concurrency.dylib",
+      "_$sScC6resume8throwingyq_n_tF": "/usr/lib/swift/libswift_Concurrency.dylib",
+      "_$ss31withCheckedThrowingContinuation9isolation8function_xScA_pSgYi_SSyScCyxs5Error_pGXEtYaKlF": "/usr/lib/swift/libswift_Concurrency.dylib",
+      "_$sScM6sharedScMvgZ": "/usr/lib/swift/libswift_Concurrency.dylib",
+      "_$sScA15unownedExecutorScevgTj": "/usr/lib/swift/libswift_Concurrency.dylib",
+      "_$sScMMa": "/usr/lib/swift/libswift_Concurrency.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 759,
+    "patch_got_range": [
+      "0x7ff840002000",
+      "0x7ff840058000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 2088960,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/OnBoardingKit.framework/Versions/A/OnBoardingKit",
+    "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+    "/System/Library/PrivateFrameworks/AppleIDAuthSupport.framework/Versions/A/AppleIDAuthSupport",
+    "/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight",
+    "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+    "/System/Library/PrivateFrameworks/AAAFoundationSwift.framework/Versions/A/AAAFoundationSwift",
+    "/System/Library/PrivateFrameworks/AAAFoundation.framework/Versions/A/AAAFoundation",
+    "/System/Library/Frameworks/Accounts.framework/Versions/A/Accounts",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/PrivateFrameworks/LocalAuthenticationUI.framework/Versions/A/LocalAuthenticationUI",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/ViewBridge",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+    "/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/IASUtilities",
+    "/System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo",
+    "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText",
+    "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+    "/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation",
+    "/System/Library/Frameworks/LocalAuthentication.framework/Versions/A/LocalAuthentication",
+    "/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit",
+    "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+    "/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore",
+    "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+    "/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/AuthKit",
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+    "/System/Library/PrivateFrameworks/IconServices.framework/Versions/A/IconServices",
+    "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+    "/System/Library/PrivateFrameworks/IconFoundation.framework/Versions/A/IconFoundation",
+    "/usr/lib/swift/libswiftAccelerate.dylib",
+    "/usr/lib/swift/libswiftCompression.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreAudio.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftCoreImage.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftQuartzCore.dylib",
+    "/usr/lib/swift/libswiftSpatial.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "previous_manifest_sha256": "5247a02d382733648a52359af8750ff0df14484b63eebad7163bf56756132fb9",
+  "manifest_sha256": "ce2f10d5b32bc97b6cd2251240f4c02f5f6c049d09084567ff1834559006c917",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "authkitui-patch-got-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "862d93fc5d0dcdd04e5fc93644c1a6a64a5a39e8e0e26de733f43abf42b176cf",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "authkitui-patch-got-v1",
+  "exact_import_audit": "artifacts/authkitui-original-scoped-reexport-import-audit-v1.json",
+  "exact_import_audit_sha256": "1b496e2c55f9b44841e36cf33f20d49a7c9261bd71ccd76a004e69e012b39a14",
+  "typed_class_aliases": [
+    {
+      "address": "0x7ff8438a29e0",
+      "metaclass": "0x7ff8438a59f0",
+      "original_name": "_TtCs20__StaticArrayStorage",
+      "selected_symbol": "_$ss20__StaticArrayStorageCN"
+    }
+  ],
+  "explicit_reexports": {
+    "chains": [
+      {
+        "target": "0x7ffb192a8588",
+        "symbol": "_$s4Body7SwiftUI4ViewPTl",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s4Body7SwiftUI4ViewPTl",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s4Body7SwiftUI4ViewPTl",
+            "export": [
+              "address",
+              140716435735944,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192af180",
+        "symbol": "_$s7SwiftUI15ModifiedContentVMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI15ModifiedContentVMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI15ModifiedContentVMn",
+            "export": [
+              "address",
+              140716435763584,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb18cd6f00",
+        "symbol": "_$s7SwiftUI16_FlexFrameLayoutV8minWidth05idealG003maxG00F6Height0hJ00iJ09alignmentAC12CoreGraphics7CGFloatVSg_A5nA9AlignmentVtcfC",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI16_FlexFrameLayoutV8minWidth05idealG003maxG00F6Height0hJ00iJ09alignmentAC12CoreGraphics7CGFloatVSg_A5nA9AlignmentVtcfC",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI16_FlexFrameLayoutV8minWidth05idealG003maxG00F6Height0hJ00iJ09alignmentAC12CoreGraphics7CGFloatVSg_A5nA9AlignmentVtcfC",
+            "export": [
+              "address",
+              140716429635328,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a4430",
+        "symbol": "_$s7SwiftUI16_FlexFrameLayoutVMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI16_FlexFrameLayoutVMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI16_FlexFrameLayoutVMn",
+            "export": [
+              "address",
+              140716435719216,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a1aa0",
+        "symbol": "_$s7SwiftUI17EnvironmentValuesVMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI17EnvironmentValuesVMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI17EnvironmentValuesVMn",
+            "export": [
+              "address",
+              140716435708576,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192b3484",
+        "symbol": "_$s7SwiftUI19_ConditionalContentV7StorageOMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI19_ConditionalContentV7StorageOMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI19_ConditionalContentV7StorageOMn",
+            "export": [
+              "address",
+              140716435780740,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb19061800",
+        "symbol": "_$s7SwiftUI19_ConditionalContentVA2A4ViewRzAaDR_rlE7storageACyxq_GAC7StorageOyxq__G_tcfC",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI19_ConditionalContentVA2A4ViewRzAaDR_rlE7storageACyxq_GAC7StorageOyxq__G_tcfC",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI19_ConditionalContentVA2A4ViewRzAaDR_rlE7storageACyxq_GAC7StorageOyxq__G_tcfC",
+            "export": [
+              "address",
+              140716433348608,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192b3454",
+        "symbol": "_$s7SwiftUI19_ConditionalContentVMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI19_ConditionalContentVMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI19_ConditionalContentVMn",
+            "export": [
+              "address",
+              140716435780692,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb19286c5c",
+        "symbol": "_$s7SwiftUI30_EnvironmentKeyWritingModifierVMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI30_EnvironmentKeyWritingModifierVMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI30_EnvironmentKeyWritingModifierVMn",
+            "export": [
+              "address",
+              140716435598428,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a855c",
+        "symbol": "_$s7SwiftUI4ViewMp",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewMp",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewMp",
+            "export": [
+              "address",
+              140716435735900,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a8590",
+        "symbol": "_$s7SwiftUI4ViewP05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZTq",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewP05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZTq",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewP05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZTq",
+            "export": [
+              "address",
+              140716435735952,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a8598",
+        "symbol": "_$s7SwiftUI4ViewP05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZTq",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewP05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZTq",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewP05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZTq",
+            "export": [
+              "address",
+              140716435735960,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a85a0",
+        "symbol": "_$s7SwiftUI4ViewP14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZTq",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewP14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZTq",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewP14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZTq",
+            "export": [
+              "address",
+              140716435735968,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a8580",
+        "symbol": "_$s7SwiftUI4ViewP4BodyAC_AaBTn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewP4BodyAC_AaBTn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewP4BodyAC_AaBTn",
+            "export": [
+              "address",
+              140716435735936,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a85a8",
+        "symbol": "_$s7SwiftUI4ViewP4body4BodyQzvgTq",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewP4body4BodyQzvgTq",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewP4body4BodyQzvgTq",
+            "export": [
+              "address",
+              140716435735976,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb18899ae0",
+        "symbol": "_$s7SwiftUI4ViewPAAE05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZ",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewPAAE05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZ",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewPAAE05_makeC04view6inputsAA01_C7OutputsVAA11_GraphValueVyxG_AA01_C6InputsVtFZ",
+            "export": [
+              "address",
+              140716425190112,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb18899b10",
+        "symbol": "_$s7SwiftUI4ViewPAAE05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZ",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewPAAE05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZ",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewPAAE05_makeC4List4view6inputsAA01_cE7OutputsVAA11_GraphValueVyxG_AA01_cE6InputsVtFZ",
+            "export": [
+              "address",
+              140716425190160,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb1889acf0",
+        "symbol": "_$s7SwiftUI4ViewPAAE14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZ",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI4ViewPAAE14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZ",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI4ViewPAAE14_viewListCount6inputsSiSgAA01_ceF6InputsV_tFZ",
+            "export": [
+              "address",
+              140716425194736,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb190094c0",
+        "symbol": "_$s7SwiftUI5StateV12wrappedValueACyxGx_tcfC",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI5StateV12wrappedValueACyxGx_tcfC",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI5StateV12wrappedValueACyxGx_tcfC",
+            "export": [
+              "address",
+              140716432987328,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb19009570",
+        "symbol": "_$s7SwiftUI5StateV14projectedValueAA7BindingVyxGvg",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI5StateV14projectedValueAA7BindingVyxGvg",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI5StateV14projectedValueAA7BindingVyxGvg",
+            "export": [
+              "address",
+              140716432987504,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192b075c",
+        "symbol": "_$s7SwiftUI5StateVMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI5StateVMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI5StateVMn",
+            "export": [
+              "address",
+              140716435769180,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb18c81b50",
+        "symbol": "_$s7SwiftUI7BindingV12wrappedValuexvs",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI7BindingV12wrappedValuexvs",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI7BindingV12wrappedValuexvs",
+            "export": [
+              "address",
+              140716429286224,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb18c81d40",
+        "symbol": "_$s7SwiftUI7BindingV3get3setACyxGxyc_yxctcfC",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI7BindingV3get3setACyxGxyc_yxctcfC",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI7BindingV3get3setACyxGxyc_yxctcfC",
+            "export": [
+              "address",
+              140716429286720,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb192a1570",
+        "symbol": "_$s7SwiftUI7BindingVMn",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI7BindingVMn",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI7BindingVMn",
+            "export": [
+              "address",
+              140716435707248,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "target": "0x7ffb18c545b0",
+        "symbol": "_$s7SwiftUI9AlignmentV6centerACvgZ",
+        "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+        "chain": [
+          {
+            "provider": "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI",
+            "symbol": "_$s7SwiftUI9AlignmentV6centerACvgZ",
+            "kind": "whole-library-reexport",
+            "dependency": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "ordinal": 3
+          },
+          {
+            "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+            "symbol": "_$s7SwiftUI9AlignmentV6centerACvgZ",
+            "export": [
+              "address",
+              140716429100464,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "original_provider_sha256": {
+      "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI": "143bb52dbe086e5e6f9451ca04f5592ff4cf48c4cc1ffa9d548ecd5fece1ac3b",
+      "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore": "a5c2987beaaa2816976f78fa6c0f0dc5418937bbc847fcccc23dfdd9d97922a2"
+    },
+    "whole_library_providers": [
+      "/System/Library/Frameworks/SwiftUI.framework/Versions/A/SwiftUI"
+    ]
+  },
+  "original_patch_contract": {
+    "original_records": 1929,
+    "nonzero_addends": 0,
+    "got_cells": 759,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/authkitui-patch-got-v2-build.log",
+  "log_sha256": "ab78f213bf9f2a1a7e57bf0789764db15528ba312a891725adcfd64ad1b0e72a"
+}

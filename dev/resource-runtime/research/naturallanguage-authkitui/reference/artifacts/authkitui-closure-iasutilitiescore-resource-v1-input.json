@@ -1,0 +1,68 @@
+{
+  "target": "authkitui-closure-iasutilitiescore-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/IASUtilitiesCore.framework/Versions/A/IASUtilitiesCore",
+    "sha256": "3043697b26c52fb13c362da44142095f53dfabe4a423fb0b995ce4728ab219fc",
+    "reference_set": "fullsystem",
+    "objc_classes": 24,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 268,
+    "patch_got_range": [
+      "0x7ffc40005000",
+      "0x7ffc40092000"
+    ]
+  },
+  "original_bytes": 245760,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/liblzma.5.dylib",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libbz2.1.0.dylib",
+    "/usr/lib/libParallelCompression.dylib",
+    "/usr/lib/libfakelink.dylib",
+    "/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "7cff831e2b765d4fa51a463eb7a3283ecf02e55a6353ffbfde3fcffb4bcc1db2",
+  "manifest_sha256": "681523c99b71c826555d3f35f3f33c32e3dfd5cb1c054e4680f33cabb1fb12f4",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "authkitui-closure-iasutilitiescore-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "6636ea69bd533f986e4f8f11fabc27f46dfcf67742b6f667f72d475955433f61",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 377,
+    "nonzero_addends": 0,
+    "got_cells": 268,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/authkitui-closure-iasutilitiescore-resource-v1-build.log",
+  "log_sha256": "80160b65372353b0172533c06eb3ccfc3cc2b50eff713a51987cc53862821133"
+}

@@ -1,0 +1,65 @@
+{
+  "target": "crashreportersupport-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport",
+    "sha256": "8fd5c322a0d24535570bf9a8f5bf9c56f0d62c13f2839adde63a105360ff6fe7",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 302,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 122880,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics",
+    "/usr/lib/libDiagnosticMessagesClient.dylib",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "b84db0cb59711ddc889aae5f7f5140d86d3f584e6b3f9f03b8965f2f9eb0de24",
+  "manifest_sha256": "63abcec20fde347456ce0c9d518fa17d25bd0edcb2da244880ce995dc29b9176",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "crashreportersupport-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "862d93fc5d0dcdd04e5fc93644c1a6a64a5a39e8e0e26de733f43abf42b176cf",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 259,
+    "nonzero_addends": 0,
+    "got_cells": 302,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/crashreportersupport-patch-got-v1-build.log",
+  "log_sha256": "5d3b5858018f17fb67d30346271994ddce81df46b9ee17a4ccd906bf0c052753"
+}

@@ -1,0 +1,53 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 363823,
+      "sha256": "4d4d078753f26a5aac936c1856ee7c0b82e342e8414125388b9c95516831ff85"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1278,
+      "sha256": "500aedeee4a151434d69a259ae44cd07869cd476ea8524c4390555b20b9a2b55"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 240,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 242,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1520",
+        "first_section_prefix": "0xcc0",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-authkitui-closure-libparallelcompression-resource-v1/libParallelCompression.dylib': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x2d9)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-2g6m_5hl/authkitui-closure-libparallelcompression-resource-v1-result.json",
+    "original_validator_sha256": "8ba8e5b0b3d68bd49045bf8322f3d184c6cad1996716e32900174100fcaa0713",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "a4d4ef4fa6a5f97d2e579dca57edd8c79e26561ef57e07c91c42014d859410e9",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "b84db0cb59711ddc889aae5f7f5140d86d3f584e6b3f9f03b8965f2f9eb0de24",
+    "runtime/fullsystem-libraries/usr/lib/libParallelCompression.dylib": "49f90b2b5fc6401bf357741b27a9ca90282ab6e55512de4e0f463d151e096312",
+    "runtime/rebuilt-authkitui-closure-libparallelcompression-resource-v1/libParallelCompression.dylib": "34dbde2a56c793f1020e6869469d5c5a004da6b44d5d6189e243aa793a649160",
+    "runtime/rebuilt-authkitui-closure-libparallelcompression-resource-v1/reconstruction.json": "d74ea32e57ce454cb65a2ac7dd96fa8ec9caa6c1b4dddb6e7e8b39640a9a7350"
+  },
+  "verified": true
+}

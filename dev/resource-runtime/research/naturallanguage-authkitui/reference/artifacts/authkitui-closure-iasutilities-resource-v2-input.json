@@ -1,0 +1,144 @@
+{
+  "target": "authkitui-closure-iasutilities-resource-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/IASUtilities",
+    "sha256": "915b25810a15637ebdf1533941ab9d2a30f517bdda295be4b2ec42fc8ef3d6e1",
+    "reference_set": "fullsystem",
+    "objc_classes": 30,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 397,
+    "patch_got_range": [
+      "0x7ff940003000",
+      "0x7ff94007f000"
+    ],
+    "cache_imports": {
+      "___recvfrom": "/usr/lib/libSystem.B.dylib"
+    }
+  },
+  "original_bytes": 249856,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/IASUtilitiesCore.framework/Versions/A/IASUtilitiesCore",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages",
+    "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+    "/System/Library/PrivateFrameworks/DiskManagement.framework/Versions/A/DiskManagement",
+    "/System/Library/PrivateFrameworks/SystemAdministration.framework/Versions/A/SystemAdministration",
+    "/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa",
+    "/System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/MultiverseSupport.framework/Versions/A/MultiverseSupport",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit"
+  ],
+  "previous_manifest_sha256": "ce2f10d5b32bc97b6cd2251240f4c02f5f6c049d09084567ff1834559006c917",
+  "manifest_sha256": "343f0c7b2273cc3ee0e8501b4fa43555030eaa8e96cf74f71126b28e50109006",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "authkitui-closure-iasutilities-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "862d93fc5d0dcdd04e5fc93644c1a6a64a5a39e8e0e26de733f43abf42b176cf",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "authkitui-closure-iasutilities-resource-v1",
+  "exact_import_audit": "artifacts/authkitui-closure-iasutilities-original-got-import-audit-v1.json",
+  "exact_import_audit_sha256": "f1cab3ec07a3943b280df7a86912f35a9ba3f30867fbe3a30189117e93c5a529",
+  "typed_class_aliases": [],
+  "typed_pooled_imports": [
+    {
+      "kind": "original-stub-GOT-and-reexport-route",
+      "target": "0x7ff802e65268",
+      "slots": [
+        "0x7ff94007cf20"
+      ],
+      "selected": [
+        "___recvfrom",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "stubs": [
+        {
+          "address": "0x7ff906c28af4",
+          "slot": "0x7ff94007cf20",
+          "bytes": "ff2526444539"
+        }
+      ],
+      "route": [
+        {
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "symbol": "___recvfrom",
+          "kind": "whole-library-reexport",
+          "ordinal": 32,
+          "dependency": "/usr/lib/system/libsystem_kernel.dylib"
+        },
+        {
+          "provider": "/usr/lib/system/libsystem_kernel.dylib",
+          "symbol": "___recvfrom",
+          "kind": "address",
+          "export": [
+            "address",
+            140703177265768,
+            0
+          ]
+        }
+      ],
+      "original_file_sha256": {
+        "/System/Library/PrivateFrameworks/IASUtilities.framework/Versions/A/IASUtilities": "915b25810a15637ebdf1533941ab9d2a30f517bdda295be4b2ec42fc8ef3d6e1",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+        "/usr/lib/system/libsystem_kernel.dylib": "5241ba0bea493c54551b9ce8774f578fa48e9d0260f14f09d902e14849d33c8d"
+      },
+      "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+      "records": [
+        {
+          "symbol": "___recvfrom",
+          "provider": "/usr/lib/system/libsystem_kernel.dylib",
+          "kind": 0,
+          "implementation": 140703177265768,
+          "matching_import_names": [
+            "___recvfrom"
+          ],
+          "slot": 140708497837856,
+          "addend": 0,
+          "weak_import": false,
+          "high7": 0,
+          "target": 140703177265768,
+          "target_matches_patch": true,
+          "export_matches_patch": true,
+          "provider_index": 13,
+          "export_index": 3626,
+          "location_index": 11909
+        }
+      ]
+    }
+  ],
+  "pooled_import_validator_sha256": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+  "original_patch_contract": {
+    "original_records": 507,
+    "nonzero_addends": 0,
+    "got_cells": 397,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/authkitui-closure-iasutilities-resource-v2-build.log",
+  "log_sha256": "1dfe90b013436e37d24a56a1f1c41de0947765b5e8fc5b3f0a93b1a526e9417b"
+}
