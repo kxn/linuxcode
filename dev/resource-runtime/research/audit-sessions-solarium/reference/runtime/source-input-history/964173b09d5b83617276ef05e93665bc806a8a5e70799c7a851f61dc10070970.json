@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/964173b09d5b83617276ef05e93665bc806a8a5e70799c7a851f61dc10070970",
+  "original_sha256": "964173b09d5b83617276ef05e93665bc806a8a5e70799c7a851f61dc10070970",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/xattr/listxattr.h>\n\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n#include <darling/emulation/linux_premigration/vchroot_expand.h>\n#include <darling/emulation/common/bsdthread/per_thread_wd.h>\n\n#define XATTR_NOFOLLOW\t1\n\nlong sys_listxattr(const char* path, char* namebuf, unsigned long size, int options)\n{\n\tint ret;\n\tstruct vchroot_expand_args vc;\n\n\tvc.flags = (options & XATTR_NOFOLLOW) ? 0 : VCHROOT_FOLLOW;\n\tvc.dfd = get_perthread_wd();\n\t\n\tstrcpy(vc.path, path);\n\n\tret = vchroot_expand(&vc);\n\tif (ret < 0)\n\t\treturn errno_linux_to_bsd(ret);\n\n\tif (options & XATTR_NOFOLLOW)\n\t\tret = LINUX_SYSCALL(__NR_llistxattr, path, namebuf, size);\n\telse\n\t\tret = LINUX_SYSCALL(__NR_listxattr, path, namebuf, size);\n\n\tif (ret < 0)\n\t\treturn errno_linux_to_bsd(ret);\n\n\treturn ret;\n}\n"
+}

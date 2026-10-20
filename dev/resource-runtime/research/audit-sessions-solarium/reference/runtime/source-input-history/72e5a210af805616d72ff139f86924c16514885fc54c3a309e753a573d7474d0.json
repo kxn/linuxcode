@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/72e5a210af805616d72ff139f86924c16514885fc54c3a309e753a573d7474d0",
+  "original_sha256": "72e5a210af805616d72ff139f86924c16514885fc54c3a309e753a573d7474d0",
+  "encoding": "utf-8",
+  "text": "#include <sys/errno.h>\n#include <darling/emulation/conversion/duct_errno.h>\n#include <darling/emulation/xnu_syscall/bsd/helper/misc/quarantine.h>\n#include <darling/emulation/xnu_syscall/bsd/impl/xattr/fgetxattr.h>\n\n#include <sys/errno.h>\n\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n\nlong sys_fgetxattr(int fd, const char* name, char* value,\n\t\tunsigned long size, unsigned int pos, int options)\n{\n\tint ret;\n\tconst char *linux_name;\n\tret = quarantine_xattr_name(name, &linux_name, 0);\n\tif (ret < 0) return ret;\n\t\n\tif (pos != 0)\n\t\treturn -ERANGE;\n\n\tret = LINUX_SYSCALL(__NR_fgetxattr, fd, linux_name, value, size);\n\n\tif (ret == -LINUX_ENODATA) return -ENOATTR;\n\tif (ret < 0)\n\t\treturn errno_linux_to_bsd(ret);\n\n\treturn ret;\n}\n"
+}

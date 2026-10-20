@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/6f9008d9a62d08590b46a9bbe62280a8f126ee732438cb7a51740fb485f73869",
+  "original_sha256": "6f9008d9a62d08590b46a9bbe62280a8f126ee732438cb7a51740fb485f73869",
+  "encoding": "utf-8",
+  "text": "#include <sys/errno.h>\n#include <darling/emulation/conversion/duct_errno.h>\n#include <darling/emulation/xnu_syscall/bsd/helper/misc/quarantine.h>\n#include <darling/emulation/xnu_syscall/bsd/impl/xattr/fremovexattr.h>\n\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n\nlong sys_fremovexattr(int fd, const char* name, int options)\n{\n\tint ret;\n\tconst char *linux_name;\n\tchar attribute_name[256];\n\tret = darwin_xattr_name(name, &linux_name, 0, attribute_name);\n\tif (ret < 0) return ret;\n\n\tret = LINUX_SYSCALL(__NR_fremovexattr, fd, linux_name);\n\n\tif (ret == -LINUX_ENODATA) return -ENOATTR;\n\tif (ret < 0)\n\t\treturn errno_linux_to_bsd(ret);\n\tquarantine_removed_fd(fd,name);\n\n\treturn ret;\n}\n"
+}

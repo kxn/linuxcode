@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "appkit-solarium-patch-got-v1",
+      "candidate_sha256": "fd24062ce8117748bc75dbbd7e18605c3c3649141734fa7503185bc604c3e0ad",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 19740294,
+            "sha256": "ba6f6412791fb4b42b443fc86c7d6c160c0008750a4ed814a57d9bb3aabe6695"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 28938,
+            "sha256": "baca2083fe0648ebde375433989e4edec6b6c20cc71c57736794bb24a57ae066"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 7198,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 45152,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 15,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2,
+      "false_local_binding_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a"
+  }
+}

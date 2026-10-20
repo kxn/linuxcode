@@ -1,0 +1,128 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 19740294,
+      "sha256": "ba6f6412791fb4b42b443fc86c7d6c160c0008750a4ed814a57d9bb3aabe6695"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 28938,
+      "sha256": "baca2083fe0648ebde375433989e4edec6b6c20cc71c57736794bb24a57ae066"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 7198,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 45152,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 15,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "dysymtab_alias_repair": {
+    "verified": true,
+    "symbol_count": 148630,
+    "actual_type_groups": [
+      139518,
+      4112,
+      5000
+    ],
+    "external_aliases": 22,
+    "renamed_aliases_preserved": [],
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 13500,
+    "remapped_indirect_entries": 8070,
+    "original_sha256": "e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746",
+    "candidate_sha256": "446192c934b2f9726d0e383b83e9a6c54a360a01d1f5ea657bcd0f1cad413932"
+  },
+  "dysymtab_alias_verifier": {
+    "source": "scripts/verify-dysymtab-alias-repair.py",
+    "sha256": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  },
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 118,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26eed8",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26eef0",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef00",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef10",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef20",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef30",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef40",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef50",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-appkit-solarium-patch-got-v3/AppKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x126668)\n",
+    "original_validator": "runtime/original-dyld-validation-jlvuw3v5/result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x126668",
+        "segment": "__DATA_CONST",
+        "offset": "0x26eed8",
+        "actual_address": "0x39ba1ed8",
+        "LLVM_section_base_address": "0x39ba2af8",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "dae7a06ef007ebbb1963fbbcee833a9a27cc279f41670851e94597f343c7080d",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "737574ee4fc218137605b6a9055ce0ad3fef9a80a0f008254e4e544aeae46837",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "9a2ccd4954a1321239edd4e33e5cba944de644c6018b14149a1d4166e9ce1cfd",
+    "config/coregraphics-image-pins.json": "ff453c72b3079bf3bd610705d7e2e89bd2cc8e0aa88ae181ecc1282cefdaa1cf",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit": "e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746",
+    "runtime/rebuilt-appkit-solarium-patch-got-v3/AppKit": "446192c934b2f9726d0e383b83e9a6c54a360a01d1f5ea657bcd0f1cad413932",
+    "runtime/rebuilt-appkit-solarium-patch-got-v3/reconstruction.json": "419f7a986d89b61de2def996041dc30b9e9c9a612c0bcff0e85154e15dfdece9"
+  },
+  "verified": true
+}

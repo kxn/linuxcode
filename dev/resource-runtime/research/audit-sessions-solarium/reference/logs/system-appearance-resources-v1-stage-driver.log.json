@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/system-appearance-resources-v1-stage-driver.log",
+  "original_sha256": "7f2d9315e84dec066af259248ebbcbdde129b22de9c528a93349dcc594c52184",
+  "encoding": "utf-8",
+  "text": "  File \"/home/dl/linuxcode/scripts/stage-system-appearance-resources.py\", line 25\n    record=dict(installed_in_owned_guest_prefix=True,host_system_modified=False,original_Apple_data=True,source=str(source.relative_to(root)),destination=str(dest.relative_to(root)),source_OS_build=version['ProductBuildVersion'],source_OS_version=version['ProductVersion'],bundle_identifier=info['CFBundleIdentifier'],files=files,total_bytes=sum((source/name).stat().st_size for name in files),source='runtime/recovery/macOS Base System/System/Library/CoreServices/SystemAppearance.bundle',runtime_execution_verified=False,full_goal_complete=False)\n                                                                                                                                                                                                                                                                                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: keyword argument repeated: source\n"
+}

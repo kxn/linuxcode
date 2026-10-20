@@ -1,0 +1,6 @@
+{
+  "original_path": "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/xattr/fgetxattr.c",
+  "original_sha256": "23e4ab8d5c2531160c59e7a913ee5520c2854f61c8a51c0298cef9ff914f2541",
+  "encoding": "utf-8",
+  "text": "#include <sys/errno.h>\n#include <darling/emulation/conversion/duct_errno.h>\n#include <darling/emulation/xnu_syscall/bsd/helper/misc/quarantine.h>\n#include <darling/emulation/xnu_syscall/bsd/impl/xattr/fgetxattr.h>\n\n#include <sys/errno.h>\n\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n\nlong sys_fgetxattr(int fd, const char* name, char* value,\n\t\tunsigned long size, unsigned int pos, int options)\n{\n\tint ret;\n\tconst char *linux_name;\n\tchar attribute_name[256];\n\tret = darwin_xattr_name(name, &linux_name, 0, attribute_name);\n\tif (ret < 0) return ret;\n\t\n\tif (pos != 0)\n\t\treturn -ERANGE;\n\n\tret = LINUX_SYSCALL(__NR_fgetxattr, fd, linux_name, value, size);\n\n\tif (ret == -LINUX_ENODATA) return -ENOATTR;\n\tif (ret < 0)\n\t\treturn errno_linux_to_bsd(ret);\n\n\treturn ret;\n}\n"
+}

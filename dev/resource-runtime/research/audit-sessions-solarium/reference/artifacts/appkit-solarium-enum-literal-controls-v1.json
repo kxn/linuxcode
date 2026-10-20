@@ -1,0 +1,37 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "mode": "positive",
+      "verified": true,
+      "exit_status": 0,
+      "diagnostic": "{\n  \"verified\": true,\n  \"parent\": \"appkit-patch-got-v2\",\n  \"parent_inspection\": \"artifacts/appkit-patch-got-v2-independent-inspection.json\",\n  \"parent_inspection_sha256\": \"d898d6fc322491558af8dd37f6cc81600c53529e0d8c78da584f6381a033b39e\",\n  \"parent_staged_image_sha256\": \"fd24062ce8117748bc75dbbd7e18605c3c3649141734fa7503185bc604c3e0ad\",\n  \"original_image\": \"/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit\",\n  \"original_image_sha256\": \"e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746\",\n  \"original_slot\": \"0x7ff84002acb0\",\n  \"original_slot_offset\": \"0x39289cb0\",\n  \"original_decoded_target\": \"0x7ffb19209640\",\n  \"symbol\": \"_$s7SwiftUI8SolariumV15EnablementIdiomO5macOSyA2EmFWC\",\n  \"provider\": \"/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore\",\n  \"original_literal_bytes\": \"01000000\",\n  \"original_literal_uint32\": 1,\n  \"actual_provider_export_unique\": true,\n  \"original_slot_targets_exact_named_export\": true,\n  \"source\": \"scripts/prepare-original-enum-case-candidate.py\",\n  \"source_sha256\": \"da0365e727e95f32d7f9cd12f6f3ba24fec5f5eab2b8e53e6ed7c9fe4a4d0ca8\"\n}\n"
+    },
+    {
+      "mode": "wrong-literal",
+      "verified": true,
+      "exit_status": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/prepare-original-enum-case-candidate.py\", line 13, in <module>\n    slot=image.base+args.slot_offset;assert ns['pointer'](slot)==address;assert ns['read'](address,4)==expected\n                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    },
+    {
+      "mode": "wrong-slot",
+      "verified": true,
+      "exit_status": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/prepare-original-enum-case-candidate.py\", line 13, in <module>\n    slot=image.base+args.slot_offset;assert ns['pointer'](slot)==address;assert ns['read'](address,4)==expected\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    },
+    {
+      "mode": "wrong-provider",
+      "verified": true,
+      "exit_status": 1,
+      "diagnostic": " not flags&0x80000400 for _,_,start,size,flags in provider.sections)\n                                                                                                                                                                                                                                                                                                                                               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nKeyError: '_$s7SwiftUI8SolariumV15EnablementIdiomO5macOSyA2EmFWC'\n"
+    },
+    {
+      "mode": "function-as-data",
+      "verified": true,
+      "exit_status": 1,
+      "diagnostic": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/prepare-original-enum-case-candidate.py\", line 9, in <module>\n    assert args.symbol.startswith('_$s') and args.symbol.endswith('mFWC');expected=bytes.fromhex(args.expected_bytes);assert len(expected)==4 and struct.unpack('<I',expected)[0]<=65535\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    }
+  ],
+  "source_only_validation": true,
+  "native_execution_verified": false
+}

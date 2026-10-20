@@ -1,0 +1,49 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "version": 2,
+      "path": "runtime/rebuilt-appkit-solarium-patch-got-v2/AppKit",
+      "sha256": "ee0581d583e6a607c5fb13f48e24b9f8c58b0df9b065d81b2bba003dd38fdbf8",
+      "independent_inspection_passed": false,
+      "error": "Segment file/VM page offsets differ",
+      "segments": [
+        {
+          "name": "__ENUM_LITERALS",
+          "vm": "0x3ce2c000",
+          "file_offset": "0x2058000",
+          "page_offsets_match": true
+        },
+        {
+          "name": "__LINKEDIT",
+          "vm": "0x7925f000",
+          "file_offset": "0x2058004",
+          "page_offsets_match": false
+        }
+      ]
+    },
+    {
+      "version": 3,
+      "path": "runtime/rebuilt-appkit-solarium-patch-got-v3/AppKit",
+      "sha256": "446192c934b2f9726d0e383b83e9a6c54a360a01d1f5ea657bcd0f1cad413932",
+      "independent_inspection_passed": true,
+      "error": null,
+      "segments": [
+        {
+          "name": "__ENUM_LITERALS",
+          "vm": "0x3ce2c000",
+          "file_offset": "0x2058000",
+          "page_offsets_match": true
+        },
+        {
+          "name": "__LINKEDIT",
+          "vm": "0x7925f000",
+          "file_offset": "0x2059000",
+          "page_offsets_match": true
+        }
+      ]
+    }
+  ],
+  "native_v3_probe": "runtime/appkit-solarium-enum-qyby1imh/result.json",
+  "original_Apple_format_validation_did_not_detect_v2_page_offset_mismatch": true
+}

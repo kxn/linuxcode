@@ -1,0 +1,54 @@
+{
+  "verified": true,
+  "positive": [
+    {
+      "symbol": "_$s7SwiftUI8SolariumV15EnablementIdiomO5macOSyA2EmFWC",
+      "provider": "/System/Library/Frameworks/SwiftUICore.framework/Versions/A/SwiftUICore",
+      "slot": "0x7ff84002acb0",
+      "instruction": "0x7ff80719f151",
+      "instruction_bytes": "488b0558bbe838",
+      "original_target": "0x7ffb19209640",
+      "original_encoded_slot": "4096201903020000",
+      "literal_bytes": "01000000"
+    }
+  ],
+  "negative_cases": [
+    {
+      "mode": "wrong-literal",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mode": "wrong-slot",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mode": "wrong-instruction",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mode": "wrong-bytes",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mode": "function-as-data",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mode": "wrong-provider",
+      "rejected": true,
+      "exception": "KeyError"
+    },
+    {
+      "mode": "extra-field",
+      "rejected": true,
+      "exception": "AssertionError"
+    }
+  ],
+  "source_only": true,
+  "runtime_execution_verified": false
+}
