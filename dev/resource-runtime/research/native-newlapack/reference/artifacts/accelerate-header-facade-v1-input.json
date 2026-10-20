@@ -1,0 +1,82 @@
+{
+  "target": "accelerate-header-facade-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate",
+    "sha256": "491b89f6919d3e972a0e53333d4beb9886c9f5b0554468c76dcd3db7d410c3b2",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "original_reexport_facade": {
+      "original_sha256": "491b89f6919d3e972a0e53333d4beb9886c9f5b0554468c76dcd3db7d410c3b2",
+      "original_uuid": "24a2faaecc6939babb4864f60f37e4f6",
+      "original_executable_bytes": 0,
+      "original_dependencies": [
+        [
+          2147483679,
+          "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage"
+        ],
+        [
+          2147483679,
+          "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib"
+        ],
+        [
+          12,
+          "/usr/lib/libSystem.B.dylib"
+        ]
+      ],
+      "reexport_count": 2,
+      "original_header_only_facade": true
+    },
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "align_linkedit_streams": true
+  },
+  "original_bytes": 4096,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "e19a6529bf34ce08f7ddbdc6ab24672552bea5fde1ca612df258b14f296f63c1",
+  "manifest_sha256": "02065921ac82e9a014c1cbc37676c92781348df18ee37443ab06ad6b52244cbe",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "accelerate-header-facade-v1",
+    "--lazy-functions",
+    "--collect-missing-imports"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_reexport_facade": {
+    "original_sha256": "491b89f6919d3e972a0e53333d4beb9886c9f5b0554468c76dcd3db7d410c3b2",
+    "original_uuid": "24a2faaecc6939babb4864f60f37e4f6",
+    "original_executable_bytes": 0,
+    "original_dependencies": [
+      [
+        2147483679,
+        "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage"
+      ],
+      [
+        2147483679,
+        "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib"
+      ],
+      [
+        12,
+        "/usr/lib/libSystem.B.dylib"
+      ]
+    ],
+    "reexport_count": 2,
+    "original_header_only_facade": true
+  },
+  "facade_validator_sha256": "8dae537a3a8d079ac1a3b7850c72112ec4acc44946ea7625cd91ecb72d3e66c8",
+  "build_returncode": 0,
+  "log": "logs/accelerate-header-facade-v1-build.log",
+  "log_sha256": "cc1f825951455116065e3681681e7e4038a2f7e36151c525f6bf054ba5040133"
+}

@@ -1,0 +1,28 @@
+{
+  "target": "lapack-patch-got-v1",
+  "original_image_sha256": "6c12d33c0924c6284a5ece7197acc97282cc7466b28885ec2c459c256fdd7eff",
+  "missing_imports_sha256": "bfd8f9fdfee75f7eea45947fbd06f4970068c484240edeaf6c4f702b0fd78b40",
+  "original_dependency_sha256": {
+    "/usr/lib/libc++.1.dylib": "98a388765e2b9a56940265d09723d2b1fccb9db63953157e5c6006089cab3ac8",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib": "22288ff77532ba2b8187943251d99e1c32de11a8749506f2c32d9136ae6367f2",
+    "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4"
+  },
+  "unresolved": 1,
+  "rows": [
+    {
+      "target": "0x7ff812dd9e6b",
+      "slots": [
+        "0x7ff840056630"
+      ],
+      "exports": [],
+      "selected": null,
+      "same_class_alias": false
+    }
+  ],
+  "sources": {
+    "scripts/audit-resource-image-imports.py": "fdd6f0f7fe7691f1b577476d7adc75c8a76fe6b24a611d6d3b054b724c115a81",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab"
+  },
+  "image_emitted": false,
+  "runtime_execution_verified": false
+}

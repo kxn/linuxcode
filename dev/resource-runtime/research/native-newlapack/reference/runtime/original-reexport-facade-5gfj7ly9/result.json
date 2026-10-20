@@ -1,0 +1,100 @@
+{
+  "verified": true,
+  "target": "avfoundation-reexport-facade-v2",
+  "original": "runtime/fullsystem-libraries/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+  "image": "runtime/rebuilt-avfoundation-reexport-facade-v2/AVFoundation",
+  "inspection": {
+    "original_sha256": "3ae9547dd198e4544bed0caee7badabc83b67afaa87864d062a2a138c018c1c1",
+    "original_uuid": "9f192f005055382b8f0bbfcaf0840b19",
+    "original_executable_bytes": 0,
+    "original_dependencies": [
+      [
+        2147483679,
+        "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio"
+      ],
+      [
+        2147483679,
+        "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore"
+      ],
+      [
+        2147483679,
+        "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture"
+      ],
+      [
+        2147483679,
+        "/System/Library/Frameworks/AVRouting.framework/Versions/A/AVRouting"
+      ],
+      [
+        12,
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      [
+        12,
+        "/usr/lib/libSystem.B.dylib"
+      ]
+    ],
+    "reexport_count": 4,
+    "original_imageinfo": "0000000049000000",
+    "original_imageinfo_only_preoptimization_flags_cleared": true,
+    "verified": true,
+    "candidate_sha256": "ac9f81eb7068856e88842c8f0e58b98e5e9a1b1b38724923c6039b77a9e65801",
+    "original_dependency_commands_byte_equal": true,
+    "original_machine_code_reimplemented": false,
+    "runtime_execution_verified": false
+  },
+  "rejected_actual_corruptions": [
+    "added_executable_bytes",
+    "changed_imageinfo",
+    "changed_reexport_provider",
+    "reexport_changed_to_load",
+    "changed_uuid",
+    "unexpected_initializer_command",
+    "nonempty_original_code"
+  ],
+  "format_validation_only": true,
+  "runtime_execution_verified": false,
+  "original_tool_bytes_equal_extracted": true,
+  "tool": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dyld_info",
+  "tool_sha256": "b7c455cacd653dc42e1f12345d1a3c012e68202c0a4487457c5835bbcb190b28",
+  "stage": "artifacts/private-procfs-v11-stage.json",
+  "outer_status": 0,
+  "cases": [
+    [
+      "valid",
+      "0"
+    ],
+    [
+      "bad-header",
+      "1"
+    ],
+    [
+      "bad-reexport-name",
+      "1"
+    ]
+  ],
+  "command": [
+    "timeout",
+    "-k",
+    "5",
+    "90",
+    "runtime/native-codesign-ci-v3/darling",
+    "shell",
+    "/usr/bin/env",
+    "OBJC_DISABLE_TAGGED_POINTERS=NO",
+    "DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/original-codesign-closure-native-local-signer-v1/frameworks:/Volumes/SystemRoot/workspace/runtime/global-fsevents-source/frameworks:/Volumes/SystemRoot/workspace/runtime/fsevents-history-source/frameworks:/Volumes/SystemRoot/workspace/runtime/mobileasset-query-source/frameworks:/Volumes/SystemRoot/workspace/runtime/local-authentication-error-source/frameworks:/Volumes/SystemRoot/workspace/runtime/crypto-token-kit-native/frameworks:/Volumes/SystemRoot/workspace/runtime/security-cryptokit-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/crypto-token-parameters-source/frameworks:/Volumes/SystemRoot/workspace/runtime/cryptokit-original-native/frameworks:/Volumes/SystemRoot/workspace/runtime/argument-parser-native/frameworks:/Volumes/SystemRoot/workspace/runtime/diskmanagement-nserror-source/frameworks:/Volumes/SystemRoot/workspace/runtime/mobileasset-download-attributes/frameworks:/Volumes/SystemRoot/workspace/runtime/cryptex-native/frameworks:/Volumes/SystemRoot/workspace/runtime/device-identity-native/frameworks:/Volumes/SystemRoot/workspace/runtime/iokit-main-port-source/frameworks:/Volumes/SystemRoot/workspace/runtime/security-device-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/frameworks:/Volumes/SystemRoot/workspace/runtime/coreutils-crypto-source/frameworks:/Volumes/SystemRoot/workspace/runtime/xcode-mobile-device/System/Library/PrivateFrameworks:/Volumes/SystemRoot/workspace/runtime/security-cloud-rpc-stage/frameworks:/Volumes/SystemRoot/workspace/runtime/mdns-native/frameworks:/Volumes/SystemRoot/workspace/runtime/fsevents-heap-source/frameworks:/Volumes/SystemRoot/workspace/runtime/combine-native/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-legacy-key/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-cg-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/imageio-native/frameworks:/Volumes/SystemRoot/workspace/runtime/mobilegestalt-native/frameworks:/Volumes/SystemRoot/workspace/runtime/native-layer-context/frameworks:/Volumes/SystemRoot/workspace/runtime/native-layer-support/frameworks:/Volumes/SystemRoot/workspace/runtime/uniform-type-identifiers-native/frameworks:/Volumes/SystemRoot/workspace/runtime/security-policy-source/frameworks:/Volumes/SystemRoot/workspace/runtime/apple-system-info-native/frameworks:/Volumes/SystemRoot/workspace/runtime/mobileasset-source/frameworks:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/frameworks:/Volumes/SystemRoot/workspace/runtime/logging-support-native/frameworks:/Volumes/SystemRoot/workspace/runtime/foundation-native-framework-stage:/Volumes/SystemRoot/workspace/runtime/native-framework-stage",
+    "DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/private-procfs-v11/libraries:/Volumes/SystemRoot/workspace/runtime/libsystem-kqueue-source-8w4a8q6v/sortedweak:/Volumes/SystemRoot/workspace/runtime/original-codesign-closure-native-local-signer-v1/libraries:/Volumes/SystemRoot/workspace/runtime/local-identity-store-readonly-v2/libraries:/Volumes/SystemRoot/workspace/runtime/derq-original-v1/libraries:/Volumes/SystemRoot/workspace/runtime/log-compose-runtime/libraries:/Volumes/SystemRoot/workspace/runtime/rebuilt-sandbox-compiler-native:/Volumes/SystemRoot/workspace/runtime/rebuilt-match-sandbox-native:/Volumes/SystemRoot/workspace/runtime/rebuilt-commoncrypto-original-native:/Volumes/SystemRoot/workspace/runtime/security-cryptokit-constants/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-token-parameters-source/libraries:/Volumes/SystemRoot/workspace/runtime/rebuilt-corecrypto-original-native-v2:/Volumes/SystemRoot/workspace/runtime/corecrypto-malloc-source/libraries:/Volumes/SystemRoot/workspace/runtime/corecrypto-hkdf-source/libraries:/Volumes/SystemRoot/workspace/runtime/applearchive-native/libraries:/Volumes/SystemRoot/workspace/runtime/cryptex-native/libraries:/Volumes/SystemRoot/workspace/runtime/device-identity-native/libraries:/Volumes/SystemRoot/workspace/runtime/security-device-constants/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-quarantine-runtime/libraries:/Volumes/SystemRoot/workspace/runtime/expected-access-source/libraries:/Volumes/SystemRoot/workspace/runtime/typed-new-delete-source/libraries:/Volumes/SystemRoot/workspace/runtime/security-cloud-rpc-stage/libraries:/Volumes/SystemRoot/workspace/runtime/mdns-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-coherent/libraries:/Volumes/SystemRoot/workspace/runtime/objc-selector-source/libraries:/Volumes/SystemRoot/workspace/runtime/objc-selector-source:/Volumes/SystemRoot/workspace/runtime/imageio-legacy-key/libraries:/Volumes/SystemRoot/workspace/runtime/simd-matrix-source/libraries:/Volumes/SystemRoot/workspace/runtime/imageio-cg-constants/libraries:/Volumes/SystemRoot/workspace/runtime/imageio-native/libraries:/Volumes/SystemRoot/workspace/runtime/runnable-archs-source/libraries:/Volumes/SystemRoot/workspace/runtime/mobilegestalt-native/libraries:/Volumes/SystemRoot/workspace/runtime/container-persona/libraries:/Volumes/SystemRoot/workspace/runtime/log-hooks/libraries:/Volumes/SystemRoot/workspace/runtime/native-log-message/libraries:/Volumes/SystemRoot/workspace/runtime/log-enablement/libraries:/Volumes/SystemRoot/workspace/runtime/libtrace-pack-source/libraries:/Volumes/SystemRoot/workspace/runtime/native-layer-context/libraries:/Volumes/SystemRoot/workspace/runtime/native-layer-support/libraries:/Volumes/SystemRoot/workspace/runtime/container-manager-export/libraries:/Volumes/SystemRoot/workspace/runtime/sysdir-native-export/libraries:/Volumes/SystemRoot/workspace/runtime/sandbox-container-source/libraries:/Volumes/SystemRoot/workspace/runtime/rootless-nounlink-export/libraries:/Volumes/SystemRoot/workspace/runtime/typed-malloc-source/libraries:/Volumes/SystemRoot/workspace/runtime/os-log-simple-source/libraries:/Volumes/SystemRoot/workspace/runtime/rootless-datavault-export/libraries:/Volumes/SystemRoot/workspace/runtime/user-local-dir-export/libraries:/Volumes/SystemRoot/workspace/runtime/libtrace-source/libraries:/Volumes/SystemRoot/workspace/runtime/objc-source:/Volumes/SystemRoot/workspace/runtime/uti-runtime-support/libraries:/Volumes/SystemRoot/workspace/runtime/uniform-type-identifiers-native/libraries:/Volumes/SystemRoot/workspace/runtime/pthread-yield-export/libraries:/Volumes/SystemRoot/workspace/runtime/security-policy-source/libraries:/Volumes/SystemRoot/workspace/runtime/quartzcore-native/libraries:/Volumes/SystemRoot/workspace/runtime/foundation-native-library-stage:/Volumes/SystemRoot/workspace/runtime/native-library-stage:/Volumes/SystemRoot/workspace/runtime/rebuilt-der:/usr/lib/swift",
+    "LINUXCODE_IDENTITY_STORE=/Volumes/SystemRoot/workspace/runtime/local-identity-xcode-empty-v1/store.plist",
+    "LINUXCODE_IDENTITY_TRACE=1",
+    "LINUXCODE_CODE_SIGNER_TRACE=1",
+    "/bin/bash",
+    "/Volumes/SystemRoot/workspace/runtime/original-reexport-facade-5gfj7ly9/validate.sh"
+  ],
+  "log": "runtime/original-reexport-facade-5gfj7ly9/run.log",
+  "log_sha256": "76cdf20cef40b83dfdbf1967ada6e5acd1f7c899ab14bbbc1838e959d3dfa2f0",
+  "sources": {
+    "scripts/original-reexport-facade.py": "8dae537a3a8d079ac1a3b7850c72112ec4acc44946ea7625cd91ecb72d3e66c8",
+    "scripts/probe-original-reexport-facade.py": "54649adf9b895729d29c8bf0fa77d8043f0f1f760a88859e01f15fd594ef760d",
+    "artifacts/avfoundation-reexport-facade-v2-input.json": "9230739743538f5a8fa856ad8fc9415c524f906781a3d70ea714a31c0339a161",
+    "runtime/rebuilt-avfoundation-reexport-facade-v2/reconstruction.json": "498b8802e1caec57fb1a0d330d823fe4545270112666573120a838c089b55179"
+  }
+}

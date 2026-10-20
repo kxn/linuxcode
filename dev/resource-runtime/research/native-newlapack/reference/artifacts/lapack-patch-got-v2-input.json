@@ -1,0 +1,133 @@
+{
+  "target": "lapack-patch-got-v2",
+  "pin": {
+    "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib",
+    "sha256": "6c12d33c0924c6284a5ece7197acc97282cc7466b28885ec2c459c256fdd7eff",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib",
+      "_scalbn": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 539,
+    "patch_got_range": [
+      "0x7ff840000000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 19566592,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libc++.1.dylib",
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "073f7d173c5200bafbadf30245edaee7fefd340101a447fe56fb4b297a10ae82",
+  "manifest_sha256": "e19a6529bf34ce08f7ddbdc6ab24672552bea5fde1ca612df258b14f296f63c1",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "lapack-patch-got-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "lapack-patch-got-v1",
+  "exact_import_audit": "artifacts/lapack-original-got-import-audit-v1.json",
+  "exact_import_audit_sha256": "32f2d895790c0f5df91d6fba0e355a77503d2eafe93356247ff341796f33a884",
+  "typed_class_aliases": [],
+  "typed_pooled_imports": [
+    {
+      "kind": "original-stub-GOT-and-reexport-route",
+      "target": "0x7ff812dd9e6b",
+      "slots": [
+        "0x7ff840056630"
+      ],
+      "selected": [
+        "_scalbn",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "stubs": [
+        {
+          "address": "0x7ff81444bba8",
+          "slot": "0x7ff840056630",
+          "bytes": "ff2582aac02b"
+        }
+      ],
+      "route": [
+        {
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "symbol": "_scalbn",
+          "kind": "whole-library-reexport",
+          "ordinal": 25,
+          "dependency": "/usr/lib/system/libsystem_m.dylib"
+        },
+        {
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "symbol": "_scalbn",
+          "kind": "address",
+          "export": [
+            "address",
+            140703445130859,
+            0
+          ]
+        }
+      ],
+      "original_file_sha256": {
+        "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib": "6c12d33c0924c6284a5ece7197acc97282cc7466b28885ec2c459c256fdd7eff",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4",
+        "/usr/lib/system/libsystem_m.dylib": "8021ff32baa229dd10806124327a65983cfaa807330c6ec8832c99dc944f1322"
+      },
+      "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+      "records": [
+        {
+          "symbol": "_scalbn",
+          "provider": "/usr/lib/system/libsystem_m.dylib",
+          "kind": 0,
+          "implementation": 140703445130859,
+          "matching_import_names": [
+            "_scalbn"
+          ],
+          "slot": 140704202712624,
+          "addend": 0,
+          "weak_import": false,
+          "high7": 0,
+          "target": 140703445130859,
+          "target_matches_patch": true,
+          "export_matches_patch": true,
+          "provider_index": 155,
+          "export_index": 53708,
+          "location_index": 107099
+        }
+      ]
+    }
+  ],
+  "pooled_import_validator_sha256": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+  "original_patch_contract": {
+    "original_records": 7,
+    "nonzero_addends": 0,
+    "got_cells": 539,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/lapack-patch-got-v2-build.log",
+  "log_sha256": "0f46dc7a4c4ff9a70d9173840bc56a804a6f93cb25a58a66bd4b01105e97c501"
+}

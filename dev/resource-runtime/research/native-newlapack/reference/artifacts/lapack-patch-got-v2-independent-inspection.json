@@ -1,0 +1,89 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 19110030,
+      "sha256": "15d1d2555ded7370f5f647e14ebd5f43d65d02e91910bf3055a26abb995d175c"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3072,
+      "sha256": "e7daaf83a5a76ba28af05923203deb72d9953b1423c5fc071954093519702059"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 539,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 547,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 5,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 7,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1c10",
+        "first_section_prefix": "0xbf8",
+        "symbol": "__ZTISt12length_error"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1c18",
+        "first_section_prefix": "0xbf8",
+        "symbol": "__ZdaPvSt19__type_descriptor_t"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1c20",
+        "first_section_prefix": "0xbf8",
+        "symbol": "__ZdlPv"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1c28",
+        "first_section_prefix": "0xbf8",
+        "symbol": "__ZdlPvSt19__type_descriptor_t"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1c30",
+        "first_section_prefix": "0xbf8",
+        "symbol": "__ZnamSt19__type_descriptor_t"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1c38",
+        "first_section_prefix": "0xbf8",
+        "symbol": "__ZnwmSt19__type_descriptor_t"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1c60",
+        "first_section_prefix": "0xbf8",
+        "symbol": "__NSConcreteGlobalBlock"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-lapack-patch-got-v2/libLAPACK.dylib': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x3de)\n",
+    "original_validator": "runtime/original-dyld-validation-3n87rg64/result.json",
+    "original_validator_sha256": "8187f5933f37ba749c9e31ad6d3569c88231cc4738e2125d58b2e9ca74c86339",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "7370d9c579c5ddc5873e6539bd0a7204237cde645f6bec8a56844b263a95e579",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "cfd947007ae8715fab03f453aa2fbf07f6b222d81811751e1f712253ccec9b59",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib": "6c12d33c0924c6284a5ece7197acc97282cc7466b28885ec2c459c256fdd7eff",
+    "runtime/rebuilt-lapack-patch-got-v2/libLAPACK.dylib": "586a726532ba519ef3428660685fab406a759a77014a01a2b826984b6b197022",
+    "runtime/rebuilt-lapack-patch-got-v2/reconstruction.json": "07be49e8a188767b998efc3bfea58940a8ed082a50e558e581e561dca28cc856"
+  },
+  "verified": true
+}

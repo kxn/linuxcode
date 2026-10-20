@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "lapack-patch-got-v2",
+      "candidate_sha256": "586a726532ba519ef3428660685fab406a759a77014a01a2b826984b6b197022",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 19110030,
+            "sha256": "15d1d2555ded7370f5f647e14ebd5f43d65d02e91910bf3055a26abb995d175c"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 3072,
+            "sha256": "e7daaf83a5a76ba28af05923203deb72d9953b1423c5fc071954093519702059"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 539,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 547,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 5,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

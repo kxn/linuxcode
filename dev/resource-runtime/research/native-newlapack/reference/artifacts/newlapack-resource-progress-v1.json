@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-20T05:12:59.597571+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "current_verified_configuration": "config/direct-resource-tool-environment-v100.json",
+  "experimental_configuration": "config/direct-resource-tool-environment-v101.json",
+  "experimental_graphics_stage": "artifacts/coregraphics-native-v148-runtime-inputs-v1.json",
+  "experimental_overlay": "artifacts/resource-framework-overlay-newlapack-runtime-inputs-v1.json",
+  "new_original_targets": [
+    "lapack-patch-got-v2",
+    "accelerate-header-facade-v1",
+    "veclib-header-facade-v1"
+  ],
+  "lapack_original_code_bytes_preserved": true,
+  "lapack_GOT_cells": 539,
+  "lapack_serialized_bindings": 547,
+  "header_only_facades_verified": [
+    "runtime/original-reexport-facade-ahfpfhyt/result.json",
+    "runtime/original-reexport-facade-r1ru945e/result.json"
+  ],
+  "new_header_only_corruptions_rejected": 21,
+  "numerical_probe": "runtime/newlapack-svd-native-_c137563/result.json",
+  "numerical_probe_passed": false,
+  "actual_execution_blocker": "_cblas_dnrm2$NEWLAPACK",
+  "actual_execution_provider": "libBLAS.dylib",
+  "resource_compilation_verified": false,
+  "complete_Unity_UE_linking_and_signing_verified": false,
+  "next_work": "Recover original BLAS, validate and create a new complete Accelerate overlay; repeat SVD numerical and CPU regression tests before original resource tools and full workspace builds."
+}

@@ -1,0 +1,72 @@
+{
+  "target": "blas-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib",
+    "sha256": "22288ff77532ba2b8187943251d99e1c32de11a8749506f2c32d9136ae6367f2",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 43,
+    "patch_got_range": [
+      "0x7ff840052000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 2625536,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "cfd947007ae8715fab03f453aa2fbf07f6b222d81811751e1f712253ccec9b59",
+  "manifest_sha256": "fe6965ee884fb78f900f0cb158ad2bbab7810e2ef1bb83be53e256408ca000da",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "blas-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1,
+    "nonzero_addends": 0,
+    "got_cells": 43,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "original_cache_TLV_optimizations": [
+    {
+      "slot": "0x7ff843a1ec90",
+      "bootstrap": "0x7ff802a953c0",
+      "optimized_entry": "0x7ff802a953c8",
+      "template_start": "0x7ff843a1eca8",
+      "template_size": 4,
+      "variable_offset": 0,
+      "cache_key": 127,
+      "template_delta": 0,
+      "raw_original_descriptor": "c853a902004600007f000000000000000000000004000000",
+      "requires_disk_ABI_restoration": true
+    }
+  ],
+  "TLV_validator_sha256": "f89e05dfff195dcdd772fa227229a7e5c471fcfadbc748c45944c0a778920535",
+  "build_returncode": 0,
+  "log": "logs/blas-patch-got-v1-build.log",
+  "log_sha256": "a2fc5695a70a70d60f2fcb4e31a351ccf9adc71c676310e6306ac7087daac53e"
+}

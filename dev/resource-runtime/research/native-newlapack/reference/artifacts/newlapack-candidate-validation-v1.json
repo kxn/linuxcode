@@ -1,0 +1,49 @@
+{
+  "verified": true,
+  "code_images": [
+    {
+      "target": "lapack-patch-got-v2",
+      "inspection": "artifacts/lapack-patch-got-v2-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-3n87rg64/result.json",
+      "corruption_tests": "artifacts/lapack-patch-got-v2-real-binary-tests.json",
+      "GOT_cells": 539,
+      "serialized_bindings": 547
+    },
+    {
+      "target": "blas-patch-got-v1",
+      "inspection": "artifacts/blas-patch-got-v1-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-5tcxw5vu/result.json",
+      "corruption_tests": "artifacts/blas-patch-got-v1-real-binary-tests.json",
+      "GOT_cells": 43,
+      "serialized_bindings": 46
+    }
+  ],
+  "header_only_facades": [
+    {
+      "target": "accelerate-header-facade-v1",
+      "probe": "runtime/original-reexport-facade-ahfpfhyt/result.json",
+      "actual_corruptions_rejected": 10,
+      "original_reexport_count": 2
+    },
+    {
+      "target": "veclib-header-facade-v1",
+      "probe": "runtime/original-reexport-facade-r1ru945e/result.json",
+      "actual_corruptions_rejected": 11,
+      "original_reexport_count": 9
+    }
+  ],
+  "selected_original_image_count": 4,
+  "original_code_bytes_preserved": true,
+  "GOT_cells": 582,
+  "serialized_bindings": 593,
+  "original_format_positive_cases": 4,
+  "original_format_negative_cases": 8,
+  "header_only_actual_corruptions_rejected": 21,
+  "numerical_probe": "runtime/newlapack-svd-native-jronm9bs/result.json",
+  "numerical_probe_sha256": "0ab0bc39aa4da22a2deb51c56a34b0b0464a3173cadccf2e44f7160a9d8ef6f3",
+  "SVD_matrices": 12,
+  "SVD_checks": 638,
+  "max_scaled_Frobenius_residual": 7.311781571822336e-16,
+  "old_CPU_306_vDSP_BNNS_vImage_regression_passed": true,
+  "resource_compilation_verified": false
+}
