@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 32011,
+      "sha256": "ccd973b5cd522ca37f1b4d41a6affedae2b72a189c025c76da415ef509d290f6"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 666,
+      "sha256": "63819a4ddb7d4923ffc33aedf068a518a46996dc8b57fea11850b962a6d928ca"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 168,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 230,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 41,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1368",
+        "first_section_prefix": "0xca0",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1370",
+        "first_section_prefix": "0xca0",
+        "symbol": "_swift_cvw_destroy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1378",
+        "first_section_prefix": "0xca0",
+        "symbol": "_swift_cvw_initWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1380",
+        "first_section_prefix": "0xca0",
+        "symbol": "_swift_cvw_assignWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1390",
+        "first_section_prefix": "0xca0",
+        "symbol": "_swift_cvw_assignWithTake"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x13c0",
+        "first_section_prefix": "0xca0",
+        "symbol": "_swift_cvw_enumFn_getEnumTag"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x14c8",
+        "first_section_prefix": "0xca0",
+        "symbol": "_$ss20__StaticArrayStorageCN"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1518",
+        "first_section_prefix": "0xca0",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-communicationtrust-closure-callspersistence-resource-v2/CallsPersistence': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xb05)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-r1dn12o1/communicationtrust-closure-callspersistence-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xb05",
+        "segment": "__DATA_CONST",
+        "offset": "0x1368",
+        "actual_address": "0x3e3c4368",
+        "LLVM_section_base_address": "0x3e3c5008",
+        "reported_error": "not in section",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      }
+    ],
+    "original_validator_sha256": "1c3e741c1901579b0a048becea5d27bd03113d2592d0ecc7405193c146f61f91",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "301aba433e3cc20179c0ab5aee4a3f45ca6deb05b32f9fbd54e0cd0ecdb935b9",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "a351eea58bcccf9d64d74c298b26a7c3690e3d9cbcb37079737c8a88f0017010",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CallsPersistence.framework/Versions/A/CallsPersistence": "3122daf45061aee1b0d34231c3d7f28b17af511d64357a909970fc9158a1e52e",
+    "runtime/rebuilt-communicationtrust-closure-callspersistence-resource-v2/CallsPersistence": "246e3605b98d5b289033ae1188f9ae023c260d13803a406c43e3358f3ac23c0d",
+    "runtime/rebuilt-communicationtrust-closure-callspersistence-resource-v2/reconstruction.json": "51b5f1df452e2f5bb02ebc0804caade985a7506171a58cff17aa8c5b66bcafba"
+  },
+  "verified": true
+}

@@ -1,0 +1,151 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "communicationtrust-patch-got-v2",
+      "candidate_sha256": "1edb784dd6ab597a00120fca159473e1dbde8508873830f347300867ddcd7332",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 614752,
+            "sha256": "a6993d551e8899885242fc9cb8c73c775b70b8ebe44589e9350c1afd1b41c10d"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 2640,
+            "sha256": "f9475137fe8f56489a004926eb340e8766ef8901493ddd55b75ad23c9c07075c"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 747,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1128,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2
+    },
+    {
+      "target": "communicationtrust-closure-callspersistence-resource-v2",
+      "candidate_sha256": "246e3605b98d5b289033ae1188f9ae023c260d13803a406c43e3358f3ac23c0d",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 32011,
+            "sha256": "ccd973b5cd522ca37f1b4d41a6affedae2b72a189c025c76da415ef509d290f6"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 666,
+            "sha256": "63819a4ddb7d4923ffc33aedf068a518a46996dc8b57fea11850b962a6d928ca"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 168,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 230,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "communicationtrust-closure-sensitivecontentanalysis-resource-v2",
+      "candidate_sha256": "6eae51dfc140faf790ff194899314dd9c53bb7e951573416ee167ccaa7e70939",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 739904,
+            "sha256": "a4d420b1e5223e179d341b271b59011bcb1145adc8f4598bd3c831dbf84a2dd7"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 3912,
+            "sha256": "988383f8e26cad08c088f416616f054483ad04981d0da5811caf72ef5f018dfc"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 1043,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 1970,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "communicationtrust-closure-peoplesuggester-resource-v1",
+      "candidate_sha256": "67922ab5e1c5ff0657682aaae6cc7a09fe6b8971f80dc69327bea5b2e5a8c636",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 1280966,
+            "sha256": "654019849d0b850371386f609d9b096b439f099d3a336992902a54d75f4fe429"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1272,
+            "sha256": "5c9d7e17fa0394980c36cc6d525d472b9f7ff1f12978d55bc7ec95c4d2fdb6bb"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 401,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 3494,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a"
+  }
+}

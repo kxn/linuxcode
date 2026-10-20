@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1470672,
+      "sha256": "7738dcfa059e2e7962144e70c9340aeadc1e39622cf0a32d11223651ea7932ff"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1530,
+      "sha256": "e9a4a61102506d35d3bed9c9f50e0c83f1526d44f0bb2a70b5ab9d20626982da"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 666,
+  "nonzero_addends_verified": 19,
+  "serialized_bindings": 3577,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 24,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d418",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d430",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d448",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d460",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d478",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d490",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d4a8",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d4c0",
+        "first_section_prefix": "0xa30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-appleaccount-patch-got-v2/AppleAccount': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x17835)\n",
+    "original_validator": "runtime/original-dyld-validation-hrqvzj_e/result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x17835",
+        "segment": "__DATA_CONST",
+        "offset": "0x3d418",
+        "actual_address": "0x22cf5418",
+        "LLVM_section_base_address": "0x22cf5e48",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "ab63c2537cd2f8ba5635a0840354a40e975f686bdb76a1304cd34a8d88bdb86a",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "027956de6e70832ef274197ed3bb1ebb58be41c2eb311ef987e692a2b39cfb99",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "22bc60e2f43ea8f3b09cd30d5c17f7b96636ee8cb0ca01ae0354bff66497518b",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AppleAccount.framework/Versions/A/AppleAccount": "66df7a86df1b66246ca1ac5a5e2da8475b1be941da07392a03d5a79338f650c0",
+    "runtime/rebuilt-appleaccount-patch-got-v2/AppleAccount": "293b5091d75950de58b9037891af41682bf0c6f3c3344f017293bbb9e6e58c1c",
+    "runtime/rebuilt-appleaccount-patch-got-v2/reconstruction.json": "7a68174399d079adae2b8d18cd169d0bcb63f0e56ba0135194f812c33c1e3207"
+  },
+  "verified": true
+}

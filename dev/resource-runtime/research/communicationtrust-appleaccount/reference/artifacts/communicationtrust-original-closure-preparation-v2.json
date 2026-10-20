@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/communicationtrust-original-closure-preparation-v2.json",
+  "configuration_sha256": "f2ea16e3c6992fbb2c75446bc0d71e1c4212b0e844700a74085e450220d7aaf9",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/CommunicationTrust.framework/Versions/A/CommunicationTrust",
+      "attempts": [],
+      "prepared_target": "communicationtrust-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CallsPersistence.framework/Versions/A/CallsPersistence",
+      "attempts": [],
+      "prepared_target": "communicationtrust-closure-callspersistence-resource-v2"
+    },
+    {
+      "image": "/System/Library/Frameworks/SensitiveContentAnalysis.framework/Versions/A/SensitiveContentAnalysis",
+      "attempts": [],
+      "prepared_target": "communicationtrust-closure-sensitivecontentanalysis-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PeopleSuggester.framework/Versions/A/PeopleSuggester",
+      "attempts": [],
+      "prepared_target": "communicationtrust-closure-peoplesuggester-resource-v1"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/CallsPersistence.framework/Versions/A/CallsPersistence",
+      "stem": "communicationtrust-closure-callspersistence",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    },
+    {
+      "image": "/System/Library/Frameworks/SensitiveContentAnalysis.framework/Versions/A/SensitiveContentAnalysis",
+      "stem": "communicationtrust-closure-sensitivecontentanalysis",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PeopleSuggester.framework/Versions/A/PeopleSuggester",
+      "stem": "communicationtrust-closure-peoplesuggester",
+      "audit_options": [
+        "--follow-explicit-reexports",
+        "--coalesce-equivalent-reexports"
+      ]
+    }
+  ]
+}

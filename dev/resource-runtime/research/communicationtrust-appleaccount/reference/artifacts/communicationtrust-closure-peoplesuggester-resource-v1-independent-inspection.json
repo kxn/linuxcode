@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1280966,
+      "sha256": "654019849d0b850371386f609d9b096b439f099d3a336992902a54d75f4fe429"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1272,
+      "sha256": "5c9d7e17fa0394980c36cc6d525d472b9f7ff1f12978d55bc7ec95c4d2fdb6bb"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 401,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 3494,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 135,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31d80",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31d98",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31db0",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31dc8",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31de0",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31df8",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31e10",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x31e28",
+        "first_section_prefix": "0xa00",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-communicationtrust-closure-peoplesuggester-resource-v1/PeopleSuggester': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x19495)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-r1dn12o1/communicationtrust-closure-peoplesuggester-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x19495",
+        "segment": "__DATA_CONST",
+        "offset": "0x31d80",
+        "actual_address": "0x2e205d80",
+        "LLVM_section_base_address": "0x2e206780",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "e2c1507f3be47abf1546b64c67fe55b101f67b31020708c28dec243132ef6dbb",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "fd2fbd7fc24a0e67fda7789b49727f7605f2125b83553360be5eea13ad0d2799",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "a351eea58bcccf9d64d74c298b26a7c3690e3d9cbcb37079737c8a88f0017010",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/PeopleSuggester.framework/Versions/A/PeopleSuggester": "cf9e1d3c741ba8c0f1ad6b56685cd089dff88f04bf3f46967ddf03048799198f",
+    "runtime/rebuilt-communicationtrust-closure-peoplesuggester-resource-v1/PeopleSuggester": "67922ab5e1c5ff0657682aaae6cc7a09fe6b8971f80dc69327bea5b2e5a8c636",
+    "runtime/rebuilt-communicationtrust-closure-peoplesuggester-resource-v1/reconstruction.json": "41a9819bf13e637a177efb76733ba20727f57ff4a85d5d6624916472759ac73f"
+  },
+  "verified": true
+}
