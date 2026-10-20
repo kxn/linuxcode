@@ -1,0 +1,58 @@
+{
+  "target": "applicationservices-closure-colorsynclegacy-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy",
+    "sha256": "a30f4b65a697053a7c2e8ac6f9dcbea4ba39794ee1a021e1e938c4f7174f50a3",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 42,
+    "patch_got_range": [
+      "0x7ff840006000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 57344,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "436f5319520fefb57390b37e9c5e1d60e273463499947e94c4bd63e641bbe20a",
+  "manifest_sha256": "a42a3e974d8d2b0777d3190a6e7819d0878761ebdfb65c81d16bb2133808e001",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "applicationservices-closure-colorsynclegacy-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 102,
+    "nonzero_addends": 0,
+    "got_cells": 42,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/applicationservices-closure-colorsynclegacy-resource-v1-build.log",
+  "log_sha256": "3610d823156b7ed23499375737f9357baabc472620c28fe117b255ae2db0f89b"
+}

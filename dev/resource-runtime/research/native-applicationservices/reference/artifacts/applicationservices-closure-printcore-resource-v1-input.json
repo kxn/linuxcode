@@ -1,0 +1,84 @@
+{
+  "target": "applicationservices-closure-printcore-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore",
+    "sha256": "1fbcac69f0857b38db6751aba4c7051b4b8869e33d9fe158a18e17705f1c9ae5",
+    "reference_set": "fullsystem",
+    "objc_classes": 7,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 13,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 638,
+    "patch_got_range": [
+      "0x7ff840003000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 663552,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/usr/lib/libcups.2.dylib",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libicucore.A.dylib",
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork"
+  ],
+  "previous_manifest_sha256": "795d0d0dd1b3985259096bb1e4e41cce357b1b1c6461c653057391d9f4a42505",
+  "manifest_sha256": "436f5319520fefb57390b37e9c5e1d60e273463499947e94c4bd63e641bbe20a",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "applicationservices-closure-printcore-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 625,
+    "nonzero_addends": 13,
+    "got_cells": 638,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/applicationservices-closure-printcore-resource-v1-build.log",
+  "log_sha256": "d2fdc8c560e1d81bdd301eaa07256c23ee7aacff82bfa42c033df2fe30af6a36"
+}

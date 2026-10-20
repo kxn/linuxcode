@@ -1,0 +1,80 @@
+{
+  "verified": true,
+  "code_images": [
+    {
+      "target": "hiservices-patch-got-v1",
+      "inspection": "artifacts/hiservices-patch-got-v1-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-_y75go1v/result.json",
+      "corruption_tests": "artifacts/hiservices-patch-got-v1-real-binary-tests.json",
+      "GOT_cells": 1041,
+      "serialized_bindings": 1865
+    },
+    {
+      "target": "speechsynthesis-patch-got-v1",
+      "inspection": "artifacts/speechsynthesis-patch-got-v1-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-xzcc4o7e/result.json",
+      "corruption_tests": "artifacts/speechsynthesis-patch-got-v1-real-binary-tests.json",
+      "GOT_cells": 411,
+      "serialized_bindings": 726
+    },
+    {
+      "target": "hitoolbox-patch-got-v1",
+      "inspection": "artifacts/hitoolbox-patch-got-v1-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-9h5tgq_6/result.json",
+      "corruption_tests": "artifacts/hitoolbox-patch-got-v1-real-binary-tests.json",
+      "GOT_cells": 2081,
+      "serialized_bindings": 6103
+    },
+    {
+      "target": "applicationservices-closure-ats-resource-v1",
+      "inspection": "artifacts/applicationservices-closure-ats-resource-v1-independent-inspection-v1.json",
+      "format_probe": "runtime/original-dyld-validation-batch-11lmkea_/applicationservices-closure-ats-resource-v1-result.json",
+      "corruption_tests": "artifacts/applicationservices-embedded-real-binary-tests-v1.json",
+      "GOT_cells": 421,
+      "serialized_bindings": 806
+    },
+    {
+      "target": "applicationservices-closure-printcore-resource-v1",
+      "inspection": "artifacts/applicationservices-closure-printcore-resource-v1-independent-inspection-v1.json",
+      "format_probe": "runtime/original-dyld-validation-batch-11lmkea_/applicationservices-closure-printcore-resource-v1-result.json",
+      "corruption_tests": "artifacts/applicationservices-embedded-real-binary-tests-v1.json",
+      "GOT_cells": 638,
+      "serialized_bindings": 1240
+    },
+    {
+      "target": "applicationservices-closure-colorsynclegacy-resource-v1",
+      "inspection": "artifacts/applicationservices-closure-colorsynclegacy-resource-v1-independent-inspection-v1.json",
+      "format_probe": "runtime/original-dyld-validation-batch-11lmkea_/applicationservices-closure-colorsynclegacy-resource-v1-result.json",
+      "corruption_tests": "artifacts/applicationservices-embedded-real-binary-tests-v1.json",
+      "GOT_cells": 42,
+      "serialized_bindings": 145
+    },
+    {
+      "target": "qd-patch-got-v1",
+      "inspection": "artifacts/qd-patch-got-v1-independent-inspection-v1.json",
+      "format_probe": "runtime/original-dyld-validation-batch-11lmkea_/qd-patch-got-v1-result.json",
+      "corruption_tests": "artifacts/applicationservices-embedded-real-binary-tests-v1.json",
+      "GOT_cells": 109,
+      "serialized_bindings": 115
+    },
+    {
+      "target": "atsui-patch-got-v1",
+      "inspection": "artifacts/atsui-patch-got-v1-independent-inspection.json",
+      "format_probe": "runtime/original-dyld-validation-lzk2awkg/result.json",
+      "corruption_tests": "artifacts/atsui-patch-got-v1-real-binary-tests.json",
+      "GOT_cells": 275,
+      "serialized_bindings": 299
+    }
+  ],
+  "code_free_facade": {
+    "target": "applicationservices-reexport-facade-v2",
+    "probe": "runtime/original-reexport-facade-_uqz6qo_/result.json",
+    "original_constant_bytes": 80,
+    "original_version_exports": 2,
+    "reexports": 11
+  },
+  "GOT_cells": 5018,
+  "serialized_bindings": 11299,
+  "original_executable_bytes_preserved": true,
+  "framework_API_semantics_verified": false
+}

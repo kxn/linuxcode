@@ -1,0 +1,153 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "applicationservices-closure-ats-resource-v1",
+      "candidate_sha256": "37a46c8d26426dd84881f774aadd8c496d26db57d8d777a18e8401724c874cc4",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 248574,
+            "sha256": "8c33392586c20bc3a8274cad5082d6313ff8a3afc212b91269721be8bf3f888c"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 1824,
+            "sha256": "9e7f5bc128b52104397afde056a907fa9b5055945300dfea57e6716045d37f57"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 421,
+        "nonzero_addends_verified": 2,
+        "serialized_bindings": 806,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 5,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "applicationservices-closure-printcore-resource-v1",
+      "candidate_sha256": "c25b75b88edaf04fc0b5b6afdca0e3924f72111bb4df29a122ab235aa2241607",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 380187,
+            "sha256": "fd5acbff50f46a0b48a4d9a111fe0f56396a8d1c4753f0bd486700776194ee2e"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 2934,
+            "sha256": "95e51f0dd62107b0858a96f98eaf3d0dfccba35495671c37e56cf29de0068f19"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 638,
+        "nonzero_addends_verified": 13,
+        "serialized_bindings": 1240,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 2,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    },
+    {
+      "target": "applicationservices-closure-colorsynclegacy-resource-v1",
+      "candidate_sha256": "a9017246216f33dc9b4f7e80e29290209d627a0d03e470ca3c1725410f34cab3",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 10549,
+            "sha256": "9248bc06d66b40e0535191b55927e988a762bcf43986fd8e2d41567edebcd925"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 180,
+            "sha256": "33bfaaa3b4b87ee7e5a78d91202e14252f1514ae1ec7b85af92376059775eb55"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 42,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 145,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1
+    },
+    {
+      "target": "qd-patch-got-v1",
+      "candidate_sha256": "090d3c02dcca85aa72465ece9fe6dcf241682d19eb4d69a82487d317b43ad61c",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 26655,
+            "sha256": "416a62e4c5227e599f7c3ed26867ec083904e6e85fe0d023265d5fb1573148a3"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 540,
+            "sha256": "7d1675cf6e7feb10449b35add19be1e1836e160e9f941bbbaf41b4835e2675ad"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 109,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 115,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 0,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 2
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

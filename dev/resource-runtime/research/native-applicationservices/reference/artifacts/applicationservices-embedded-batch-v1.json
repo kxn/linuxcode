@@ -1,0 +1,102 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/applicationservices-embedded-batch-v1.json",
+  "configuration_sha256": "afb5cc11215321dbac019e4dc39b6fdd6d795fd7e5075560ac6d6e8d31600168",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS",
+      "attempts": [
+        {
+          "target": "applicationservices-closure-ats-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "applicationservices-closure-ats-resource-v1",
+            "--build"
+          ],
+          "log": "logs/applicationservices-closure-ats-resource-v1-batch-preparation.log",
+          "log_sha256": "880fb07f799be49a55b38912ec8210257f6af3d0a3100afac63786f68e79164e",
+          "preparation": "artifacts/applicationservices-closure-ats-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "applicationservices-closure-ats-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore",
+      "attempts": [
+        {
+          "target": "applicationservices-closure-printcore-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "applicationservices-closure-printcore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/applicationservices-closure-printcore-resource-v1-batch-preparation.log",
+          "log_sha256": "ff7f2a921cf129a4df36641d045d80d05bad9c31b8f8417d4701faa3e16f5cc9",
+          "preparation": "artifacts/applicationservices-closure-printcore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "applicationservices-closure-printcore-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy",
+      "attempts": [
+        {
+          "target": "applicationservices-closure-colorsynclegacy-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "applicationservices-closure-colorsynclegacy-resource-v1",
+            "--build"
+          ],
+          "log": "logs/applicationservices-closure-colorsynclegacy-resource-v1-batch-preparation.log",
+          "log_sha256": "a442f88569d04f6f6d69d94ff20360e46a6bc32beed0019fe9622514fc01ca0b",
+          "preparation": "artifacts/applicationservices-closure-colorsynclegacy-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "applicationservices-closure-colorsynclegacy-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD",
+      "attempts": [],
+      "prepared_target": "qd-patch-got-v1"
+    }
+  ]
+}

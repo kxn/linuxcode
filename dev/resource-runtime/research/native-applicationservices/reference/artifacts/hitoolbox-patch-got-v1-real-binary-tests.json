@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "target": "hitoolbox-patch-got-v1",
+      "candidate_sha256": "80abd4a6aaaeefcac3507c7deb3bdd83b6f8fc94ef475299faeaaa22ca2cd4ed",
+      "positive_inspection": {
+        "executable_sections": [
+          {
+            "segment": "__TEXT",
+            "section": "__text",
+            "bytes": 2626377,
+            "sha256": "fc8fd9390f08b648d0b4dd80ab85defe6c2d827e59feec9176292133bac36e9f"
+          },
+          {
+            "segment": "__TEXT",
+            "section": "__stubs",
+            "bytes": 9444,
+            "sha256": "ebc8a57825fc8f7cd4aaa3ff1f1f974678e2e1231de3b521fc437d0aa1ab636a"
+          }
+        ],
+        "original_code_bytes_equal": true,
+        "original_vm_offsets_preserved": true,
+        "got_cells_verified": 2081,
+        "nonzero_addends_verified": 0,
+        "serialized_bindings": 6103,
+        "got_address_references_verified": 0,
+        "original_local_stub_cells_verified": 6,
+        "original_null_pool_cells_verified": 0,
+        "optimized_TLV_descriptors_verified": 0,
+        "bindings_within_sections": true,
+        "runtime_behavior_verified": false,
+        "resource_compilation_verified": false
+      },
+      "changed_code_rejected": true,
+      "changed_serialized_GOT_binding_rejected": true,
+      "serialized_symbol_copies_changed": 1,
+      "false_local_binding_proof_rejected": true
+    }
+  ],
+  "no_binary_copies_written": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-preserved-patch-got-binaries.py": "186a4f19f6b6217f273a0497c471b32884fafdfa469fb5c38dc18a61a60fcc0f",
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002"
+  }
+}

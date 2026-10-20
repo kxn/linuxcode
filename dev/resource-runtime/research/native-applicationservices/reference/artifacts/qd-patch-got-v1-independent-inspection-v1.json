@@ -1,0 +1,77 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 26655,
+      "sha256": "416a62e4c5227e599f7c3ed26867ec083904e6e85fe0d023265d5fb1573148a3"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 540,
+      "sha256": "7d1675cf6e7feb10449b35add19be1e1836e160e9f941bbbaf41b4835e2675ad"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 109,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 115,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 5,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x850",
+        "first_section_prefix": "0x568",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x870",
+        "first_section_prefix": "0x568",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x890",
+        "first_section_prefix": "0x568",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x8b0",
+        "first_section_prefix": "0x568",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x8d0",
+        "first_section_prefix": "0x568",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-qd-patch-got-v1/QD': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x23a)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-11lmkea_/qd-patch-got-v1-result.json",
+    "original_validator_sha256": "f482ca49055ba1050cd377e7f53078129fc37cc0c28103209e34442ad7aa22e4",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "463d42e0eab1289f3eaf89906987bcf8e29849b3d198148468d6e3a69680504e",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "a42a3e974d8d2b0777d3190a6e7819d0878761ebdfb65c81d16bb2133808e001",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD": "36ab0d1b1f04b0f57c8ccecd0926c69b11c9c2dbc33c1d9515085ebaae6d6894",
+    "runtime/rebuilt-qd-patch-got-v1/QD": "090d3c02dcca85aa72465ece9fe6dcf241682d19eb4d69a82487d317b43ad61c",
+    "runtime/rebuilt-qd-patch-got-v1/reconstruction.json": "527b9c268ab1ecebf623f0662d26e8038acbd8cc8548ba63a88ceedffbe2d080"
+  },
+  "verified": true
+}
