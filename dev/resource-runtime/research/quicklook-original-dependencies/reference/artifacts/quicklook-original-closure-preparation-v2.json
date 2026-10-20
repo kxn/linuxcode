@@ -1,0 +1,55 @@
+{
+  "complete": true,
+  "image_runtime_verified": false,
+  "configuration": "config/quicklook-original-closure-preparation-v2.json",
+  "configuration_sha256": "47e7219a6ac8d0764c68d178707ee3a3689549fda5ff9797afe5f2b972ca4904",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-mediaanalysis-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ANSTKit.framework/Versions/A/ANSTKit",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-anstkit-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreAppleCVA.framework/Versions/A/CoreAppleCVA",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-coreapplecva-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysisPhotosServices.framework/Versions/A/MediaAnalysisPhotosServices",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-mediaanalysisphotosservices-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysisServices.framework/Versions/A/MediaAnalysisServices",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-mediaanalysisservices-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/SoundAnalysis.framework/Versions/A/SoundAnalysis",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-soundanalysis-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleNeuralEngine.framework/Versions/A/AppleNeuralEngine",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-appleneuralengine-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmbeddedAcousticRecognition.framework/Versions/A/EmbeddedAcousticRecognition",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-embeddedacousticrecognition-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ANEServices.framework/Versions/A/ANEServices",
+      "attempts": [],
+      "prepared_target": "quicklook-closure-aneservices-resource-v1"
+    }
+  ]
+}

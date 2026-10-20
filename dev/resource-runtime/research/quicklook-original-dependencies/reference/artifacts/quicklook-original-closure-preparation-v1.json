@@ -1,0 +1,288 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/quicklook-original-closure-preparation-v1.json",
+  "configuration_sha256": "0ce9e5b933692f22468e14d875351745f0285548d7f6490c0a98d385b7e8be00",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "19cdb092e84fe7e3e53ade8c7dbac03fbdd80edf3e718f0125f5872a3bfd3054",
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/QuickLook.framework/Versions/A/QuickLook",
+      "attempts": [],
+      "prepared_target": "quicklook-patch-got-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis",
+      "attempts": [
+        {
+          "target": "quicklook-closure-mediaanalysis-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-mediaanalysis-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-mediaanalysis-resource-v1-batch-preparation.log",
+          "log_sha256": "868f57bec4a50c1a235fa65fba432ea95c3064cec9d6a3989de7f49c367110f5",
+          "preparation": "artifacts/quicklook-closure-mediaanalysis-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'quicklook-closure-mediaanalysis-resource-v1', '--output', 'artifacts/quicklook-closure-mediaanalysis-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ANSTKit.framework/Versions/A/ANSTKit",
+      "attempts": [
+        {
+          "target": "quicklook-closure-anstkit-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ANSTKit.framework/Versions/A/ANSTKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-anstkit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-anstkit-resource-v1-batch-preparation.log",
+          "log_sha256": "f011240d620517a61c40f996f676454216d195b084edc5ef6964fbc209e41718",
+          "preparation": "artifacts/quicklook-closure-anstkit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "quicklook-closure-anstkit-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreAppleCVA.framework/Versions/A/CoreAppleCVA",
+      "attempts": [
+        {
+          "target": "quicklook-closure-coreapplecva-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CoreAppleCVA.framework/Versions/A/CoreAppleCVA",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-coreapplecva-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-coreapplecva-resource-v1-batch-preparation.log",
+          "log_sha256": "47661f96041697d2b92553e8b0234d45f789dfceb51b7456d1ec8b1358e6e6ae",
+          "preparation": "artifacts/quicklook-closure-coreapplecva-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "quicklook-closure-coreapplecva-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysisPhotosServices.framework/Versions/A/MediaAnalysisPhotosServices",
+      "attempts": [
+        {
+          "target": "quicklook-closure-mediaanalysisphotosservices-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MediaAnalysisPhotosServices.framework/Versions/A/MediaAnalysisPhotosServices",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-mediaanalysisphotosservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-mediaanalysisphotosservices-resource-v1-batch-preparation.log",
+          "log_sha256": "d7eddf046ba3ee4e63b77b94c243ef08689ea129cc7c5935780f6ac7b439e3f3",
+          "preparation": "artifacts/quicklook-closure-mediaanalysisphotosservices-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "quicklook-closure-mediaanalysisphotosservices-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysisServices.framework/Versions/A/MediaAnalysisServices",
+      "attempts": [
+        {
+          "target": "quicklook-closure-mediaanalysisservices-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/MediaAnalysisServices.framework/Versions/A/MediaAnalysisServices",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-mediaanalysisservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-mediaanalysisservices-resource-v1-batch-preparation.log",
+          "log_sha256": "ebadf9af18a7b9b2d2e250333524fc1956e451bc3d2c68f6bb1113907b0fa4dc",
+          "preparation": "artifacts/quicklook-closure-mediaanalysisservices-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "quicklook-closure-mediaanalysisservices-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/SoundAnalysis.framework/Versions/A/SoundAnalysis",
+      "attempts": [
+        {
+          "target": "quicklook-closure-soundanalysis-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/SoundAnalysis.framework/Versions/A/SoundAnalysis",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-soundanalysis-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-soundanalysis-resource-v1-batch-preparation.log",
+          "log_sha256": "a8c054daa91bee358a93dcb23b592cf67be61b5c6a40a3d912e6b7c53f105845",
+          "preparation": "artifacts/quicklook-closure-soundanalysis-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'quicklook-closure-soundanalysis-resource-v1', '--output', 'artifacts/quicklook-closure-soundanalysis-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleNeuralEngine.framework/Versions/A/AppleNeuralEngine",
+      "attempts": [
+        {
+          "target": "quicklook-closure-appleneuralengine-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppleNeuralEngine.framework/Versions/A/AppleNeuralEngine",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-appleneuralengine-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-appleneuralengine-resource-v1-batch-preparation.log",
+          "log_sha256": "f7c2d507713f70b9d55069af95a51f9bb9d6f55c764da66ee34c9db6a3b72556",
+          "preparation": "artifacts/quicklook-closure-appleneuralengine-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "quicklook-closure-appleneuralengine-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmbeddedAcousticRecognition.framework/Versions/A/EmbeddedAcousticRecognition",
+      "attempts": [
+        {
+          "target": "quicklook-closure-embeddedacousticrecognition-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/EmbeddedAcousticRecognition.framework/Versions/A/EmbeddedAcousticRecognition",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-embeddedacousticrecognition-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-embeddedacousticrecognition-resource-v1-batch-preparation.log",
+          "log_sha256": "fdcf9d48bb0650829a047349289a44e483058f802c69b6ff03f1350d1c817836",
+          "preparation": "artifacts/quicklook-closure-embeddedacousticrecognition-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'quicklook-closure-embeddedacousticrecognition-resource-v1', '--output', 'artifacts/quicklook-closure-embeddedacousticrecognition-original-import-audit-v1.json']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ANEServices.framework/Versions/A/ANEServices",
+      "attempts": [
+        {
+          "target": "quicklook-closure-aneservices-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ANEServices.framework/Versions/A/ANEServices",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "quicklook-closure-aneservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/quicklook-closure-aneservices-resource-v1-batch-preparation.log",
+          "log_sha256": "e969af8d9d50104733dcbab41f191e7b1a9db9d37dc1683ad274175585dc0d0f",
+          "preparation": "artifacts/quicklook-closure-aneservices-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "quicklook-closure-aneservices-resource-v1"
+    }
+  ]
+}

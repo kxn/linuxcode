@@ -1,0 +1,89 @@
+{
+  "target": "quicklook-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/QuickLook.framework/Versions/A/QuickLook",
+    "sha256": "30b45b54bd2146686cf54180fb14165e32ebc5dc05cddf47d8a44d39181bb18f",
+    "reference_set": "fullsystem",
+    "objc_classes": 24,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 714,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 655360,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis",
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox",
+    "/System/Library/PrivateFrameworks/QuickLookSupport.framework/Versions/A/QuickLookSupport",
+    "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+    "/System/Library/PrivateFrameworks/DiskManagement.framework/Versions/A/DiskManagement",
+    "/System/Library/Frameworks/QuickLookThumbnailing.framework/Versions/A/QuickLookThumbnailing",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libbsm.0.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO"
+  ],
+  "previous_manifest_sha256": "576f09266ffbb968024b86539188c60e17064dd1b0ceb7019775aa05ddce7024",
+  "manifest_sha256": "4492da8bbd9b3f7d1d0b498f0d00113a45f76df15f47470b3453cc0bd3c76b95",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "quicklook-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 674,
+    "nonzero_addends": 0,
+    "got_cells": 714,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/quicklook-patch-got-v1-build.log",
+  "log_sha256": "489e7008a04db0810572ec0747239ae7f5a38c7a2789e6a953f3460218621e2d"
+}

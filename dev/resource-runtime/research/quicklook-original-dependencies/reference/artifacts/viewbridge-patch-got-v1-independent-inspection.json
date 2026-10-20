@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 806193,
+      "sha256": "fe9e779665e28618e89408f2cc06577c620d45c8d851845d852ca1b8f0ee2437"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2208,
+      "sha256": "4e261249f5a4881235b33710e2843dc3b0df3f6e080f4ae2d5db110a8e16c471"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 631,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 3307,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 3,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 128,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x25d60",
+        "first_section_prefix": "0xd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x25d88",
+        "first_section_prefix": "0xd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x25da0",
+        "first_section_prefix": "0xd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xd60",
+        "first_section_prefix": "0xad0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xfb0",
+        "first_section_prefix": "0xad0",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xfb8",
+        "first_section_prefix": "0xad0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xfe0",
+        "first_section_prefix": "0xad0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1000",
+        "first_section_prefix": "0xad0",
+        "symbol": "_OBJC_CLASS_$_CALayerHost"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-viewbridge-patch-got-v1/ViewBridge': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x19863)\n",
+    "original_validator": "runtime/original-dyld-validation-ipjwdc66/result.json",
+    "original_validator_sha256": "1805356f13e00f3233c6a4d4f986b165c3ce62f7fef3b0e14a5a4b912372d8c4",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "c2073f7d4c56bb85e93012b4ca095722caf73600588a4fb3b28839bab603b18c",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "b9d0c8c0b1ed304f48b58d34d068a114b9e575588a587e942babaaeaee347b34",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/ViewBridge": "23e8691d1c17f5099f822212263170021c8fbcf9bd65a504080a976216668125",
+    "runtime/rebuilt-viewbridge-patch-got-v1/ViewBridge": "c02c487ed0aaa54a36da8e87e4c394fcfb22093dbe6eda93099c17fa8a233f45",
+    "runtime/rebuilt-viewbridge-patch-got-v1/reconstruction.json": "a9bb29d6612386c103357c142c2fee1515d7bce56482e52d505447d5f05665e1"
+  },
+  "verified": true
+}

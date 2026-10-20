@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[原版 ApplicationServices 检查点](dev/resource-runtime/research/native-applicationservices/README.md)恢复九个原版映像，保留版本导出与嵌入框架路径，并在 Darling 中核对四个真实 AX 字符串。完整 Unity/CocoaPods 工程已越过本轮依赖缺口，现缺 ViewBridge 的一个类；仍未进入 CompileC 或产出最终 App。
+最新的[原版 QuickLook 与资源依赖检查点](dev/resource-runtime/research/quicklook-original-dependencies/README.md)恢复 13 个原版映像，核验原始绑定与可执行字节，并补入工具实际使用的弱依赖。完整 Unity/CocoaPods workspace 进入五 target 依赖图，当前停在 C++ 异常初始化接口缺失；仍无 CompileC 或最终 App。
+
+此前的[原版 ApplicationServices 检查点](dev/resource-runtime/research/native-applicationservices/README.md)恢复九个原版映像，保留版本导出与嵌入框架路径，并在 Darling 中核对四个真实 AX 字符串。完整 Unity/CocoaPods 工程已越过本轮依赖缺口，现缺 ViewBridge 的一个类；仍未进入 CompileC 或产出最终 App。
 
 此前的[SIMD 与原版 AppKit 检查点](dev/resource-runtime/research/simd-appkit-singletons/README.md)通过 60 项 SIMD 原生检查，选入原版 AppKit 与九项强依赖，核验 32 个 Swift 单例类，并补回类表外的 4 个。完整 Unity/CocoaPods 工程已越过 AppKit 协议缺失，现停在 ApplicationServices 的 AX 常量；仍无 CompileC 或最终 App。
 

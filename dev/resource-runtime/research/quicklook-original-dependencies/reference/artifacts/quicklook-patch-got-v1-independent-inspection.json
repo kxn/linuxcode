@@ -1,0 +1,131 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 302349,
+      "sha256": "bfd1a4db3aae455b5ffa8d4fdd00ee81aae48ddce3e9857473a0804ea4916b86"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2838,
+      "sha256": "e7f3d317b3c2af4c6b24acfdac9f3e529363a7133088e509709163694299f59c"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__delay_helper",
+      "bytes": 78,
+      "sha256": "c40bd666ee5680ea62e2eb9070d43ecb4925ff167db44fcac2402af3ae3419d3"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 714,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1331,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "dysymtab_alias_repair": {
+    "verified": true,
+    "symbol_count": 3551,
+    "actual_type_groups": [
+      2300,
+      608,
+      643
+    ],
+    "external_aliases": 7,
+    "renamed_aliases_preserved": [
+      {
+        "name": "_kQLThumbnailOptionIconModeKey",
+        "target": "_kQLSThumbnailOptionIconModeKey"
+      },
+      {
+        "name": "_kQLThumbnailOptionScaleFactorKey",
+        "target": "_kQLSThumbnailOptionScaleFactorKey"
+      }
+    ],
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 1119,
+    "remapped_indirect_entries": 1107,
+    "original_sha256": "30b45b54bd2146686cf54180fb14165e32ebc5dc05cddf47d8a44d39181bb18f",
+    "candidate_sha256": "ddd2dd249e0f6a05703c8cab8d32ef05a7ce2ae7ffdccf62918998411f0e76f1"
+  },
+  "dysymtab_alias_verifier": {
+    "source": "scripts/verify-dysymtab-alias-repair.py",
+    "sha256": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  },
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 37,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xced8",
+        "first_section_prefix": "0x9f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xd80",
+        "first_section_prefix": "0xd80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xd88",
+        "first_section_prefix": "0xd80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xd90",
+        "first_section_prefix": "0xd80",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xda8",
+        "first_section_prefix": "0xd80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xdb0",
+        "first_section_prefix": "0xd80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xdb8",
+        "first_section_prefix": "0xd80",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xdd0",
+        "first_section_prefix": "0xd80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-quicklook-patch-got-v1/QuickLook': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x7538)\n",
+    "original_validator": "runtime/original-dyld-validation-po9dlf52/result.json",
+    "original_validator_sha256": "93711351d41e2840f73c59f10f0a97c2b5fda63856807a1b305b6daf0b668091",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "602977a7b629593fa294f0fd8bbf4f645c0217f53fd77380b8316f0193063236",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "71994517a8515ea17c71275b8887838a07d17fe87c32cb8701aac3c093a843fe",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/QuickLook.framework/Versions/A/QuickLook": "30b45b54bd2146686cf54180fb14165e32ebc5dc05cddf47d8a44d39181bb18f",
+    "runtime/rebuilt-quicklook-patch-got-v1/QuickLook": "ddd2dd249e0f6a05703c8cab8d32ef05a7ce2ae7ffdccf62918998411f0e76f1",
+    "runtime/rebuilt-quicklook-patch-got-v1/reconstruction.json": "66d701ec5dcbd99238dbbabaa0e46da5f0a5afad956f115e5f8e076ec6bd2a35"
+  },
+  "verified": true
+}

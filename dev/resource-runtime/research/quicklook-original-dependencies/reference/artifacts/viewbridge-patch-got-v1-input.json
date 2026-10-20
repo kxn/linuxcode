@@ -1,0 +1,70 @@
+{
+  "target": "viewbridge-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/ViewBridge",
+    "sha256": "23e8691d1c17f5099f822212263170021c8fbcf9bd65a504080a976216668125",
+    "reference_set": "fullsystem",
+    "objc_classes": 120,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 631,
+    "patch_got_range": [
+      "0x7ff840002000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 1953792,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices",
+    "/usr/lib/libbsm.0.dylib",
+    "/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox",
+    "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+  ],
+  "previous_manifest_sha256": "2adca9ca8fc2dc948602d64a758c34814c3add11195849c6c8b7525498fc9ea8",
+  "manifest_sha256": "b9d0c8c0b1ed304f48b58d34d068a114b9e575588a587e942babaaeaee347b34",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "viewbridge-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "ec10c98ded068b0add6420b8260cd2e115dae78a84b13460f0491c68233047b5",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 2786,
+    "nonzero_addends": 0,
+    "got_cells": 631,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/viewbridge-patch-got-v1-build.log",
+  "log_sha256": "0f4cab32d32687202eb1fa00552bfc1fd41ca947d0d591c2d5f19dda63ca6c77"
+}

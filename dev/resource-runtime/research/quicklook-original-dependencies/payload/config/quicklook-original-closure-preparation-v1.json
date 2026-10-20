@@ -1,0 +1,54 @@
+{
+  "preparation_options": [
+    "--preserve-code-with-patch-got",
+    "--patch-got-renamed-reexports",
+    "--preserve-original-uuid",
+    "--read-only-data-const",
+    "--align-linkedit-streams",
+    "--omit-lazy-helper-section",
+    "--omit-leading-padding-sections"
+  ],
+  "images": [
+    {
+      "image": "/System/Library/Frameworks/QuickLook.framework/Versions/A/QuickLook",
+      "stem": "quicklook-closure-quicklook",
+      "existing_target": "quicklook-patch-got-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis",
+      "stem": "quicklook-closure-mediaanalysis"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ANSTKit.framework/Versions/A/ANSTKit",
+      "stem": "quicklook-closure-anstkit"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreAppleCVA.framework/Versions/A/CoreAppleCVA",
+      "stem": "quicklook-closure-coreapplecva"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysisPhotosServices.framework/Versions/A/MediaAnalysisPhotosServices",
+      "stem": "quicklook-closure-mediaanalysisphotosservices"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysisServices.framework/Versions/A/MediaAnalysisServices",
+      "stem": "quicklook-closure-mediaanalysisservices"
+    },
+    {
+      "image": "/System/Library/Frameworks/SoundAnalysis.framework/Versions/A/SoundAnalysis",
+      "stem": "quicklook-closure-soundanalysis"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleNeuralEngine.framework/Versions/A/AppleNeuralEngine",
+      "stem": "quicklook-closure-appleneuralengine"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmbeddedAcousticRecognition.framework/Versions/A/EmbeddedAcousticRecognition",
+      "stem": "quicklook-closure-embeddedacousticrecognition"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ANEServices.framework/Versions/A/ANEServices",
+      "stem": "quicklook-closure-aneservices"
+    }
+  ]
+}

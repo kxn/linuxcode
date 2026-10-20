@@ -1,0 +1,26 @@
+{
+  "diagnostic_only": true,
+  "requested_symbol": "___cxa_init_primary_exception",
+  "provider": "/usr/lib/libc++abi.dylib",
+  "actual_reexport_consumer": "runtime/pmr-key-function-v1/libraries/libc++.1.dylib",
+  "baseline_library": "runtime/rootfs/usr/libexec/darling/usr/lib/libc++abi.dylib",
+  "baseline_library_sha256": "e51328735d6d35ca259dbbe1ca47505d7f727b60eae60c3efd6e0c2a48ca0859",
+  "baseline_defined_external_symbols": 365,
+  "requested_symbol_present": false,
+  "cxa_throw_present": true,
+  "current_source": "vendor/darling/src/external/libcxxabi/src/cxa_exception.cpp",
+  "current_source_sha256": "fb874bf2f143d20c7acd26f6fec749c5e3fa81f7a2c335bb98a9409d936c8c76",
+  "upstream_url": "https://raw.githubusercontent.com/llvm/llvm-project/llvmorg-19.1.7/libcxxabi/src/cxa_exception.cpp",
+  "upstream_reference": "runtime/cxxabi-primary-exception-upstream-v1/cxa_exception.cpp",
+  "upstream_reference_sha256": "2f10876834983a623ab7f00d988ab644fb354a1d112bcad05272f44386be2f35",
+  "upstream_function_present": true,
+  "current_source_function_present": false,
+  "next_work": [
+    "Backport the real initialization and cleanup path to the selected libcxxabi source; preserve the exception header ABI.",
+    "Build an isolated complete libcxxabi candidate and retain the old exported interface.",
+    "Run primary exception construction, reference ownership, rethrow, destructor and multi-thread tests before selecting it.",
+    "Repeat original resource tools and the complete Unity/CocoaPods workspace."
+  ],
+  "implementation_verified": false,
+  "runtime_behavior_verified": false
+}

@@ -1,0 +1,95 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 8433,
+      "sha256": "7686436814164b28f245db23ff9386e758966e735b7ca08608e0cf9c82d99de5"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 66,
+      "sha256": "fb9ee4e28f45faa0aaf96d4f4fdeb975e15f17dfa51f550e5b70f2dba2b6aa63"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 29,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 39,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 9,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x790",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x7b0",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x7d0",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x7f0",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x810",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x830",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x850",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x870",
+        "first_section_prefix": "0x600",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-quicklook-closure-mediaanalysisphotosservices-resource-v1/MediaAnalysisPhotosServices': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x28a)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-j8v81ju_/quicklook-closure-mediaanalysisphotosservices-resource-v1-result.json",
+    "original_validator_sha256": "c8f3dcf3340a178056cbc1d03e3bd4f0532d9b75e17c8d2744c4dafbf1cef522",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "37d1356c87e797a68c20d9727ebd9c839cfe32d64324edcf62f9feb942fce3b5",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "1164172be39a55b318977f0868c94c8b6a603ee3f17307d524652b0959692a23",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/MediaAnalysisPhotosServices.framework/Versions/A/MediaAnalysisPhotosServices": "7867e12acc318fa5556ea2941fde9b0c3326318ab07e3c9ad65a2d9ccc2649d5",
+    "runtime/rebuilt-quicklook-closure-mediaanalysisphotosservices-resource-v1/MediaAnalysisPhotosServices": "4a1dc47dccedac5f574b676d3db7eb2cdc96d83d0bc8e610a70031aa52331d3d",
+    "runtime/rebuilt-quicklook-closure-mediaanalysisphotosservices-resource-v1/reconstruction.json": "4adb36fda4a320363166dc8ba67c39fda8c95eb2384a613cd63c2a75be787822"
+  },
+  "verified": true
+}
