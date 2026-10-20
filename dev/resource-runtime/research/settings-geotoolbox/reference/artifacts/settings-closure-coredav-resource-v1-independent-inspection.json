@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 446191,
+      "sha256": "f8d8a3df1e56d11efeafd8981f53a299fe3ec9027c3f27502be889bb0737b46f"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 672,
+      "sha256": "6e2052452e0c4d78845c439ae79fa62b0f249e00ea64dc869a32fe5be86f65df"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 223,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1348,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 41,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x15648",
+        "first_section_prefix": "0x130",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2380",
+        "first_section_prefix": "0x4f8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x23a8",
+        "first_section_prefix": "0x4f8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x23c0",
+        "first_section_prefix": "0x4f8",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x23d0",
+        "first_section_prefix": "0x4f8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x23f8",
+        "first_section_prefix": "0x4f8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2410",
+        "first_section_prefix": "0x4f8",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2420",
+        "first_section_prefix": "0x4f8",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-coredav-resource-v1/CoreDAV': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x8e09)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-coredav-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x8e09",
+        "segment": "__DATA_CONST",
+        "offset": "0x15648",
+        "actual_address": "0x39f0c648",
+        "LLVM_section_base_address": "0x39f0c778",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "25cfba25286f57f7642e4e88df8fcf9120103ab459f1112f2799fbf1ea211d4f",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "16492107bee28d03bb9ca56e15f5a8d371c7c17ad7f93b8f5919ec56c91271b5",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CoreDAV.framework/Versions/A/CoreDAV": "16b85f7a1a9191b92bb40a4418b8fdd68b6f0cb5f8f113eb379dfffc8e7e073c",
+    "runtime/rebuilt-settings-closure-coredav-resource-v1/CoreDAV": "9d76ed4fe7183ba672ff82f0b58da77dc350dc2e456d84d8799f07f37e210b6d",
+    "runtime/rebuilt-settings-closure-coredav-resource-v1/reconstruction.json": "1ff838bbc4eae2383bccd76f41e1804de579114472d3bcec0e75645677e3c93f"
+  },
+  "verified": true
+}

@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 472078,
+      "sha256": "286c7aa214f604fc98fcce75b7970283b3ffef5f4b139abd824fa89694409042"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2004,
+      "sha256": "6d8ae6249b238d1391d684513c8c3e610b3e947ac7b6ccf56045862604231a68"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 624,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 2511,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 17,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a258",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a270",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a288",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2a0",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2b8",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2d0",
+        "first_section_prefix": "0xc30",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x11a8",
+        "first_section_prefix": "0x480",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x15b8",
+        "first_section_prefix": "0x480",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-calendarfoundation-resource-v2/CalendarFoundation': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x10dc9)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-calendarfoundation-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x10dc9",
+        "segment": "__DATA_CONST",
+        "offset": "0x1a258",
+        "actual_address": "0x21864258",
+        "LLVM_section_base_address": "0x21864e88",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "2c33687ef35cddf68f869b164fb6e95ef6a85702ef52021fe457388c0babd963",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "d1a78e911e431877d5bded06d00bb42045a0b45d4437c706aa8844bf1e31c073",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CalendarFoundation.framework/Versions/A/CalendarFoundation": "a1eb0bc0292dd5e76e4fd84fad887fa1fac6aab95689f17966df2ed1972c209b",
+    "runtime/rebuilt-settings-closure-calendarfoundation-resource-v2/CalendarFoundation": "eade62005f7d9a42f9cdc465055c1ae6f471e3f39d6ffc70a2dab9480897e812",
+    "runtime/rebuilt-settings-closure-calendarfoundation-resource-v2/reconstruction.json": "f4dc326fc929eda1e14809daacaf0b82d58de7985691dd6d7c9c2d14d5e284ee"
+  },
+  "verified": true
+}

@@ -1,0 +1,95 @@
+{
+  "target": "settings-closure-emailcore-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/EmailCore.framework/Versions/A/EmailCore",
+    "sha256": "07e68a01b63922c5cee21fe4e1bcae88d8e224d0e1bcecea858368328eaa2874",
+    "reference_set": "fullsystem",
+    "objc_classes": 103,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 387,
+    "patch_got_range": [
+      "0x7ffa40001000",
+      "0x7ffa400a1000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 946176,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/URLFormatting.framework/Versions/A/URLFormatting",
+    "/System/Library/Frameworks/Accounts.framework/Versions/A/Accounts",
+    "/System/Library/PrivateFrameworks/EmailFoundation.framework/Versions/A/EmailFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/GSS.framework/Versions/A/GSS",
+    "/usr/lib/libicucore.A.dylib",
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity",
+    "/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/Versions/A/NetworkServiceProxy",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftMetal.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftQuartzCore.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswiftos.dylib",
+    "/usr/lib/swift/libswiftsimd.dylib"
+  ],
+  "previous_manifest_sha256": "4e117e910423576ac48074f9f602d1533d2658c1ce88a97b6c51cf15f6459c59",
+  "manifest_sha256": "131322a69e8d9ea712515a5a81b5d7183872418e495e777a89280b3fd893e322",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-emailcore-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1640,
+    "nonzero_addends": 0,
+    "got_cells": 387,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffa4009e970",
+          "0x7ffa4009e980"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/settings-closure-emailcore-resource-v1-build.log",
+  "log_sha256": "41ec6ed37125d7d16d8170518d8810248757e171f1e31ee9084b31112cbcbdb2"
+}

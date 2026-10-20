@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 80273,
+      "sha256": "b93fb8ec351941e5b551eb6ac260aa7d9b3c863bf108f62d2b9f58fef9406c22"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 300,
+      "sha256": "fa9109c3e4c7d0907901bcf3b32d14a3eb8ee28a25cda38464a544d892c04a64"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 78,
+  "nonzero_addends_verified": 6,
+  "serialized_bindings": 134,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 5,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 26,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1860",
+        "first_section_prefix": "0x730",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x780",
+        "first_section_prefix": "0x780",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x788",
+        "first_section_prefix": "0x780",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x790",
+        "first_section_prefix": "0x780",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7b0",
+        "first_section_prefix": "0x780",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7b8",
+        "first_section_prefix": "0x780",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7d0",
+        "first_section_prefix": "0x780",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7d8",
+        "first_section_prefix": "0x780",
+        "symbol": "_OBJC_METACLASS_$_NSDictionary"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-appleflatbuffers-resource-v1/AppleFlatBuffers': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x961)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-appleflatbuffers-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x961",
+        "segment": "__DATA_CONST",
+        "offset": "0x1860",
+        "actual_address": "0x24385860",
+        "LLVM_section_base_address": "0x24385f90",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "7fd769b10b244a9402390699bf8d5e2ba57890a74a371dcb2e775eb17b52e859",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "3a2f93c6fbd79ff1f47907a3b3a4c4e3dcfe01ae733df849f93c36144be7db75",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AppleFlatBuffers.framework/Versions/A/AppleFlatBuffers": "39339de41fc3ff0fa8b8cb3f9d2f93ba3a3764d5a7ea08494df2b94fa9e19105",
+    "runtime/rebuilt-settings-closure-appleflatbuffers-resource-v1/AppleFlatBuffers": "21978584c2e38d3c76042020665224d12e4eb7ac47b6ea024e49ffac51969dc5",
+    "runtime/rebuilt-settings-closure-appleflatbuffers-resource-v1/reconstruction.json": "6231e4bcd39ecfa9769efe3967aab94dd1aef7e40bc364d07a73429595d6d8db"
+  },
+  "verified": true
+}

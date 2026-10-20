@@ -1,0 +1,84 @@
+{
+  "target": "settings-closure-donotdisturb-resource-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/DoNotDisturb.framework/Versions/A/DoNotDisturb",
+    "sha256": "64397c3f25a005d5905af274e92cb7774e1535e481b7c2276513a2520cdb7cf2",
+    "reference_set": "fullsystem",
+    "objc_classes": 90,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 144,
+    "patch_got_range": [
+      "0x7ffc40005000",
+      "0x7ffc40092000"
+    ],
+    "cache_imports": {
+      "_$s2os6LoggerV9subsystem8categoryACSS_SStcfC": "/usr/lib/swift/libswiftos.dylib",
+      "_$s2os6LoggerVMa": "/usr/lib/swift/libswiftos.dylib"
+    }
+  },
+  "original_bytes": 811008,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/Frameworks/CoreLocation.framework/Versions/A/CoreLocation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "d5a2b5610279f071f91d35fbcad2377db24293a5dd708aa66246c003daf8fedf",
+  "manifest_sha256": "454c3812b82f2d94426a80e265c232c8939a4b318121d69ac6c18794d6248dce",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-donotdisturb-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "settings-closure-donotdisturb-resource-v1",
+  "exact_import_audit": "artifacts/settings-closure-donotdisturb-original-import-audit-v1.json",
+  "exact_import_audit_sha256": "541f8149dc887e39deba7586aebbc07bdddbc60d84db816febc791418208f6e9",
+  "typed_class_aliases": [],
+  "explicit_reexports": {
+    "chains": [],
+    "original_provider_sha256": {}
+  },
+  "original_patch_contract": {
+    "original_records": 1252,
+    "nonzero_addends": 0,
+    "got_cells": 144,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-donotdisturb-resource-v2-build.log",
+  "log_sha256": "ec3a934ea0f742366d66a4f4482bd649823cf42e219dca3f74116055252a6b0d"
+}

@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 399008,
+      "sha256": "bb9579f82229e5322badfec50b4b92634ba73933d55279c38410569cecbf6943"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1380,
+      "sha256": "83581443acde5f9c201b3486d1f729861ce376eed021915bf9b51d5e6f12d31f"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 397,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1613,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 27,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16c58",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16c70",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16c88",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16ca0",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16cb8",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16cd0",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16ce8",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x16d00",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-emailcore-resource-v2/EmailCore': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x95ac)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-emailcore-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x95ac",
+        "segment": "__DATA_CONST",
+        "offset": "0x16c58",
+        "actual_address": "0x3d945c58",
+        "LLVM_section_base_address": "0x3d946ab8",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "0e60bb19a78bddcfdc3ab5af8e7e737cce07897d6b5c6f797b3e9fb9cc354b81",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "77e83e897254968ad911d3a1cd55415215bdb67437b55560c6a941a100d8f2e0",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/EmailCore.framework/Versions/A/EmailCore": "07e68a01b63922c5cee21fe4e1bcae88d8e224d0e1bcecea858368328eaa2874",
+    "runtime/rebuilt-settings-closure-emailcore-resource-v2/EmailCore": "11efd271a86f67e4a3d8cf7f612340d9a5054afda63145cc0a3e560278d18ccb",
+    "runtime/rebuilt-settings-closure-emailcore-resource-v2/reconstruction.json": "4806c534299913fe6103cbccc6cf96339a599372faaa07fe2fdc8afbca8ae28b"
+  },
+  "verified": true
+}

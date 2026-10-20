@@ -1,0 +1,139 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-3tqqtb9m/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v154-runtime-inputs-v1.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "geotoolbox-patch-got-v1"
+  ],
+  "images": {
+    "/System/Library/Frameworks/GeoToolbox.framework/Versions/A/GeoToolbox": {
+      "original_sha256": "51dda42e099b2dacb84df68a83ccc1b2100efbea30d6691f207947cb8e6d4c8c",
+      "original_bytes": 49152,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/resource-script-config-v2/libraries/libSystem.B.dylib",
+            "runtime/coregraphics-native-v154/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/ios-resource-lazy-v1/frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials",
+            "runtime/ios-resource-lazy-v1/frameworks/_LocationEssentials.framework/_LocationEssentials"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCore.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib",
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCore.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswiftCore.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftCoreFoundation.dylib",
+            "runtime/foundation-native-library-stage/libswiftCoreFoundation.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftDispatch.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftDispatch.dylib",
+            "runtime/native-library-stage/libswiftDispatch.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftIOKit.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftIOKit.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftObjectiveC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswiftXPC.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/swift/libswiftXPC.dylib",
+            "runtime/foundation-native-library-stage/libswiftXPC.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+          "load_command": "0x80000018",
+          "file_candidates": [
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib",
+            "runtime/state/prefix/usr/lib/swift/libswift_Builtin_float.dylib"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-3tqqtb9m/result.json": "d1d46874c9775b3ac951d2de2e91585685f30c724fccbb1d334a115544baeabc",
+    "artifacts/coregraphics-native-v154-runtime-inputs-v1.json": "d91cd49ff9643850f69cedb87244dd2a178a4f79dbc8b0140fd50151250bae6f",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "6efb0dd251395c455a04fd9ff94c411b4b31b4b560908f9ba028041c7e17437b",
+    "scripts/plan-original-resource-dependencies.py": "01f469fa4793c07b1e243792c27bf9cfd2a98e40d22c2ce570d4d79f8013874c"
+  }
+}

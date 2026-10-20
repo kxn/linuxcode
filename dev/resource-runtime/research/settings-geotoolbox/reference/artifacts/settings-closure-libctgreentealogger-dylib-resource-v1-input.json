@@ -1,0 +1,59 @@
+{
+  "target": "settings-closure-libctgreentealogger-dylib-resource-v1",
+  "pin": {
+    "path": "/usr/lib/libCTGreenTeaLogger.dylib",
+    "sha256": "3ca7cf6f1dcdb1d52a9d4aa6703e0fb24e0f34dc65347e21cfe49729f755944d",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 4,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 31,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 16384,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "db000472a7debe63fe9bda25978d0eb319dd1285c660618034a07dbe1d83f633",
+  "manifest_sha256": "14ea6da757627e8e92233911c744540a18c6c10060be8843b9660388f473a68b",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-libctgreentealogger-dylib-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 18,
+    "nonzero_addends": 4,
+    "got_cells": 31,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-libctgreentealogger-dylib-resource-v1-build.log",
+  "log_sha256": "c2dde269eb32e5946dbbf594a4fc6b9ae2d65da52ff37d9fd3badd78809d477f"
+}

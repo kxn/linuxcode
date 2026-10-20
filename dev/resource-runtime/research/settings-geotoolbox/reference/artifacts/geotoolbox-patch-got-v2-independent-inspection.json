@@ -1,0 +1,101 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 20960,
+      "sha256": "9f41e4f5ff08e3ebe7aebc5ed23eb2c3856b44988e868a56b029d0b6a00a72a1"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 396,
+      "sha256": "0aa4ee81292dab82deba788638dab8e94e6b262062b7de9bf65eccef69f27301"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 112,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 165,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 7,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x810",
+        "first_section_prefix": "0x810",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x818",
+        "first_section_prefix": "0x810",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x820",
+        "first_section_prefix": "0x810",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x848",
+        "first_section_prefix": "0x810",
+        "symbol": "_$sBoWV"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x858",
+        "first_section_prefix": "0x810",
+        "symbol": "_OBJC_CLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x860",
+        "first_section_prefix": "0x810",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x8a0",
+        "first_section_prefix": "0x810",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-geotoolbox-patch-got-v2/GeoToolbox': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xd5b)\n",
+    "original_validator": "runtime/original-dyld-validation-83pauwxv/result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xd5b",
+        "segment": "__DATA_DIRTY",
+        "offset": "0x810",
+        "actual_address": "0x2f7f2810",
+        "LLVM_section_base_address": "0x2f7f3020",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      }
+    ],
+    "original_validator_sha256": "b3db3184f581821e36684751e4b271412b2e8c3dfcf6edd1712312c9a3ca5ebd",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "a43734d93089e19e6c3f6c7a8b73da7828dfa1c33fa0213afc94d4371144f3e6",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "7da9cb11c974a26c420d2f7f06091607e0a64871763e1c8aa08f454d94eed812",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/GeoToolbox.framework/Versions/A/GeoToolbox": "51dda42e099b2dacb84df68a83ccc1b2100efbea30d6691f207947cb8e6d4c8c",
+    "runtime/rebuilt-geotoolbox-patch-got-v2/GeoToolbox": "6669675afd569763b1005f99b14dead379a598eafabea46e0f3829a0891ae784",
+    "runtime/rebuilt-geotoolbox-patch-got-v2/reconstruction.json": "25b6a2176c31048a5083772af164312c3f3bbb8d6fd878b0919f97d3403e970d"
+  },
+  "verified": true
+}

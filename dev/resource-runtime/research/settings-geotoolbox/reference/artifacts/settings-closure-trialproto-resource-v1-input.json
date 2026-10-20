@@ -1,0 +1,74 @@
+{
+  "target": "settings-closure-trialproto-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/TrialProto.framework/Versions/A/TrialProto",
+    "sha256": "260af258da0a3fca411dc27a855f03077e22c38118ae3ed44e8b9917acef8c3f",
+    "reference_set": "fullsystem",
+    "objc_classes": 227,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 167,
+    "patch_got_range": [
+      "0x7ff940008000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 962560,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "e12e2902897de8eb0612120a0a262e8e5f26f7cb264240239dc86d05266a6940",
+  "manifest_sha256": "e61e49c5412b8cc6fad0e7a5697ba83cd67559fc4c4b7e9a2f4c1ac7a2514607",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-trialproto-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 2302,
+    "nonzero_addends": 0,
+    "got_cells": 167,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff94007c070",
+          "0x7ff94007c080",
+          "0x7ff94007d9d0"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-trialproto-resource-v1-build.log",
+  "log_sha256": "27568d85d708bbbf4227e0a5bb275bfb0f6cc16be2b7586440c0fb4ce51a0c08"
+}

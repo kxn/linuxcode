@@ -1,0 +1,71 @@
+{
+  "target": "settings-closure-calendardatabase-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CalendarDatabase.framework/Versions/A/CalendarDatabase",
+    "sha256": "9201fa9da21f9bdd6e42df2b23b8759ee1fa137041c81cf662bb3a601a7bd7a2",
+    "reference_set": "fullsystem",
+    "objc_classes": 42,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 832,
+    "patch_got_range": [
+      "0x7ffc40000000",
+      "0x7ffc40092000"
+    ]
+  },
+  "original_bytes": 1773568,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/PrivateFrameworks/SymptomDiagnosticReporter.framework/Versions/A/SymptomDiagnosticReporter",
+    "/System/Library/PrivateFrameworks/URLFormatting.framework/Versions/A/URLFormatting",
+    "/System/Library/PrivateFrameworks/CoreDAV.framework/Versions/A/CoreDAV",
+    "/System/Library/PrivateFrameworks/CalDAV.framework/Versions/A/CalDAV",
+    "/usr/lib/libcompression.dylib",
+    "/System/Library/Frameworks/Accounts.framework/Versions/A/Accounts",
+    "/System/Library/PrivateFrameworks/AppSupport.framework/Versions/A/AppSupport",
+    "/System/Library/PrivateFrameworks/CalendarFoundation.framework/Versions/A/CalendarFoundation",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/iCalendar.framework/Versions/A/iCalendar",
+    "/usr/lib/libsqlite3.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "9acd66c235c0eba30b7e7fb7d483198410a35fe0ede56c6d2b499cd8c95d7c5f",
+  "manifest_sha256": "2f76ff51915aa7b414efccf4ae3e583c36aefa25920c13f903b7fb1a6a4b2787",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-calendardatabase-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 2405,
+    "nonzero_addends": 0,
+    "got_cells": 832,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-calendardatabase-resource-v1-build.log",
+  "log_sha256": "32e410b5ca652a18c952a65e1d281456ab60bd4c81df95820a2d241f09437595"
+}

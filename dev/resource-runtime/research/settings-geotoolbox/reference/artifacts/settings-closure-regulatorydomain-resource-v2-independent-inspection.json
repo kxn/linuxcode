@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 71081,
+      "sha256": "298df2ed107be8f4a40680f750d0729d7a1914cfef135145685666e7f48468f4"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 762,
+      "sha256": "96b79de361369b269f9f9d81a03c2dbbf8fb4f8e53c2efab0ea6f8697f700cac"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 202,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 331,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 42,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2160",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2178",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2190",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21a8",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21c0",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21d8",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21f0",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2208",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-regulatorydomain-resource-v2/RegulatoryDomain': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1a84)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-regulatorydomain-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1a84",
+        "segment": "__DATA_CONST",
+        "offset": "0x2160",
+        "actual_address": "0x318d1160",
+        "LLVM_section_base_address": "0x318d1300",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "22c8a53b18f3cb6c0a64596c092b2efdaf898c89af016b70a1effc80d37b54b4",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "d24be551f334834bc5b596572e9808a8ed5999cc8d1d6228e7119f00853de4f3",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain": "30abb567e622deeb7345ffa071c999c5a88c029570640afa6c61677cb096a5da",
+    "runtime/rebuilt-settings-closure-regulatorydomain-resource-v2/RegulatoryDomain": "185f2fc23934083f59f0a71e013597be46000a145674232105767422cfa765ca",
+    "runtime/rebuilt-settings-closure-regulatorydomain-resource-v2/reconstruction.json": "6a930bbad42c827cefa282be2874498443de97e491be9e7300f11467723b91f8"
+  },
+  "verified": true
+}

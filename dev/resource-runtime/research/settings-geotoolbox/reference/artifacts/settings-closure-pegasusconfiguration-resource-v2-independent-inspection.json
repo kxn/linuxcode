@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 251701,
+      "sha256": "8cc7af471b8c1b5bd6a0e4e906c92a8ef884750bd96aec579f94e0a5f2b2d6dc"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2346,
+      "sha256": "a6a013193bd7579f3604453a0b10378b22608e44bcd9208052031daa7804e12a"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 612,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1098,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 35,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2800",
+        "first_section_prefix": "0xd10",
+        "symbol": "_$sBoWV"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2810",
+        "first_section_prefix": "0xd10",
+        "symbol": "_OBJC_CLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2818",
+        "first_section_prefix": "0xd10",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2870",
+        "first_section_prefix": "0xd10",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2880",
+        "first_section_prefix": "0xd10",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2888",
+        "first_section_prefix": "0xd10",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2890",
+        "first_section_prefix": "0xd10",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x28b8",
+        "first_section_prefix": "0xd10",
+        "symbol": "_$sBoWV"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-pegasusconfiguration-resource-v2/PegasusConfiguration': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x690c)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-pegasusconfiguration-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x690c",
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2800",
+        "actual_address": "0x366e0800",
+        "LLVM_section_base_address": "0x366e1510",
+        "reported_error": "not in section",
+        "symbol": "_$sBoWV"
+      }
+    ],
+    "original_validator_sha256": "550cf6c25922b1a193d70a83e07602ba901e307ea2156a2c5e3d4b0ea7cadb24",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "a1183b1ab32b7604ad741f6f3d39e48019ef81a19a5adad2fa6aabafba8b5c5b",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration": "cb576306b1190f47a0c6fe8da863583ed44241788b74200f5327e6a78a2b5f28",
+    "runtime/rebuilt-settings-closure-pegasusconfiguration-resource-v2/PegasusConfiguration": "8baa7349715dfda740406ba8dc1bc29794ae99d9bd278926c0957362bbf8bd17",
+    "runtime/rebuilt-settings-closure-pegasusconfiguration-resource-v2/reconstruction.json": "951ccde051bb221abab6151f8174b0d270a8f2461ca04dc84a7366e2d510f9e1"
+  },
+  "verified": true
+}

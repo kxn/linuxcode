@@ -1,0 +1,71 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 31469,
+      "sha256": "e49f87ca1aec2649d1549ef648d8c1d0fcd14f9e48817c080eccefb5c9e92f01"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 276,
+      "sha256": "a98fccb907253ede8f5a3b668c76a6d94e30b9069d02cc826a6e1fde2b612ca9"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 74,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 168,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 2,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1cd0",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x230",
+        "first_section_prefix": "0x68",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-emailaddressing-resource-v1/EmailAddressing': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xdfc)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-emailaddressing-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xdfc",
+        "segment": "__DATA_CONST",
+        "offset": "0x1cd0",
+        "actual_address": "0x39ef3cd0",
+        "LLVM_section_base_address": "0x39ef41c0",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "490fffc0c394fa32c1ed1e09ee3dbd0b01b748b0124f6fb6c174ef17dda8e1b8",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "4b5a1fead83cee28cab5051638c28e17d5a07d6ac97aba4a907113ba7e05f9f0",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/EmailAddressing.framework/Versions/A/EmailAddressing": "20884d24bc477014f5d47932f279e60b7652a64b00a355aa515198ec5a697e4b",
+    "runtime/rebuilt-settings-closure-emailaddressing-resource-v1/EmailAddressing": "5c6f5fe766aa94115f1100f972ead999e32499cd6251222556ed02e9a889e149",
+    "runtime/rebuilt-settings-closure-emailaddressing-resource-v1/reconstruction.json": "92712e0a4057ac2896b60b91ce7664dced80e1cf30a796ddc191d69064aec0fb"
+  },
+  "verified": true
+}

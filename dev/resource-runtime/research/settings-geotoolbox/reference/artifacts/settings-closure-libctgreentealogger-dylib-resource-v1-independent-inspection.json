@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 2900,
+      "sha256": "f574e5d0cb1eb7fb92a0b4e3a902fe56f05bd7f9e053bdec235df08e119f460a"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 132,
+      "sha256": "f4e4d793cad98e6d073f594c5dcbd8024ee8a4e8c65e4b5829118b80ad773f0f"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 31,
+  "nonzero_addends_verified": 4,
+  "serialized_bindings": 50,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 3,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 18,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xed0",
+        "first_section_prefix": "0xe20",
+        "symbol": "__ZdlPv"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xed8",
+        "first_section_prefix": "0xe20",
+        "symbol": "__ZdlPvSt19__type_descriptor_t"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xee0",
+        "first_section_prefix": "0xe20",
+        "symbol": "__ZnwmSt19__type_descriptor_t"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xf10",
+        "first_section_prefix": "0xe20",
+        "symbol": "__ZTVN10__cxxabiv120__si_class_type_infoE"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xf48",
+        "first_section_prefix": "0xe20",
+        "symbol": "__NSConcreteGlobalBlock"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xf88",
+        "first_section_prefix": "0xe20",
+        "symbol": "__NSConcreteGlobalBlock"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xfe8",
+        "first_section_prefix": "0xe20",
+        "symbol": "__NSConcreteGlobalBlock"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1008",
+        "first_section_prefix": "0xe20",
+        "symbol": "__ZTVN10__cxxabiv117__class_type_infoE"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-libctgreentealogger-dylib-resource-v1/libCTGreenTeaLogger.dylib': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x17f)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-libctgreentealogger-dylib-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x17f",
+        "segment": "__DATA_CONST",
+        "offset": "0xed0",
+        "actual_address": "0x26ecbed0",
+        "LLVM_section_base_address": "0x26ecccf0",
+        "reported_error": "not in section",
+        "symbol": "__ZdlPv"
+      }
+    ],
+    "original_validator_sha256": "ae66f318dea832abfe366a9145e72eeddbd76f9bdf28daf931057d0842bc03fe",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "fdae176fce9a82ecde320d69972c6f8da0bf7909494864426312dd06673d52b4",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/usr/lib/libCTGreenTeaLogger.dylib": "3ca7cf6f1dcdb1d52a9d4aa6703e0fb24e0f34dc65347e21cfe49729f755944d",
+    "runtime/rebuilt-settings-closure-libctgreentealogger-dylib-resource-v1/libCTGreenTeaLogger.dylib": "3323394b90cb92a66846140f6af4aa370d50a1f29904b713863b3dff04ead8a7",
+    "runtime/rebuilt-settings-closure-libctgreentealogger-dylib-resource-v1/reconstruction.json": "3df7027e86b0d0a3b48670cfd1761abe3d8aa63f9bdce7bdcc604816b53c8b2f"
+  },
+  "verified": true
+}

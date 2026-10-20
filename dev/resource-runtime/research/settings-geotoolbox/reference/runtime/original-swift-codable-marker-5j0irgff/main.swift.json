@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/original-swift-codable-marker-5j0irgff/main.swift",
+  "original_sha256": "0a92b061233c2ce103dc01ef960d8327b6211e2abf7220d54f419c00657b5723",
+  "encoding": "utf-8",
+  "text": "func exercise<T: Codable & Hashable & Sendable>(_ initial: T, _ replacement: T) {\n    var edge = Edge(initial, 1.25)\n    let key = keyPath(Edge<T>.self)\n    let value = valuePath(Edge<T>.self)\n    precondition(edge[keyPath: key] == initial)\n    edge[keyPath: key] = replacement\n    precondition(edge.key == replacement)\n    precondition(edge[keyPath: value] == 1.25)\n    edge[keyPath: value] = 9.5\n    precondition(edge.value == 9.5)\n}\nexercise(17, 42)\nexercise(\"before\", \"\u4e4b\u540e\ud83c\udf0d\")\nexercise(false, true)\nprint(\"ORIGINAL_SWIFT_CODABLE_MARKER_KEYPATH_OK 12\")\n"
+}

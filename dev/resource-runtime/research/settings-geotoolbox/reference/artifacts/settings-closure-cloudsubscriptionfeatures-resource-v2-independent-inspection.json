@@ -1,0 +1,65 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 924352,
+      "sha256": "036e93c757e2b3813595e81640c2e0182746564038eacf84e5ff5e08f93e4ff6"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2784,
+      "sha256": "8656600018f6b2797d934dd11502cd9e7b9f9cbab8faa530c395037f713737e8"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 764,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1676,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xe68",
+        "first_section_prefix": "0x3c0",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-cloudsubscriptionfeatures-resource-v2/CloudSubscriptionFeatures': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x9326)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-cloudsubscriptionfeatures-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x9326",
+        "segment": "__DATA_DIRTY",
+        "offset": "0xe68",
+        "actual_address": "0x3f993e68",
+        "LLVM_section_base_address": "0x3f994228",
+        "reported_error": "not in section",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "original_validator_sha256": "b40e207dc3d2a1c7190293dc224551f9347d84b35ad6ae7032f4a4241c84bdd7",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "3f09051ba9f96662914a43c45180700ba12ec0b6eb8f5bdd21b4d9504d3a2a45",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CloudSubscriptionFeatures.framework/Versions/A/CloudSubscriptionFeatures": "34a40c1795bcefe435a9e67b9ec406114b0dd2b34d30a362a3749880d0676b40",
+    "runtime/rebuilt-settings-closure-cloudsubscriptionfeatures-resource-v2/CloudSubscriptionFeatures": "29b97b05647d821cf81a07c1e779fdf7ba4838a392415a773df3b2480749a568",
+    "runtime/rebuilt-settings-closure-cloudsubscriptionfeatures-resource-v2/reconstruction.json": "55d8ab4225b8121b18d6ed32b25e3d591a6d26bdf262713cc849de9e35732240"
+  },
+  "verified": true
+}

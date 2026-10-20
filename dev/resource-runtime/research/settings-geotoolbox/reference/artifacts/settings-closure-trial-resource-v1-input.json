@@ -1,0 +1,66 @@
+{
+  "target": "settings-closure-trial-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/Trial.framework/Versions/A/Trial",
+    "sha256": "aea26d005691389529c2ee5f9f2d47f101eaabe35be01096da7cb65985ac090b",
+    "reference_set": "fullsystem",
+    "objc_classes": 132,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 28,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 305,
+    "patch_got_range": [
+      "0x7ff940007000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 1146880,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/AppleFlatBuffers.framework/Versions/A/AppleFlatBuffers",
+    "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+    "/System/Library/PrivateFrameworks/ProactiveSupport.framework/Versions/A/ProactiveSupport",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/TrialProto.framework/Versions/A/TrialProto",
+    "/System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "0a487d3f4bcbfb756c8563870dba821a094eddcf427791e065a844ea67e8a4b1",
+  "manifest_sha256": "a4fd1a89bb38a6e89822147e0d7ac048970e950628fa0a89d519b0ffbe5bf9d5",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-trial-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 2120,
+    "nonzero_addends": 28,
+    "got_cells": 305,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-trial-resource-v1-build.log",
+  "log_sha256": "f5706edb3bed9f5b0e30f79a8b59c34f4e643a83f87f0e264bf456f9158741cc"
+}

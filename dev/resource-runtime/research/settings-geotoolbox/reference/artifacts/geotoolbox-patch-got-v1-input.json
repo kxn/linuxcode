@@ -1,0 +1,68 @@
+{
+  "target": "geotoolbox-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/GeoToolbox.framework/Versions/A/GeoToolbox",
+    "sha256": "51dda42e099b2dacb84df68a83ccc1b2100efbea30d6691f207947cb8e6d4c8c",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 42,
+    "patch_got_range": [
+      "0x7ffb40014000",
+      "0x7ffb4009a000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 49152,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib"
+  ],
+  "previous_manifest_sha256": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+  "manifest_sha256": "6efb0dd251395c455a04fd9ff94c411b4b31b4b560908f9ba028041c7e17437b",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "geotoolbox-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 24,
+    "nonzero_addends": 0,
+    "got_cells": 42,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/geotoolbox-patch-got-v1-build.log",
+  "log_sha256": "afedc8c483bfd6912ff50e2966014ef635ac01e71a3834aee334a45d6bc32f55"
+}

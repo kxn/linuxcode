@@ -1,0 +1,65 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 10538640,
+      "sha256": "d99c1da954e0dbcfac495623eef9cdf79352ddcb2dc870c5c7605311a1582afa"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1362,
+      "sha256": "994f24f586ed0217e06eb54aeae82fbd5121e0b31ad9a3ab3eb3f71c5093fd06"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 329,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 20894,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA",
+        "offset": "0x54de8",
+        "first_section_prefix": "0x470",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-pegasusapi-resource-v2/PegasusAPI': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xb9654)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-pegasusapi-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xb9654",
+        "segment": "__DATA",
+        "offset": "0x54de8",
+        "actual_address": "0x37d51de8",
+        "LLVM_section_base_address": "0x37d52258",
+        "reported_error": "not in section",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "original_validator_sha256": "9d4d7d64f6e52c0083437c269cb609c32ca28ea9ff9cc581ac0f7237a5e768a8",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "90ade28ef7aefa5c077202b74fa0691906bad155318aad65368067e1b42c2d16",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/PegasusAPI.framework/Versions/A/PegasusAPI": "34a4035b51537ab9f498b6a385af0c26e81b49f60ef02789b74a2e193862b836",
+    "runtime/rebuilt-settings-closure-pegasusapi-resource-v2/PegasusAPI": "6cfc484f6d65e3bd66fbe07211799105d671ff7d035b563df72e531ffc151c46",
+    "runtime/rebuilt-settings-closure-pegasusapi-resource-v2/reconstruction.json": "802ede0fee8fc8feeff404b47dbfb4553bfafdd60064b4b74e61f011273941da"
+  },
+  "verified": true
+}

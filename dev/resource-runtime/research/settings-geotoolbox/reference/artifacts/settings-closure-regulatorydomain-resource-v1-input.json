@@ -1,0 +1,90 @@
+{
+  "target": "settings-closure-regulatorydomain-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain",
+    "sha256": "30abb567e622deeb7345ffa071c999c5a88c029570640afa6c61677cb096a5da",
+    "reference_set": "fullsystem",
+    "objc_classes": 6,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 138,
+    "patch_got_range": [
+      "0x7ffd40007000",
+      "0x7ffd400c0000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 122880,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/LocalStatusKit.framework/Versions/A/LocalStatusKit",
+    "/usr/lib/swift/libswiftCompression.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreAudio.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "19404007be37da2d8c58c345c64f3dc0c5a9991df0d1479d6af7b082ec8af5e3",
+  "manifest_sha256": "e1fc2d43f673c96b68dbc9bd41b29ac08c50d24523ff4f5f657e41734b8df7f2",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-regulatorydomain-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 129,
+    "nonzero_addends": 0,
+    "got_cells": 138,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffd400bdf28",
+          "0x7ffd400bdf38"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/settings-closure-regulatorydomain-resource-v1-build.log",
+  "log_sha256": "41ec6ed37125d7d16d8170518d8810248757e171f1e31ee9084b31112cbcbdb2"
+}

@@ -1,0 +1,77 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 507800,
+      "sha256": "041b8a64c7dabc1057c268f5e71e01f875a09701455b2041df85f8b8c5c02e0b"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1632,
+      "sha256": "703def1e2fedbe622ef8ba9507f2f35991add49343ece1b98ebdbfb5abbcea0a"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 460,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 697,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 3,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x69d0",
+        "first_section_prefix": "0xd70",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6fa0",
+        "first_section_prefix": "0xd70",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x70d0",
+        "first_section_prefix": "0xd70",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-appintentschemas-resource-v2/AppIntentSchemas': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x4a23)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-appintentschemas-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x4a23",
+        "segment": "__DATA_CONST",
+        "offset": "0x69d0",
+        "actual_address": "0x258509d0",
+        "LLVM_section_base_address": "0x25851740",
+        "reported_error": "not in section",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "original_validator_sha256": "53cd2a53634997e925dada750c18334cbd1bcb3569819acbee6c33f1931d46df",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "88d5f97c49e2ecb9fa49026b27dd5761f6ed74dc4a378a1f706e76646524098e",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AppIntentSchemas.framework/Versions/A/AppIntentSchemas": "e4e8b22b95b8ebcf322c18248188f6b884461acd0e1022f7ebb0ecf84729456c",
+    "runtime/rebuilt-settings-closure-appintentschemas-resource-v2/AppIntentSchemas": "ae812b978949332ee4c37336a06b4bc829046ba5e978f44b8640b3c2b6976ad4",
+    "runtime/rebuilt-settings-closure-appintentschemas-resource-v2/reconstruction.json": "314ff073adc3f4f84fa0e60b6f09f05102bad5d82007d6dfb51a6102ffc25e63"
+  },
+  "verified": true
+}

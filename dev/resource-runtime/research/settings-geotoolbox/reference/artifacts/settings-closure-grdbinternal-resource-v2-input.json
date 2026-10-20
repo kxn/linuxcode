@@ -1,0 +1,193 @@
+{
+  "target": "settings-closure-grdbinternal-resource-v2",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/GRDBInternal.framework/Versions/A/GRDBInternal",
+    "sha256": "89544daae7db016f472ef86d48b5d93e31236af618553718e74b10d419702ca8",
+    "reference_set": "fullsystem",
+    "objc_classes": 45,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "swift_keypath_patterns": [
+      "0x7ffc12899048",
+      "0x7ffc1289f270",
+      "0x7ffc128a2230",
+      "0x7ffc128a3e60",
+      "0x7ffc128a5098",
+      "0x7ffc128a8f18",
+      "0x7ffc128ab9a8",
+      "0x7ffc128abde8",
+      "0x7ffc128abe18",
+      "0x7ffc128acdc0",
+      "0x7ffc128acfe8",
+      "0x7ffc128ad1f0",
+      "0x7ffc128ad800"
+    ],
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 237,
+    "patch_got_range": [
+      "0x7ffc40006000",
+      "0x7ffc40092000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 1634304,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/Combine.framework/Versions/A/Combine",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libsqlite3.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib"
+  ],
+  "previous_manifest_sha256": "fbc2dacbb455d1f9087dcc4c27a1ff9cc79dadab61b1e594770170e1d8504b08",
+  "manifest_sha256": "ca8e5b2945502668b3465d17573a1ca43f255eda93a4b47f5c0a85785f6955f3",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-grdbinternal-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1413,
+    "nonzero_addends": 0,
+    "got_cells": 237,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffc4008f828",
+          "0x7ffc4008f838"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "typed_keypath_patterns": [
+    {
+      "pattern": "0x7ffc12899048",
+      "environment": "0x7ffc128b4c50",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b4c70",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc1289f270",
+      "environment": "0x7ffc128b4c50",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b4c70",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128a2230",
+      "environment": "0x7ffc128b66e0",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b6980",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128a3e60",
+      "environment": "0x7ffc128b66e0",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b6980",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128a5098",
+      "environment": "0x7ffc128b6bd0",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b6980",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128a8f18",
+      "environment": "0x7ffc128b66e0",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b6980",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128ab9a8",
+      "environment": "0x7ffc128b66e0",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b6980",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128abde8",
+      "environment": "0x7ffc128b66e0",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b6980",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128abe18",
+      "environment": "0x7ffc128b6bd0",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b6980",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128acdc0",
+      "environment": "0x7ffc128b7310",
+      "root_type": "0x7ffc128b72f8",
+      "leaf_type": "0x7ffc128b64f0",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128acfe8",
+      "environment": "0x7ffc128b4c50",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b4c70",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128ad1f0",
+      "environment": "0x7ffc128b4c50",
+      "root_type": "0x7ffc128b66c8",
+      "leaf_type": "0x7ffc128b4c70",
+      "buffer_size": 24
+    },
+    {
+      "pattern": "0x7ffc128ad800",
+      "environment": "0x7ffc128b77f8",
+      "root_type": "0x7ffc128b77e0",
+      "leaf_type": "0x7ffc128b5ba0",
+      "buffer_size": 28
+    }
+  ],
+  "keypath_validator_sha256": "174d93e492289d1863ba4fbb5eff49e9dd116b32cfed1b9e1736368296171c3f",
+  "build_returncode": 1,
+  "log": "logs/settings-closure-grdbinternal-resource-v2-build.log",
+  "log_sha256": "afedc8c483bfd6912ff50e2966014ef635ac01e71a3834aee334a45d6bc32f55"
+}

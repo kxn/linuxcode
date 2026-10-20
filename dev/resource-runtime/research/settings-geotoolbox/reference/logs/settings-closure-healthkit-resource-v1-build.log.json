@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/settings-closure-healthkit-resource-v1-build.log",
+  "original_sha256": "9b228c450bd54095fb6817df269bf02839e88e2954b74493700a456c07ceff26",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/rebuild-c-cache-image.py\", line 583, in <module>\n    swift_report=swift_restore(segments,ns,allocate,store,classify,own)\n  File \"/home/dl/linuxcode/scripts/restore-swift-metadata.py\", line 336, in restore\n    for _ in range(count):requirement(cursor);cursor+=12\n                          ~~~~~~~~~~~^^^^^^^^\n  File \"/home/dl/linuxcode/scripts/restore-swift-metadata.py\", line 68, in requirement\n    relative(address+4,label='generic parameter type')\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/dl/linuxcode/scripts/restore-swift-metadata.py\", line 60, in relative\n    else:raise ValueError(f'Unsupported external direct Swift reference {label} at {slot:#x} -> {target:#x}')\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Unsupported external direct Swift reference generic parameter type at 0x7ffb13d66a40 -> 0x7ffb734ee43f\n"
+}

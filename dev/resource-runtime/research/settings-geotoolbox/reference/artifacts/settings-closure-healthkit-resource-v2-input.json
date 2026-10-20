@@ -1,0 +1,140 @@
+{
+  "target": "settings-closure-healthkit-resource-v2",
+  "pin": {
+    "path": "/System/Library/Frameworks/HealthKit.framework/Versions/A/HealthKit",
+    "sha256": "16f073eda5146bfeff55a12b3cbf92a5a7345d2724336d1c336941502336ce73",
+    "reference_set": "fullsystem",
+    "objc_classes": 853,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "swift_environment_marker_bounds": [
+      {
+        "start": "0x7ffb13d66a10",
+        "end": "0x7ffb13d66a3c",
+        "sha256": "65915195db8ce4dec1b51151b7b1a8cc2cacaf0447c6b9ee52b0ee721f1d159b",
+        "environment_symbol": "_generic environment SeRzSERzSHRzs8SendableRzl",
+        "next_symbol": "_symbolic _____yx_G3key_Sd5valuet 9HealthKit18QuantityThresholdsV4EdgeO"
+      }
+    ],
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 56,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 617,
+    "patch_got_range": [
+      "0x7ffb40004000",
+      "0x7ffb4009a000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 8302592,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/AppSupport.framework/Versions/A/AppSupport",
+    "/System/Library/PrivateFrameworks/Coherence.framework/Versions/A/Coherence",
+    "/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/CoreBluetooth.framework/Versions/A/CoreBluetooth",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/CoreLocation.framework/Versions/A/CoreLocation",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/CoreTelephony.framework/Versions/A/CoreTelephony",
+    "/System/Library/PrivateFrameworks/CoreUtils.framework/Versions/A/CoreUtils",
+    "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices",
+    "/System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+    "/System/Library/Frameworks/UserNotifications.framework/Versions/A/UserNotifications",
+    "/usr/lib/libCTGreenTeaLogger.dylib",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/usr/lib/libarchive.2.dylib",
+    "/usr/lib/libcompression.dylib",
+    "/usr/lib/libicucore.A.dylib",
+    "/usr/lib/libxml2.2.dylib",
+    "/usr/lib/libxslt.1.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/System/Library/Frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftCoreLocation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "c8bc8fe09d122ca0ec1594cbdb65df7b9c89ab2d1cb7e2f39c2eed1d6551c671",
+  "manifest_sha256": "85917450564ee677dee8cea60700297ec4b01dfc51f86385e5ea47e6770ab4a8",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-healthkit-resource-v2",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 15052,
+    "nonzero_addends": 56,
+    "got_cells": 617,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffb40097bd0",
+          "0x7ffb40097be0"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "typed_marker_environment_bounds": {
+    "path": "config/healthkit-codable-marker-environment-bounds-v1.json",
+    "sha256": "88f368b2c365785c5866e67b7b956df84cf66d857ca56d89de67da66ff752680",
+    "validator": "scripts/swift-environment-marker-bounds.py",
+    "validator_sha256": "ad7f794cc8b056e83ab983aa1a4c01b9345f3d7f58339432095567507a13ced4",
+    "records": [
+      {
+        "start": "0x7ffb13d66a10",
+        "end": "0x7ffb13d66a3c",
+        "sha256": "65915195db8ce4dec1b51151b7b1a8cc2cacaf0447c6b9ee52b0ee721f1d159b",
+        "environment_symbol": "_generic environment SeRzSERzSHRzs8SendableRzl",
+        "next_symbol": "_symbolic _____yx_G3key_Sd5valuet 9HealthKit18QuantityThresholdsV4EdgeO"
+      }
+    ],
+    "validated_extents": {
+      "0x7ffb13d66a10": "0x7ffb13d66a3c"
+    }
+  },
+  "build_returncode": 1,
+  "log": "logs/settings-closure-healthkit-resource-v2-build.log",
+  "log_sha256": "afedc8c483bfd6912ff50e2966014ef635ac01e71a3834aee334a45d6bc32f55"
+}

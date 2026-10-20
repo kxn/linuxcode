@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 188272,
+      "sha256": "4a0c641fd053f3e2b9b3e06d281ae2572c5b2d4f27a8682d7e1c11c8e73c0a79"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1848,
+      "sha256": "43ed46250dbcc77f449744e8d3920c6fa9999063db31178374272baa1b6bca8d"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 526,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 849,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 13,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x6288",
+        "first_section_prefix": "0xd50",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7c0",
+        "first_section_prefix": "0x260",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7c8",
+        "first_section_prefix": "0x260",
+        "symbol": "_swift_cvw_destroy"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7d0",
+        "first_section_prefix": "0x260",
+        "symbol": "_swift_cvw_initWithCopy"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7d8",
+        "first_section_prefix": "0x260",
+        "symbol": "_swift_cvw_assignWithCopy"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7e0",
+        "first_section_prefix": "0x260",
+        "symbol": "_swift_cvw_initWithTake"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x7e8",
+        "first_section_prefix": "0x260",
+        "symbol": "_swift_cvw_assignWithTake"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x868",
+        "first_section_prefix": "0x260",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-sleephealth-resource-v2/SleepHealth': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x4a1d)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-sleephealth-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x4a1d",
+        "segment": "__DATA_CONST",
+        "offset": "0x6288",
+        "actual_address": "0x28ccd288",
+        "LLVM_section_base_address": "0x28ccdfd8",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "5b8a0b7f3108b9bf5c818c7021e89efbcf094968555690ac3e6e282f4a58bbfc",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "6b19d3cb30eed300c2ee5d72c0ab036570b533eb9ebc6ee243859baa7a439c91",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/SleepHealth.framework/Versions/A/SleepHealth": "430abd70fec8d9adbb3efe27f6e6bdb22b5bb471c24d4a09c64351181dd152d7",
+    "runtime/rebuilt-settings-closure-sleephealth-resource-v2/SleepHealth": "27eb299d8fd72d8f80e8a847479920728e5370dfb694c3bef415cc9b290dd413",
+    "runtime/rebuilt-settings-closure-sleephealth-resource-v2/reconstruction.json": "30b639237f76ac45b21869031de37ff9d0759d8223e5d89f6020e211680de094"
+  },
+  "verified": true
+}

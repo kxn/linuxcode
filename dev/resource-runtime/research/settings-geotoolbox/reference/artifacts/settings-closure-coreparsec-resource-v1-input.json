@@ -1,0 +1,100 @@
+{
+  "target": "settings-closure-coreparsec-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CoreParsec.framework/Versions/A/CoreParsec",
+    "sha256": "b93547cfbdf01897beaf1f6298de3269fc5c132e0ad253faf6945eefb2a2c394",
+    "reference_set": "fullsystem",
+    "objc_classes": 139,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 418,
+    "patch_got_range": [
+      "0x7ff940005000",
+      "0x7ff94007f000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 1875968,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices",
+    "/System/Library/PrivateFrameworks/SearchFoundation.framework/Versions/A/SearchFoundation",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/PrivateFrameworks/PegasusAPI.framework/Versions/A/PegasusAPI",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/PrivateFrameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags",
+    "/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftRegexBuilder.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswift_StringProcessing.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "799befeec71a0e82cf83104a6a7ad2d2883958478938f83b6f6b957f6ed0941f",
+  "manifest_sha256": "1cabf02295cc71c393053a823600609c0e29963013dcda9441f6590da83f92d1",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-coreparsec-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 2418,
+    "nonzero_addends": 0,
+    "got_cells": 418,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff94007c070",
+          "0x7ff94007c080",
+          "0x7ff94007d9d0"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/settings-closure-coreparsec-resource-v1-build.log",
+  "log_sha256": "41ec6ed37125d7d16d8170518d8810248757e171f1e31ee9084b31112cbcbdb2"
+}

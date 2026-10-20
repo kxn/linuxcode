@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 26542,
+      "sha256": "09cb97766c29c3a02d5365ba487ab2bcf28ad919ac0af5ba8cff893d94f7b38f"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 618,
+      "sha256": "ad475844eba59fb2746369815171bc26f6e015decc748a68a25195b812656139"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 132,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 218,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 62,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x930",
+        "first_section_prefix": "0x930",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x940",
+        "first_section_prefix": "0x930",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x958",
+        "first_section_prefix": "0x930",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x968",
+        "first_section_prefix": "0x930",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x980",
+        "first_section_prefix": "0x930",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x988",
+        "first_section_prefix": "0x930",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x990",
+        "first_section_prefix": "0x930",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x9a8",
+        "first_section_prefix": "0x930",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-iokitten-resource-v1/IOKitten': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x7d7)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-iokitten-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x7d7",
+        "segment": "__DATA_DIRTY",
+        "offset": "0x930",
+        "actual_address": "0x238da930",
+        "LLVM_section_base_address": "0x238db260",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "original_validator_sha256": "5928cf126158e41a63eb81f5a97ac02ce6654d47669e228e721fe5761a328862",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "5ef0559c47c346baaf3272b0b6d82f714ab7790d3e3a7b0e04c40452cfdb9964",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/IOKitten.framework/Versions/A/IOKitten": "1a16657261e63e9e17316c0d87b09ebbd346f0363ef5f0eee2f19a2f9997b996",
+    "runtime/rebuilt-settings-closure-iokitten-resource-v1/IOKitten": "67bebc44d00cbfb11cef11cafbb135d25db9b7ac0845d1dea1c40b1202c4be3c",
+    "runtime/rebuilt-settings-closure-iokitten-resource-v1/reconstruction.json": "54b12337dfcf25ef504cf55be1955089c8436f73194a9cc9fb29140e619bb5ec"
+  },
+  "verified": true
+}

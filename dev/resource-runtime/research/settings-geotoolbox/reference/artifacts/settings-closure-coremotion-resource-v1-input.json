@@ -1,0 +1,105 @@
+{
+  "target": "settings-closure-coremotion-resource-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/CoreMotion.framework/Versions/A/CoreMotion",
+    "sha256": "55c96abdf577cd2817aef9b4ede03359faf26983536c40094e89f0f82c0e7780",
+    "reference_set": "fullsystem",
+    "objc_classes": 209,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 664,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 858,
+    "patch_got_range": [
+      "0x7ff940007000",
+      "0x7ff94007f000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 4067328,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/PrivateFrameworks/Espresso.framework/Versions/A/Espresso",
+    "/System/Library/PrivateFrameworks/TimeSync.framework/Versions/A/TimeSync",
+    "/System/Library/PrivateFrameworks/DistributedSensing.framework/Versions/A/DistributedSensing",
+    "/System/Library/PrivateFrameworks/MobileBluetooth.framework/Versions/A/MobileBluetooth",
+    "/System/Library/PrivateFrameworks/LocationSupport.framework/Versions/A/LocationSupport",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+    "/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary",
+    "/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC",
+    "/usr/lib/libobjc.A.dylib",
+    "/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork",
+    "/usr/lib/libsqlite3.dylib",
+    "/usr/lib/libxml2.2.dylib",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/usr/lib/libbz2.1.0.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "aa3e418678301ab5ecc3bb300c005df3fd8258e9ec449b848caa63e5bab0fb34",
+  "manifest_sha256": "e958a8bc4c6eb6ce00664e4a8fde898bc64d06f0accce7514669f6d06cff62f2",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-coremotion-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 5168,
+    "nonzero_addends": 664,
+    "got_cells": 858,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff94007c070",
+          "0x7ff94007c080",
+          "0x7ff94007d9d0"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/settings-closure-coremotion-resource-v1-build.log",
+  "log_sha256": "41ec6ed37125d7d16d8170518d8810248757e171f1e31ee9084b31112cbcbdb2"
+}

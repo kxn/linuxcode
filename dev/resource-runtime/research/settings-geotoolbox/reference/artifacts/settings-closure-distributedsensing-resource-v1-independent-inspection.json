@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 62546,
+      "sha256": "bbc215cce01578f02d75ed875b83ed68a0198425049b2e4e7f170cde666440c7"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 294,
+      "sha256": "36ae8f064f837f7a4ce5a0c72b16906447aa37b724e34c356c554a7146e2d52c"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 96,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 197,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 58,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d68",
+        "first_section_prefix": "0xb48",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x8e0",
+        "first_section_prefix": "0x8d0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x8f8",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x908",
+        "first_section_prefix": "0x8d0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x928",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x930",
+        "first_section_prefix": "0x8d0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x948",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x950",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-distributedsensing-resource-v1/DistributedSensing': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xd61)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-distributedsensing-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xd61",
+        "segment": "__DATA_CONST",
+        "offset": "0x3d68",
+        "actual_address": "0x35e13d68",
+        "LLVM_section_base_address": "0x35e148b0",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "aa46863dcb0733e6ab646c43f44de50f4f3b15845f4dc68062f93e586257ad3e",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "d7b663836b1db641a83e5b45911dea73937d28aef3c0ddba3ca2bdafc29d1be4",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/DistributedSensing.framework/Versions/A/DistributedSensing": "dc7b38a38ed517264448eb804406adfd005b63139c72ddd41188777ff2f22e74",
+    "runtime/rebuilt-settings-closure-distributedsensing-resource-v1/DistributedSensing": "1432876a266ba9f897417f1a903ce9462cd8c8b69133eb0a16944b3378cad7a4",
+    "runtime/rebuilt-settings-closure-distributedsensing-resource-v1/reconstruction.json": "53795ed3abf1563a86fbdf4d9c8545f101cabb45f400ebb33dbffa38dd9ea5d9"
+  },
+  "verified": true
+}

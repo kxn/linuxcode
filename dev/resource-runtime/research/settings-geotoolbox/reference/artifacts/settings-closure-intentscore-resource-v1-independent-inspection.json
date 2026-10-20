@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 78188,
+      "sha256": "4ae8b58aabddedea3e0597b84bcb8e4f14f2c7fb950b71df82fd92abc83c2de7"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 456,
+      "sha256": "7ab2980dd3ea20e46f3c32994b444b3ef38fb957c24bea5aac801251c1b72f9c"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 200,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 375,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 116,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x50b0",
+        "first_section_prefix": "0xac0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x50d8",
+        "first_section_prefix": "0xac0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x928",
+        "first_section_prefix": "0x928",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x930",
+        "first_section_prefix": "0x928",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x938",
+        "first_section_prefix": "0x928",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x950",
+        "first_section_prefix": "0x928",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x958",
+        "first_section_prefix": "0x928",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x960",
+        "first_section_prefix": "0x928",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-intentscore-resource-v1/IntentsCore': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1c31)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-intentscore-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1c31",
+        "segment": "__DATA_CONST",
+        "offset": "0x50b0",
+        "actual_address": "0x2db860b0",
+        "LLVM_section_base_address": "0x2db86b70",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      }
+    ],
+    "original_validator_sha256": "b2dbb1d3638c58a1756b12e167955a5dcb2c3884862a1def0fdd749190f36f17",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "edd08ad8826202f54e290605d03f36dcdb32dc8b8f610c2ef235cbe638003622",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/IntentsCore.framework/Versions/A/IntentsCore": "b45b6d8a630484cf46eab39ebf22c1e9c3eb4d3ceadbaa3799acdc4014b42cc5",
+    "runtime/rebuilt-settings-closure-intentscore-resource-v1/IntentsCore": "5d9dffb52a598d128e3f526e4463de0278460e56c7b97574b10bda8df3cd4bd8",
+    "runtime/rebuilt-settings-closure-intentscore-resource-v1/reconstruction.json": "85066e1c148a96efd96e3191c70b35a6a73c9118312412d53627a38ebb8a02fc"
+  },
+  "verified": true
+}

@@ -1,0 +1,72 @@
+{
+  "target": "settings-closure-apppredictionfoundation-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AppPredictionFoundation.framework/Versions/A/AppPredictionFoundation",
+    "sha256": "9cf48060c724484362e0642fd5f4f447c58fe4c23dbe09cefc41e1af545f43dd",
+    "reference_set": "fullsystem",
+    "objc_classes": 51,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 160,
+    "patch_got_range": [
+      "0x7ffb40007000",
+      "0x7ffb4009a000"
+    ]
+  },
+  "original_bytes": 413696,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/BiomeSync.framework/Versions/A/BiomeSync",
+    "/System/Library/Frameworks/CoreLocation.framework/Versions/A/CoreLocation",
+    "/System/Library/Frameworks/Intents.framework/Versions/A/Intents",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/CoreDuetContext",
+    "/System/Library/PrivateFrameworks/BiomeLibrary.framework/Versions/A/BiomeLibrary",
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/PrivateFrameworks/ProactiveEventTracker.framework/Versions/A/ProactiveEventTracker",
+    "/System/Library/PrivateFrameworks/ProactiveSupport.framework/Versions/A/ProactiveSupport",
+    "/System/Library/PrivateFrameworks/BiomeStreams.framework/Versions/A/BiomeStreams",
+    "/System/Library/PrivateFrameworks/BiomeStorage.framework/Versions/A/BiomeStorage",
+    "/System/Library/PrivateFrameworks/LinkMetadata.framework/Versions/A/LinkMetadata",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials"
+  ],
+  "previous_manifest_sha256": "6d3b92c0ffb9f49a11e1d999137d29763394f697a78963a26c78921eeceac407",
+  "manifest_sha256": "b0b26cfcc03893e4823a53fd0e7652a2d5ee552d65e4a8ecab7384d74aabe444",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-apppredictionfoundation-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 776,
+    "nonzero_addends": 0,
+    "got_cells": 160,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-apppredictionfoundation-resource-v1-build.log",
+  "log_sha256": "9efa81229729b7000b9e0f94f777c20b926463c8586f38fc7ba9b1f46b9b38be"
+}

@@ -1,0 +1,65 @@
+{
+  "target": "settings-closure-coreroutine-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CoreRoutine.framework/Versions/A/CoreRoutine",
+    "sha256": "4b3f0d10c78d4e3eef982549673ebcc467d13973b1753ae7b2f69bf9e91798d7",
+    "reference_set": "fullsystem",
+    "objc_classes": 136,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 151,
+    "patch_got_range": [
+      "0x7ff940007000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 1069056,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices",
+    "/System/Library/Frameworks/CoreLocation.framework/Versions/A/CoreLocation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration",
+    "/System/Library/Frameworks/_LocationEssentials.framework/Versions/A/_LocationEssentials",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics"
+  ],
+  "previous_manifest_sha256": "853ea1b9651018401811fbc1f077a85302952b8bab4f46a13e750d094bb41b66",
+  "manifest_sha256": "6d3b92c0ffb9f49a11e1d999137d29763394f697a78963a26c78921eeceac407",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-coreroutine-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1886,
+    "nonzero_addends": 0,
+    "got_cells": 151,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-coreroutine-resource-v1-build.log",
+  "log_sha256": "69868ced8279be8198f89e8c2be53503d7bd5103a7ed92ac6324008d2d70dd7e"
+}

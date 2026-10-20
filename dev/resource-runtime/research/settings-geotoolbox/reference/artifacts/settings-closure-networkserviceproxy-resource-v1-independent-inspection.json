@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 416864,
+      "sha256": "c01cbebd79b2357680abac58c9673fbea2b692d3a0dd154859bb2d1ada3b73d3"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1140,
+      "sha256": "12ef8ff2bb2303081faf4613642cf60fe2673bd68829f1d67713a65b205e0e7a"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 291,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1172,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 215,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x10450",
+        "first_section_prefix": "0xe80",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x10468",
+        "first_section_prefix": "0xe80",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x10480",
+        "first_section_prefix": "0xe80",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x10498",
+        "first_section_prefix": "0xe80",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x104b0",
+        "first_section_prefix": "0xe80",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x104c8",
+        "first_section_prefix": "0xe80",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x828",
+        "first_section_prefix": "0x828",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x830",
+        "first_section_prefix": "0x828",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-networkserviceproxy-resource-v1/NetworkServiceProxy': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x7636)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-networkserviceproxy-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x7636",
+        "segment": "__DATA_CONST",
+        "offset": "0x10450",
+        "actual_address": "0x3f09c450",
+        "LLVM_section_base_address": "0x3f09d2d0",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "e8c4ffb7205aecce6383e913beec63fd2b6486f926aac8cbd43ed9aaa6332c8b",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "b47bf4b315a746045eb787f3a511b3d060a272f801b117ef7bdf8c0e149fb1f6",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/Versions/A/NetworkServiceProxy": "69be184f1e15e7c2c53084de4d27ca2106ce5276605e9f1a4e595ddc6b500bc5",
+    "runtime/rebuilt-settings-closure-networkserviceproxy-resource-v1/NetworkServiceProxy": "d0cd7bdb6b3c3f26fc19f5eb8b0711e73cc6f43aaad7e0ba8aa271d354b852dd",
+    "runtime/rebuilt-settings-closure-networkserviceproxy-resource-v1/reconstruction.json": "6870e0b8eac900e63c85f92f1e6c890e02ab486180c93d1f76a5bafa0dfbe896"
+  },
+  "verified": true
+}

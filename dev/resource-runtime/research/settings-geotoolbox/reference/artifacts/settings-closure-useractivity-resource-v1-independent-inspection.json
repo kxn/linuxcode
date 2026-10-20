@@ -1,0 +1,116 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 336201,
+      "sha256": "9272e16b9ce27597012f1c7357981ee03d49b78159bf05d8f2f1afa48f8f66cb"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 792,
+      "sha256": "c49cd8263b202476a32192bf1fa8d1b399c7f6f4e6555f63a83cfc32c33721e7"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 259,
+  "nonzero_addends_verified": 1,
+  "serialized_bindings": 774,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 1,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "dysymtab_alias_repair": {
+    "verified": true,
+    "symbol_count": 2885,
+    "actual_type_groups": [
+      2573,
+      88,
+      224
+    ],
+    "external_aliases": 3,
+    "renamed_aliases_preserved": [],
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 362,
+    "remapped_indirect_entries": 346,
+    "original_sha256": "d85b31a019228222581ad1f290b07e4ec83ca9a220f2772d400a7a9cf38fae84",
+    "candidate_sha256": "a7c268fb584755ffe158941228bc72c0f4e21dcf651e4d7b19a22b026009de2c"
+  },
+  "dysymtab_alias_verifier": {
+    "source": "scripts/verify-dysymtab-alias-repair.py",
+    "sha256": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  },
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 86,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe3d8",
+        "first_section_prefix": "0x6c0",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe3e0",
+        "first_section_prefix": "0x6c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe3f8",
+        "first_section_prefix": "0x6c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe410",
+        "first_section_prefix": "0x6c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe428",
+        "first_section_prefix": "0x6c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe440",
+        "first_section_prefix": "0x6c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe458",
+        "first_section_prefix": "0x6c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xe470",
+        "first_section_prefix": "0x6c0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-useractivity-resource-v1/UserActivity': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x4dc4)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-useractivity-resource-v1-result.json",
+    "original_validator_sha256": "c2e25beb2af34dc061aebce23a7e7f09421f06a640627a59f618980d9877b5b3",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "79220f400f0b03329454bbf9175ee2383d7e391501864ab4fbe77e37e2405c77",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity": "d85b31a019228222581ad1f290b07e4ec83ca9a220f2772d400a7a9cf38fae84",
+    "runtime/rebuilt-settings-closure-useractivity-resource-v1/UserActivity": "a7c268fb584755ffe158941228bc72c0f4e21dcf651e4d7b19a22b026009de2c",
+    "runtime/rebuilt-settings-closure-useractivity-resource-v1/reconstruction.json": "1b5f44712e0592cbd6e7ed8b15190029eaf48f6e14446dd8c74de85534d7d510"
+  },
+  "verified": true
+}

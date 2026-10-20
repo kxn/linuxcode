@@ -1,0 +1,72 @@
+{
+  "verified": true,
+  "actual_diagnostic_cases": [
+    {
+      "image": "runtime/rebuilt-remoteui-closure-liftui-resource-v2/LiftUI",
+      "image_sha256": "8090e1a918b95168a0aa6b5762b1dbbd7f3499049c71d0c5a320011b560d0dbb",
+      "reported_opcode_proof": [
+        {
+          "stream": "eager",
+          "opcode_offset": "0x11576",
+          "segment": "__DATA_DIRTY",
+          "offset": "0xd80",
+          "actual_address": "0x26111d80",
+          "LLVM_section_base_address": "0x26112a10",
+          "reported_error": "not in section",
+          "symbol": "__objc_empty_cache"
+        }
+      ]
+    },
+    {
+      "image": "runtime/rebuilt-settings-closure-relevancekit-resource-v2/RelevanceKit",
+      "image_sha256": "8b1d74a45dd9a76f525badddde3d0f4c95631f4933d4b86cf816231cd58af342",
+      "reported_opcode_proof": [
+        {
+          "stream": "eager",
+          "opcode_offset": "0x8f6",
+          "segment": "__DATA_CONST",
+          "offset": "0xf38",
+          "actual_address": "0x2a777f38",
+          "LLVM_section_base_address": "0x2a778400",
+          "reported_error": "extends beyond section boundary",
+          "symbol": "_swift_cvw_assignWithCopy"
+        }
+      ]
+    }
+  ],
+  "rejected_diagnostic_controls": [
+    {
+      "image": "runtime/rebuilt-remoteui-closure-liftui-resource-v2/LiftUI",
+      "control": "wrong_reason"
+    },
+    {
+      "image": "runtime/rebuilt-remoteui-closure-liftui-resource-v2/LiftUI",
+      "control": "unknown_error"
+    },
+    {
+      "image": "runtime/rebuilt-remoteui-closure-liftui-resource-v2/LiftUI",
+      "control": "wrong_opcode"
+    },
+    {
+      "image": "runtime/rebuilt-settings-closure-relevancekit-resource-v2/RelevanceKit",
+      "control": "wrong_reason"
+    },
+    {
+      "image": "runtime/rebuilt-settings-closure-relevancekit-resource-v2/RelevanceKit",
+      "control": "unknown_error"
+    },
+    {
+      "image": "runtime/rebuilt-settings-closure-relevancekit-resource-v2/RelevanceKit",
+      "control": "wrong_opcode"
+    }
+  ],
+  "prior_decoded_binding_streams_exactly_unchanged": 122,
+  "original_images": 61,
+  "old_parser_sha256": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+  "old_parser_snapshot": "runtime/source-input-history/91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+  "sources": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "scripts/test-llvm-first-section-error-proof.py": "d641366825d9ad59fc806e83577a93ae64368dc0837f39e0b263373e2aec38f3"
+  },
+  "runtime_behavior_verified": false
+}

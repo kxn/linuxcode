@@ -1,0 +1,60 @@
+{
+  "target": "settings-closure-iokitten-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/IOKitten.framework/Versions/A/IOKitten",
+    "sha256": "1a16657261e63e9e17316c0d87b09ebbd346f0363ef5f0eee2f19a2f9997b996",
+    "reference_set": "fullsystem",
+    "objc_classes": 14,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 132,
+    "patch_got_range": [
+      "0x7ff940008000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 77824,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "d1d979211bef038a4a714f17a8cfcd1abf12469cc574116d0f720189cd31f88e",
+  "manifest_sha256": "cf98ee467163eda6b005c8b18fb3c191f91ad9b34da7f0cd28ba7240ad7aa620",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-iokitten-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 143,
+    "nonzero_addends": 0,
+    "got_cells": 132,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-iokitten-resource-v1-build.log",
+  "log_sha256": "3377ddde2c286c237f7383ca5de83c31c956631b5b29e01ef2f0d0d324edbedb"
+}

@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 89146,
+      "sha256": "d34c4a57e5737e5d49d3a6716f1334bcba2bde24183753cb983ba8a0e7949991"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1026,
+      "sha256": "c36ef54a63237e17b8a74b55cbfbbafc29dedfbc7e09f4a74ef01f5e969441cf"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 379,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 619,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 44,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2148",
+        "first_section_prefix": "0xb10",
+        "symbol": "_$ss20__StaticArrayStorageCN"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2170",
+        "first_section_prefix": "0xb10",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2178",
+        "first_section_prefix": "0xb10",
+        "symbol": "_swift_cvw_destroy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2180",
+        "first_section_prefix": "0xb10",
+        "symbol": "_swift_cvw_initWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2188",
+        "first_section_prefix": "0xb10",
+        "symbol": "_swift_cvw_assignWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2190",
+        "first_section_prefix": "0xb10",
+        "symbol": "_swift_cvw_initWithTake"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2198",
+        "first_section_prefix": "0xb10",
+        "symbol": "_swift_cvw_assignWithTake"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2260",
+        "first_section_prefix": "0xb10",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-localstatuskit-resource-v1/LocalStatusKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x3f3a)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-localstatuskit-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x3f3a",
+        "segment": "__DATA_CONST",
+        "offset": "0x2148",
+        "actual_address": "0x25297148",
+        "LLVM_section_base_address": "0x25297c58",
+        "reported_error": "not in section",
+        "symbol": "_$ss20__StaticArrayStorageCN"
+      }
+    ],
+    "original_validator_sha256": "8bcf8e4d91b5731e5e4e1e1ac926724c0637ac20bb33f16194c306c558e2404d",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "46d0854a84a19df8b9c1d66b0ee64245fcd56589646705fb3b14d6a05335baae",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/LocalStatusKit.framework/Versions/A/LocalStatusKit": "1bf63c5b5bff8543e37716a305056b58f35a40de49895c889734f51a7ac4a648",
+    "runtime/rebuilt-settings-closure-localstatuskit-resource-v1/LocalStatusKit": "8c3033adf93336000c6c856159a3f50ee81c27c3308b1119176a94eafe886b99",
+    "runtime/rebuilt-settings-closure-localstatuskit-resource-v1/reconstruction.json": "e80f608dc195a1501ecc3e75fedc366d496c3eba194e705df019d871a078eab4"
+  },
+  "verified": true
+}

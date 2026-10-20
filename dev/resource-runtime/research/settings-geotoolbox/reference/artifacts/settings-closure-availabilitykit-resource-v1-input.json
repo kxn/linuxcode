@@ -1,0 +1,60 @@
+{
+  "target": "settings-closure-availabilitykit-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AvailabilityKit.framework/Versions/A/AvailabilityKit",
+    "sha256": "f24eaf60179b8ed271aecc17eefecb49662367c360cc59506f60b837ec78267d",
+    "reference_set": "fullsystem",
+    "objc_classes": 2,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 40,
+    "patch_got_range": [
+      "0x7ffc40006000",
+      "0x7ffc40092000"
+    ]
+  },
+  "original_bytes": 20480,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/StatusKit.framework/Versions/A/StatusKit",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "913cce3f5db0c6386aa0f0694f80f91f2320bc26113b5a1f70233a8785754d96",
+  "manifest_sha256": "e14885aae79238fe4e3ba260ab5d36952496a02bd03b41f647cebdd5581505cc",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-availabilitykit-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 24,
+    "nonzero_addends": 0,
+    "got_cells": 40,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-availabilitykit-resource-v1-build.log",
+  "log_sha256": "3dbacc2be4556290aec157b165e9315b75ae1ce56158a9045743cc4f9ce09b48"
+}

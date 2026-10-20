@@ -1,0 +1,96 @@
+{
+  "target": "settings-closure-pegasusconfiguration-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration",
+    "sha256": "cb576306b1190f47a0c6fe8da863583ed44241788b74200f5327e6a78a2b5f28",
+    "reference_set": "fullsystem",
+    "objc_classes": 16,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 170,
+    "patch_got_range": [
+      "0x7ffd40005000",
+      "0x7ffd400c0000"
+    ],
+    "preserve_swift_code_with_patch_got": true
+  },
+  "original_bytes": 438272,
+  "swift_metadata": true,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/GeoServices",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/PrivateFrameworks/BiomeStorage.framework/Versions/A/BiomeStorage",
+    "/System/Library/PrivateFrameworks/BiomeStreams.framework/Versions/A/BiomeStreams",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/Network.framework/Versions/A/Network",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/swift/libswiftCore.dylib",
+    "/usr/lib/swift/libswiftCoreFoundation.dylib",
+    "/usr/lib/swift/libswiftDarwin.dylib",
+    "/usr/lib/swift/libswiftDispatch.dylib",
+    "/usr/lib/swift/libswiftIOKit.dylib",
+    "/usr/lib/swift/libswiftOSLog.dylib",
+    "/usr/lib/swift/libswiftObjectiveC.dylib",
+    "/usr/lib/swift/libswiftSynchronization.dylib",
+    "/usr/lib/swift/libswiftXPC.dylib",
+    "/usr/lib/swift/libswift_Builtin_float.dylib",
+    "/usr/lib/swift/libswift_Concurrency.dylib",
+    "/usr/lib/swift/libswift_DarwinFoundation1.dylib",
+    "/usr/lib/swift/libswift_StringProcessing.dylib",
+    "/usr/lib/swift/libswiftos.dylib"
+  ],
+  "previous_manifest_sha256": "f6467c5e7cbf3d32bfecc8848205073474bc1c3d1c141244cde269e165e7a536",
+  "manifest_sha256": "2047c7a57f4d442845b6d867512511a0599b826251f17e8af9e0d7fce939ee70",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-pegasusconfiguration-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--experimental-swift",
+    "--repair-swift-relative"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 388,
+    "nonzero_addends": 0,
+    "got_cells": 170,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffd400bdf28",
+          "0x7ffd400bdf38"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 1,
+  "log": "logs/settings-closure-pegasusconfiguration-resource-v1-build.log",
+  "log_sha256": "41ec6ed37125d7d16d8170518d8810248757e171f1e31ee9084b31112cbcbdb2"
+}

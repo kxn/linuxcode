@@ -1,0 +1,65 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1343839,
+      "sha256": "81460e61796d0076ba82a8ad1c687023f7be81ee7fd1ab75671108a211f0a3be"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3774,
+      "sha256": "0b0ff24c4351b79a976983422cfc6035c56caf58bf3535271c42864036ca2f2d"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1182,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 2596,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xb98",
+        "first_section_prefix": "0x140",
+        "symbol": "_$sBoWV"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-replicatorengine-resource-v2/ReplicatorEngine': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x10d00)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-replicatorengine-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x10d00",
+        "segment": "__DATA_DIRTY",
+        "offset": "0xb98",
+        "actual_address": "0x324b8b98",
+        "LLVM_section_base_address": "0x324b8cd8",
+        "reported_error": "not in section",
+        "symbol": "_$sBoWV"
+      }
+    ],
+    "original_validator_sha256": "ba69600d6feaf9fb3a01f9ebe72cb44fa28fe86656887c666caf7a9eefd3975c",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "d4d29b3d68bf8fc5e12b6deb5d1593e1a9bc6f255465bab0ffb3f775f8b6d9a2",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/ReplicatorEngine.framework/Versions/A/ReplicatorEngine": "6eccd97d53c5ecd91a3e50e8e25d4b8a9400c6357e223e5104a18b2c770b71be",
+    "runtime/rebuilt-settings-closure-replicatorengine-resource-v2/ReplicatorEngine": "d5e0eba037c8c5aa968a9ae8411bad6cb31039ec6cee8fd61d6fa426060f4258",
+    "runtime/rebuilt-settings-closure-replicatorengine-resource-v2/reconstruction.json": "23dccd528347ccb3fbb363d250cbd26eace34d8e1c715473f9be73b33f987480"
+  },
+  "verified": true
+}

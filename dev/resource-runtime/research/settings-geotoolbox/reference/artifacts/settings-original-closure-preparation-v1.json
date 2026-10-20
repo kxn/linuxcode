@@ -1,0 +1,2350 @@
+{
+  "complete": false,
+  "image_runtime_verified": false,
+  "configuration": "config/settings-original-closure-preparation-v1.json",
+  "configuration_sha256": "476241e94a1a9127bbc8704700598e8796e577c4cefbc3a1c4f64e5328eaa605",
+  "source": "scripts/prepare-resource-dependency-batch.py",
+  "source_sha256": "cb38c6908976f28fbab82d1f84a919957e02eb330427f6b0f003f45d0ae384b3",
+  "images": [
+    {
+      "image": "/System/Library/PrivateFrameworks/Settings.framework/Versions/A/Settings",
+      "attempts": [],
+      "prepared_target": "settings-patch-got-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppPredictionClient.framework/Versions/A/AppPredictionClient",
+      "attempts": [
+        {
+          "target": "settings-closure-apppredictionclient-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppPredictionClient.framework/Versions/A/AppPredictionClient",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-apppredictionclient-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-apppredictionclient-resource-v1-batch-preparation.log",
+          "log_sha256": "7483b0b4289a045e6763baec57ad4b05b129706e2211bb8d7b5331d6b2ca3663",
+          "preparation": "artifacts/settings-closure-apppredictionclient-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-apppredictionclient-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/AppIntents.framework/Versions/A/AppIntents",
+      "attempts": [
+        {
+          "target": "settings-closure-appintents-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/AppIntents.framework/Versions/A/AppIntents",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-appintents-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-appintents-resource-v1-batch-preparation.log",
+          "log_sha256": "c8b546ac2e74f9fa1f93f2171a7d7136b1286b747d1466e36af1a31c44fc1098",
+          "preparation": "artifacts/settings-closure-appintents-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-appintents-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-appintents-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-appintents-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-appintents-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-appintents-resource-v2-batch-preparation.log",
+          "log_sha256": "0af12f3228420cdb5bbbd5e2aee698b54ed4a2906bd0331459a8a7d171783b4d",
+          "preparation": "artifacts/settings-closure-appintents-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-appintents-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CloudSettings.framework/Versions/A/CloudSettings",
+      "attempts": [
+        {
+          "target": "settings-closure-cloudsettings-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CloudSettings.framework/Versions/A/CloudSettings",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-cloudsettings-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-cloudsettings-resource-v1-batch-preparation.log",
+          "log_sha256": "b5859284b2be3e0b21369d78d6b59146180a7b39df113c6e47fc905d239557f2",
+          "preparation": "artifacts/settings-closure-cloudsettings-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-cloudsettings-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LinkMetadata.framework/Versions/A/LinkMetadata",
+      "attempts": [
+        {
+          "target": "settings-closure-linkmetadata-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LinkMetadata.framework/Versions/A/LinkMetadata",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-linkmetadata-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-linkmetadata-resource-v1-batch-preparation.log",
+          "log_sha256": "f2387d457ad80bd8f3f34b43e25ad3c55003e50a34ee13a29fdf4cf3fdba2bd7",
+          "preparation": "artifacts/settings-closure-linkmetadata-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-linkmetadata-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-linkmetadata-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-linkmetadata-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-linkmetadata-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-linkmetadata-resource-v2-batch-preparation.log",
+          "log_sha256": "573c5bd95d15a41f20d01541963cdbbe0d3e88314038a78e7af6dc2774dcf8c9",
+          "preparation": "artifacts/settings-closure-linkmetadata-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-linkmetadata-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LinkServices.framework/Versions/A/LinkServices",
+      "attempts": [
+        {
+          "target": "settings-closure-linkservices-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LinkServices.framework/Versions/A/LinkServices",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-linkservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-linkservices-resource-v1-batch-preparation.log",
+          "log_sha256": "61a8946d9859e6ae70d147d8fdbc52f762a297bb13993656259a701aaf1c34aa",
+          "preparation": "artifacts/settings-closure-linkservices-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-linkservices-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-linkservices-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-linkservices-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-linkservices-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-linkservices-resource-v2-batch-preparation.log",
+          "log_sha256": "827d7371b2d5985c0206cca34f4630314778ed4fceb687738f24219449b71eb0",
+          "preparation": "artifacts/settings-closure-linkservices-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-linkservices-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SearchFoundation.framework/Versions/A/SearchFoundation",
+      "attempts": [
+        {
+          "target": "settings-closure-searchfoundation-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SearchFoundation.framework/Versions/A/SearchFoundation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-searchfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-searchfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "2ca6286f0f8933253efa6d822e4441aa7037c065d0742ee4dd03d15c4da44484",
+          "preparation": "artifacts/settings-closure-searchfoundation-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-searchfoundation-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Sleep.framework/Versions/A/Sleep",
+      "attempts": [
+        {
+          "target": "settings-closure-sleep-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Sleep.framework/Versions/A/Sleep",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-sleep-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-sleep-resource-v1-batch-preparation.log",
+          "log_sha256": "47ebd31845c11e993a7db27caa6f93c1b1c362ce679f6778694171b95b006503",
+          "preparation": "artifacts/settings-closure-sleep-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-sleep-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Email.framework/Versions/A/Email",
+      "attempts": [
+        {
+          "target": "settings-closure-email-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Email.framework/Versions/A/Email",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-email-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-email-resource-v1-batch-preparation.log",
+          "log_sha256": "a7ea1fa3985f6dc1049dea41e3429f50691c9193cdcea8a9695499f0804f5050",
+          "preparation": "artifacts/settings-closure-email-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-email-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-email-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-email-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-email-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-email-resource-v2-batch-preparation.log",
+          "log_sha256": "b68cad58105afc01421b837e00487a8e4422604e0b555559cebb26ab376ee6e1",
+          "preparation": "artifacts/settings-closure-email-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-email-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SpotlightFoundation.framework/Versions/A/SpotlightFoundation",
+      "attempts": [
+        {
+          "target": "settings-closure-spotlightfoundation-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SpotlightFoundation.framework/Versions/A/SpotlightFoundation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-spotlightfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-spotlightfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "ed3c96ef357c0511953ed587363878df019b012d9ac429145c48a77bcfa8b1c9",
+          "preparation": "artifacts/settings-closure-spotlightfoundation-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-spotlightfoundation-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ProactivePredictionClient.framework/Versions/A/ProactivePredictionClient",
+      "attempts": [
+        {
+          "target": "settings-closure-proactivepredictionclient-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ProactivePredictionClient.framework/Versions/A/ProactivePredictionClient",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-proactivepredictionclient-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-proactivepredictionclient-resource-v1-batch-preparation.log",
+          "log_sha256": "ed1056cb9c94320b3c4e8c946560408e9d70dfbc70df573913163564d16e3568",
+          "preparation": "artifacts/settings-closure-proactivepredictionclient-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-proactivepredictionclient-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-proactivepredictionclient-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-proactivepredictionclient-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-proactivepredictionclient-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-proactivepredictionclient-resource-v2-batch-preparation.log",
+          "log_sha256": "5ddf6bae896bb5b44fa63bc1a751ef56ac081760a56c22c915608ad1b6c8c4f4",
+          "preparation": "artifacts/settings-closure-proactivepredictionclient-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-proactivepredictionclient-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ContextualSuggestionClient.framework/Versions/A/ContextualSuggestionClient",
+      "attempts": [
+        {
+          "target": "settings-closure-contextualsuggestionclient-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ContextualSuggestionClient.framework/Versions/A/ContextualSuggestionClient",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-contextualsuggestionclient-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-contextualsuggestionclient-resource-v1-batch-preparation.log",
+          "log_sha256": "dec5853114684465d2b85a35bf2fee9675ee6b9dafb6210ac8e4a877aec350fe",
+          "preparation": "artifacts/settings-closure-contextualsuggestionclient-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-contextualsuggestionclient-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-contextualsuggestionclient-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-contextualsuggestionclient-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-contextualsuggestionclient-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-contextualsuggestionclient-resource-v2-batch-preparation.log",
+          "log_sha256": "1d5d8244e634869647f4cf26cc8af7e2a502e0c5a2484bdea499ddbb8b5519d6",
+          "preparation": "artifacts/settings-closure-contextualsuggestionclient-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-contextualsuggestionclient-resource-v2"
+    },
+    {
+      "image": "/System/Library/Frameworks/HealthKit.framework/Versions/A/HealthKit",
+      "attempts": [
+        {
+          "target": "settings-closure-healthkit-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/HealthKit.framework/Versions/A/HealthKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-healthkit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-healthkit-resource-v1-batch-preparation.log",
+          "log_sha256": "217381dce9019aef44e570a8e5373162ca0542a452aa8bf776d77be4c2deb247",
+          "preparation": "artifacts/settings-closure-healthkit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Unresolved reconstruction failure: logs/settings-closure-healthkit-resource-v1-build.log"
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreRoutine.framework/Versions/A/CoreRoutine",
+      "attempts": [
+        {
+          "target": "settings-closure-coreroutine-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CoreRoutine.framework/Versions/A/CoreRoutine",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-coreroutine-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-coreroutine-resource-v1-batch-preparation.log",
+          "log_sha256": "3a1136eb6602f7409800db4ec4ad3c82d181c63344b4d6339f591f010dafe4ff",
+          "preparation": "artifacts/settings-closure-coreroutine-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-coreroutine-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppPredictionFoundation.framework/Versions/A/AppPredictionFoundation",
+      "attempts": [
+        {
+          "target": "settings-closure-apppredictionfoundation-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppPredictionFoundation.framework/Versions/A/AppPredictionFoundation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-apppredictionfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-apppredictionfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "d502316b84d545b24d99cf3129ffbe6dc1ad29e1ca5a8f2f49db54ea629a2319",
+          "preparation": "artifacts/settings-closure-apppredictionfoundation-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-apppredictionfoundation-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/HeroDataClient.framework/Versions/A/HeroDataClient",
+      "attempts": [
+        {
+          "target": "settings-closure-herodataclient-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/HeroDataClient.framework/Versions/A/HeroDataClient",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-herodataclient-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-herodataclient-resource-v1-batch-preparation.log",
+          "log_sha256": "4ff946cbb87716385ec5d48a39b33865361abc4f1b4130dcbf4bbae9ba200085",
+          "preparation": "artifacts/settings-closure-herodataclient-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-herodataclient-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity",
+      "attempts": [
+        {
+          "target": "settings-closure-useractivity-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/UserActivity.framework/Versions/A/UserActivity",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-useractivity-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-useractivity-resource-v1-batch-preparation.log",
+          "log_sha256": "0792cf22f98c95a53284c777bc2631a71b40e783d42012fd9ecbc0c51ba342bc",
+          "preparation": "artifacts/settings-closure-useractivity-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-useractivity-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/VoiceShortcutClient.framework/Versions/A/VoiceShortcutClient",
+      "attempts": [
+        {
+          "target": "settings-closure-voiceshortcutclient-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/VoiceShortcutClient.framework/Versions/A/VoiceShortcutClient",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-voiceshortcutclient-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-voiceshortcutclient-resource-v1-batch-preparation.log",
+          "log_sha256": "97dcf68cd6a00fae28c607f609d50bcae90e2b43530146f31ae2a33fa8b74a16",
+          "preparation": "artifacts/settings-closure-voiceshortcutclient-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'settings-closure-voiceshortcutclient-resource-v1', '--output', 'artifacts/settings-closure-voiceshortcutclient-original-import-audit-v1.json', '--follow-explicit-reexports', '--coalesce-equivalent-reexports']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/Trial.framework/Versions/A/Trial",
+      "attempts": [
+        {
+          "target": "settings-closure-trial-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/Trial.framework/Versions/A/Trial",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-trial-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-trial-resource-v1-batch-preparation.log",
+          "log_sha256": "ad34a9c5541e8a76d3856ae04668d99f729717b2101dbcd5c5540801fd4f9936",
+          "preparation": "artifacts/settings-closure-trial-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-trial-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ProactiveSuggestionClientModel.framework/Versions/A/ProactiveSuggestionClientModel",
+      "attempts": [
+        {
+          "target": "settings-closure-proactivesuggestionclientmodel-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ProactiveSuggestionClientModel.framework/Versions/A/ProactiveSuggestionClientModel",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-proactivesuggestionclientmodel-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-proactivesuggestionclientmodel-resource-v1-batch-preparation.log",
+          "log_sha256": "56183ae1cb95158f6e1a9f05adf8165dbbeae018256e4cf3a3103743d59e91cd",
+          "preparation": "artifacts/settings-closure-proactivesuggestionclientmodel-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-proactivesuggestionclientmodel-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ChronoServices.framework/Versions/A/ChronoServices",
+      "attempts": [
+        {
+          "target": "settings-closure-chronoservices-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ChronoServices.framework/Versions/A/ChronoServices",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-chronoservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-chronoservices-resource-v1-batch-preparation.log",
+          "log_sha256": "a8cff82898bca8c2abf64695835a8164705e293b3b6c27387f30c1f70fa97a34",
+          "preparation": "artifacts/settings-closure-chronoservices-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'settings-closure-chronoservices-resource-v1', '--output', 'artifacts/settings-closure-chronoservices-original-import-audit-v1.json', '--follow-explicit-reexports', '--coalesce-equivalent-reexports']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/UserNotificationsSettings.framework/Versions/A/UserNotificationsSettings",
+      "attempts": [
+        {
+          "target": "settings-closure-usernotificationssettings-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/UserNotificationsSettings.framework/Versions/A/UserNotificationsSettings",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-usernotificationssettings-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-usernotificationssettings-resource-v1-batch-preparation.log",
+          "log_sha256": "ff7269ee8495556d196d43bd817ae089b1d55a844b360be07476f5e82f131dcb",
+          "preparation": "artifacts/settings-closure-usernotificationssettings-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-usernotificationssettings-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DoNotDisturb.framework/Versions/A/DoNotDisturb",
+      "attempts": [
+        {
+          "target": "settings-closure-donotdisturb-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/DoNotDisturb.framework/Versions/A/DoNotDisturb",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-donotdisturb-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-donotdisturb-resource-v1-batch-preparation.log",
+          "log_sha256": "fb0a548e66cdedd8d6192ee5dd1b853f617ed86eab6b222aa1ba89875bddf898",
+          "preparation": "artifacts/settings-closure-donotdisturb-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-donotdisturb-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-donotdisturb-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-donotdisturb-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-donotdisturb-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-donotdisturb-resource-v2-batch-preparation.log",
+          "log_sha256": "211726cea9f91a558caeca172980a5edc8fabe521d43d4be8d29e86ebc5d39fa",
+          "preparation": "artifacts/settings-closure-donotdisturb-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-donotdisturb-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ProactiveContextClient.framework/Versions/A/ProactiveContextClient",
+      "attempts": [
+        {
+          "target": "settings-closure-proactivecontextclient-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ProactiveContextClient.framework/Versions/A/ProactiveContextClient",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-proactivecontextclient-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-proactivecontextclient-resource-v1-batch-preparation.log",
+          "log_sha256": "a22817bdc153fd564427951db573b2ca642f88ab8064123b121f0758760d66ba",
+          "preparation": "artifacts/settings-closure-proactivecontextclient-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-proactivecontextclient-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/RelevanceKit.framework/Versions/A/RelevanceKit",
+      "attempts": [
+        {
+          "target": "settings-closure-relevancekit-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/RelevanceKit.framework/Versions/A/RelevanceKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-relevancekit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-relevancekit-resource-v1-batch-preparation.log",
+          "log_sha256": "13b98b1120ffad901717da16e565f7cc41080a29c82410789257b323795792e4",
+          "preparation": "artifacts/settings-closure-relevancekit-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-relevancekit-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-relevancekit-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-relevancekit-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-relevancekit-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-relevancekit-resource-v2-batch-preparation.log",
+          "log_sha256": "518b44e877be7018074d0baa173cce1a41d6f514da00ca9838ee5d663b187967",
+          "preparation": "artifacts/settings-closure-relevancekit-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-relevancekit-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppIntentsTypeSupport.framework/Versions/A/AppIntentsTypeSupport",
+      "attempts": [
+        {
+          "target": "settings-closure-appintentstypesupport-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppIntentsTypeSupport.framework/Versions/A/AppIntentsTypeSupport",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-appintentstypesupport-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-appintentstypesupport-resource-v1-batch-preparation.log",
+          "log_sha256": "c1a7eaadaa78e09961f9417d240406fc6ec2744ed90969b559f9951aa227de67",
+          "preparation": "artifacts/settings-closure-appintentstypesupport-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-appintentstypesupport-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-appintentstypesupport-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-appintentstypesupport-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-appintentstypesupport-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-appintentstypesupport-resource-v2-batch-preparation.log",
+          "log_sha256": "1a4b08a93e6a98c8ca24fda186581d34be6eecf5d88e07c526351a67609da82b",
+          "preparation": "artifacts/settings-closure-appintentstypesupport-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-appintentstypesupport-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppIntentSchemas.framework/Versions/A/AppIntentSchemas",
+      "attempts": [
+        {
+          "target": "settings-closure-appintentschemas-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppIntentSchemas.framework/Versions/A/AppIntentSchemas",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-appintentschemas-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-appintentschemas-resource-v1-batch-preparation.log",
+          "log_sha256": "60ac5222c624055eee56ac9f123a6e42617717c91bcaa7cb4e84c2f215bbc1aa",
+          "preparation": "artifacts/settings-closure-appintentschemas-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-appintentschemas-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-appintentschemas-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-appintentschemas-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-appintentschemas-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-appintentschemas-resource-v2-batch-preparation.log",
+          "log_sha256": "766e73c6a2e6f58beee8f2b83bdac889f5abfab74c2e8df9de53355cd2c9cc04",
+          "preparation": "artifacts/settings-closure-appintentschemas-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-appintentschemas-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IntentsCore.framework/Versions/A/IntentsCore",
+      "attempts": [
+        {
+          "target": "settings-closure-intentscore-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/IntentsCore.framework/Versions/A/IntentsCore",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-intentscore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-intentscore-resource-v1-batch-preparation.log",
+          "log_sha256": "b8c084807cbfd8be4d4cf5bd15fe905f9dc3358e6a49eb4e19e08bc546178d3a",
+          "preparation": "artifacts/settings-closure-intentscore-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-intentscore-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AvailabilityKit.framework/Versions/A/AvailabilityKit",
+      "attempts": [
+        {
+          "target": "settings-closure-availabilitykit-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AvailabilityKit.framework/Versions/A/AvailabilityKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-availabilitykit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-availabilitykit-resource-v1-batch-preparation.log",
+          "log_sha256": "7e092b0b5ae2bcaf06a69973598e63f472e304c45febae4c4b06bb2d091ed361",
+          "preparation": "artifacts/settings-closure-availabilitykit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-availabilitykit-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/NetAppsUtilities.framework/Versions/A/NetAppsUtilities",
+      "attempts": [
+        {
+          "target": "settings-closure-netappsutilities-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/NetAppsUtilities.framework/Versions/A/NetAppsUtilities",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-netappsutilities-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-netappsutilities-resource-v1-batch-preparation.log",
+          "log_sha256": "85c2b577b6cee91d23e66550ecbf01642a672f510db8f35671cba45cb85b0340",
+          "preparation": "artifacts/settings-closure-netappsutilities-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-netappsutilities-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SleepHealth.framework/Versions/A/SleepHealth",
+      "attempts": [
+        {
+          "target": "settings-closure-sleephealth-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SleepHealth.framework/Versions/A/SleepHealth",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-sleephealth-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-sleephealth-resource-v1-batch-preparation.log",
+          "log_sha256": "55eaf1ff84b60a12c10a861654207fb6076726c08858be5415d0d3fd798a1d74",
+          "preparation": "artifacts/settings-closure-sleephealth-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-sleephealth-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-sleephealth-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-sleephealth-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-sleephealth-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-sleephealth-resource-v2-batch-preparation.log",
+          "log_sha256": "98760e6551f0c48d5626d521098d1946fb877f8366d26bc3b586b77732414a38",
+          "preparation": "artifacts/settings-closure-sleephealth-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-sleephealth-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CloudSubscriptionFeatures.framework/Versions/A/CloudSubscriptionFeatures",
+      "attempts": [
+        {
+          "target": "settings-closure-cloudsubscriptionfeatures-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CloudSubscriptionFeatures.framework/Versions/A/CloudSubscriptionFeatures",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-cloudsubscriptionfeatures-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-cloudsubscriptionfeatures-resource-v1-batch-preparation.log",
+          "log_sha256": "b0717723116a34fb8481fa3e8830dacb2d1318cf1d97a6062f0f69624da06a5c",
+          "preparation": "artifacts/settings-closure-cloudsubscriptionfeatures-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-cloudsubscriptionfeatures-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-cloudsubscriptionfeatures-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-cloudsubscriptionfeatures-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-cloudsubscriptionfeatures-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-cloudsubscriptionfeatures-resource-v2-batch-preparation.log",
+          "log_sha256": "0b447507f507ea38817171fbb8723b836fe6ff0deebac8c249637763c7494771",
+          "preparation": "artifacts/settings-closure-cloudsubscriptionfeatures-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-cloudsubscriptionfeatures-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/Versions/A/NetworkServiceProxy",
+      "attempts": [
+        {
+          "target": "settings-closure-networkserviceproxy-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/Versions/A/NetworkServiceProxy",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-networkserviceproxy-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-networkserviceproxy-resource-v1-batch-preparation.log",
+          "log_sha256": "daf996702f1868764edf4b3fb549ac4852027ffabd3076c66beca632e83f64fc",
+          "preparation": "artifacts/settings-closure-networkserviceproxy-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-networkserviceproxy-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreParsec.framework/Versions/A/CoreParsec",
+      "attempts": [
+        {
+          "target": "settings-closure-coreparsec-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CoreParsec.framework/Versions/A/CoreParsec",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-coreparsec-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-coreparsec-resource-v1-batch-preparation.log",
+          "log_sha256": "c52eacce7bfe84234c5cce72b1cc49ee8c4ee230a214e0110da811defb3ad1c7",
+          "preparation": "artifacts/settings-closure-coreparsec-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-coreparsec-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-coreparsec-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-coreparsec-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-coreparsec-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-coreparsec-resource-v2-batch-preparation.log",
+          "log_sha256": "be91c6dbe74342b3d9642ec7200592562f522888d681438b38e3cc0261446bee",
+          "preparation": "artifacts/settings-closure-coreparsec-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-coreparsec-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmailAddressing.framework/Versions/A/EmailAddressing",
+      "attempts": [
+        {
+          "target": "settings-closure-emailaddressing-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/EmailAddressing.framework/Versions/A/EmailAddressing",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-emailaddressing-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-emailaddressing-resource-v1-batch-preparation.log",
+          "log_sha256": "9c4f27bc3b018ae319bb0e145a68919c46713f96b454ba21a8eff7ce78cc926b",
+          "preparation": "artifacts/settings-closure-emailaddressing-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-emailaddressing-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmailCore.framework/Versions/A/EmailCore",
+      "attempts": [
+        {
+          "target": "settings-closure-emailcore-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/EmailCore.framework/Versions/A/EmailCore",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-emailcore-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-emailcore-resource-v1-batch-preparation.log",
+          "log_sha256": "35e53d6fca208e93d549926f3da083472a7fddc3112005652ea8b23a8d673e51",
+          "preparation": "artifacts/settings-closure-emailcore-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-emailcore-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-emailcore-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-emailcore-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-emailcore-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-emailcore-resource-v2-batch-preparation.log",
+          "log_sha256": "7ddd4b7f4f4e5884b9a96f03cd59337043280e2759fec0266ac4463fa3cf7a19",
+          "preparation": "artifacts/settings-closure-emailcore-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-emailcore-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/EmailFoundation.framework/Versions/A/EmailFoundation",
+      "attempts": [
+        {
+          "target": "settings-closure-emailfoundation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/EmailFoundation.framework/Versions/A/EmailFoundation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-emailfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-emailfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "e40825de0709f8beebd669b0940f6158a272f7ac14ad4fa4416ed7dd61cfc5fe",
+          "preparation": "artifacts/settings-closure-emailfoundation-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "CalledProcessError",
+        "message": "Command '['/usr/bin/python3', 'scripts/audit-resource-image-imports.py', '--target', 'settings-closure-emailfoundation-resource-v1', '--output', 'artifacts/settings-closure-emailfoundation-original-import-audit-v1.json', '--follow-explicit-reexports', '--coalesce-equivalent-reexports']' returned non-zero exit status 1."
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ToolKit.framework/Versions/A/ToolKit",
+      "attempts": [
+        {
+          "target": "settings-closure-toolkit-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ToolKit.framework/Versions/A/ToolKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-toolkit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-toolkit-resource-v1-batch-preparation.log",
+          "log_sha256": "13f9121269074ef06fc1b5a7de722ed570d036c3ad722104c3a52b12756c173e",
+          "preparation": "artifacts/settings-closure-toolkit-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-toolkit-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-toolkit-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-toolkit-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-toolkit-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-toolkit-resource-v2-batch-preparation.log",
+          "log_sha256": "72f14c434cd9e012ece23cdb1f8252b95503b6f6399fb46badfde93e5fc39953",
+          "preparation": "artifacts/settings-closure-toolkit-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-toolkit-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices",
+      "attempts": [
+        {
+          "target": "settings-closure-graphicsservices-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-graphicsservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-graphicsservices-resource-v1-batch-preparation.log",
+          "log_sha256": "baa8c90d13ffbf6afb8cc0bdfc17147aaae3aa9df780465f6a1901a1c46b7c03",
+          "preparation": "artifacts/settings-closure-graphicsservices-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-graphicsservices-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain",
+      "attempts": [
+        {
+          "target": "settings-closure-regulatorydomain-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-regulatorydomain-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-regulatorydomain-resource-v1-batch-preparation.log",
+          "log_sha256": "d179887147cb40d64dad54fee37e9c489b8527120b88657d785132b84bf79b0f",
+          "preparation": "artifacts/settings-closure-regulatorydomain-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-regulatorydomain-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-regulatorydomain-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-regulatorydomain-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-regulatorydomain-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-regulatorydomain-resource-v2-batch-preparation.log",
+          "log_sha256": "8958504dbab380b81efb642f54071a1a74047d878fbfcaeb689c7e08e38a91a1",
+          "preparation": "artifacts/settings-closure-regulatorydomain-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-regulatorydomain-resource-v2"
+    },
+    {
+      "image": "/usr/lib/libCTGreenTeaLogger.dylib",
+      "attempts": [
+        {
+          "target": "settings-closure-libctgreentealogger-dylib-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/usr/lib/libCTGreenTeaLogger.dylib",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-libctgreentealogger-dylib-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-libctgreentealogger-dylib-resource-v1-batch-preparation.log",
+          "log_sha256": "f836eb7a561919dc72593609c5d33fa62ac19941606087a0ee2cde17ae2ba1c7",
+          "preparation": "artifacts/settings-closure-libctgreentealogger-dylib-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-libctgreentealogger-dylib-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/AppleFlatBuffers.framework/Versions/A/AppleFlatBuffers",
+      "attempts": [
+        {
+          "target": "settings-closure-appleflatbuffers-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/AppleFlatBuffers.framework/Versions/A/AppleFlatBuffers",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-appleflatbuffers-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-appleflatbuffers-resource-v1-batch-preparation.log",
+          "log_sha256": "4f35b73b11d53493a1a2be7f0713c91854fa946b3c6448572d0f516f571471b2",
+          "preparation": "artifacts/settings-closure-appleflatbuffers-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-appleflatbuffers-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/TrialProto.framework/Versions/A/TrialProto",
+      "attempts": [
+        {
+          "target": "settings-closure-trialproto-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/TrialProto.framework/Versions/A/TrialProto",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-trialproto-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-trialproto-resource-v1-batch-preparation.log",
+          "log_sha256": "c06056605aef2cb3addba89203b645ece7d1cc1ea81e1035b6f012fe23274f18",
+          "preparation": "artifacts/settings-closure-trialproto-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-trialproto-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ReplicatorEngine.framework/Versions/A/ReplicatorEngine",
+      "attempts": [
+        {
+          "target": "settings-closure-replicatorengine-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ReplicatorEngine.framework/Versions/A/ReplicatorEngine",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-replicatorengine-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-replicatorengine-resource-v1-batch-preparation.log",
+          "log_sha256": "5ad5a90f09139b8f204346268768c3ac895db83d58fe142d3915e69391963d1d",
+          "preparation": "artifacts/settings-closure-replicatorengine-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-replicatorengine-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-replicatorengine-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-replicatorengine-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-replicatorengine-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-replicatorengine-resource-v2-batch-preparation.log",
+          "log_sha256": "7f2e8303befad3a7a3f87a73bd070f92c3ff84fa6a4b488db87ef6e1e75c1e97",
+          "preparation": "artifacts/settings-closure-replicatorengine-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-replicatorengine-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/ReplicatorServices.framework/Versions/A/ReplicatorServices",
+      "attempts": [
+        {
+          "target": "settings-closure-replicatorservices-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/ReplicatorServices.framework/Versions/A/ReplicatorServices",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-replicatorservices-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-replicatorservices-resource-v1-batch-preparation.log",
+          "log_sha256": "31e75ed6231b80ae442761a0f33a3dbc2957320948e00b27f10110e8f0c445c9",
+          "preparation": "artifacts/settings-closure-replicatorservices-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-replicatorservices-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-replicatorservices-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-replicatorservices-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-replicatorservices-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-replicatorservices-resource-v2-batch-preparation.log",
+          "log_sha256": "2ceff04ca5a2fefca7f4faed930bc7a8992caa84d29b5ad426d65a82e0846ab7",
+          "preparation": "artifacts/settings-closure-replicatorservices-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-replicatorservices-resource-v2"
+    },
+    {
+      "image": "/System/Library/Frameworks/CoreMotion.framework/Versions/A/CoreMotion",
+      "attempts": [
+        {
+          "target": "settings-closure-coremotion-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/CoreMotion.framework/Versions/A/CoreMotion",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-coremotion-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-coremotion-resource-v1-batch-preparation.log",
+          "log_sha256": "0b57c9788406d39c1b07dc8b0b7c28b0067d657edf56b3c71093122147e83c39",
+          "preparation": "artifacts/settings-closure-coremotion-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-coremotion-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-coremotion-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-coremotion-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-coremotion-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-coremotion-resource-v2-batch-preparation.log",
+          "log_sha256": "5266550789f1bca5d049a731c8ca36876711df9658edcf7e8abff46de7624b0f",
+          "preparation": "artifacts/settings-closure-coremotion-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-coremotion-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/GRDBInternal.framework/Versions/A/GRDBInternal",
+      "attempts": [
+        {
+          "target": "settings-closure-grdbinternal-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/GRDBInternal.framework/Versions/A/GRDBInternal",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-grdbinternal-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-grdbinternal-resource-v1-batch-preparation.log",
+          "log_sha256": "e9b2e76e15f79fd882405e330ca5a946651b52f699fb6e19111ca2bf0e818e66",
+          "preparation": "artifacts/settings-closure-grdbinternal-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Unresolved reconstruction failure: logs/settings-closure-grdbinternal-resource-v1-build.log"
+      }
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/StatusKit.framework/Versions/A/StatusKit",
+      "attempts": [
+        {
+          "target": "settings-closure-statuskit-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/StatusKit.framework/Versions/A/StatusKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-statuskit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-statuskit-resource-v1-batch-preparation.log",
+          "log_sha256": "dd3b0299ce5285825e0b3a7a9397f57a7d85e0d25de59633a74bfdb777929605",
+          "preparation": "artifacts/settings-closure-statuskit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-statuskit-resource-v1"
+    },
+    {
+      "image": "/System/Library/Frameworks/NetworkExtension.framework/Versions/A/NetworkExtension",
+      "attempts": [
+        {
+          "target": "settings-closure-networkextension-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/Frameworks/NetworkExtension.framework/Versions/A/NetworkExtension",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-networkextension-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-networkextension-resource-v1-batch-preparation.log",
+          "log_sha256": "92785a324847996395b6f0f05a05e290428cfe3348e223be973a954facdfe7d6",
+          "preparation": "artifacts/settings-closure-networkextension-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-networkextension-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-networkextension-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-networkextension-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-networkextension-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-networkextension-resource-v2-batch-preparation.log",
+          "log_sha256": "67b577a6b311ce568b73e2ba8c441eb63e911cdbb74175aeca148cd2f0dc9306",
+          "preparation": "artifacts/settings-closure-networkextension-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-networkextension-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PegasusAPI.framework/Versions/A/PegasusAPI",
+      "attempts": [
+        {
+          "target": "settings-closure-pegasusapi-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PegasusAPI.framework/Versions/A/PegasusAPI",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-pegasusapi-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-pegasusapi-resource-v1-batch-preparation.log",
+          "log_sha256": "7540e056ccc1ef75d3edc3a2457cd6eb47580f2a0020040f5e867c2e595a8dc8",
+          "preparation": "artifacts/settings-closure-pegasusapi-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-pegasusapi-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-pegasusapi-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-pegasusapi-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-pegasusapi-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-pegasusapi-resource-v2-batch-preparation.log",
+          "log_sha256": "73df8f8174cea69931bc3644bdb6cf3f4a811262a509a6a057f8aa2ab39a2587",
+          "preparation": "artifacts/settings-closure-pegasusapi-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-pegasusapi-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration",
+      "attempts": [
+        {
+          "target": "settings-closure-pegasusconfiguration-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-pegasusconfiguration-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-pegasusconfiguration-resource-v1-batch-preparation.log",
+          "log_sha256": "533253b47af8078a2bc90671c41631b0843f0241a262b83d99e78fcedc2b24cc",
+          "preparation": "artifacts/settings-closure-pegasusconfiguration-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-pegasusconfiguration-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-pegasusconfiguration-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-pegasusconfiguration-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-pegasusconfiguration-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-pegasusconfiguration-resource-v2-batch-preparation.log",
+          "log_sha256": "7a1008b70fd6a03ed9f3c2d3a0f0356f2452eac026e5b5db1fb0e1dcb98002d3",
+          "preparation": "artifacts/settings-closure-pegasusconfiguration-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-pegasusconfiguration-resource-v2"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DataAccessExpress.framework/Versions/A/DataAccessExpress",
+      "attempts": [
+        {
+          "target": "settings-closure-dataaccessexpress-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/DataAccessExpress.framework/Versions/A/DataAccessExpress",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-dataaccessexpress-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-dataaccessexpress-resource-v1-batch-preparation.log",
+          "log_sha256": "9578bd9a2deb6b7b10f8d6ecfeb0bb95782aa154065efd932ae05ec41e632b9f",
+          "preparation": "artifacts/settings-closure-dataaccessexpress-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-dataaccessexpress-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/LocalStatusKit.framework/Versions/A/LocalStatusKit",
+      "attempts": [
+        {
+          "target": "settings-closure-localstatuskit-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/LocalStatusKit.framework/Versions/A/LocalStatusKit",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-localstatuskit-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-localstatuskit-resource-v1-batch-preparation.log",
+          "log_sha256": "f834e13619800e9e7beb557606122377dc598a89ed8eefbd36a3d33c7ba6eddb",
+          "preparation": "artifacts/settings-closure-localstatuskit-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-localstatuskit-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/SystemWake.framework/Versions/A/SystemWake",
+      "attempts": [
+        {
+          "target": "settings-closure-systemwake-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/SystemWake.framework/Versions/A/SystemWake",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-systemwake-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-systemwake-resource-v1-batch-preparation.log",
+          "log_sha256": "82f47a7f9cd1186f95cd6591693f6b360317347dcf5259af8305718d7381a00c",
+          "preparation": "artifacts/settings-closure-systemwake-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-systemwake-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/TimeSync.framework/Versions/A/TimeSync",
+      "attempts": [
+        {
+          "target": "settings-closure-timesync-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/TimeSync.framework/Versions/A/TimeSync",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-timesync-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-timesync-resource-v1-batch-preparation.log",
+          "log_sha256": "79902a001fd2cdfcf2ad08bfd8da6c4228da01a8a74e89acf33c3f1a5bc9a546",
+          "preparation": "artifacts/settings-closure-timesync-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-timesync-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/DistributedSensing.framework/Versions/A/DistributedSensing",
+      "attempts": [
+        {
+          "target": "settings-closure-distributedsensing-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/DistributedSensing.framework/Versions/A/DistributedSensing",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-distributedsensing-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-distributedsensing-resource-v1-batch-preparation.log",
+          "log_sha256": "cef3c3d06b228d9f183749a2f7c555a2260c8fe8a84d6caba186446fdf1e55c2",
+          "preparation": "artifacts/settings-closure-distributedsensing-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-distributedsensing-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CalendarDatabase.framework/Versions/A/CalendarDatabase",
+      "attempts": [
+        {
+          "target": "settings-closure-calendardatabase-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CalendarDatabase.framework/Versions/A/CalendarDatabase",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-calendardatabase-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-calendardatabase-resource-v1-batch-preparation.log",
+          "log_sha256": "cd81e742715dbbd3a8e4a8578e18646a67bdae94914a2265b12ab72e3da73657",
+          "preparation": "artifacts/settings-closure-calendardatabase-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-calendardatabase-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/iCalendar.framework/Versions/A/iCalendar",
+      "attempts": [
+        {
+          "target": "settings-closure-icalendar-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/iCalendar.framework/Versions/A/iCalendar",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-icalendar-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-icalendar-resource-v1-batch-preparation.log",
+          "log_sha256": "2cecf92b3db59b66f62eef84c216ae5c39561e1c0a260676f67040caaea06d22",
+          "preparation": "artifacts/settings-closure-icalendar-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-icalendar-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/IOKitten.framework/Versions/A/IOKitten",
+      "attempts": [
+        {
+          "target": "settings-closure-iokitten-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/IOKitten.framework/Versions/A/IOKitten",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-iokitten-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-iokitten-resource-v1-batch-preparation.log",
+          "log_sha256": "c06230c203c29862b3cd40b2fad44087c2aa994985cdb72d37a1932f67744b2b",
+          "preparation": "artifacts/settings-closure-iokitten-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-iokitten-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CoreDAV.framework/Versions/A/CoreDAV",
+      "attempts": [
+        {
+          "target": "settings-closure-coredav-resource-v1",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CoreDAV.framework/Versions/A/CoreDAV",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-coredav-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-coredav-resource-v1-batch-preparation.log",
+          "log_sha256": "7bbec0f372b50b613fb4d6817ce0523ef8beec80f4c63134a195c01579b7ae8e",
+          "preparation": "artifacts/settings-closure-coredav-resource-v1-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-coredav-resource-v1"
+    },
+    {
+      "image": "/System/Library/PrivateFrameworks/CalendarFoundation.framework/Versions/A/CalendarFoundation",
+      "attempts": [
+        {
+          "target": "settings-closure-calendarfoundation-resource-v1",
+          "returncode": 1,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--image",
+            "/System/Library/PrivateFrameworks/CalendarFoundation.framework/Versions/A/CalendarFoundation",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-calendarfoundation-resource-v1",
+            "--build"
+          ],
+          "log": "logs/settings-closure-calendarfoundation-resource-v1-batch-preparation.log",
+          "log_sha256": "a996c297a8a9667665cd73ab0c58af15459d1a382109111deb9400cd4e7e8876",
+          "preparation": "artifacts/settings-closure-calendarfoundation-resource-v1-input.json"
+        },
+        {
+          "target": "settings-closure-calendarfoundation-resource-v2",
+          "returncode": 0,
+          "command": [
+            "/usr/bin/python3",
+            "scripts/prepare-resource-image-candidate.py",
+            "--from-target",
+            "settings-closure-calendarfoundation-resource-v1",
+            "--exact-import-audit",
+            "artifacts/settings-closure-calendarfoundation-original-import-audit-v1.json",
+            "--preserve-code-with-patch-got",
+            "--patch-got-renamed-reexports",
+            "--preserve-original-uuid",
+            "--read-only-data-const",
+            "--align-linkedit-streams",
+            "--omit-lazy-helper-section",
+            "--omit-leading-padding-sections",
+            "--target",
+            "settings-closure-calendarfoundation-resource-v2",
+            "--build"
+          ],
+          "log": "logs/settings-closure-calendarfoundation-resource-v2-batch-preparation.log",
+          "log_sha256": "de9e9d786b33a7ae28ee68f1b155ebc0b571cfbff3a59db0e60e5279d7e326cf",
+          "preparation": "artifacts/settings-closure-calendarfoundation-resource-v2-input.json"
+        }
+      ],
+      "prepared_target": "settings-closure-calendarfoundation-resource-v2"
+    }
+  ]
+}

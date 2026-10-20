@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 195158,
+      "sha256": "3c6eab3d1f5fbd02c31d76cfd1c85d906c3ca9ae0e6dc06e99c5d90ed8a57ab9"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 888,
+      "sha256": "58083524cbf869aedad50adddf014c95f14b4befe28eeafaf786025969f116e3"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 264,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1006,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 8,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc380",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc398",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc3b0",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc3c8",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc3e0",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc438",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc450",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xc468",
+        "first_section_prefix": "0xbd0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-dataaccessexpress-resource-v1/DataAccessExpress': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x6dfa)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-dataaccessexpress-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x6dfa",
+        "segment": "__DATA_CONST",
+        "offset": "0xc380",
+        "actual_address": "0x367d7380",
+        "LLVM_section_base_address": "0x367d7f50",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "9a24817c3be4925d3c585cbfd65c2805c8b6a0b3e9e48cd737b182ff720ceecd",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "c8d5b44795f9b6decc82ad46456791a112b99c2ee02fb067323e13f27eaf2b0e",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/DataAccessExpress.framework/Versions/A/DataAccessExpress": "d1af2e90a140fea8f80baa1154fee9a18b9a4a4129c79f1c24f5bf2bbb4d5a49",
+    "runtime/rebuilt-settings-closure-dataaccessexpress-resource-v1/DataAccessExpress": "785fbc12dbc9c9f198e323cedf816c8a30ee7058790892afe22d1f348623d1f2",
+    "runtime/rebuilt-settings-closure-dataaccessexpress-resource-v1/reconstruction.json": "7bbea912b59b875c79f2aeadbe8ab12006eac61663fdd42c0fe7793daa591608"
+  },
+  "verified": true
+}

@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 387473,
+      "sha256": "9892202f1d04083d00e6d95360385d4d3ad2615f4924d8f3a03b9bd017477608"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 612,
+      "sha256": "dfe04e7e7acc19ff37b34f611135e5f822233baa4fdbff790c14fae04fee905d"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 167,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1434,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 120,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4520",
+        "first_section_prefix": "0xe60",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4538",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4548",
+        "first_section_prefix": "0xe60",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4570",
+        "first_section_prefix": "0xe60",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4588",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4598",
+        "first_section_prefix": "0xe60",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x45c0",
+        "first_section_prefix": "0xe60",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x45d8",
+        "first_section_prefix": "0xe60",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-trialproto-resource-v1/TrialProto': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xa3a0)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-trialproto-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xa3a0",
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4520",
+        "actual_address": "0x33b94520",
+        "LLVM_section_base_address": "0x33b95380",
+        "reported_error": "not in section",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "original_validator_sha256": "3721132d8e84d0dff17c3b617f84edd56497f0850c87f03a880ea43140498f23",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "bff4062a42edccc8bf04b9669f426c6ddaa682264d22038754db22c7a16cd302",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/TrialProto.framework/Versions/A/TrialProto": "260af258da0a3fca411dc27a855f03077e22c38118ae3ed44e8b9917acef8c3f",
+    "runtime/rebuilt-settings-closure-trialproto-resource-v1/TrialProto": "3b06862ad79373df0bb6e521a6c17d6a501ca36c7604f070f7dee9cbd4dcad45",
+    "runtime/rebuilt-settings-closure-trialproto-resource-v1/reconstruction.json": "f11ecff09fae7d81fe2fe87d92fe4951c2c8f2757daa9e2a51ff7988eb321778"
+  },
+  "verified": true
+}

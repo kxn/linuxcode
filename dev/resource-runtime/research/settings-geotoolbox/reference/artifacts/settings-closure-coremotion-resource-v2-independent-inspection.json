@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 3015600,
+      "sha256": "0b2d573f4493964424739f1410e01c5eba8da999dda14afaa2490c28c3885bd3"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3516,
+      "sha256": "ba220aa581b1dacb56e3c7dcd0fbbd482dacac3eaa8b8107d31cfea334ea6488"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 899,
+  "nonzero_addends_verified": 664,
+  "serialized_bindings": 5422,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 5,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 122,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ff30",
+        "first_section_prefix": "0xc60",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3ff40",
+        "first_section_prefix": "0xc60",
+        "symbol": "___kCFBooleanTrue"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3fff8",
+        "first_section_prefix": "0xc60",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x40020",
+        "first_section_prefix": "0xc60",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x40048",
+        "first_section_prefix": "0xc60",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x40070",
+        "first_section_prefix": "0xc60",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x40098",
+        "first_section_prefix": "0xc60",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x400c0",
+        "first_section_prefix": "0xc60",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-coremotion-resource-v2/CoreMotion': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x2750f)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-coremotion-resource-v2-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x2750f",
+        "segment": "__DATA_CONST",
+        "offset": "0x3ff30",
+        "actual_address": "0x33886f30",
+        "LLVM_section_base_address": "0x33887b90",
+        "reported_error": "not in section",
+        "symbol": "___kCFBooleanTrue"
+      }
+    ],
+    "original_validator_sha256": "539fb2a6f730d0fb48371366f3fac473dad2dd24a1cfac23be0e9fa86ac95ac2",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "40973e64133a00d3b0b73a3394f6c83bc72e950b36a2007cf589c0a0cdb66f61",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/CoreMotion.framework/Versions/A/CoreMotion": "55c96abdf577cd2817aef9b4ede03359faf26983536c40094e89f0f82c0e7780",
+    "runtime/rebuilt-settings-closure-coremotion-resource-v2/CoreMotion": "d6d44aed7276099b55727bba8065131d5542fd1b36b53d9207661d62644aee12",
+    "runtime/rebuilt-settings-closure-coremotion-resource-v2/reconstruction.json": "1568b507e932d38f052ba4739472ba57ac75a320bfdac73571844ad42c688932"
+  },
+  "verified": true
+}

@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/settings-closure-grdbinternal-resource-v1-build.log",
+  "original_sha256": "babcd229af969c2b8279531d572c00a3c1baac5dbce49c53fd8c7ed43c08dc93",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/rebuild-c-cache-image.py\", line 583, in <module>\n    swift_report=swift_restore(segments,ns,allocate,store,classify,own)\n  File \"/home/dl/linuxcode/scripts/restore-swift-metadata.py\", line 362, in restore\n    target=relative(start+index+1,label='symbolic direct reference')\n  File \"/home/dl/linuxcode/scripts/restore-swift-metadata.py\", line 60, in relative\n    else:raise ValueError(f'Unsupported external direct Swift reference {label} at {slot:#x} -> {target:#x}')\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Unsupported external direct Swift reference symbolic direct reference at 0x7ffc128b4c51 -> 0x7ffc138b4c71\n"
+}

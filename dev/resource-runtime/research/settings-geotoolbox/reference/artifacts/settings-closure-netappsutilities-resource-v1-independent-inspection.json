@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 127516,
+      "sha256": "e91799e684ec3748cecf916788edaba6387fb2bb82640d07673fb9c311739e31"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 486,
+      "sha256": "a6dff1e6d280addb6f16513377a09e60db2ad67aed172786a07ba1eddbe20e0b"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 131,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 461,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 187,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x77e0",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x77f8",
+        "first_section_prefix": "0x4f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x9d0",
+        "first_section_prefix": "0x9d0",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x9d8",
+        "first_section_prefix": "0x9d0",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x9e0",
+        "first_section_prefix": "0x9d0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x9f8",
+        "first_section_prefix": "0x9d0",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xa08",
+        "first_section_prefix": "0x9d0",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xa20",
+        "first_section_prefix": "0x9d0",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-netappsutilities-resource-v1/NetAppsUtilities': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1c0d)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-netappsutilities-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1c0d",
+        "segment": "__DATA_CONST",
+        "offset": "0x77e0",
+        "actual_address": "0x3f0217e0",
+        "LLVM_section_base_address": "0x3f021cd0",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "18cd11a6c20f3f6f20b937ec528e6ba120bb84c2e77d2ad5ae55104fc0914c3b",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "34f2270a26c3d602d541f18e8c475ad2ebf03aa6fd770ab36bf2d5eb230c0786",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/NetAppsUtilities.framework/Versions/A/NetAppsUtilities": "32161a8c820954601ff91259428ee8bd9da83f026012e72c0abfa88dccf7fbb1",
+    "runtime/rebuilt-settings-closure-netappsutilities-resource-v1/NetAppsUtilities": "2138bb0d080c1551e96e1121377fe2daed348895df3e3b101bbabde98f5efa21",
+    "runtime/rebuilt-settings-closure-netappsutilities-resource-v1/reconstruction.json": "a733e933358357e480ece1c11ee0c089bf7022939a2eedbe3f89906f11429fad"
+  },
+  "verified": true
+}

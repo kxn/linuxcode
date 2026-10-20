@@ -1,0 +1,64 @@
+{
+  "target": "settings-closure-searchfoundation-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/SearchFoundation.framework/Versions/A/SearchFoundation",
+    "sha256": "78d00d284c7e870dfae2fc86eb7cd28de10db7904320449580c3223219b9f796",
+    "reference_set": "fullsystem",
+    "objc_classes": 773,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 115,
+    "patch_got_range": [
+      "0x7ff940008000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 9056256,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/usr/lib/libMobileGestalt.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "c77e466b4c32de59c025fac6501aa483e1a5624c688b371a888dae10b1205b66",
+  "manifest_sha256": "d25595f30d1b644e9c7f59faaeffc76118f2bdbd0b3f577633b019fdc0883648",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-searchfoundation-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 8836,
+    "nonzero_addends": 0,
+    "got_cells": 115,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-searchfoundation-resource-v1-build.log",
+  "log_sha256": "80315ab9c8d8099c97c1c27e9a80a0ed7845e7db9593421fc6d51f6fde910941"
+}

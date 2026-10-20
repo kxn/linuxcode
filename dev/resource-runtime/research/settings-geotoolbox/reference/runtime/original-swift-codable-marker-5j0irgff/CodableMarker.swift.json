@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/original-swift-codable-marker-5j0irgff/CodableMarker.swift",
+  "original_sha256": "73845f1b3cbdd64349065a458756789911bfcf767e414791f1d3e92f498308a7",
+  "encoding": "utf-8",
+  "text": "public struct Edge<T: Codable & Hashable & Sendable>: Sendable {\n    public var key: T\n    public var value: Double\n    public init(_ key: T, _ value: Double) { self.key = key; self.value = value }\n}\npublic func keyPath<T: Codable & Hashable & Sendable>(_: Edge<T>.Type) -> WritableKeyPath<Edge<T>, T> {\n    return \\Edge<T>.key\n}\npublic func valuePath<T: Codable & Hashable & Sendable>(_: Edge<T>.Type) -> WritableKeyPath<Edge<T>, Double> {\n    return \\Edge<T>.value\n}\n"
+}

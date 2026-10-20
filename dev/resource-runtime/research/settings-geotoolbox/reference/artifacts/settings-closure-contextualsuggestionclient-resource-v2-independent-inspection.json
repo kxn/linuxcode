@@ -1,0 +1,53 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 238176,
+      "sha256": "84d547442db2ae64e5264d1e4f26e15552560dfe96b58047ab464f266785d5c6"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1788,
+      "sha256": "21f84dbc9efe0c585ee4868fb38283a6efa6a6fc753947abddafbf8ef376808a"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 511,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 962,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x86c8",
+        "first_section_prefix": "0x88",
+        "symbol": "_OBJC_CLASS_$_INPlayMediaIntent"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-contextualsuggestionclient-resource-v2/ContextualSuggestionClient': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x51a5)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-contextualsuggestionclient-resource-v2-result.json",
+    "original_validator_sha256": "35ca21577ea3ba9d2b1e1b7f0e662c04ac4d7e7aa9d834cf19d1f4f1e981ed61",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "8a522dabd31317d836ec5f10237b7bb6de6af3c32ec4e32755213d93fcf20b2c",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/ContextualSuggestionClient.framework/Versions/A/ContextualSuggestionClient": "ae92369f6f14b67ff16956911525adba4ced2feb083040458d901ed8218694eb",
+    "runtime/rebuilt-settings-closure-contextualsuggestionclient-resource-v2/ContextualSuggestionClient": "7555ff054e7b0e0030fa8d4b77ddd28e211544cd59017c42e0fbc70356504b34",
+    "runtime/rebuilt-settings-closure-contextualsuggestionclient-resource-v2/reconstruction.json": "b268551a524b8b6bb46ad4145fc750e06536643d83534fe4b77c1224c32916ad"
+  },
+  "verified": true
+}

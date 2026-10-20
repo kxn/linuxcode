@@ -1,0 +1,60 @@
+{
+  "target": "settings-closure-herodataclient-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/HeroDataClient.framework/Versions/A/HeroDataClient",
+    "sha256": "b27d639325053407b9afae6d6aa8200cca2a405fb8ded38ea9c36815fb3d269c",
+    "reference_set": "fullsystem",
+    "objc_classes": 3,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 55,
+    "patch_got_range": [
+      "0x7ffc40006000",
+      "0x7ffc40092000"
+    ]
+  },
+  "original_bytes": 65536,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "b0b26cfcc03893e4823a53fd0e7652a2d5ee552d65e4a8ecab7384d74aabe444",
+  "manifest_sha256": "561912eeed3a3820908fa7128d2dddfacbdc60d55dcb7a06ece0c3d65521be47",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "settings-closure-herodataclient-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "fefce077de9d4a77704b06596f7a75715eff3cc9522be1cd593fc69f240da925",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 56,
+    "nonzero_addends": 0,
+    "got_cells": 55,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/settings-closure-herodataclient-resource-v1-build.log",
+  "log_sha256": "b12bd567808348bd566988f17e5747a77cd8124d0415ae650a438cbc2c9711b1"
+}

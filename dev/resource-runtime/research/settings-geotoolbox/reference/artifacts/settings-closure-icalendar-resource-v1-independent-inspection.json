@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 223004,
+      "sha256": "87d578dad8fd5c5a25918d878250489884b0ad8072ab0590d86781800c7ca14d"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 564,
+      "sha256": "4c7f045af882742784cc35af342991099cb3c99696d3420acf9764b0e119bc2b"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 179,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1160,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 137,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xfbf8",
+        "first_section_prefix": "0x8f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0xfc10",
+        "first_section_prefix": "0x8f0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1998",
+        "first_section_prefix": "0xae8",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19a8",
+        "first_section_prefix": "0xae8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19c0",
+        "first_section_prefix": "0xae8",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19d0",
+        "first_section_prefix": "0xae8",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19e8",
+        "first_section_prefix": "0xae8",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19f8",
+        "first_section_prefix": "0xae8",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-icalendar-resource-v1/iCalendar': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x7ced)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-u3l47obx/settings-closure-icalendar-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x7ced",
+        "segment": "__DATA_CONST",
+        "offset": "0xfbf8",
+        "actual_address": "0x21890bf8",
+        "LLVM_section_base_address": "0x218914e8",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "3e4895a04bc1b467c9b13b64aa9bb506eaf077c32e4d24c7613e89a8b2ca29b3",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "7dbd37a9da9ccf8926cb60b3e1f18af69bf63b8a9fc5a6a304e3659e06ea7757",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "947a22eaec663e682abd3819b8ee434c37787f9416607527d504aca978f0315a",
+    "config/coregraphics-image-pins.json": "ea5bf797a7058006e5f65ddf16f1297ea19ef0cf35d61c54f0087e5952b5eb15",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/iCalendar.framework/Versions/A/iCalendar": "93477b816fc0f1da0f041c5f441b18fd5fe672c3f49300c5431361db765ac8d1",
+    "runtime/rebuilt-settings-closure-icalendar-resource-v1/iCalendar": "489b6aa559787a4c426386936d2d5e1b076dcb543650978ab1c0998a583de0f7",
+    "runtime/rebuilt-settings-closure-icalendar-resource-v1/reconstruction.json": "f76275ac213c513de6ae50a2a6d7a78b831f2ee15561544cf2522d86a66dec92"
+  },
+  "verified": true
+}
