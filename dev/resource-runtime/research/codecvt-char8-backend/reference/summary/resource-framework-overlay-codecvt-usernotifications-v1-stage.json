@@ -1,0 +1,21 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/resource-framework-overlay-codecvt-usernotifications-v1-stage.json",
+  "full_local_report_sha256": "029115ddc1ceb2025264c4ac912252945cdfcc73335adfb72f51474133904f14",
+  "frameworks": "runtime/resource-framework-overlay-codecvt-usernotifications-v1/frameworks",
+  "libraries": "runtime/resource-framework-overlay-codecvt-usernotifications-v1/libraries",
+  "parent_overlay": "artifacts/resource-framework-overlay-pmr-audiotoolbox-v1-stage.json",
+  "graphics_stage": "artifacts/coregraphics-native-v116-stage.json",
+  "added_original_frameworks": [
+    {
+      "target": "usernotifications-patch-got-v1",
+      "framework": "UserNotifications.framework",
+      "source": "runtime/coregraphics-native-v116/frameworks/UserNotifications.framework",
+      "image": "runtime/coregraphics-native-v116/frameworks/UserNotifications.framework/Versions/A/UserNotifications",
+      "image_sha256": "8ca613e9a7342d1190b464bd5c11707b3eaabef07cd73dd6d25587928b604627",
+      "reconstruction": "runtime/rebuilt-usernotifications-patch-got-v1/reconstruction.json"
+    }
+  ],
+  "installed": false,
+  "runtime_execution_verified": false
+}

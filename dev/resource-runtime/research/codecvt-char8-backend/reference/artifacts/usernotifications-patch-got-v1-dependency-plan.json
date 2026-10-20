@@ -1,0 +1,128 @@
+{
+  "diagnostic_only": true,
+  "dyld_resolution_verified": false,
+  "api_compatibility_verified": false,
+  "scope_probe": "runtime/direct-resource-tools-liu3nfs5/result.json",
+  "graphics_stage": "artifacts/coregraphics-native-v115-stage.json",
+  "runtime_stage": "artifacts/private-procfs-v11-stage.json",
+  "target_manifest": "config/coregraphics-image-pins.json",
+  "targets": [
+    "usernotifications-patch-got-v1"
+  ],
+  "images": {
+    "/System/Library/Frameworks/UserNotifications.framework/Versions/A/UserNotifications": {
+      "original_sha256": "1066882a84fdd915ae62b2b85cdd41ceb972594487b3953bb0b737cdc3803a8e",
+      "original_bytes": 598016,
+      "dependencies": [
+        {
+          "path": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+            "runtime/uniform-type-identifiers-native/frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+            "runtime/uniform-type-identifiers-native/frameworks/UniformTypeIdentifiers.framework/UniformTypeIdentifiers"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/native-framework-stage/BaseBoard.framework/Versions/A/BaseBoard",
+            "runtime/native-framework-stage/BaseBoard.framework/BaseBoard"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/coregraphics-native-v115/frameworks/BoardServices.framework/Versions/A/BoardServices",
+            "runtime/coregraphics-native-v115/frameworks/BoardServices.framework/BoardServices"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/Versions/A/CoreServices",
+            "runtime/native-framework-stage/CoreServices.framework/CoreServices"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Versions/C/Foundation",
+            "runtime/foundation-native-framework-stage/Foundation.framework/Foundation",
+            "runtime/native-framework-stage/Foundation.framework/Foundation"
+          ]
+        },
+        {
+          "path": "/usr/lib/libobjc.A.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libobjc.A.dylib",
+            "runtime/objc-data-const-source-v1/libobjc.A.dylib",
+            "runtime/objc-selector-source/libobjc.A.dylib",
+            "runtime/objc-source/libobjc.A.dylib"
+          ]
+        },
+        {
+          "path": "/usr/lib/libSystem.B.dylib",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/usr/lib/libSystem.B.dylib",
+            "runtime/libsystem-kqueue-source-gx7z94z5/resourcev40/libSystem.B.dylib",
+            "runtime/coregraphics-native-v115/libraries/libSystem.B.dylib",
+            "runtime/simd-matrix-source/libraries/libSystem.B.dylib",
+            "runtime/runnable-archs-source/libraries/libSystem.B.dylib",
+            "runtime/container-persona/libraries/libSystem.B.dylib",
+            "runtime/log-hooks/libraries/libSystem.B.dylib",
+            "runtime/native-log-message/libraries/libSystem.B.dylib",
+            "runtime/log-enablement/libraries/libSystem.B.dylib",
+            "runtime/container-manager-export/libraries/libSystem.B.dylib",
+            "runtime/sysdir-native-export/libraries/libSystem.B.dylib",
+            "runtime/sandbox-container-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-nounlink-export/libraries/libSystem.B.dylib",
+            "runtime/typed-malloc-source/libraries/libSystem.B.dylib",
+            "runtime/os-log-simple-source/libraries/libSystem.B.dylib",
+            "runtime/rootless-datavault-export/libraries/libSystem.B.dylib",
+            "runtime/user-local-dir-export/libraries/libSystem.B.dylib",
+            "runtime/uti-runtime-support/libraries/libSystem.B.dylib",
+            "runtime/pthread-yield-export/libraries/libSystem.B.dylib",
+            "runtime/native-library-stage/libSystem.B.dylib"
+          ]
+        },
+        {
+          "path": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/private-procfs-v11/darling-root/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "runtime/foundation-native-framework-stage/CoreFoundation.framework/CoreFoundation"
+          ]
+        },
+        {
+          "path": "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+          "load_command": "0xc",
+          "file_candidates": [
+            "runtime/state/prefix/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v115/frameworks/SoftLinking.framework/Versions/A/SoftLinking",
+            "runtime/coregraphics-native-v115/frameworks/SoftLinking.framework/SoftLinking"
+          ]
+        }
+      ]
+    }
+  },
+  "weak_missing_not_queued": [],
+  "unavailable_originals": [],
+  "inputs": {
+    "runtime/direct-resource-tools-liu3nfs5/result.json": "e82c0245b0b85a944565acc76dc1d6e5963bb3fde62d31255c6f8ddbcc33dca4",
+    "artifacts/coregraphics-native-v115-stage.json": "7bd90df5139ce04378306371595286b9570f914d6ec844500730015416537175",
+    "artifacts/private-procfs-v11-stage.json": "d1ccbd31343fb4ace9a0c2b3c562c389cce0273cd97d0753b36c98c8affc1600",
+    "config/coregraphics-image-pins.json": "9da6c7e201b27d69f9f36c64eafbba75d92c3b3058e1b69f24a29a650a871ae8",
+    "scripts/plan-original-resource-dependencies.py": "01f469fa4793c07b1e243792c27bf9cfd2a98e40d22c2ce570d4d79f8013874c"
+  }
+}

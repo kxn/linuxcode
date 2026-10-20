@@ -1,0 +1,44 @@
+{
+  "diagnostic_only": true,
+  "observed_probe": "runtime/direct-resource-tools-pir021ls/result.json",
+  "original_requested_provider": "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+  "missing_symbol": "_AVAudioSessionRoutingContextChangeNotification",
+  "original_reexport_chain": [
+    {
+      "provider": "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+      "symbol": "_AVAudioSessionRoutingContextChangeNotification",
+      "export": [
+        "reexport",
+        9,
+        ""
+      ]
+    },
+    {
+      "provider": "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+      "symbol": "_AVAudioSessionRoutingContextChangeNotification",
+      "export": [
+        "address",
+        140704238748088,
+        0
+      ]
+    }
+  ],
+  "terminal_original_provider": "/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession",
+  "original_address": "0x7ff8422b41b8",
+  "original_section": {
+    "section": "__const",
+    "segment": "__DATA_CONST",
+    "address": "0x7ff8422b3c50",
+    "bytes": 10040,
+    "flags": "0x0"
+  },
+  "original_data_export_verified": true,
+  "replacement_constant_implemented": false,
+  "next_action": "Restore original AVFAudio and its actual AudioSession export provider with exact code and bindings; do not synthesize the notification value or assume it lives in the requesting framework.",
+  "inputs": {
+    "runtime/fullsystem-libraries/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio": "01f5078e3ffe5d04bb34d329f179baae96d663178e5a8a81cd5057a74c0996c7",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession": "4c735c33fe21a5f09ac0629a6f0b3b011855df1bc16c2d8736cc8d8476475d2e",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab",
+    "runtime/direct-resource-tools-pir021ls/result.json": "f8276cfb278877aabedd34ac954d9e585de3782f1779bcf915dcd9c4b3b51a5b"
+  }
+}

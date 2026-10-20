@@ -1,0 +1,64 @@
+{
+  "target": "usernotifications-patch-got-v1",
+  "pin": {
+    "path": "/System/Library/Frameworks/UserNotifications.framework/Versions/A/UserNotifications",
+    "sha256": "1066882a84fdd915ae62b2b85cdd41ceb972594487b3953bb0b737cdc3803a8e",
+    "reference_set": "fullsystem",
+    "objc_classes": 52,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 171,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 598016,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking"
+  ],
+  "previous_manifest_sha256": "34b349ca1b27165aabaeca37d887247ab99b9c5dc1890d9341a38d591f7dfcb2",
+  "manifest_sha256": "9da6c7e201b27d69f9f36c64eafbba75d92c3b3058e1b69f24a29a650a871ae8",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "usernotifications-patch-got-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "236141c0491ccd09760a9d5ddb43fb7b92acb99a4109a68b81ea44bf09ca3a9f",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 910,
+    "nonzero_addends": 0,
+    "got_cells": 171,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/usernotifications-patch-got-v1-build.log",
+  "log_sha256": "fef3c7d17912ec68fdcb271efb949bd194145c91a39b374697652b75afa8b2b8"
+}
