@@ -1,0 +1,36 @@
+{
+  "verified": true,
+  "target": "appkit-patch-got-v2",
+  "symbolic_reference": "0x7ff808259110",
+  "original_sha256": "e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746",
+  "original_contract": {
+    "kind": "non-resilient-singleton-IncompleteMetadata",
+    "descriptor": "0x7ff8082685c0",
+    "metadata": "0x7ff843b86830",
+    "metaclass": "0x7ff843b867d8",
+    "class_ro": "0x7ff843b6b6c0",
+    "metaclass_ro": "0x7ff8407e6280",
+    "objc_name": "_TtC6AppKit21TrustedUIServiceProxy",
+    "original_class_data_flags": 2,
+    "metadata_descriptor_identity_verified": true
+  },
+  "rejected_decoded_reference_fixtures": [
+    "resilient_union_variant",
+    "generic_class_variant",
+    "wrong_descriptor_identity",
+    "non_swift_class_data",
+    "metaclass_outside_image",
+    "class_ro_with_meta_flag",
+    "metaclass_ro_without_meta_flag",
+    "different_metaclass_name"
+  ],
+  "actual_original_methods_or_protocols_replaced": false,
+  "no_images_emitted": true,
+  "runtime_behavior_verified": false,
+  "sources": {
+    "scripts/test-original-swift-singleton-objc.py": "a1630d46574bbb2715f16e533ae017469176a79166b6ab51ad240172f8ff48da",
+    "scripts/swift-singleton-objc-metadata.py": "13ae4dbfd9fcc5ee5229e8198d08785ec5f67a41b0a655612308ca10a8510a1e",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab",
+    "vendor/swift-abi-reference/include/swift/ABI/Metadata.h": "b828f86ebabd7d5252b87e608b97b6c92d658579622db69f62184da6a97b4073"
+  }
+}

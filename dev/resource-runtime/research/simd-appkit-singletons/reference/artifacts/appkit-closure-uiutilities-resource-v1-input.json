@@ -1,0 +1,62 @@
+{
+  "target": "appkit-closure-uiutilities-resource-v1",
+  "pin": {
+    "path": "/System/Library/SubFrameworks/UIUtilities.framework/Versions/A/UIUtilities",
+    "sha256": "941994bd7b5cd595956acb3d3f0a5e1b8b99cb0ca5de477b49eba873d1692514",
+    "reference_set": "fullsystem",
+    "objc_classes": 5,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 22,
+    "patch_got_range": [
+      "0x7ffe40006000",
+      "0x7ffe400bb000"
+    ]
+  },
+  "original_bytes": 24576,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "f0907faf9bda97db24ca327ec0dd8fb18594b45866a7507e6d2507923681125a",
+  "manifest_sha256": "01b1f50540d555c78a425fe64213b81398f74adee3f7c12ec5173c0c59865a17",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "appkit-closure-uiutilities-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "d783764774373f9878b13d91d1c46cac5bb65beb18cce4d011ad05b01bda822b",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 72,
+    "nonzero_addends": 0,
+    "got_cells": 22,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/appkit-closure-uiutilities-resource-v1-build.log",
+  "log_sha256": "0bba5c0704790eea837684d0571f0b2d5040aa5563e09a106d4f744e7aeaf9c8"
+}

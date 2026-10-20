@@ -1,0 +1,116 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 19740294,
+      "sha256": "ba6f6412791fb4b42b443fc86c7d6c160c0008750a4ed814a57d9bb3aabe6695"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 28938,
+      "sha256": "baca2083fe0648ebde375433989e4edec6b6c20cc71c57736794bb24a57ae066"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 7198,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 45152,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 15,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "dysymtab_alias_repair": {
+    "verified": true,
+    "symbol_count": 148630,
+    "actual_type_groups": [
+      139518,
+      4112,
+      5000
+    ],
+    "external_aliases": 22,
+    "renamed_aliases_preserved": [],
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 13500,
+    "remapped_indirect_entries": 8070,
+    "original_sha256": "e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746",
+    "candidate_sha256": "fd24062ce8117748bc75dbbd7e18605c3c3649141734fa7503185bc604c3e0ad"
+  },
+  "dysymtab_alias_verifier": {
+    "source": "scripts/verify-dysymtab-alias-repair.py",
+    "sha256": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  },
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 118,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26eed8",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26eef0",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef00",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef10",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef20",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef30",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef40",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef50",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-appkit-patch-got-v2/AppKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x126668)\n",
+    "original_validator": "runtime/original-dyld-validation-zb4bviea/result.json",
+    "original_validator_sha256": "9e4746fcaa13b31c3bd3add345f24c0241f8d81a04565155d7e1885e9df65177",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "ad36cceb86a78feffce48b5b3364484cc0f68c4660188c35237b1a487c5f91de",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "42119830e6215f5540af1c244e617929ef544c6e6f23f5dfea4a1a030977b954",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit": "e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746",
+    "runtime/rebuilt-appkit-patch-got-v2/AppKit": "fd24062ce8117748bc75dbbd7e18605c3c3649141734fa7503185bc604c3e0ad",
+    "runtime/rebuilt-appkit-patch-got-v2/reconstruction.json": "320808da88c30dbd3345edb07815171d2cdcc446b894af02c41bc6a1c65ab04e"
+  },
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "target": "appkit-closure-xcttargetbootstrap-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/XCTTargetBootstrap.framework/Versions/A/XCTTargetBootstrap",
+    "sha256": "20e10bbc38dc70f3373a3c46ad7101592e5142146828e7008719901b6fa18620",
+    "reference_set": "fullsystem",
+    "objc_classes": 2,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 66,
+    "patch_got_range": [
+      "0x7ff840009000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 40960,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "b467b59ecae7164fcd6a401944bfa6478760629575d11715964c14748156bad7",
+  "manifest_sha256": "8a2852721333c817dfdaf03c2fdcb19da196f3b207ee91975b27b5e85d1b80d6",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "appkit-closure-xcttargetbootstrap-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "d783764774373f9878b13d91d1c46cac5bb65beb18cce4d011ad05b01bda822b",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 39,
+    "nonzero_addends": 0,
+    "got_cells": 66,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/appkit-closure-xcttargetbootstrap-resource-v1-build.log",
+  "log_sha256": "487f6d38eaf1a63e3fc82bd06d515d4561e65defd26e6d3d57690550648cb729"
+}

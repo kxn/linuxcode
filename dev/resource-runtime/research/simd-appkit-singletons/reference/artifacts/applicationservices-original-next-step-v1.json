@@ -1,0 +1,100 @@
+{
+  "diagnostic_only": true,
+  "selected_runtime": false,
+  "actual_missing_symbol": "_kAXElementOrderHorizontalKey",
+  "original_image": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+  "original_sha256": "20e686de4432d3850f436158c0e735348dc33433b40e294f2ab814808d539c48",
+  "original_code_bytes": 0,
+  "original_const_bytes": 80,
+  "original_const_sha256": "34b3ccdeb1de7d182a3d111728aefa3b422c7ec03f55c3cb65745993224aae06",
+  "original_version_symbols": [
+    {
+      "name": "_ApplicationServicesVersionNumber",
+      "type": "0xf",
+      "section": 2,
+      "descriptor": 0,
+      "address": "0x7ff820479948"
+    },
+    {
+      "name": "_ApplicationServicesVersionString",
+      "type": "0xf",
+      "section": 2,
+      "descriptor": 0,
+      "address": "0x7ff820479900"
+    }
+  ],
+  "original_dependency_commands": [
+    [
+      2147483679,
+      "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy"
+    ],
+    [
+      2147483679,
+      "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis"
+    ],
+    [
+      12,
+      "/usr/lib/libSystem.B.dylib"
+    ]
+  ],
+  "original_provider_route": [
+    {
+      "provider": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+      "symbol": "_kAXElementOrderHorizontalKey",
+      "kind": "whole-framework-reexport",
+      "dependency": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices"
+    },
+    {
+      "provider": "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices",
+      "symbol": "_kAXElementOrderHorizontalKey",
+      "kind": "address",
+      "address": "0x7ff840b83c30"
+    }
+  ],
+  "original_route_hashes": {
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices": "20e686de4432d3850f436158c0e735348dc33433b40e294f2ab814808d539c48",
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices": "a611d961ceec71da5f0e2d8a94a6e11320db1dbc48e5521fca73723c2e4aa124"
+  },
+  "next_work": "Extend the strict original reexport-facade validator to the original constant/version-symbol shape, preserve all version data, dependencies and symbol identities, validate with original dyld and damaged controls, and provide the genuine HIServices endpoint and required dependencies. Do not invent AX constants or silently replace resource compilation.",
+  "sources": {
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab",
+    "scripts/original-reexport-facade.py": "56b6c66be96c3787e7c115befec540c77f0ab2297c1906480623dafd9e061995",
+    "scripts/verify-dysymtab-alias-repair.py": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  }
+}

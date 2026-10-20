@@ -1,0 +1,74 @@
+{
+  "target": "appkit-closure-collectionviewcore-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/CollectionViewCore.framework/Versions/A/CollectionViewCore",
+    "sha256": "38799a8e6d424874f36248824d5c86a40f4ff4de55b6c1a5cc63ba80bf84371a",
+    "reference_set": "fullsystem",
+    "objc_classes": 19,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 93,
+    "patch_got_range": [
+      "0x7ffc40005000",
+      "0x7ffc40092000"
+    ]
+  },
+  "original_bytes": 258048,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "42119830e6215f5540af1c244e617929ef544c6e6f23f5dfea4a1a030977b954",
+  "manifest_sha256": "b467b59ecae7164fcd6a401944bfa6478760629575d11715964c14748156bad7",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "appkit-closure-collectionviewcore-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "d783764774373f9878b13d91d1c46cac5bb65beb18cce4d011ad05b01bda822b",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 365,
+    "nonzero_addends": 0,
+    "got_cells": 93,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ffc4008f828",
+          "0x7ffc4008f838"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/appkit-closure-collectionviewcore-resource-v1-build.log",
+  "log_sha256": "921e1600fb6eb5c0ad98e8ec541723082073a7fc59311fafbd394df4d8956b80"
+}

@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/appkit-original-overlay-v1-driver.log",
+  "original_sha256": "d203b434a9fe0bfa18fd2bfe04638dd66c3416cae9de2ca12256f30a8a0ba372",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/extend-resource-framework-overlay.py\", line 49, in <module>\n    assert sha(str(image)) == rebuilt['staged_image_sha256'] == sha(entry['source'])\n           ~~~^^^^^^^^^^^^\n  File \"/home/dl/linuxcode/scripts/extend-resource-framework-overlay.py\", line 20, in <lambda>\n    sha = lambda path: hashlib.sha256((root/path).read_bytes()).hexdigest()\n                                      ~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.13/pathlib/_abc.py\", line 625, in read_bytes\n    with self.open(mode='rb') as f:\n         ~~~~~~~~~^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 539, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/home/dl/linuxcode/runtime/coregraphics-native-v135/frameworks/AppKit.framework/Versions/C/AppKit'\n"
+}

@@ -1,0 +1,84 @@
+{
+  "target": "appkit-closure-textinput-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/TextInput.framework/Versions/A/TextInput",
+    "sha256": "b81b6a5fc4e572e912a42cff62eb109e66ca619e5a56002e0564ec28b8a7b18d",
+    "reference_set": "fullsystem",
+    "objc_classes": 182,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 346,
+    "patch_got_range": [
+      "0x7ff940007000",
+      "0x7ff94007f000"
+    ]
+  },
+  "original_bytes": 6057984,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/InternationalSupport.framework/Versions/A/InternationalSupport",
+    "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+    "/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libsqlite3.dylib",
+    "/System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking",
+    "/System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/usr/lib/libicucore.A.dylib",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO"
+  ],
+  "previous_manifest_sha256": "c5a79e4f7d72b0b79b935174ffada082a3f0f9ec74f9802a732d17347e0ccf61",
+  "manifest_sha256": "f0907faf9bda97db24ca327ec0dd8fb18594b45866a7507e6d2507923681125a",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "appkit-closure-textinput-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "d783764774373f9878b13d91d1c46cac5bb65beb18cce4d011ad05b01bda822b",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 80148,
+    "nonzero_addends": 0,
+    "got_cells": 346,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff94007c070",
+          "0x7ff94007c080",
+          "0x7ff94007d9d0"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/appkit-closure-textinput-resource-v1-build.log",
+  "log_sha256": "9a09ad61e53886c441a5b257dc8bb77024613aab216720a147ca0858b6ac75d6"
+}

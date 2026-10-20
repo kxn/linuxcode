@@ -1,0 +1,71 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 4836,
+      "sha256": "1641da87d82c1c364e3c749afc07e01f50c556757ff69d2b2bea74e76ba7db95"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 204,
+      "sha256": "3f190814709e833eab1e384ed44ec6a5151ed1d59eb9002ccbffc1f155d966ee"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 43,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 48,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 4,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5a0",
+        "first_section_prefix": "0x440",
+        "symbol": "__NSConcreteGlobalBlock"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5f8",
+        "first_section_prefix": "0x440",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x618",
+        "first_section_prefix": "0x440",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x638",
+        "first_section_prefix": "0x440",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-appkit-closure-updatecycle-resource-v1/UpdateCycle': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x13b)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-ugsdnisd/appkit-closure-updatecycle-resource-v1-result.json",
+    "original_validator_sha256": "133130b8c25ce38bcca72b360f060bf08da0defb48237de2e7428aef608c6d5c",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "0d190ab1a391687acf863d0ab88b25ec0df98f056f679d829e04e9f00c2e8a1b",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "91a2fd8a9e176e9cdaffd502b9b52d0d874bfa37ed9312308459e73bc9892002",
+    "config/coregraphics-image-pins.json": "01b1f50540d555c78a425fe64213b81398f74adee3f7c12ec5173c0c59865a17",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/UpdateCycle.framework/Versions/A/UpdateCycle": "4e38fe475dfebae7b0bfd5f71a5a33befa676d75328f5ab5d79d197557dce4b1",
+    "runtime/rebuilt-appkit-closure-updatecycle-resource-v1/UpdateCycle": "5e3ecb2ef12f37ccc289df3dceb341606278bd7cf3ab4bd499ffcdd323c5c48e",
+    "runtime/rebuilt-appkit-closure-updatecycle-resource-v1/reconstruction.json": "99f70ab11f95b1878982821194039fe622a9be38f5a345d4b28b8fd244974987"
+  },
+  "verified": true
+}

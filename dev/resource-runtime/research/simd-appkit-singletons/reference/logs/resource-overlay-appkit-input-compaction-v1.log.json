@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/resource-overlay-appkit-input-compaction-v1.log",
+  "original_sha256": "ecc5402b69400a23c13e8ec76d39f0828a0c75dffcb7894cecf7b58ee48cf50a",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/compact-resource-stage-inputs.py\", line 115, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/home/dl/linuxcode/scripts/compact-resource-stage-inputs.py\", line 112, in main\n    proof=compact(root,args.stage,args.output,resolve)\n  File \"/home/dl/linuxcode/scripts/compact-resource-stage-inputs.py\", line 47, in compact\n    raw=source.read_bytes();report=json.loads(raw);active,kind,parent_key=stage_root(report)\n  File \"/usr/lib/python3.13/pathlib/_abc.py\", line 625, in read_bytes\n    with self.open(mode='rb') as f:\n         ~~~~~~~~~^^^^^^^^^^^\n  File \"/usr/lib/python3.13/pathlib/_local.py\", line 539, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/home/dl/linuxcode/artifacts/resource-framework-overlay-appkit-v1-stage.json'\n"
+}

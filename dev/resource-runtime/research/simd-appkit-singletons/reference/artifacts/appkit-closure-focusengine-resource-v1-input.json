@@ -1,0 +1,63 @@
+{
+  "target": "appkit-closure-focusengine-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/FocusEngine.framework/Versions/A/FocusEngine",
+    "sha256": "33335ad5f3bbffdddec21797539c921cb342e3f40d868c5b2eabf2a92c273c22",
+    "reference_set": "fullsystem",
+    "objc_classes": 65,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 176,
+    "patch_got_range": [
+      "0x7ffc40005000",
+      "0x7ffc40092000"
+    ]
+  },
+  "original_bytes": 569344,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/SubFrameworks/UIUtilities.framework/Versions/A/UIUtilities",
+    "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+    "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+    "/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "6766c1d632318ec9d428e142781bdbd9b2353bc09ae3a320e59e53bc05d4a599",
+  "manifest_sha256": "fb195590c70f71bff3c7fa8514449817808b415f0680b56cfeb0c2a45570a409",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "appkit-closure-focusengine-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "d783764774373f9878b13d91d1c46cac5bb65beb18cce4d011ad05b01bda822b",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 707,
+    "nonzero_addends": 0,
+    "got_cells": 176,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/appkit-closure-focusengine-resource-v1-build.log",
+  "log_sha256": "ee348895ed5fe909793bfdfce6f72d07abf787c1897c06a9b71ab43b678ef7ca"
+}
