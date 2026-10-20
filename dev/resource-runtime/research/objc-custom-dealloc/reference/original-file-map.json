@@ -1,0 +1,986 @@
+{
+  "scripts/build-objc-source.py": {
+    "sha256": "434c8a0a08bf8a21826dd2224e3576de0fa657b082fcae985aa0d2e2ec6d416b",
+    "attachment": "payload/scripts/build-objc-source.py",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "scripts/probe-objc-custom-dealloc.py": {
+    "sha256": "da53228ee4e10b7d9d8f32363c7a35a7d8c2c93e192ae8fce15db2b9fabe7b1e",
+    "attachment": "payload/scripts/probe-objc-custom-dealloc.py",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "scripts/probe-objc-custom-dealloc-regressions.py": {
+    "sha256": "6677af91711e2a3a7c405282f34f00602c009543c3116f8d8438092a0bc5f24e",
+    "attachment": "payload/scripts/probe-objc-custom-dealloc-regressions.py",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "scripts/probe-objc-data-const-regressions.py": {
+    "sha256": "1706c5d72942516ff20b053a8d1d3e1185ae3f4c025051bca96a6c8f0609a1c4",
+    "attachment": "payload/scripts/probe-objc-data-const-regressions.py",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "scripts/capture-resource-tool-null-call.py": {
+    "sha256": "f13fb45bdf9785d417e8a783912bc42e872a76e8ddcee8d8ec8301d6e456f33f",
+    "attachment": "payload/scripts/capture-resource-tool-null-call.py",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "scripts/capture-darling-null-call.py": {
+    "sha256": "44b4854c89e464cccf9015f27048df9c6bbb44f00fb82247c79dd7d15d303554",
+    "attachment": "payload/scripts/capture-darling-null-call.py",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "scripts/symbolicate-darling-stack.py": {
+    "sha256": "252ceb6df8bb8225ccb26de9b08016eee6632d027576329dba994884b802bac0",
+    "attachment": "payload/scripts/symbolicate-darling-stack.py",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "vendor/darling/src/external/objc4/runtime/NSObject.mm": {
+    "sha256": "792929a8ebd04ae619b01ffb98d7d91c4e8c67e7baf7f37a976ca86ba3e140ca",
+    "attachment": "reference/vendor/darling/src/external/objc4/runtime/NSObject.mm.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "vendor/darling/src/external/objc4/runtime/objc-internal.h": {
+    "sha256": "7ba54100c418223968effb8ca3b8c45b469da370219865fd9589916a708bad63",
+    "attachment": "reference/vendor/darling/src/external/objc4/runtime/objc-internal.h.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "vendor/darling/src/external/objc4/runtime/objc-object.h": {
+    "sha256": "adca980b988cfaa347a4e5328c0611058f1ac653f34772eb23627da5f1f21880",
+    "attachment": "reference/vendor/darling/src/external/objc4/runtime/objc-object.h.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "vendor/darling/src/external/objc4/runtime/objc-private.h": {
+    "sha256": "c0b8c5f90aa64f08838f23c24f3ff239eb22e623ae34591fca98f49134caef20",
+    "attachment": "reference/vendor/darling/src/external/objc4/runtime/objc-private.h.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "vendor/darling/src/external/objc4/runtime/objc-runtime-new.h": {
+    "sha256": "506d280c755d92def38027840ffdbb891fe3de19c99b7131f1fc662a1b696774",
+    "attachment": "reference/vendor/darling/src/external/objc4/runtime/objc-runtime-new.h.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "vendor/darling/src/external/objc4/runtime/objc-runtime-new.mm": {
+    "sha256": "70f73c8817b9898ec52c3273981b68b2c1f9a48195d1d76a6b87ceb539b44d28",
+    "attachment": "reference/vendor/darling/src/external/objc4/runtime/objc-runtime-new.mm.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "vendor/darling/src/external/objc4/APPLE_LICENSE": {
+    "sha256": "e5881019d8766c1e88a5fe1dbca4ba40c78011d41fcb18f6e9f50df60182685b",
+    "attachment": "reference/vendor/darling/src/external/objc4/APPLE_LICENSE.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "fixtures/hello/objc-custom-dealloc.m": {
+    "sha256": "c1e2d91289e4e8463480e5dbeca9d459c136a881bbf8bb2dd723079e1ec25c89",
+    "attachment": "payload/fixtures/hello/objc-custom-dealloc.m",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "config/direct-resource-tool-environment-v116.json": {
+    "sha256": "4e38c697bf057b10018449fe550af0030803eeed7ff9b9467491b5c5c69186c3",
+    "attachment": "payload/config/direct-resource-tool-environment-v116.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "config/direct-resource-tool-environment-v117.json": {
+    "sha256": "5a0cb8b915ebef1a4af1eb06af3d4b650f8b29c2c5fbf75fe979038071e57d87",
+    "attachment": "payload/config/direct-resource-tool-environment-v117.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "config/direct-resource-tool-environment-v118.json": {
+    "sha256": "197a1c5b7c9ad2076f2339c78740f1fa8aa60b57db4587996ee763de4a48ec43",
+    "attachment": "payload/config/direct-resource-tool-environment-v118.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "config/direct-resource-tool-environment-v119.json": {
+    "sha256": "17c0b62ba4aa8b846c769138c1503a65c9895166fc18963353715faa5a32e879",
+    "attachment": "payload/config/direct-resource-tool-environment-v119.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "config/unity-ios-cocoapods-v66-build-arguments.json": {
+    "sha256": "7d4c68f205ed2cedee144a9bbfe49df64f9d366ccea846243c420250128a70d6",
+    "attachment": "payload/config/unity-ios-cocoapods-v66-build-arguments.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "config/unity-ios-cocoapods-v72-probe-arguments.json": {
+    "sha256": "0f90631fd52e4e18ef8cc1ce7c2c470d066a27127ccbe67096e4fe242502688d",
+    "attachment": "payload/config/unity-ios-cocoapods-v72-probe-arguments.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-resource-progress-v1.json": {
+    "sha256": "7a0cb7f4e919888f1d914915d648a758c0e47b889a8d8b4a28857bddac430c4b",
+    "attachment": "reference/artifacts/objc-custom-dealloc-resource-progress-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/result.json": {
+    "sha256": "7f104be7a6ac09af9ef76770b35ca8a313fd3319f8274ec9d31b7a221a17b01d",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/missing.log": {
+    "sha256": "1f97e395daafb9d08c6f1a4c83f3be30d28199e21955054b984694eb378b07b4",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/missing.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/nonpointer.log": {
+    "sha256": "168f1e5a5a6418223d7e5f1ad961a5ebd540ba4f2b471253a12d67db772619a8",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/nonpointer.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/raw.log": {
+    "sha256": "9dc67688713afacf97877fd0dfc7a2a44be4be532cb9b0b3d5cd8b45f028dda3",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/raw.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/wrong-count.log": {
+    "sha256": "36ba59dfe480fb19e8ec50e4d0a46984972529882be41e7cd1d4a5ea62dc6aab",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/wrong-count.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/weak-fatal.log": {
+    "sha256": "7aedde54283e543fee19c79ebba053ac934fa8e7b25ab6e6aa7d642ccaa488e5",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/raw-weak-fatal.log": {
+    "sha256": "7fc3591956b4d37b04d0fa8b489c0d3ec41817137139465eaab5316af15de159",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/raw-weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-lv53sbgc/compile.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-lv53sbgc/compile.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-resource-null-call-v1.json": {
+    "sha256": "c9e02cd02b6c5bb7b19c0df67d74ae3e9de7a470132a6a82dc90a2168d9301b1",
+    "attachment": "reference/artifacts/objc-custom-dealloc-resource-null-call-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/result.json": {
+    "sha256": "a5aa5b79d9c4a264c566eb5d12f47d8083f125cecad98129064658db011a5574",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/missing.log": {
+    "sha256": "1f97e395daafb9d08c6f1a4c83f3be30d28199e21955054b984694eb378b07b4",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/missing.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/nonpointer.log": {
+    "sha256": "c13883e8dab07ff9dfa5a3f4cd02ff5c2bcc3f043658c508dca02d100e2fbb1d",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/nonpointer.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/raw.log": {
+    "sha256": "d0250a2e4647b26d29a3b60239d622a2fdad9985219f6864537aa80898e6ce30",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/raw.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/wrong-count.log": {
+    "sha256": "76ebc3e7d60936b97b3cdffa7c8f3cf2dff798bbf0bb5a483657d5faa781b39c",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/wrong-count.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/weak-fatal.log": {
+    "sha256": "aa2382860a2366f46901c70da2d428a4984a21d6a4a888c058d76e38d858bcdf",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/raw-weak-fatal.log": {
+    "sha256": "9fe1d6cb5fc96f71226e51614ec50971be86557ae389df86660e9dbe5447467e",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/raw-weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-6tgvfkio/compile.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-6tgvfkio/compile.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/result.json": {
+    "sha256": "6250dc2334d5b5842e898177df24e0442f857bf79592541e0ebfb22e8d445aab",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/missing.log": {
+    "sha256": "1f97e395daafb9d08c6f1a4c83f3be30d28199e21955054b984694eb378b07b4",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/missing.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/nonpointer.log": {
+    "sha256": "f665d59b9b61016f319cbfda793fdceae6522abca805d5eb412746d65a174abf",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/nonpointer.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/raw.log": {
+    "sha256": "06f046eebe931199d2a30d0290216e1d70ea3ec8f48f4d34b5085da4d3afbae4",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/raw.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/wrong-count.log": {
+    "sha256": "4e9bd698aee39bc3ae6a7f33f5d829e5f5e8ff0c0df03d925f9c27715220de74",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/wrong-count.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/weak-fatal.log": {
+    "sha256": "d859d2b78bd96616c9a1e51c7787b047e32b52e08fbab4cfd4689d965d1ddd9d",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/raw-weak-fatal.log": {
+    "sha256": "d300e10a522c1396f9e59ad1ce39461e3e2a53abfa597deb83ec07430d289c12",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/raw-weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-291gliad/compile.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-291gliad/compile.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-regressions-zvt7p6b5/result.json": {
+    "sha256": "0685a3d46a515fc45646ae9a3bdf5fd7226d0aaa24322e0f7c6f811abba91d48",
+    "attachment": "reference/runtime/objc-custom-dealloc-regressions-zvt7p6b5/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-regressions-zvt7p6b5/direct.log": {
+    "sha256": "cbf34b42b4e4014389abef049c5342af11a269685102ffaf8c4fb6ce277db25a",
+    "attachment": "reference/runtime/objc-custom-dealloc-regressions-zvt7p6b5/direct.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-regressions-zvt7p6b5/helper.log": {
+    "sha256": "cbf34b42b4e4014389abef049c5342af11a269685102ffaf8c4fb6ce277db25a",
+    "attachment": "reference/runtime/objc-custom-dealloc-regressions-zvt7p6b5/helper.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-regressions-zvt7p6b5/enumeration.log": {
+    "sha256": "a4025d1d1522410a4d1eecd9a5d75e0dcf06be3cc22ac518e8e1669e1d4bb67d",
+    "attachment": "reference/runtime/objc-custom-dealloc-regressions-zvt7p6b5/enumeration.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-regressions-zvt7p6b5/signatures.log": {
+    "sha256": "e590b9a10cae7ef2649a2874681355c7a3bf749461dbb00e3ef4e247c7a70f1c",
+    "attachment": "reference/runtime/objc-custom-dealloc-regressions-zvt7p6b5/signatures.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-regressions-zvt7p6b5/tagged.log": {
+    "sha256": "bcc9b46d39ba0287f698f05fe539aaf39f2cc61a8deb7c039a1efda5044f9313",
+    "attachment": "reference/runtime/objc-custom-dealloc-regressions-zvt7p6b5/tagged.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-data-const-regressions-omws9jh_/result.json": {
+    "sha256": "915033e364d470906f944acaa331d84811233df49800d3dd680d661efd143e16",
+    "attachment": "reference/runtime/objc-data-const-regressions-omws9jh_/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-data-const-regressions-omws9jh_/direct.log": {
+    "sha256": "c74059886dc48c26f8c41ae2cab9ce6de3bed3e31c000443262bb27bd217fcff",
+    "attachment": "reference/runtime/objc-data-const-regressions-omws9jh_/direct.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/direct-resource-tools-d8rrrcf2/result.json": {
+    "sha256": "4aaf1c8bae33fd3731ba9572e0a60c64e07c5da81700bb030d7659a9467c2790",
+    "attachment": "reference/runtime/direct-resource-tools-d8rrrcf2/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/direct-resource-tools-d8rrrcf2/actool.log": {
+    "sha256": "78a7824b69cb58dc406eac2d93d0ce260fbed0d2c337a4a1cf8cb74c02f95cd3",
+    "attachment": "reference/runtime/direct-resource-tools-d8rrrcf2/actool.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/direct-resource-tools-d8rrrcf2/ibtool.log": {
+    "sha256": "5ed76d221b3a6b58382eb576c18f3e3b1ed25b5567f7b48a46054b7291ed6c5b",
+    "attachment": "reference/runtime/direct-resource-tools-d8rrrcf2/ibtool.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/direct-resource-tools-uft2tlsv/result.json": {
+    "sha256": "0e0220eece5877724aea05319ce71975b7c49b39a85ec6ea20266d8245586397",
+    "attachment": "reference/runtime/direct-resource-tools-uft2tlsv/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/direct-resource-tools-uft2tlsv/actool.log": {
+    "sha256": "c1a90951d7ba677244a1c70bbfcce4037021ec0b4708d89f66714b5463e49e57",
+    "attachment": "reference/runtime/direct-resource-tools-uft2tlsv/actool.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/direct-resource-tools-uft2tlsv/ibtool.log": {
+    "sha256": "b2faf88e673dd3382ab3a34460dcf41b096e1daac7fd2dca889ba4b09ce9be27",
+    "attachment": "reference/runtime/direct-resource-tools-uft2tlsv/ibtool.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-pzwsxiyk/result.json": {
+    "sha256": "317b37c9aed20de532f06ee30bf6fe2dfc7ad1db697cedeeee467e4d9b2716cf",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-pzwsxiyk/result.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-pzwsxiyk/missing.log": {
+    "sha256": "1f97e395daafb9d08c6f1a4c83f3be30d28199e21955054b984694eb378b07b4",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-pzwsxiyk/missing.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-pzwsxiyk/nonpointer.log": {
+    "sha256": "8808f3d9d4f68ce9d0dc3e97711497b38c3828ac5fb2eaba6df1dbc6e67fb6f3",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-pzwsxiyk/nonpointer.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-pzwsxiyk/raw.log": {
+    "sha256": "7debea042fdb3d90848066695a5809e319f8adc48882928b7c06cedc8bbe6235",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-pzwsxiyk/raw.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-pzwsxiyk/wrong-count.log": {
+    "sha256": "428c126f6f1b1f7b0f83a7d12a4e6e596d75b7833ae59a6aa9e5f2d5f0db9204",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-pzwsxiyk/wrong-count.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-pzwsxiyk/weak-fatal.log": {
+    "sha256": "c2a1739d86ac6e80e14bce9e48cec5105f55fed95eb41d006a10b4a35d703688",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-pzwsxiyk/weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-native-pzwsxiyk/raw-weak-fatal.log": {
+    "sha256": "0b24b4aad9bcd9e3d664805affb73405bc211b9cad79ffd12755951e2097e146",
+    "attachment": "reference/runtime/objc-custom-dealloc-native-pzwsxiyk/raw-weak-fatal.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-automationmode-null-call-v1.json": {
+    "sha256": "041ef74f0cfa43fbfb87ffbe03bc11966ac6cedb17f0deabc5c533abe5c8ea71",
+    "attachment": "reference/artifacts/objc-custom-dealloc-automationmode-null-call-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-export-comparison-v1.json": {
+    "sha256": "c23d987f1d0b26ca7e1c0e3f004101b7523945262729f114a3d90369a67d051f",
+    "attachment": "reference/artifacts/objc-custom-dealloc-export-comparison-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-ibtool-v2-symbolication.json": {
+    "sha256": "4e080032ee0b75e394e270772948183dc848b93d69a81984bd5033a846aceb52",
+    "attachment": "reference/artifacts/objc-custom-dealloc-ibtool-v2-symbolication.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-initiation-source-plan-v1.json": {
+    "sha256": "433c0f1cb98136f322456950604b344d4b43693107f6e4c83e5948ba3138212f",
+    "attachment": "reference/artifacts/objc-custom-dealloc-initiation-source-plan-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-published-build-inputs-v1.json": {
+    "sha256": "e6ac47d14e58b1ff4fa2b507112c7946a24d71c602bd187b47d871cd2834b676",
+    "attachment": "reference/artifacts/objc-custom-dealloc-published-build-inputs-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-resource-null-call-v1-symbolication.json": {
+    "sha256": "33625cf3f0f19d76be2ea8ef199f7e6de425775264f1fecb9ea154dc2bda1e8e",
+    "attachment": "reference/artifacts/objc-custom-dealloc-resource-null-call-v1-symbolication.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-source-publication-equivalence-v1.json": {
+    "sha256": "67da39ace4c2f87fca563850fcee3c65bfcf68bdb8d12a684e4bcd26a578218e",
+    "attachment": "reference/artifacts/objc-custom-dealloc-source-publication-equivalence-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-source-publication-v1.json": {
+    "sha256": "5291142180fb5467a60205c744805c86fd30a97b8d39a60069d8528bb5ffc27e",
+    "attachment": "reference/artifacts/objc-custom-dealloc-source-publication-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-source-v1-build.json": {
+    "sha256": "b43af8dc62cc210fb70c0577d12c44e7882158e48e066c67566c72eca4689c0e",
+    "attachment": "reference/artifacts/objc-custom-dealloc-source-v1-build.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-source-v2-build.json": {
+    "sha256": "58bac651dd943587397ddb7af66b736d7c66c1135d4b4f1bda1ae2e69dc955e7",
+    "attachment": "reference/artifacts/objc-custom-dealloc-source-v2-build.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-source-v3-build.json": {
+    "sha256": "1de6394e56ab1d8ec68dbc3e9a3f7f9424ec038452dc638470ff50c5802f25d1",
+    "attachment": "reference/artifacts/objc-custom-dealloc-source-v3-build.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-source-v4-build.json": {
+    "sha256": "260bfd30f59f576aaf8c28430fd9d6ac1213e54d1cf996ee5882c9fdf26786c2",
+    "attachment": "reference/artifacts/objc-custom-dealloc-source-v4-build.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-v3-v4-object-equivalence-v1.json": {
+    "sha256": "a853e476ce6f821a0a9ae84f9c2a6afb454a27e24241ce79eeebc072d44e8abb",
+    "attachment": "reference/artifacts/objc-custom-dealloc-v3-v4-object-equivalence-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/0-maptable.inputs.json": {
+    "sha256": "83f356e5388e26ddc18795c0614719b5a6584dd3ebb147e900a25574b838bd40",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/0-maptable.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/1-hashtable2.inputs.json": {
+    "sha256": "317a1151f2890923ec9157618a955fd76a35487d37f5a0b55f1c83aa309bf3e8",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/1-hashtable2.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/2-NSObject.inputs.json": {
+    "sha256": "72baf2b8222ac5911ffc79fc8f74e07eb9ff779f578d321a8981e4e9695b412a",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/2-NSObject.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/3-objc-accessors.inputs.json": {
+    "sha256": "803550f6d0842033cebe9cd43c4deb2ab758e6bf850fedf2a9ea0f7a20398c30",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/3-objc-accessors.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/4-objc-auto.inputs.json": {
+    "sha256": "a8ab668087ae4c5b28140431121e22945df6c0e03327c0c542a63bd08caac7c4",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/4-objc-auto.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/5-objc-block-trampolines.inputs.json": {
+    "sha256": "651353d976d39d9dfa7c3130974a60859a83c7af4f8f663760ba70916b891da7",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/5-objc-block-trampolines.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/6-objc-cache.inputs.json": {
+    "sha256": "e57347a8cee8b8ce055a7261c90f3f5623daf75606304b814132f64b6043198e",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/6-objc-cache.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/7-objc-cache-old.inputs.json": {
+    "sha256": "4058d990b760f14d177c31e43bc6cbad543184424fd134318261168cc04c7c6c",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/7-objc-cache-old.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/8-objc-class.inputs.json": {
+    "sha256": "ce70ded6738adc00dba8b865ce79e53d552c3f1dc1a4259ed9a8d3ed58572ab9",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/8-objc-class.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/9-objc-class-old.inputs.json": {
+    "sha256": "3b66681a46d3a40f4462fcad1c98d450b83935e00217c8d4af65160106ffe890",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/9-objc-class-old.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/10-objc-errors.inputs.json": {
+    "sha256": "e3689a9c4f5839ffa553c15ebdc87d5fc81c357a22d749d16befd718b0611e82",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/10-objc-errors.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/11-objc-exception.inputs.json": {
+    "sha256": "f95ee9970f42e9388357e097cd941be28c11bd61740fe7d19a618c1f00689823",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/11-objc-exception.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/12-objc-file.inputs.json": {
+    "sha256": "efc520de9d32373abd77220d74f7a330d1cefe95f3868436bbd67e750ff247c3",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/12-objc-file.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/13-objc-file-old.inputs.json": {
+    "sha256": "3ae338793d6f3921f94d3138d6c6159434c3542b9996c0af63b18b43edb2272c",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/13-objc-file-old.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/14-objc-initialize.inputs.json": {
+    "sha256": "add349282942c8816a45de2c5953ebc669061d5496617edf9f9bb6222f61ef39",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/14-objc-initialize.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/15-objc-layout.inputs.json": {
+    "sha256": "60111277c3e13d3934d8150482efb9eebd7690c4ed02d80d761498afaf49a09a",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/15-objc-layout.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/16-objc-loadmethod.inputs.json": {
+    "sha256": "daa5701cc1d09bb44905e12d209e94002431eeb7cf99e8a8c396d3c705004498",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/16-objc-loadmethod.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/17-objc-load.inputs.json": {
+    "sha256": "12104486db4d16e4d219d4491cfb12ebe3813c1f1487634573dae5881525b7cc",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/17-objc-load.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/18-objc-lockdebug.inputs.json": {
+    "sha256": "97162e025256f0df935887126f09f3825d3e5b4f9f0a1b572b4f4960113ac066",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/18-objc-lockdebug.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/19-objc-opt.inputs.json": {
+    "sha256": "86f5881caaa2f902b465fcc351591b9389d9fad6c8c04cdab28178e499ec8b13",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/19-objc-opt.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/20-objc-os.inputs.json": {
+    "sha256": "631fbf01873b40eeb04414a89d1e3f75e557a044a3e7e4e69c797e853edbda1c",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/20-objc-os.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/21-objc-references.inputs.json": {
+    "sha256": "60f36593bfdd8651acef28131647ca2baa1b8e7f35ad6f5a06b63d6447fd36b5",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/21-objc-references.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/22-objc-runtime.inputs.json": {
+    "sha256": "9e26f2f940999892be00a9e64440916d2a51c7f3fa4e592aa9dac249eff6c821",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/22-objc-runtime.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/23-objc-runtime-new.inputs.json": {
+    "sha256": "879d893386c284277049b206b976ddac94d40b4f2d52a4ec910909d0e8fab624",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/23-objc-runtime-new.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/24-objc-runtime-old.inputs.json": {
+    "sha256": "4167ab5f5b6b126a9655c2253a219a34c150a832938858a517f8e433b29ca86d",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/24-objc-runtime-old.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/25-objc-sel.inputs.json": {
+    "sha256": "5f6851e862d7fb1189b86dbdeb41f78d13352ab399eb821dba59fec330b35bfa",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/25-objc-sel.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/26-objc-sel-old.inputs.json": {
+    "sha256": "8e08a0c29510e103063afe64e432e9afcc0028014363ec6274180f6559fdbab1",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/26-objc-sel-old.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/27-objc-sel-set.inputs.json": {
+    "sha256": "0693bd5fac3bb0cf46005a06a5ecf3003ebd1f7e7736ac50e9e32f7be328a6df",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/27-objc-sel-set.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/28-objc-sync.inputs.json": {
+    "sha256": "577759f8a9568647a52ad711b24fd04f239b65a67010850095371427071f6528",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/28-objc-sync.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/29-objc-typeencoding.inputs.json": {
+    "sha256": "f0d302c6caa7cae76f55922eab99e6f56bbfc5c58e1e52b112c5ef4698d367c0",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/29-objc-typeencoding.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/30-objc-weak.inputs.json": {
+    "sha256": "40576af990de95afb21d1b686b68006fec37df893e9e1fae2f9cb967f170b676",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/30-objc-weak.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/31-objc-zalloc.inputs.json": {
+    "sha256": "c5034e4535fe356511b1cd5ad75d307c078e670155a68d2f68d454147983cb6f",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/31-objc-zalloc.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/32-Object.inputs.json": {
+    "sha256": "98a549bbf280383de8e741df773e42364bb73cd7190d975910aa9a74aa5a0ce9",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/32-Object.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/33-Protocol.inputs.json": {
+    "sha256": "d1b2a2cea8cc1605632d39d2a3dbb3053d93faeb4666df48d8348083c3961502",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/33-Protocol.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/34-objc-blocktramps-arm.inputs.json": {
+    "sha256": "df4cf8b3aeb74cd32ef3ac1b0bedba93495127ca4d50b4c7c834ce4f20e9839f",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/34-objc-blocktramps-arm.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/35-objc-blocktramps-arm64.inputs.json": {
+    "sha256": "068cf25b3841742bfc2eb5dbc546a8b6d29260010e3c9a9d935b1aee11f09911",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/35-objc-blocktramps-arm64.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/36-objc-blocktramps-i386.inputs.json": {
+    "sha256": "6ab2794cf229245060379b862862544112611434bd7cbf58e92c2dfed467041b",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/36-objc-blocktramps-i386.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/37-objc-blocktramps-x86_64.inputs.json": {
+    "sha256": "04549f5a0bc5372dc5bd7bb6bbc21ccb1ce1585cf23dd961a3b1ca4bfeebdc42",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/37-objc-blocktramps-x86_64.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/38-objc-sel-table.inputs.json": {
+    "sha256": "8015a390b584c8d78e94c0eed533ade9b56317ec136dc17d8bcd97cc182dd9c0",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/38-objc-sel-table.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/39-objc-msg-arm.inputs.json": {
+    "sha256": "838729ab3c5eb1eb1ae1110405b135cdea6ac19edef180b1e31d51c4b6fbfcd8",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/39-objc-msg-arm.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/40-objc-msg-arm64.inputs.json": {
+    "sha256": "12c3fd15b7496cb17d2737f7b61f7fb8097b6815fc2a6e34179b191a42829269",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/40-objc-msg-arm64.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/41-objc-msg-i386.inputs.json": {
+    "sha256": "a9f825325cbc94110cd9526154fff75e39d22ccbf97782d4653ab1c1b58e239f",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/41-objc-msg-i386.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/objc-custom-dealloc-source-v4/42-objc-msg-x86_64.inputs.json": {
+    "sha256": "69ec4d1659a2327ff38c8c1f7b4c076873ab6f83d0ad21f115eb3f21b0bdad19",
+    "attachment": "reference/runtime/objc-custom-dealloc-source-v4/42-objc-msg-x86_64.inputs.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-resource-null-call-v1-driver.log": {
+    "sha256": "fb912b9e16fa8e2915d0b7a242d5856d6a9796c1d1e2e5eee17547a2af7590a8",
+    "attachment": "reference/logs/objc-custom-dealloc-resource-null-call-v1-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-resource-null-call-v1.gdb.log": {
+    "sha256": "dc7963ecdbff42c4b34e4ea1e7f048e62e365f54770b01ad956dff18be799104",
+    "attachment": "reference/logs/objc-custom-dealloc-resource-null-call-v1.gdb.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-resource-null-call-v1.maps.log": {
+    "sha256": "8cbc4a12a4e9919bcb17364bf17419c65948be98deb12b4c7285c7f4ad236431",
+    "attachment": "reference/logs/objc-custom-dealloc-resource-null-call-v1.maps.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-ibtool-v2.gdb.log": {
+    "sha256": "b5d5067b227b60c1ff7d630d4a3642f4d2dbccbd050fd46a09145fd53ccca6cf",
+    "attachment": "reference/logs/objc-custom-dealloc-ibtool-v2.gdb.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-ibtool-v2.maps.log": {
+    "sha256": "a5c45394040449448de5637b180ad6f9f94e07bd0def55ff8bff1a71ca8c0e42",
+    "attachment": "reference/logs/objc-custom-dealloc-ibtool-v2.maps.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-ibtool-v2.macho-symbolicated.log": {
+    "sha256": "ac8e6a593ad11c7c5e155b49db16860301d8b2235909bc310c4fd1bdf4ea2718",
+    "attachment": "reference/logs/objc-custom-dealloc-ibtool-v2.macho-symbolicated.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-direct-resource-v1-driver.log": {
+    "sha256": "f53b5cefeb784052667f2dd1b231fc20b7c1cbe37d9c7900dbbf5cb1054fc3ca",
+    "attachment": "reference/logs/objc-custom-dealloc-direct-resource-v1-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-ibtool-capture-v1-driver.log": {
+    "sha256": "d5bc8b61ff9eadf03dc227b8b00cec88e2b637923063fb1f31b4d78c05e0c2ac",
+    "attachment": "reference/logs/objc-custom-dealloc-ibtool-capture-v1-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-ibtool-capture-v2-driver.log": {
+    "sha256": "86e2db6a0367ef0f89d51c678e758b35fcf245d9d515be45831486d3eae323a8",
+    "attachment": "reference/logs/objc-custom-dealloc-ibtool-capture-v2-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-ibtool-symbolication-v1-driver.log": {
+    "sha256": "05a8a966e482b66dbbe3852bd2f7fba95c64002332e221b84813dcf4699bde82",
+    "attachment": "reference/logs/objc-custom-dealloc-ibtool-symbolication-v1-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-ibtool-v2.annotated.log": {
+    "sha256": "01b46744cfd348dd299c00aa207328dca23f6806b21b76bc0c201fa3faac7a60",
+    "attachment": "reference/logs/objc-custom-dealloc-ibtool-v2.annotated.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-native-v1-driver.log": {
+    "sha256": "4826fccfb384be95c46f86ce8752bac8af1c876816da5fc34d1a2e07bfc767c3",
+    "attachment": "reference/logs/objc-custom-dealloc-native-v1-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-native-v2-driver.log": {
+    "sha256": "2868ccdc6f086cba70f7c5f34f8d97030c069aaadff79f57a21fd0b3d842dd14",
+    "attachment": "reference/logs/objc-custom-dealloc-native-v2-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-native-v3-driver.log": {
+    "sha256": "0e9c95ffc68577fff4211855af460d863d741ed90400f6a84d13019d5efd9b44",
+    "attachment": "reference/logs/objc-custom-dealloc-native-v3-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-native-v4-driver.log": {
+    "sha256": "b57c4fb79e97c7029675958683528095cf7a7babfeb51b75679a336d8d488d99",
+    "attachment": "reference/logs/objc-custom-dealloc-native-v4-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-regressions-v1-driver.log": {
+    "sha256": "04eb31a942264a7d995e41f7caa4e7e42a0c0187382af78f6346224c28196634",
+    "attachment": "reference/logs/objc-custom-dealloc-regressions-v1-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-regressions-v2-driver.log": {
+    "sha256": "137333996e0bc30ee4a95bf04df6efa3e11e9adc6c979f473e2846c1f2eb574c",
+    "attachment": "reference/logs/objc-custom-dealloc-regressions-v2-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-resource-null-call-v1.macho-symbolicated.log": {
+    "sha256": "0bcc1cc248ba42d10c067a7741a4d47daf8d50b07e3d98c4fb1e3c96db314895",
+    "attachment": "reference/logs/objc-custom-dealloc-resource-null-call-v1.macho-symbolicated.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-resource-null-capture-driver.log": {
+    "sha256": "2857e7efffe865f8c87d042655117f610e7baef057bd083451faecfb724b2a76",
+    "attachment": "reference/logs/objc-custom-dealloc-resource-null-capture-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-resource-null-symbolication-driver.log": {
+    "sha256": "eaf53a12e61185bcdc11bec73253b88d4d8d18fd0ab276f0ee63edb1208e04ed",
+    "attachment": "reference/logs/objc-custom-dealloc-resource-null-symbolication-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-source-v1-build.log": {
+    "sha256": "a59304229c8faed828762b2c40e721b3fffb9c5e8d99145058455095d57a99f5",
+    "attachment": "reference/logs/objc-custom-dealloc-source-v1-build.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-source-v2-build.log": {
+    "sha256": "3e46fe2be0d6f5cf069021a3ce14e3496e15895f012eccbcdcb10db83e704a4e",
+    "attachment": "reference/logs/objc-custom-dealloc-source-v2-build.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-source-v3-build.log": {
+    "sha256": "8ec9b9ffc6dd8d19e845852b398ee9ff7d61223a2ba5e3b6a58cde26836a42a9",
+    "attachment": "reference/logs/objc-custom-dealloc-source-v3-build.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-source-v4-build.log": {
+    "sha256": "2a5d9855227469a5a566a0b5ac8a947075b76c10544baf9f6365d6a47e8ebd6c",
+    "attachment": "reference/logs/objc-custom-dealloc-source-v4-build.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/objc-custom-dealloc-unity-v66-null-call-driver.log": {
+    "sha256": "d5bc8b61ff9eadf03dc227b8b00cec88e2b637923063fb1f31b4d78c05e0c2ac",
+    "attachment": "reference/logs/objc-custom-dealloc-unity-v66-null-call-driver.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/event-qc-installer-tests-v1.log": {
+    "sha256": "57572b5eee931dcfcf7461f473ecbd9d8b704dc32a003ca6fff8799447883b69",
+    "attachment": "reference/logs/event-qc-installer-tests-v1.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "logs/event-qc-overlay-tests-v1.log": {
+    "sha256": "4652575ae136a7fb7eff6cc793947da124f1500c43b70fda9c6d976a3961e9cd",
+    "attachment": "reference/logs/event-qc-overlay-tests-v1.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-1df391a909c9.json": {
+    "sha256": "6b47a86691d564ae328cd7d83ade663e93d0380b922725e33bad6450a5fcc091",
+    "attachment": "reference/artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-1df391a909c9.json",
+    "wrapped_utf8": false,
+    "summary_only": true
+  },
+  "logs/xcode-service-runtime-tool-dispatch-diagnostic-build-1df391a909c9.log": {
+    "sha256": "6d46a1e9a89f0e18d11005c027df033a7701e7d914d858b1f4c0d0ee9080d4dd",
+    "attachment": "reference/logs/xcode-service-runtime-tool-dispatch-diagnostic-build-1df391a909c9.log.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "artifacts/objc-custom-dealloc-source-history-entries-v1.json": {
+    "sha256": "2f933e4cae4d96cc8de3683d0c91e4e2db9861a99229e46a30f73d78e9ec38d8",
+    "attachment": "reference/artifacts/objc-custom-dealloc-source-history-entries-v1.json",
+    "wrapped_utf8": false,
+    "summary_only": false
+  },
+  "runtime/source-input-history/6d6bacec18535f54351ec58236a40e148d90355ea9042354274f66eaab5e9de9": {
+    "sha256": "6d6bacec18535f54351ec58236a40e148d90355ea9042354274f66eaab5e9de9",
+    "attachment": "reference/runtime/source-input-history/6d6bacec18535f54351ec58236a40e148d90355ea9042354274f66eaab5e9de9.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/807a99f340cdd647008cf1f6d2dcf78815648d99eff88091fbbc572fb7f49494": {
+    "sha256": "807a99f340cdd647008cf1f6d2dcf78815648d99eff88091fbbc572fb7f49494",
+    "attachment": "reference/runtime/source-input-history/807a99f340cdd647008cf1f6d2dcf78815648d99eff88091fbbc572fb7f49494.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/9afd4947bd8bc0503f6b620c945b57b8f92ff46f0f2620191e0ddbddf3937a9c": {
+    "sha256": "9afd4947bd8bc0503f6b620c945b57b8f92ff46f0f2620191e0ddbddf3937a9c",
+    "attachment": "reference/runtime/source-input-history/9afd4947bd8bc0503f6b620c945b57b8f92ff46f0f2620191e0ddbddf3937a9c.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/31b4b2b0faad247789aabb1c6210a5f1fc94bf36b7fb7e2e510cbf824fcd3da1": {
+    "sha256": "31b4b2b0faad247789aabb1c6210a5f1fc94bf36b7fb7e2e510cbf824fcd3da1",
+    "attachment": "reference/runtime/source-input-history/31b4b2b0faad247789aabb1c6210a5f1fc94bf36b7fb7e2e510cbf824fcd3da1.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/f560d13d10f072e688ecdbc257cc4b35de8b519b5c2977054f87b19237bfdeef": {
+    "sha256": "f560d13d10f072e688ecdbc257cc4b35de8b519b5c2977054f87b19237bfdeef",
+    "attachment": "reference/runtime/source-input-history/f560d13d10f072e688ecdbc257cc4b35de8b519b5c2977054f87b19237bfdeef.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/73004ac17f43c2c4ff30dde179564b6d32dd136dbfb3f347314ba52f809067ad": {
+    "sha256": "73004ac17f43c2c4ff30dde179564b6d32dd136dbfb3f347314ba52f809067ad",
+    "attachment": "reference/runtime/source-input-history/73004ac17f43c2c4ff30dde179564b6d32dd136dbfb3f347314ba52f809067ad.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/24d989c830d065b415c47f0907273c6757261ce0cf439462356a4badf4a6f8c6": {
+    "sha256": "24d989c830d065b415c47f0907273c6757261ce0cf439462356a4badf4a6f8c6",
+    "attachment": "reference/runtime/source-input-history/24d989c830d065b415c47f0907273c6757261ce0cf439462356a4badf4a6f8c6.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/fcd55c1c25310eefd11b2c4ee3ef7823f9224541bffecad170f889900d1aa32e": {
+    "sha256": "fcd55c1c25310eefd11b2c4ee3ef7823f9224541bffecad170f889900d1aa32e",
+    "attachment": "reference/runtime/source-input-history/fcd55c1c25310eefd11b2c4ee3ef7823f9224541bffecad170f889900d1aa32e.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/5f63999b22b5cfd05f830560140b28e28dc6c20ada41e4b536fdddd590178dca": {
+    "sha256": "5f63999b22b5cfd05f830560140b28e28dc6c20ada41e4b536fdddd590178dca",
+    "attachment": "reference/runtime/source-input-history/5f63999b22b5cfd05f830560140b28e28dc6c20ada41e4b536fdddd590178dca.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  },
+  "runtime/source-input-history/f88e6ce2f18bf83751cc5634cb80d7e8256d1ab40af8a52046a3f7122b5b21b4": {
+    "sha256": "f88e6ce2f18bf83751cc5634cb80d7e8256d1ab40af8a52046a3f7122b5b21b4",
+    "attachment": "reference/runtime/source-input-history/f88e6ce2f18bf83751cc5634cb80d7e8256d1ab40af8a52046a3f7122b5b21b4.json",
+    "wrapped_utf8": true,
+    "summary_only": false
+  }
+}

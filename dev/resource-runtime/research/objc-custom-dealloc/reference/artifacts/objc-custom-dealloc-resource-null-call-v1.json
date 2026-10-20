@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-direct-resource-tools.py",
+    "--stage",
+    "artifacts/private-procfs-v11-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v119.json"
+  ],
+  "outer_status": 1,
+  "capture": {
+    "pid": 111839,
+    "gdb_status": 0,
+    "gdb_log": "logs/objc-custom-dealloc-resource-null-call-v1.gdb.log",
+    "maps": "logs/objc-custom-dealloc-resource-null-call-v1.maps.log"
+  },
+  "log": "logs/objc-custom-dealloc-resource-null-call-v1-driver.log",
+  "log_sha256": "fb912b9e16fa8e2915d0b7a242d5856d6a9796c1d1e2e5eee17547a2af7590a8",
+  "source_sha256": "f13fb45bdf9785d417e8a783912bc42e872a76e8ddcee8d8ec8301d6e456f33f"
+}

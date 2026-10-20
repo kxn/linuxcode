@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[EventKit 与 Swift QuartzCore 检查点](dev/resource-runtime/research/eventkit-swift-quartzcore/README.md)恢复三个原版映像，读取真实通知常量，并用原版 Swift 编译器验证 23 项帧率范围行为。完整 Unity/CocoaPods 构建当前停在 `__class_setCustomDeallocInitiation`；仍无 CompileC 或最终 App。
+最新的[Objective-C 自定义析构检查点](dev/resource-runtime/research/objc-custom-dealloc/README.md)移植苹果开源运行时接口，两种 ISA 各 1,429 项原生检查和五项既有回归通过。原版资源工具随后发生空地址调用，完整 Unity 工程仍无 CompileC 或最终 App。
+
+此前的[EventKit 与 Swift QuartzCore 检查点](dev/resource-runtime/research/eventkit-swift-quartzcore/README.md)恢复三个原版映像，读取真实通知常量，并用原版 Swift 编译器验证 23 项帧率范围行为。完整 Unity/CocoaPods 构建当前停在 `__class_setCustomDeallocInitiation`；仍无 CompileC 或最终 App。
 
 此前的[CommunicationTrust 与 AppleAccount 检查点](dev/resource-runtime/research/communicationtrust-appleaccount/README.md)恢复五个原版映像，验证真实只读 UUID，并用 NSError 和原版 getter 核验实例变量布局。完整 Unity/CocoaPods 构建当前停在 EventKit 通知常量；仍无 CompileC 或最终 App。
 

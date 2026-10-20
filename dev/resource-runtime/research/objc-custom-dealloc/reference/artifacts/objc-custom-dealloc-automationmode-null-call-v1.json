@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "captured_fault": "artifacts/objc-custom-dealloc-resource-null-call-v1.json",
+  "actual_stack_top_return": "0x7f136bc4fffb",
+  "original_caller_vmaddr": "0x37ff6",
+  "original_return_vmaddr": "0x37ffb",
+  "original_call_stub_vmaddr": "0x43480",
+  "original_stub_bytes": "ff2582bb0100",
+  "original_import_pointer_vmaddr": "0x5f008",
+  "original_import": "_XAMRegisterAutomationModeChangeHandler",
+  "original_provider": "/System/Library/PrivateFrameworks/AutomationMode.framework/Versions/A/AutomationMode",
+  "original_import_is_weak": true,
+  "original_import_library_ordinal": 1,
+  "actual_fault_PC": 0,
+  "provider_not_in_captured_maps": true,
+  "provider_file_exists": true,
+  "provider_file_sha256": "b9ee15d9d4370ba65729bd9955cbc2ebf4576317f46880a7a971b1d12ad2d9ea",
+  "provider_exports": {
+    "_XAMIsAutomationModeEnabled": [
+      "address",
+      140720310304494,
+      0
+    ],
+    "_XAMRegisterAutomationModeChangeHandler": [
+      "address",
+      140720310304231,
+      0
+    ]
+  },
+  "provider_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/LocalAuthentication.framework/Versions/A/LocalAuthentication"
+  ],
+  "XCT_binary_sha256": "e0814069f386457496b18e9766f99e07317b960faded20466ae1e690c55d2064",
+  "real_API_execution_verified": false,
+  "next_work": "Restore the original AutomationMode provider and its actual dependency closure; do not replace the registration API with a no-op."
+}

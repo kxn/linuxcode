@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-20T08:34:46.263490+00:00",
+  "classification": "progress",
+  "full_goal_complete": false,
+  "configuration": "config/direct-resource-tool-environment-v119.json",
+  "source_build": "artifacts/objc-custom-dealloc-source-v4-build.json",
+  "source_publication": "artifacts/objc-custom-dealloc-source-publication-v1.json",
+  "source_commit": "ebeed2c3e13ffcaab199e82723dc01e8ed59048d",
+  "published_build_inputs": "artifacts/objc-custom-dealloc-published-build-inputs-v1.json",
+  "native_probe": "runtime/objc-custom-dealloc-native-lv53sbgc/result.json",
+  "native_positive_modes": [
+    "nonpointer",
+    "raw"
+  ],
+  "checks_per_positive": 1429,
+  "negative_controls": [
+    "missing",
+    "wrong-count",
+    "weak-fatal",
+    "raw-weak-fatal"
+  ],
+  "regressions": "runtime/objc-custom-dealloc-regressions-zvt7p6b5/result.json",
+  "regression_cases": 5,
+  "regression_build": "artifacts/objc-custom-dealloc-source-v3-build.json",
+  "all_43_v3_v4_objects_identical": true,
+  "object_equivalence": "artifacts/objc-custom-dealloc-v3-v4-object-equivalence-v1.json",
+  "previous_exports_preserved": 771,
+  "new_exports": 773,
+  "original_API_source_available": true,
+  "policy_storage": "unused class_rw_t bit 24; no object/class/cache structure enlargement",
+  "direct_resource_probe_v3": "runtime/direct-resource-tools-d8rrrcf2/result.json",
+  "direct_resource_probe_v4": "runtime/direct-resource-tools-uft2tlsv/result.json",
+  "null_call_capture": "artifacts/objc-custom-dealloc-resource-null-call-v1.json",
+  "full_build": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-1df391a909c9.json",
+  "full_build_configuration": "config/direct-resource-tool-environment-v118.json",
+  "full_build_status": 65,
+  "full_build_native_status": [
+    "65"
+  ],
+  "full_build_targets": 5,
+  "UTI_preflight_verified": true,
+  "compile_c_task_lines": 0,
+  "products": {
+    "uEmuera.app/uEmuera": false,
+    "UnityFramework.framework/UnityFramework": false,
+    "AFNetworking/libAFNetworking.a": false
+  },
+  "resource_compilation_verified": false,
+  "full_Unity_UE_App_build_and_signing_verified": false,
+  "default_installer_promoted": false,
+  "latest_actual_blocker": "Original XCTAutomationSession calls weak import _XAMRegisterAutomationModeChangeHandler through a null slot because AutomationMode.framework is not loaded; direct native status 139. Complete Unity resource version discovery fails.",
+  "crash_root_cause_verified": true,
+  "next_work": "Restore original AutomationMode.framework and its real dependency closure; do not replace _XAMRegisterAutomationModeChangeHandler with a no-op. Rerun original tools and complete Unity/UE resource compilation, linking and signing."
+}
