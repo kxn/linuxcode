@@ -1,0 +1,77 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/simdisk-fault-v3.gdb.log",
+  "raw_sha256": "351e9a053adff15cf60be1b7dec3aabed816ac2fdba3190ecdf674b59bb9f16d",
+  "maps": "logs/simdisk-fault-v3.maps.log",
+  "maps_sha256": "488735ab3c24f84c89198578fe161e4f35a6ecf0ef99e2819e71432749124e1c",
+  "output": "logs/simdisk-fault-v3.nlist-symbolicated.log",
+  "output_sha256": "da67789653da489d62e78af4a44f6b167dad6dbaf6c9605d8397bab5caa3a068",
+  "images": {
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_kernel.dylib": {
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2278
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_pthread.dylib": {
+      "sha256": "e316828ec94dfc937c8638376ae4250ca6210ed7606ee96db0c541fc1e9205f0",
+      "slice_offset": 4096,
+      "defined_nlist_symbols": 337
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libunwind.dylib": {
+      "sha256": "8a31d61e28b841d578597156edaa6247633200ebf5fd78c91ee298f1e419d918",
+      "slice_offset": 4096,
+      "defined_nlist_symbols": 297
+    },
+    "runtime/cxxabi-primary-exception-v3/libraries/libc++abi.dylib": {
+      "sha256": "32361052c306214dbc5c71bdc8110f5c7866c44e7098c1aebead51c6989b91ae",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2407
+    },
+    "runtime/objc-custom-dealloc-source-v4/libobjc.A.dylib": {
+      "sha256": "e2d0171c086b308eaae3573af23e6a6b79384890f54ac6442e43f53455ed63b0",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1493
+    },
+    "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation": {
+      "sha256": "5007842d25682120326541352006cbd192872c4c15f414d50fc66058a30661af",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 95375
+    },
+    "runtime/resource-framework-overlay-coresim-diskmanagement-v1/frameworks/DiskImages2.framework/Versions/A/DiskImages2": {
+      "sha256": "e06ee6cf4902fc643298e6d3b805023d8ba1f344b1bf14ab62a9c0615f199c90",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 19038
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/bin/simdiskimaged": {
+      "sha256": "cddcb108706e187a7274bd4949523b3b8b12d39953c37a2ff98f7e7f9657920f",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 1
+    },
+    "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib": {
+      "sha256": "c1156cf07fe461366e63b9de62c302c7c1b2347e96be4c81876e8936937e0c31",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 5260
+    },
+    "runtime/resource-ne-agent-v1/libraries/libSystem.B.dylib": {
+      "sha256": "911009b735b4726f9e5283b3af178d80f380ec569a65b8a75fbce9204eeafe3e",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 238
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_c.dylib": {
+      "sha256": "b1a578ba173b705843e113f99348623f8923a57424ee2aac13c13617677ac6e3",
+      "slice_offset": 4096,
+      "defined_nlist_symbols": 2640
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libdyld.dylib": {
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3504
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/simulatortrampoline-fault-v2.gdb.log",
+  "raw_sha256": "cafc7df16991499b44184e6de8a8f3426df12e82825037326e44b3d468a6cea8",
+  "maps": "logs/simulatortrampoline-fault-v2.maps.log",
+  "maps_sha256": "b62569b303f5979b40eb342d7ec9ab9f66300536f42231bf213741d9daa00184",
+  "output": "logs/simulatortrampoline-fault-v2.nlist-symbolicated.log",
+  "output_sha256": "0eaa0c6ab034bf3b46964a9059e49ee3c70afb2fc0099fb167a69eb7d87d4c99",
+  "images": {
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_kernel.dylib": {
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2278
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_pthread.dylib": {
+      "sha256": "e316828ec94dfc937c8638376ae4250ca6210ed7606ee96db0c541fc1e9205f0",
+      "slice_offset": 4096,
+      "defined_nlist_symbols": 337
+    },
+    "runtime/resource-ne-agent-v1/libraries/libSystem.B.dylib": {
+      "sha256": "911009b735b4726f9e5283b3af178d80f380ec569a65b8a75fbce9204eeafe3e",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 238
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/state/prefix/usr/lib/swift/libswiftC6.dylib": {
+      "sha256": "81c43d3e6a600fe2121fbc9dc7fd818e01948470871b1b39e6d522304e0768b8",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 38814
+    },
+    "runtime/resource-framework-overlay-coresim-diskmanagement-v1/frameworks/AppKit.framework/Versions/C/AppKit": {
+      "sha256": "e307c42a55528ea3f7d07d7d274c6a73521eddf971288447c45b70906cc19566",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 143608
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libxpc.dylib": {
+      "sha256": "a49b5316b79eb73ceec2485c2775bc78111c1a2852f1b446c4fb20f71c2e75b2",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1577
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimulatorTrampoline.xpc/Contents/MacOS/SimulatorTrampoline": {
+      "sha256": "085dcf257194bd71d7b85cafe1bcdd8661ac1f292e09d21f81ef9cf9f372abe8",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 2
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libdyld.dylib": {
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3504
+    }
+  }
+}

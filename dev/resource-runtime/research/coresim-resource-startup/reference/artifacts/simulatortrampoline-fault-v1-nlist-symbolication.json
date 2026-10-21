@@ -1,0 +1,42 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/simulatortrampoline-fault-v1.gdb.log",
+  "raw_sha256": "a40316a3aaaec28e0260af7ceb88747b172e47f9701b1dd88386653cd57e58bb",
+  "maps": "logs/simulatortrampoline-fault-v1.maps.log",
+  "maps_sha256": "859a59ab97b20b87952fce3d0615e909b9a787ef772df0a0cb30777c0517556b",
+  "output": "logs/simulatortrampoline-fault-v1.nlist-symbolicated.log",
+  "output_sha256": "cd01006ab73a6e41572ff289f6d9a949bb3488dd9ff9871c319ba899a1605457",
+  "images": {
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_kernel.dylib": {
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2278
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_pthread.dylib": {
+      "sha256": "e316828ec94dfc937c8638376ae4250ca6210ed7606ee96db0c541fc1e9205f0",
+      "slice_offset": 4096,
+      "defined_nlist_symbols": 337
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libdispatch.dylib": {
+      "sha256": "40943e1618204de49237e5bafe8f186409489dd7cfb4d51a3db07d4218500d69",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1624
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libxpc.dylib": {
+      "sha256": "a49b5316b79eb73ceec2485c2775bc78111c1a2852f1b446c4fb20f71c2e75b2",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1577
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimulatorTrampoline.xpc/Contents/MacOS/SimulatorTrampoline": {
+      "sha256": "085dcf257194bd71d7b85cafe1bcdd8661ac1f292e09d21f81ef9cf9f372abe8",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 2
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libdyld.dylib": {
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3504
+    }
+  }
+}

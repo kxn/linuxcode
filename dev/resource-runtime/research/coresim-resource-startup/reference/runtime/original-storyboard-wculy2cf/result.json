@@ -1,0 +1,179 @@
+{
+  "service_volume_control": {
+    "diagnostic_only": true,
+    "volume_manager_enabled": false,
+    "service_arguments": [
+      "/Volumes/SystemRoot/workspace/runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService",
+      "-EnableVolumeManager",
+      "NO"
+    ],
+    "build_commands": [
+      [
+        "clang-19",
+        "-target",
+        "x86_64-apple-macos11",
+        "-isysroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Wno-deprecated-declarations",
+        "-c",
+        "/home/dl/linuxcode/fixtures/hello/coresim-service-volume-control.c",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-wculy2cf/control.o"
+      ],
+      [
+        "ld64.lld-19",
+        "-arch",
+        "x86_64",
+        "-platform_version",
+        "macos",
+        "11",
+        "11",
+        "-syslibroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-lSystem",
+        "/home/dl/linuxcode/runtime/original-storyboard-wculy2cf/control.o",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-wculy2cf/control"
+      ]
+    ]
+  },
+  "disk_services": {
+    "daemons": [
+      {
+        "original": "runtime/recovery/macOS Base System/usr/libexec/configd",
+        "original_sha256": "947a50045f0295b395c931c37e2b95bcc725af90a8fb388e055bf66cd5697867",
+        "original_plist": "runtime/recovery/macOS Base System/System/Library/LaunchDaemons/com.apple.configd.plist",
+        "original_plist_sha256": "7339a81983195c5ce7cf8abc726e0528e101817f1c8c0ce499585de710fc4103",
+        "job": "runtime/original-storyboard-wculy2cf/configd.plist",
+        "job_sha256": "28d2e4877238adad4fe9d1db537b9abbd22964a7bb4ed5d9abc266cfcc60c588",
+        "log": "runtime/original-storyboard-wculy2cf/configd.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "original": "runtime/recovery/macOS Base System/usr/libexec/diskarbitrationd",
+        "original_sha256": "4787901aa67bdeef7b939367b6a79944fa0a0bd208a2b429c5277847badbf4f7",
+        "original_plist": "runtime/recovery/macOS Base System/System/Library/LaunchDaemons/com.apple.diskarbitrationd.plist",
+        "original_plist_sha256": "5fbbd9768df8de59adab9eb35239a42b5a0da9c26b3cad8be5e2afecba02810a",
+        "job": "runtime/original-storyboard-wculy2cf/diskarbitrationd.plist",
+        "job_sha256": "875dfb8c24b5b250d09eeea31d01ec4e1587a937d303598d10370235b14379ea",
+        "log": "runtime/original-storyboard-wculy2cf/diskarbitrationd.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "client_log": "runtime/original-storyboard-wculy2cf/da-client.log",
+    "client_build_commands": [
+      [
+        "clang-19",
+        "-target",
+        "x86_64-apple-macos11",
+        "-isysroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Wno-deprecated-declarations",
+        "-c",
+        "/home/dl/linuxcode/fixtures/hello/diskarbitration-session-ready.c",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-wculy2cf/da-client.o"
+      ],
+      [
+        "ld64.lld-19",
+        "-arch",
+        "x86_64",
+        "-platform_version",
+        "macos",
+        "11",
+        "11",
+        "-syslibroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-lSystem",
+        "-framework",
+        "CoreFoundation",
+        "-framework",
+        "DiskArbitration",
+        "/home/dl/linuxcode/runtime/original-storyboard-wculy2cf/da-client.o",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-wculy2cf/da-client"
+      ]
+    ],
+    "client_log_sha256": "8687c088d902dbb57f325d875687b6d737b8a99e8b6b26404616299aad769495",
+    "native_session_verified": true
+  },
+  "trace_launch_jobs": true,
+  "trace_os_log": false,
+  "job_state": null,
+  "timeout": 180,
+  "verified": false,
+  "outer_status": -9,
+  "native_statuses": [
+    "255"
+  ],
+  "configuration": "config/direct-resource-tool-environment-v137.json",
+  "stage": "artifacts/private-procfs-auditsession21-stage.json",
+  "arguments": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/ibtool",
+    "--errors",
+    "--warnings",
+    "--notices",
+    "--module",
+    "uEmuera",
+    "--output-partial-info-plist",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-wculy2cf/SBPartialInfo.plist",
+    "--auto-activate-custom-fonts",
+    "--target-device",
+    "iphone",
+    "--target-device",
+    "ipad",
+    "--minimum-deployment-target",
+    "13.0",
+    "--output-format",
+    "human-readable-text",
+    "/Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard",
+    "--compilation-directory",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-wculy2cf/compiled"
+  ],
+  "products": {},
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/audit-session-runtime-21/darlingserver",
+      "sha256": "385d8c350ac0600a39e5139f34d8a7b421fc938ad1cbe654ccd86579ce9a2ef4"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/audit-session-runtime-21/libxpc.dylib",
+      "sha256": "a49b5316b79eb73ceec2485c2775bc78111c1a2852f1b446c4fb20f71c2e75b2"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/audit-session-runtime-21/launchd",
+      "sha256": "d747d0b81e3f338c37a8cd0041d85bb14ec725dbb8be816258549c7aeddac24a"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/audit-session-runtime-21/libsystem_kernel.dylib",
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/audit-session-runtime-21/libquarantine.dylib",
+      "sha256": "f5d4ce528e6497057c2b5716d20f10a4a8fd63db2dce3245023a4311b93efac5"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/audit-session-runtime-21/libsystem_sandbox.dylib",
+      "sha256": "29d0e03f98463ac1d908c81e3dedf5cb7c092c6d85bb647cf409e55122030242"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/audit-session-runtime-21/libdyld.dylib",
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b"
+    }
+  },
+  "log": "runtime/original-storyboard-wculy2cf/run.log",
+  "log_sha256": "7f77e6564da1d81b4e9461bada99a10e834d8dfb7543a58a9465810f11e1107a",
+  "files": {
+    "scripts/probe-original-storyboard.py": "bb08479e802bd7049a642d5a3c5fab5ffaff38378dcb01c3937b5a951fc8c260",
+    "runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard": "f7e84eadb6ad8fd9bad498073c246d8326397681f50bfdd8cb7fdb73aee4b3f1",
+    "config/direct-resource-tool-environment-v137.json": "16604efccf6d7fb7c16d24d6254483d59790d76ad7dfb4431d8804b722e40e2d",
+    "artifacts/private-procfs-auditsession21-stage.json": "20014b597d026e8a7a389b178f0213f5e039e3ac97b99e25aee94e4b75c5776e",
+    "runtime/original-storyboard-wculy2cf/configd.plist": "28d2e4877238adad4fe9d1db537b9abbd22964a7bb4ed5d9abc266cfcc60c588",
+    "runtime/original-storyboard-wculy2cf/diskarbitrationd.plist": "875dfb8c24b5b250d09eeea31d01ec4e1587a937d303598d10370235b14379ea",
+    "fixtures/hello/diskarbitration-session-ready.c": "ddef91782b318a3b898c2418d123d4c6f2a7438decabce76785c680935f04889",
+    "fixtures/hello/coresim-service-volume-control.c": "ca1b0e6dddd757177d82b90cf762c8a6e86b5ecfd857579c14a5083343f8892b",
+    "runtime/original-storyboard-wculy2cf/run.sh": "bc90c69415e71e21477a0952c63e9023f95d7c20e7a6ceff5ec3c3b8d50feb4a"
+  },
+  "independent_storyboard_semantics_verified": false,
+  "full_goal_complete": false
+}

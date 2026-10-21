@@ -1,0 +1,67 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/simdisk-first-exception-v1.gdb.log",
+  "raw_sha256": "64023cbe00c97d2f2c2920082bcf0a37365583d377747fe9dab7e5a23ede6dac",
+  "maps": "logs/simdisk-first-exception-v1.maps.log",
+  "maps_sha256": "4823814c0daf8f43a97ca29d86234295f01f55f1b8fd784b5d7254934e3e0b02",
+  "output": "logs/simdisk-first-exception-v1.nlist-symbolicated.log",
+  "output_sha256": "ac68950fc162dcd3d51c69175cb120cb75ec24b7a79e4f2b2a34c64c474f22b0",
+  "images": {
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_kernel.dylib": {
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2278
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/objc-custom-dealloc-source-v4/libobjc.A.dylib": {
+      "sha256": "e2d0171c086b308eaae3573af23e6a6b79384890f54ac6442e43f53455ed63b0",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1493
+    },
+    "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation": {
+      "sha256": "5007842d25682120326541352006cbd192872c4c15f414d50fc66058a30661af",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 95375
+    },
+    "runtime/resource-framework-overlay-coresim-diskmanagement-v1/frameworks/DiskImages2.framework/Versions/A/DiskImages2": {
+      "sha256": "e06ee6cf4902fc643298e6d3b805023d8ba1f344b1bf14ab62a9c0615f199c90",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 19038
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/bin/simdiskimaged": {
+      "sha256": "cddcb108706e187a7274bd4949523b3b8b12d39953c37a2ff98f7e7f9657920f",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 1
+    },
+    "runtime/state/prefix/usr/lib/swift/libswift_Concurrency.dylib": {
+      "sha256": "c1156cf07fe461366e63b9de62c302c7c1b2347e96be4c81876e8936937e0c31",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 5260
+    },
+    "runtime/resource-ne-agent-v1/libraries/libSystem.B.dylib": {
+      "sha256": "911009b735b4726f9e5283b3af178d80f380ec569a65b8a75fbce9204eeafe3e",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 238
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_pthread.dylib": {
+      "sha256": "e316828ec94dfc937c8638376ae4250ca6210ed7606ee96db0c541fc1e9205f0",
+      "slice_offset": 4096,
+      "defined_nlist_symbols": 337
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libsystem_c.dylib": {
+      "sha256": "b1a578ba173b705843e113f99348623f8923a57424ee2aac13c13617677ac6e3",
+      "slice_offset": 4096,
+      "defined_nlist_symbols": 2640
+    },
+    "runtime/audit-session-runtime-21/darling-root/usr/lib/system/libdyld.dylib": {
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3504
+    }
+  }
+}

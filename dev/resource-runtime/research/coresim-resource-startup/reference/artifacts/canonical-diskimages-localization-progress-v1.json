@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-21T03:30:51.517642+00:00",
+  "verified": true,
+  "files": {
+    "scripts/stage-canonical-resource-framework.py": "7b5dbf06a0125ab3cf5355c87bb208c579b7535f3f218aab022e309804505c75",
+    "scripts/probe-diskimages-error-localization.py": "d1c2bfdaf471dea78f67d3e759c0a91b7cc115503f64266e0cc5c5590e7d56b1",
+    "fixtures/hello/diskimages-error-localization.m": "b1661d56524cb08aba05766f8969dd188d0c71b4789bca99381b9fd18a2f71ad",
+    "runtime/diskimages-error-localization-bzdha6d8/result.json": "0db7535afcf4a73d5ced8ecc6a0f8119891e0db356f3301138eca38cf69f8dc1",
+    "runtime/diskimages-error-localization-pe5myuy5/result.json": "15b8110cb15adf38511ce8c0f179d1b99db375712e9aabc8b980d066352d03f5",
+    "artifacts/private-procfs-auditsession21-stage.json": "20014b597d026e8a7a389b178f0213f5e039e3ac97b99e25aee94e4b75c5776e",
+    "artifacts/private-procfs-auditsession22-stage.json": "701d33a8cc65743e6a364f185550ed4b00dcaa180488ca406193891d7d07d2bd",
+    "artifacts/simdisk-first-exception-v1-nlist-symbolication.json": "8df651a73215bf3e036189a27fa803116c2ee0d8f772a80976ce0d7460c7b125"
+  },
+  "negative_native": "runtime/diskimages-error-localization-bzdha6d8/result.json",
+  "positive_native": "runtime/diskimages-error-localization-pe5myuy5/result.json",
+  "canonical_bundle": "/System/Library/PrivateFrameworks/DiskImages2.framework",
+  "actual_original_error_helper": "DIError.frameworkBundle uses fileURLWithPath of this original canonical path, then bundleWithURL. Loader overrides alone do not populate this resource lookup.",
+  "original_executable_bytes_unchanged": true,
+  "canonical_framework_files_copied": 5,
+  "original_DIError_cases": [
+    0,
+    1,
+    100,
+    152,
+    153,
+    157,
+    -1
+  ],
+  "all_seven_descriptions_constructed_without_exceptions": true,
+  "IOKit_disk_controller_implemented": false,
+  "Swift_async_exception_unwind_fixed": false,
+  "original_Storyboard_rerun_pending": true,
+  "original_Storyboard_verified": false,
+  "full_goal_complete": false
+}
