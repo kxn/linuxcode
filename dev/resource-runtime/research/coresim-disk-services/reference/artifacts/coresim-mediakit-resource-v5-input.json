@@ -1,0 +1,113 @@
+{
+  "target": "coresim-mediakit-resource-v5",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit",
+    "sha256": "882dd6f4766932174c5f9a95fee9f8f3055b8c667c2396437067a4db98ea4f1b",
+    "reference_set": "fullsystem",
+    "objc_classes": 0,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib",
+      "__platform_strchr": "/usr/lib/libSystem.B.dylib",
+      "_wait4": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 294,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ],
+    "original_indirect_stub_imports": [
+      {
+        "symbol": "_wait4",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "target": "0x7ff802e6ba54",
+        "slots": [
+          "0x7ff8400561b0"
+        ]
+      }
+    ]
+  },
+  "original_bytes": 258048,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "5b4f3892b9890c43d937e1cc1b9b60eae61403e8005817264f5d9ed4ee907bb2",
+  "manifest_sha256": "30f2e146a7b623f454658e4cf5a6e952d30930eebc5d1442e734dd53f2134f13",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "coresim-mediakit-resource-v5",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "233f765ba12b0683e617d8c99dc8aa8551b6d408113b25ecf31c2c49bd52af74",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "parent_target": "coresim-mediakit-resource-v1",
+  "exact_import_audit": "artifacts/coresim-mediakit-resource-v1-import-audit-v4.json",
+  "exact_import_audit_sha256": "2046698f5560ddb2dd9e2a727bc5c4d63e04329b8469582dba44a927bc3ad203",
+  "typed_class_aliases": [],
+  "explicit_reexports": {
+    "chains": [],
+    "original_provider_sha256": {}
+  },
+  "typed_pooled_imports": [
+    {
+      "kind": "original-indirect-symbol-and-stub-GOT",
+      "selected": [
+        "_wait4",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "target": "0x7ff802e6ba54",
+      "slots": [
+        "0x7ff8400561b0"
+      ],
+      "stubs": [
+        {
+          "stub": "0x7ff81ccd4050",
+          "stub_sha256": "38fb9c3f5e67f4acf28bb4dbdab59209c4bb175010b11d7b57643338de8cf3be",
+          "slot": "0x7ff8400561b0",
+          "symbol_index": 862,
+          "symbol": "_wait4",
+          "ordinal": 5,
+          "provider": "/usr/lib/libSystem.B.dylib",
+          "target": "0x7ff802e6ba54"
+        }
+      ],
+      "original_file_sha256": {
+        "/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit": "882dd6f4766932174c5f9a95fee9f8f3055b8c667c2396437067a4db98ea4f1b",
+        "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4"
+      }
+    }
+  ],
+  "pooled_import_validator_sha256": "258fb2bfb5ccb11a39654ffa58dde374175eac8d911649c1457d891736ce67a5",
+  "original_patch_contract": {
+    "original_records": 267,
+    "nonzero_addends": 0,
+    "got_cells": 294,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/coresim-mediakit-resource-v5-build.log",
+  "log_sha256": "4ab1bb9706632f5b6bde99486eebe84cdbe68202f7bf7893309522c1045d99ed"
+}

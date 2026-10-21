@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-21T03:11:24.603368+00:00",
+  "verified_format_and_original_code": true,
+  "targets": {
+    "coresim-diskimages2-resource-v3": {
+      "report": "artifacts/coresim-diskimages2-resource-v3-independent-inspection-v2.json",
+      "sha256": "66ff0fccc1316d921cc1204e80ec5f60cd58330cde9ec4d8e0114756cbf7d18e",
+      "GOT_cells": 840,
+      "serialized_bindings": 10661
+    },
+    "coresim-mediakit-resource-v5": {
+      "report": "artifacts/coresim-mediakit-resource-v5-independent-inspection-v2.json",
+      "sha256": "85794937d694f22d786e12cb83cf79dbd4368754bb87fa50d7895e0e45b4a23e",
+      "GOT_cells": 295,
+      "serialized_bindings": 563
+    },
+    "coresim-apfs-resource-v1": {
+      "report": "artifacts/coresim-apfs-resource-v1-independent-inspection-v2.json",
+      "sha256": "6afd1a051faa431cebfbb4937c992d8f443ab3ba802c777c5077f09175d1aabc",
+      "GOT_cells": 291,
+      "serialized_bindings": 457
+    },
+    "coresim-diskimages-resource-v1": {
+      "report": "artifacts/coresim-diskimages-resource-v1-independent-inspection-v2.json",
+      "sha256": "573d7fa84b90e8864d5704701ed3f7e717c288aee4b60d08ea91c1532377a44a",
+      "GOT_cells": 773,
+      "serialized_bindings": 1961
+    },
+    "coresim-diskmanagement-resource-v1": {
+      "report": "artifacts/coresim-diskmanagement-resource-v1-independent-inspection-v1.json",
+      "sha256": "e9e8102beaa865c259da0d24db831eb030ed790605066fdce872b0041020e8cf",
+      "GOT_cells": 629,
+      "serialized_bindings": 5280
+    }
+  },
+  "original_Apple_validation": [
+    "runtime/original-dyld-validation-iokd9av3/result.json",
+    "runtime/original-dyld-validation-batch-fdyzir5s/result.json",
+    "runtime/original-dyld-validation-yt546qyk/result.json"
+  ],
+  "original_indirect_stub_positive_and_six_negative_controls": "runtime/original-stub-import-controls-4a9tib5s/result.json",
+  "existing_inspector_four_regressions": "logs/preserved-patch-got-inspector-indirect-stub-regression-v1.log",
+  "job_environment_native": "runtime/launch-job-lifecycle-1ll8iepc/result.json",
+  "libxpc_publication": "artifacts/xpc-job-environment-source-publication-v1.json",
+  "original_volume_control": "runtime/original-storyboard-szvtrlru/result.json",
+  "service_volume_control_diagnostic_only": true,
+  "current_configuration": "config/direct-resource-tool-environment-v136.json",
+  "current_runtime_stage": "artifacts/private-procfs-auditsession21-stage.json",
+  "actual_new_dependency_load_pending": false,
+  "original_storyboard_verified": false,
+  "full_Unity_App_built": false,
+  "full_goal_complete": false,
+  "actual_new_dependency_load": "runtime/original-storyboard-safoqm4i/result.json",
+  "original_simdiskimaged_reached_Swift_ImageManager": true,
+  "original_simdiskimaged_current_error": "SimDiskImageError.diskArbitrationUnavailable at ImageManager.swift:793",
+  "original_service_created_listener": true,
+  "original_service_listener_activation_verified": false,
+  "disk_service_reuse_reference": "artifacts/iokitd-matching-progress.json",
+  "disk_services_original_Storyboards_probe_pending": false,
+  "disk_services_original_Storyboards_probe": "runtime/original-storyboard-rgm6uoa4/result.json",
+  "original_DASession_created_in_current_candidate": true,
+  "original_diskarbitration_unavailable_error_avoided": true,
+  "DiskManagement_stub_called": "DMManager.setDefaultDASession:",
+  "stub_proven_exit_cause": false,
+  "current_original_service_wait": "SimDiskImageManager.serviceVersionWithError -> source XPC synchronous reply wait",
+  "original_service_live_stack": "artifacts/coresim-service-appmain-v1-nlist-symbolication.json",
+  "current_storyboard_compile_complete": false,
+  "source_availability_check": "artifacts/xpc-availability-source-publication-v1.json",
+  "native_availability_check": "runtime/availability-version-3uxg0rqk/result.json",
+  "native_availability_cases": 14,
+  "latest_original_Storyboard": "runtime/original-storyboard-4zj0cyhv/result.json",
+  "latest_original_Storyboard_outer_status": -9,
+  "latest_original_Storyboard_products": {},
+  "DiskManagement_original_full_framework_loaded": true,
+  "DiskManagement_previous_stub_no_longer_called": true,
+  "original_Storyboard_result": "Timed out waiting for service response; no compilation output",
+  "simdisk_exit_cause_not_established": true,
+  "known_system_version_discrepancy": "SystemVersion.plist 26.6.2; kern.osproductversion 26.2. API tests use independent sysctl reference."
+}

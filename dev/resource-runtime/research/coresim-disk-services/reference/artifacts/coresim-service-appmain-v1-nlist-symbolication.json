@@ -1,0 +1,47 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/coresim-service-appmain-v1.gdb.log",
+  "raw_sha256": "f4800c2cc3ba1cfb846bb595c542ed93ec4ea6886a7f5ff07710bd485f249a7b",
+  "maps": "logs/coresim-service-appmain-v1.maps.log",
+  "maps_sha256": "a95d6441183b66f37dee5ac3f16e5efc6edd2561c1afa107bdfc59170f48443e",
+  "output": "logs/coresim-service-appmain-v1.nlist-symbolicated.log",
+  "output_sha256": "4d970c01fcb066b37cf454e0efd5dce3c1d638f5d0810e931b712b60b29b52fa",
+  "images": {
+    "runtime/audit-session-runtime-20/darling-root/usr/lib/system/libsystem_kernel.dylib": {
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2278
+    },
+    "runtime/resource-ne-agent-v1/libraries/libSystem.B.dylib": {
+      "sha256": "911009b735b4726f9e5283b3af178d80f380ec569a65b8a75fbce9204eeafe3e",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 238
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/audit-session-runtime-20/darling-root/usr/lib/system/libxpc.dylib": {
+      "sha256": "a10d8188c42a265535f85d2f9eafb0a5990881d44682a4ff331892d454d9a885",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1577
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator": {
+      "sha256": "f83201afebc582cdf0fa0b54b668a15a6981c86efd42d37f38b85cddf4dbce4b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 4168
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService": {
+      "sha256": "e7306181996a708d3a5e59f397dbb009a13aeca0f36257ab0a2daf0e4102fbb0",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 9
+    },
+    "runtime/audit-session-runtime-20/darling-root/usr/lib/system/libdyld.dylib": {
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3504
+    }
+  }
+}

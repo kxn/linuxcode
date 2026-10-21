@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "positive_original_stub": {
+    "kind": "original-indirect-symbol-and-stub-GOT",
+    "selected": [
+      "_wait4",
+      "/usr/lib/libSystem.B.dylib"
+    ],
+    "target": "0x7ff802e6ba54",
+    "slots": [
+      "0x7ff8400561b0"
+    ],
+    "stubs": [
+      {
+        "stub": "0x7ff81ccd4050",
+        "stub_sha256": "38fb9c3f5e67f4acf28bb4dbdab59209c4bb175010b11d7b57643338de8cf3be",
+        "slot": "0x7ff8400561b0",
+        "symbol_index": 862,
+        "symbol": "_wait4",
+        "ordinal": 5,
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "target": "0x7ff802e6ba54"
+      }
+    ],
+    "original_file_sha256": {
+      "/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit": "882dd6f4766932174c5f9a95fee9f8f3055b8c667c2396437067a4db98ea4f1b",
+      "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4"
+    }
+  },
+  "negative_cases": [
+    "same_address_different_original_symbol",
+    "wrong_declared_dependency_ordinal",
+    "wrong_implementation_address",
+    "unrelated_GOT_slot",
+    "changed_original_symbol_ordinal",
+    "truncated_original_load_commands"
+  ],
+  "negative_count": 6,
+  "source_files": {
+    "scripts/test-original-stub-import.py": "74fb84b0d9f5f63bbda2a1a07a30f92c71d7cf52e38eb7bcd7805bb8b76125bd",
+    "scripts/verify-original-stub-import.py": "e577bd19ed4f66e84cf382d4a5b0fe694315f5da6199b9350c94c2a5585e4910",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab"
+  },
+  "no_image_emitted": true,
+  "full_goal_complete": false
+}

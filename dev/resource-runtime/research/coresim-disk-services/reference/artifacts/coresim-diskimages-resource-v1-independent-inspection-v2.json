@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 506260,
+      "sha256": "564407a7d908b631f9331a6c83c9e32fe3cb0430fac27025c446b22fdeb13755"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3462,
+      "sha256": "a78e103a221f322bf0ecb8e0597c58f85d7d789e25f9db2007c53a818fba039c"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 773,
+  "nonzero_addends_verified": 123,
+  "serialized_bindings": 1961,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 5,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 41,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x11680",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x116a0",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x116c0",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x116e0",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x11700",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x11720",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x11740",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x11760",
+        "first_section_prefix": "0xd20",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coresim-diskimages-resource-v1/DiskImages': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xdc24)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-fdyzir5s/coresim-diskimages-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xdc24",
+        "segment": "__DATA_CONST",
+        "offset": "0x11680",
+        "actual_address": "0x2318d680",
+        "LLVM_section_base_address": "0x2318e3a0",
+        "reported_error": "not in section",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "original_validator_sha256": "1466a68fdbf9f03090baae23cc36f6bdd70bffd2919d6965a07f40b39d5a875e",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "e67e0bd382a5a8270ae5e9f6ba88274365052e15230774793a184168c2c012e4",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "bc34fe36ee5a05e95e67801cad91b4d8e8917dca6e06898eebc992e3c9d58188",
+    "config/coregraphics-image-pins.json": "30f2e146a7b623f454658e4cf5a6e952d30930eebc5d1442e734dd53f2134f13",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages": "b857107dfa74a4e05c13ff4c2ce0e0ea6e48bbdb03931b5982687b437499ab09",
+    "runtime/rebuilt-coresim-diskimages-resource-v1/DiskImages": "f55d57a30a567176619ed176072ec48afe96597ef3100efa2211833579eca191",
+    "runtime/rebuilt-coresim-diskimages-resource-v1/reconstruction.json": "d98b4403d06acb1305c86e74c38b779c9eed062dc3550e43defde45b1a119943"
+  },
+  "verified": true
+}

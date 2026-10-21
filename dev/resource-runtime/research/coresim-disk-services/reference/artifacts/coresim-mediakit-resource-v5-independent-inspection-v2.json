@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 189030,
+      "sha256": "ce1fb30357778419f577ce942625a15f39488e3f8109223d045ed6da215db3f0"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1302,
+      "sha256": "833161d364fab68f8854f3f77120201a40ae55b851322cb44b5dc1317c387539"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 295,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 563,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 20,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x43d0",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x43f0",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4410",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4430",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4450",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4470",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4490",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x44b0",
+        "first_section_prefix": "0x290",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coresim-mediakit-resource-v5/MediaKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x32c7)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-fdyzir5s/coresim-mediakit-resource-v5-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x32c7",
+        "segment": "__DATA_CONST",
+        "offset": "0x43d0",
+        "actual_address": "0x25f043d0",
+        "LLVM_section_base_address": "0x25f04660",
+        "reported_error": "not in section",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "original_validator_sha256": "8774dc4fdf01d2640fb90fadb96deab49e7e48379acece2b5f1d2ab8cf4af8da",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "ba0ec70847a670abfc6a76c4d73fd9f0b6953823198267419b5abcf7d0542e15",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "bc34fe36ee5a05e95e67801cad91b4d8e8917dca6e06898eebc992e3c9d58188",
+    "config/coregraphics-image-pins.json": "30f2e146a7b623f454658e4cf5a6e952d30930eebc5d1442e734dd53f2134f13",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit": "882dd6f4766932174c5f9a95fee9f8f3055b8c667c2396437067a4db98ea4f1b",
+    "runtime/rebuilt-coresim-mediakit-resource-v5/MediaKit": "2d5ac8a149718a92a502c1887499ebed684b70255e6a08123e84a713c01de068",
+    "runtime/rebuilt-coresim-mediakit-resource-v5/reconstruction.json": "d6cc6d244e65b186b6650300e804d9dbcf176f220f5438cc970e4fa304d8ee77"
+  },
+  "verified": true
+}

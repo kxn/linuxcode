@@ -1,0 +1,84 @@
+{
+  "target": "coresim-diskimages-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages",
+    "sha256": "b857107dfa74a4e05c13ff4c2ce0e0ea6e48bbdb03931b5982687b437499ab09",
+    "reference_set": "fullsystem",
+    "objc_classes": 1,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_imports": {
+      "__platform_memmove": "/usr/lib/libSystem.B.dylib"
+    },
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 123,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 773,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840058000"
+    ]
+  },
+  "original_bytes": 978944,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+    "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+    "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libcurl.4.dylib",
+    "/usr/lib/libbz2.1.0.dylib",
+    "/usr/lib/libcompression.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+    "/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libSystem.B.dylib"
+  ],
+  "previous_manifest_sha256": "b632394d160a6998ac8846b48a7cc78c09634676161d41234c9cc1e8880c84a7",
+  "manifest_sha256": "888048ab554a3cc9b2acd5dab2b2ebd6d4c9664cb7a621dbf543049643e66158",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "coresim-diskimages-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 1187,
+    "nonzero_addends": 123,
+    "got_cells": 773,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [
+      {
+        "symbol": "__platform_memmove",
+        "provider": "/usr/lib/libSystem.B.dylib",
+        "implementation": "0x7ff802eb3f72",
+        "slots": [
+          "0x7ff840053ed8",
+          "0x7ff840053ee8",
+          "0x7ff840056db8"
+        ]
+      }
+    ],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/coresim-diskimages-resource-v1-build.log",
+  "log_sha256": "27b2c04aba13f7f75bfd23b90cb6f4def9b6f78625174a280b90fc7c93f60c93"
+}

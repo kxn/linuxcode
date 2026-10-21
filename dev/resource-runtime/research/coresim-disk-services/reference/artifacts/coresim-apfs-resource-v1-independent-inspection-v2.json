@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 394134,
+      "sha256": "b1b76a850bc502dd5c925fde4af7529bb049379a6a48df94f78eecfea924135e"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1320,
+      "sha256": "6b98b4c777138d24b58e24a2890156ca434a6d9d6036c0bace24312d63224c9a"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 291,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 457,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 1,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 61,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2460",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2480",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x24a0",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x24c0",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x24e0",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2500",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2520",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2540",
+        "first_section_prefix": "0x7a0",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coresim-apfs-resource-v1/APFS': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x19f4)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-fdyzir5s/coresim-apfs-resource-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x19f4",
+        "segment": "__DATA_CONST",
+        "offset": "0x2460",
+        "actual_address": "0x2d31f460",
+        "LLVM_section_base_address": "0x2d31fc00",
+        "reported_error": "not in section",
+        "symbol": "___CFConstantStringClassReference"
+      }
+    ],
+    "original_validator_sha256": "fb249b7806c563f876e64955866700fd8f3f789d6e2ad498df242983fd7432e9",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "ac72c0a7ef4c9144fd6422a69a77055e495b92a3fc94e4195ce4477d2b47d710",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "bc34fe36ee5a05e95e67801cad91b4d8e8917dca6e06898eebc992e3c9d58188",
+    "config/coregraphics-image-pins.json": "30f2e146a7b623f454658e4cf5a6e952d30930eebc5d1442e734dd53f2134f13",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS": "0c10605f974301ed68d760b4ba00d05d10d2472980464639c9cb8ff6499d3811",
+    "runtime/rebuilt-coresim-apfs-resource-v1/APFS": "a549eaec0ecca598199cab6f6b6b8bfe12f7e13080051ac5218e45cedc52c649",
+    "runtime/rebuilt-coresim-apfs-resource-v1/reconstruction.json": "2340bdde6a1908287a862890d122af1f625c682db5110744038eeeaa30ee44f3"
+  },
+  "verified": true
+}

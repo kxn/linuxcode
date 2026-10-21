@@ -1,0 +1,67 @@
+{
+  "target": "coresim-mediakit-resource-v1",
+  "original_image_sha256": "882dd6f4766932174c5f9a95fee9f8f3055b8c667c2396437067a4db98ea4f1b",
+  "missing_imports_sha256": "748080eb29f5c509710f0e2c09d3a5b3e6ac00633a37b67abb802a2d0b17d4b5",
+  "original_dependency_sha256": {
+    "/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS": "0c10605f974301ed68d760b4ba00d05d10d2472980464639c9cb8ff6499d3811",
+    "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit": "7571eb0a4972a96b487ff2e85ba77e20240cb837ebedfd61a4bc08fbd7b8af4c",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation": "a8d086449ef65851a190c862ffbd57d663b2b731bac9126c35e501cfe8ecbfd8",
+    "/usr/lib/libz.1.dylib": "ab00ecffb979a896656e9322c54f06db7eb472973173154cbe157ea7766a6145",
+    "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4"
+  },
+  "unresolved": 0,
+  "rows": [
+    {
+      "target": "0x7ff802e6ba54",
+      "slots": [
+        "0x7ff8400561b0"
+      ],
+      "exports": [],
+      "selected": [
+        "_wait4",
+        "/usr/lib/libSystem.B.dylib"
+      ],
+      "same_class_alias": false,
+      "original_stub_import_proof": {
+        "kind": "original-indirect-symbol-and-stub-GOT",
+        "selected": [
+          "_wait4",
+          "/usr/lib/libSystem.B.dylib"
+        ],
+        "target": "0x7ff802e6ba54",
+        "slots": [
+          "0x7ff8400561b0"
+        ],
+        "stubs": [
+          {
+            "stub": "0x7ff81ccd4050",
+            "stub_sha256": "38fb9c3f5e67f4acf28bb4dbdab59209c4bb175010b11d7b57643338de8cf3be",
+            "slot": "0x7ff8400561b0",
+            "symbol_index": 862,
+            "symbol": "_wait4",
+            "ordinal": 5,
+            "provider": "/usr/lib/libSystem.B.dylib",
+            "target": "0x7ff802e6ba54"
+          }
+        ],
+        "original_file_sha256": {
+          "/System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit": "882dd6f4766932174c5f9a95fee9f8f3055b8c667c2396437067a4db98ea4f1b",
+          "/usr/lib/libSystem.B.dylib": "e02a4d561f3c3a371e746dafae9fbd35ad5a7fef427d62149391a53a4d0b3eb4"
+        }
+      }
+    }
+  ],
+  "sources": {
+    "scripts/audit-resource-image-imports.py": "45e99acca5a635520307511e5dd6c481d7d295f7a92f8f98f65ea3eaaf6e5082",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab",
+    "scripts/exact-reexport-imports.py": "8ad41d171ad3edd04bffa16d0a1188f106ac372e987dc5fec135cb26ea2cb516",
+    "scripts/verify-original-stub-import.py": "e577bd19ed4f66e84cf382d4a5b0fe694315f5da6199b9350c94c2a5585e4910",
+    "scripts/equivalent-original-reexports.py": "297269736ce23b8c28a9e2f78f61efca23ea320f50e3e069860f12dc848d2771"
+  },
+  "image_emitted": false,
+  "runtime_execution_verified": false,
+  "explicit_reexports": {
+    "chains": [],
+    "original_provider_sha256": {}
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 670122,
+      "sha256": "7eb1de968860966f8b4e7bd6e11f942435cb3edba80c0291e319cf29675f8047"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2460,
+      "sha256": "e2fcf625d48fa990f97e0c2b65c7043d6f3887f1c1e8f0e035bc0b50749c0d81"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 629,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 5280,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 66,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b240",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b258",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b270",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b288",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b2a0",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b2b8",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b2d0",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2b2e8",
+        "first_section_prefix": "0x650",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coresim-diskmanagement-resource-v1/DiskManagement': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x318a7)\n",
+    "original_validator": "runtime/original-dyld-validation-yt546qyk/result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x318a7",
+        "segment": "__DATA_CONST",
+        "offset": "0x2b240",
+        "actual_address": "0x25efc240",
+        "LLVM_section_base_address": "0x25efc890",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "f997e2c832cde7fd9d1621940c9d8c8d0fa803da6b67ef810627b9f41593f411",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "0f2bcbf2286be3ee0b17e8402e5da0322db317b28f468e8bc77f12684e3dce5f",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "bc34fe36ee5a05e95e67801cad91b4d8e8917dca6e06898eebc992e3c9d58188",
+    "config/coregraphics-image-pins.json": "bd8cbcfc4b7406c45daf33e8ae4309ea6142318ee0580dfcd6c36c6d11920be6",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/DiskManagement.framework/Versions/A/DiskManagement": "806413b154c86bc639d6a9d4b46b8cc16fb08f2651cb8a4fdbe82a509f595dc4",
+    "runtime/rebuilt-coresim-diskmanagement-resource-v1/DiskManagement": "adfff7d04a0ef835daddcde1d51bb176ba14f56b07df55700f2287fcfc69ccd9",
+    "runtime/rebuilt-coresim-diskmanagement-resource-v1/reconstruction.json": "72201c9a0c54e0618bfa93c199065dbb10864c38515f441419130e80ebc97fcb"
+  },
+  "verified": true
+}

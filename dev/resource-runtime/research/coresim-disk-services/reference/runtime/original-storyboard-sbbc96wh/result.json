@@ -1,0 +1,176 @@
+{
+  "service_volume_control": {
+    "diagnostic_only": true,
+    "volume_manager_enabled": false,
+    "service_arguments": [
+      "/Volumes/SystemRoot/workspace/runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService",
+      "-EnableVolumeManager",
+      "NO"
+    ],
+    "build_commands": [
+      [
+        "clang-19",
+        "-target",
+        "x86_64-apple-macos11",
+        "-isysroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Wno-deprecated-declarations",
+        "-c",
+        "/home/dl/linuxcode/fixtures/hello/coresim-service-volume-control.c",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-sbbc96wh/control.o"
+      ],
+      [
+        "ld64.lld-19",
+        "-arch",
+        "x86_64",
+        "-platform_version",
+        "macos",
+        "11",
+        "11",
+        "-syslibroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-lSystem",
+        "/home/dl/linuxcode/runtime/original-storyboard-sbbc96wh/control.o",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-sbbc96wh/control"
+      ]
+    ]
+  },
+  "disk_services": {
+    "daemons": [
+      {
+        "original": "runtime/recovery/macOS Base System/usr/libexec/configd",
+        "original_sha256": "947a50045f0295b395c931c37e2b95bcc725af90a8fb388e055bf66cd5697867",
+        "original_plist": "runtime/recovery/macOS Base System/System/Library/LaunchDaemons/com.apple.configd.plist",
+        "original_plist_sha256": "7339a81983195c5ce7cf8abc726e0528e101817f1c8c0ce499585de710fc4103",
+        "job": "runtime/original-storyboard-sbbc96wh/configd.plist",
+        "job_sha256": "3b8580c42ed692d337bf93d3c56bd52b6f5d34aa4afbfd1592c1f619ae50174d",
+        "log": "runtime/original-storyboard-sbbc96wh/configd.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "original": "runtime/recovery/macOS Base System/usr/libexec/diskarbitrationd",
+        "original_sha256": "4787901aa67bdeef7b939367b6a79944fa0a0bd208a2b429c5277847badbf4f7",
+        "original_plist": "runtime/recovery/macOS Base System/System/Library/LaunchDaemons/com.apple.diskarbitrationd.plist",
+        "original_plist_sha256": "5fbbd9768df8de59adab9eb35239a42b5a0da9c26b3cad8be5e2afecba02810a",
+        "job": "runtime/original-storyboard-sbbc96wh/diskarbitrationd.plist",
+        "job_sha256": "579e6c339f0344017130cd695bf7a72c998ecd76dc00db4e910ee78cc7047402",
+        "log": "runtime/original-storyboard-sbbc96wh/diskarbitrationd.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "client_log": "runtime/original-storyboard-sbbc96wh/da-client.log",
+    "client_build_commands": [
+      [
+        "clang-19",
+        "-target",
+        "x86_64-apple-macos11",
+        "-isysroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Wno-deprecated-declarations",
+        "-c",
+        "/home/dl/linuxcode/fixtures/hello/diskarbitration-session-ready.c",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-sbbc96wh/da-client.o"
+      ],
+      [
+        "ld64.lld-19",
+        "-arch",
+        "x86_64",
+        "-platform_version",
+        "macos",
+        "11",
+        "11",
+        "-syslibroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-lSystem",
+        "-framework",
+        "CoreFoundation",
+        "-framework",
+        "DiskArbitration",
+        "/home/dl/linuxcode/runtime/original-storyboard-sbbc96wh/da-client.o",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-sbbc96wh/da-client"
+      ]
+    ],
+    "client_log_sha256": "8687c088d902dbb57f325d875687b6d737b8a99e8b6b26404616299aad769495",
+    "native_session_verified": true
+  },
+  "trace_launch_jobs": true,
+  "trace_os_log": false,
+  "timeout": 180,
+  "verified": false,
+  "outer_status": -9,
+  "native_statuses": [],
+  "configuration": "config/direct-resource-tool-environment-v136.json",
+  "stage": "artifacts/private-procfs-auditsession20-stage.json",
+  "arguments": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/ibtool",
+    "--errors",
+    "--warnings",
+    "--notices",
+    "--module",
+    "uEmuera",
+    "--output-partial-info-plist",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-sbbc96wh/SBPartialInfo.plist",
+    "--auto-activate-custom-fonts",
+    "--target-device",
+    "iphone",
+    "--target-device",
+    "ipad",
+    "--minimum-deployment-target",
+    "13.0",
+    "--output-format",
+    "human-readable-text",
+    "/Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard",
+    "--compilation-directory",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-sbbc96wh/compiled"
+  ],
+  "products": {},
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/audit-session-runtime-20/darlingserver",
+      "sha256": "385d8c350ac0600a39e5139f34d8a7b421fc938ad1cbe654ccd86579ce9a2ef4"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/audit-session-runtime-20/libxpc.dylib",
+      "sha256": "a10d8188c42a265535f85d2f9eafb0a5990881d44682a4ff331892d454d9a885"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/audit-session-runtime-20/launchd",
+      "sha256": "d747d0b81e3f338c37a8cd0041d85bb14ec725dbb8be816258549c7aeddac24a"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/audit-session-runtime-20/libsystem_kernel.dylib",
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/audit-session-runtime-20/libquarantine.dylib",
+      "sha256": "f5d4ce528e6497057c2b5716d20f10a4a8fd63db2dce3245023a4311b93efac5"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/audit-session-runtime-20/libsystem_sandbox.dylib",
+      "sha256": "29d0e03f98463ac1d908c81e3dedf5cb7c092c6d85bb647cf409e55122030242"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/audit-session-runtime-20/libdyld.dylib",
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b"
+    }
+  },
+  "log": "runtime/original-storyboard-sbbc96wh/run.log",
+  "log_sha256": "1aaf9d9f6e274c3bf833fdcbedef19a6a7837cffea0a11a7a87385eabf5b2574",
+  "files": {
+    "scripts/probe-original-storyboard.py": "e54cc84c963a3a68db712e2a9f7f87d2ebebfa9e102230e674bb874dd1898619",
+    "runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard": "f7e84eadb6ad8fd9bad498073c246d8326397681f50bfdd8cb7fdb73aee4b3f1",
+    "config/direct-resource-tool-environment-v136.json": "ab06dc6f04b3b428d8eb024537ff274fc739a6ff9b92c39e019dfaa5616f77d8",
+    "artifacts/private-procfs-auditsession20-stage.json": "3f72235198da9a7f74b858a28df206f2c4c707a4e9e2180735869c572cb927a1",
+    "runtime/original-storyboard-sbbc96wh/configd.plist": "3b8580c42ed692d337bf93d3c56bd52b6f5d34aa4afbfd1592c1f619ae50174d",
+    "runtime/original-storyboard-sbbc96wh/diskarbitrationd.plist": "579e6c339f0344017130cd695bf7a72c998ecd76dc00db4e910ee78cc7047402",
+    "fixtures/hello/diskarbitration-session-ready.c": "ddef91782b318a3b898c2418d123d4c6f2a7438decabce76785c680935f04889",
+    "fixtures/hello/coresim-service-volume-control.c": "ca1b0e6dddd757177d82b90cf762c8a6e86b5ecfd857579c14a5083343f8892b",
+    "runtime/original-storyboard-sbbc96wh/run.sh": "aae6b0bb05b2edf2311737d426dc7459a66046419a66b5bcdeadc9ca5f06756c"
+  },
+  "independent_storyboard_semantics_verified": false,
+  "full_goal_complete": false
+}
