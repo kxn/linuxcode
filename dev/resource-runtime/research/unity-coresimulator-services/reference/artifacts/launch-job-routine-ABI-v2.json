@@ -1,0 +1,35 @@
+{
+  "verified": true,
+  "ABI_only": true,
+  "job_operations_validated": false,
+  "original_image": "runtime/fullsystem-libraries/usr/lib/system/libxpc.dylib",
+  "original_image_sha256": "9fd39e678c12bf9d82f8245459ab15f15acd3f4e8e0399f6d986838661bd43dc",
+  "wrappers": {
+    "__launch_job_routine": {
+      "address": "0x7ff802b7755b",
+      "subsystem": 10,
+      "common_target": "0x7ff802b63397",
+      "third_argument": "reply output pointer",
+      "wrapper_bytes_sha256": "8c017c722f50d8d7b7008509a690af05696f186163658f761a1f6542648ade33"
+    },
+    "__xpc_domain_routine": {
+      "address": "0x7ff802b6337f",
+      "subsystem": 3,
+      "common_target": "0x7ff802b63397",
+      "third_argument": "reply output pointer",
+      "wrapper_bytes_sha256": "ca572921603332948df27a1a0219739f23a868caa71343fde1e28e020894941b"
+    },
+    "__launch_job_routine_async": {
+      "address": "0x7ff802b77573",
+      "subsystem": 10,
+      "third_argument": "32-bit Mach reply port",
+      "wrapper_bytes_sha256": "cb7ab5f973b038e59793e80ffb2491e0881a9273df89df42721d3ae9641f2aa7",
+      "common_target": "0x7ff802b7742b"
+    }
+  },
+  "sources": {
+    "scripts/inspect-launch-job-routine-abi.py": "f7a9c996c439b87674f84c5665739f4e1bf8be25fb59a37601ccabd9bd88cd5a",
+    "scripts/dsc-image.py": "d704b7074a3995e483a3299e92df7f493fb6f4b3eb26fcaebfdb9ec89a9dc7ab"
+  },
+  "full_goal_complete": false
+}

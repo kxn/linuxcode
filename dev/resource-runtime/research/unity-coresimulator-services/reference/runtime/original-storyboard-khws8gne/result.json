@@ -1,0 +1,73 @@
+{
+  "trace_launch_jobs": true,
+  "timeout": 150,
+  "verified": false,
+  "outer_status": -9,
+  "native_statuses": [],
+  "configuration": "config/direct-resource-tool-environment-v133.json",
+  "stage": "artifacts/private-procfs-auditsession18-stage.json",
+  "arguments": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/ibtool",
+    "--errors",
+    "--warnings",
+    "--notices",
+    "--module",
+    "uEmuera",
+    "--output-partial-info-plist",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-khws8gne/SBPartialInfo.plist",
+    "--auto-activate-custom-fonts",
+    "--target-device",
+    "iphone",
+    "--target-device",
+    "ipad",
+    "--minimum-deployment-target",
+    "13.0",
+    "--output-format",
+    "human-readable-text",
+    "/Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard",
+    "--compilation-directory",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-khws8gne/compiled"
+  ],
+  "products": {},
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/audit-session-runtime-18/darlingserver",
+      "sha256": "385d8c350ac0600a39e5139f34d8a7b421fc938ad1cbe654ccd86579ce9a2ef4"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/audit-session-runtime-18/libxpc.dylib",
+      "sha256": "76198e7c65dfec8c231ab04c7e52ba3f60fedfedc0c7aed386285aca85faf2ff"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/audit-session-runtime-18/launchd",
+      "sha256": "d747d0b81e3f338c37a8cd0041d85bb14ec725dbb8be816258549c7aeddac24a"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/audit-session-runtime-18/libsystem_kernel.dylib",
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/audit-session-runtime-18/libquarantine.dylib",
+      "sha256": "f5d4ce528e6497057c2b5716d20f10a4a8fd63db2dce3245023a4311b93efac5"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/audit-session-runtime-18/libsystem_sandbox.dylib",
+      "sha256": "29d0e03f98463ac1d908c81e3dedf5cb7c092c6d85bb647cf409e55122030242"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/audit-session-runtime-18/libdyld.dylib",
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b"
+    }
+  },
+  "log": "runtime/original-storyboard-khws8gne/run.log",
+  "log_sha256": "1ca035b31fa8e2a50fa780778a32476dd3e8a18d9654862b1adbd7ecad88dd7a",
+  "files": {
+    "scripts/probe-original-storyboard.py": "3ceba589a346aeba40f0243262875c5e47f8945482cd02406de915f2bd05164f",
+    "runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard": "f7e84eadb6ad8fd9bad498073c246d8326397681f50bfdd8cb7fdb73aee4b3f1",
+    "runtime/original-storyboard-khws8gne/run.sh": "c22920b3be9e61b982cb911cab8f3c65ac610615be99bcf7310053c863d2fb81",
+    "config/direct-resource-tool-environment-v133.json": "ddeed50cdb09ff62613345b2db84b664479e48dab08f23b6457fd6bab652ba11",
+    "artifacts/private-procfs-auditsession18-stage.json": "aebf01006a0bfb18eb256ba625d69e718f2f88e5592824c32f42069beb08b602"
+  },
+  "independent_storyboard_semantics_verified": false,
+  "full_goal_complete": false
+}

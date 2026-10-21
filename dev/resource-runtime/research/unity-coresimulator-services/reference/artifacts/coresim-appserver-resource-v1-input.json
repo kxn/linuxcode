@@ -1,0 +1,59 @@
+{
+  "target": "coresim-appserver-resource-v1",
+  "pin": {
+    "path": "/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport",
+    "sha256": "4b7ceea0b5600444f8a40f363b634d725aca79f45f3f21f505340ef7cf1aa486",
+    "reference_set": "fullsystem",
+    "objc_classes": 8,
+    "import_providers": {},
+    "describe_lazy_helpers": false,
+    "describe_leading_padding": false,
+    "preserve_original_uuid": true,
+    "read_only_data_const": true,
+    "align_linkedit_streams": true,
+    "patch_got_renamed_reexports": true,
+    "cache_patch_addends": true,
+    "cache_patch_addends_expected": 0,
+    "preserve_code_with_patch_got": true,
+    "patch_got_expected": 108,
+    "patch_got_range": [
+      "0x7ff840007000",
+      "0x7ff840059000"
+    ]
+  },
+  "original_bytes": 98304,
+  "swift_metadata": false,
+  "original_dependencies": [
+    "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+  ],
+  "previous_manifest_sha256": "eef904fa64d58e796646e67aa9d91599e531111ab28edc3158635a881c3d42b1",
+  "manifest_sha256": "ad80ab5daab263b729280b4de757e635b5cf06b315030c7a24e9c25437478cdc",
+  "command": [
+    "python3",
+    "scripts/rebuild-c-cache-image.py",
+    "--target-manifest",
+    "config/coregraphics-image-pins.json",
+    "--target",
+    "coresim-appserver-resource-v1",
+    "--lazy-functions",
+    "--collect-missing-imports",
+    "--analyze-code"
+  ],
+  "preparation_source_sha256": "112dace1976271bd127893cb057bef39d8040d315c06560bf4e897e914de49b9",
+  "reconstruction_attempted": true,
+  "image_runtime_verified": false,
+  "original_patch_contract": {
+    "original_records": 113,
+    "nonzero_addends": 0,
+    "got_cells": 108,
+    "patch_info_sha256": "223d1fe82901ccea84220699ebb2e2f9768b039bd46c6de2f90007742aaf6918",
+    "canonical_imports": [],
+    "source_sha256": "1d96b513b6a15fb5439ca315922cb2db69e650ef76decc616a5d18117fa5fe8e"
+  },
+  "build_returncode": 0,
+  "log": "logs/coresim-appserver-resource-v1-build.log",
+  "log_sha256": "a35a481917f235a987756a24499d6d49ed81317752cc853ff225c621a1fc104c"
+}

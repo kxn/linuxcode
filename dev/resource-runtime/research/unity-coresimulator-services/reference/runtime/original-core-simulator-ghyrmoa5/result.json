@@ -1,0 +1,88 @@
+{
+  "verified": false,
+  "outer_status": 134,
+  "native_statuses": [
+    "134"
+  ],
+  "configuration": "config/direct-resource-tool-environment-v132.json",
+  "stage": "artifacts/private-procfs-auditsession14-stage.json",
+  "arguments": [
+    "/Volumes/SystemRoot/workspace/runtime/original-core-simulator-ghyrmoa5/probe",
+    "/Volumes/SystemRoot/workspace/runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework",
+    "/Volumes/SystemRoot/workspace/runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator"
+  ],
+  "build_commands": [
+    [
+      "clang-19",
+      "-target",
+      "x86_64-apple-macos11",
+      "-isysroot",
+      "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-O1",
+      "-g",
+      "-c",
+      "/home/dl/linuxcode/fixtures/hello/original-core-simulator-context.c",
+      "-o",
+      "/home/dl/linuxcode/runtime/original-core-simulator-ghyrmoa5/probe.o"
+    ],
+    [
+      "ld64.lld-19",
+      "-arch",
+      "x86_64",
+      "-platform_version",
+      "macos",
+      "11",
+      "11",
+      "-syslibroot",
+      "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-lSystem",
+      "-lobjc",
+      "/home/dl/linuxcode/runtime/original-core-simulator-ghyrmoa5/probe.o",
+      "-o",
+      "/home/dl/linuxcode/runtime/original-core-simulator-ghyrmoa5/probe"
+    ]
+  ],
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/audit-session-runtime-14/darlingserver",
+      "sha256": "385d8c350ac0600a39e5139f34d8a7b421fc938ad1cbe654ccd86579ce9a2ef4"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/audit-session-runtime-14/libxpc.dylib",
+      "sha256": "8db1dc08376a309b5812ca7ba960d5ee317bec81c1e65735aa3e2c3fa3545b01"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/audit-session-runtime-14/launchd",
+      "sha256": "3e25bf85f1ff43cb89f59f24c0b144875d95d855c1bfe373bc30c77f76f17a05"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/audit-session-runtime-14/libsystem_kernel.dylib",
+      "sha256": "f28ba06b9b882dea3f2e91901634f7265c4a8365c2074e246c556db9b09cb178"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/audit-session-runtime-14/libquarantine.dylib",
+      "sha256": "f5d4ce528e6497057c2b5716d20f10a4a8fd63db2dce3245023a4311b93efac5"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/audit-session-runtime-14/libsystem_sandbox.dylib",
+      "sha256": "29d0e03f98463ac1d908c81e3dedf5cb7c092c6d85bb647cf409e55122030242"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/audit-session-runtime-14/libdyld.dylib",
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b"
+    }
+  },
+  "log": "runtime/original-core-simulator-ghyrmoa5/run.log",
+  "log_sha256": "4c276f9d420a7dc822c2dae8f8b901e068c37b48296a82e0889d80766e124df1",
+  "files": {
+    "scripts/probe-original-core-simulator.py": "b880472cf07759bf336fd0e21b5999938d237693a6bab992a3eb0425f3ab12e7",
+    "fixtures/hello/original-core-simulator-context.c": "5593c39e4f5ebbed0ef0e33b88277127d1432c255849da5ae26e5f9857196075",
+    "runtime/original-core-simulator-ghyrmoa5/run.sh": "95e14e74e6d5c60b4cc2bad0c04e50a54541d771d7aeb8c84f7fbbfe3e2d02dd",
+    "config/direct-resource-tool-environment-v132.json": "2892569155514ff81fdf34cda9e4030ea538f3cb18936292cb1b84b4b2ff3d4f",
+    "artifacts/private-procfs-auditsession14-stage.json": "b9c45e37572f3df0b2a3551c79c33042977ae44ba7d1990997dfe28cdcc17a5e"
+  },
+  "original_CoreSimulator_context_verified": false,
+  "simulator_boot_verified": false,
+  "Storyboard_compilation_verified": false,
+  "full_goal_complete": false
+}

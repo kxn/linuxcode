@@ -1,0 +1,16 @@
+{
+  "observed_signal": "SIGSEGV",
+  "fault_symbol": "dispatch_data_get_flattened_bytes_4libxpc+0x1e",
+  "null_argument": true,
+  "caller": "OS_xpc_plist_binary_v0_deserializer readUTF16String:+0x7d",
+  "problem": "UTF16 string lengths count code units; the parser supplied that value as a byte count and did not check transform failure.",
+  "full_goal_complete": false,
+  "evidence": {
+    "logs/core-simulator-bundle-add-crash-v1.nlist-symbolicated.log": "fcfa1356ba825f5bbc948f94311be3cdada260e2d2b9047d7cb4448e102432a9",
+    "artifacts/core-simulator-bundle-add-crash-v1-nlist-symbolication.json": "db8e9d93f2195335ad0ec6e21b4a544371de25100e49aa131ad5b1622754dc81",
+    "runtime/original-core-simulator-rhi67l_a/result.json": "3fa277cb9096edd34d533b5a6022daee3e7a825f8639cf7e03a73c9e632dff89"
+  },
+  "core_private_only": "runtime/original-core-simulator-rhi67l_a/probe.core",
+  "new_source_build": "artifacts/xpc-user-bundle-v4-build.json",
+  "new_runtime_stage": "artifacts/private-procfs-auditsession14-stage.json"
+}

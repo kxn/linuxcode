@@ -1,0 +1,107 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 35209,
+      "sha256": "26814c8d1fa8e02e15f0281950f54b75ca9cce3a34c335fbdda82cdd8ebde00e"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 450,
+      "sha256": "bce26622c22df6a3e7aeb60fe790b8ff1c22addb3d020e56d13cf093c0f8baa0"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 108,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 194,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 32,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2bf0",
+        "first_section_prefix": "0x748",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x298",
+        "first_section_prefix": "0x210",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2b0",
+        "first_section_prefix": "0x210",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2b8",
+        "first_section_prefix": "0x210",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2c0",
+        "first_section_prefix": "0x210",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2d8",
+        "first_section_prefix": "0x210",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2e0",
+        "first_section_prefix": "0x210",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2e8",
+        "first_section_prefix": "0x210",
+        "symbol": "__objc_empty_cache"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-coresim-appserver-resource-v1/AppServerSupport': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0xb76)\n",
+    "original_validator": "runtime/original-dyld-validation-gt4zffbf/result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0xb76",
+        "segment": "__DATA_CONST",
+        "offset": "0x2bf0",
+        "actual_address": "0x2cbe9bf0",
+        "LLVM_section_base_address": "0x2cbea338",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "5234f2da1e030e640cdf1db791ef1d89fbab70b0ee18a1f0e179cbcce69de596",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "7b57690534600df282b16bcff511d9a5172e2917569e1eaa37ee93da2ea0ecc1",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "be7f8bbbbab3307984742d6b961295d7c5ed538d1a23ed601438c7abff529dbc",
+    "config/coregraphics-image-pins.json": "ad80ab5daab263b729280b4de757e635b5cf06b315030c7a24e9c25437478cdc",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport": "4b7ceea0b5600444f8a40f363b634d725aca79f45f3f21f505340ef7cf1aa486",
+    "runtime/rebuilt-coresim-appserver-resource-v1/AppServerSupport": "dbbfca9d5f83510fc37c42755a128e80e1a73886d52b937071757bf61dd10eec",
+    "runtime/rebuilt-coresim-appserver-resource-v1/reconstruction.json": "59e473998146d0016d13cddb8991999b95f4f8eab7859497b54431c076c7a8dd"
+  },
+  "verified": true
+}

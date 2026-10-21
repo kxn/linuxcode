@@ -1,0 +1,37 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/coresim-job-submit-live-v1.gdb.log",
+  "raw_sha256": "25d323ad23901d4c3a286291cfb476eeecc7d5b7744a54e91a2f0cb0fb4b37ec",
+  "maps": "logs/coresim-job-submit-live-v1.maps.log",
+  "maps_sha256": "29db3551527a76e91aebbde82cdb9912927ac51f549e0eaa432866394702276b",
+  "output": "logs/coresim-job-submit-live-v1.nlist-symbolicated.log",
+  "output_sha256": "95d685b23dd3d5935502bd9c88b69b4233cff4a58cf25d3315ba3a9c0a8d67ee",
+  "images": {
+    "runtime/resource-ne-agent-v1/libraries/libSystem.B.dylib": {
+      "sha256": "911009b735b4726f9e5283b3af178d80f380ec569a65b8a75fbce9204eeafe3e",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 238
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator": {
+      "sha256": "f83201afebc582cdf0fa0b54b668a15a6981c86efd42d37f38b85cddf4dbce4b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 4168
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Frameworks/CoreSimulatorUtilities.framework/Versions/A/CoreSimulatorUtilities": {
+      "sha256": "5b1ddda7457d219b0d91a9fb590dcd807e2c8e36b1fd29a564d25f076d6995d1",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 1006
+    },
+    "runtime/xcode-system-resources/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService": {
+      "sha256": "e7306181996a708d3a5e59f397dbb009a13aeca0f36257ab0a2daf0e4102fbb0",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 9
+    }
+  }
+}
