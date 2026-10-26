@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/d93f7d55992d482cff6d4f78956cfd2a6ebf1747970b101ddab3d3bc36adada5",
+  "original_sha256": "d93f7d55992d482cff6d4f78956cfd2a6ebf1747970b101ddab3d3bc36adada5",
+  "encoding": "utf-8",
+  "text": "#import <Foundation/Foundation.h>\n#include <IOKit/IOKitLib.h>\n#include <mach/mach.h>\n#include <stdio.h>\nint main(void) {\n @autoreleasepool {\n  const char *names[]={\"IOSurfaceRoot\",\"IOCoreSurfaceRoot\"};\n  for(unsigned i=0;i<2;++i) {\n   io_service_t service=IOServiceGetMatchingService(kIOMasterPortDefault,IOServiceMatching(names[i]));\n   printf(\"IOSURFACE_ROOT_MATCH %s port=%u\\n\",names[i],service);fflush(stdout);\n   if(!service)continue;\n   io_name_t cls={0};kern_return_t c=IOObjectGetClass(service,cls);printf(\"IOSURFACE_ROOT_CLASS status=%x class=%s\\n\",c,cls);\n   io_connect_t connection=0;kern_return_t status=IOServiceOpen(service,mach_task_self(),0,&connection);\n   printf(\"IOSURFACE_ROOT_OPEN status=%x connection=%u\\n\",status,connection);fflush(stdout);\n   if(connection){IOServiceClose(connection);IOObjectRelease(connection);}IOObjectRelease(service);\n   if(!status&&connection){puts(\"IOSURFACE_ROOT_REAL_USER_CLIENT_OPEN_NATIVE_OK\");return 0;}\n  }\n }\n return 1;\n}\n"
+}
