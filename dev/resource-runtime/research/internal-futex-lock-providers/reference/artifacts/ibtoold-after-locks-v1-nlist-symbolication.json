@@ -1,0 +1,57 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/ibtoold-after-locks-v1.gdb.log",
+  "raw_sha256": "7c79df7894f5e5ae516d42d50a254530580f04cb514cbb6eaaa5a70f58001aca",
+  "maps": "logs/ibtoold-after-locks-v1.maps.log",
+  "maps_sha256": "037900f3a3c024df83b487603e37725cf9b22829df6a8c5b9230f065226ba5a3",
+  "output": "logs/ibtoold-after-locks-v1.nlist-symbolicated.log",
+  "output_sha256": "b0e9af971e06ff4d30f8f01232eaa5da7671898a4386076e6336e74dfffa471b",
+  "images": {
+    "runtime/audit-session-runtime-53/libsystem_kernel.dylib": {
+      "sha256": "0c24e20da8473fd576062b119d0d29fef49057ceb202eaa6ef998108ecfb74f3",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2366
+    },
+    "runtime/resource-ne-agent-v1/libraries/libSystem.B.dylib": {
+      "sha256": "911009b735b4726f9e5283b3af178d80f380ec569a65b8a75fbce9204eeafe3e",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 238
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Frameworks/AssetCatalogFoundation.framework/Versions/A/AssetCatalogFoundation": {
+      "sha256": "c1e4972c1818ccb92806f91c2f0ab1203440416a86a5298c779db1308a48ddc3",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 13080
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/PlugIns/IDEInterfaceBuilderCocoaTouchIntegration.framework/Versions/A/IDEInterfaceBuilderCocoaTouchIntegration": {
+      "sha256": "6413762b5975f0e2728931859e06c57de10a9f9a1310a6409860b71ec9245c3f",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 47873
+    },
+    "runtime/audit-session-runtime-53/darling-root/usr/lib/system/libsystem_pthread.dylib": {
+      "sha256": "e209d339661e9bdb7af7c6bfe5d9bcfcaced4b973b10a3ce42304fc77104b5ff",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 300
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Developer/usr/bin/ibtoold": {
+      "sha256": "5aba0dcc45c8386ae1a1577457dfb1ecb5c68d840d9658794c176cc7f9f46d3b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 732
+    },
+    "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation": {
+      "sha256": "5007842d25682120326541352006cbd192872c4c15f414d50fc66058a30661af",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 95375
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/PlugIns/IDEInterfaceBuilderKit.framework/Versions/A/IDEInterfaceBuilderKit": {
+      "sha256": "c031bd4d47eeee0e3dcce2f513e4df3c0bfb1fd44cee855fdd44af83f819f554",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 37362
+    }
+  }
+}

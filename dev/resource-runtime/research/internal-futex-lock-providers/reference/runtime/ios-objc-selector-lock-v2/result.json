@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession52-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1256172,
+    "status": 0,
+    "selector_lock": 139990912188768,
+    "log": "runtime/ios-objc-selector-lock-v2/watch.gdb.log"
+  },
+  "stage": "artifacts/private-procfs-auditsession52-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "original_objc": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libobjc.A.dylib",
+  "original_objc_sha256": "c1c0662cdb94b7570aa4cc61d5b71941869cde3945374c28fed62d44f4134a7c",
+  "files": {
+    "runtime/ios-objc-selector-lock-v2/probe.log": "7cc06df12deedad0bcba64c8ae820d6cd628b3430bc4660aa31ca21d6fbafa97",
+    "runtime/ios-objc-selector-lock-v2/initial.maps": "f8db6b3127dceb06ce67e2e9ec1ae66070d2fdbc9b91173217d03ae4893ca25c",
+    "runtime/ios-objc-selector-lock-v2/capture.gdb": "213f165ae992b57a80704d84eda2edb0facf2fa9fe2683420bf133aa6e6d2318",
+    "runtime/ios-objc-selector-lock-v2/final.maps": "8984c4a45f25a8a563b21a0a26c42aebefe8d7aa5b843c8bc2680ad39efabf14",
+    "runtime/ios-objc-selector-lock-v2/watch.gdb.log": "6681c096e0f8d564d31431e5059f1e6685d05608cdaa14f1d08ce45e388fe1b2"
+  },
+  "tool_sha256": "a903f85f0ff576bd219466887ba110e7cdf8e40132ee369e8ded9ad60bee37dd",
+  "full_goal_complete": false
+}

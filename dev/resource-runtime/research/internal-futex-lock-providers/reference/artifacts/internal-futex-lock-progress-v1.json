@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "stage": "artifacts/private-procfs-auditsession53-stage.json",
+  "build": "artifacts/internal-futex-kernel-v1-build.json",
+  "native_lock": "runtime/unfair-lock-provider-ju8ovt9f/result.json",
+  "native_workqueue": "runtime/workqueue-recycling-6r9ppuhj/result.json",
+  "baseline_capture": "runtime/ios-objc-selector-lock-v2/result.json",
+  "fixed_capture": "runtime/ios-objc-selector-lock-v3/result.json",
+  "before": "Original iOS objc unlock bound to empty host libsystem_kernel stub; selector lock stayed0x507.",
+  "after": "Actual original unlock target is source libplatform at0xd60; watch records0x507->0 twice. Original execution proceeds into libdispatch workqueue initialization.",
+  "next_blocker": "Original libdispatch _dispatch_root_queues_init_once.cold.5: QoS Maintenance support required. Kernel bsdthread_register currently reports feature mask0. Direct kevent worker path requires implementation and validation before advertising those features.",
+  "source_publication": "artifacts/internal-futex-source-publication-v1.json",
+  "full_goal_complete": false
+}

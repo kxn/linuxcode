@@ -194,3 +194,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [完整Skywalk客户端后续](research/skywalk-channel-client/README.md) 复用2369行Apple开源客户端及Intel校验和，实际属性/克隆和16400组复制校验通过；先前14个名字缺口已补齐。原版资源编译仍以255退出，正在定位初始化，完整App尚未完成。
 
 [原版首次初始化回调与桥接](research/libkernel-init-v5-bridge/README.md) 修复version5公共表与Darling私有扩展冲突，实际桥接恢复、保护页和4个子进程检查通过；原版进入ObjC镜像注册，仍在定位选择器锁，完整App未完成。
+
+- [Original iOS lock provider repair](research/internal-futex-lock-providers/README.md): remove empty kernel lock exports, verify real unlocks and native contention; next original dispatch workqueue capability assertion.
