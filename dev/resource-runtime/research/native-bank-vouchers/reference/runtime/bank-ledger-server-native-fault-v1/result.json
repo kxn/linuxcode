@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-voucher-bank-native.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession60-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json"
+  ],
+  "probe_status": 1,
+  "server": "runtime/audit-session-runtime-60/darlingserver",
+  "server_sha256": "19abf865b8d898e7ab87fbed65f3fdcddbff5e2b0538ec330d9539208169626e",
+  "capture": {
+    "pid": 1327145,
+    "status": 0
+  },
+  "files": {
+    "runtime/bank-ledger-server-native-fault-v1/probe.log": "edfa40e6e8c548217912832d92b51932c3f6d790defd35b990b2a457aa7f549a",
+    "runtime/bank-ledger-server-native-fault-v1/server.maps": "d327fdb0c2f290a269bcfc74a84bd11f39327aecc36c5de2ce6a2ab3d3bdb8cb",
+    "runtime/bank-ledger-server-native-fault-v1/capture.gdb": "b239d2e391e379c19a565380dab0e6079ad5567f42b5e91422fb2c5ef2aa4e88",
+    "runtime/bank-ledger-server-native-fault-v1/server.gdb.log": "bf4d68428199e372903ed2251a855f154e65fcdb892d1cf57bf7ab407a858494"
+  },
+  "tool_sha256": "3c48a2db31ae7e7c4a59f611f7c2eafbecc7c752e7795a32ecb86bf4290e487d",
+  "full_goal_complete": false
+}

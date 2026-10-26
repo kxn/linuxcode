@@ -200,3 +200,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Direct event workqueues and embedded Linux backend](research/direct-kevent-workqueues/README.md): real pipe/Mach callbacks, auxiliary buffers, large-message retry and GCD; original iOS now reaches the missing kevent_id workloop backend.
 
 - [Workloop event domains and original task voucher diagnosis](research/workloop-event-domains/README.md): distinct real callback domains, exact original Mach flags and large-message retries; original iOS now reaches missing Bank voucher support.
+
+- [Native Bank voucher creation and process identity](research/native-bank-vouchers/README.md): real ports, thread ownership, copies and cross-process account identity/UUID checks; original IBAgent advances to its next event request.

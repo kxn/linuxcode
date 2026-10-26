@@ -1,0 +1,25 @@
+{
+  "stage": "artifacts/private-procfs-auditsession61-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "kernel": "artifacts/voucher-mig-kernel-v1-build.json",
+  "server": "runtime/simulator-signature-server-sb6cxben/stage.json",
+  "source_publication": "artifacts/bank-ledger-source-publication-v1.json",
+  "native": "runtime/voucher-bank-native-7m5i0wdo/result.json",
+  "cross_process": "runtime/voucher-bank-cross-process-dl0yvvir/result.json",
+  "original_capture": "runtime/bank-ledger-ibagent-fault-v1/result.json",
+  "next_blocker": "Original libdispatch _dispatch_kq_poll asserts after kevent_id returns errno45 ENOTSUP; capturing the actual subsequent request. Bank voucher initialization now passes.",
+  "verified": [
+    "Real Bank CREATE/COPY ports and reference lifetimes",
+    "Current-thread voucher set/get/clear; modifying an already running peer thread rejected",
+    "128 copies and 32 same-process real voucher-carrying Mach messages",
+    "32 exec-child messages: real Bank account originator/proximate PID, generation, audit PID-version, UID/GID and LC_UUID match actual process metadata",
+    "Task-only BANK_PERSONA_TOKEN correctly returns KERN_INVALID_OBJECT; account token works after receive preprocessing",
+    "Task-default persona absent; unauthorized alternate-persona changes rejected"
+  ],
+  "limits": [
+    "Original full Bank and ledger algorithms compiled, but Darwin CPU/energy scheduling accounting is not established.",
+    "No alternate-persona or coalition service. CPU-limit enabling returns KERN_NOT_SUPPORTED; no hardware PPL guarantee.",
+    "Full resource compilation and Unity/UE App build/signing remain incomplete; default installer candidate not promoted."
+  ],
+  "full_goal_complete": false
+}

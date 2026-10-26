@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/bank-ledger-server-v1-driver.log",
+  "original_sha256": "008d5abd0fdc354b444c61383d8dc46a3b52506b424f324fedfb11d0b954e71c",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/build-simulator-signature-server.py\", line 18, in <module>\n    with (folder/'build.log').open('w') as out:subprocess.run(command,cwd=root,stdout=out,stderr=subprocess.STDOUT,check=True)\n                                               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 577, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['cmake', '--build', '/home/dl/linuxcode/runtime/darlingserver-source-build', '--target', 'darlingserver', '-j', '8']' returned non-zero exit status 1.\n"
+}

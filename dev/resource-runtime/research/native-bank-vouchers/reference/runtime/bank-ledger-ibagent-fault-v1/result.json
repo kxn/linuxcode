@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession61-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1328332,
+    "gdb_status": 0,
+    "log": "runtime/bank-ledger-ibagent-fault-v1/agent.gdb.log",
+    "maps": "runtime/bank-ledger-ibagent-fault-v1/agent.maps"
+  },
+  "stage": "artifacts/private-procfs-auditsession61-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/bank-ledger-ibagent-fault-v1/probe.log": "c55cd88d8552bc34e5d250bc77f0b2e7be38a3ff026c54715d7865aaff43a68c",
+    "runtime/bank-ledger-ibagent-fault-v1/capture.gdb": "671f038a0b4c2d40c75570767d687ae0dd230bc3db96bb3da1f7cb92a6ace159",
+    "runtime/bank-ledger-ibagent-fault-v1/agent.maps": "a7a4cdecac3c8176dfe92b0ab81d143be9eca50659622c22d4740476204d6003",
+    "runtime/bank-ledger-ibagent-fault-v1/agent.gdb.log": "74efc835eb84eb7ace13c8227aa6d0a1e705801b03df6a8b9b38c7b8f45b4077"
+  },
+  "tool_sha256": "722d0ce50f62ed7ef88ddb6db0c186ff55465cc20dc4e7277126d4f45644f1e1",
+  "full_goal_complete": false
+}
