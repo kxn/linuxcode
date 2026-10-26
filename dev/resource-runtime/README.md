@@ -182,3 +182,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [后续动态库签名与宿主接口](research/simulator-dylib-signatures/README.md) 已让原版模拟器加载器运行 IBAgent-iOS 并装载 iOS QuartzCore、Foundation、libdispatch。包含 Developer ID/ad-hoc 与平台身份的分离、原版 codesign 重签私有兼容库、真实 voucher 权利清理及上游 pthread 别名。最新缺口为 mach_eventlink 用户态接线；完整 Storyboard/App 仍未生成。
 
 [真实 Mach eventlink 后续](research/native-mach-eventlink/README.md) 已补齐四个 MIG 与三种64位信号/等待调用，实际计数、超时、跨线程交接和销毁测试通过。原版流程继续到 work interval 调度元数据接口，完整资源编译仍未完成。
+
+[工作区间实例后续](research/work-interval-instances/README.md) 补齐16个真实载荷和方法，单元及原生错误传播检查通过；性能控制内核后端仍未实现。原版流程继续到 cooperative workqueue 接口，完整资源/App 仍未完成。

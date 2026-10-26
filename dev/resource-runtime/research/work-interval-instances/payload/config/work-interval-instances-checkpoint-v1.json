@@ -1,0 +1,27 @@
+{
+  "name": "work-interval-instances",
+  "payload": [
+    "vendor/darling/src/external/xnu/libsyscall/wrappers/work_interval.c",
+    "vendor/darling/src/external/xnu/libsyscall/wrappers/work_interval_instance.inc",
+    "scripts/build-libsystem-kernel-source.py",
+    "scripts/probe-work-interval-instance.py",
+    "fixtures/hello/work-interval-instance-host.c",
+    "fixtures/hello/work-interval-instance-native.c"
+  ],
+  "reference": [
+    "artifacts/work-interval-instance-source-publication-v1.json",
+    "artifacts/work-interval-instance-reference-controls-v1.json",
+    "artifacts/work-interval-instance-host-v2.json",
+    "artifacts/work-interval-kernel-v2-build.json",
+    "artifacts/private-procfs-auditsession42-stage.json",
+    "runtime/work-interval-instance-szaz8cp4/result.json",
+    "runtime/original-storyboard-reicage7/result.json",
+    "logs/work-interval-alloc-reference-v1.disassembly.log",
+    "logs/work-interval-instance-reference-v1.disassembly.log",
+    "logs/work-interval-instance-host-v1.log",
+    "logs/work-interval-instance-host-v2.log",
+    "logs/work-interval-kernel-v1-driver.log",
+    "logs/work-interval-kernel-v2-driver.log",
+    "config/direct-resource-tool-environment-v150.json"
+  ]
+}

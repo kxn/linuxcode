@@ -1,0 +1,38 @@
+{
+  "verified": true,
+  "host_sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "backend_is_a_unit_test_double": true,
+  "real_kernel_performance_controller_verified": false,
+  "reference_source": "Existing Intel macOS libsystem_kernel",
+  "public_header_reference": "https://github.com/apple-oss-distributions/xnu/blob/main/bsd/sys/work_interval.h",
+  "reference_payload_size": 96,
+  "reference_fields": {
+    "work_interval_id": 0,
+    "instance_id": 8,
+    "start": 16,
+    "finish": 24,
+    "deadline": 32,
+    "complexity": 40,
+    "flags": 48,
+    "telemetry": 56
+  },
+  "reference_operations": {
+    "start": 6,
+    "update": 7,
+    "finish": 8
+  },
+  "scope": "Real userspace allocation/fields/lifecycle and exact backend error propagation. Existing BSD work_interval_ctl backend remains unsupported; no claimed Apple performance scheduling.",
+  "files": {
+    "runtime/fullsystem-libraries/usr/lib/system/libsystem_kernel.dylib": "5241ba0bea493c54551b9ce8774f578fa48e9d0260f14f09d902e14849d33c8d",
+    "logs/work-interval-alloc-reference-v1.disassembly.log": "d535ea7d182763cff1719e6e4b19fb7ba2b70e314bd92f12891287505c989e6b",
+    "logs/work-interval-instance-reference-v1.disassembly.log": "14414e8a718b6b375ea004f0419038a7887e90021b89a7bef569c4396d912268",
+    "vendor/darling/src/external/xnu/libsyscall/wrappers/work_interval_instance.inc": "10578d9c720f5a5c98cac087f7c3b6b3d0ff0ef79d26392f988b1299f0faba6f",
+    "fixtures/hello/work-interval-instance-host.c": "90adc52a014bf779d96126b28ed2ab71d2cf425f25519681cf633a61ae9d8657",
+    "logs/work-interval-instance-host-v1.log": "1009de9a75b9583740958d7da4724a1f043ee535879857b15d238d5f70ba16ca",
+    "runtime/work-interval-instance-host-v1/probe": "41ccf764f74c5a1e31e2acab29770436fdc71c2e8dc0254afb03e1c45607db45"
+  },
+  "full_goal_complete": false
+}
