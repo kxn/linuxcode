@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession62-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1338212,
+    "gdb_status": 0,
+    "log": "runtime/workloop-async-ibagent-fault-v1/agent.gdb.log",
+    "maps": "runtime/workloop-async-ibagent-fault-v1/agent.maps"
+  },
+  "stage": "artifacts/private-procfs-auditsession62-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/workloop-async-ibagent-fault-v1/probe.log": "536f72d1500db1ad5f415e426016a46de0c363186a76a920f6f96ecd6f6a0d4b",
+    "runtime/workloop-async-ibagent-fault-v1/capture.gdb": "47ef65be21ca030f25c503af42a93638b1e90e968e01425f63f29484b92619e7",
+    "runtime/workloop-async-ibagent-fault-v1/agent.maps": "75ead5d6c6c5c7191f64aeb3c7d48f9118f7736e23c8b876389a29ea286d8927",
+    "runtime/workloop-async-ibagent-fault-v1/agent.gdb.log": "8c63b80130ff7e0d41cf0c88d891fceadea66ca79c8b9956ecc474c7aa7b32ba"
+  },
+  "tool_sha256": "722d0ce50f62ed7ef88ddb6db0c186ff55465cc20dc4e7277126d4f45644f1e1",
+  "full_goal_complete": false
+}

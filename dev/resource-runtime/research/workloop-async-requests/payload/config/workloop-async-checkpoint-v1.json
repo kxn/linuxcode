@@ -1,0 +1,43 @@
+{
+  "name": "workloop-async-requests",
+  "payload": [
+    "scripts/capture-simulator-workloop-error.py",
+    "scripts/capture-simulator-msg2-error.py",
+    "scripts/recover-kernel-source-link.py",
+    "scripts/probe-workloop-async.py",
+    "scripts/build-simulator-signature-server.py",
+    "fixtures/hello/workloop-async.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/kqueue/kevent_id.c"
+  ],
+  "reference": [
+    "artifacts/workloop-async-resource-progress-v1.json",
+    "artifacts/workloop-async-source-publication-v1.json",
+    "artifacts/workloop-async-kernel-v1-build.json",
+    "artifacts/private-procfs-auditsession62-stage.json",
+    "logs/workloop-async-kernel-v1-build.log",
+    "logs/workloop-async-kernel-v1-recovery.log",
+    "logs/workloop-async-source-push-v1.log",
+    "runtime/workloop-async-kernel-v1/source-link-recovery-v1/plan.json",
+    "runtime/workloop-async-kernel-v1/source-link-recovery-v1/link.log",
+    "runtime/workloop-async-kernel-v1/source-link-recovery-v1/687-kevent_id.compile.log",
+    "runtime/workloop-async-xluczgvs/result.json",
+    "runtime/workloop-async-d_m16gg4/result.json",
+    "runtime/workloop-domains-knez48rq/result.json",
+    "logs/bank-ledger-workloop-error-v1-driver.log",
+    "runtime/bank-ledger-workloop-error-v2/result.json",
+    "runtime/bank-ledger-workloop-error-v2/watch.gdb.log",
+    "runtime/bank-ledger-workloop-error-v2/initial.maps",
+    "runtime/bank-ledger-workloop-error-v2/final.maps",
+    "runtime/workloop-async-ibagent-fault-v1/result.json",
+    "runtime/workloop-async-ibagent-fault-v1/agent.gdb.log",
+    "runtime/workloop-async-ibagent-fault-v1/agent.maps",
+    "logs/workloop-async-ibagent-fault-v1.gdb.log",
+    "logs/workloop-async-ibagent-fault-v1.maps.log",
+    "logs/workloop-async-ibagent-fault-v1.nlist-symbolicated.log",
+    "artifacts/workloop-async-ibagent-fault-v1-map-bindings.json",
+    "artifacts/workloop-async-ibagent-fault-v1-nlist-symbolication.json",
+    "runtime/original-storyboard-vgqa711a/result.json",
+    "logs/workloop-async-xpc-release-reference-v1.disassembly.log",
+    "logs/workloop-async-xpc-release-cold-reference-v1.disassembly.log"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "stage": "artifacts/private-procfs-auditsession62-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "kernel": "artifacts/workloop-async-kernel-v1-build.json",
+  "source_publication": "artifacts/workloop-async-source-publication-v1.json",
+  "native": "runtime/workloop-async-d_m16gg4/result.json",
+  "Mach_regression": "runtime/workloop-domains-knez48rq/result.json",
+  "invalid_priority_fixture_control": "runtime/workloop-async-xluczgvs/result.json",
+  "exact_original_request": "runtime/bank-ledger-workloop-error-v2/result.json",
+  "original_fault_log": "logs/workloop-async-ibagent-fault-v1.nlist-symbolicated.log",
+  "next_blocker": "Original iOS libxpc _xpc_connection_release_message traps with MACH_SEND_INVALID_OPTIONS0x10000013 while waiting for preferences; Bank initialization and asynchronous workloop thread requests have passed. Capture exact mach_msg2 options before implementing the next protocol.",
+  "verification": [
+    "Two distinct domains, real eventfd-triggered callbacks, per-domain serial servicing",
+    "Shared-state mask/debounce; ESTALE returns observed state; ignored stale does not attach or activate",
+    "EFAULT for inaccessible aligned address; EINVAL for unaligned address; ERANGE for invalid QoS",
+    "200 updates coalesced behind blocked callbacks; last state delivered; deletion cancels pending request",
+    "64 pipe events mixed with async tasks and ordered aliasing error/success receipts",
+    "Mach regression:64 messages,64 pipes,and32 real large-message retries per domain"
+  ],
+  "build_recovery": "907 complete compiled units; original final link failed on missing private inline helper. After exposing existing header implementation, only kevent_id recompiled;906 objects reused with source/header/object hash records. Original log and objects preserved.",
+  "limits": [
+    "Only NOTE_WL_THREAD_REQUEST async transport; sync wait/wake/IPC and ownership modifiers explicitly unsupported.",
+    "No full Darwin scheduling/turnstile/CPU accounting implementation.",
+    "64 domains retained to process exit; arbitrary teardown,reuse,postfork and complete FD lifecycle remain unverified.",
+    "Private control EVFILT_USER ident UINT64_MAX is reserved per domain.",
+    "Full Storyboard and Unity/UE App remain incomplete; default installation not promoted."
+  ],
+  "full_goal_complete": false
+}

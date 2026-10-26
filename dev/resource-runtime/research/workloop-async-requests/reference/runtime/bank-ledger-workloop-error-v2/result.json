@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession61-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "150"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1330669,
+    "status": 0,
+    "selector_lock": 140252615261200,
+    "log": "runtime/bank-ledger-workloop-error-v2/watch.gdb.log"
+  },
+  "stage": "artifacts/private-procfs-auditsession61-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "source_kernel": "runtime/audit-session-runtime-61/libsystem_kernel.dylib",
+  "source_kernel_sha256": "ed0c699c9d9419bc9632973e02f1fa5391791c7fde8914becd523f8374682452",
+  "files": {
+    "runtime/bank-ledger-workloop-error-v2/probe.log": "a2482dae78b51a1cddf5191bc84c9ed75ddc1db39d048da184497d8abff50e6b",
+    "runtime/bank-ledger-workloop-error-v2/initial.maps": "5220cb198ccf06a33bbd0e5ab304a44e1201a8e1aa2616597c8b8bca98149ac6",
+    "runtime/bank-ledger-workloop-error-v2/capture.gdb": "c19e820baf22c8ec5ff6dd7ca458df6bc28688bf13c29a9cfe1918077b076af0",
+    "runtime/bank-ledger-workloop-error-v2/final.maps": "7c71976de0aea1e047aeed53565475e8c0050d0eba4ef006177f9f315fe2b9ec",
+    "runtime/bank-ledger-workloop-error-v2/watch.gdb.log": "52a3b55fed1b2a72d4f0a0c3f0ba1401cf3a1d64eb4fc4f97c897344ec82ed44"
+  },
+  "tool_sha256": "453209778c9fe567eeef170b65d279ee5c4b35d29b02d9976cdca429d8c71689",
+  "full_goal_complete": false
+}

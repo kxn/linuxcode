@@ -202,3 +202,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Workloop event domains and original task voucher diagnosis](research/workloop-event-domains/README.md): distinct real callback domains, exact original Mach flags and large-message retries; original iOS now reaches missing Bank voucher support.
 
 - [Native Bank voucher creation and process identity](research/native-bank-vouchers/README.md): real ports, thread ownership, copies and cross-process account identity/UUID checks; original IBAgent advances to its next event request.
+
+- [Async workloop requests and exact queue-state debounce](research/workloop-async-requests/README.md): real serial callbacks,200 coalesced updates,pending cancellation and affected Mach regression; original iOS advances to a mach_msg2 options mismatch.

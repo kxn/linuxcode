@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/bank-ledger-workloop-error-v1-driver.log",
+  "original_sha256": "0fd70d8bfd6232af3826730975d822b6dbd89064404a97fa92fa893002a11159",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/capture-simulator-workloop-error.py\", line 15, in <module>\n    lock_offset = int(re.search(r'^([0-9a-f]+)\\s+T\\s+_sys_kevent_id$', symbols, re.M)[1], 16)\n                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^\nTypeError: 'NoneType' object is not subscriptable\n"
+}
