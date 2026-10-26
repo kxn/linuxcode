@@ -191,8 +191,9 @@ def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
         assert sha(root/build_path) == config['resource_cpp_abi_build_sha256']
         assert sha(root/probe_path) == config['resource_cpp_abi_probe_sha256']
         validator = 'scripts/primary-exception-runtime-inputs.py'
-        assert sha(root/validator) == config['resource_cpp_abi_validator_sha256']
-        directory = runpy.run_path(str(root/validator))['validate'](root, build_path, probe_path, backend)
+        resolver = runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
+        selected_validator = resolver(validator, config['resource_cpp_abi_validator_sha256'])
+        directory = runpy.run_path(str(root/selected_validator))['validate'](root, build_path, probe_path, backend)
         environment['DYLD_LIBRARY_PATH'] = '/Volumes/SystemRoot/workspace/'+str(directory.relative_to(root))+':'+environment['DYLD_LIBRARY_PATH']
     system_path = '/Volumes/SystemRoot/workspace/' + str(Path(system_library).parent)
     environment['DYLD_LIBRARY_PATH'] = system_path + ':' + environment['DYLD_LIBRARY_PATH']

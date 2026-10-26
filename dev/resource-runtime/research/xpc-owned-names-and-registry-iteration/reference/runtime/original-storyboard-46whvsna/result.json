@@ -1,0 +1,142 @@
+{
+  "service_volume_control": null,
+  "disk_services": {
+    "daemons": [
+      {
+        "original": "runtime/recovery/macOS Base System/usr/libexec/configd",
+        "original_sha256": "947a50045f0295b395c931c37e2b95bcc725af90a8fb388e055bf66cd5697867",
+        "original_plist": "runtime/recovery/macOS Base System/System/Library/LaunchDaemons/com.apple.configd.plist",
+        "original_plist_sha256": "7339a81983195c5ce7cf8abc726e0528e101817f1c8c0ce499585de710fc4103",
+        "job": "runtime/original-storyboard-46whvsna/configd.plist",
+        "job_sha256": "68acfaf5e9796358abbed3b12ecfb25a7d7d21631b048b89c80afd6f6c82bd96",
+        "log": "runtime/original-storyboard-46whvsna/configd.log",
+        "log_sha256": "6640691b68c6e5e51b4075636a9f7e2f37fe6de803f51b2bf33bb308aff7ef2d"
+      },
+      {
+        "original": "runtime/recovery/macOS Base System/usr/libexec/diskarbitrationd",
+        "original_sha256": "4787901aa67bdeef7b939367b6a79944fa0a0bd208a2b429c5277847badbf4f7",
+        "original_plist": "runtime/recovery/macOS Base System/System/Library/LaunchDaemons/com.apple.diskarbitrationd.plist",
+        "original_plist_sha256": "5fbbd9768df8de59adab9eb35239a42b5a0da9c26b3cad8be5e2afecba02810a",
+        "job": "runtime/original-storyboard-46whvsna/diskarbitrationd.plist",
+        "job_sha256": "461cd83f271850a492dbd46a08275b33a4f532af50e4bfcc0431d76cdca6c9f6",
+        "log": "runtime/original-storyboard-46whvsna/diskarbitrationd.log",
+        "log_sha256": "1def4a69192868a959249e2c25c4c895ae538c1c9a32203111198cd69f124c4e"
+      }
+    ],
+    "client_log": "runtime/original-storyboard-46whvsna/da-client.log",
+    "client_build_commands": [
+      [
+        "clang-19",
+        "-target",
+        "x86_64-apple-macos11",
+        "-isysroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-Wno-deprecated-declarations",
+        "-c",
+        "/home/dl/linuxcode/fixtures/hello/diskarbitration-session-ready.c",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-46whvsna/da-client.o"
+      ],
+      [
+        "ld64.lld-19",
+        "-arch",
+        "x86_64",
+        "-platform_version",
+        "macos",
+        "11",
+        "11",
+        "-syslibroot",
+        "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-lSystem",
+        "-framework",
+        "CoreFoundation",
+        "-framework",
+        "DiskArbitration",
+        "/home/dl/linuxcode/runtime/original-storyboard-46whvsna/da-client.o",
+        "-o",
+        "/home/dl/linuxcode/runtime/original-storyboard-46whvsna/da-client"
+      ]
+    ],
+    "client_log_sha256": "8687c088d902dbb57f325d875687b6d737b8a99e8b6b26404616299aad769495",
+    "native_session_verified": true
+  },
+  "trace_launch_jobs": true,
+  "trace_os_log": true,
+  "job_state": {
+    "log": "runtime/original-storyboard-46whvsna/job-state.log",
+    "log_sha256": "531e8667473753cfb76cc62d1f1c68260469496c9b1df623811d3807464313f7"
+  },
+  "timeout": 180,
+  "verified": false,
+  "outer_status": -9,
+  "native_statuses": [],
+  "configuration": "config/direct-resource-tool-environment-v142.json",
+  "stage": "artifacts/private-procfs-auditsession25-stage.json",
+  "arguments": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/ibtool",
+    "--errors",
+    "--warnings",
+    "--notices",
+    "--module",
+    "uEmuera",
+    "--output-partial-info-plist",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-46whvsna/SBPartialInfo.plist",
+    "--auto-activate-custom-fonts",
+    "--target-device",
+    "iphone",
+    "--target-device",
+    "ipad",
+    "--minimum-deployment-target",
+    "13.0",
+    "--output-format",
+    "human-readable-text",
+    "/Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard",
+    "--compilation-directory",
+    "/Volumes/SystemRoot/workspace/runtime/original-storyboard-46whvsna/compiled"
+  ],
+  "products": {},
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/audit-session-runtime-25/darlingserver",
+      "sha256": "385d8c350ac0600a39e5139f34d8a7b421fc938ad1cbe654ccd86579ce9a2ef4"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/audit-session-runtime-25/libxpc.dylib",
+      "sha256": "fd1694c7352b191ed01821ba2c87cbbe125545a7b0cc51e2e5e329d0efa59c9d"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/audit-session-runtime-25/launchd",
+      "sha256": "d747d0b81e3f338c37a8cd0041d85bb14ec725dbb8be816258549c7aeddac24a"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/audit-session-runtime-25/libsystem_kernel.dylib",
+      "sha256": "cd84348b7d324715523558538160271eb2d0522a86f82301fa9d445199a69e0b"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/audit-session-runtime-25/libquarantine.dylib",
+      "sha256": "f5d4ce528e6497057c2b5716d20f10a4a8fd63db2dce3245023a4311b93efac5"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/audit-session-runtime-25/libsystem_sandbox.dylib",
+      "sha256": "29d0e03f98463ac1d908c81e3dedf5cb7c092c6d85bb647cf409e55122030242"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/audit-session-runtime-25/libdyld.dylib",
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b"
+    }
+  },
+  "log": "runtime/original-storyboard-46whvsna/run.log",
+  "log_sha256": "471e51f4f9d6128ce19b210726fdc452dbadf919328763de25952b24c81317d0",
+  "files": {
+    "scripts/probe-original-storyboard.py": "bb08479e802bd7049a642d5a3c5fab5ffaff38378dcb01c3937b5a951fc8c260",
+    "runtime/unity-ios-cocoapods-ios26-v1/ios/LaunchScreen-iPad.storyboard": "f7e84eadb6ad8fd9bad498073c246d8326397681f50bfdd8cb7fdb73aee4b3f1",
+    "config/direct-resource-tool-environment-v142.json": "b8c8902f84447a4438c13ef3f6c082b262f6e5843a50ca92b0da3a32aeaa40b4",
+    "artifacts/private-procfs-auditsession25-stage.json": "5d86bc0a4705b8fa59f31d09b3f7e46cd19abe0c26d90eee204716241d7f71da",
+    "runtime/original-storyboard-46whvsna/configd.plist": "68acfaf5e9796358abbed3b12ecfb25a7d7d21631b048b89c80afd6f6c82bd96",
+    "runtime/original-storyboard-46whvsna/diskarbitrationd.plist": "461cd83f271850a492dbd46a08275b33a4f532af50e4bfcc0431d76cdca6c9f6",
+    "fixtures/hello/diskarbitration-session-ready.c": "ddef91782b318a3b898c2418d123d4c6f2a7438decabce76785c680935f04889",
+    "runtime/original-storyboard-46whvsna/run.sh": "8e01e50a85652e02c064c396f44b77622cdd00ff97384b0f95468f71e8f3bdb6"
+  },
+  "independent_storyboard_semantics_verified": false,
+  "full_goal_complete": false
+}
