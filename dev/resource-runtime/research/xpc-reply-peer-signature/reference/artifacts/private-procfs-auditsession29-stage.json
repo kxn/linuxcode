@@ -1,0 +1,45 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/private-procfs-auditsession29-stage.json",
+  "full_local_report_sha256": "24e40208a72cd38ebec85bfb851aa6ad0bd1c3344f38749baa9942165e094758",
+  "source_runtime": {
+    "LINUXCODE_DARLING_SERVER": {
+      "path": "runtime/audit-session-runtime-29/darlingserver",
+      "sha256": "385d8c350ac0600a39e5139f34d8a7b421fc938ad1cbe654ccd86579ce9a2ef4"
+    },
+    "LINUXCODE_LIBXPC": {
+      "path": "runtime/audit-session-runtime-29/libxpc.dylib",
+      "sha256": "66abf24207712ee9d2a5c39269877210432f5e7ac209815e08e53f789079e112"
+    },
+    "LINUXCODE_LAUNCHD": {
+      "path": "runtime/audit-session-runtime-29/launchd",
+      "sha256": "d747d0b81e3f338c37a8cd0041d85bb14ec725dbb8be816258549c7aeddac24a"
+    },
+    "LINUXCODE_LIBSYSTEM_KERNEL": {
+      "path": "runtime/audit-session-runtime-29/libsystem_kernel.dylib",
+      "sha256": "cd84348b7d324715523558538160271eb2d0522a86f82301fa9d445199a69e0b"
+    },
+    "LINUXCODE_QUARANTINE": {
+      "path": "runtime/audit-session-runtime-29/libquarantine.dylib",
+      "sha256": "f5d4ce528e6497057c2b5716d20f10a4a8fd63db2dce3245023a4311b93efac5"
+    },
+    "LINUXCODE_SANDBOX": {
+      "path": "runtime/audit-session-runtime-29/libsystem_sandbox.dylib",
+      "sha256": "29d0e03f98463ac1d908c81e3dedf5cb7c092c6d85bb647cf409e55122030242"
+    },
+    "LINUXCODE_LIBDYLD": {
+      "path": "runtime/audit-session-runtime-29/libdyld.dylib",
+      "sha256": "d476dfef47dc28f01383eb5a1ee517d17b8991a44ac7aefdf09e31b038b2518b"
+    }
+  },
+  "source_builds": {
+    "server": "runtime/shared-remap-server-u7hf8hv1/stage.json",
+    "kernel": "artifacts/workqueue-credit-kernel-v1-build.json",
+    "system": "runtime/libsystem-kqueue-source-gx7z94z5/build.json",
+    "libxpc": "artifacts/xpc-reply-peer-v1-build.json",
+    "loader": "runtime/mldr-source-xqm92o1w/build.json",
+    "launchd": "artifacts/launchd-jobs-v1-build.json",
+    "libsystem_kernel": "artifacts/host-io-registry-kernel-v2-build.json"
+  },
+  "full_goal_complete": false
+}

@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[原版磁盘服务与 XPC 服务名检查点](dev/resource-runtime/research/xpc-owned-names-and-registry-iteration/README.md)修复真实注册表迭代顺序和服务名所有权；原版 simdiskimaged 已正确激活并收到请求，当前定位回复能力检查失败。完整 Unity App 仍未完成。[环境摘要缓存](dev/resource-runtime/research/runtime-verification-cache/README.md)复用未变化文件的校验结果，减少重复准备时间。
+最新的[XPC 回复与对端签名元数据检查点](dev/resource-runtime/research/xpc-reply-peer-signature/README.md)让原版磁盘服务成功应答，并通过原版服务的权限信息读取检查。Storyboard 已越过等待与断言，当前明确返回 iOS 26.5 Platform Not Installed；最终 Unity App 仍未完成。
+
+此前的[原版磁盘服务与 XPC 服务名检查点](dev/resource-runtime/research/xpc-owned-names-and-registry-iteration/README.md)修复真实注册表迭代顺序和服务名所有权；原版 simdiskimaged 已正确激活并收到请求，当前定位回复能力检查失败。完整 Unity App 仍未完成。[环境摘要缓存](dev/resource-runtime/research/runtime-verification-cache/README.md)复用未变化文件的校验结果，减少重复准备时间。
 
 此前的[Swift 批量导入与原版服务启动检查点](dev/resource-runtime/research/swift-witness-service-startup/README.md)补齐47个Swift数据表导入，修复只读协议表排序，增加真实自身签名元数据读取，并继续接通原版 IOKit 的真实服务端口。最终 Unity App 仍未完成。
 

@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "original_create_reply_return_valid": true,
+  "request_send_once_refs": 1,
+  "mach_port_get_refs_status": 0,
+  "original_create_reply_class_check": true,
+  "original_create_reply_expects_reply": true,
+  "original_caller_sequence": [
+    "createReply(request)",
+    "remoteConnection(reply)",
+    "drop if either is null"
+  ],
+  "source_defect": "Reply dictionary transfers the reply port but omits the request associated connection.",
+  "old_native_control": "runtime/xpc-reply-capability-nb6zxjws/result.json",
+  "original_executable_modified": false,
+  "notes": [
+    "Earlier GDB finish return 0x8 is invalid evidence because Mach-O unwind information was not available. Exact instruction at the C API epilogue returns a valid object.",
+    "Original log says not awaiting a reply for both null-reply and null-remote-connection branches."
+  ],
+  "files": {
+    "logs/simdisk-reply-exact-return-v1.gdb.log": "f8e9d336dd25f36a5582df8f6559b95ac6742af2cb7b885fc59ef48723026300",
+    "runtime/simdiskimaged-main-inspection-v1.thin": "d4887352bedc6bd7e06c72277a4fe748514909f31c29bc880c072691d10eec5d",
+    "runtime/coresim-utils-reply-inspection-v1.thin": "096b7f0a8af9d32baddbe8a16d47d443143597c438784c45f8690d0b3b3050ac"
+  },
+  "full_goal_complete": false
+}
