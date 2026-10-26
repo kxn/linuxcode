@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession48-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1217943,
+    "gdb_status": 0,
+    "log": "runtime/skywalk-ibagent-fault-v1/agent.gdb.log",
+    "maps": "runtime/skywalk-ibagent-fault-v1/agent.maps"
+  },
+  "stage": "artifacts/private-procfs-auditsession48-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/skywalk-ibagent-fault-v1/probe.log": "d524d11b199af359278bca8a5b3f12c2bb4fff0e98ad7b41c7655ebb59db7ba9",
+    "runtime/skywalk-ibagent-fault-v1/capture.gdb": "556847ccf7ac5b909b60ff02d9a46f3d379808d87f9ab409112ff8ef3cd159c5",
+    "runtime/skywalk-ibagent-fault-v1/agent.maps": "3e34056bf89d6a0428aabe913d835398574d3d09e21b299e2f2915ac3c046926",
+    "runtime/skywalk-ibagent-fault-v1/agent.gdb.log": "ad8b8a949f96116195ea7a183052ea28d2a96547a9f10b25eec0f65720c969a6"
+  },
+  "tool_sha256": "b203ed69bdbb88082634c463fce5bbc6c4c75ed0130f06dc4f8b6c43aeb06e11",
+  "full_goal_complete": false
+}

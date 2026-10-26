@@ -1,0 +1,32 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/skywalk-ibagent-fault-v1.gdb.log",
+  "raw_sha256": "ad8b8a949f96116195ea7a183052ea28d2a96547a9f10b25eec0f65720c969a6",
+  "maps": "logs/skywalk-ibagent-fault-v1.maps.log",
+  "maps_sha256": "7b57efed402f3d41b0b21853ea60ff45543d71972ec5c733dd6f6c10b7ad78fb",
+  "output": "logs/skywalk-ibagent-fault-v1.nlist-symbolicated.log",
+  "output_sha256": "c68b09eea23075e4ef59b01c7f027d8dec11c83c9ea1988fd9852a4ba58fd487",
+  "images": {
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_malloc.dylib": {
+      "sha256": "7ffe075bc378f01dad29ae5d338c35044b272359aa361c37b8fb694bbe270545",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 1210
+    },
+    "runtime/audit-session-runtime-48/libsystem_kernel.dylib": {
+      "sha256": "8ee81af8e75ecb52c9a80b98c10f677543ea855a69b1c1f0692e7e0883d0c820",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2367
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem.B.dylib": {
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 53
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/dyld_sim": {
+      "sha256": "45e2b52ae13d2b86ed8e8076d7339dd3dc2bf64f61d1ab35d150d043a9775e9b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 2287
+    }
+  }
+}

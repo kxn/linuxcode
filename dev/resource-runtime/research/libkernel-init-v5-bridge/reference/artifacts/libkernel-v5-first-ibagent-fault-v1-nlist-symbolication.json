@@ -1,0 +1,27 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/libkernel-v5-first-ibagent-fault-v1.gdb.log",
+  "raw_sha256": "156941e17bf3d87fc5d62750730d6931bc7753f74af36f6ce59e1df0bf87fa2c",
+  "maps": "logs/libkernel-v5-first-ibagent-fault-v1.maps.log",
+  "maps_sha256": "09abc2cf4de43715fd95a559226914e721f0a41f3b33edb5a6b51f902ae41969",
+  "output": "logs/libkernel-v5-first-ibagent-fault-v1.nlist-symbolicated.log",
+  "output_sha256": "69039b455a22ce3f0e19242becdff44377bba5f5aab7f3e80c86be5de08d5f5f",
+  "images": {
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_kernel.dylib": {
+      "sha256": "2bac7f99c83be29142ce410d34ffb168f880891a47feccc844c5386991c7d7fe",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 32
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem.B.dylib": {
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 53
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/dyld_sim": {
+      "sha256": "45e2b52ae13d2b86ed8e8076d7339dd3dc2bf64f61d1ab35d150d043a9775e9b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 2287
+    }
+  }
+}

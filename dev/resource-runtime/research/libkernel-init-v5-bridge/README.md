@@ -1,0 +1,15 @@
+# 原版模拟器首次初始化的回调表与宿主桥接
+
+原版IBAgent加载完成后，在LibSystem初始化期间出现真实SIGSEGV。映射和有限nlist符号核对表明，Darling把version4私有扩展的104字节处当成dyld_func_lookup，而Apple version5在同一位置增加了malloc_type_malloc，结果错误调用尚未初始化的原版分配器。
+
+现在将Darling私有dyld/spawn回调从已知宿主version4表独立保存，公共表仍可更新为Apple version5，不再从新版表尾读取私有字段。新模拟器第一次就是version5调用，没有早先version4初始化；动态内核也按mldr现有apple向量elf_calls=十六进制指针取得桥接表。启动解析仅用本地字节和有界十六进制运算，不依赖尚未初始化的libc/platform函数。原版Xcode、dyld_sim和iOS库均未修改。
+
+独立原生测试使用实际内核的固定符号偏移检查公共表和私有缓存；128字节version5表紧接不可读保护页，typed malloc回调计数保持零。它直接调用实际启动函数验证无私有回调的mldr桥接恢复，另测公共version5重复初始化及4个实际子进程启动/等待。第一次getter名称写错和早期测试仅清空桥接而未清除mach_init的一次性初始化状态，导致失败；GDB证实后改为直接验证桥接启动函数，并保留这些测试失败。它们不被当作生产回归或完整首次启动证明；真正的原版首次初始化由后面的独立进程捕获验证。
+
+当进程只有Apple公共表、没有Darling私有spawn钩子时，posix_spawn明确返回ENOTSUP，不跳过必需钩子。正常宿主version4钩子保存后，公共version5表更新不会误调用typed free/realloc，真实子进程检查通过。尚未声称完成纯version5进程中的spawn支持。
+
+原版随后通过首次桥接，进入未修改的assert_simulator_supported_host。其读取kern.osrelease并要求Darwin主版本大于22；原环境产品版本报26.2但内核release沿用20.6。独立构建器新增显式--darwin-release选项，此私有候选选25.2.0，版本文字表明Darling兼容内核；Linux宿主和默认安装环境不变。它只是虚拟兼容目标，不声明完整Darwin25/macOS26 API实现；旧build标签等身份字段仍是已有兼容环境的范围限制。
+
+889单元构建通过，原版首次LibSystem/堆初始化继续到libdispatch调用原版ObjC镜像注册。目前停在selLock重复持有，实际捕获runtime/libkernel-v5-release-ibagent-fault-v1。跟踪过程中诊断信号会影响退出/超时，未将诊断结果冒充正常CI成功。Storyboard和完整Unity App仍未成功，下一步追踪原版选择器解锁调用的实际绑定。
+
+源改动推到kxn/darling-xnu原有linuxcode/xcode-x86_64分支，身份Comman Kang <kangxn@gmail.com>。附件仅UTF-8源码、报告、日志和摘要；不含Apple/Unity二进制、SDK、XIP、core或私钥。未重跑未受影响的GCD、签名和Unity全量检查。

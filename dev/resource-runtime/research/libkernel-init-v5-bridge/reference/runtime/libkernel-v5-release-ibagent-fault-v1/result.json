@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession52-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1245165,
+    "gdb_status": 0,
+    "log": "runtime/libkernel-v5-release-ibagent-fault-v1/agent.gdb.log",
+    "maps": "runtime/libkernel-v5-release-ibagent-fault-v1/agent.maps"
+  },
+  "stage": "artifacts/private-procfs-auditsession52-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/libkernel-v5-release-ibagent-fault-v1/probe.log": "646faab9678b93c39408fc5fce986e54ee2079e854b0e6087fdaf1ae39746a99",
+    "runtime/libkernel-v5-release-ibagent-fault-v1/capture.gdb": "d14f886aaadfb7f7758d0915df2225b7e1affeb61fd2bed3b7a805eb3ca47e5e",
+    "runtime/libkernel-v5-release-ibagent-fault-v1/agent.maps": "ea2204705e602aa85eabf14c3c2a0f023d53790cc9477d55e273a711d2abbc95",
+    "runtime/libkernel-v5-release-ibagent-fault-v1/agent.gdb.log": "87824e84327fbd6f42948e81d849bfe0b2aeb75027fe80bf5b185c75cc375e37"
+  },
+  "tool_sha256": "b203ed69bdbb88082634c463fce5bbc6c4c75ed0130f06dc4f8b6c43aeb06e11",
+  "full_goal_complete": false
+}
