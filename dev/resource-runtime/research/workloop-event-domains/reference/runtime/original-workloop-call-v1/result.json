@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession57-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "150"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1306060,
+    "status": 0,
+    "selector_lock": 139670546357908,
+    "log": "runtime/original-workloop-call-v1/watch.gdb.log"
+  },
+  "stage": "artifacts/private-procfs-auditsession57-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "source_kernel": "runtime/audit-session-runtime-57/libsystem_kernel.dylib",
+  "source_kernel_sha256": "4df3c92c7de36e318dc167f5494a530d55993183bd521115d83a648b5b928e08",
+  "files": {
+    "runtime/original-workloop-call-v1/probe.log": "bcae52b9c2ef88e8e91a3015f7cf1617b12ff97357b01f5680ef5e70ab8156d0",
+    "runtime/original-workloop-call-v1/initial.maps": "e90067c2fe513659c7eb15aef20499c7e3a7898d00d36f92f40f1a3b61aae95e",
+    "runtime/original-workloop-call-v1/capture.gdb": "b4e3343b67218c5a88273adeee51e6dc88fa355c8e34a554d1c5649fefc8a703",
+    "runtime/original-workloop-call-v1/final.maps": "167032dcf81e79886e3a2157a436187a24c692b06b42873eaab356e2ff0dbb2f",
+    "runtime/original-workloop-call-v1/watch.gdb.log": "ca5c04f5c4c1dc83847c835cec9d20d6b9f4995ccb82ad61c39d613f7c9eee93"
+  },
+  "tool_sha256": "16bc35fa23554ead13ead77705635b92ffcd43002624eaa9be055a428a831f92",
+  "full_goal_complete": false
+}

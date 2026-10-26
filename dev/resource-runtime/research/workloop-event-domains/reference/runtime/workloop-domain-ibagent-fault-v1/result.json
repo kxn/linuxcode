@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession59-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1315206,
+    "gdb_status": 0,
+    "log": "runtime/workloop-domain-ibagent-fault-v1/agent.gdb.log",
+    "maps": "runtime/workloop-domain-ibagent-fault-v1/agent.maps"
+  },
+  "stage": "artifacts/private-procfs-auditsession59-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/workloop-domain-ibagent-fault-v1/probe.log": "ab541fce89a5caffa839def185fc9b31ce500944df3623d95cb044146de9fd45",
+    "runtime/workloop-domain-ibagent-fault-v1/capture.gdb": "1d091e007f649e3ebb5396ca7e53b045623b42a9c951b87bcc698a283df7cdec",
+    "runtime/workloop-domain-ibagent-fault-v1/agent.maps": "3532c9e600ab4fde24820fe5f6e1584a628bd9c7e80b5ec251dcf7be22358288",
+    "runtime/workloop-domain-ibagent-fault-v1/agent.gdb.log": "ca97d88724625910714a3cdc0a11dd299d1b5028328e9e756b23b9812e52b2de"
+  },
+  "tool_sha256": "722d0ce50f62ed7ef88ddb6db0c186ff55465cc20dc4e7277126d4f45644f1e1",
+  "full_goal_complete": false
+}

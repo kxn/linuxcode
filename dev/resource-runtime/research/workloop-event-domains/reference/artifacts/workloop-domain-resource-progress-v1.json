@@ -1,0 +1,24 @@
+{
+  "stage": "artifacts/private-procfs-auditsession59-stage.json",
+  "kernel": "artifacts/workloop-domain-kernel-v2-build.json",
+  "pthread": "artifacts/workloop-domain-pthread-v1-build.json",
+  "source_publication": "artifacts/workloop-domain-source-publication-v1.json",
+  "baseline_original_call": "runtime/original-workloop-call-v1/result.json",
+  "prototype_native": "runtime/workloop-domains-9_djfng8/result.json",
+  "exact_flags_native": "runtime/workloop-domains-pez5gauf/result.json",
+  "GCD": "runtime/workqueue-recycling-lvspv99b/result.json",
+  "receipt_regressions": "runtime/current-kqueue-receipts-8il59eyg/result.json",
+  "receipt_harness_wait_timeout": "runtime/current-kqueue-receipts-kdj5ley7/result.json",
+  "original_capture": "runtime/workloop-domain-ibagent-fault-v1/result.json",
+  "original_probe": "runtime/original-storyboard-1k3cix2f/result.json",
+  "next_blocker": "Original libdispatch voucher_task_mach_voucher_init traps with KERN_FAILURE5 for BANK CREATE recipe(key3,command610). Native fast trap70 is missing; raw MIG path reaches server but returns KERN_INVALID_ARGUMENT4 because Bank manager is absent. Empty recipe MIG genuinely returns0/null as specified.",
+  "native_voucher_diagnosis": "runtime/voucher-bank-path-mwx_ofwv/result.json",
+  "scope": "Distinct workloop IDs, real concurrent event transport, repeated enable/modify and real large-message retries; not a complete Darwin workloop scheduler.",
+  "limits": [
+    "64 workloop domains retained until process exit; teardown/reuse and post-fork-without-exec are not implemented.",
+    "EVFILT_WORKLOOP ownership commands and workloop_ctl policies explicitly remain unsupported.",
+    "No complete Darwin scheduler, resource accounting, overrides or provisioning claim.",
+    "Cold full Darling CMake reconstruction and all FD lifecycle forms remain unverified."
+  ],
+  "full_goal_complete": false
+}

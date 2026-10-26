@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/5c8de53c4074da88d0e651574ad700a607b3deff1f5d415a24e3cad91f531657",
+  "original_sha256": "5c8de53c4074da88d0e651574ad700a607b3deff1f5d415a24e3cad91f531657",
+  "encoding": "utf-8",
+  "text": "#ifndef WORKQ_KERNRETURN_H\n#define WORKQ_KERNRETURN_H\n\n#define PRIVATE 1\n#include <sys/event.h>\n\n// Darling specific\n#define WQOPS_QUEUE_REQTHREAD_FOR_KEVENT  0x100020\n\nstruct wq_kevent_data\n{\n\tstruct kevent_qos_s* events;\n\tint nevents;\n\tint capacity;\n\tint sem;\n};\n\nstruct timespec;\n\nlong sys_workq_kernreturn(int options, void* item, int affinity, int prio);\n\nint sem_down(int* sem, int timeout);\nvoid sem_up(int* sem);\n\n#endif // WORKQ_KERNRETURN_H\n"
+}

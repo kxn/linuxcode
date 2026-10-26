@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/ios-dispatch-voucher-task-cold-reference-v1.disassembly.log",
+  "original_sha256": "f04493777de33f7cdb2b1580d849d1335604c8100d15fa6b5c57a8c242c7e99a",
+  "encoding": "utf-8",
+  "text": "\nruntime/ios-dispatch-root-reference-v1/libdispatch-x86_64.dylib:\tfile format mach-o 64-bit x86-64\n\nDisassembly of section __TEXT,__text:\n\n0000000000039bc0 <__voucher_task_mach_voucher_init.cold.1>:\n   39bc0: 48 63 c7                     \tmovslq\t%edi, %rax\n   39bc3: 48 8d 0d 1b 80 00 00         \tleaq\t0x801b(%rip), %rcx      ## 0x41be5 <_write$NOCANCEL+0x41be5>\n   39bca: 48 89 0d 1f 16 02 00         \tmovq\t%rcx, 0x2161f(%rip)     ## 0x5b1f0 <_gCRAnnotations+0x8>\n   39bd1: 48 89 05 48 16 02 00         \tmovq\t%rax, 0x21648(%rip)     ## 0x5b220 <_gCRAnnotations+0x38>\n   39bd8: 0f 0b                        \tud2\n"
+}

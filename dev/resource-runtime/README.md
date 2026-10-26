@@ -198,3 +198,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Original iOS lock provider repair](research/internal-futex-lock-providers/README.md): remove empty kernel lock exports, verify real unlocks and native contention; next original dispatch workqueue capability assertion.
 
 - [Direct event workqueues and embedded Linux backend](research/direct-kevent-workqueues/README.md): real pipe/Mach callbacks, auxiliary buffers, large-message retry and GCD; original iOS now reaches the missing kevent_id workloop backend.
+
+- [Workloop event domains and original task voucher diagnosis](research/workloop-event-domains/README.md): distinct real callback domains, exact original Mach flags and large-message retries; original iOS now reaches missing Bank voucher support.
