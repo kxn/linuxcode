@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "host_status": 0,
+  "command": [
+    "gcc",
+    "-O2",
+    "-g",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I/home/dl/linuxcode/runtime/platform-memcmp-zero-host-_m3arl4t/include",
+    "/home/dl/linuxcode/vendor/darling/src/external/libplatform/src/string/generic/memcmp_zero.c",
+    "/home/dl/linuxcode/fixtures/hello/platform-memcmp-zero.c",
+    "-o",
+    "/home/dl/linuxcode/runtime/platform-memcmp-zero-host-_m3arl4t/probe"
+  ],
+  "log": "runtime/platform-memcmp-zero-host-_m3arl4t/run.log",
+  "log_sha256": "632054702054e14eb3436ffe8d8abd63cf086562eec5384ac055ff5b2434fc7e",
+  "files": {
+    "scripts/test-platform-memcmp-zero-host.py": "01009b751c3cb4a93f16f5cc2da7d240d20a004b359a3d276bb48ccfe2925540",
+    "vendor/darling/src/external/libplatform/src/string/generic/memcmp_zero.c": "1909bf022c003cdcad8d558197abe38d08603e991aea426f91ee33eb7fa83767",
+    "fixtures/hello/platform-memcmp-zero.c": "a241e3854a6a8d81741a4a764d1db72b7d3d5a1e413b1a8d7d00233031fa3c23",
+    "runtime/platform-memcmp-zero-host-_m3arl4t/include/platform/string.h": "37be19642dd7fee814d6397f630618c9f46bac6defd6988fb235123e594b9974"
+  },
+  "scope": "Exact production C implementation; minimal test-only header supplies types and prototype, no implementation.",
+  "full_goal_complete": false
+}

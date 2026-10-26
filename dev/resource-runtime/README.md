@@ -186,3 +186,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [工作区间实例后续](research/work-interval-instances/README.md) 补齐16个真实载荷和方法，单元及原生错误传播检查通过；性能控制内核后端仍未实现。原版流程继续到 cooperative workqueue 接口，完整资源/App 仍未完成。
 
 [协作工作线程后续](research/cooperative-workqueue/README.md) 完整 pthread 源码构建保留194个旧导出，256次新旧请求与9216个GCD任务通过。原版 ibtool 继续到工作组回调注册接口，完整资源/App仍未完成。
+
+[模拟器工作组、平台与目录节点操作](research/simulator-workgroup-platform-nodeat/README.md) 复用 Apple 开源实现，完整重建 pthread/platform，54万多项内存边界检查、实际 FIFO 字节读写及GCD回收通过；原版流程推进到 openat_authenticated_np，完整资源/App仍未完成。

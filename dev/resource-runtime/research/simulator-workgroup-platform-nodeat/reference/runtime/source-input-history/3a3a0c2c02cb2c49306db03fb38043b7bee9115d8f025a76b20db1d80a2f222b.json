@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/3a3a0c2c02cb2c49306db03fb38043b7bee9115d8f025a76b20db1d80a2f222b",
+  "original_sha256": "3a3a0c2c02cb2c49306db03fb38043b7bee9115d8f025a76b20db1d80a2f222b",
+  "encoding": "utf-8",
+  "text": "#define __SYSCALL_32BIT_ARG_BYTES 16\n#include \"SYS.h\"\n\n#ifndef SYS_mknodat\n#define SYS_mknodat 554\n#elif SYS_mknodat != 554\n#error \"Unexpected mknodat syscall number\"\n#endif\n\n#ifndef SYS_mknodat\n#error \"SYS_mknodat not defined. The header files libsyscall is building against do not match syscalls.master.\"\n#endif\n\n#if defined(__arm64__)\nMI_ENTRY_POINT(_mknodat)\nSYSCALL_NONAME(mknodat, 4, cerror_nocancel)\nret\n#else\n#if defined(__arm64__) || defined(__i386__) || defined(__x86_64__) || defined(__ppc__)\n__SYSCALL2(_mknodat, mknodat, 4, cerror_nocancel)\n#endif\n\n#endif\n\n"
+}

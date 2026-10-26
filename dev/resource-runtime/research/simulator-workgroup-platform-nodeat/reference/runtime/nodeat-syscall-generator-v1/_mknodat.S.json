@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/nodeat-syscall-generator-v1/_mknodat.S",
+  "original_sha256": "56531548754f50a3476ce83d4e39bd617640eb9c52330e3a7ea22973e767eb87",
+  "encoding": "utf-8",
+  "text": "#define __SYSCALL_32BIT_ARG_BYTES 16\n#include \"SYS.h\"\n\n#ifndef SYS_mknodat\n#error \"SYS_mknodat not defined. The header files libsyscall is building against do not match syscalls.master.\"\n#endif\n\n#if defined(__x86_64__)\n__SYSCALL2(_mknodat, mknodat, 4, cerror_nocancel)\n#endif\n\n"
+}

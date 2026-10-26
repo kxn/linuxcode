@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/0799d1a3416a7ede09c4d0ff611a6cea8e105ffb26ea223c8ea8f4e76009f3a1",
+  "original_sha256": "0799d1a3416a7ede09c4d0ff611a6cea8e105ffb26ea223c8ea8f4e76009f3a1",
+  "encoding": "utf-8",
+  "text": "#define __SYSCALL_32BIT_ARG_BYTES 12\n#include \"SYS.h\"\n\n#ifndef SYS_mkfifoat\n#define SYS_mkfifoat 553\n#elif SYS_mkfifoat != 553\n#error \"Unexpected mkfifoat syscall number\"\n#endif\n\n#ifndef SYS_mkfifoat\n#error \"SYS_mkfifoat not defined. The header files libsyscall is building against do not match syscalls.master.\"\n#endif\n\n#if defined(__arm64__)\nMI_ENTRY_POINT(_mkfifoat)\nSYSCALL_NONAME(mkfifoat, 3, cerror_nocancel)\nret\n#else\n#if defined(__arm64__) || defined(__i386__) || defined(__x86_64__) || defined(__ppc__)\n__SYSCALL2(_mkfifoat, mkfifoat, 3, cerror_nocancel)\n#endif\n\n#endif\n\n"
+}

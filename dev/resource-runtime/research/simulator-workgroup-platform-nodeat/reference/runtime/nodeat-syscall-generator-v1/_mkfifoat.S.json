@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/nodeat-syscall-generator-v1/_mkfifoat.S",
+  "original_sha256": "da1b26c3037c5cce37fde6c402e099527b348344f0d194fe515c388fbd8b3dcf",
+  "encoding": "utf-8",
+  "text": "#define __SYSCALL_32BIT_ARG_BYTES 12\n#include \"SYS.h\"\n\n#ifndef SYS_mkfifoat\n#error \"SYS_mkfifoat not defined. The header files libsyscall is building against do not match syscalls.master.\"\n#endif\n\n#if defined(__x86_64__)\n__SYSCALL2(_mkfifoat, mkfifoat, 3, cerror_nocancel)\n#endif\n\n"
+}
