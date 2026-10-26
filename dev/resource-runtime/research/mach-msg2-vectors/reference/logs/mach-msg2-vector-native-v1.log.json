@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/mach-msg2-vector-native-v1.log",
+  "original_sha256": "d8399f640bc851009419953d91ca43f80df053fa14242ce2b357884138645642",
+  "encoding": "utf-8",
+  "text": "/usr/bin/ld: unrecognised emulation mode: llvm\nSupported emulations: elf_x86_64 elf32_x86_64 elf_i386 elf_iamcu i386pep i386pe\nclang-19: error: linker command failed with exit code 1 (use -v to see invocation)\nTraceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/probe-mach-msg2-vector.py\", line 11, in <module>\n    for cmd in commands:subprocess.run(cmd,check=True)\n                        ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 577, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['clang-19', '-target', 'x86_64-apple-macos11', '-isysroot', '/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk', '-O1', '-g', '/home/dl/linuxcode/fixtures/hello/mach-msg2-scalar.c', '-o', '/home/dl/linuxcode/runtime/mach-msg2-vector-4ekxm5kr/scalar.o']' returned non-zero exit status 1.\n"
+}

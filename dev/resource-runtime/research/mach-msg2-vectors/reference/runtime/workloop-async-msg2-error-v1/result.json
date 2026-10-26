@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession62-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "150"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1339753,
+    "status": 0,
+    "selector_lock": 140044177819520,
+    "log": "runtime/workloop-async-msg2-error-v1/watch.gdb.log"
+  },
+  "stage": "artifacts/private-procfs-auditsession62-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "source_kernel": "runtime/audit-session-runtime-62/libsystem_kernel.dylib",
+  "source_kernel_sha256": "fe29e705df18cfc000e87bdf572ede2470be935a4537e071bc4eb5f643947c0d",
+  "files": {
+    "runtime/workloop-async-msg2-error-v1/probe.log": "ae41995a1e4f792d89498efdb5d12f8a558d52d0dd75221bf392721fc466ff49",
+    "runtime/workloop-async-msg2-error-v1/initial.maps": "ef4d829005b4a232908d471cc8c71b9014e3f4336a936dd4b397e9b3a0069a09",
+    "runtime/workloop-async-msg2-error-v1/capture.gdb": "11958228c0448dac64da662c48a6a6d8f0b9afdf6d71c9302c1d37699beed389",
+    "runtime/workloop-async-msg2-error-v1/final.maps": "7349e0dfa70bff98c1ba0f7e5e76db0fc9949f309745fe2ed2fdaddac3a50103",
+    "runtime/workloop-async-msg2-error-v1/watch.gdb.log": "68a3fc49782a37cf4fa5762da33f44a1332062f6015522fd669aef02ad2d4695"
+  },
+  "tool_sha256": "34514d84e3cc528d253db84ce201f6c27fb71cd36dcbb7e979e2661d6167702c",
+  "full_goal_complete": false
+}

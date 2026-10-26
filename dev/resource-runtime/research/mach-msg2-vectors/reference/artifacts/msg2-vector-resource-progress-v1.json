@@ -1,0 +1,33 @@
+{
+  "stage": "artifacts/private-procfs-auditsession63-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "server": "runtime/simulator-signature-server-6z4ijd0w/stage.json",
+  "native": "runtime/mach-msg2-vector-c7wy8ck0/result.json",
+  "source_publication": "artifacts/msg2-vector-source-publication-v1.json",
+  "original_before": "runtime/workloop-async-msg2-error-v1/result.json",
+  "original_after": "runtime/msg2-vector-ibagent-fault-v1/result.json",
+  "original_after_probe": "runtime/original-storyboard-iz8hhce2/result.json",
+  "exact_first_vector_call": {
+    "options": "0x500000031",
+    "vector_count": 2,
+    "primary_send_size": 52,
+    "auxiliary_send_size": 0,
+    "result_before": "0x10000013"
+  },
+  "verification": [
+    "497 native vector checks with19 outgoing messages:52byte primary,read-only primary and vector buffers,captured headers,two real port descriptors",
+    "Separate receive address,empty auxiliary EOF header and untouched trailing bytes",
+    "Rejected nonempty auxiliary sends do not enqueue messages; malformed count/address/alignment reject",
+    "Valid combined send occurs before receive-count validation; received message independently proves send success",
+    "Real kernel host MIG request with one send vector and two receive vectors,including ignored inactive auxiliary send-size field",
+    "Existing115-check scalar contract passes in the same native session"
+  ],
+  "actual_progress": "Original IBAgent now reaches its main and UIKitCore UIScreen/default traits/resource initialization, beyond original preferences/XPC initialization.",
+  "next_blocker": "Original libdispatch voucher_activity_id_allocate_slow traps after mach_generate_activity_id_impl returns KERN_FAILURE5. Server already has the original XNU allocator but client routing and one-time initialization are missing. Subsequent dyld-cache crash-report assertion is secondary.",
+  "limits": [
+    "Nonempty auxiliary sends explicitly unsupported; no auxiliary payload is silently discarded.",
+    "Vector too-large/partial-copyout edge behavior and every receive-error trailer form are not globally verified.",
+    "Original resource tool status255; no compiled Storyboard/final Unity App and no default installer promotion."
+  ],
+  "full_goal_complete": false
+}

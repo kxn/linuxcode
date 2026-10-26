@@ -1,0 +1,39 @@
+{
+  "name": "mach-msg2-vectors",
+  "payload": [
+    "scripts/capture-simulator-agent-fault.py",
+    "scripts/capture-simulator-msg2-error.py",
+    "scripts/probe-mach-msg2-vector.py",
+    "fixtures/hello/mach-msg2-vector.c",
+    "fixtures/hello/mach-msg2-scalar.c",
+    "vendor/darlingserver/duct-tape/xnu/osfmk/ipc/mach_msg.c"
+  ],
+  "reference": [
+    "artifacts/msg2-vector-resource-progress-v1.json",
+    "artifacts/msg2-vector-source-publication-v1.json",
+    "artifacts/private-procfs-auditsession63-stage.json",
+    "runtime/simulator-signature-server-6z4ijd0w/stage.json",
+    "runtime/simulator-signature-server-6z4ijd0w/build.log",
+    "logs/msg2-vector-server-v1-driver.log",
+    "logs/msg2-vector-server-source-push-v1.log",
+    "runtime/mach-msg2-vector-c7wy8ck0/result.json",
+    "logs/mach-msg2-vector-native-v1.log",
+    "runtime/workloop-async-msg2-error-v1/result.json",
+    "runtime/workloop-async-msg2-error-v1/watch.gdb.log",
+    "runtime/workloop-async-msg2-error-v1/initial.maps",
+    "runtime/workloop-async-msg2-error-v1/final.maps",
+    "runtime/msg2-vector-ibagent-fault-v1/result.json",
+    "runtime/msg2-vector-ibagent-fault-v1/agent.gdb.log",
+    "runtime/msg2-vector-ibagent-fault-v1/agent.maps",
+    "logs/msg2-vector-ibagent-fault-v1.gdb.log",
+    "logs/msg2-vector-ibagent-fault-v1.maps.log",
+    "logs/msg2-vector-ibagent-fault-v1.nlist-symbolicated.log",
+    "artifacts/msg2-vector-ibagent-fault-v1-map-bindings.json",
+    "artifacts/msg2-vector-ibagent-fault-v1-nlist-symbolication.json",
+    "runtime/original-storyboard-iz8hhce2/result.json",
+    "logs/workloop-async-xpc-release-reference-v1.disassembly.log",
+    "logs/workloop-async-xpc-release-cold-reference-v1.disassembly.log",
+    "runtime/apple-xnu-msg2-reference-v1/reference.json",
+    "runtime/apple-xnu-msg2-reference-v1/ipc-kmsg-reference.json"
+  ]
+}
