@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/signed-compat-runtime-2083wv0o/run.sh",
+  "original_sha256": "082cb2b41448e0bea217ef8a5ae00eb23be89d7489cb9c6bc8f0a5b81b1af501",
+  "encoding": "utf-8",
+  "text": "#!/bin/bash\nset -e\nulimit -c 0\nunset DISPLAY WAYLAND_DISPLAY XAUTHORITY\n/usr/bin/codesign --force --sign - --timestamp=none --digest-algorithm=sha256 --identifier com.apple.dt.runtime.swiftCore --options runtime --entitlements /Volumes/SystemRoot/workspace/runtime/signed-compat-runtime-2083wv0o/entitlements.plist /Volumes/SystemRoot/workspace/runtime/signed-compat-runtime-2083wv0o/libswiftC6.dylib\n/usr/bin/codesign --verify --strict --verbose=2 /Volumes/SystemRoot/workspace/runtime/signed-compat-runtime-2083wv0o/libswiftC6.dylib\nprintf \"PRIVATE_COMPAT_RUNTIME_SIGNED_AND_STRICT_VERIFIED_OK\\n\"\n"
+}

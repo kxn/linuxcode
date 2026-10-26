@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/89c53d855844b1d78675966489f124fccaeeed370585c80ac4ccafcdd6ed716a",
+  "original_sha256": "89c53d855844b1d78675966489f124fccaeeed370585c80ac4ccafcdd6ed716a",
+  "encoding": "utf-8",
+  "text": "// Descriptor-based simulator dyld signature registration for Linux hosts.\n#pragma once\n#include <cstdint>\n#include <string>\nnamespace DarlingServer::FileSignatures {\n// Returns a Linux errno value, or zero with the signed slice coverage.\n// This implements the bounded command-83 path, not general AMFI enforcement.\nint registerSimulatorDyld(int fd, uint64_t sliceStart, uint64_t blobStart,\n    uint64_t blobSize, uint64_t& coveredLength, std::string* reason = nullptr);\n}\n"
+}

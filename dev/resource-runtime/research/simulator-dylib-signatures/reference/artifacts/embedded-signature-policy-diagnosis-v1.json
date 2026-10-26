@@ -1,0 +1,9 @@
+{
+  "initial_original_result": "runtime/original-storyboard-iutb2w0x/result.json",
+  "underlying_issue": "F_ADDFILESIGS_RETURN needs coverage registration without Apple-platform-only identity requirement. Swift Open Source Developer ID leaf has critical Apple OID 1.2.840.113635.100.6.1.13 with DER NULL; generic OpenSSL rejects this until the exact recognized marker is handled.",
+  "platform_policy": "Apple root, fixed Software Signing leaf marker and intermediate, CMS and page/special-slot hashes.",
+  "embedded_policy": "Apple-rooted code-signing CMS with explicitly understood Developer ID marker, or ad-hoc CD with actual page/special-slot hashes. Neither yields platform identity.",
+  "positive_and_negative_controls": "runtime/embedded-file-signature-controls-s6i6dmm4/result.json",
+  "retained_platform_controls": "runtime/simulator-dyld-signature-controls-2it7f69j/result.json",
+  "full_goal_complete": false
+}

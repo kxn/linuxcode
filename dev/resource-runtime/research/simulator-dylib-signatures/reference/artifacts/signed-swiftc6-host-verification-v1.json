@@ -1,0 +1,53 @@
+{
+  "verified": true,
+  "results": [
+    {
+      "name": "original-codesign-empty-CMS-ad-hoc",
+      "command": [
+        "runtime/simulator-dyld-signature-host-v4/check",
+        "runtime/signed-compat-runtime-2083wv0o/libswiftC6.dylib",
+        "16384",
+        "8848144",
+        "87392",
+        "embedded"
+      ],
+      "status": 0,
+      "output": "error=0 covered=8848144 reason=verified and registered ad-hoc code coverage\n",
+      "passed": true
+    },
+    {
+      "name": "ad-hoc-not-Apple-platform",
+      "command": [
+        "runtime/simulator-dyld-signature-host-v4/check",
+        "runtime/signed-compat-runtime-2083wv0o/libswiftC6.dylib",
+        "16384",
+        "8848144",
+        "87392"
+      ],
+      "status": 1,
+      "output": "error=1 covered=0 reason=ad-hoc signature cannot establish Apple platform identity\n",
+      "passed": true
+    },
+    {
+      "name": "ad-hoc-modified-code-page",
+      "command": [
+        "runtime/simulator-dyld-signature-host-v4/check",
+        "runtime/signed-swiftc6-host-controls-v1/modified-code",
+        "16384",
+        "8848144",
+        "87392",
+        "embedded"
+      ],
+      "status": 1,
+      "output": "error=1 covered=0 reason=signed code page mismatch\n",
+      "passed": true
+    }
+  ],
+  "files": {
+    "runtime/simulator-dyld-signature-host-v4/check": "b244505c9ce5bc0dc20b5e7a47ad2499ef70c490cb3abc2608082dcfda472678",
+    "vendor/darlingserver/src/file-signatures.cpp": "0243547891f95bcf31c38a826e28b6910ee2c922b62a1417d8aea88800f76396",
+    "scripts/verify-adhoc-macho-file.py": "00ba54939717d8a7c5bd126f2d224479f78cbb91f84d0daf34856d6573a676ab",
+    "runtime/signed-compat-runtime-2083wv0o/libswiftC6.dylib": "1631439310f51e492e86c4c20415e90d6486900e5f02c86c97ef0f52396ba32d"
+  },
+  "full_goal_complete": false
+}

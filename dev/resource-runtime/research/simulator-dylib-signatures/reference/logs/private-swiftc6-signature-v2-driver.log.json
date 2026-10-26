@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/private-swiftc6-signature-v2-driver.log",
+  "original_sha256": "99bc1fb8da85902028fd4fbe061cb4cc86d1959c3d5246d95b8b69a2f03183a7",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/sign-private-compat-runtime.py\", line 68, in <module>\n    independent=runpy.run_path(str(root/'scripts/verify-adhoc-macho-file.py'))['verify'](target) if r.returncode==0 else None\n                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\n  File \"/home/dl/linuxcode/scripts/verify-adhoc-macho-file.py\", line 34, in verify\n    assert i in [2,5,7] and i in blobs,'unsupported external special slot'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: unsupported external special slot\n"
+}

@@ -178,3 +178,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 # 最新 Intel 模拟器加载进展
 
 [版本集合与真实签名登记](research/simulator-dyld-registration/README.md) 保存现代版本判断、Apple CMS/代码页校验、描述符 RPC 及 Darling 加载器静态入口更新。原生动态与启动入口测试通过；原版 Storyboard 已越过签名登记报错，仍因模拟器子进程启动失败返回 255，最终 Unity App 尚未完成。默认安装候选未提升。
+
+[后续动态库签名与宿主接口](research/simulator-dylib-signatures/README.md) 已让原版模拟器加载器运行 IBAgent-iOS 并装载 iOS QuartzCore、Foundation、libdispatch。包含 Developer ID/ad-hoc 与平台身份的分离、原版 codesign 重签私有兼容库、真实 voucher 权利清理及上游 pthread 别名。最新缺口为 mach_eventlink 用户态接线；完整 Storyboard/App 仍未生成。

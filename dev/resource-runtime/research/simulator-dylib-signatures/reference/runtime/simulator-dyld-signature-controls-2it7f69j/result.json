@@ -1,0 +1,101 @@
+{
+  "verified": true,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "reference_source_sha256": "45e2b52ae13d2b86ed8e8076d7339dd3dc2bf64f61d1ab35d150d043a9775e9b",
+  "results": [
+    {
+      "name": "genuine-Apple-Intel-dyld",
+      "returncode": 0,
+      "output": "error=0 covered=639920 reason=verified and registered Apple-signed code coverage\n",
+      "passed": true
+    },
+    {
+      "name": "modified-code-page",
+      "returncode": 1,
+      "output": "error=1 covered=0 reason=signed code page mismatch\n",
+      "passed": true
+    },
+    {
+      "name": "modified-CodeDirectory",
+      "returncode": 1,
+      "output": "error=1 covered=0 reason=unsupported CodeDirectory\n",
+      "passed": true
+    },
+    {
+      "name": "modified-CMS",
+      "returncode": 1,
+      "output": "error=1 covered=0 reason=Apple Software Signing CMS validation failed\n",
+      "passed": true
+    },
+    {
+      "name": "modified-requirements",
+      "returncode": 1,
+      "output": "error=1 covered=0 reason=signed special slot mismatch\n",
+      "passed": true
+    },
+    {
+      "name": "duplicate-signature-slot",
+      "returncode": 1,
+      "output": "error=22 covered=0 reason=duplicate or truncated signature slot\n",
+      "passed": true
+    },
+    {
+      "name": "out-of-bounds-signature-slot",
+      "returncode": 1,
+      "output": "error=22 covered=0 reason=superblob index bounds\n",
+      "passed": true
+    },
+    {
+      "name": "oversized-signature-index",
+      "returncode": 1,
+      "output": "error=22 covered=0 reason=superblob bounds\n",
+      "passed": true
+    },
+    {
+      "name": "truncated-file",
+      "returncode": 1,
+      "output": "error=22 covered=0 reason=signature file bounds\n",
+      "passed": true
+    },
+    {
+      "name": "wrong-slice",
+      "returncode": 1,
+      "output": "error=8 covered=0 reason=expected Intel 64-bit Mach-O\n",
+      "passed": true
+    },
+    {
+      "name": "wrong-signature-offset",
+      "returncode": 1,
+      "output": "error=22 covered=0 reason=signature range does not match Mach-O\n",
+      "passed": true
+    },
+    {
+      "name": "oversized-signature",
+      "returncode": 1,
+      "output": "error=22 covered=0 reason=signature input bounds\n",
+      "passed": true
+    },
+    {
+      "name": "bad-descriptor",
+      "returncode": 1,
+      "output": "error=9 covered=0 reason=descriptor stat failed\n",
+      "passed": true
+    },
+    {
+      "name": "nonregular-descriptor",
+      "returncode": 1,
+      "output": "error=9 covered=0 reason=descriptor is not a regular file\n",
+      "passed": true
+    }
+  ],
+  "files": {
+    "scripts/test-simulator-dyld-signature-host.py": "a391244e2072da0f65f697afc9a68b8cf0304a00233fd9a337e21d7d7d023a4e",
+    "fixtures/hello/simulator-dyld-signature-host.cpp": "c0aef4d04171be4a418e2efaec94228ab41d00885c36939844bc68bd69a66ab0",
+    "vendor/darlingserver/src/file-signatures.cpp": "32ca08fee136e42a2b34d3071d90a4ded3926ff2da7e2f8cbded7c6d83c67a8e",
+    "vendor/darlingserver/internal-include/darlingserver/apple-code-signing-roots.hpp": "5ed6713371232d77c301932cac44d2718d875b8c0cb5288a5e3891e7a43684bb"
+  },
+  "full_goal_complete": false
+}

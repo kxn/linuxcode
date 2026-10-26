@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/6ba6b8b607c56da9953d23a254953a46b6e0c058680a4f78cd9507c8c805550d",
+  "original_sha256": "6ba6b8b607c56da9953d23a254953a46b6e0c058680a4f78cd9507c8c805550d",
+  "encoding": "utf-8",
+  "text": "#include <darlingserver/file-signatures.hpp>\n#include <cerrno>\n#include <cstdio>\n#include <cstdlib>\n#include <fcntl.h>\n#include <string>\n#include <unistd.h>\n\nint main(int argc, char** argv) {\n    if (argc != 5) return 64;\n    int fd = open(argv[1], O_RDONLY | O_CLOEXEC);\n    uint64_t covered = UINT64_MAX;\n    std::string reason;\n    int error = DarlingServer::FileSignatures::registerSimulatorDyld(fd,\n        strtoull(argv[2], nullptr, 0), strtoull(argv[3], nullptr, 0),\n        strtoull(argv[4], nullptr, 0), covered, &reason);\n    if (fd >= 0) close(fd);\n    printf(\"error=%d covered=%llu reason=%s\\n\", error,\n        (unsigned long long)covered, reason.c_str());\n    return error ? 1 : 0;\n}\n"
+}
