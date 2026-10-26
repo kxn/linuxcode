@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/a6233e64eff599f3d2219ff9005f4cb6266245a30dd019ba58aa9859a7c0a091",
+  "original_sha256": "a6233e64eff599f3d2219ff9005f4cb6266245a30dd019ba58aa9859a7c0a091",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nparent=runpy.run_path(str(root/'scripts/mount-flags-runtime-profile.py'))\ndef profile(include_system_resources=True,diagnostic=False):\n p=parent['profile'](include_system_resources);d=json.loads((root/'artifacts/s2c-lifecycle-stage.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n assert d['previous_source_runtime']==p['source_runtime'] and digest(d['server_build'])==d['server_build_sha256']\n for n,sha in d['source_server']['source_files'].items():assert digest(n)==sha,n\n chosen=d['runtimes']['diagnostic' if diagnostic else 'normal'];assert chosen['test_only_permissive_coreservices_policy']==diagnostic\n for v in chosen['source_runtime'].values():assert digest(v['path'])==v['sha256']\n assert digest(chosen['policy'])==chosen['policy_sha256']\n return {**p,'source_runtime':chosen['source_runtime'],'source_s2c_lifecycle':d,'s2c_selected_runtime':chosen}\ndef environment(p):return parent['environment'](p)\n"
+}

@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/e36ff6c0cd49e025993b9df6ab0c1e433923ba5c311ae8a5599bc44a2fe60f46",
+  "original_sha256": "e36ff6c0cd49e025993b9df6ab0c1e433923ba5c311ae8a5599bc44a2fe60f46",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\n\"\"\"Select Xcode's actual MobileDevice payload before Darling's older image.\"\"\"\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/pid-generation-source-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources)\n    mobile=p['native_mdns']['mobile_device']\n    path=mobile['payload_root']+'/System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/MobileDevice'\n    assert hashlib.sha256((root/path).read_bytes()).hexdigest()==mobile['files'][path]\n    c=list(p['command'])\n    if include_system_resources:\n        i=next(i for i,a in enumerate(c) if a.startswith('DYLD_FRAMEWORK_PATH='))\n        c[i]='DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/'+mobile['payload_root']+'/System/Library/PrivateFrameworks:'+c[i].split('=',1)[1]\n    return {**p,'command':c,'native_mobile_device_selection':dict(image=path,sha256=mobile['files'][path],selected=include_system_resources,binary_modified=False)}\ndef environment(p):return m['environment'](p)\n"
+}

@@ -1,0 +1,86 @@
+{
+  "verified_code_preservation": true,
+  "original_extra_export_code_sections": {
+    "__text": {
+      "address": 4048,
+      "size": 820980,
+      "sha256": "8d52d40cb52d6381fdca13b3de0b766a190c81179e6689235f1f86f54d5760d8"
+    }
+  },
+  "original": "runtime/resource-framework-overlay-selected-swift-witness-v1/frameworks/IOKit.framework/Versions/A/IOKit",
+  "original_sha256": "a1756fac4c01368492e4a0b7c55d49689f71efea5059e8464fd6500d6f7dcdde",
+  "legacy_client": "runtime/foundation-native-library-stage/libDarlingIOKitBackend.dylib",
+  "legacy_client_sha256": "f664fd7ded170d606082f4445676d2c8cf8b33e2b8e269ece4f7120563b526eb",
+  "framework": "runtime/iokit-hybrid-client-v1/frameworks/IOKit.framework/Versions/A/IOKit",
+  "framework_sha256": "cfec1c70c8d4abdf53eea129e8dd5495c55035752d11213dcaa27e36b8ebe673",
+  "extra_library": "runtime/iokit-hybrid-client-v1/libraries/libLinuxcodeOriginalIOKit.dylib",
+  "extra_library_sha256": "6842f689f1f20ea7eda976f045a910cfb0daa3698e3b2b4e9e77cc8371ed2566",
+  "commands": [
+    [
+      "clang-19",
+      "-target",
+      "x86_64-apple-macos11",
+      "-isysroot",
+      "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-O2",
+      "-Wno-deprecated-declarations",
+      "-c",
+      "/home/dl/linuxcode/vendor/darling/src/external/IOKitUser/IOMainPort.c",
+      "-o",
+      "/home/dl/linuxcode/runtime/iokit-hybrid-client-v1/main.o"
+    ],
+    [
+      "clang-19",
+      "-target",
+      "x86_64-apple-macos11",
+      "-isysroot",
+      "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-O2",
+      "-Wno-deprecated-declarations",
+      "-c",
+      "/home/dl/linuxcode/runtime/iokit-hybrid-client-v1/constant.c",
+      "-o",
+      "/home/dl/linuxcode/runtime/iokit-hybrid-client-v1/constant.o"
+    ],
+    [
+      "ld64.lld-19",
+      "-dylib",
+      "-arch",
+      "x86_64",
+      "-platform_version",
+      "macos",
+      "11",
+      "11",
+      "-syslibroot",
+      "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-lSystem",
+      "-install_name",
+      "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+      "-compatibility_version",
+      "1.0.0",
+      "-current_version",
+      "275.0.0",
+      "-reexport_library",
+      "/home/dl/linuxcode/runtime/foundation-native-library-stage/libDarlingIOKitBackend.dylib",
+      "-reexport_library",
+      "/home/dl/linuxcode/runtime/iokit-hybrid-client-v1/libraries/libLinuxcodeOriginalIOKit.dylib",
+      "/home/dl/linuxcode/runtime/iokit-hybrid-client-v1/main.o",
+      "/home/dl/linuxcode/runtime/iokit-hybrid-client-v1/constant.o",
+      "-o",
+      "/home/dl/linuxcode/runtime/iokit-hybrid-client-v1/frameworks/IOKit.framework/Versions/A/IOKit"
+    ]
+  ],
+  "files": {
+    "scripts/build-iokit-hybrid-client.py": "a4bc82b16944dc1bd1b976de3eb7fa753484ab2ccd785c90f4a0ceb5111cb0c8",
+    "vendor/darling/src/external/IOKitUser/IOMainPort.c": "fa4dd060acb17819ca1056480d9bfa157def71cf2a2985116b10dfb1014e5472",
+    "runtime/iokit-hybrid-client-v1/constant.c": "b00e98c79e10915fdc7a1ed9906f48cf6efd984e34ad601a78b2fd90c9f679ee",
+    "artifacts/resource-framework-overlay-selected-swift-witness-v1-stage.json": "3abf234aee4b0542d92bcfb17914c09a76874103fbf8600a54cfdeacf2892766",
+    "config/direct-resource-tool-environment-v140.json": "ebb8341449518c09d9f565a8829a179a82b803b0e720478bf113cdc6c9059818",
+    "scripts/macho-set-id.py": "0051ae85e3fab1c5f60190847bcd5e0bf2e9560819b0f350f985461c09005381"
+  },
+  "source_registry_clients_reexported_first": true,
+  "original_private_exports_retained": true,
+  "modern_IOKit_kobject_send_compatibility_verified": false,
+  "runtime_execution_verified": false,
+  "full_goal_complete": false
+}

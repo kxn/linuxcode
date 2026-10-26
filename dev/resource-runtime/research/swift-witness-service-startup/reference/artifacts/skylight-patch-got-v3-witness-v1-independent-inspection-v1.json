@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 4727347,
+      "sha256": "c03620704530d2bb4d1ef0af1c7d4abbfe3ec31968fd34b44b76c85ffcd4114a"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 11784,
+      "sha256": "0f8fba5c6cff21722f15eddcfeb8f9c6151404fd80c197a3a158d74129be586c"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 2728,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 6923,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 5,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 1,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 34,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5de78",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5de90",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5dea8",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5dec0",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5ded8",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5df00",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5df28",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x5df50",
+        "first_section_prefix": "0x8d0",
+        "symbol": "_OBJC_CLASS_$_NSConstantDictionary"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-skylight-patch-got-v3-witness-v1/SkyLight': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x256cf)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/skylight-patch-got-v3-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x256cf",
+        "segment": "__DATA_CONST",
+        "offset": "0x5de78",
+        "actual_address": "0x37914e78",
+        "LLVM_section_base_address": "0x37915748",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "4d90b0aacdfde54849de1dc228927c1669eab7c9aa84470844d66a483104ee5c",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "3d45e796c9a747a6000680bdff683db552eae0d8fde2bd71777b7656edb60e35",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight": "c65551730208f3441f77a6a22b0da305f5bff1883f1982f915b58475203f32c3",
+    "runtime/rebuilt-skylight-patch-got-v3-witness-v1/SkyLight": "307909ab66a0ff637055b8d5212b1aa9883b9d942eef758cd05b76302798663c",
+    "runtime/rebuilt-skylight-patch-got-v3-witness-v1/reconstruction.json": "0c9989afb441de56c770c41a4fe98c9324c89b11f1115785fe8c5abad462c3d4"
+  },
+  "verified": true
+}

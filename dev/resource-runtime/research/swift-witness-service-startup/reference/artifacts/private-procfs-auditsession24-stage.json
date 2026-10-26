@@ -1,0 +1,20 @@
+{
+  "summary_only": true,
+  "full_local_report": "artifacts/private-procfs-auditsession24-stage.json",
+  "full_local_report_sha256": "db5b309bfe4c485d2da32a9892a116518bbf1279710152f95d4e066f8010440e",
+  "installed": false,
+  "parent_stage": "artifacts/original-host-tools-v1-stage.json",
+  "system_library": "runtime/private-procfs-v11/libraries/libSystem.B.dylib",
+  "system_library_sha256": "0ebccbd989bd3e6ad3e9aa66dbc4944fc2454f2c27abb3ce99b3df834c56d00d",
+  "system_version_binding": "runtime/audit-session-runtime-24/darling-root/System/Library/CoreServices/SystemVersion.plist",
+  "private_procfs": "/private/var/db/darling/proc",
+  "guest_proc_directory_present": false,
+  "mtab": "runtime/audit-session-runtime-24/darling-root/private/etc/mtab",
+  "mtab_target": "/private/var/db/darling/proc/self/mounts",
+  "runtime_execution_verified": false,
+  "full_goal_complete": false,
+  "parent_private_stage": "artifacts/private-procfs-v7-stage.json",
+  "audit_session_backend": "Server-owned headless process sessions, with fork/exec inheritance and synchronized Mach audit tokens.",
+  "user_bundle_candidate": "artifacts/xpc-self-entitlements-v1-build.json",
+  "launch_job_candidate": "artifacts/launchd-jobs-v1-build.json"
+}

@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 2417702,
+      "sha256": "d0b4c6bec8391bf7e62b94c01fdc6e0d982f11b73fcfb01a0dacf76cb9ea7df7"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 6084,
+      "sha256": "1cc72a56c370c90e7b5a2d0c7d92d0dc3b64ee3a32412d15b1f9e878c12960e9"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1663,
+  "nonzero_addends_verified": 10,
+  "serialized_bindings": 6100,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 6,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 2,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 43,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d5d0",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d5e8",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d600",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d7f8",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d810",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d828",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d840",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3d858",
+        "first_section_prefix": "0x6a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-quicklook-closure-soundanalysis-resource-v2-witness-v1/SoundAnalysis': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x21457)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/quicklook-closure-soundanalysis-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x21457",
+        "segment": "__DATA_CONST",
+        "offset": "0x3d5d0",
+        "actual_address": "0x25dc25d0",
+        "LLVM_section_base_address": "0x25dc2c70",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "5ec6010e3fdeee6b56597fe548a82c53e8f08372ad92a3e9884e1c4314687bd4",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "55c7a7274574352be215b46115cad8e8e733fcecf58c6b6a4bd0cd948f95619c",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/SoundAnalysis.framework/Versions/A/SoundAnalysis": "54e0ea08f13a5ed210911aaac5db752b7b5db9263609bab50cd34e859a7056a9",
+    "runtime/rebuilt-quicklook-closure-soundanalysis-resource-v2-witness-v1/SoundAnalysis": "e03c14d7614b80547da54a06044878b6770e5a83aca0844c692492bf92d76963",
+    "runtime/rebuilt-quicklook-closure-soundanalysis-resource-v2-witness-v1/reconstruction.json": "1b8c0ffa83b4af0c0806c8c8b507d924da84bc4e3cd4bbc88de4003892023a6b"
+  },
+  "verified": true
+}

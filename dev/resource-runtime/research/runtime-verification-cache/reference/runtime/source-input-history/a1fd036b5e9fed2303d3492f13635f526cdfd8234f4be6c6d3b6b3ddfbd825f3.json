@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/a1fd036b5e9fed2303d3492f13635f526cdfd8234f4be6c6d3b6b3ddfbd825f3",
+  "original_sha256": "a1fd036b5e9fed2303d3492f13635f526cdfd8234f4be6c6d3b6b3ddfbd825f3",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/crypto-token-kit-native-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources);d=json.loads((root/'artifacts/local-authentication-error-source-build.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n    assert digest(d['framework'])==d['framework_sha256']\n    for item in d['sources']:assert digest(item['source'])==item['sha256']\n    for n,sha in d['source_headers'].items():assert digest(n)==sha\n    command=list(p['command']);i=next(i for i,a in enumerate(command) if a.startswith('DYLD_FRAMEWORK_PATH='));command[i]='DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/local-authentication-error-source/frameworks:'+command[i].split('=',1)[1]\n    return {**p,'command':command,'source_local_authentication':d}\ndef environment(p):return m['environment'](p)\n"
+}

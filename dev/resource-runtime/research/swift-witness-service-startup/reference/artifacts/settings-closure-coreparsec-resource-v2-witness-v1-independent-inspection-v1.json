@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 936420,
+      "sha256": "fca62d31a1259c90ff704238a317ae3b688b3ce0626c7b3348a5bee0c91854e4"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3642,
+      "sha256": "00e009848ad88110207e8d5b15fb5f0533bfc4096788460b147d87d76eac7166"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 992,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 3021,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 2,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 10,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x32848",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x32860",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x32930",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x32948",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x32960",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x32978",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x32990",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x329a8",
+        "first_section_prefix": "0xfe0",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-coreparsec-resource-v2-witness-v1/CoreParsec': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1232a)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/settings-closure-coreparsec-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1232a",
+        "segment": "__DATA_CONST",
+        "offset": "0x32848",
+        "actual_address": "0x355c8848",
+        "LLVM_section_base_address": "0x355c9828",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "d5dc546711f702cb3b5ebdf1404776d9f26685bd797b451b6c8c9eb2a55eb621",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "151730ccb65eb3c19667235aa3a90edf5fc82a1b3a77af82b2c66df41f1f6db9",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CoreParsec.framework/Versions/A/CoreParsec": "b93547cfbdf01897beaf1f6298de3269fc5c132e0ad253faf6945eefb2a2c394",
+    "runtime/rebuilt-settings-closure-coreparsec-resource-v2-witness-v1/CoreParsec": "0887cf2c304ccdbe4ffa9b2536fde0886181c3af79b88db4a97c73da5f37e89c",
+    "runtime/rebuilt-settings-closure-coreparsec-resource-v2-witness-v1/reconstruction.json": "fa42426a9599c6b7dc98336ecbe7f0f2935abe4ab49c89e5f046c1821fb5aedf"
+  },
+  "verified": true
+}

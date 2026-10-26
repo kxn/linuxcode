@@ -1,0 +1,90 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 83706,
+      "sha256": "f652a5761328f5b314a4cbb8bf3a5d17dd87b636433d95c40ba7b69998d95a23"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1074,
+      "sha256": "b74816c8fee5751399ac353ad4800ed9fe3d3c17e62e25eb62d7f9f0d6ecb29d"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 262,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 374,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 1,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 5,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1dc8",
+        "first_section_prefix": "0x450",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1dd0",
+        "first_section_prefix": "0x450",
+        "symbol": "_swift_cvw_destroy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1dd8",
+        "first_section_prefix": "0x450",
+        "symbol": "_swift_cvw_initWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1de0",
+        "first_section_prefix": "0x450",
+        "symbol": "_swift_cvw_assignWithCopy"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1df0",
+        "first_section_prefix": "0x450",
+        "symbol": "_swift_cvw_assignWithTake"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-callsxpc-patch-got-v2-witness-v1/CallsXPC': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1c8b)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/callsxpc-patch-got-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1c8b",
+        "segment": "__DATA_CONST",
+        "offset": "0x1dc8",
+        "actual_address": "0x3e3b0dc8",
+        "LLVM_section_base_address": "0x3e3b1218",
+        "reported_error": "not in section",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      }
+    ],
+    "original_validator_sha256": "03bcc4e467e6126c6f2f01e83f677e8ce83ff7787bec73048a49568917ef8d63",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "67641b0838367bec7c209157e026160f7a7272d3230528b49128e04a2e53154d",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/CallsXPC.framework/Versions/A/CallsXPC": "81894576c26e3af198ba8117d4caeb3dc7a5928aae10779c869fc0873c85dc33",
+    "runtime/rebuilt-callsxpc-patch-got-v2-witness-v1/CallsXPC": "11b1a04007d4eca11d30e83015a19a53a03440d682a69065383cd52a74eace04",
+    "runtime/rebuilt-callsxpc-patch-got-v2-witness-v1/reconstruction.json": "1fd6693c78caf291d867d2d65b5d0f63c60b91fb1fab41beeaea02ab8dd6c725"
+  },
+  "verified": true
+}

@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 178816,
+      "sha256": "366c51782bc5797d1f511e77795c1a1136d45d1da34eab920f23fadd705c7659"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1422,
+      "sha256": "d418c36bb27e2327d359768bb4f04183ed1ada1b936f298a0cef8e0280837814"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 381,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 755,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 1,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 18,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xf08",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xf10",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_destroy"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xf18",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_initWithCopy"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xf20",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_assignWithCopy"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xf28",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_initWithTake"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xf30",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_assignWithTake"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xfb0",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xfb8",
+        "first_section_prefix": "0xec0",
+        "symbol": "_swift_cvw_destroy"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-livecommunicationkit-patch-got-v2-witness-v1/LiveCommunicationKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x2edb)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/livecommunicationkit-patch-got-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x2edb",
+        "segment": "__DATA_DIRTY",
+        "offset": "0xf08",
+        "actual_address": "0x2edfef08",
+        "LLVM_section_base_address": "0x2edffdc8",
+        "reported_error": "not in section",
+        "symbol": "_swift_cvw_initializeBufferWithCopyOfBuffer"
+      }
+    ],
+    "original_validator_sha256": "bb3f9d59799203ee6505659106a966ab23e9d5887b635425dcf8a3fa7a46ca73",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "3d3a79796b48a170582496a071f63a27ef93b297b44d00513d7ba7af6ffe8209",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/LiveCommunicationKit.framework/Versions/A/LiveCommunicationKit": "8ed39f2a0fc10869b0a84231ee2777dd14df170352f6cf6e1edaed8900ac2c96",
+    "runtime/rebuilt-livecommunicationkit-patch-got-v2-witness-v1/LiveCommunicationKit": "c56fb2f09df33a9f41acf2233a64232cf1582878b3742ca621beed0ef0357ce7",
+    "runtime/rebuilt-livecommunicationkit-patch-got-v2-witness-v1/reconstruction.json": "f7308f68c88f8ed680add766798920aea2a8d1522e18fe492dc96c7f9a2f7576"
+  },
+  "verified": true
+}

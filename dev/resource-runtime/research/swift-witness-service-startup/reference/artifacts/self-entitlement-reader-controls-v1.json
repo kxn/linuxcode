@@ -1,0 +1,72 @@
+{
+  "verified": true,
+  "exact_reader_source": "vendor/darling/src/external/libxpc/src/misc.m",
+  "exact_reader_source_sha256": "3f3e0f0b9b4f55e58a023225bb28909ab8bfb5ac363946cf042097852b0a558b",
+  "host_harness_sha256": "0fefbe711bab700857bc0c04bbefeacbe4200a1b059ac160e20b2253be1d381d",
+  "address_and_undefined_sanitizers": true,
+  "cases": [
+    {
+      "case": "signed-fat64-rewrapped-thin",
+      "expected_metadata": true,
+      "exit_status": 0,
+      "verified": true
+    },
+    {
+      "case": "signed-thin",
+      "expected_metadata": true,
+      "exit_status": 0,
+      "verified": true
+    },
+    {
+      "case": "signed-fat",
+      "expected_metadata": true,
+      "exit_status": 0,
+      "verified": true
+    },
+    {
+      "case": "unsigned",
+      "expected_metadata": false,
+      "exit_status": 1,
+      "verified": true
+    },
+    {
+      "case": "bad_superblob_magic",
+      "expected_metadata": false,
+      "exit_status": 1,
+      "verified": true
+    },
+    {
+      "case": "bad_superblob_length",
+      "expected_metadata": false,
+      "exit_status": 1,
+      "verified": true
+    },
+    {
+      "case": "bad_index_count",
+      "expected_metadata": false,
+      "exit_status": 1,
+      "verified": true
+    },
+    {
+      "case": "bad_blob_offset",
+      "expected_metadata": false,
+      "exit_status": 1,
+      "verified": true
+    },
+    {
+      "case": "mismatched_live_commands",
+      "expected_metadata": false,
+      "exit_status": 1,
+      "verified": true
+    },
+    {
+      "case": "truncated_file",
+      "expected_metadata": false,
+      "exit_status": 1,
+      "verified": true
+    }
+  ],
+  "FAT64_file_reader_verified": true,
+  "FAT64_Darling_execution_verified": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/20720e1f68789863b6d8be9bba6c72b2ca540f65f1fbcb9787537ba3476dc70a/mldr-dynamic-rlimit-profile.py",
+  "original_sha256": "20720e1f68789863b6d8be9bba6c72b2ca540f65f1fbcb9787537ba3476dc70a",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\n\"\"\"Select the isolated source loader that handles changing descriptor limits.\"\"\"\nfrom pathlib import Path\nimport hashlib\nimport json\nimport runpy\n\nroot = Path(__file__).resolve().parent.parent\n\ndef profile(stage='artifacts/mldr-dynamic-rlimit-v1-stage.json'):\n    data = json.loads((root / stage).read_text())\n    for path, digest in data['files'].items():\n        assert hashlib.sha256((root / path).read_bytes()).hexdigest() == digest, path\n    parent = runpy.run_path(str(root / data['parent_profile']))\n    p = parent['profile']()\n    assert p['source_runtime'] == data['previous_source_runtime']\n    return {**p, 'source_runtime': data['source_runtime'], 'mldr_dynamic_rlimit_stage': stage}\n\ndef environment(p):\n    data = json.loads((root / p['mldr_dynamic_rlimit_stage']).read_text())\n    return runpy.run_path(str(root / data['parent_profile']))['environment'](p)\n"
+}

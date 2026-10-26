@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/34910cbc0bf746696908bc6d30c6cad22f73d7fab923bd2b53633e235a2c0578",
+  "original_sha256": "34910cbc0bf746696908bc6d30c6cad22f73d7fab923bd2b53633e235a2c0578",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/security-cloud-rpc-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources)\n    stage=json.loads((root/'artifacts/typed-new-delete-source-build.json').read_text())\n    digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n    for name in ['base','library','source','cmake','backend','baseline_relink']:assert digest(stage[name])==stage[name+'_sha256']\n    for name,sha in stage['old_object_inputs'].items():assert digest(name)==sha\n    c=list(p['command']);i=next(i for i,a in enumerate(c) if a.startswith('DYLD_LIBRARY_PATH='))\n    c[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/typed-new-delete-source/libraries:'+c[i].split('=',1)[1]\n    return {**p,'command':c,'source_typed_new_delete':stage}\ndef environment(p):return m['environment'](p)\n"
+}

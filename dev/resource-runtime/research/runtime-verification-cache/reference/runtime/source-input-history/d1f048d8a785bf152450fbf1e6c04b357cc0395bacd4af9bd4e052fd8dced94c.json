@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/d1f048d8a785bf152450fbf1e6c04b357cc0395bacd4af9bd4e052fd8dced94c",
+  "original_sha256": "d1f048d8a785bf152450fbf1e6c04b357cc0395bacd4af9bd4e052fd8dced94c",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nparent=runpy.run_path(str(root/'scripts/materialize-runtime-profile.py'))\ndef profile(include_system_resources=True,diagnostic=False):\n p=parent['profile'](include_system_resources,diagnostic)\n d=json.loads((root/'artifacts/mobileasset-query-build.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n for n,sha in d['source_files'].items():assert digest(n)==sha,n\n assert digest(d['framework'])==d['framework_sha256']\n command=list(p['command']);i=next(i for i,a in enumerate(command) if a.startswith('DYLD_FRAMEWORK_PATH='))\n command[i]='DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/mobileasset-query-source/frameworks:'+command[i].split('=',1)[1]\n return {**p,'command':command,'source_mobileasset_query':d}\ndef environment(p):return parent['environment'](p)\n"
+}

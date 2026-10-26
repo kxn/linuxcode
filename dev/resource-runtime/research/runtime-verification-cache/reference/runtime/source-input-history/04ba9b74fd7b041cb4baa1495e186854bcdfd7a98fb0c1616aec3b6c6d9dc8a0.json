@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/04ba9b74fd7b041cb4baa1495e186854bcdfd7a98fb0c1616aec3b6c6d9dc8a0",
+  "original_sha256": "04ba9b74fd7b041cb4baa1495e186854bcdfd7a98fb0c1616aec3b6c6d9dc8a0",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/imageio-native-profile.py'));environment=m['environment']\ndef profile():\n p=m['profile']();stage=json.loads((root/'artifacts/combine-native-stage.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n for key in ['original','source','library','reconstruction']:assert digest(stage[key])==stage[key+'_sha256']\n c=list(p['command']);i=next(i for i,v in enumerate(c) if v.startswith('DYLD_FRAMEWORK_PATH='));c[i]='DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/combine-native/frameworks:'+c[i].split('=',1)[1]\n return {**p,'command':c,'combine_native':stage}\n"
+}

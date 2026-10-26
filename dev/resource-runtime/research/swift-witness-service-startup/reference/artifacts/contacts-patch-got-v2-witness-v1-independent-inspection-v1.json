@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 2137184,
+      "sha256": "c1f3e02c78fd5b1bc73610b1467fa21b69ee71ba3cd802107a6c993dbc9f0504"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 3384,
+      "sha256": "229cbdf9820da85b81b42b6b17dda311c430ccf52d1f2854f8781726cce73ad0"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1284,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 6606,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 1,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 96,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59408",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59420",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59438",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59450",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59468",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59480",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x59498",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x594b0",
+        "first_section_prefix": "0xab0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-contacts-patch-got-v2-witness-v1/Contacts': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x240cb)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/contacts-patch-got-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x240cb",
+        "segment": "__DATA_CONST",
+        "offset": "0x59408",
+        "actual_address": "0x26447408",
+        "LLVM_section_base_address": "0x26447eb8",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "d7ce0c4651d37de82bd3a7f56f40fa9ff31622683eb9b90979854b1c9adf3088",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "8c527fe5539bbb685d44750c5beb212699cf562228c2527f0dd112df78814447",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts": "ffba721363cc0a614449dc10d1ffb05b996f77854aecbddd6cd9264136ead85b",
+    "runtime/rebuilt-contacts-patch-got-v2-witness-v1/Contacts": "91aac1a4d7853cfa83e3391673c3300d22342a09879620ee091662f28958b4b2",
+    "runtime/rebuilt-contacts-patch-got-v2-witness-v1/reconstruction.json": "5cebca616d947fdef8492026aee40c27fd94dec1b482d8c47ae2bda29505f921"
+  },
+  "verified": true
+}

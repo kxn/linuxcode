@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1268548,
+      "sha256": "3fd05b43878392a70023e601c217ca2aa268592c2e5f97369e0869f02104c994"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 5232,
+      "sha256": "a0d7fb38e55ba3747cd7025b819809dd7aad3c0fdc023617cc71e462dd5cc921"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 1634,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 7976,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 3,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 3,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 23,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f008",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f020",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f038",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f050",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f068",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f080",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f098",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x4f0b0",
+        "first_section_prefix": "0x680",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-voiceshortcutclient-resource-v2-witness-v1/VoiceShortcutClient': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x414bf)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/settings-closure-voiceshortcutclient-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x414bf",
+        "segment": "__DATA_CONST",
+        "offset": "0x4f008",
+        "actual_address": "0x3a490008",
+        "LLVM_section_base_address": "0x3a490688",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "198db18fb765d16c4162552f771009a5f61488bc30f5fa28963df53a99014a2a",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "10b08cc861b5dd8bc8197fcf50c2a233107776b4e97dd8b896ceb3705b480f1b",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/VoiceShortcutClient.framework/Versions/A/VoiceShortcutClient": "e141867da00eb4e3969f09f01fae811d886ac68d2a9ef75e222d13edd8bbdfd3",
+    "runtime/rebuilt-settings-closure-voiceshortcutclient-resource-v2-witness-v1/VoiceShortcutClient": "48d1a369966dfa81462b4ecabe1d9ab2263908a0bf330defbb3fea31b27e2b10",
+    "runtime/rebuilt-settings-closure-voiceshortcutclient-resource-v2-witness-v1/reconstruction.json": "cb8f7aad0af66a69c34148c049b0096fb99856571df6702674d86528edbb7ce7"
+  },
+  "verified": true
+}

@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/cfe0a7be64e6347ac310d9427b0d30840eaa624c0b163b9cbb3209450acca719",
+  "original_sha256": "cfe0a7be64e6347ac310d9427b0d30840eaa624c0b163b9cbb3209450acca719",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,os,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/combine-native-profile.py'));environment=m['environment']\ndef profile():\n p=m['profile']();report=(root/os.environ.get('LINUXCODE_FSEVENTS_BUILD_REPORT','artifacts/fsevents-flush-source-build.json')).resolve();assert report.is_relative_to(root/'artifacts')\n stage=json.loads(report.read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n resolve=runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']\n for key in ['original','library']:assert digest(stage[key])==stage[key+'_sha256']\n for n,sha in {**stage['sources'],**stage['headers']}.items():assert digest(resolve(n,sha))==sha\n frameworks=str(Path(stage['library']).parents[3]);c=list(p['command']);i=next(i for i,v in enumerate(c) if v.startswith('DYLD_FRAMEWORK_PATH='));c[i]='DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/'+frameworks+':'+c[i].split('=',1)[1]\n return {**p,'command':c,'source_fsevents':stage}\n"
+}

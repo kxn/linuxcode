@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/ed25c44ea9998cf147d6d3d4dbf93ff84c2a4be82c99f57920cfcc52dca40491",
+  "original_sha256": "ed25c44ea9998cf147d6d3d4dbf93ff84c2a4be82c99f57920cfcc52dca40491",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nparent=runpy.run_path(str(root/'scripts/fsevents-history-profile.py'))\ndef profile(diagnostic=False):\n    p=parent['profile'](diagnostic=diagnostic)\n    d=json.loads((root/'artifacts/corpse-map-stage.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n    assert digest(d['server_build'])==d['server_build_sha256']\n    chosen=d['runtimes']['diagnostic' if diagnostic else 'normal'];assert chosen['previous_source_runtime']==p['source_runtime']\n    for item in chosen['source_runtime'].values():assert digest(item['path'])==item['sha256']\n    assert digest(chosen['system_version_binding'])==chosen['system_version_binding_sha256']\n    return {**p,'source_runtime':chosen['source_runtime'],'system_version_binding':chosen['system_version_binding'],\n            'source_corpse_map_errors':d,'corpse_map_selected_runtime':chosen}\ndef environment(p):return parent['environment'](p)\n"
+}

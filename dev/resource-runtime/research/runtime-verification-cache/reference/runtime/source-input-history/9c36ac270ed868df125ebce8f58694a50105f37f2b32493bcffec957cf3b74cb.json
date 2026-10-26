@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/9c36ac270ed868df125ebce8f58694a50105f37f2b32493bcffec957cf3b74cb",
+  "original_sha256": "9c36ac270ed868df125ebce8f58694a50105f37f2b32493bcffec957cf3b74cb",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/container-manager-profile.py'))\nenvironment=m['environment']\ndef profile():\n kernel=runpy.run_path(str(root/'scripts/mount-path-kernel-profile.py'))['profile']();p=m['profile'](kernel_profile=kernel)\n stage=json.loads((root/'artifacts/native-layer-support-stage.json').read_text())\n for key in ['base','library','helper','source','context_source']:assert hashlib.sha256((root/stage[key]).read_bytes()).hexdigest()==stage[key+'_sha256']\n c=list(p['command'])\n for key,folder in [('DYLD_FRAMEWORK_PATH','frameworks'),('DYLD_LIBRARY_PATH','libraries')]:\n  i=next(i for i,v in enumerate(c) if v.startswith(key+'='));c[i]=key+'=/Volumes/SystemRoot/workspace/runtime/native-layer-support/'+folder+':'+c[i].split('=',1)[1]\n return {**p,'command':c,'native_layer_support':stage}\n"
+}

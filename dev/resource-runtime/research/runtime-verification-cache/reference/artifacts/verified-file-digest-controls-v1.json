@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "cases": [
+    {
+      "case": "cold_hash",
+      "verified": true
+    },
+    {
+      "case": "unchanged_file_hits_cache",
+      "verified": true
+    },
+    {
+      "case": "same_size_restored_mtime_uses_ctime",
+      "verified": true
+    },
+    {
+      "case": "atomic_replacement_invalidates",
+      "verified": true
+    },
+    {
+      "case": "symlink_target_change_invalidates",
+      "verified": true
+    },
+    {
+      "case": "deleted_file_is_not_a_cache_hit",
+      "verified": true
+    },
+    {
+      "case": "separate_process_reuses_digest",
+      "verified": true
+    },
+    {
+      "case": "concurrent_cache_updates_merge",
+      "verified": true
+    },
+    {
+      "case": "malformed_disposable_cache_rehashes",
+      "verified": true
+    }
+  ],
+  "source": "scripts/verified-file-digest.py",
+  "source_sha256": "7385c38dc7aa5a46ec2c6a41cc54433032df89b2619af4d260bc0fee69c1bc5d",
+  "test_source_sha256": "ca8c057aff63ebbac45166c59e511e04d9a1b0ea7ca7c8beabd38cbbdaf86b5a",
+  "runtime_execution_results_cached": false,
+  "full_goal_complete": false
+}

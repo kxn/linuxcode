@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import hashlib,json,runpy,os
+root=Path(__file__).resolve().parent.parent
+verified_digest = __import__('runpy').run_path(str(root / 'scripts/verified-file-digest.py'))['digest']
+m=runpy.run_path(str(root/'scripts/quarantine-vfs-runtime-profile.py'))
+def profile(include_system_resources=True):
+    p=m['profile'](include_system_resources);name='artifacts/device-identity-native-stage.json';stage=json.loads((root/name).read_text());digest=lambda n:verified_digest((root/n))
+    for n,sha in stage['files'].items():assert digest(n)==sha
+    for n,target in stage.get('symlinks',{}).items():assert os.readlink(root/n)==target
+    assert digest(stage['alias_reference'])==stage['alias_reference_sha256']
+    assert digest(stage['reconstruction'])==stage['reconstruction_sha256']
+    for n,sha in stage.get('dependencies',{}).items():assert digest(n)==sha
+    iokit=json.loads((root/'artifacts/iokit-main-port-source-build.json').read_text())
+    for key in ['source','source_header','source_list','framework','backend','constant_source','native_disassembly']:assert digest(iokit[key])==iokit[key+'_sha256']
+    security=json.loads((root/'artifacts/security-device-constant-build.json').read_text())
+    for key in ['source','component','library','framework','base','reference']:assert digest(security[key])==security[key+'_sha256']
+    crypto=json.loads((root/'artifacts/crypto-token-error-source-build.json').read_text())
+    verify=runpy.run_path(str(root/'scripts/verify-historical-source.py'))['verify']
+    verify(dict(source=crypto['source_list'],sha256=crypto['source_list_sha256']))
+    for key in ['source','library','framework','base','reference']:assert digest(crypto[key])==crypto[key+'_sha256']
+    command=list(p['command']);i=next(i for i,a in enumerate(command) if a.startswith('DYLD_FRAMEWORK_PATH='));command[i]='DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/'+stage['framework_path']+':/Volumes/SystemRoot/workspace/runtime/iokit-main-port-source/frameworks:/Volumes/SystemRoot/workspace/runtime/security-device-constants/frameworks:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/frameworks:'+command[i].split('=',1)[1]
+    i=next(i for i,a in enumerate(command) if a.startswith('DYLD_LIBRARY_PATH='));command[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/'+stage['libraries_path']+':/Volumes/SystemRoot/workspace/runtime/security-device-constants/libraries:/Volumes/SystemRoot/workspace/runtime/crypto-token-error-source/libraries:'+command[i].split('=',1)[1]
+    return {**p,'command':command,'native_device_identity':stage,'source_iokit_main_port':iokit,'source_security_device_constant':security,'source_crypto_token_error':crypto}
+def environment(p):return m['environment'](p)

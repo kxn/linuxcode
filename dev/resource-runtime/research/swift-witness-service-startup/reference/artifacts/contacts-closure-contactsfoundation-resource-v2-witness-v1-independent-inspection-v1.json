@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 634384,
+      "sha256": "982fd304d9cdd085f79ae4c263a5a0f070679ae7c7fc9fda074db8554f706525"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2796,
+      "sha256": "06c48d751a2b6363b3d696ce10c97ccb3e77fbcf3c0e556966b5076061fb7196"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 803,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 4282,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 2,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 72,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x3bb08",
+        "first_section_prefix": "0x20",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x3c18",
+        "first_section_prefix": "0xb80",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x44c8",
+        "first_section_prefix": "0xb80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x44d8",
+        "first_section_prefix": "0xb80",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x44f0",
+        "first_section_prefix": "0xb80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x44f8",
+        "first_section_prefix": "0xb80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4500",
+        "first_section_prefix": "0xb80",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x4518",
+        "first_section_prefix": "0xb80",
+        "symbol": "_OBJC_METACLASS_$_NSObject"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-contacts-closure-contactsfoundation-resource-v2-witness-v1/ContactsFoundation': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1845f)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/contacts-closure-contactsfoundation-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1845f",
+        "segment": "__DATA_CONST",
+        "offset": "0x3bb08",
+        "actual_address": "0x26641b08",
+        "LLVM_section_base_address": "0x26641b28",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "d3a225261f41e0f8c722b28b0e4910aaa758bbc258712a3387db9552de1d6ac4",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "691e76710a2badab131b35274b5c52688692b25da22cc77fd86bb51b0bd7698c",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/ContactsFoundation.framework/Versions/A/ContactsFoundation": "7ea6d0ac50327dd15e70edb7e2ac09533652743f5b65d497d210cf6fd09317ee",
+    "runtime/rebuilt-contacts-closure-contactsfoundation-resource-v2-witness-v1/ContactsFoundation": "0cf0c825fc65c31d33c36388fdbb7bf666727a3cfa30d829c35ab5acc0e98475",
+    "runtime/rebuilt-contacts-closure-contactsfoundation-resource-v2-witness-v1/reconstruction.json": "f00d6ed89ec45787d054ab6e0c29a03894f71d293985c91cba13a99ac6446d3b"
+  },
+  "verified": true
+}

@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Compile the exact self-signature file reader with host providers and corrupt fixtures."""
+from pathlib import Path
+import argparse,hashlib,json,plistlib,struct,subprocess,tempfile
+r=Path(__file__).resolve().parent.parent;p=argparse.ArgumentParser(description=__doc__);p.add_argument('--fixtures',required=True);p.add_argument('--output',required=True);a=p.parse_args();out=r/a.output;assert not out.exists();w=Path(tempfile.mkdtemp(prefix='self-signature-reader-controls-',dir=r/'runtime'));source=r/'vendor/darling/src/external/libxpc/src/misc.m';text=source.read_text();reader=text[text.index('static unsigned char *self_entitlement_xml;'):text.index('static xpc_object_t self_signature_entitlement_dictionary')];prefix='''#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
+#define MH_MAGIC_64 0xfeedfacf
+#define LC_CODE_SIGNATURE 0x1d
+struct mach_header_64 {uint32_t magic,cputype,cpusubtype,filetype,ncmds,sizeofcmds,flags,reserved;};
+struct load_command {uint32_t cmd,cmdsize;};
+struct linkedit_data_command {uint32_t cmd,cmdsize,dataoff,datasize;};
+typedef int dispatch_once_t;
+static unsigned char live_bytes[16777248];
+static const char *executable_path;
+static const void *_dyld_get_image_header(unsigned index){return index?NULL:live_bytes;}
+static int _NSGetExecutablePath(char *out,uint32_t *size){size_t n=strlen(executable_path)+1;if(n>*size)return -1;memcpy(out,executable_path,n);return 0;}
+''';suffix='''int main(int argc,char **argv){if(argc!=3)return 2;executable_path=argv[1];FILE *f=fopen(argv[2],"rb");if(!f)return 3;fread(live_bytes,1,sizeof(live_bytes),f);fclose(f);self_signature_load_entitlements();if(!self_entitlement_xml)return 1;fwrite(self_entitlement_xml,1,self_entitlement_xml_size,stdout);return 0;}
+''';c=w/'reader.c';c.write_text(prefix+reader+suffix);exe=w/'reader';subprocess.run(['gcc','-O1','-g','-fsanitize=address,undefined',str(c),'-o',str(exe)],check=True);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def slice_base(d):
+ magic=struct.unpack_from('>I',d)[0]
+ if magic in [0xcafebabe,0xcafebabf]:
+  stride=20 if magic==0xcafebabe else 32
+  for i in range(struct.unpack_from('>I',d,4)[0]):
+   at=8+i*stride
+   if struct.unpack_from('>I',d,at)[0]==0x1000007:return struct.unpack_from('>I' if stride==20 else '>Q',d,at+8)[0]
+  raise ValueError('no Intel slice')
+ return 0
+def locations(d):
+ base=slice_base(d);at=base+32;signature=None
+ for i in range(struct.unpack_from('<I',d,base+16)[0]):
+  cmd,size=struct.unpack_from('<II',d,at)
+  if cmd==0x1d:signature=base+struct.unpack_from('<I',d,at+8)[0]
+  at+=size
+ return base,at,signature
+fixtures=r/a.fixtures;expected=plistlib.loads((fixtures/'entitlements.plist').read_bytes());cases=[]
+def run(name,data,live,valid):
+ file=w/(name+'.macho');header=w/(name+'.header');file.write_bytes(data);header.write_bytes(live);result=subprocess.run([str(exe),str(file),str(header)],capture_output=True);assert result.returncode==(0 if valid else 1),(name,result.returncode,result.stderr.decode());assert b'Sanitizer' not in result.stderr and b'runtime error' not in result.stderr
+ if valid:assert plistlib.loads(result.stdout)==expected
+ cases.append(dict(case=name,expected_metadata=valid,exit_status=result.returncode,verified=True))
+# Original codesign returned zero for the FAT64 control but left that slice unsigned.
+# Rewrap the independently signed thin slice without changing any slice bytes.
+thin=(fixtures/'signed-thin').read_bytes();cpu,subtype=struct.unpack_from('<II',thin,4)
+header=struct.pack('>IIIIQQII',0xcafebabf,1,cpu,subtype,4096,len(thin),12,0)
+fat64=header+bytes(4096-len(header))+thin
+base,end,sig=locations(fat64);run('signed-fat64-rewrapped-thin',fat64,fat64[base:end],True)
+for name in ['signed-thin','signed-fat']:
+ data=(fixtures/name).read_bytes();base,end,sig=locations(data);run(name,data,data[base:end],True)
+data=(fixtures/'unsigned').read_bytes();base,end,sig=locations(data);run('unsigned',data,data[base:end],False)
+data=(fixtures/'signed-thin').read_bytes();base,end,sig=locations(data);live=data[base:end]
+for name,change in [('bad_superblob_magic',lambda x:struct.pack_into('>I',x,sig,0)),('bad_superblob_length',lambda x:struct.pack_into('>I',x,sig+4,0xffffffff)),('bad_index_count',lambda x:struct.pack_into('>I',x,sig+8,0xffffffff)),('bad_blob_offset',lambda x:struct.pack_into('>I',x,sig+16,0xffffffff)),('mismatched_live_commands',lambda x:x.__setitem__(40,x[40]^1))]:
+ broken=bytearray(data);change(broken);run(name,broken,live,False)
+run('truncated_file',data[:16],live,False)
+result=dict(verified=True,exact_reader_source=str(source.relative_to(r)),exact_reader_source_sha256=sha(source),host_harness_sha256=sha(c),address_and_undefined_sanitizers=True,cases=cases,FAT64_file_reader_verified=True,FAT64_Darling_execution_verified=False,full_goal_complete=False);out.write_text(json.dumps(result,indent=2)+'\n');print('VERIFIED',len(cases),'sanitized cases',out)

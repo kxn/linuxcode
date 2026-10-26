@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/dff20cad5602660027d04f494ddd5d26b2cdf8bb0ae4fd6d252325da693cfe01",
+  "original_sha256": "dff20cad5602660027d04f494ddd5d26b2cdf8bb0ae4fd6d252325da693cfe01",
+  "encoding": "utf-8",
+  "text": "import Foundation\nimport Dispatch\nimport Darwin\nfinal class Completion: @unchecked Sendable {\n let lock=NSLock()\n var labels=Set<String>()\n func record(_ label:String) {\n  lock.lock();defer { lock.unlock() }\n  precondition(labels.insert(label).inserted)\n  print(\"STARTUP_JOB \\(label)\");fflush(stdout)\n  if labels.count==3 { print(\"SWIFT_DISPATCH_MAIN_ACTOR_AND_GLOBAL_STARTUP_OK\");fflush(stdout);exit(0) }\n }\n}\nlet done=Completion()\nDispatchQueue.main.async { done.record(\"dispatch-main\") }\nTask { @MainActor in\n dispatchPrecondition(condition:.onQueue(.main))\n await Task.yield()\n done.record(\"main-actor\")\n}\nTask.detached {\n let sum=await withTaskGroup(of:Int.self) { group in\n  for i in 1...64 {group.addTask { await Task.yield();return i }}\n  var total=0;for await i in group {total+=i};return total\n }\n precondition(sum==2080);done.record(\"global-64-tasks\")\n}\nDispatchQueue.global().asyncAfter(deadline:.now()+15) { fputs(\"STARTUP_TIMEOUT\\n\",stderr);exit(1) }\ndispatchMain()\n"
+}

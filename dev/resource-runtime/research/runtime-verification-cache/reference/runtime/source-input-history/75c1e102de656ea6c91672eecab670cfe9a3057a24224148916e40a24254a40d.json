@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/75c1e102de656ea6c91672eecab670cfe9a3057a24224148916e40a24254a40d",
+  "original_sha256": "75c1e102de656ea6c91672eecab670cfe9a3057a24224148916e40a24254a40d",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/crypto-token-parameters-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources);d=json.loads((root/'artifacts/security-cryptokit-constants-source-build.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n    for key in ['source','source_list','library','framework','base','reference']:assert digest(d[key])==d[key+'_sha256'],key\n    command=list(p['command'])\n    for variable,directory in [('DYLD_FRAMEWORK_PATH','frameworks'),('DYLD_LIBRARY_PATH','libraries')]:\n        i=next(i for i,a in enumerate(command) if a.startswith(variable+'='));command[i]=variable+'=/Volumes/SystemRoot/workspace/runtime/security-cryptokit-constants/'+directory+':'+command[i].split('=',1)[1]\n    return {**p,'command':command,'source_security_cryptokit_constants':d}\ndef environment(p):return m['environment'](p)\n"
+}

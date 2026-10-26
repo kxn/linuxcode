@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/775823e06b9b5cba92753270ec68fa456ea0537684deac3323ba5b0e072618e7",
+  "original_sha256": "775823e06b9b5cba92753270ec68fa456ea0537684deac3323ba5b0e072618e7",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/xpc-sent-message-runtime-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources);d=json.loads((root/'artifacts/applearchive-native-stage.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n    for n,sha in d['files'].items():assert digest(n)==sha,n\n    for image in d['images']:\n        for key in ['original','source','reconstruction']:assert digest(image[key])==image[key+'_sha256']\n    command=list(p['command']);i=next(i for i,a in enumerate(command) if a.startswith('DYLD_LIBRARY_PATH='))\n    command[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/'+d['libraries']+':'+command[i].split('=',1)[1]\n    return {**p,'command':command,'native_applearchive':d}\ndef environment(p):return m['environment'](p)\n"
+}

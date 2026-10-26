@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/93ead2dd949201ea779683a6db3a998f927f67dcd79f9b57332b9e034a392965",
+  "original_sha256": "93ead2dd949201ea779683a6db3a998f927f67dcd79f9b57332b9e034a392965",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/expected-access-source-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources);stage=json.loads((root/'artifacts/sandbox-policy-vfs-baseline.json').read_text())\n    digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest();assert stage['previous_source_runtime']==p['source_runtime']\n    for name,sha in stage['source_files'].items():assert digest(name)==sha\n    for item in stage['source_runtime'].values():assert digest(item['path'])==item['sha256']\n    return {**p,'source_runtime':stage['source_runtime'],'source_sandbox_policy':stage}\ndef environment(p):return m['environment'](p)\n"
+}

@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 251701,
+      "sha256": "8cc7af471b8c1b5bd6a0e4e906c92a8ef884750bd96aec579f94e0a5f2b2d6dc"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2346,
+      "sha256": "a6a013193bd7579f3604453a0b10378b22608e44bcd9208052031daa7804e12a"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 612,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1100,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 2,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 35,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2800",
+        "first_section_prefix": "0xd10",
+        "symbol": "_$sBoWV"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2810",
+        "first_section_prefix": "0xd10",
+        "symbol": "_OBJC_CLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2818",
+        "first_section_prefix": "0xd10",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2870",
+        "first_section_prefix": "0xd10",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2880",
+        "first_section_prefix": "0xd10",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2888",
+        "first_section_prefix": "0xd10",
+        "symbol": "_OBJC_METACLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2890",
+        "first_section_prefix": "0xd10",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x28b8",
+        "first_section_prefix": "0xd10",
+        "symbol": "_$sBoWV"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-pegasusconfiguration-resource-v2-witness-v1/PegasusConfiguration': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x6930)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/settings-closure-pegasusconfiguration-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x6930",
+        "segment": "__DATA_DIRTY",
+        "offset": "0x2800",
+        "actual_address": "0x366e0800",
+        "LLVM_section_base_address": "0x366e1510",
+        "reported_error": "not in section",
+        "symbol": "_$sBoWV"
+      }
+    ],
+    "original_validator_sha256": "761951d377a8c55f23ce207a9b496adfd1c975323745231157ad84116fb2ce36",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "6e3fe5ebadbc8fe70fef00d7eec6e437ed49326e2aefe727eab34fbaf62ce82d",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration": "cb576306b1190f47a0c6fe8da863583ed44241788b74200f5327e6a78a2b5f28",
+    "runtime/rebuilt-settings-closure-pegasusconfiguration-resource-v2-witness-v1/PegasusConfiguration": "a7d2055c97c2b89a43609a7d869bf7b08f51a798ec08a207bb276b38ac3806de",
+    "runtime/rebuilt-settings-closure-pegasusconfiguration-resource-v2-witness-v1/reconstruction.json": "cf10cc240aa5425b0523ab4f48c6a0a7299aa05cb8b45a4be14b9e092bf5337f"
+  },
+  "verified": true
+}

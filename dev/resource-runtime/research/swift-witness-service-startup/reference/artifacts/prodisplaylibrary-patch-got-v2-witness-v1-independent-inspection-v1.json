@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 1173951,
+      "sha256": "713e2b777f8396f2a76cdc0a829d14d030c64cd5aecbcfbe20abb339ce51c37d"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 2772,
+      "sha256": "cb23dd429ca422742c34f9af81b6d12192381186d1cc479482cc9301b6195265"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 694,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1486,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 1,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 92,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19a8",
+        "first_section_prefix": "0xf00",
+        "symbol": "_$sBoWV"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19b8",
+        "first_section_prefix": "0xf00",
+        "symbol": "_OBJC_CLASS_$__TtCs12_SwiftObject"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19c0",
+        "first_section_prefix": "0xf00",
+        "symbol": "__objc_empty_cache"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1a50",
+        "first_section_prefix": "0xf00",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1a60",
+        "first_section_prefix": "0xf00",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1a68",
+        "first_section_prefix": "0xf00",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1a70",
+        "first_section_prefix": "0xf00",
+        "symbol": "_swift_deletedMethodError"
+      },
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0x1a90",
+        "first_section_prefix": "0xf00",
+        "symbol": "_swift_deletedMethodError"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-prodisplaylibrary-patch-got-v2-witness-v1/ProDisplayLibrary': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x817c)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/prodisplaylibrary-patch-got-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x817c",
+        "segment": "__DATA_DIRTY",
+        "offset": "0x19a8",
+        "actual_address": "0x33b2d9a8",
+        "LLVM_section_base_address": "0x33b2e8a8",
+        "reported_error": "not in section",
+        "symbol": "_$sBoWV"
+      }
+    ],
+    "original_validator_sha256": "03a34ddf93239da424069e17cfb5574bccab83cd456328c8ff796e568d305e27",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "396409e49dda0479ff896c8af63f7a24318d2f5082022216ba172776e28ae4fe",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary": "55d01ce61cedd7549a2d59db413c6aac58f93c5217453f57aa93d4911ab9a683",
+    "runtime/rebuilt-prodisplaylibrary-patch-got-v2-witness-v1/ProDisplayLibrary": "70713fef6011bebd1a6e158316ce1e7fcf58d2ae609feb5a7926a55458240963",
+    "runtime/rebuilt-prodisplaylibrary-patch-got-v2-witness-v1/reconstruction.json": "996eda2e0a7c07b0adf224982feec7b09d713a16dd49f7a3d5b0d82fe844db48"
+  },
+  "verified": true
+}

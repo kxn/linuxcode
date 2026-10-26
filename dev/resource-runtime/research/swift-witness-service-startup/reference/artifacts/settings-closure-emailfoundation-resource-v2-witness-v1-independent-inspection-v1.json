@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 473376,
+      "sha256": "99400382a904b6e301989ee445e74044c69d9f0bdbfc1bffec9d3fd783305e4e"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1974,
+      "sha256": "f235f61bf409555af340c9ef4abe9d6c2cebc93b96ca37d7f261213b555bbbc8"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 492,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 1950,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 2,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 2,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 134,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2a0",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2b8",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2d0",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2e8",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a300",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a318",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a330",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x1a348",
+        "first_section_prefix": "0x560",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-emailfoundation-resource-v2-witness-v1/EmailFoundation': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x9ce0)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/settings-closure-emailfoundation-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x9ce0",
+        "segment": "__DATA_CONST",
+        "offset": "0x1a2a0",
+        "actual_address": "0x3c9e02a0",
+        "LLVM_section_base_address": "0x3c9e0800",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "0321dff8d26586300430027658362ec673462b3b647aed5d54cf1dfdbc55767a",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "f14be6764d8ecebe69f8eee542fd5111ae58e3c59ba59bf541e39eb9f5c02d1c",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/EmailFoundation.framework/Versions/A/EmailFoundation": "d5c74f16e146e284d0c69df8072d029f7851087008a2ceaa4ceef646c67505e7",
+    "runtime/rebuilt-settings-closure-emailfoundation-resource-v2-witness-v1/EmailFoundation": "14750685dcd4b13efa65eeead11341d30cff848db546b03661ee6e5cb9ce30fd",
+    "runtime/rebuilt-settings-closure-emailfoundation-resource-v2-witness-v1/reconstruction.json": "4e6e960498c9e3eb970c9d88ed1e79085aa5be6b306dada5c99ddbe530abc80d"
+  },
+  "verified": true
+}

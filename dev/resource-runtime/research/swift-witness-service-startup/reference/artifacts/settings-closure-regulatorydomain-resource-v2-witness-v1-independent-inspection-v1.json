@@ -1,0 +1,108 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 71081,
+      "sha256": "298df2ed107be8f4a40680f750d0729d7a1914cfef135145685666e7f48468f4"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 762,
+      "sha256": "96b79de361369b269f9f9d81a03c2dbbf8fb4f8e53c2efab0ea6f8697f700cac"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 202,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 332,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 1,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 42,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2160",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2178",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2190",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21a8",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21c0",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21d8",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x21f0",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x2208",
+        "first_section_prefix": "0x1a0",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-settings-closure-regulatorydomain-resource-v2-witness-v1/RegulatoryDomain': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1a96)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/settings-closure-regulatorydomain-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1a96",
+        "segment": "__DATA_CONST",
+        "offset": "0x2160",
+        "actual_address": "0x318d1160",
+        "LLVM_section_base_address": "0x318d1300",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantIntegerNumber"
+      }
+    ],
+    "original_validator_sha256": "0a26c76ccec38f0ffab5de7064fd2b8246ecc42f8d111ff9bc3b5dea6e72cb29",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "6f610f5a39fffd5239422827875ce8414ec57c732d53d0147fb5ec0acdd4f18d",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain": "30abb567e622deeb7345ffa071c999c5a88c029570640afa6c61677cb096a5da",
+    "runtime/rebuilt-settings-closure-regulatorydomain-resource-v2-witness-v1/RegulatoryDomain": "fc6721ba3e14a85c027908cb008bc52344965b360cd9ee91f2bdad4b6b93a36d",
+    "runtime/rebuilt-settings-closure-regulatorydomain-resource-v2-witness-v1/reconstruction.json": "7a80892b80c72ef8f4e22f49df2cc039fbe686fe471200037b7259f0a116558b"
+  },
+  "verified": true
+}

@@ -1,0 +1,66 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 119296,
+      "sha256": "fdad1fbc765482971112bf08713132bced2c1616c64b504267fb2cfe518164c3"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 1158,
+      "sha256": "b5a8916f35dcb755425bf4640408b4f474bbc0ca68c72a75004c49b62258965e"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 307,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 507,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 0,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 1,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 1,
+    "examples": [
+      {
+        "segment": "__DATA_DIRTY",
+        "offset": "0xd08",
+        "first_section_prefix": "0x5f0",
+        "symbol": "_swift_cvw_assignWithCopy"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-stickers-closure-recencyservice-resource-v2-witness-v1/RecencyService': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x2710)\n",
+    "original_validator": "runtime/original-dyld-validation-batch-0pucse25/stickers-closure-recencyservice-resource-v2-witness-v1-result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x2710",
+        "segment": "__DATA_DIRTY",
+        "offset": "0xd08",
+        "actual_address": "0x27ed1d08",
+        "LLVM_section_base_address": "0x27ed22f8",
+        "reported_error": "not in section",
+        "symbol": "_swift_cvw_assignWithCopy"
+      }
+    ],
+    "original_validator_sha256": "ef69bad6f4f72d65c8f75a2df418e57aeb78d55e4464429063cb809dad9c73b2",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "8835d732bb501855b6c213ce1affaac91165ebb5885b397854ca4f03ad5af01a",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "b62840db5257fd05c264d0cf49998805c8234a4abda373da535c749a1ebfbc7c",
+    "runtime/fullsystem-libraries/System/Library/PrivateFrameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService": "ce0156872a577454be3cf052a1c0031c304485ce2b99c783c1f5e66e60b2a986",
+    "runtime/rebuilt-stickers-closure-recencyservice-resource-v2-witness-v1/RecencyService": "343561e2a150704edbecbb9be16ae6c6e30ca1ce44e9894132ebf5e021ff7a43",
+    "runtime/rebuilt-stickers-closure-recencyservice-resource-v2-witness-v1/reconstruction.json": "90b6da6d2a93057a37ffb48d40f0bf478e0e28326e3400400f657a44431ceca9"
+  },
+  "verified": true
+}

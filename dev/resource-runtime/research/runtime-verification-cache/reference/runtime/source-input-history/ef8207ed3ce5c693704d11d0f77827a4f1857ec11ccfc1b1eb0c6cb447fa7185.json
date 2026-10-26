@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/ef8207ed3ce5c693704d11d0f77827a4f1857ec11ccfc1b1eb0c6cb447fa7185",
+  "original_sha256": "ef8207ed3ce5c693704d11d0f77827a4f1857ec11ccfc1b1eb0c6cb447fa7185",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/log-enablement-profile.py'));environment=m['environment']\ndef profile(source_build=None):\n p=m['profile'](source_build=source_build);stage=json.loads((root/'artifacts/native-log-message-stage.json').read_text())\n for key in ['base','library','helper','source','provider','reconstruction']:assert hashlib.sha256((root/stage[key]).read_bytes()).hexdigest()==stage[key+'_sha256']\n c=list(p['command']);i=next(i for i,v in enumerate(c) if v.startswith('DYLD_LIBRARY_PATH='));c[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/native-log-message/libraries:'+c[i].split('=',1)[1]\n return {**p,'command':c,'native_log_message':stage}\n"
+}

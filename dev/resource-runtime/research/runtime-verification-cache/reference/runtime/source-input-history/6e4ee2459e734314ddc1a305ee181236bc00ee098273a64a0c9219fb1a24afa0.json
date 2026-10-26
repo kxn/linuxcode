@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/6e4ee2459e734314ddc1a305ee181236bc00ee098273a64a0c9219fb1a24afa0",
+  "original_sha256": "6e4ee2459e734314ddc1a305ee181236bc00ee098273a64a0c9219fb1a24afa0",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/objc-selector-source-profile.py'));environment=m['environment']\ndef profile():\n p=m['profile']();stage=json.loads((root/'artifacts/foundation-coherent-stage.json').read_text());digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n for key in ['original','source','library','reconstruction']:assert digest(stage['shim'][key])==stage['shim'][key+'_sha256']\n for key in ['base','library','provider']:assert digest(stage['float_class'][key])==stage['float_class'][key+'_sha256']\n c=list(p['command']);i=next(i for i,v in enumerate(c) if v.startswith('DYLD_LIBRARY_PATH='));c[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/foundation-coherent/libraries:'+c[i].split('=',1)[1]\n return {**p,'command':c,'foundation_coherent':stage}\n"
+}

@@ -1,0 +1,787 @@
+{
+  "diagnostic_only": true,
+  "configuration": "config/direct-resource-tool-environment-v139.json",
+  "configuration_sha256": "26af83c55dc159025d2dc906e13319d5bcb30d48f8ce8feea2d415f31749efc8",
+  "results": [
+    {
+      "target": "localauthentication-patch-got-v2",
+      "image": "/System/Library/Frameworks/LocalAuthentication.framework/Versions/A/LocalAuthentication",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/LocalAuthentication.framework/Versions/A/LocalAuthentication",
+      "candidate_sha256": "a6af4eb9437ee76e585592baaa0a06afcc66a6538f63d71a075771a864317f62",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "skylight-patch-got-v3",
+      "image": "/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/SkyLight.framework/Versions/A/SkyLight",
+      "candidate_sha256": "7d51946d26c371513ae85f70adc7532c24efc79a60dfc2ff95208f0f6bdd244f",
+      "missing_tables": 1,
+      "references": 1,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/skylight-patch-got-v3.json",
+      "contracts_sha256": "5ac699da7157ddb3ecac266549a173c5ad9d61801461b98ddd007ca86968ae3c",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "backboardhideventfoundation-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation",
+      "candidate_sha256": "2443a6def1a35ca401574b441dc307ff4bf56c22fa64eed0f0721239d19b6c88",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "prodisplaylibrary-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary",
+      "candidate_sha256": "cbd904bab85b7e8a487c898648f27298db1fd9496cf4dcd12f25c32733a9c8dc",
+      "missing_tables": 1,
+      "references": 1,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/prodisplaylibrary-patch-got-v2.json",
+      "contracts_sha256": "b9537d7a545fbe9478fde814da5d5a906af0ffbbf988c2f83885afc04ca8fbd9",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "avfaudio-patch-got-v4",
+      "image": "/System/Library/Frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AVFAudio.framework/Versions/A/AVFAudio",
+      "candidate_sha256": "3b55321c300103261ee0e0807576e573eeb2527270c617df0f1cd0569593779e",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "contacts-patch-got-v2",
+      "image": "/System/Library/Frameworks/Contacts.framework/Versions/A/Contacts",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Contacts.framework/Versions/A/Contacts",
+      "candidate_sha256": "725a7baa6501fd2187d2e7559ce210acca6cefc1dccf0745c82170cc808a7f51",
+      "missing_tables": 1,
+      "references": 1,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/contacts-patch-got-v2.json",
+      "contracts_sha256": "84cce57252f5e6a4d6546a43c06d6c067464bf99eece4be4d69cb55183247dc9",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "contacts-closure-contactspersistence-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ContactsPersistence.framework/Versions/A/ContactsPersistence",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ContactsPersistence.framework/Versions/A/ContactsPersistence",
+      "candidate_sha256": "aefd0879116c49c696c095a9e5b546107db8e5540bd90733d5e43e8fbf7caa36",
+      "missing_tables": 1,
+      "references": 1,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/contacts-closure-contactspersistence-resource-v2.json",
+      "contracts_sha256": "ad895915360b470a3bf1aca643a795281e78a66223b49cbd5689ea57e9b7743e",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "contacts-closure-contactsfoundation-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ContactsFoundation.framework/Versions/A/ContactsFoundation",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ContactsFoundation.framework/Versions/A/ContactsFoundation",
+      "candidate_sha256": "28828d949f1f311f10f59229c3dda792e60a9d15154d76d69b827f644a3641b7",
+      "missing_tables": 2,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/contacts-closure-contactsfoundation-resource-v2.json",
+      "contracts_sha256": "58455a1727dd1e8be0a876b389dbda2e1594e24197925c0d11fb4f2f08940ead",
+      "symbols": [
+        "_$sBbWV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "contacts-closure-vcard-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/vCard.framework/Versions/A/vCard",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/vCard.framework/Versions/A/vCard",
+      "candidate_sha256": "cb0ef750e4a56add1f961e01773091ac1846f8b1ce95c27fa5afc1872d59718f",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "contacts-closure-proactiveeventtracker-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ProactiveEventTracker.framework/Versions/A/ProactiveEventTracker",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ProactiveEventTracker.framework/Versions/A/ProactiveEventTracker",
+      "candidate_sha256": "8855d1bc1314e4e50c997f91593dff0bcb47e6dfd9053b9f9e8b1fb52096c302",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "vision-patch-got-v2",
+      "image": "/System/Library/Frameworks/Vision.framework/Versions/A/Vision",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Vision.framework/Versions/A/Vision",
+      "candidate_sha256": "cbf1c09ed4f5eecf23fc32dd476e740db284f9359d511cf2e49066046835d581",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "vision-closure-coresceneunderstanding-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/CoreSceneUnderstanding.framework/Versions/A/CoreSceneUnderstanding",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CoreSceneUnderstanding.framework/Versions/A/CoreSceneUnderstanding",
+      "candidate_sha256": "63ace61f4dfd670d44f6f67f02192f827b5938a363cf6d7e5bd99235fbae6017",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "vision-closure-textrecognition-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/TextRecognition.framework/Versions/A/TextRecognition",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/TextRecognition.framework/Versions/A/TextRecognition",
+      "candidate_sha256": "70b9b58a63b0f55fd159c2c5d91c807056c03d270f4fd4b1a191b383101b8ce4",
+      "missing_tables": 2,
+      "references": 4,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/vision-closure-textrecognition-resource-v2.json",
+      "contracts_sha256": "08efe9f83afac4db00499b75d80a1dadfe37eea0caa6e9d6c9e164a29415337d",
+      "symbols": [
+        "_$sBbWV",
+        "_$sBi8_WV"
+      ]
+    },
+    {
+      "target": "vision-closure-datadetection-resource-v2",
+      "image": "/System/Library/Frameworks/DataDetection.framework/Versions/A/DataDetection",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/DataDetection.framework/Versions/A/DataDetection",
+      "candidate_sha256": "ebbcbdf4494ffe737e9238ef5fd0d5d58dc32b921c6c665753ef44a3baae9941",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "avfoundation-closure-avfcore-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/AVFCore.framework/Versions/A/AVFCore",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AVFCore.framework/Versions/A/AVFCore",
+      "candidate_sha256": "2120011c748d6a9e158f8bec02a792c32f3a868e77392eb7ffc1adb3040bd41c",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "avfoundation-closure-avfcapture-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/AVFCapture.framework/Versions/A/AVFCapture",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AVFCapture.framework/Versions/A/AVFCapture",
+      "candidate_sha256": "941b2359ed8813b8418583ddf16a1b5ad8f7757316e210ddd261237b06b6c347",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "callsxpc-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/CallsXPC.framework/Versions/A/CallsXPC",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CallsXPC.framework/Versions/A/CallsXPC",
+      "candidate_sha256": "1706c4ab4e330fdd58075232169888ec4092c8e0514757365683bd9a7815603c",
+      "missing_tables": 1,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/callsxpc-patch-got-v2.json",
+      "contracts_sha256": "df43d41f74ea9337d18e34ea95c14f1c221b4c336f655ccae28b901fb86458b2",
+      "symbols": [
+        "_$sBoWV"
+      ]
+    },
+    {
+      "target": "callsutilities-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/CallsUtilities.framework/Versions/A/CallsUtilities",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CallsUtilities.framework/Versions/A/CallsUtilities",
+      "candidate_sha256": "73bc72901034aac3af10a75907d6811370914e02742f13067bd6374df8438319",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "livecommunicationkit-patch-got-v2",
+      "image": "/System/Library/Frameworks/LiveCommunicationKit.framework/Versions/A/LiveCommunicationKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/LiveCommunicationKit.framework/Versions/A/LiveCommunicationKit",
+      "candidate_sha256": "c5bfc202cbc2cfa0d9b4d058e84948a916df61a532a46044a56055ee62520d27",
+      "missing_tables": 1,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/livecommunicationkit-patch-got-v2.json",
+      "contracts_sha256": "b434eab61a1315e887354b149c263b7314c67654d0a33b9003c0f2aee4efc9db",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "coretelephony-patch-got-v2",
+      "image": "/System/Library/Frameworks/CoreTelephony.framework/Versions/A/CoreTelephony",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CoreTelephony.framework/Versions/A/CoreTelephony",
+      "candidate_sha256": "aeaa64cda8b1d0a5362b82b4c31f9b08084b606e05a3d5c7c8b9337cb04a5b8c",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "tabulardata-patch-got-v2",
+      "image": "/System/Library/Frameworks/TabularData.framework/Versions/A/TabularData",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/TabularData.framework/Versions/A/TabularData",
+      "candidate_sha256": "99d31d4cf4579319ffe81cd7241940e22c53ec53e6b16c83115305ef7164bc1f",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "mediaaccessibility-patch-got-v2",
+      "image": "/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/MediaAccessibility.framework/Versions/A/MediaAccessibility",
+      "candidate_sha256": "d12c3f44935421931b85111e0a85e2b0a45cd7efea35ad8810187584923febd8",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "appkit-swift-witness-pool-v1",
+      "image": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AppKit.framework/Versions/C/AppKit",
+      "candidate_sha256": "28add5f2fbe90d66dba15e05afc005c4669975c8a189b35bad41cb5c7f36506b",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "appkit-closure-windowmanagement-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/WindowManagement.framework/Versions/A/WindowManagement",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/WindowManagement.framework/Versions/A/WindowManagement",
+      "candidate_sha256": "2c69ccb27103e0f2d721652ff0ec59c195e169b2fec2bc992246ca7ddf37ae04",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "quicklook-closure-mediaanalysis-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/MediaAnalysis.framework/Versions/A/MediaAnalysis",
+      "candidate_sha256": "ac31a3daffe2348a51513d9e9361a77b9d8cba7354fdb34d9fb51195d23e69f4",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "quicklook-closure-soundanalysis-resource-v2",
+      "image": "/System/Library/Frameworks/SoundAnalysis.framework/Versions/A/SoundAnalysis",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/SoundAnalysis.framework/Versions/A/SoundAnalysis",
+      "candidate_sha256": "433090ac0284a3fa44599135caeec15fdaad2b6d53b498cd9dc49fe8839c06de",
+      "missing_tables": 2,
+      "references": 9,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/quicklook-closure-soundanalysis-resource-v2.json",
+      "contracts_sha256": "bfeacaff9e0c0cbac3ebf6cf1d8c77ae1262ed127c9f5525ce2b564a3fe10b37",
+      "symbols": [
+        "_$sBpWV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "quicklook-closure-embeddedacousticrecognition-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/EmbeddedAcousticRecognition.framework/Versions/A/EmbeddedAcousticRecognition",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/EmbeddedAcousticRecognition.framework/Versions/A/EmbeddedAcousticRecognition",
+      "candidate_sha256": "1e986a0c41b22b994560dc74666cbfec1fb1c8ddb3e8d8bbe81c9504c084327e",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "isolatedcontextlogging-patch-got-v1",
+      "image": "/System/Library/PrivateFrameworks/IsolatedContextLogging.framework/Versions/A/IsolatedContextLogging",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/IsolatedContextLogging.framework/Versions/A/IsolatedContextLogging",
+      "candidate_sha256": "568ef4fd3664b540b3e584d266e8a2777c63ae442047d92df55479166049b152",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "stickers-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Versions/A/Stickers",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Stickers.framework/Versions/A/Stickers",
+      "candidate_sha256": "71d6a98d2c2bd52298297907d1609202393ad3a42217e122adf24df109ca97bb",
+      "missing_tables": 1,
+      "references": 3,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/stickers-patch-got-v2.json",
+      "contracts_sha256": "b944acc8e676b412a3e066e08d9c03f90094564e4cd4979cc5106bc305e3754b",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "stickers-closure-recencyservice-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Stickers.framework/Support/RecencyService.framework/Versions/A/RecencyService",
+      "candidate_sha256": "db21c958347a3c4fabc4deff912277a994d65b65db5d97aa5c23f25b4b5ecb9b",
+      "missing_tables": 1,
+      "references": 1,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/stickers-closure-recencyservice-resource-v2.json",
+      "contracts_sha256": "5b7e4cb4af2761a842fe236f42c2692c480f304b90b0e14d4aca10b7b1c121a8",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "stickers-closure-coherence-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/Coherence.framework/Versions/A/Coherence",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Coherence.framework/Versions/A/Coherence",
+      "candidate_sha256": "0b53c152c3c3e1fd9b143f676742523a336a4d25b908e4d79a63ecb816e225de",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "stickers-closure-emojifoundation-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/EmojiFoundation.framework/Versions/A/EmojiFoundation",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/EmojiFoundation.framework/Versions/A/EmojiFoundation",
+      "candidate_sha256": "8eb6a2f631d5e8a8c125fd795711dd044a3223159d15e91e9c8a9147d0450887",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "stickers-closure-differentialprivacy-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/DifferentialPrivacy.framework/Versions/A/DifferentialPrivacy",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/DifferentialPrivacy.framework/Versions/A/DifferentialPrivacy",
+      "candidate_sha256": "3449fe78372a86835240ced491b765a74096c35a5e28bbd60654ea44bc739a3d",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "stickers-closure-vdaf-resource-v1",
+      "image": "/System/Library/PrivateFrameworks/VDAF.framework/Versions/A/VDAF",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/VDAF.framework/Versions/A/VDAF",
+      "candidate_sha256": "4dd02aaf1d433a23d4e06c0ce9c440b4f4c18e5087b9ec63480f1c97e1fde8b8",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "authkitui-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/AuthKitUI.framework/Versions/A/AuthKitUI",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AuthKitUI.framework/Versions/A/AuthKitUI",
+      "candidate_sha256": "53d133f1a11db659520fe973128fe372aebd84631a139d82e79d544ec9b6ed42",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "remoteui-patch-got-v3",
+      "image": "/System/Library/PrivateFrameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/RemoteUI.framework/Versions/A/RemoteUI",
+      "candidate_sha256": "a1f97b87f5596579a6c4fb7dae89d88d8fb725cad7e575f005d5d307e4b63ea8",
+      "missing_tables": 1,
+      "references": 6,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/remoteui-patch-got-v3.json",
+      "contracts_sha256": "79c576b6059e65aa1509aaca20160cf7e01bd10e1e721f5e8c77377bfd3d7426",
+      "symbols": [
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "remoteui-closure-liftui-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/LiftUI.framework/Versions/A/LiftUI",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/LiftUI.framework/Versions/A/LiftUI",
+      "candidate_sha256": "8090e1a918b95168a0aa6b5762b1dbbd7f3499049c71d0c5a320011b560d0dbb",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "remoteui-closure-iconservices-swiftui-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/_IconServices_SwiftUI.framework/Versions/A/_IconServices_SwiftUI",
+      "candidate_sha256": "fba5deeb8a222551d2f5df925827a4ec145b2292e9814e2a1dd3cac6d3790be2",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/Settings.framework/Versions/A/Settings",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Settings.framework/Versions/A/Settings",
+      "candidate_sha256": "6378ae5e0d9938af6cb188eb549282c01606f2f199c1f22f7b78ee1e3cb4aa00",
+      "missing_tables": 1,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-patch-got-v2.json",
+      "contracts_sha256": "3e65c6f115b2c48b86320c10591b1140437a43de3caf13911828a36bd166687e",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "settings-closure-appintents-resource-v2",
+      "image": "/System/Library/Frameworks/AppIntents.framework/Versions/A/AppIntents",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AppIntents.framework/Versions/A/AppIntents",
+      "candidate_sha256": "15b2300482433af61c66e2044badcc3e6bd9d3500b1192e5e78842a53dd269bd",
+      "missing_tables": 2,
+      "references": 5,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-appintents-resource-v2.json",
+      "contracts_sha256": "c3b457043c7fd309893dd10cb4cbc635de13d64bc1ec2f2e728dadf3052ac9ed",
+      "symbols": [
+        "_$sBi32_WV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "settings-closure-linkmetadata-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/LinkMetadata.framework/Versions/A/LinkMetadata",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/LinkMetadata.framework/Versions/A/LinkMetadata",
+      "candidate_sha256": "2bee2ea245108f41bad9fa684a82177cad304817c0460f72e8bcc39e72180086",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-linkservices-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/LinkServices.framework/Versions/A/LinkServices",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/LinkServices.framework/Versions/A/LinkServices",
+      "candidate_sha256": "f41d64eb01dec58c7c7cbf3ce594ec2aa38e6ae77a385b1be76a744c2b645a59",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-email-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/Email.framework/Versions/A/Email",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Email.framework/Versions/A/Email",
+      "candidate_sha256": "871d560cc7fc74ac99fcdf1502536dfb8dae114de0b55021961537a2a9e2aa36",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-proactivepredictionclient-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ProactivePredictionClient.framework/Versions/A/ProactivePredictionClient",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ProactivePredictionClient.framework/Versions/A/ProactivePredictionClient",
+      "candidate_sha256": "95f2dc607272cc0f9102cc7935cc29f20cbc797e5d5718c9174cf2fe48cb3f3d",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-contextualsuggestionclient-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ContextualSuggestionClient.framework/Versions/A/ContextualSuggestionClient",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ContextualSuggestionClient.framework/Versions/A/ContextualSuggestionClient",
+      "candidate_sha256": "7555ff054e7b0e0030fa8d4b77ddd28e211544cd59017c42e0fbc70356504b34",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-healthkit-resource-v3",
+      "image": "/System/Library/Frameworks/HealthKit.framework/Versions/A/HealthKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/HealthKit.framework/Versions/A/HealthKit",
+      "candidate_sha256": "69d61f47a3aa49489bce853de15e34532814e3246cd036c97a716055bc601cae",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-voiceshortcutclient-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/VoiceShortcutClient.framework/Versions/A/VoiceShortcutClient",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/VoiceShortcutClient.framework/Versions/A/VoiceShortcutClient",
+      "candidate_sha256": "04faa0561e2951dd557d70dc6c17b61f459fb61e654a494efde55dfa8c3bb6ab",
+      "missing_tables": 3,
+      "references": 7,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-voiceshortcutclient-resource-v2.json",
+      "contracts_sha256": "66d7dbd1fe94142afec7490829565b02bd638d09784917dad199dac3fcbfc17d",
+      "symbols": [
+        "_$sBbWV",
+        "_$sBi32_WV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "settings-closure-chronoservices-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ChronoServices.framework/Versions/A/ChronoServices",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ChronoServices.framework/Versions/A/ChronoServices",
+      "candidate_sha256": "c454130d7203d98f506a3c68055342abfc2f5260b9ee2a11f63a13622402b0c6",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-relevancekit-resource-v2",
+      "image": "/System/Library/Frameworks/RelevanceKit.framework/Versions/A/RelevanceKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/RelevanceKit.framework/Versions/A/RelevanceKit",
+      "candidate_sha256": "8b1d74a45dd9a76f525badddde3d0f4c95631f4933d4b86cf816231cd58af342",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-appintentstypesupport-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/AppIntentsTypeSupport.framework/Versions/A/AppIntentsTypeSupport",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AppIntentsTypeSupport.framework/Versions/A/AppIntentsTypeSupport",
+      "candidate_sha256": "539b5e89491d41fc16ccef1de89c7635408661a2acfcf41f6296eec265fecaec",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-appintentschemas-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/AppIntentSchemas.framework/Versions/A/AppIntentSchemas",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AppIntentSchemas.framework/Versions/A/AppIntentSchemas",
+      "candidate_sha256": "ae812b978949332ee4c37336a06b4bc829046ba5e978f44b8640b3c2b6976ad4",
+      "missing_tables": 1,
+      "references": 4,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-appintentschemas-resource-v2.json",
+      "contracts_sha256": "20995e822f163df6cb0099f3611b6eb23c38a5b793c8fa83cd4b287bb9dcefbd",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "settings-closure-sleephealth-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/SleepHealth.framework/Versions/A/SleepHealth",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/SleepHealth.framework/Versions/A/SleepHealth",
+      "candidate_sha256": "27eb299d8fd72d8f80e8a847479920728e5370dfb694c3bef415cc9b290dd413",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-cloudsubscriptionfeatures-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/CloudSubscriptionFeatures.framework/Versions/A/CloudSubscriptionFeatures",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CloudSubscriptionFeatures.framework/Versions/A/CloudSubscriptionFeatures",
+      "candidate_sha256": "29b97b05647d821cf81a07c1e779fdf7ba4838a392415a773df3b2480749a568",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-coreparsec-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/CoreParsec.framework/Versions/A/CoreParsec",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CoreParsec.framework/Versions/A/CoreParsec",
+      "candidate_sha256": "8808d70fb3f4cbd7fd16d488a3a72dddffe42ee091aedaab1967439b15cf8244",
+      "missing_tables": 2,
+      "references": 4,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-coreparsec-resource-v2.json",
+      "contracts_sha256": "54efd4fba992b73a61cc312bdb86c6ee00fc0895d2eaf04e13b843c81468705f",
+      "symbols": [
+        "_$sBi64_WV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "settings-closure-emailcore-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/EmailCore.framework/Versions/A/EmailCore",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/EmailCore.framework/Versions/A/EmailCore",
+      "candidate_sha256": "11efd271a86f67e4a3d8cf7f612340d9a5054afda63145cc0a3e560278d18ccb",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-emailfoundation-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/EmailFoundation.framework/Versions/A/EmailFoundation",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/EmailFoundation.framework/Versions/A/EmailFoundation",
+      "candidate_sha256": "96db4a97b37a2eca44b6723f45aded25a42dbd041cd348462f4f027f14811f26",
+      "missing_tables": 2,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-emailfoundation-resource-v2.json",
+      "contracts_sha256": "20c8c194c7f25852604f0262f22c89184aa4d49278ae3bb949c02719560a112f",
+      "symbols": [
+        "_$sBOWV",
+        "_$sBpWV"
+      ]
+    },
+    {
+      "target": "settings-closure-toolkit-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ToolKit.framework/Versions/A/ToolKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ToolKit.framework/Versions/A/ToolKit",
+      "candidate_sha256": "b1c7e9d29e3b625f67885bffc2780a503774e2e25940255349818a5248b853e0",
+      "missing_tables": 2,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-toolkit-resource-v2.json",
+      "contracts_sha256": "2429c81c4a5eda3d904f2c377c9ae50c030852f91474015ff588a2af097afc13",
+      "symbols": [
+        "_$sBi8_WV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "settings-closure-regulatorydomain-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/RegulatoryDomain.framework/Versions/A/RegulatoryDomain",
+      "candidate_sha256": "185f2fc23934083f59f0a71e013597be46000a145674232105767422cfa765ca",
+      "missing_tables": 1,
+      "references": 1,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-regulatorydomain-resource-v2.json",
+      "contracts_sha256": "b781885d9e1ce77408c053d0d2e07a3893fdd87d2d9f4986d433dfc700e6d3e7",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "settings-closure-replicatorengine-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ReplicatorEngine.framework/Versions/A/ReplicatorEngine",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ReplicatorEngine.framework/Versions/A/ReplicatorEngine",
+      "candidate_sha256": "d5e0eba037c8c5aa968a9ae8411bad6cb31039ec6cee8fd61d6fa426060f4258",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-replicatorservices-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/ReplicatorServices.framework/Versions/A/ReplicatorServices",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/ReplicatorServices.framework/Versions/A/ReplicatorServices",
+      "candidate_sha256": "4afffcfbb7d2a49a4029046f21eba5b3f1704d5a524852207eca8cec37f65f07",
+      "missing_tables": 3,
+      "references": 7,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-replicatorservices-resource-v2.json",
+      "contracts_sha256": "336ff648b471f2925a5aaf0fd9d9afe779a002667ed212e0ac1ecb7ba2fc82c5",
+      "symbols": [
+        "_$sBbWV",
+        "_$sBi32_WV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "settings-closure-coremotion-resource-v2",
+      "image": "/System/Library/Frameworks/CoreMotion.framework/Versions/A/CoreMotion",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CoreMotion.framework/Versions/A/CoreMotion",
+      "candidate_sha256": "d6d44aed7276099b55727bba8065131d5542fd1b36b53d9207661d62644aee12",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-grdbinternal-resource-v3",
+      "image": "/System/Library/PrivateFrameworks/GRDBInternal.framework/Versions/A/GRDBInternal",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/GRDBInternal.framework/Versions/A/GRDBInternal",
+      "candidate_sha256": "5f635fcc14403523b36b0575e472316ab347d969731046d6a45fc829863b0359",
+      "missing_tables": 3,
+      "references": 20,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-grdbinternal-resource-v3.json",
+      "contracts_sha256": "7decfe436e8a8d61600b22d219381d0543e95029336f69f6c6b32c308ac1130e",
+      "symbols": [
+        "_$sBOWV",
+        "_$sBi32_WV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "settings-closure-statuskit-resource-v1",
+      "image": "/System/Library/PrivateFrameworks/StatusKit.framework/Versions/A/StatusKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/StatusKit.framework/Versions/A/StatusKit",
+      "candidate_sha256": "974d57beb3064818cd95916b72c61762d205f7102d2b6ef8f31764b039f09253",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-networkextension-resource-v2",
+      "image": "/System/Library/Frameworks/NetworkExtension.framework/Versions/A/NetworkExtension",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/NetworkExtension.framework/Versions/A/NetworkExtension",
+      "candidate_sha256": "97a75913f42e4f34614913b21effd25b3c48521ac173444295dddacdab40aeff",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-pegasusapi-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/PegasusAPI.framework/Versions/A/PegasusAPI",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/PegasusAPI.framework/Versions/A/PegasusAPI",
+      "candidate_sha256": "6cfc484f6d65e3bd66fbe07211799105d671ff7d035b563df72e531ffc151c46",
+      "missing_tables": 3,
+      "references": 191,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-pegasusapi-resource-v2.json",
+      "contracts_sha256": "e8be89f6dece89bf9db0e9a16215eef683ad5e6d2f51c3f38737c42fbc18bf50",
+      "symbols": [
+        "_$sBbWV",
+        "_$sBi32_WV",
+        "_$sBi64_WV"
+      ]
+    },
+    {
+      "target": "settings-closure-pegasusconfiguration-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/PegasusConfiguration.framework/Versions/A/PegasusConfiguration",
+      "candidate_sha256": "8baa7349715dfda740406ba8dc1bc29794ae99d9bd278926c0957362bbf8bd17",
+      "missing_tables": 2,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/settings-closure-pegasusconfiguration-resource-v2.json",
+      "contracts_sha256": "67164c1cc54870074a7e987f8201d6f41e3f91ed4c3e4303ca1b13c7246dd094",
+      "symbols": [
+        "_$sBbWV",
+        "_$sBpWV"
+      ]
+    },
+    {
+      "target": "settings-closure-localstatuskit-resource-v1",
+      "image": "/System/Library/PrivateFrameworks/LocalStatusKit.framework/Versions/A/LocalStatusKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/LocalStatusKit.framework/Versions/A/LocalStatusKit",
+      "candidate_sha256": "8c3033adf93336000c6c856159a3f50ee81c27c3308b1119176a94eafe886b99",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "settings-closure-calendarfoundation-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/CalendarFoundation.framework/Versions/A/CalendarFoundation",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CalendarFoundation.framework/Versions/A/CalendarFoundation",
+      "candidate_sha256": "eade62005f7d9a42f9cdc465055c1ae6f471e3f39d6ffc70a2dab9480897e812",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "geotoolbox-patch-got-v2",
+      "image": "/System/Library/Frameworks/GeoToolbox.framework/Versions/A/GeoToolbox",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/GeoToolbox.framework/Versions/A/GeoToolbox",
+      "candidate_sha256": "6669675afd569763b1005f99b14dead379a598eafabea46e0f3829a0891ae784",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "communicationtrust-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/CommunicationTrust.framework/Versions/A/CommunicationTrust",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CommunicationTrust.framework/Versions/A/CommunicationTrust",
+      "candidate_sha256": "1edb784dd6ab597a00120fca159473e1dbde8508873830f347300867ddcd7332",
+      "missing_tables": 1,
+      "references": 3,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/communicationtrust-patch-got-v2.json",
+      "contracts_sha256": "2a4d5eff8fa8711365cd333121bdd701a08eb5cf2da6f0473a26fe7f564b23d0",
+      "symbols": [
+        "_$sBi8_WV"
+      ]
+    },
+    {
+      "target": "communicationtrust-closure-callspersistence-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/CallsPersistence.framework/Versions/A/CallsPersistence",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/CallsPersistence.framework/Versions/A/CallsPersistence",
+      "candidate_sha256": "246e3605b98d5b289033ae1188f9ae023c260d13803a406c43e3358f3ac23c0d",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "communicationtrust-closure-sensitivecontentanalysis-resource-v2",
+      "image": "/System/Library/Frameworks/SensitiveContentAnalysis.framework/Versions/A/SensitiveContentAnalysis",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/SensitiveContentAnalysis.framework/Versions/A/SensitiveContentAnalysis",
+      "candidate_sha256": "6eae51dfc140faf790ff194899314dd9c53bb7e951573416ee167ccaa7e70939",
+      "missing_tables": 2,
+      "references": 7,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/communicationtrust-closure-sensitivecontentanalysis-resource-v2.json",
+      "contracts_sha256": "0416f4a59988081ea1040b0aec24fdcf10d7f0375a650b3740ef00bbdc07e5d6",
+      "symbols": [
+        "_$sBbWV",
+        "_$syycWV"
+      ]
+    },
+    {
+      "target": "appleaccount-patch-got-v2",
+      "image": "/System/Library/PrivateFrameworks/AppleAccount.framework/Versions/A/AppleAccount",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/AppleAccount.framework/Versions/A/AppleAccount",
+      "candidate_sha256": "293b5091d75950de58b9037891af41682bf0c6f3c3344f017293bbb9e6e58c1c",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "eventkit-patch-got-v2",
+      "image": "/System/Library/Frameworks/EventKit.framework/Versions/A/EventKit",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/EventKit.framework/Versions/A/EventKit",
+      "candidate_sha256": "aaa066b68710d981ab155d0d067fd4320d4c445f6baf42081176e392c23d05ca",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "mapkit-closure-geoanalytics-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/GeoAnalytics.framework/Versions/A/GeoAnalytics",
+      "candidate_sha256": "a71b331fb234276eae0df3c8df9eafe356ee83b782010de32a6b8dac42f69391",
+      "missing_tables": 0,
+      "references": 0
+    },
+    {
+      "target": "mapkit-closure-navigation-resource-v2",
+      "image": "/System/Library/PrivateFrameworks/Navigation.framework/Versions/A/Navigation",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/Navigation.framework/Versions/A/Navigation",
+      "candidate_sha256": "1b4e72588817eb0350045bbba2e4b83cdf3a95a39a9508c8e554dc6f4b61c837",
+      "missing_tables": 1,
+      "references": 2,
+      "contracts": "artifacts/selected-swift-witness-batch-v1/mapkit-closure-navigation-resource-v2.json",
+      "contracts_sha256": "021c794741c5eced437443b07e12c189832579bc28170c332df0a16a3768560b",
+      "symbols": [
+        "_$sBbWV"
+      ]
+    },
+    {
+      "target": "coresim-diskimages2-resource-v3",
+      "image": "/System/Library/PrivateFrameworks/DiskImages2.framework/Versions/A/DiskImages2",
+      "candidate": "runtime/resource-framework-overlay-appkit-swift-witness-v1/frameworks/DiskImages2.framework/Versions/A/DiskImages2",
+      "candidate_sha256": "e06ee6cf4902fc643298e6d3b805023d8ba1f344b1bf14ab62a9c0615f199c90",
+      "missing_tables": 0,
+      "references": 0
+    }
+  ],
+  "skipped": [
+    {
+      "image": "/System/Library/PrivateFrameworks/Stickers.framework/Support/ServiceShared.framework/Versions/A/ServiceShared",
+      "reason": "no direct SwiftCore dependency"
+    }
+  ],
+  "images_checked": 77,
+  "omitted_witness_cells": 44,
+  "original_load_references": 292,
+  "source_sha256": "689f1824f31a4ab31dee10f06812dbdaf266822b3acfe41b2528e2731bc99906",
+  "validator_sha256": "74a526d985a19326e78da0afc101983ed11de6cea8b9bce90b8d9a8addc9ee80",
+  "full_goal_complete": false
+}

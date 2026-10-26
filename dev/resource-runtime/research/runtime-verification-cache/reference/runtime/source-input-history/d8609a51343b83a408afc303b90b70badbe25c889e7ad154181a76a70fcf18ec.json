@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/d8609a51343b83a408afc303b90b70badbe25c889e7ad154181a76a70fcf18ec",
+  "original_sha256": "d8609a51343b83a408afc303b90b70badbe25c889e7ad154181a76a70fcf18ec",
+  "encoding": "utf-8",
+  "text": "\"\"\"Verify a recorded build input, including an explicitly frozen older revision.\n\nOlder private runtime variants keep their original binary and build manifest.\nWhen a source is subsequently fixed, a content-addressed snapshot preserves the\nexact input to those older builds; the new variant separately checks live inputs.\n\"\"\"\nfrom pathlib import Path\nimport hashlib,json\nroot=Path(__file__).resolve().parent.parent\ndef verify(item):\n    name=item['source'];sha=item['sha256']\n    digest=lambda path:hashlib.sha256(path.read_bytes()).hexdigest()\n    if digest(root/name)==sha:return name\n    frozen=json.loads((root/'runtime/source-input-history/manifest.json').read_text())\n    entry=frozen[name]\n    snapshot=entry['snapshot'] if entry['sha256']==sha else entry.get('revisions',{}).get(sha)\n    assert snapshot=='runtime/source-input-history/'+sha,name\n    assert digest(root/snapshot)==sha,name\n    return snapshot\n"
+}

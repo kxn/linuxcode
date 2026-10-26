@@ -1,0 +1,129 @@
+{
+  "executable_sections": [
+    {
+      "segment": "__TEXT",
+      "section": "__text",
+      "bytes": 19740294,
+      "sha256": "ba6f6412791fb4b42b443fc86c7d6c160c0008750a4ed814a57d9bb3aabe6695"
+    },
+    {
+      "segment": "__TEXT",
+      "section": "__stubs",
+      "bytes": 28938,
+      "sha256": "baca2083fe0648ebde375433989e4edec6b6c20cc71c57736794bb24a57ae066"
+    }
+  ],
+  "original_code_bytes_equal": true,
+  "original_vm_offsets_preserved": true,
+  "got_cells_verified": 7198,
+  "nonzero_addends_verified": 0,
+  "serialized_bindings": 45156,
+  "got_address_references_verified": 0,
+  "original_local_stub_cells_verified": 15,
+  "original_null_pool_cells_verified": 0,
+  "original_pooled_swift_witness_cells_verified": 3,
+  "optimized_TLV_descriptors_verified": 0,
+  "bindings_within_sections": true,
+  "runtime_behavior_verified": false,
+  "resource_compilation_verified": false,
+  "dysymtab_alias_repair": {
+    "verified": true,
+    "symbol_count": 148630,
+    "actual_type_groups": [
+      139518,
+      4112,
+      5000
+    ],
+    "external_aliases": 22,
+    "renamed_aliases_preserved": [],
+    "symbol_names_descriptors_and_alias_targets_preserved": true,
+    "defined_addresses_normalized": true,
+    "indirect_entries": 13500,
+    "remapped_indirect_entries": 8070,
+    "original_sha256": "e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746",
+    "candidate_sha256": "28add5f2fbe90d66dba15e05afc005c4669975c8a189b35bad41cb5c7f36506b"
+  },
+  "dysymtab_alias_verifier": {
+    "source": "scripts/verify-dysymtab-alias-repair.py",
+    "sha256": "2d77983783747005169792ca8dc75551d22e1332900e372c72d42d0f746c0c0b"
+  },
+  "llvm_bind_and_lazy_bind_tables_parsed": false,
+  "LLVM_first_section_base_limitation": {
+    "conflicting_valid_bindings": 118,
+    "examples": [
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26eed8",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26eef0",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef00",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef10",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef20",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef30",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef40",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      },
+      {
+        "segment": "__DATA_CONST",
+        "offset": "0x26ef50",
+        "first_section_prefix": "0xc20",
+        "symbol": "_OBJC_CLASS_$_NSConstantDoubleNumber"
+      }
+    ],
+    "stderr": "llvm-objdump-19: error: '/home/dl/linuxcode/runtime/rebuilt-appkit-swift-witness-pool-v1/AppKit': truncated or malformed object (for BIND_OPCODE_SET_SEGMENT_AND_OFFSET_ULEB bad offset, not in section for opcode at: 0x1266b7)\n",
+    "original_validator": "runtime/original-dyld-validation-od24sh__/result.json",
+    "reported_opcode_proof": [
+      {
+        "stream": "eager",
+        "opcode_offset": "0x1266b7",
+        "segment": "__DATA_CONST",
+        "offset": "0x26eed8",
+        "actual_address": "0x39ba1ed8",
+        "LLVM_section_base_address": "0x39ba2af8",
+        "reported_error": "not in section",
+        "symbol": "_OBJC_CLASS_$_NSConstantArray"
+      }
+    ],
+    "original_validator_sha256": "78a53068203ede5404eb34665fa4deb7094680f890c1f98ad8967c2c6fb5119a",
+    "original_Apple_validation_verified": true
+  },
+  "llvm_binding_tables_sha256": "afa163049acd69e2dca738cc9197dfaffe5c3372de959dc63f1fca80fe13792c",
+  "files": {
+    "scripts/inspect-preserved-patch-got.py": "3966c0415b50adee3d85f45ac170082568b7c161340a3e27b797e2e20357605a",
+    "config/coregraphics-image-pins.json": "5529ac8ac74684b7c75255317ec856420af85dff8ebfd74cd46849228dcc377d",
+    "runtime/fullsystem-libraries/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit": "e65e39786a72cb64291dcb514ba256ef29cd2de6c6bee642bde2d1227e300746",
+    "runtime/rebuilt-appkit-swift-witness-pool-v1/AppKit": "28add5f2fbe90d66dba15e05afc005c4669975c8a189b35bad41cb5c7f36506b",
+    "runtime/rebuilt-appkit-swift-witness-pool-v1/reconstruction.json": "734be89f85304809d0f878b40b4ae9d98f9b251d6f1f7536a4668d392b8049c9"
+  },
+  "verified": true
+}

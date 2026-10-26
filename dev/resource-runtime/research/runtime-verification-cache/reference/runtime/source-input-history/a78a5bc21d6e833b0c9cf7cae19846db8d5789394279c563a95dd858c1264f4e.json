@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/a78a5bc21d6e833b0c9cf7cae19846db8d5789394279c563a95dd858c1264f4e",
+  "original_sha256": "a78a5bc21d6e833b0c9cf7cae19846db8d5789394279c563a95dd858c1264f4e",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\n\"\"\"Select the source launchd with enabled audit-token Sandbox checks.\"\"\"\nfrom pathlib import Path\nimport hashlib, json, runpy\nroot = Path(__file__).resolve().parent.parent\nm = runpy.run_path(str(root / 'scripts/sandbox-policy-vm-server-profile.py'))\ndef profile(include_system_resources=True):\n    p = m['profile'](include_system_resources)\n    d = json.loads((root / 'artifacts/launchd-sandbox-source-build.json').read_text())\n    digest = lambda n: hashlib.sha256((root / n).read_bytes()).hexdigest()\n    assert d['previous_source_runtime'] == p['source_runtime']\n    resolve = runpy.run_path(str(root / 'scripts/resolve-evidence-history.py'))['resolve']\n    for name, sha in d['source_files'].items(): resolve(name, sha)\n    for item in d['source_runtime'].values(): assert digest(item['path']) == item['sha256']\n    return {**p, 'source_runtime': d['source_runtime'], 'source_launchd_sandbox': d}\ndef environment(p): return m['environment'](p)\n"
+}

@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/9fa328565c4f572f9d62cd91eec9bcd8dd163300e2357c350d829e640523eea4",
+  "original_sha256": "9fa328565c4f572f9d62cd91eec9bcd8dd163300e2357c350d829e640523eea4",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/argument-parser-native-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources);d=json.loads((root/'artifacts/cryptokit-original-stage.json').read_text())\n    digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n    for item in d['images']:\n        for key in ['original','source','reconstruction','framework']:assert digest(item[key])==item[key+'_sha256'],key\n    command=list(p['command']);i=next(i for i,a in enumerate(command) if a.startswith('DYLD_FRAMEWORK_PATH='))\n    command[i]='DYLD_FRAMEWORK_PATH=/Volumes/SystemRoot/workspace/runtime/cryptokit-original-native/frameworks:'+command[i].split('=',1)[1]\n    return {**p,'command':command,'native_original_cryptokit':d}\ndef environment(p):return m['environment'](p)\n"
+}

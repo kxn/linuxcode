@@ -10,7 +10,9 @@
 
 此前的[原版 MobileAsset 与 AVFoundation 检查点](dev/resource-runtime/research/mobileasset-avfoundation/README.md)加入六个原始映像，并为没有函数体的原版转发框架增加独立校验路径。资源工具继续推进到 Swift AVFoundation 类型元数据缺失；该后续原版库已有验证候选。完整 workspace 后续重跑进入五 target 依赖图，因同一 Swift 类型缺失返回 65，仍未产出 App；此前一次启动服务查询超时的失败与实时栈也完整保留。
 
-最新的[Storyboard 服务启动与资源目录检查点](dev/resource-runtime/research/coresim-resource-startup/README.md)厘清真机 build 对宿主 CoreSimulator 服务的实际调用，并修复原版 DiskImages2 硬编码 bundle 路径导致的错误描述异常；真实 Storyboard 和最终 Unity App 仍未完成。
+最新的[Swift 批量导入与原版服务启动检查点](dev/resource-runtime/research/swift-witness-service-startup/README.md)补齐47个Swift数据表导入，修复只读协议表排序，增加真实自身签名元数据读取，并继续接通原版 IOKit 的真实服务端口。最终 Unity App 仍未完成。
+
+此前的[Storyboard 服务启动与资源目录检查点](dev/resource-runtime/research/coresim-resource-startup/README.md)厘清真机 build 对宿主 CoreSimulator 服务的实际调用，并修复原版 DiskImages2 硬编码 bundle 路径导致的错误描述异常；真实 Storyboard 和最终 Unity App 仍未完成。
 
 此前的[CoreSimulator 磁盘服务检查点](dev/resource-runtime/research/coresim-disk-services/README.md)已进入原版 Swift 磁盘服务初始化，验证真实 DiskArbitration 会话，并补全 Swift 版本比较。实际 Storyboard 和最终 Unity App 仍未完成。
 

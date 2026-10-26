@@ -1,0 +1,6 @@
+{
+  "original_path": "vendor/darling/src/external/IOKitUser/iokitmig.c",
+  "original_sha256": "4d9cc565a130707cccbe8f87c819aab7e1ac6db846eb4412dd18aa2af3c6357e",
+  "encoding": "utf-8",
+  "text": "/*\n * Copyright (c) 2008 Apple Inc. All rights reserved.\n *\n * @APPLE_LICENSE_HEADER_START@\n * \n * This file contains Original Code and/or Modifications of Original Code\n * as defined in and that are subject to the Apple Public Source License\n * Version 2.0 (the 'License'). You may not use this file except in\n * compliance with the License. Please obtain a copy of the License at\n * http://www.opensource.apple.com/apsl/ and read it before using this\n * file.\n * \n * The Original Code and all software distributed under the License are\n * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER\n * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,\n * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.\n * Please see the License for the specific language governing rights and\n * limitations under the License.\n * \n * @APPLE_LICENSE_HEADER_END@\n */\n#if __LP64__\n#   define mig_external __private_extern__\n#   include \"iokitmig64.c\"\n#else\n#   include \"iokitmig32.c\"\n#endif\n"
+}

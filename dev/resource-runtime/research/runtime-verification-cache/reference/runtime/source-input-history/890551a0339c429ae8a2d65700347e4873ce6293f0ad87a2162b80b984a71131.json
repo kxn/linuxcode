@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/890551a0339c429ae8a2d65700347e4873ce6293f0ad87a2162b80b984a71131",
+  "original_sha256": "890551a0339c429ae8a2d65700347e4873ce6293f0ad87a2162b80b984a71131",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/native-layer-profile.py'))\nenvironment=m['environment']\ndef profile():\n p=m['profile']();stage=json.loads((root/'artifacts/native-layer-context-stage.json').read_text())\n for key in ['base','library','helper','source','header']:assert hashlib.sha256((root/stage[key]).read_bytes()).hexdigest()==stage[key+'_sha256']\n c=list(p['command'])\n for key,folder in [('DYLD_FRAMEWORK_PATH','frameworks'),('DYLD_LIBRARY_PATH','libraries')]:\n  i=next(i for i,v in enumerate(c) if v.startswith(key+'='));c[i]=key+'=/Volumes/SystemRoot/workspace/runtime/native-layer-context/'+folder+':'+c[i].split('=',1)[1]\n return {**p,'command':c,'native_layer_context':stage}\n"
+}

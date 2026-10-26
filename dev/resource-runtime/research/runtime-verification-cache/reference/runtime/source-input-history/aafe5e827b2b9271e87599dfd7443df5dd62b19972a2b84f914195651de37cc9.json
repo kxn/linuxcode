@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/aafe5e827b2b9271e87599dfd7443df5dd62b19972a2b84f914195651de37cc9",
+  "original_sha256": "aafe5e827b2b9271e87599dfd7443df5dd62b19972a2b84f914195651de37cc9",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/sandbox-check-source-profile.py'))\ndef profile(include_system_resources=True):\n    p=m['profile'](include_system_resources);stage=json.loads((root/'artifacts/expected-access-source-build.json').read_text())\n    digest=lambda n:hashlib.sha256((root/n).read_bytes()).hexdigest()\n    for name in ['library','base','baseline','unprocessed']:assert digest(stage[name])==stage[name+'_sha256']\n    for name,sha in {**stage['source_files'],**stage['existing_object_inputs']}.items():assert digest(name)==sha\n    c=list(p['command']);i=next(i for i,a in enumerate(c) if a.startswith('DYLD_LIBRARY_PATH='));c[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/expected-access-source/libraries:'+c[i].split('=',1)[1]\n    return {**p,'command':c,'source_expected_access':stage}\ndef environment(p):return m['environment'](p)\n"
+}

@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/bc61e27a1201e2a2a7905d8be122e4d2a187c7c536a1e01c9bb1164efa85ceb8",
+  "original_sha256": "bc61e27a1201e2a2a7905d8be122e4d2a187c7c536a1e01c9bb1164efa85ceb8",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,os,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/native-log-message-profile.py'));environment=m['environment']\ndef profile():\n stage=json.loads((root/'artifacts/log-hooks-stage.json').read_text());build=stage['source_build']\n override=os.environ.get('LINUXCODE_LIBTRACE_BUILD_REPORT')\n if override:\n  report=(root/override).resolve();assert report.is_relative_to(root/'artifacts')\n  build=json.loads(report.read_text());assert build['full_libtrace_source_build'] and build['complete_source_files']==9\n p=m['profile'](source_build=build)\n for key in ['base','library']:assert hashlib.sha256((root/stage[key]).read_bytes()).hexdigest()==stage[key+'_sha256']\n c=list(p['command']);i=next(i for i,v in enumerate(c) if v.startswith('DYLD_LIBRARY_PATH='));c[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/log-hooks/libraries:'+c[i].split('=',1)[1]\n return {**p,'command':c,'source_libtrace':build,'log_hooks':stage}\n"
+}

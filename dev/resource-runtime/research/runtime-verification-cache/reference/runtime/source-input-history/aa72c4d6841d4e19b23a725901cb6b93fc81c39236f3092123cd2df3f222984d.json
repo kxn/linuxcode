@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/aa72c4d6841d4e19b23a725901cb6b93fc81c39236f3092123cd2df3f222984d",
+  "original_sha256": "aa72c4d6841d4e19b23a725901cb6b93fc81c39236f3092123cd2df3f222984d",
+  "encoding": "utf-8",
+  "text": "#!/usr/bin/env python3\nfrom pathlib import Path\nimport hashlib,json,runpy\nroot=Path(__file__).resolve().parent.parent\nm=runpy.run_path(str(root/'scripts/log-hooks-profile.py'));environment=m['environment']\ndef profile():\n p=m['profile']();stage=json.loads((root/'artifacts/container-persona-stage.json').read_text())\n for key in ['base','library','helper','source','original','provider']:assert hashlib.sha256((root/stage[key]).read_bytes()).hexdigest()==stage[key+'_sha256']\n c=list(p['command']);i=next(i for i,v in enumerate(c) if v.startswith('DYLD_LIBRARY_PATH='));c[i]='DYLD_LIBRARY_PATH=/Volumes/SystemRoot/workspace/runtime/container-persona/libraries:'+c[i].split('=',1)[1]\n return {**p,'command':c,'container_persona':stage}\n"
+}
