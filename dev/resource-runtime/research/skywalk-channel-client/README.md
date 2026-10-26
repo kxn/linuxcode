@@ -1,0 +1,13 @@
+# 复用完整Skywalk通道客户端与Intel校验和实现
+
+原版CoreUtils缺少os_channel_advance_slot。静态扫描2609个原始x86_64镜像后，在所检查的宿主kernel/pthread/platform和libSystem导出名称范围内，24个导入缺口涉及14个强符号，全部属于Skywalk channel组；另有2个镜像检查失败，不作为通过。此检查只核对名字，不证明所有再导出目标、ABI、动态加载或执行正确。
+
+Darling旧树中的Skywalk文件只有许可证文本。本次从Apple公开XNU固定提交f6217f891ac0bb64f3d375211650a4c1ff8ca1ea复用完整2369行os_channel.c、Intel校验和汇编及17个实际依赖的私有头。20份源/头文件与上游逐字节相同，映射及摘要保存在upstream-files.json。按Apple安装布局展开Skywalk头；补入现代SDK与旧私有支持头之间的编译声明/注解兼容范围，未改通道算法。
+
+独立内核构建器用显式--skywalk-client选项编译这些源，并为该组件限定现代SDK/私有头范围；没有全局更换旧SDK头。常规旧Darling CMake源列表与此独立研究构建仍然分开。首次完整构建因新增后端文件缺少string/strings声明而失败，修正后889单元构建通过；前置编译尝试、错误和编译命令均保留。
+
+原生测试实际分配、设置、读取和克隆通道属性，检查独立克隆、只读/无效属性错误及非法方向；并执行16400组不同长度、对齐、初始和的实际内存复制与独立校验和比较，边界字节保持原值。Linux没有Darwin Skywalk内核通道/共享映射后端，四个后端操作明确ENOTSUP，创建没有伪造有效描述符或网络传输。未验证实际内核环映射及收发，不将其作为已实现能力。
+
+对先前缺口只复核变化后的宿主导出，14个名字均已提供，没有再次扫描2609个未修改镜像。原版ibtool随后不再打印缺符号错误，但仍以255提前退出、没有Storyboard产品；报告runtime/original-storyboard-jyxjhp56/result.json。初始化诊断runtime/original-storyboard-sx23h6_8/result.json同样失败，接下来捕获原版代理退出位置。完整Unity App仍未完成，默认安装环境未提升。
+
+源码已推到kxn/darling-xnu原有linuxcode/xcode-x86_64分支，身份Comman Kang <kangxn@gmail.com>。开发者继续需要自行提供的Xcode/SDK/运行时；这里仅附UTF-8源码、日志、报告和摘要，不含Apple/Unity二进制、SDK、XIP、core或私钥。

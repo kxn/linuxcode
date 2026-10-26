@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/7f0f54246e7c5b8f514dd0bd6d19df982643f5b22ec8972355a2508fdffe6b6a",
+  "original_sha256": "7f0f54246e7c5b8f514dd0bd6d19df982643f5b22ec8972355a2508fdffe6b6a",
+  "encoding": "utf-8",
+  "text": "#include <errno.h>\n#include <skywalk/os_skywalk_private.h>\n\n/* Real user-space channel/attribute/ring logic is supplied by os_channel.c.\n * Linux has no Darwin Skywalk channel transport or shared schema mapping.\n * Fail creation and kernel operations explicitly instead of fabricating a\n * descriptor, ring mapping, completion or packet transfer. */\nint __channel_open(struct ch_init *init, const uint32_t length)\n{\n    (void)init; (void)length; errno = ENOTSUP; return -1;\n}\nint __channel_get_info(int fd, struct ch_info *info, const uint32_t length)\n{\n    (void)fd; (void)info; (void)length; errno = ENOTSUP; return -1;\n}\nint __channel_sync(int fd, const int mode, const sync_flags_t flags)\n{\n    (void)fd; (void)mode; (void)flags; errno = ENOTSUP; return -1;\n}\nint __channel_set_opt(int fd, const uint32_t option, const void *value, const uint32_t length)\n{\n    (void)fd; (void)option; (void)value; (void)length; errno = ENOTSUP; return -1;\n}\n"
+}
