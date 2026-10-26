@@ -1,0 +1,42 @@
+{
+  "name": "native-mach-eventlink",
+  "payload": [
+    "vendor/darlingserver/scripts/generate-rpc-wrappers.py",
+    "vendor/darlingserver/src/call.cpp",
+    "vendor/darlingserver/duct-tape/CMakeLists.txt",
+    "vendor/darlingserver/duct-tape/include/darlingserver/duct-tape.h",
+    "vendor/darlingserver/duct-tape/src/eventlink.c",
+    "vendor/darlingserver/duct-tape/src/init.c",
+    "vendor/darlingserver/duct-tape/src/thread.c",
+    "vendor/darlingserver/duct-tape/xnu/osfmk/ipc/ipc_eventlink.c",
+    "vendor/darling/src/external/xnu/libsyscall/CMakeLists.txt",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/CMakeLists.txt",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/bsd_syscall_table.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/eventlink.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/misc/eventlink.h",
+    "scripts/stage-audit-session-runtime.py",
+    "scripts/probe-mach-eventlink.py",
+    "fixtures/hello/mach-eventlink.c"
+  ],
+  "reference": [
+    "artifacts/native-eventlink-darlingserver-source-publication-v1.json",
+    "artifacts/native-eventlink-darling-xnu-source-publication-v1.json",
+    "artifacts/eventlink-kernel-v1-build.json",
+    "runtime/simulator-signature-server-8esrcoig/stage.json",
+    "runtime/simulator-signature-server-64nin6lu/stage.json",
+    "runtime/simulator-signature-server-5h75glf6/stage.json",
+    "runtime/mach-eventlink-64zc2_vo/result.json",
+    "runtime/mach-eventlink-ho91jsnp/result.json",
+    "runtime/mach-eventlink-vhwb23m7/result.json",
+    "logs/eventlink-server-fault-v1-core82.gdb.log",
+    "logs/eventlink-server-fault-v2.gdb.log",
+    "logs/mach-eventlink-native-v1-driver.log",
+    "logs/mach-eventlink-native-v4-driver.log",
+    "logs/eventlink-kernel-v1-driver.log",
+    "config/direct-resource-tool-environment-v150.json",
+    "runtime/original-storyboard-h0v8iy3v/result.json",
+    "artifacts/private-procfs-auditsession39-stage.json",
+    "artifacts/private-procfs-auditsession40-stage.json",
+    "artifacts/private-procfs-auditsession41-stage.json"
+  ]
+}
