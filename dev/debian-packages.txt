@@ -11,13 +11,14 @@ bison
 flex
 m4
 pkg-config
+# Source darlingserver simulator signature registration uses OpenSSL::Crypto.
+libssl-dev
 git
 python3
 python3-venv
 ca-certificates
 file
-# Optional Linux zsign backend build dependencies:
-libssl-dev
+# Optional Linux zsign backend compression dependencies:
 zlib1g-dev
 libzstd-dev
 

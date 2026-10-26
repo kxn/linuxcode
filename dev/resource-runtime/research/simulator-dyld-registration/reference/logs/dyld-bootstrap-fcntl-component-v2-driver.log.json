@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/dyld-bootstrap-fcntl-component-v2-driver.log",
+  "original_sha256": "91e5e90a54774c73e1a6054649202846237452a7cc018e34254709004168bb8a",
+  "encoding": "utf-8",
+  "text": "ld64.lld-19: warning: cannot export hidden symbol _sys_fcntl_nocancel\n>>> defined in /home/dl/linuxcode/runtime/simulator-signature-kernel-v1/objects/668-fcntl.o\nTraceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/build-dyld-bootstrap-fcntl.py\", line 76, in <module>\n    before=bytes(thin[oldfile:oldfile+5]);assert before==bytes.fromhex('554889e541'),before.hex()\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 554889e548\n"
+}

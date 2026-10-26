@@ -1,0 +1,515 @@
+{
+  "verified": true,
+  "source": "runtime/fullsystem-libraries/usr/lib/dyld",
+  "source_sha256": "1ca4839c15d0a2980e57f295325b4685aa5ef418bd8a3ae21bff51f3d83e9329",
+  "table_vm_addresses": [
+    "0x7ff802b42130",
+    "0x7ff802b42b40"
+  ],
+  "table_sha256": "6d57af29678d6b08e49ff1eb4fbb68dda91f3882596121c98a35d4a22264fe08",
+  "table_stride": 40,
+  "table_entries": 61,
+  "two_compiled_tables_byte_equal": true,
+  "mapper_disassembly": "\nruntime/fullsystem-libraries/usr/lib/dyld:\tfile format mach-o 64-bit x86-64\n\nDisassembly of section __TEXT,__text:\n\n00007ff802ab38b4 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE>:\n7ff802ab38b4: 48 89 f1                 \tmovq\t%rsi, %rcx\n7ff802ab38b7: 48 c1 e9 20              \tshrq\t$0x20, %rcx\n7ff802ab38bb: 83 fe ff                 \tcmpl\t$-0x1, %esi\n7ff802ab38be: 0f 85 0f 01 00 00        \tjne\t0x7ff802ab39d3 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x11f>\n7ff802ab38c4: 55                       \tpushq\t%rbp\n7ff802ab38c5: 48 89 e5                 \tmovq\t%rsp, %rbp\n7ff802ab38c8: 41 57                    \tpushq\t%r15\n7ff802ab38ca: 41 56                    \tpushq\t%r14\n7ff802ab38cc: 41 54                    \tpushq\t%r12\n7ff802ab38ce: 53                       \tpushq\t%rbx\n7ff802ab38cf: 48 83 ec 10              \tsubq\t$0x10, %rsp\n7ff802ab38d3: 48 89 d3                 \tmovq\t%rdx, %rbx\n7ff802ab38d6: 45 31 ff                 \txorl\t%r15d, %r15d\n7ff802ab38d9: 4c 8d 25 50 e8 08 00     \tleaq\t0x8e850(%rip), %r12     ## 0x7ff802b42130 <__ZN5dyld3L11sVersionMapE>\n7ff802ab38e0: 43 39 0c 27              \tcmpl\t%ecx, (%r15,%r12)\n7ff802ab38e4: 73 16                    \tjae\t0x7ff802ab38fc <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x48>\n7ff802ab38e6: 49 83 c7 28              \taddq\t$0x28, %r15\n7ff802ab38ea: 49 81 ff 88 09 00 00     \tcmpq\t$0x988, %r15            ## imm = 0x988\n7ff802ab38f1: 75 ed                    \tjne\t0x7ff802ab38e0 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x2c>\n7ff802ab38f3: 31 f6                    \txorl\t%esi, %esi\n7ff802ab38f5: 31 c9                    \txorl\t%ecx, %ecx\n7ff802ab38f7: e9 cb 00 00 00           \tjmp\t0x7ff802ab39c7 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x113>\n7ff802ab38fc: 4c 8d 75 d0              \tleaq\t-0x30(%rbp), %r14\n7ff802ab3900: 4c 89 f7                 \tmovq\t%r14, %rdi\n7ff802ab3903: 48 89 de                 \tmovq\t%rbx, %rsi\n7ff802ab3906: e8 1d 15 08 00           \tcallq\t0x7ff802b34e28 <__ZNK6mach_o8Platform12basePlatformEv>\n7ff802ab390b: 49 8b 0e                 \tmovq\t(%r14), %rcx\n7ff802ab390e: 48 89 0b                 \tmovq\t%rcx, (%rbx)\n7ff802ab3911: 41 8b 46 08              \tmovl\t0x8(%r14), %eax\n7ff802ab3915: 89 43 08                 \tmovl\t%eax, 0x8(%rbx)\n7ff802ab3918: 48 3b 0d 29 fe 5a 3d     \tcmpq\t0x3d5afe29(%rip), %rcx  ## 0x7ff840063748 <__ZN6mach_o8Platform5macOSE>\n7ff802ab391f: 75 17                    \tjne\t0x7ff802ab3938 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x84>\n7ff802ab3921: 3b 05 29 fe 5a 3d        \tcmpl\t0x3d5afe29(%rip), %eax  ## 0x7ff840063750 <__ZN6mach_o8Platform5macOSE+0x8>\n7ff802ab3927: 75 0f                    \tjne\t0x7ff802ab3938 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x84>\n7ff802ab3929: 43 8b 4c 27 04           \tmovl\t0x4(%r15,%r12), %ecx\n7ff802ab392e: be 01 00 00 00           \tmovl\t$0x1, %esi\n7ff802ab3933: e9 8f 00 00 00           \tjmp\t0x7ff802ab39c7 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x113>\n7ff802ab3938: 48 3b 0d 19 fe 5a 3d     \tcmpq\t0x3d5afe19(%rip), %rcx  ## 0x7ff840063758 <__ZN6mach_o8Platform3iOSE>\n7ff802ab393f: 75 14                    \tjne\t0x7ff802ab3955 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xa1>\n7ff802ab3941: 3b 05 19 fe 5a 3d        \tcmpl\t0x3d5afe19(%rip), %eax  ## 0x7ff840063760 <__ZN6mach_o8Platform3iOSE+0x8>\n7ff802ab3947: 75 0c                    \tjne\t0x7ff802ab3955 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xa1>\n7ff802ab3949: 43 8b 4c 27 08           \tmovl\t0x8(%r15,%r12), %ecx\n7ff802ab394e: be 02 00 00 00           \tmovl\t$0x2, %esi\n7ff802ab3953: eb 72                    \tjmp\t0x7ff802ab39c7 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x113>\n7ff802ab3955: 48 3b 0d 1c fe 5a 3d     \tcmpq\t0x3d5afe1c(%rip), %rcx  ## 0x7ff840063778 <__ZN6mach_o8Platform7watchOSE>\n7ff802ab395c: 75 14                    \tjne\t0x7ff802ab3972 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xbe>\n7ff802ab395e: 3b 05 1c fe 5a 3d        \tcmpl\t0x3d5afe1c(%rip), %eax  ## 0x7ff840063780 <__ZN6mach_o8Platform7watchOSE+0x8>\n7ff802ab3964: 75 0c                    \tjne\t0x7ff802ab3972 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xbe>\n7ff802ab3966: 43 8b 4c 27 0c           \tmovl\t0xc(%r15,%r12), %ecx\n7ff802ab396b: be 04 00 00 00           \tmovl\t$0x4, %esi\n7ff802ab3970: eb 55                    \tjmp\t0x7ff802ab39c7 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x113>\n7ff802ab3972: 48 3b 0d ef fd 5a 3d     \tcmpq\t0x3d5afdef(%rip), %rcx  ## 0x7ff840063768 <__ZN6mach_o8Platform4tvOSE>\n7ff802ab3979: 75 14                    \tjne\t0x7ff802ab398f <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xdb>\n7ff802ab397b: 3b 05 ef fd 5a 3d        \tcmpl\t0x3d5afdef(%rip), %eax  ## 0x7ff840063770 <__ZN6mach_o8Platform4tvOSE+0x8>\n7ff802ab3981: 75 0c                    \tjne\t0x7ff802ab398f <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xdb>\n7ff802ab3983: 43 8b 4c 27 10           \tmovl\t0x10(%r15,%r12), %ecx\n7ff802ab3988: be 03 00 00 00           \tmovl\t$0x3, %esi\n7ff802ab398d: eb 38                    \tjmp\t0x7ff802ab39c7 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x113>\n7ff802ab398f: 48 3b 0d f2 fd 5a 3d     \tcmpq\t0x3d5afdf2(%rip), %rcx  ## 0x7ff840063788 <__ZN6mach_o8Platform8bridgeOSE>\n7ff802ab3996: 75 14                    \tjne\t0x7ff802ab39ac <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xf8>\n7ff802ab3998: 3b 05 f2 fd 5a 3d        \tcmpl\t0x3d5afdf2(%rip), %eax  ## 0x7ff840063790 <__ZN6mach_o8Platform8bridgeOSE+0x8>\n7ff802ab399e: 75 0c                    \tjne\t0x7ff802ab39ac <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0xf8>\n7ff802ab39a0: 43 8b 4c 27 14           \tmovl\t0x14(%r15,%r12), %ecx\n7ff802ab39a5: be 05 00 00 00           \tmovl\t$0x5, %esi\n7ff802ab39aa: eb 1b                    \tjmp\t0x7ff802ab39c7 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x113>\n7ff802ab39ac: 48 3b 0d 35 fe 5a 3d     \tcmpq\t0x3d5afe35(%rip), %rcx  ## 0x7ff8400637e8 <__ZN6mach_o8Platform8visionOSE>\n7ff802ab39b3: 75 28                    \tjne\t0x7ff802ab39dd <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x129>\n7ff802ab39b5: 3b 05 35 fe 5a 3d        \tcmpl\t0x3d5afe35(%rip), %eax  ## 0x7ff8400637f0 <__ZN6mach_o8Platform8visionOSE+0x8>\n7ff802ab39bb: 75 20                    \tjne\t0x7ff802ab39dd <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x129>\n7ff802ab39bd: 43 8b 4c 27 1c           \tmovl\t0x1c(%r15,%r12), %ecx\n7ff802ab39c2: be 0b 00 00 00           \tmovl\t$0xb, %esi\n7ff802ab39c7: 48 83 c4 10              \taddq\t$0x10, %rsp\n7ff802ab39cb: 5b                       \tpopq\t%rbx\n7ff802ab39cc: 41 5c                    \tpopq\t%r12\n7ff802ab39ce: 41 5e                    \tpopq\t%r14\n7ff802ab39d0: 41 5f                    \tpopq\t%r15\n7ff802ab39d2: 5d                       \tpopq\t%rbp\n7ff802ab39d3: 48 c1 e1 20              \tshlq\t$0x20, %rcx\n7ff802ab39d7: 89 f0                    \tmovl\t%esi, %eax\n7ff802ab39d9: 48 09 c8                 \torq\t%rcx, %rax\n7ff802ab39dc: c3                       \tretq\n7ff802ab39dd: 48 89 df                 \tmovq\t%rbx, %rdi\n7ff802ab39e0: e8 65 15 08 00           \tcallq\t0x7ff802b34f4a <__ZNK6mach_o8Platform5valueEv>\n7ff802ab39e5: 89 c6                    \tmovl\t%eax, %esi\n7ff802ab39e7: e9 09 ff ff ff           \tjmp\t0x7ff802ab38f5 <__ZN5dyld44APIs17mapFromVersionSetE20dyld_build_version_tN6mach_o8PlatformE+0x41>\n",
+  "platform_order_confirmed_by_mapper": [
+    "macos",
+    "ios",
+    "watchos",
+    "tvos",
+    "bridgeos"
+  ],
+  "rows": [
+    {
+      "set": 131795201,
+      "macos": 657152,
+      "ios": 327680,
+      "watchos": 0,
+      "tvos": 0,
+      "bridgeos": 0
+    },
+    {
+      "set": 131860737,
+      "macos": 657408,
+      "ios": 393216,
+      "watchos": 0,
+      "tvos": 0,
+      "bridgeos": 0
+    },
+    {
+      "set": 131926273,
+      "macos": 657664,
+      "ios": 458752,
+      "watchos": 0,
+      "tvos": 0,
+      "bridgeos": 0
+    },
+    {
+      "set": 131991809,
+      "macos": 657920,
+      "ios": 524288,
+      "watchos": 0,
+      "tvos": 0,
+      "bridgeos": 0
+    },
+    {
+      "set": 132057345,
+      "macos": 658176,
+      "ios": 589824,
+      "watchos": 131072,
+      "tvos": 589824,
+      "bridgeos": 0
+    },
+    {
+      "set": 132122881,
+      "macos": 658432,
+      "ios": 655360,
+      "watchos": 196608,
+      "tvos": 655360,
+      "bridgeos": 0
+    },
+    {
+      "set": 132188417,
+      "macos": 658688,
+      "ios": 720896,
+      "watchos": 262144,
+      "tvos": 720896,
+      "bridgeos": 131072
+    },
+    {
+      "set": 132190721,
+      "macos": 658690,
+      "ios": 721408,
+      "watchos": 262656,
+      "tvos": 721408,
+      "bridgeos": 131072
+    },
+    {
+      "set": 132252417,
+      "macos": 658692,
+      "ios": 721664,
+      "watchos": 262912,
+      "tvos": 721664,
+      "bridgeos": 131072
+    },
+    {
+      "set": 132253953,
+      "macos": 658944,
+      "ios": 786432,
+      "watchos": 327680,
+      "tvos": 786432,
+      "bridgeos": 196608
+    },
+    {
+      "set": 132255765,
+      "macos": 658945,
+      "ios": 786688,
+      "watchos": 327936,
+      "tvos": 786688,
+      "bridgeos": 196864
+    },
+    {
+      "set": 132317953,
+      "macos": 658948,
+      "ios": 786944,
+      "watchos": 328192,
+      "tvos": 786944,
+      "bridgeos": 197632
+    },
+    {
+      "set": 132318721,
+      "macos": 658949,
+      "ios": 787200,
+      "watchos": 328192,
+      "tvos": 787200,
+      "bridgeos": 197632
+    },
+    {
+      "set": 132318997,
+      "macos": 658950,
+      "ios": 787456,
+      "watchos": 328448,
+      "tvos": 787456,
+      "bridgeos": 197632
+    },
+    {
+      "set": 132319489,
+      "macos": 659200,
+      "ios": 851968,
+      "watchos": 393216,
+      "tvos": 851968,
+      "bridgeos": 262144
+    },
+    {
+      "set": 132319490,
+      "macos": 659200,
+      "ios": 852224,
+      "watchos": 393216,
+      "tvos": 851968,
+      "bridgeos": 262144
+    },
+    {
+      "set": 132321301,
+      "macos": 659201,
+      "ios": 852480,
+      "watchos": 393472,
+      "tvos": 852480,
+      "bridgeos": 262400
+    },
+    {
+      "set": 132321793,
+      "macos": 659201,
+      "ios": 852736,
+      "watchos": 393472,
+      "tvos": 852736,
+      "bridgeos": 262400
+    },
+    {
+      "set": 132383489,
+      "macos": 659204,
+      "ios": 852992,
+      "watchos": 393728,
+      "tvos": 852992,
+      "bridgeos": 262400
+    },
+    {
+      "set": 132383765,
+      "macos": 659204,
+      "ios": 853248,
+      "watchos": 393728,
+      "tvos": 852992,
+      "bridgeos": 262400
+    },
+    {
+      "set": 132384257,
+      "macos": 659204,
+      "ios": 853504,
+      "watchos": 393728,
+      "tvos": 852992,
+      "bridgeos": 262400
+    },
+    {
+      "set": 132384533,
+      "macos": 659204,
+      "ios": 853760,
+      "watchos": 393728,
+      "tvos": 852992,
+      "bridgeos": 262400
+    },
+    {
+      "set": 132385025,
+      "macos": 659456,
+      "ios": 917504,
+      "watchos": 458752,
+      "tvos": 917504,
+      "bridgeos": 327680
+    },
+    {
+      "set": 132386837,
+      "macos": 659456,
+      "ios": 918016,
+      "watchos": 459008,
+      "tvos": 918016,
+      "bridgeos": 327680
+    },
+    {
+      "set": 132387329,
+      "macos": 721152,
+      "ios": 918272,
+      "watchos": 459264,
+      "tvos": 918272,
+      "bridgeos": 327936
+    },
+    {
+      "set": 132449025,
+      "macos": 721664,
+      "ios": 918784,
+      "watchos": 459776,
+      "tvos": 918784,
+      "bridgeos": 328448
+    },
+    {
+      "set": 132450561,
+      "macos": 786432,
+      "ios": 983040,
+      "watchos": 524288,
+      "tvos": 983040,
+      "bridgeos": 393216
+    },
+    {
+      "set": 132452373,
+      "macos": 786432,
+      "ios": 983296,
+      "watchos": 524544,
+      "tvos": 983296,
+      "bridgeos": 393216
+    },
+    {
+      "set": 132452865,
+      "macos": 786688,
+      "ios": 983552,
+      "watchos": 525056,
+      "tvos": 983552,
+      "bridgeos": 393728
+    },
+    {
+      "set": 132452885,
+      "macos": 786944,
+      "ios": 983808,
+      "watchos": 525312,
+      "tvos": 983808,
+      "bridgeos": 393728
+    },
+    {
+      "set": 132514561,
+      "macos": 787200,
+      "ios": 984064,
+      "watchos": 525568,
+      "tvos": 984064,
+      "bridgeos": 394240
+    },
+    {
+      "set": 132514831,
+      "macos": 787456,
+      "ios": 984320,
+      "watchos": 525824,
+      "tvos": 984320,
+      "bridgeos": 394496
+    },
+    {
+      "set": 132515329,
+      "macos": 787712,
+      "ios": 984576,
+      "watchos": 526080,
+      "tvos": 984576,
+      "bridgeos": 394752
+    },
+    {
+      "set": 132516097,
+      "macos": 851968,
+      "ios": 1048576,
+      "watchos": 589824,
+      "tvos": 1048576,
+      "bridgeos": 458752
+    },
+    {
+      "set": 132517909,
+      "macos": 852224,
+      "ios": 1048832,
+      "watchos": 590080,
+      "tvos": 1048832,
+      "bridgeos": 459008
+    },
+    {
+      "set": 132522240,
+      "macos": 852224,
+      "ios": 1049088,
+      "watchos": 590336,
+      "tvos": 1049088,
+      "bridgeos": 459008
+    },
+    {
+      "set": 132522496,
+      "macos": 852480,
+      "ios": 1049344,
+      "watchos": 590592,
+      "tvos": 1049344,
+      "bridgeos": 459264
+    },
+    {
+      "set": 132522752,
+      "macos": 852736,
+      "ios": 1049600,
+      "watchos": 590848,
+      "tvos": 1049600,
+      "bridgeos": 459520
+    },
+    {
+      "set": 132523008,
+      "macos": 852992,
+      "ios": 1049856,
+      "watchos": 591104,
+      "tvos": 1049856,
+      "bridgeos": 459776
+    },
+    {
+      "set": 132523264,
+      "macos": 853760,
+      "ios": 1050368,
+      "watchos": 591360,
+      "tvos": 1050112,
+      "bridgeos": 460288
+    },
+    {
+      "set": 132581633,
+      "macos": 917504,
+      "ios": 1114112,
+      "watchos": 655360,
+      "tvos": 1114112,
+      "bridgeos": 524288
+    },
+    {
+      "set": 132582401,
+      "macos": 917760,
+      "ios": 1114368,
+      "watchos": 655616,
+      "tvos": 1114368,
+      "bridgeos": 524544
+    },
+    {
+      "set": 132582657,
+      "macos": 918016,
+      "ios": 1114624,
+      "watchos": 655872,
+      "tvos": 1114624,
+      "bridgeos": 524800
+    },
+    {
+      "set": 132582913,
+      "macos": 918272,
+      "ios": 1114880,
+      "watchos": 656128,
+      "tvos": 1114880,
+      "bridgeos": 525056
+    },
+    {
+      "set": 132583169,
+      "macos": 918528,
+      "ios": 1115136,
+      "watchos": 656384,
+      "tvos": 1115136,
+      "bridgeos": 525312
+    },
+    {
+      "set": 132583425,
+      "macos": 918784,
+      "ios": 1115392,
+      "watchos": 656640,
+      "tvos": 1115392,
+      "bridgeos": 525568
+    },
+    {
+      "set": 132583681,
+      "macos": 919296,
+      "ios": 1115904,
+      "watchos": 657152,
+      "tvos": 1115648,
+      "bridgeos": 525824
+    },
+    {
+      "set": 132644864,
+      "macos": 983040,
+      "ios": 1179648,
+      "watchos": 720896,
+      "tvos": 1179648,
+      "bridgeos": 589824
+    },
+    {
+      "set": 132645120,
+      "macos": 983296,
+      "ios": 1179904,
+      "watchos": 721152,
+      "tvos": 1179904,
+      "bridgeos": 590080
+    },
+    {
+      "set": 132645376,
+      "macos": 983552,
+      "ios": 1180160,
+      "watchos": 721408,
+      "tvos": 1180160,
+      "bridgeos": 590336
+    },
+    {
+      "set": 132645632,
+      "macos": 983808,
+      "ios": 1180416,
+      "watchos": 721664,
+      "tvos": 1180416,
+      "bridgeos": 590592
+    },
+    {
+      "set": 132645888,
+      "macos": 984064,
+      "ios": 1180672,
+      "watchos": 721920,
+      "tvos": 1180672,
+      "bridgeos": 590848
+    },
+    {
+      "set": 132646144,
+      "macos": 984320,
+      "ios": 1180928,
+      "watchos": 722176,
+      "tvos": 1180928,
+      "bridgeos": 591104
+    },
+    {
+      "set": 132646400,
+      "macos": 984576,
+      "ios": 1181184,
+      "watchos": 722432,
+      "tvos": 1181184,
+      "bridgeos": 591360
+    },
+    {
+      "set": 132710400,
+      "macos": 1048576,
+      "ios": 1245184,
+      "watchos": 786432,
+      "tvos": 1245184,
+      "bridgeos": 655360
+    },
+    {
+      "set": 132710656,
+      "macos": 1704192,
+      "ios": 1704192,
+      "watchos": 1704192,
+      "tvos": 1704192,
+      "bridgeos": 655616
+    },
+    {
+      "set": 132710912,
+      "macos": 1704448,
+      "ios": 1704448,
+      "watchos": 1704448,
+      "tvos": 1704448,
+      "bridgeos": 655872
+    },
+    {
+      "set": 132711168,
+      "macos": 1704704,
+      "ios": 1704704,
+      "watchos": 1704704,
+      "tvos": 1704704,
+      "bridgeos": 656128
+    },
+    {
+      "set": 132711424,
+      "macos": 1704960,
+      "ios": 1704960,
+      "watchos": 1704960,
+      "tvos": 1704960,
+      "bridgeos": 656384
+    },
+    {
+      "set": 132711680,
+      "macos": 1705216,
+      "ios": 1705216,
+      "watchos": 1705216,
+      "tvos": 1705216,
+      "bridgeos": 1705216
+    },
+    {
+      "set": 132711936,
+      "macos": 1705472,
+      "ios": 1705472,
+      "watchos": 1705472,
+      "tvos": 1705472,
+      "bridgeos": 656896
+    }
+  ],
+  "output": "vendor/darling/src/external/dyld/dyld3/DarlingVersionMap.h",
+  "output_sha256": "311bfef8872157151e67d631d1ca22a3865f0400c630326d7361feecae4eade9",
+  "metadata_only": true,
+  "full_goal_complete": false
+}

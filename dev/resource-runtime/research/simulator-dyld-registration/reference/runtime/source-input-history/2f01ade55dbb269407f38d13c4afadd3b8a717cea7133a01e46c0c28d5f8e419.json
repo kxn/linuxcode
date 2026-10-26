@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/2f01ade55dbb269407f38d13c4afadd3b8a717cea7133a01e46c0c28d5f8e419",
+  "original_sha256": "2f01ade55dbb269407f38d13c4afadd3b8a717cea7133a01e46c0c28d5f8e419",
+  "encoding": "utf-8",
+  "text": "#include <errno.h>\n#include <fcntl.h>\n#include <mach-o/dyld_images.h>\n#include <stdarg.h>\n#include <stdint.h>\n#include <stdio.h>\nextern const struct dyld_all_image_infos* _dyld_get_all_image_infos(void);\n\nstatic int bootstrap_fcntl(int fd,int command,...) {\n    const struct dyld_all_image_infos* images=_dyld_get_all_image_infos();\n    const unsigned char* loader=(const unsigned char*)images->dyldImageLoadAddress;\n    if(!loader || *(const uint32_t*)loader!=0xfeedfacf){errno=ENOEXEC;return -1;}\n    // This private source component is pinned to the packaged Intel loader.\n    // Its fcntl syscall entry remains at the original address, 0xf3390.\n    long (*entry)(int,int,long)=(void*)(loader+0xf3390);\n    va_list args;va_start(args,command);void* input=va_arg(args,void*);va_end(args);\n    long result=entry(fd,command,(long)input);\n    printf(\"BOOTSTRAP_STATIC_FCNTL_ACTIVE command=%d result=%ld\\n\",command,result);\n    if(result<0){errno=-result;return -1;}return result;\n}\n#define fcntl bootstrap_fcntl\n#include \"simulator-dyld-signature-native.c\"\n"
+}
