@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession55-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": null,
+  "stage": "artifacts/private-procfs-auditsession55-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/direct-kevent-ibagent-fault-v1/probe.log": "dd024e693245e48315d1624ccac6c45f46c72e3edddf386cc396c8ee434dbba8"
+  },
+  "tool_sha256": "722d0ce50f62ed7ef88ddb6db0c186ff55465cc20dc4e7277126d4f45644f1e1",
+  "full_goal_complete": false
+}

@@ -1,0 +1,422 @@
+#include <darling/emulation/xnu_syscall/bsd/impl/bsdthread/workq_kernreturn.h>
+
+#include <sys/errno.h>
+#include <darling/emulation/common/tsd.h>
+#include <stddef.h>
+#include <sys/queue.h>
+#include <libsimple/lock.h>
+#include <pthread/tsd_private.h>
+
+#define __PTHREAD_EXPOSE_INTERNALS__ 1
+#include <pthread/priority_private.h>
+
+#include <darling/emulation/xnu_syscall/bsd/impl/bsdthread/bsdthread_register.h>
+#include <darling/emulation/xnu_syscall/bsd/impl/bsdthread/bsdthread_create.h>
+#include <darling/emulation/common/base.h>
+#include <darling/emulation/conversion/errno.h>
+#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>
+#include <darling/emulation/linux_premigration/ext/futex.h>
+#include <darling/emulation/common/simple.h>
+#include <darling/emulation/xnu_syscall/machdep/impl/tls.h>
+#include <darling/emulation/xnu_syscall/mach/impl/mach_traps.h>
+#include <darling/emulation/common/guarded/table.h>
+#include <darling/emulation/linux_premigration/elfcalls_wrapper.h>
+
+#include <elfcalls/threads.h>
+#include <darlingserver/rpc.h>
+
+// much easier to include than libpthread's `internal.h`
+#include <darling/mldr/elfcalls/dthreads.h>
+
+#define WQ_MAX_THREADS	64
+
+#define WQOPS_QUEUE_ADD 1
+#define WQOPS_QUEUE_REMOVE 2
+#define WQOPS_THREAD_RETURN 4
+#define WQOPS_THREAD_SETCONC  8
+#define WQOPS_THREAD_KEVENT_RETURN 0x40
+#define WQOPS_QUEUE_NEWSPISUPP  0x10
+#define WQOPS_QUEUE_REQTHREADS  0x20
+#define WQOPS_QUEUE_REQTHREADS2    0x30
+#define WQOPS_SET_EVENT_MANAGER_PRIORITY 0x80
+#define WQOPS_SETUP_DISPATCH 0x400
+
+// Flags for the newly spawned thread:
+// WQ_FLAG_THREAD_NEWSPI
+// WQ_FLAG_THREAD_REUSE (0 if thread is newly spawned)
+// item is unused in "new SPI"
+
+#define WQ_FLAG_THREAD_PRIO_SCHED    0x00008000
+#define WQ_FLAG_THREAD_PRIO_QOS      0x00004000
+#define WQ_FLAG_THREAD_PRIO_MASK     0x00000fff
+
+#define WQ_FLAG_THREAD_OVERCOMMIT    0x00010000
+#define WQ_FLAG_THREAD_REUSE         0x00020000
+#define WQ_FLAG_THREAD_NEWSPI        0x00040000
+#define WQ_FLAG_THREAD_KEVENT        0x00080000
+#define WQ_FLAG_THREAD_EVENT_MANAGER 0x00100000
+#define WQ_FLAG_THREAD_TSD_BASE_SET  0x00200000
+#define WQ_FLAG_THREAD_WORKLOOP      0x00400000
+#define WQ_FLAG_THREAD_OUTSIDEQOS    0x00800000
+#define WQ_FLAG_THREAD_COOPERATIVE   0x01000000
+
+#define WORKQ_EXIT_THREAD_NKEVENT (-1)
+
+static int workq_sem = WQ_MAX_THREADS; // max 64 threads in use
+static libsimple_lock_t workq_parked_lock = LIBSIMPLE_LOCK_INITIALIZER;
+// static int workq_parked_threads = 0; // num spawned, but unused threads
+static int workq_parked[WQ_MAX_THREADS];
+static int workq_parked_prio[WQ_MAX_THREADS];
+
+TAILQ_HEAD(tailhead, parked_thread) workq_parked_head = TAILQ_HEAD_INITIALIZER(workq_parked_head);
+
+struct parked_thread
+{
+	int sem, flags;
+	struct wq_kevent_data* event;
+	TAILQ_ENTRY(parked_thread) entries;
+};
+
+static void list_add(struct parked_thread* head, struct parked_thread* item);
+static void list_remove(struct parked_thread* head, struct parked_thread* item);
+
+struct timespec
+{
+	long tv_sec;
+	long tv_nsec;
+};
+
+/* Kernel emulation must not export public libplatform lock names. Empty weak
+ * definitions can interpose on simulator imports and silently omit unlocks.
+ * These internal locks use the dependency-free Linux futex primitive instead.
+ */
+
+//void* __attribute__((weak)) __attribute__((visibility("default"))) pthread_getspecific(unsigned long key) { return NULL; }
+//int __attribute__((weak)) __attribute__((visibility("default"))) pthread_setspecific(unsigned long key, const void* value) { return 1; }
+
+static int priority_to_class(int prio);
+
+// This is horrible, but it may work
+static struct wq_kevent_data* workq_event_pending(void) {
+	return _pthread_getspecific_direct(__PTK_DARLING_WORKQ_EVENT);
+}
+
+void workq_set_event_pending(struct wq_kevent_data* event) {
+	_pthread_setspecific_direct(__PTK_DARLING_WORKQ_EVENT, event);
+}
+
+static void rpc_guard(int fd) {
+	guard_entry_options_t options;
+	options.close = __dserver_close_socket;
+	guard_table_add(fd, guard_flag_prevent_close | guard_flag_close_on_fork, &options);
+};
+
+static void rpc_unguard(int fd) {
+	guard_table_remove(fd);
+};
+
+static const struct darling_thread_create_callbacks callbacks = {
+	.thread_self_trap = &thread_self_trap_impl,
+	.thread_set_tsd_base = &sys_thread_set_tsd_base,
+	.rpc_guard = rpc_guard,
+	.rpc_unguard = rpc_unguard,
+};
+
+static int extract_wq_flags(int priority) {
+	int flags = 0;
+	int qos = _pthread_priority_thread_qos(priority);
+
+	flags = WQ_FLAG_THREAD_NEWSPI | qos | WQ_FLAG_THREAD_PRIO_QOS;
+
+	if (priority & _PTHREAD_PRIORITY_OVERCOMMIT_FLAG) {
+		flags |= WQ_FLAG_THREAD_OVERCOMMIT;
+	}
+
+	return flags;
+};
+
+long sys_workq_kernreturn(int options, void* item, int affinity, int prio)
+{
+#ifndef VARIANT_DYLD
+	struct wq_kevent_data* wq_event = NULL;
+	
+	// __simple_printf("workq_kernreturn: 0x%x, %p, 0x%x, 0x%x\n", options, item, affinity, prio);
+
+	// item is only used with WQOPS_QUEUE_ADD
+	switch (options)
+	{
+		case WQOPS_THREAD_KEVENT_RETURN:
+		{
+			struct kevent_qos_s* keventlist = item;
+			int nkevents = affinity;
+			
+			// __simple_printf("kevent return, obj=%p, nkevents=%d\n", wq_event, nkevents);
+
+			struct wq_kevent_data* pending = workq_event_pending();
+			if (pending != NULL)
+			{
+				int result = nkevents;
+				if (nkevents < 0 || nkevents > pending->capacity || (nkevents && !keventlist)) {
+					result = -EINVAL;
+				} else if (nkevents > 0) {
+					memmove(pending->events, keventlist, nkevents * sizeof(struct kevent_qos_s));
+				}
+				pending->nevents = result;
+				workq_set_event_pending(NULL);
+				sem_up(&pending->sem);
+			}
+			else
+				__simple_printf("wq_event is NULL, something is going to get stuck forever\n");
+		}
+		case WQOPS_THREAD_RETURN:
+		{
+			// Signalizes that the thread has completed its job
+			// and can be either recycled or terminated
+
+			int thread_self;
+			struct parked_thread me;
+			dthread_t dthread;
+			bool terminating = false;
+
+			libsimple_lock_lock(&workq_parked_lock);
+
+			// Semaphore locked state (wait for wakeup)
+			me.sem = 0;
+			me.event = NULL;
+
+			// extract initial flags
+			// (in case we only get created and used once and then terminate; `_pthread_wqthread` requires a valid `flags` argument)
+			dthread = _pthread_getspecific_direct(_PTHREAD_TSD_SLOT_PTHREAD_SELF);
+			prio = _pthread_getspecific_direct(_PTHREAD_TSD_SLOT_PTHREAD_QOS_CLASS);
+			// doesn't extract `WQ_FLAG_THREAD_KEVENT` if we had it set, but that shouldn't matter
+			// like i said before, the only case where we actually need these flags to be set here is when the thread is going to die immediately after creation
+			me.flags = extract_wq_flags(prio);
+
+			// Enqueue for future WQOPS_QUEUE_REQTHREADS
+			TAILQ_INSERT_HEAD(&workq_parked_head, &me, entries);
+
+			// Decrease the amount of running threads
+			sem_up(&workq_sem);
+
+			libsimple_lock_unlock(&workq_parked_lock);
+
+			// Wait until someone calls WQOPS_QUEUE_REQTHREADS
+			// and wakes us up
+			if (!sem_down(&me.sem, 15))
+			{
+				// Make sure we haven't just been woken up before locking the queue
+				// and remove us from the queue if not.
+				libsimple_lock_lock(&workq_parked_lock);
+	
+				if (me.sem > 0)
+				{
+					libsimple_lock_unlock(&workq_parked_lock);
+					goto wakeup;
+				}
+
+				TAILQ_REMOVE(&workq_parked_head, &me, entries);
+
+				libsimple_lock_unlock(&workq_parked_lock);
+
+				terminating = true;
+
+				// resume the thread; it'll call `_pthread_wqthread_exit` and kill itself
+				goto resume_thread;
+			}
+
+wakeup: // we actually want to go back into the thread to do work
+			// __simple_printf("Thread %d woken up, prio=%d\n", thread_self, me.flags & WQ_FLAG_THREAD_PRIOMASK);
+
+			workq_set_event_pending(me.event);
+
+resume_thread: // we want the thread to resume, but it might be just to die
+			// reset stack and call entry point again with WQ_FLAG_THREAD_REUSE
+			thread_self = _pthread_getspecific_direct(_PTHREAD_TSD_SLOT_MACH_THREAD_SELF);
+			dthread = _pthread_getspecific_direct(_PTHREAD_TSD_SLOT_PTHREAD_SELF);
+
+			wqueue_entry_point_asm_jump(dthread, thread_self, dthread->stackbottom, 
+				(!terminating && me.event) ? me.event->events : NULL, 
+				me.flags | WQ_FLAG_THREAD_REUSE,
+				terminating ? WORKQ_EXIT_THREAD_NKEVENT : (me.event ? me.event->nevents : 0)
+			);
+			
+			__builtin_unreachable();
+
+			return 0;
+		}
+		case WQOPS_SET_EVENT_MANAGER_PRIORITY:
+		case WQOPS_QUEUE_NEWSPISUPP:
+			return 0;
+		case WQOPS_QUEUE_REQTHREAD_FOR_KEVENT:
+		{
+			wq_event = (struct wq_kevent_data*) item;
+			affinity = 1;
+		}
+		case WQOPS_QUEUE_REQTHREADS2: // cooperative worker request
+		case WQOPS_QUEUE_REQTHREADS:
+		{
+			// affinity contains thread count
+
+			int i, flags = extract_wq_flags(prio);
+			if (options == WQOPS_QUEUE_REQTHREADS2)
+				flags |= WQ_FLAG_THREAD_COOPERATIVE;
+
+			if (wq_event != NULL)
+				flags |= WQ_FLAG_THREAD_KEVENT;
+			
+			// __simple_printf("Thread requested with prio %d\n", prio & WQ_FLAG_THREAD_PRIOMASK);
+
+			for (i = 0; i < affinity; i++)
+			{
+				// Increase the amount of running threads
+				sem_down(&workq_sem, -1);
+
+				libsimple_lock_lock(&workq_parked_lock);
+
+				if (workq_parked_head.tqh_first != NULL)
+				{
+					struct parked_thread* thread;
+
+					thread = workq_parked_head.tqh_first;
+
+					// Resume an existing thread
+					// __simple_printf("Resuming thread %d\n", id);
+
+					thread->flags = flags;
+					thread->event = wq_event;
+
+					// Dequeue
+					TAILQ_REMOVE(&workq_parked_head, thread, entries);
+
+					// Resume the thread
+					sem_up(&thread->sem);
+					libsimple_lock_unlock(&workq_parked_lock);
+
+					continue;
+				}
+
+				libsimple_lock_unlock(&workq_parked_lock);
+
+				// __simple_printf("Spawning a new thread, nevents=%d\n", (wq_event != NULL) ? wq_event->nevents : -1);
+
+				__darling_thread_create(512*1024, pthread_obj_size, wqueue_entry_point_wrapper, 0,
+						(void*)wq_event, flags,
+						(wq_event != NULL) ? wq_event->nevents : 0,
+						&callbacks, NULL);
+
+				/*if (ret < 0)
+				{
+					__simple_printf("Failed to spawn a new thread, err %d\n", -ret);
+					return ret;
+				}*/
+			}
+			return 0;
+		}
+		case WQOPS_SETUP_DISPATCH: {
+			// TODO: actually do something with the info passed in
+			// XNU just tacks it onto the process its called for and uses it later when someone asks for it
+
+			/*
+			struct workq_dispatch_config cfg = {0};
+
+			// `affinity` contains the size of the config structure passed in
+			memcpy(&cfg, item, (affinity < sizeof(struct workq_dispatch_config)) ? affinity : sizeof(struct workq_dispatch_config));
+			*/
+
+			return 0;
+		} break;
+		default:
+			return -ENOTSUP;
+	}
+#else
+	return -ENOSYS;
+#endif
+}
+
+// Nonnegative token count. Never overwrite a concurrently posted token with a
+// waiter sentinel: a parked thread could otherwise time out after dequeue and
+// remove its stack entry twice. FUTEX_WAIT compares against zero atomically.
+int sem_down(int* sem, int timeout)
+{
+	struct timespec deadline, now, remaining;
+	if (timeout >= 0) {
+		if (LINUX_SYSCALL(__NR_clock_gettime, 1 /* CLOCK_MONOTONIC */, &deadline) < 0)
+			return 0;
+		deadline.tv_sec += timeout;
+	}
+
+	for (;;) {
+		int tokens = __atomic_load_n(sem, __ATOMIC_ACQUIRE);
+		while (tokens > 0) {
+			if (__atomic_compare_exchange_n(sem, &tokens, tokens - 1, true,
+				__ATOMIC_ACQUIRE, __ATOMIC_RELAXED))
+				return 1;
+		}
+
+		const struct timespec* wait = NULL;
+		if (timeout >= 0) {
+			if (LINUX_SYSCALL(__NR_clock_gettime, 1, &now) < 0)
+				return 0;
+			remaining.tv_sec = deadline.tv_sec - now.tv_sec;
+			remaining.tv_nsec = deadline.tv_nsec - now.tv_nsec;
+			if (remaining.tv_nsec < 0) {
+				remaining.tv_nsec += 1000000000;
+				remaining.tv_sec--;
+			}
+			if (remaining.tv_sec < 0 || (!remaining.tv_sec && !remaining.tv_nsec))
+				return 0;
+			wait = &remaining;
+		}
+
+		int result = __linux_futex_reterr(sem, FUTEX_WAIT, 0, wait, NULL, 0);
+		if (result == 0 || result == -EAGAIN || result == -EINTR)
+			continue;
+		return 0;
+	}
+}
+
+void sem_up(int* sem)
+{
+	__atomic_fetch_add(sem, 1, __ATOMIC_RELEASE);
+	// Each post can release a different waiter, including when another credit
+	// remains unconsumed. Always wake one instead of inspecting a racy sentinel.
+	__linux_futex_reterr(sem, FUTEX_WAKE, 1, NULL, NULL, 0);
+}
+
+#define __PTHREAD_PRIORITY_CBIT_USER_INTERACTIVE 0x20
+#define __PTHREAD_PRIORITY_CBIT_USER_INITIATED 0x10
+#define __PTHREAD_PRIORITY_CBIT_DEFAULT 0x8
+#define __PTHREAD_PRIORITY_CBIT_UTILITY 0x4
+#define __PTHREAD_PRIORITY_CBIT_BACKGROUND 0x2
+#define __PTHREAD_PRIORITY_CBIT_MAINTENANCE 0x1
+#define __PTHREAD_PRIORITY_CBIT_UNSPECIFIED 0x0
+
+#define QOS_CLASS_USER_INTERACTIVE 0x21
+#define QOS_CLASS_USER_INITIATED 0x19
+#define QOS_CLASS_DEFAULT 0x15
+#define QOS_CLASS_UTILITY 0x11
+#define QOS_CLASS_BACKGROUND 0x09
+#define QOS_CLASS_MAINTENANCE 0x05
+#define QOS_CLASS_UNSPECIFIED 0x0
+
+static int priority_to_class(int prio)
+{
+	int dec_prio = (prio & 0xff00) >> 8;
+	switch (dec_prio)
+	{
+		case __PTHREAD_PRIORITY_CBIT_USER_INTERACTIVE:
+			return __PTHREAD_PRIORITY_CBIT_MAINTENANCE;
+		case __PTHREAD_PRIORITY_CBIT_USER_INITIATED:
+			return QOS_CLASS_USER_INITIATED;
+		case __PTHREAD_PRIORITY_CBIT_DEFAULT:
+			return QOS_CLASS_DEFAULT;
+		case __PTHREAD_PRIORITY_CBIT_UTILITY:
+			return QOS_CLASS_UTILITY;
+		case __PTHREAD_PRIORITY_CBIT_BACKGROUND:
+			return QOS_CLASS_BACKGROUND;
+		case __PTHREAD_PRIORITY_CBIT_MAINTENANCE:
+			return QOS_CLASS_MAINTENANCE;
+		default:
+			return QOS_CLASS_UNSPECIFIED;
+	}
+}

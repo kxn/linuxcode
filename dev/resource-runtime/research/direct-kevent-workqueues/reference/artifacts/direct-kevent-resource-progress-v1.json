@@ -1,0 +1,21 @@
+{
+  "verified_scope": "Actual event transport and buffer handling in the explicitly enabled experimental source variant",
+  "stage": "artifacts/private-procfs-auditsession57-stage.json",
+  "kernel_build": "artifacts/direct-kevent-kernel-v6-build.json",
+  "pthread_build": "artifacts/direct-kevent-pthread-v1-build.json",
+  "source_publication": "artifacts/direct-kevent-source-publication-v1.json",
+  "native_events": "runtime/direct-kevent-workqueue-4oa1qotr/result.json",
+  "native_auxiliary_buffers": "runtime/kevent-aux-buffer-zfi1gftg/result.json",
+  "native_GCD": "runtime/workqueue-recycling-b_5xy4yy/result.json",
+  "original_capture": "runtime/embedded-kqueue-ibagent-fault-v1/result.json",
+  "original_diagnosis": "Original IBAgent passes objc locks, workqueue feature check and implicit kqueue initialization. Its real pthread event pump is blocked in the embedded backend readiness wait. Original libdispatch now calls kevent_id with WORKLOOP|ERROR_EVENTS|IMMEDIATE (0x403) and traps on errno78, ENOSYS. BSD syscall375 has no source backend yet.",
+  "limits": [
+    "Workloops/kevent_id are still unimplemented and WORKLOOP feature is not advertised.",
+    "QoS class / callback / TSD transport is verified; Darwin kernel scheduler, inheritance and overrides are not implemented by these checks. BSDTHREAD_CTL and SET_SELF feature bits remain clear.",
+    "Auxiliary default receive-buffer capacity follows the paired existing 64-byte libkqueue scratch buffer. Small caller buffers below64 return ENOTSUP; larger messages genuinely return MACH_RCV_TOO_LARGE and are retried through an explicit receive-buffer subscription.",
+    "Registration metadata is a bounded1024-slot table; all workloop lifecycle semantics and metadata cleanup on every FD reuse remain incomplete.",
+    "Standalone906-TU source kernel and13-TU pthread builds are tested. New full Darling CMake wiring is provided, but a cold complete CMake build is unverified.",
+    "Source fork changes are preserved with Comman Kang identity. No Apple binaries are published."
+  ],
+  "full_goal_complete": false
+}

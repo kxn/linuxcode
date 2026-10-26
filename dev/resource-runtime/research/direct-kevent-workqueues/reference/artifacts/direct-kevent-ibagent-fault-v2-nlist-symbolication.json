@@ -1,0 +1,47 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/direct-kevent-ibagent-fault-v2.gdb.log",
+  "raw_sha256": "02321781dd87e0caf86012029ed820f3b88f29a6a020c25b5e63512fda4a25be",
+  "maps": "logs/direct-kevent-ibagent-fault-v2.maps.log",
+  "maps_sha256": "37946d396f22c0f88763b190f7cb7df5213106ac06af372407884888a65665a6",
+  "output": "logs/direct-kevent-ibagent-fault-v2.nlist-symbolicated.log",
+  "output_sha256": "0035fa4106f6197c73ecd8f641bca02f2cde896cd4e7e415c238fcf06ffc512b",
+  "images": {
+    "runtime/audit-session-runtime-56/libsystem_kernel.dylib": {
+      "sha256": "d39655c911b1ea4c929ac9c5bdd6da61a16599e9268902af52c34806266f0dff",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2369
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libdispatch.dylib": {
+      "sha256": "c8916ca8cc53d106df692b89a087324a6ce0b7b74e0772d95b6f1fbf3351c459",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 2212
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libxpc.dylib": {
+      "sha256": "e039e79b5d2ab833472a0c0b091117b83c8ce30104e83dc2e3d17dbbe4d3a313",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 2666
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation": {
+      "sha256": "ec19d9e032c9bb066183cdcc90b40b1519002f5eaf62d264685f423932ecfbc9",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 13343
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework/Foundation": {
+      "sha256": "1cb3f62a9e8ccfb1b01e456beefb6affc2f6d1ba22c7c8c401f5c7b76e1618c6",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 123682
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/AssetCatalogFoundation.framework/AssetCatalogFoundation": {
+      "sha256": "2d6f9e29d267baaf7cac8c22e6ba569550735621408011d184e43bb1a2e1e666",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 12570
+    },
+    "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/dyld_sim": {
+      "sha256": "45e2b52ae13d2b86ed8e8076d7339dd3dc2bf64f61d1ab35d150d043a9775e9b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 2287
+    }
+  }
+}

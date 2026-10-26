@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/direct-kevent-kernel-v6-relink-driver.log",
+  "original_sha256": "301dd6a81dc51cfe0ce7108d92dd90e74ee17bb1a8141ea814ca5323aecd628f",
+  "encoding": "utf-8",
+  "text": "Traceback (most recent call last):\n  File \"/home/dl/linuxcode/scripts/relink-complete-kernel-build.py\", line 21, in <module>\n    assert row['source'] in a.changed_source,row['source'];changes[row['source']]={'old':row['sha256'],'new':actual};row['sha256']=actual\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: runtime/direct-kevent-kernel-v6/generated/libsyscall/mach/clock-x86_64-User.c\n"
+}

@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession56-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "240"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1291287,
+    "gdb_status": 0,
+    "log": "runtime/direct-kevent-ibagent-fault-v2/agent.gdb.log",
+    "maps": "runtime/direct-kevent-ibagent-fault-v2/agent.maps"
+  },
+  "stage": "artifacts/private-procfs-auditsession56-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/direct-kevent-ibagent-fault-v2/probe.log": "3666ead46e63a461db11d63926414c70fce31073d83b2579a0c47daed646a9b4",
+    "runtime/direct-kevent-ibagent-fault-v2/capture.gdb": "9409c8716162b11e24813be906fca7a7d47cd81c23275d99b7f572628592a027",
+    "runtime/direct-kevent-ibagent-fault-v2/agent.maps": "18ff7365a79a53c57b58b3250bc50f04aa30c4ebc988d8f2864a43f7019639fe",
+    "runtime/direct-kevent-ibagent-fault-v2/agent.gdb.log": "02321781dd87e0caf86012029ed820f3b88f29a6a020c25b5e63512fda4a25be"
+  },
+  "tool_sha256": "722d0ce50f62ed7ef88ddb6db0c186ff55465cc20dc4e7277126d4f45644f1e1",
+  "full_goal_complete": false
+}

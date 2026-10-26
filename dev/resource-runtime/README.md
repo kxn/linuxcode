@@ -196,3 +196,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [原版首次初始化回调与桥接](research/libkernel-init-v5-bridge/README.md) 修复version5公共表与Darling私有扩展冲突，实际桥接恢复、保护页和4个子进程检查通过；原版进入ObjC镜像注册，仍在定位选择器锁，完整App未完成。
 
 - [Original iOS lock provider repair](research/internal-futex-lock-providers/README.md): remove empty kernel lock exports, verify real unlocks and native contention; next original dispatch workqueue capability assertion.
+
+- [Direct event workqueues and embedded Linux backend](research/direct-kevent-workqueues/README.md): real pipe/Mach callbacks, auxiliary buffers, large-message retry and GCD; original iOS now reaches the missing kevent_id workloop backend.
