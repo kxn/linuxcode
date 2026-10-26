@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession65-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "90"
+  ],
+  "probe_status": 1,
+  "server": "runtime/audit-session-runtime-65/darlingserver",
+  "server_sha256": "37387bcb76b42a4b97fa2bd5ade292eb40144971a8614c20a28971900f51f243",
+  "capture": {
+    "pid": 1351631,
+    "status": 0
+  },
+  "files": {
+    "runtime/msg2-aux-prealloc-server-fault-v2/probe.log": "8e2d18407c34b3c0c66b235e7de8185e362ca2d66f11261ef40deac492ce707d",
+    "runtime/msg2-aux-prealloc-server-fault-v2/server.maps": "3b4060ac988155674104247ac0ad1b57f2946496b6bc940f6634e9f0a67f3903",
+    "runtime/msg2-aux-prealloc-server-fault-v2/capture.gdb": "fa0dfcc00f350c37cca50acffeedb749a890c162c617e951325840a36d16d579",
+    "runtime/msg2-aux-prealloc-server-fault-v2/server.gdb.log": "30e496914b65347bf99dd38c90ae1fa5ac65e66e7f419dad784310cb8ed94260"
+  },
+  "tool_sha256": "0ea8eed7d6a2e5809ed33fe4fc811d98a71172f815f2daa55a2d337c31ce3fcb",
+  "full_goal_complete": false
+}

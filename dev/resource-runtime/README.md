@@ -208,3 +208,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Original Mach message vectors](research/mach-msg2-vectors/README.md):497 vector checks plus115 scalar checks; original IBAgent reaches main and UIKit screen/resource initialization.
 
 - [Server-wide original activity IDs](research/mach-activity-ids/README.md):8 threads and2 exec children reserve6531 nonoverlapping IDs; original UIKit initialization advances to actual auxiliary message bytes.
+
+- [Real auxiliary message bytes and timer preallocation](research/mach-msg2-auxiliary/README.md):cross-process payloads,retained retries and3966 message checks plus real timers; original IBAgent reaches its message channel and main-queue synchronization.

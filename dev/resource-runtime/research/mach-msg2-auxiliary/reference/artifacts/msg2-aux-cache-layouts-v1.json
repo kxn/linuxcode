@@ -1,0 +1,55 @@
+{
+  "offline_ELF_DWARF_inspection": true,
+  "rows": [
+    {
+      "label": "before_aux",
+      "elf": "runtime/simulator-signature-server-1yjqom6e/darlingserver",
+      "elf_sha256": "77847e7528678a6ca3f00ad65ec767075615233074767b5ba01116ec48fc8fd1",
+      "command": [
+        "gdb",
+        "-q",
+        "-nx",
+        "-batch",
+        "runtime/simulator-signature-server-1yjqom6e/darlingserver",
+        "-ex",
+        "p sizeof(struct ipc_kmsg)"
+      ],
+      "output": "$1 = 104\n"
+    },
+    {
+      "label": "failed_aux",
+      "elf": "runtime/simulator-signature-server-a74uj7ko/darlingserver",
+      "elf_sha256": "37387bcb76b42a4b97fa2bd5ade292eb40144971a8614c20a28971900f51f243",
+      "command": [
+        "gdb",
+        "-q",
+        "-nx",
+        "-batch",
+        "runtime/simulator-signature-server-a74uj7ko/darlingserver",
+        "-ex",
+        "p sizeof(struct ipc_kmsg)"
+      ],
+      "output": "$1 = 120\n"
+    },
+    {
+      "label": "fixed_aux",
+      "elf": "runtime/simulator-signature-server-hzwtw0jv/darlingserver",
+      "elf_sha256": "35a75c3ff33920e38a789de686e5d05fd77a893d5d8964cad749586fc3aea2a7",
+      "command": [
+        "gdb",
+        "-q",
+        "-nx",
+        "-batch",
+        "runtime/simulator-signature-server-hzwtw0jv/darlingserver",
+        "-ex",
+        "p sizeof(struct ipc_kmsg)"
+      ],
+      "output": "$1 = 120\n"
+    }
+  ],
+  "inline_capacity_before": 152,
+  "inline_capacity_failed": 136,
+  "inline_capacity_restored": 152,
+  "original_timer_required": 140,
+  "full_goal_complete": false
+}

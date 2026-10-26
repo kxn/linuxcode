@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession65-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "120"
+  ],
+  "probe_status": 1,
+  "capture": null,
+  "stage": "artifacts/private-procfs-auditsession65-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/msg2-aux-ibagent-fault-v1/probe.log": "a4f2d58c00c4718909d05e621db46cb329c1d3e191c043acf86ae5f9bb07fd89"
+  },
+  "tool_sha256": "df9265197f700542da7f026a17517260b2b04aece9b73593281af603672a7ad4",
+  "full_goal_complete": false
+}

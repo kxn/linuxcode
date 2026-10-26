@@ -1,0 +1,28 @@
+{
+  "stage": "artifacts/private-procfs-auditsession66-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "server": "runtime/simulator-signature-server-hzwtw0jv/stage.json",
+  "source_publication": "artifacts/msg2-aux-source-publication-v1.json",
+  "native": "runtime/mach-msg2-aux-lbii2fpc/result.json",
+  "initial_native": "runtime/mach-msg2-aux-_52ttnd5/result.json",
+  "failed_original": "runtime/msg2-aux-ibagent-fault-v1/result.json",
+  "server_fault": "runtime/msg2-aux-prealloc-server-fault-v2/result.json",
+  "layout_proof": "artifacts/msg2-aux-cache-layouts-v1.json",
+  "original_after": "runtime/msg2-aux-ibagent-fault-v2/result.json",
+  "original_after_probe": "runtime/original-storyboard-kjhmm57c/result.json",
+  "verification": [
+    "3354 auxiliary checks:8/40/128/1024bytes,header synthesis,read-only sources,unaltered trailing buffers",
+    "64 actual exec-child auxiliary messages,reply-port rights and64queued message destructions",
+    "Too-small auxiliary buffers retain real messages and report required size for retry;invalid copyin/copyout and legacy receive behavior",
+    "497 vector and115 scalar checks in the same session",
+    "Real preallocated Mach timer16firings,cancel and32armed destructions after restoring152byte inline payload"
+  ],
+  "regression_and_fix": "Adding16bytes of auxiliary metadata increased ipc_kmsg104->120 and reduced inline payload152->136;mk_timer_create allocates140bytes and spilled into heap storage whose pointer aliases prealloc. Actual ELF backtrace/DWARF prove this. Cache adds16bytes so payload remains152,then timer+message suite passes.",
+  "next_blocker": "Original IBAgent reaches IBMessageReceiveChannel runBlockingReceiveLoopNotifyingQueue and dispatch_sync. libdispatch thread_main_event_wait_slow receives positive1 from UL_UNFAIR_LOCK wait. Old kernel code always fabricates1 after futex wake/EAGAIN; need actual remaining waiter counts. This replaces the earlier auxiliary-vector failure.",
+  "limits": [
+    "Modern auxiliary message vectors tested; all receive error/trailer/peek forms and kqueue auxiliary transport are not globally established.",
+    "No full Darwin scheduler/priority inheritance claim.",
+    "Original Storyboard status255; final App and default installer promotion remain incomplete."
+  ],
+  "full_goal_complete": false
+}

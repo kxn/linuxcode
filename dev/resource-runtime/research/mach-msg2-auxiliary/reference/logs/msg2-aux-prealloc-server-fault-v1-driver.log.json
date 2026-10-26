@@ -1,0 +1,6 @@
+{
+  "original_path": "logs/msg2-aux-prealloc-server-fault-v1-driver.log",
+  "original_sha256": "04e0c9f9761fa6430e57a7332c566900576f315d3f94f82c7374f559b378fb99",
+  "encoding": "utf-8",
+  "text": "  File \"/home/dl/linuxcode/scripts/capture-simulator-server-fault.py\", line 22\n    script=folder/'capture.gdb';script.write_text('set pagination off\\nset confirm off\\nset print thread-events off\\nhandle SIGUSR1 SIGUSR2 SIGCHLD nostop noprint pass\\nhandle SIGABRT SIGSEGV SIGILL stop print pass\\ncontinue\\np $_siginfo\\nbt 35\\npython\\nf=gdb.newest_frame()\\nwhile f:\\n if f.name() and 'ipc_kmsg_set_prealloc' in f.name():\\n  f.select()\\n  for expression in ['kmsg','kmsg->ikm_size','kmsg->ikm_u','kmsg->ikm_header','sizeof(struct ipc_kmsg)']:\\n   try: print('PREALLOC',expression,gdb.parse_and_eval(expression))\\n   except Exception as e: print('PREALLOC_UNAVAILABLE',expression,str(e))\\n  break\\n f=f.older()\\nend\\nthread apply all bt 12\\ndetach\\n')\n                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: invalid syntax. Perhaps you forgot a comma?\n"
+}
