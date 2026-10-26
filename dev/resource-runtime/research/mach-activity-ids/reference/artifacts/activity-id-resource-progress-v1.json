@@ -1,0 +1,24 @@
+{
+  "stage": "artifacts/private-procfs-auditsession64-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "server": "runtime/simulator-signature-server-1yjqom6e/stage.json",
+  "kernel": "artifacts/activity-id-kernel-v1-build.json",
+  "source_publication": "artifacts/activity-id-source-publication-v1.json",
+  "native": "runtime/mach-activity-id-54buayvj/result.json",
+  "original_before": "runtime/msg2-vector-ibagent-fault-v1/result.json",
+  "original_after": "runtime/activity-id-ibagent-fault-v1/result.json",
+  "original_after_probe": "runtime/original-storyboard-7u5fbfrr/result.json",
+  "next_exact_call": "runtime/activity-id-msg2-error-v1/result.json",
+  "verification": [
+    "Unchanged original ipc_voucher.c system-wide atomic allocator with one-time initialization and append-only RPC routing",
+    "8 threads and2 exec children allocate770 nonoverlapping ranges totaling6531 IDs in one Darling server lifetime",
+    "Count0,-1,and17 rejected; invalid output pointer fails through real remote copyout",
+    "Original first8 vector sends/receives now succeed before next unsupported40byte auxiliary send"
+  ],
+  "next_blocker": "Original libxpc sends primary272bytes plus40byte auxiliary vector, options0x500100031; call11 returns0x10000013. Nonempty sidecar transport is next. No activity allocator algorithm rewrite required.",
+  "limits": [
+    "IDs are scoped to the current Darling server lifetime, like a guest boot; no persistent/global-across-independent-servers guarantee.",
+    "Original resource tool status255; complete Storyboard and App remain incomplete."
+  ],
+  "full_goal_complete": false
+}

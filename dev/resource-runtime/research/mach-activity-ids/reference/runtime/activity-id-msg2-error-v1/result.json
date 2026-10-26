@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession64-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "150"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1347887,
+    "status": 0,
+    "selector_lock": 140473812961088,
+    "log": "runtime/activity-id-msg2-error-v1/watch.gdb.log"
+  },
+  "stage": "artifacts/private-procfs-auditsession64-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "source_kernel": "runtime/audit-session-runtime-64/libsystem_kernel.dylib",
+  "source_kernel_sha256": "b7b43fc332afed1241f08cda68b1fbc30c9a0e47a26afebd2ca88dd402b36ce1",
+  "files": {
+    "runtime/activity-id-msg2-error-v1/probe.log": "3f82ba68c2262a33428aae034b7c8172a9d976c91760dc3157638eb1ca97f2ef",
+    "runtime/activity-id-msg2-error-v1/initial.maps": "1186206832d5f7e496e69f59010830e6cfba3cf45ed7ca3f90c1380a1fe48b0b",
+    "runtime/activity-id-msg2-error-v1/capture.gdb": "b1229fdddd857f082a10e68fb300aef80bb9e05e469696298cdfa6fa6a3810ab",
+    "runtime/activity-id-msg2-error-v1/final.maps": "88327ab7f1ecc75eace5e505deae2a746f4a36a880dfa2880cba29d5e55cb690",
+    "runtime/activity-id-msg2-error-v1/watch.gdb.log": "8ac1dedcd50f77e3bb4c37faf4c8ba01045efb342dc595cb2ef2b7c341d8acda"
+  },
+  "tool_sha256": "34514d84e3cc528d253db84ce201f6c27fb71cd36dcbb7e979e2661d6167702c",
+  "full_goal_complete": false
+}

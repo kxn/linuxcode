@@ -206,3 +206,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Async workloop requests and exact queue-state debounce](research/workloop-async-requests/README.md): real serial callbacks,200 coalesced updates,pending cancellation and affected Mach regression; original iOS advances to a mach_msg2 options mismatch.
 
 - [Original Mach message vectors](research/mach-msg2-vectors/README.md):497 vector checks plus115 scalar checks; original IBAgent reaches main and UIKit screen/resource initialization.
+
+- [Server-wide original activity IDs](research/mach-activity-ids/README.md):8 threads and2 exec children reserve6531 nonoverlapping IDs; original UIKit initialization advances to actual auxiliary message bytes.

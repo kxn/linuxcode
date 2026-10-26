@@ -1,0 +1,37 @@
+{
+  "name": "mach-activity-ids",
+  "payload": [
+    "scripts/probe-mach-activity-id.py",
+    "fixtures/hello/mach-activity-id.c",
+    "vendor/darlingserver/scripts/generate-rpc-wrappers.py",
+    "vendor/darlingserver/duct-tape/src/init.c",
+    "vendor/darlingserver/duct-tape/xnu/osfmk/ipc/ipc_voucher.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/mach/impl/mach_traps.c"
+  ],
+  "reference": [
+    "artifacts/activity-id-resource-progress-v1.json",
+    "artifacts/activity-id-source-publication-v1.json",
+    "artifacts/activity-id-kernel-v1-build.json",
+    "artifacts/private-procfs-auditsession64-stage.json",
+    "runtime/simulator-signature-server-1yjqom6e/stage.json",
+    "runtime/simulator-signature-server-1yjqom6e/build.log",
+    "logs/activity-id-server-v1-driver.log",
+    "logs/activity-id-kernel-v1-build.log",
+    "logs/activity-id-server-source-push-v1.log",
+    "logs/activity-id-xnu-source-push-v1.log",
+    "runtime/mach-activity-id-54buayvj/result.json",
+    "runtime/activity-id-ibagent-fault-v1/result.json",
+    "runtime/activity-id-ibagent-fault-v1/agent.gdb.log",
+    "runtime/activity-id-ibagent-fault-v1/agent.maps",
+    "logs/activity-id-ibagent-fault-v1.gdb.log",
+    "logs/activity-id-ibagent-fault-v1.maps.log",
+    "logs/activity-id-ibagent-fault-v1.nlist-symbolicated.log",
+    "artifacts/activity-id-ibagent-fault-v1-map-bindings.json",
+    "artifacts/activity-id-ibagent-fault-v1-nlist-symbolication.json",
+    "runtime/original-storyboard-7u5fbfrr/result.json",
+    "runtime/activity-id-msg2-error-v1/result.json",
+    "runtime/activity-id-msg2-error-v1/watch.gdb.log",
+    "runtime/activity-id-msg2-error-v1/initial.maps",
+    "runtime/activity-id-msg2-error-v1/final.maps"
+  ]
+}
