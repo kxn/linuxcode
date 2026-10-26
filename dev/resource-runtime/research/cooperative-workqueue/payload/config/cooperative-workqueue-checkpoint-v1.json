@@ -1,0 +1,34 @@
+{
+  "name": "cooperative-workqueue",
+  "payload": [
+    "vendor/darling/src/external/libpthread/src/pthread.c",
+    "vendor/darling/src/external/libpthread/src/CMakeLists.txt",
+    "vendor/darling/src/external/libpthread/xcodescripts/pthread.aliases",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/bsdthread/workq_kernreturn.c",
+    "scripts/build-libpthread-source.py",
+    "scripts/build-libsystem-kernel-source.py",
+    "scripts/stage-source-pthread-runtime.py",
+    "scripts/probe-cooperative-workqueue.py",
+    "fixtures/hello/cooperative-workqueue.c",
+    "scripts/probe-workqueue-recycling.py",
+    "fixtures/hello/workqueue-recycling.c"
+  ],
+  "reference": [
+    "artifacts/cooperative-workqueue-source-publication-v1.json",
+    "artifacts/cooperative-pthread-v3-build.json",
+    "artifacts/cooperative-workqueue-kernel-v1-build.json",
+    "artifacts/private-procfs-auditsession43-stage.json",
+    "artifacts/private-procfs-source-pthread-v1-stage.json",
+    "runtime/cooperative-workqueue-4n986vok/result.json",
+    "runtime/pthread-native-aliases-w250y7c8/result.json",
+    "runtime/workqueue-recycling-tr_ef0o5/result.json",
+    "runtime/original-storyboard-1s96ve5w/result.json",
+    "logs/cooperative-pthread-v1-build.log",
+    "logs/cooperative-pthread-v2-build.log",
+    "logs/cooperative-pthread-v3-build.log",
+    "logs/cooperative-workqueue-kernel-v1-build.log",
+    "logs/cooperative-workqueue-entry-reference-v1.disassembly.log",
+    "logs/cooperative-workqueue-callback-reference-v1.disassembly.log",
+    "config/direct-resource-tool-environment-v150.json"
+  ]
+}

@@ -184,3 +184,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [真实 Mach eventlink 后续](research/native-mach-eventlink/README.md) 已补齐四个 MIG 与三种64位信号/等待调用，实际计数、超时、跨线程交接和销毁测试通过。原版流程继续到 work interval 调度元数据接口，完整资源编译仍未完成。
 
 [工作区间实例后续](research/work-interval-instances/README.md) 补齐16个真实载荷和方法，单元及原生错误传播检查通过；性能控制内核后端仍未实现。原版流程继续到 cooperative workqueue 接口，完整资源/App 仍未完成。
+
+[协作工作线程后续](research/cooperative-workqueue/README.md) 完整 pthread 源码构建保留194个旧导出，256次新旧请求与9216个GCD任务通过。原版 ibtool 继续到工作组回调注册接口，完整资源/App仍未完成。
