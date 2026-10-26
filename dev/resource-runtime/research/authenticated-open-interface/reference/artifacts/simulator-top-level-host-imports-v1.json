@@ -1,0 +1,5981 @@
+{
+  "scope": "Static named imports of original simulator system libraries against actual simulator wrappers plus selected reexported host kernel/pthread/platform. Other images and actual behavior require separate checks.",
+  "providers": {
+    "libsystem_sim_kernel": {
+      "files": {
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_kernel.dylib": "2bac7f99c83be29142ce410d34ffb168f880891a47feccc844c5386991c7d7fe",
+        "runtime/audit-session-runtime-46/darling-root/usr/lib/system/libsystem_kernel.dylib": "f6341e64931ea7926714620e4963e2898672f304eba7201dbfc2ecc280910ae9"
+      },
+      "export_count": 1390
+    },
+    "libsystem_sim_pthread": {
+      "files": {
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_pthread.dylib": "98b45510af16a3cea8a39481c9aa7651decb5ee3e27276abf8d0b2c255869d1c",
+        "runtime/audit-session-runtime-46/darling-root/usr/lib/system/libsystem_pthread.dylib": "e209d339661e9bdb7af7c6bfe5d9bcfcaced4b973b10a3ce42304fc77104b5ff"
+      },
+      "export_count": 200
+    },
+    "libsystem_sim_platform": {
+      "files": {
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_platform.dylib": "5d99420afbd9d44170d9e74380b49871559b0963f6711d0da6e7e1bcb7944039",
+        "runtime/audit-session-runtime-46/darling-root/usr/lib/system/libsystem_platform.dylib": "6005dbca0c3adba94f2a049bf81847192bb0cfc6aaf7c002704754e5dba0e4d9"
+      },
+      "export_count": 197
+    },
+    "libSystem": {
+      "files": {
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem.B.dylib": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcache.dylib": "65e802892b610068ee07828a38cb5bea9fa27fdb9938fcab9a429d53dc59a836",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcommonCrypto.dylib": "9d3d5eb52c0b8bef7a01af2be57cf872a467bbbde6f9b40a34bdf2b2a9d278f7",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcompiler_rt.dylib": "fc7836649755bea42a0b6362594ce413d846c25ed9cded65f3351736e07f4d79",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcopyfile.dylib": "f9643b7ab8633fc0d64d07a8429bd439994011a3ee0331c601590bf52ed975a9",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcorecrypto.dylib": "ccbe503428d870efcfe6ece08c5793d36ed66e2421d86b4fcb9a6dcf9c5fb691",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libdispatch.dylib": "c8916ca8cc53d106df692b89a087324a6ce0b7b74e0772d95b6f1fbf3351c459",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libdyld.dylib": "5e1c5c2566d16ba4af7979260a9073a85da9e27686b9605e6fdc1d783ca9e584",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libmacho.dylib": "be7f3b342c0259932a63f1ca38520d099a2dd4de6ae0061e05018ec133148f8c",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libremovefile.dylib": "cfddf0542cba3e06eb9b0dc4974e9aa62cddbf539c2f715f8da24b961cfe2adf",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_asl.dylib": "945c28c0894e5078fb2d115c54d917c090e73537a75b0c623ea45ace57b909ec",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_blocks.dylib": "23abac275e8d1acb3adb737d64336726b6a705cd1f1fba385997fb24172bd29b",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_c.dylib": "a9c74bab7c339a1b7402366d89c4632d677151a4938c868595ba4f9085787928",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_collections.dylib": "6117b51c281bb78883b405c99367aa8d96368fe117625b3e1b240e3798a83d54",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_configuration.dylib": "623e89d568f70ad00319f395a618621e79a8301d6a406664d9fa0fc3e72facba",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_containermanager.dylib": "2167eab207b1773a78f81a46b8ae9eb960eb3767a502f3dae216505eb7967260",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_coreservices.dylib": "7f75d20542c466524c45485c7991257e51d2835f94e0ff26f31888a296aaa1da",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_darwin.dylib": "e7c6e393fe247e4816fe80765107bf74cf7cbb51b7a15e7071ececcfa1885899",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_dnssd.dylib": "6c2ff15998e06300e1624906df457da086c371a67ce647750ddbdde6001dcc6b",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_eligibility.dylib": "5fedc890d19c96892b05699a5d058a4cc8b389e64bf533b73aaedb3adf3f2a97",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_featureflags.dylib": "dff874d953222f652faf964905b1618b51b489e7e6522525da2ff8fa2176a89a",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_info.dylib": "4e8f4f71eec74651c2ef359d72f24d1edfa12c710cd30ccc5e6189bd624be0b6",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_m.dylib": "76434f80fa02788e4663f1be1c39840a6b0fe7e82459d99e978de0965235f5cb",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_malloc.dylib": "7ffe075bc378f01dad29ae5d338c35044b272359aa361c37b8fb694bbe270545",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_networkextension.dylib": "d2f46bb4017527ebbd10dda563a9d1745e92f6f2ec1badca37df32dc71387b03",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_notify.dylib": "0d730187419b58ca5f5f86c57eb2f4295f302b288b4c1b8b0ba4470006b284eb",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sandbox.dylib": "b9728e96f1bc11c806b589deb924568187514b94045b3813aa6ff7a6e1328dee",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sanitizers.dylib": "ce66f21890e04bed1cec3e794c83077091f32ce607da26aad7028d50d390272d",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_kernel.dylib": "2bac7f99c83be29142ce410d34ffb168f880891a47feccc844c5386991c7d7fe",
+        "runtime/audit-session-runtime-46/darling-root/usr/lib/system/libsystem_kernel.dylib": "f6341e64931ea7926714620e4963e2898672f304eba7201dbfc2ecc280910ae9",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_platform.dylib": "5d99420afbd9d44170d9e74380b49871559b0963f6711d0da6e7e1bcb7944039",
+        "runtime/audit-session-runtime-46/darling-root/usr/lib/system/libsystem_platform.dylib": "6005dbca0c3adba94f2a049bf81847192bb0cfc6aaf7c002704754e5dba0e4d9",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_pthread.dylib": "98b45510af16a3cea8a39481c9aa7651decb5ee3e27276abf8d0b2c255869d1c",
+        "runtime/audit-session-runtime-46/darling-root/usr/lib/system/libsystem_pthread.dylib": "e209d339661e9bdb7af7c6bfe5d9bcfcaced4b973b10a3ce42304fc77104b5ff",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_trace.dylib": "7af6b3407f78b0d38639cfb00f867a1dd0bd9f1882904f49bf0fdf0f09d9c1e6",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_trial.dylib": "f4d24f647d2691f1e6b025e747b8fb33ae987eb432f6328b8f93088d5b0ea7ce",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libunwind.dylib": "bc71daceb4bb2970750aae8aea74ddcc22495a885635a8e3d72848d21f1407fb",
+        "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libxpc.dylib": "e039e79b5d2ab833472a0c0b091117b83c8ce30104e83dc2e3d17dbbe4d3a313"
+      },
+      "export_count": 8730
+    }
+  },
+  "images": [
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Security.framework/Security",
+      "sha256": "2d25b6ffb0649130c361c5094e0931d282e414df96465e8216399bc38b30fc38",
+      "host_import_counts": {
+        "libSystem": 563
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAHTRestore.dylib",
+      "sha256": "f730f305160f616cd1bed569625c5982c885aa42a6e07440ab8e9b68b0609067",
+      "host_import_counts": {
+        "libSystem": 6
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAWDSupport.dylib",
+      "sha256": "c8939cd1fa02bb2933f971083bab50d3b95afb4cdd738ac3cc21287b1ee556b1",
+      "host_import_counts": {
+        "libSystem": 63
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAWDSupportFramework.dylib",
+      "sha256": "79cfd52374f4716455dd048e6af1ed1b140d64e9478ee998f42f6623b9a3c86b",
+      "host_import_counts": {
+        "libSystem": 4
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAXSafeCategoryBundle.dylib",
+      "sha256": "fd43eb5530e03369817539d07041c10ad49301ad0f000459a8e59677ba5eec85",
+      "host_import_counts": {
+        "libSystem": 11
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAXSpeechManager.dylib",
+      "sha256": "c248feeaddbf35c6262ba614550b168e25d298a0a7a1a6817ef9c4b31e6e84d4",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAccessibility.dylib",
+      "sha256": "e43e67b79694e16aaef83b798ae1a973c6ed4b3c31aae2121aba3706dd6aa42c",
+      "host_import_counts": {
+        "libSystem": 52
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAppPatch.dylib",
+      "sha256": "8dcd7d7e8e8dfa9c7ba3b1e435493fba8f9a714c72d90e9d9662de455d338e87",
+      "host_import_counts": {
+        "libSystem": 106
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAppleArchive.dylib",
+      "sha256": "c24210f76d9e7afcbcea62ea1693900016aa05553a879adedf4bcc8cab49c681",
+      "host_import_counts": {
+        "libSystem": 211
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAppleEXR.dylib",
+      "sha256": "c7734979be58ddd9cdb49c7cc020ea8d46b15a7e0b9cc5470a03de9b5441f1c8",
+      "host_import_counts": {
+        "libSystem": 50
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern4",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAudioDSPCore.dylib",
+      "sha256": "7bdc4f684e9de0e3033c75dae1083766885120c69d2de885fc0c4e1f60e887fa",
+      "host_import_counts": {
+        "libSystem": 80
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAudioStatistics.dylib",
+      "sha256": "d0a357c3f3416bdb2715686f6d3c213d3ad8ed2b8e618d112260482f2c7c77ea",
+      "host_import_counts": {
+        "libSystem": 22
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAudioToolboxUtility.dylib",
+      "sha256": "8fc8718b4d5cec523e216745cd93d0c2cfa4c8b0f378cd1c9738074933ce4832",
+      "host_import_counts": {
+        "libSystem": 186
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libBASupport.dylib",
+      "sha256": "0f254045fb4c802dea4284eb5922c722c9f01088f3f1f3dadab30442476ab564",
+      "host_import_counts": {
+        "libSystem": 15
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libBacktraceRecording.dylib",
+      "sha256": "dde03067a753c45f67f104c240e52e5e5cc2bd42f7e2037fc6ad6dd12748b5c6",
+      "host_import_counts": {
+        "libSystem": 66
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libCRFSuite.dylib",
+      "sha256": "64da59dbd0b4434e8746543bdf3749e3c001ca41aaa64fe1cb986c0c4a23349b",
+      "host_import_counts": {
+        "libSystem": 70
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_bzero",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libCRFSuite0.12.dylib",
+      "sha256": "64da59dbd0b4434e8746543bdf3749e3c001ca41aaa64fe1cb986c0c4a23349b",
+      "host_import_counts": {
+        "libSystem": 70
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_bzero",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libCTGreenTeaLogger.dylib",
+      "sha256": "8dba5edb1b0118eb611d3b296c6895bde8e317a56d0267042c0361768d531abe",
+      "host_import_counts": {
+        "libSystem": 10
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libChineseTokenizer.dylib",
+      "sha256": "9628e5782c239170b907546d2d718f015aa184df5a6cc77807573743df2bca17",
+      "host_import_counts": {
+        "libSystem": 14
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libCoreEntitlements.dylib",
+      "sha256": "315e5fab4c4c2b27bc0312e45ee8284bde44debf082da17e6bcd4cc36c7ffb41",
+      "host_import_counts": {
+        "libSystem": 25
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libCoreEntitlements_V2.dylib",
+      "sha256": "e7c1be0ac1710cdd36c6a5d830660d1eee39bd632cd1ebe749e3f41e321c975c",
+      "host_import_counts": {
+        "libSystem": 20
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libFosl_dynamic.dylib",
+      "sha256": "bfdadc6325eb2c1bb19a9c088fad938288704bc62fc18c3a50ac7869fa3c31af",
+      "host_import_counts": {
+        "libSystem": 91
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libLLVM.dylib",
+      "sha256": "83a334fd7ee207bb84774fd0333d97af060c567e658164e7e4e3a566c71229bc",
+      "host_import_counts": {
+        "libSystem": 199
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libLeaksAtExit.dylib",
+      "sha256": "f9cd2fa39f75edda8756808f27575d27f35892f0cb9039e57f9930c13564e7f6",
+      "host_import_counts": {
+        "libSystem": 13
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libLogRedirect.dylib",
+      "sha256": "3d0cebb072c201a604199bf5a1e5dc940964769dfb59235342be364c27af8fb1",
+      "host_import_counts": {
+        "libSystem": 43
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libMainThreadChecker.dylib",
+      "sha256": "5849b2c2c48c2569d5282aef5c3ce1c7719dd47802df7c87af447700cd79f112",
+      "host_import_counts": {
+        "libSystem": 52
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libMobileGestalt.dylib",
+      "sha256": "1ddfcd48a89669887fd52114b0472a1812c3f82708d60c34d534dd8cdfd827b1",
+      "host_import_counts": {
+        "libSystem": 88
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_index",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libMobileGestaltExtensions.dylib",
+      "sha256": "f513e15aea54c372ecdddabc066613da8c6d26aee8a2cc0a5bc1ba20af6daf43",
+      "host_import_counts": {
+        "libSystem": 42
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libParallelCompression.dylib",
+      "sha256": "a99ae5534a67b523b12e1d33f09de792c466988e9000b08c92d565d3880b4148",
+      "host_import_counts": {
+        "libSystem": 188
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libRPAC.dylib",
+      "sha256": "6fae7ac8053d5acf21489eb95cdd878c0a3d8f318963ded3d143499128a0f86d",
+      "host_import_counts": {
+        "libSystem": 91
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSecureMAHelper.dylib",
+      "sha256": "b8ee972cdc103987373fca409b198ab2308e3a18c4d3b46fa287b845d7b94b1e",
+      "host_import_counts": {
+        "libSystem": 44
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSoftwareUpdateSSO.dylib",
+      "sha256": "b75dc846530e5da61f4ad29b5719a93a6665b37469bd506ae7b3379f975b8482",
+      "host_import_counts": {
+        "libSystem": 18
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSpatial.dylib",
+      "sha256": "15fe546cfbadac94d2428493e6aea0acbe6a15b3cc5d1e0c12297651976a878c",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem.B.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem.B_asan.dylib",
+      "sha256": "79b2e6f855209482ba6987328387f74f36c7c5554a4cb775f3d5376fc1b70b17",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem_asan.dylib",
+      "sha256": "79b2e6f855209482ba6987328387f74f36c7c5554a4cb775f3d5376fc1b70b17",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libTLE.dylib",
+      "sha256": "de30a47702c8dea849767f30ddad5a7be77111877543687af6e70858f61e5a35",
+      "host_import_counts": {
+        "libSystem": 11
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libTelephonyUtilDynamic.dylib",
+      "sha256": "fbec9495240302cf121da82b51600148b1e2d1a19534e796d818a2ba641bf076",
+      "host_import_counts": {
+        "libSystem": 136
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libThaiTokenizer.dylib",
+      "sha256": "d1bc8cdcf0f23de77da2bb9fa9eeb68b190ec8ecbdd17496e717ba4d0d6dd8b2",
+      "host_import_counts": {
+        "libSystem": 17
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libViewDebuggerSupport.dylib",
+      "sha256": "0eff9a8a6e2e3b49d0975c5cbfb9e507df5eecb91267f865f68ccff251428fe2",
+      "host_import_counts": {
+        "libSystem": 14
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libapp_launch_measurement.dylib",
+      "sha256": "f93b964d55099236d01ce5ff7bbeef4c994d4cca8b2893ce9c5fa5dcd0a1c7c4",
+      "host_import_counts": {
+        "libSystem": 66
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libapple_nghttp2.dylib",
+      "sha256": "6d51e160b8a0dafcf8a12d57a6f9e9ace99203b84a38b328e06bd97fbaa4cc5d",
+      "host_import_counts": {
+        "libSystem": 14
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libarchive.2.dylib",
+      "sha256": "686cd5cb4f3d69ecdda4f7fb2c5a64a6a829394bc0dcc3733cdcd3eb7b03fc74",
+      "host_import_counts": {
+        "libSystem": 194
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libarchive.dylib",
+      "sha256": "686cd5cb4f3d69ecdda4f7fb2c5a64a6a829394bc0dcc3733cdcd3eb7b03fc74",
+      "host_import_counts": {
+        "libSystem": 194
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libate.dylib",
+      "sha256": "c2d86d395311b84c898e19ffb9459f71a4cee3600b25139f021d2ef0f3d3fe31",
+      "host_import_counts": {
+        "libSystem": 37
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern4",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern8",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libaxis.dylib",
+      "sha256": "f9ba44151bb88586d7e3f2728c0994f009f27165d4dc7c35c47745645f0b8a91",
+      "host_import_counts": {
+        "libSystem": 82
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libboringssl.dylib",
+      "sha256": "1bde9d810ae5a3515d736ac2ffa88b350d87d1ad793204ce4e1adea67e4f0d70",
+      "host_import_counts": {
+        "libSystem": 198
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libbsm.0.dylib",
+      "sha256": "ddc2dd68fccfafd4a1adf36194a8cae4047debb5e28f1454d71a27d9966667ac",
+      "host_import_counts": {
+        "libSystem": 63
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libbsm.dylib",
+      "sha256": "ddc2dd68fccfafd4a1adf36194a8cae4047debb5e28f1454d71a27d9966667ac",
+      "host_import_counts": {
+        "libSystem": 63
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libbz2.1.0.dylib",
+      "sha256": "bfb19562bc2576328f393ffc4721523087289802ade4b325f09cac379126522c",
+      "host_import_counts": {
+        "libSystem": 23
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libbz2.dylib",
+      "sha256": "bfb19562bc2576328f393ffc4721523087289802ade4b325f09cac379126522c",
+      "host_import_counts": {
+        "libSystem": 23
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libc++.1.dylib",
+      "sha256": "edf8fbc0647fcf500882f555cc0a530a027a15ceab978d10167ac9c892e1c21b",
+      "host_import_counts": {
+        "libSystem": 155
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libc++.dylib",
+      "sha256": "edf8fbc0647fcf500882f555cc0a530a027a15ceab978d10167ac9c892e1c21b",
+      "host_import_counts": {
+        "libSystem": 155
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libc++abi.dylib",
+      "sha256": "385518d1aa7eadbecace8af01ab1a0a0df58126a5ae932f506399595a0ad4590",
+      "host_import_counts": {
+        "libSystem": 39
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libc.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libchannel.dylib",
+      "sha256": "2f662f4c800159a3e780c78379ff9f4036f3096509696bb2d39f1d306355dd70",
+      "host_import_counts": {
+        "libSystem": 54
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcharset.1.dylib",
+      "sha256": "81d0f4564796794391960dab94a261a39777197c4549bad35b7d6f5fa683c872",
+      "host_import_counts": {
+        "libSystem": 24
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcharset.dylib",
+      "sha256": "81d0f4564796794391960dab94a261a39777197c4549bad35b7d6f5fa683c872",
+      "host_import_counts": {
+        "libSystem": 24
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcmark-gfm.dylib",
+      "sha256": "6c968e128ce1e13cc41ac0357348a66169dbda4fea89a8c16db24c49662df7e1",
+      "host_import_counts": {
+        "libSystem": 29
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcmph.dylib",
+      "sha256": "9230c422066a701e9094c03ea20aa7ad791d160aaf3aa93addf026fc203aef41",
+      "host_import_counts": {
+        "libSystem": 29
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcompression.dylib",
+      "sha256": "73a54e482696b62164e4ae08d0963413a8e5ea8a1f326eb21b5820752a274dad",
+      "host_import_counts": {
+        "libSystem": 24
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern8",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcoreroutine.dylib",
+      "sha256": "34c9be576e57f377232e454e9d9b5b9c6afecee7c80b7f7c4d57178bed535bf2",
+      "host_import_counts": {
+        "libSystem": 167
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcoretls.dylib",
+      "sha256": "d22faf698a695aee69d71913778cbdb79d3c1795177a2f294716f511c3b4b47e",
+      "host_import_counts": {
+        "libSystem": 111
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcoretls_cfhelpers.dylib",
+      "sha256": "bdd6c73caa47bf029dc22e12a792bc409fc866485b960e2adecc251996e1ac34",
+      "host_import_counts": {
+        "libSystem": 6
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcupolicy.dylib",
+      "sha256": "030ea2d871621a65b185f6d0ca92d67bf4b6c924e39962afa3ab97cdccf7802e",
+      "host_import_counts": {
+        "libSystem": 43
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcurses.dylib",
+      "sha256": "cc03c2334b51f1e4cedf76765dc3f0d589c8be89ba807708b67de7a2775afc37",
+      "host_import_counts": {
+        "libSystem": 98
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libdbm.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libdl.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libdns_services.dylib",
+      "sha256": "7d12528486e5d4251ac8d9bdbd1f5deee2851aaaf4e7fa56cccd963843b6c017",
+      "host_import_counts": {
+        "libSystem": 109
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libeasyperf.dylib",
+      "sha256": "89e050dfe5999c36cecacb2aaa0d4a61e9e3f5bd4cb28c3a9fa8d548a136a802",
+      "host_import_counts": {
+        "libSystem": 72
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libedit.2.dylib",
+      "sha256": "74a9bac6e554bb5154ab64e36a882fccab158a6688947c38ba03a283f06165e4",
+      "host_import_counts": {
+        "libSystem": 114
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libedit.3.0.dylib",
+      "sha256": "74a9bac6e554bb5154ab64e36a882fccab158a6688947c38ba03a283f06165e4",
+      "host_import_counts": {
+        "libSystem": 114
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libedit.3.dylib",
+      "sha256": "74a9bac6e554bb5154ab64e36a882fccab158a6688947c38ba03a283f06165e4",
+      "host_import_counts": {
+        "libSystem": 114
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libedit.dylib",
+      "sha256": "74a9bac6e554bb5154ab64e36a882fccab158a6688947c38ba03a283f06165e4",
+      "host_import_counts": {
+        "libSystem": 114
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libexpat.1.dylib",
+      "sha256": "98d8f68c3f1bf4776e45679c3478e0d918bc025f5d39727d905cd4bc5cb0cdcd",
+      "host_import_counts": {
+        "libSystem": 20
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libexpat.dylib",
+      "sha256": "98d8f68c3f1bf4776e45679c3478e0d918bc025f5d39727d905cd4bc5cb0cdcd",
+      "host_import_counts": {
+        "libSystem": 20
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libexslt.0.dylib",
+      "sha256": "281846889659891f0ae9606486d93afd903024e33f6f5867d4e46a0e342bc13f",
+      "host_import_counts": {
+        "libSystem": 25
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libexslt.dylib",
+      "sha256": "281846889659891f0ae9606486d93afd903024e33f6f5867d4e46a0e342bc13f",
+      "host_import_counts": {
+        "libSystem": 25
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libextension.dylib",
+      "sha256": "1cb3f62a9e8ccfb1b01e456beefb6affc2f6d1ba22c7c8c401f5c7b76e1618c6",
+      "host_import_counts": {
+        "libSystem": 518
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libffi-trampolines.dylib",
+      "sha256": "f911efe1fd258fb68af00b7bfc688068f351909533e863cd63d4478facb6594f",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libffi.dylib",
+      "sha256": "6aad72274b412d6c56e3c9b7536ea7904a617e67ddaef3f88d27598fd7ed5f9f",
+      "host_import_counts": {
+        "libSystem": 20
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libform.5.4.dylib",
+      "sha256": "783c4f025c38d0e4a4a9b3c9e80f6a231b585e41c534547918cbe04d32a9fc5e",
+      "host_import_counts": {
+        "libSystem": 25
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libform.dylib",
+      "sha256": "783c4f025c38d0e4a4a9b3c9e80f6a231b585e41c534547918cbe04d32a9fc5e",
+      "host_import_counts": {
+        "libSystem": 25
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libgermantok.dylib",
+      "sha256": "5002c3b2abdf8835bf6739d48fe608c67217bbe6fb90be6fae50f074266775fb",
+      "host_import_counts": {
+        "libSystem": 20
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libgmalloc.dylib",
+      "sha256": "943bbdbb6ec9eb964c677107ce29a5dcffdabf7ab6a541a4ba2522d8b0da23cc",
+      "host_import_counts": {
+        "libSystem": 66
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libheimdal-asn1.dylib",
+      "sha256": "c8bfca7ad7359755096ce315b6019752b39cf3ce0b2e93d6241279f7827fd80d",
+      "host_import_counts": {
+        "libSystem": 24
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libheimdalasn1.dylib",
+      "sha256": "b38aa51f2633bbdaeaf1d2ae4946534408dfa6936bfafcb5ba787f38bd51142b",
+      "host_import_counts": {
+        "libSystem": 24
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libhvf.dylib",
+      "sha256": "f509d47d1237630cc899fc4c75ca1e84b3d377819240920d1dd482d098775049",
+      "host_import_counts": {
+        "libSystem": 16
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_bzero",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libiconv.2.dylib",
+      "sha256": "31afafabc598a3cf79c6115a6436d66e9c6012efe303764780a13b9c59599c5c",
+      "host_import_counts": {
+        "libSystem": 47
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libiconv.dylib",
+      "sha256": "31afafabc598a3cf79c6115a6436d66e9c6012efe303764780a13b9c59599c5c",
+      "host_import_counts": {
+        "libSystem": 47
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libicucore.A.dylib",
+      "sha256": "74e33c84364927358a765bda100938264f5858df7057d082faf247eb5b08f0cd",
+      "host_import_counts": {
+        "libSystem": 86
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libicucore.dylib",
+      "sha256": "74e33c84364927358a765bda100938264f5858df7057d082faf247eb5b08f0cd",
+      "host_import_counts": {
+        "libSystem": 86
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libinfo.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/liblangid.dylib",
+      "sha256": "5bdd9edea16f4fb7ec1719c7a141f532279b77508c24c5fd55f8fa7e185cfb7a",
+      "host_import_counts": {
+        "libSystem": 24
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libllvm-flatbuffers.dylib",
+      "sha256": "110fa78007c89d5c28a76f46005abcb101c6018070a816b50cb9e34daee34014",
+      "host_import_counts": {
+        "libSystem": 35
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libllvm-lmdb.dylib",
+      "sha256": "bb6ca787682080cab6c3ee5c0a9443dafec903b8ab30491f814e047587846b6a",
+      "host_import_counts": {
+        "libSystem": 57
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/liblzma.5.dylib",
+      "sha256": "0e52d254f9d698ae93c0e319a954a41215e86b248a2676fc456304254cd7e3f3",
+      "host_import_counts": {
+        "libSystem": 30
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/liblzma.dylib",
+      "sha256": "0e52d254f9d698ae93c0e319a954a41215e86b248a2676fc456304254cd7e3f3",
+      "host_import_counts": {
+        "libSystem": 30
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libm.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libmarisa.dylib",
+      "sha256": "12a9cde0c2dcadf800ec7cd9097e8d2840851c284e82dfadc7a8ec921b023990",
+      "host_import_counts": {
+        "libSystem": 18
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libmd.dylib",
+      "sha256": "3a28b03ba0f168fc60f2b1240bdedc1656d7d6d13ca3c6ced0ff617844384492",
+      "host_import_counts": {
+        "libSystem": 46
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libmdns.dylib",
+      "sha256": "609054311ee1253eefd1a49663bd4401e891a9c6517612d9d695203440821bf1",
+      "host_import_counts": {
+        "libSystem": 184
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libmecab.dylib",
+      "sha256": "72b90e88a39e10ae9e76cc225de7a392096645a5075933c79e71a3c0c0923d23",
+      "host_import_counts": {
+        "libSystem": 48
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libmecabra.dylib",
+      "sha256": "b8bb9e22a29865bceeb9fe025320b3ae48df8f9d361f518c4b301c758ab3ac80",
+      "host_import_counts": {
+        "libSystem": 158
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libmorphun.dylib",
+      "sha256": "58b327eef8a8aee236150fd29f21037523dde087fa16bedbe8c89f53d918e2b0",
+      "host_import_counts": {
+        "libSystem": 37
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libmrc.dylib",
+      "sha256": "3eaa4ccb269f2b5dd4b2f3724d8219ccfddc4afb6b9c9d4b4134d11f92ed82d8",
+      "host_import_counts": {
+        "libSystem": 86
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libncurses.5.4.dylib",
+      "sha256": "cc03c2334b51f1e4cedf76765dc3f0d589c8be89ba807708b67de7a2775afc37",
+      "host_import_counts": {
+        "libSystem": 98
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libncurses.5.dylib",
+      "sha256": "cc03c2334b51f1e4cedf76765dc3f0d589c8be89ba807708b67de7a2775afc37",
+      "host_import_counts": {
+        "libSystem": 98
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libncurses.dylib",
+      "sha256": "cc03c2334b51f1e4cedf76765dc3f0d589c8be89ba807708b67de7a2775afc37",
+      "host_import_counts": {
+        "libSystem": 98
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libnetwork.dylib",
+      "sha256": "979774de33d43cbfa2d3004e7a8ef4de42014e9ba6355689ca12726ac73b662a",
+      "host_import_counts": {
+        "libSystem": 440
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strnlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libnetworkextension.dylib",
+      "sha256": "52102e10c90f9bdbbcbd453284c7f81215ce1ca6f7995feacb3bb149a7fb47f8",
+      "host_import_counts": {
+        "libSystem": 233
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libnfshared.dylib",
+      "sha256": "133aae1f80cc051d5d1f900241909a1ce0b0902afb980c03ef44daad83cf449e",
+      "host_import_counts": {
+        "libSystem": 83
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libobjc-trampolines.dylib",
+      "sha256": "bc4f90de81c5801a6c97613579f015aeb9e69efea5537a68f34484545fb338a2",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libobjc.A.dylib",
+      "sha256": "c1c0662cdb94b7570aa4cc61d5b71941869cde3945374c28fed62d44f4134a7c",
+      "host_import_counts": {
+        "libSystem": 112
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libobjc.dylib",
+      "sha256": "c1c0662cdb94b7570aa4cc61d5b71941869cde3945374c28fed62d44f4134a7c",
+      "host_import_counts": {
+        "libSystem": 112
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libperfcheck.dylib",
+      "sha256": "89e050dfe5999c36cecacb2aaa0d4a61e9e3f5bd4cb28c3a9fa8d548a136a802",
+      "host_import_counts": {
+        "libSystem": 72
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libpoll.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libprequelite.dylib",
+      "sha256": "b96b9febfaef86add8ba72749a14a92ee3019fb9b0fa70dbc19907cac100a106",
+      "host_import_counts": {
+        "libSystem": 57
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libproc.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libprotobuf-lite.dylib",
+      "sha256": "c64d30662ee0c81480d733a9621563f82eb7add7da9cbe4d78f08c16dfe21ccf",
+      "host_import_counts": {
+        "libSystem": 26
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libprotobuf.dylib",
+      "sha256": "52fe9d60a5bf019b2bcca980338723fc57d8f9624b7c595652a0e8030d95d2be",
+      "host_import_counts": {
+        "libSystem": 24
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libpthread.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libquic.dylib",
+      "sha256": "9ae0b558b24783438fe5f18d0625f9f5cbf197f2cb2a75f76cf3caa1e8989ab0",
+      "host_import_counts": {
+        "libSystem": 96
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_index",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/librealtime_safety.dylib",
+      "sha256": "3178c6b3c0f20efb7def233bffe5756f689285958089b22f1556ee401cad55c2",
+      "host_import_counts": {
+        "libSystem": 14
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libresolv.9.dylib",
+      "sha256": "d96c307aad3afb806c836ef0ac734027d5c415b56ae642886b13c43bbabbcccf",
+      "host_import_counts": {
+        "libSystem": 134
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libresolv.dylib",
+      "sha256": "d96c307aad3afb806c836ef0ac734027d5c415b56ae642886b13c43bbabbcccf",
+      "host_import_counts": {
+        "libSystem": 134
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/librpcsvc.dylib",
+      "sha256": "fe610d6327e753728daace02b80c45904a3a63ab345856918c2380c50dcb337d",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libsbuf.dylib",
+      "sha256": "c549be752e532d664c91660e6c04648b92773f0cedc49e096bcfc3351b128bdd",
+      "host_import_counts": {
+        "libSystem": 12
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libskit.dylib",
+      "sha256": "5adea25de3cecbba459027a78023473979948331d1122a01866fd824f38abd22",
+      "host_import_counts": {
+        "libSystem": 58
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset_pattern16",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libsqlite3.0.dylib",
+      "sha256": "3934dcee9b252a44e3732cb06dc8d12b712f6862733b4bff38d01c7b490c3e35",
+      "host_import_counts": {
+        "libSystem": 212
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libsqlite3.dylib",
+      "sha256": "3934dcee9b252a44e3732cb06dc8d12b712f6862733b4bff38d01c7b490c3e35",
+      "host_import_counts": {
+        "libSystem": 212
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcat",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libtidy.A.dylib",
+      "sha256": "2c900ec54d812406520c63d8bd3646d2dbab0a48f5a1e42db7b49f0c5df40c42",
+      "host_import_counts": {
+        "libSystem": 37
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libtidy.dylib",
+      "sha256": "2c900ec54d812406520c63d8bd3646d2dbab0a48f5a1e42db7b49f0c5df40c42",
+      "host_import_counts": {
+        "libSystem": 37
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strstr",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libusrtcp.dylib",
+      "sha256": "00b17a31d80b89f7033090ff58467a3e17385ba2a2af65f8cf3d9cdf6dd11d6f",
+      "host_import_counts": {
+        "libSystem": 46
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libutil.dylib",
+      "sha256": "605c6a377e8adc1556bf16ea33b9bb7ffc7d1ae81c099580c512e9568078268e",
+      "host_import_counts": {
+        "libSystem": 79
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libutil1.0.dylib",
+      "sha256": "605c6a377e8adc1556bf16ea33b9bb7ffc7d1ae81c099580c512e9568078268e",
+      "host_import_counts": {
+        "libSystem": 79
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libxml2.2.dylib",
+      "sha256": "cb8c1bddf2485f7270235f6117f8f3a9367f302aac376219ba32f77dba9159fe",
+      "host_import_counts": {
+        "libSystem": 109
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libxml2.dylib",
+      "sha256": "cb8c1bddf2485f7270235f6117f8f3a9367f302aac376219ba32f77dba9159fe",
+      "host_import_counts": {
+        "libSystem": 109
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libxo.dylib",
+      "sha256": "99e0ffed4de7fc65c52289a178c76136c98f2386c241f44ce10375699c1c5b6b",
+      "host_import_counts": {
+        "libSystem": 63
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strcmp",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strncmp",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libxpc_datastores.dylib",
+      "sha256": "d7b72348d8e394a807a7bebdd1e2b1fabe8e94d4dcc46ac7eab1e1053926f142",
+      "host_import_counts": {
+        "libSystem": 64
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libxslt.1.dylib",
+      "sha256": "6d950d135812273ec349e6b366744ad05b698ba7b64b65e84b7de34a4091a0f1",
+      "host_import_counts": {
+        "libSystem": 35
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libxslt.dylib",
+      "sha256": "6d950d135812273ec349e6b366744ad05b698ba7b64b65e84b7de34a4091a0f1",
+      "host_import_counts": {
+        "libSystem": 35
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.1.1.3.dylib",
+      "sha256": "be262b0ce159dbc1e405bb93f91c46e6264e5b2cfea9b0b483103c75afe5977f",
+      "host_import_counts": {
+        "libSystem": 19
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.1.2.11.dylib",
+      "sha256": "be262b0ce159dbc1e405bb93f91c46e6264e5b2cfea9b0b483103c75afe5977f",
+      "host_import_counts": {
+        "libSystem": 19
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.1.2.12.dylib",
+      "sha256": "be262b0ce159dbc1e405bb93f91c46e6264e5b2cfea9b0b483103c75afe5977f",
+      "host_import_counts": {
+        "libSystem": 19
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.1.2.5.dylib",
+      "sha256": "be262b0ce159dbc1e405bb93f91c46e6264e5b2cfea9b0b483103c75afe5977f",
+      "host_import_counts": {
+        "libSystem": 19
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.1.2.8.dylib",
+      "sha256": "be262b0ce159dbc1e405bb93f91c46e6264e5b2cfea9b0b483103c75afe5977f",
+      "host_import_counts": {
+        "libSystem": 19
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.1.dylib",
+      "sha256": "be262b0ce159dbc1e405bb93f91c46e6264e5b2cfea9b0b483103c75afe5977f",
+      "host_import_counts": {
+        "libSystem": 19
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.dylib",
+      "sha256": "be262b0ce159dbc1e405bb93f91c46e6264e5b2cfea9b0b483103c75afe5977f",
+      "host_import_counts": {
+        "libSystem": 19
+      },
+      "absent_wrapper_and_host_exports": [
+        {
+          "symbol": "_memchr",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memcpy",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memmove",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_memset",
+          "provider": "libSystem",
+          "weak": false
+        },
+        {
+          "symbol": "_strlen",
+          "provider": "libSystem",
+          "weak": false
+        }
+      ]
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcache.dylib",
+      "sha256": "65e802892b610068ee07828a38cb5bea9fa27fdb9938fcab9a429d53dc59a836",
+      "host_import_counts": {
+        "libsystem_sim_platform": 3,
+        "libsystem_sim_kernel": 3
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcommonCrypto.dylib",
+      "sha256": "9d3d5eb52c0b8bef7a01af2be57cf872a467bbbde6f9b40a34bdf2b2a9d278f7",
+      "host_import_counts": {
+        "libsystem_sim_platform": 1,
+        "libsystem_sim_kernel": 3
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcompiler_rt.dylib",
+      "sha256": "fc7836649755bea42a0b6362594ce413d846c25ed9cded65f3351736e07f4d79",
+      "host_import_counts": {
+        "libsystem_sim_pthread": 1,
+        "libsystem_sim_platform": 2
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcopyfile.dylib",
+      "sha256": "f9643b7ab8633fc0d64d07a8429bd439994011a3ee0331c601590bf52ed975a9",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 37
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcorecrypto.dylib",
+      "sha256": "ccbe503428d870efcfe6ece08c5793d36ed66e2421d86b4fcb9a6dcf9c5fb691",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 4,
+        "libsystem_sim_platform": 4
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcorecrypto_noasm.dylib",
+      "sha256": "7464fbd636045ee1ad40d477468c45fc6600ea64726cdc2828819dcf7b62ba12",
+      "host_import_counts": {
+        "libsystem_sim_platform": 4,
+        "libsystem_sim_kernel": 3
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcorecrypto_trace.dylib",
+      "sha256": "e085217a5fc3d1134f71b9e66bda6e9fd6079268b5c0de82c21aee90f3d5b3a4",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 4,
+        "libsystem_sim_platform": 4
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libdispatch.dylib",
+      "sha256": "c8916ca8cc53d106df692b89a087324a6ce0b7b74e0772d95b6f1fbf3351c459",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 90,
+        "libsystem_sim_pthread": 42,
+        "libsystem_sim_platform": 3
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libdyld.dylib",
+      "sha256": "5e1c5c2566d16ba4af7979260a9073a85da9e27686b9605e6fdc1d783ca9e584",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 35,
+        "libsystem_sim_platform": 10,
+        "libsystem_sim_pthread": 6
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/liblaunch.dylib",
+      "sha256": "1f51e118f067f99e2567469bd9f358e47fdbe6fe1ab6a534efb488a1ddfd45ea",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libmacho.dylib",
+      "sha256": "be7f3b342c0259932a63f1ca38520d099a2dd4de6ae0061e05018ec133148f8c",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 4
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libremovefile.dylib",
+      "sha256": "cfddf0542cba3e06eb9b0dc4974e9aa62cddbf539c2f715f8da24b961cfe2adf",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 21
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_asl.dylib",
+      "sha256": "945c28c0894e5078fb2d115c54d917c090e73537a75b0c623ea45ace57b909ec",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 30,
+        "libsystem_sim_platform": 1,
+        "libsystem_sim_pthread": 3
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_blocks.dylib",
+      "sha256": "23abac275e8d1acb3adb737d64336726b6a705cd1f1fba385997fb24172bd29b",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_c.dylib",
+      "sha256": "a9c74bab7c339a1b7402366d89c4632d677151a4938c868595ba4f9085787928",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 129,
+        "libsystem_sim_platform": 37,
+        "libsystem_sim_pthread": 24
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_collections.dylib",
+      "sha256": "6117b51c281bb78883b405c99367aa8d96368fe117625b3e1b240e3798a83d54",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_configuration.dylib",
+      "sha256": "623e89d568f70ad00319f395a618621e79a8301d6a406664d9fa0fc3e72facba",
+      "host_import_counts": {
+        "libsystem_sim_pthread": 2
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_containermanager.dylib",
+      "sha256": "2167eab207b1773a78f81a46b8ae9eb960eb3767a502f3dae216505eb7967260",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 62,
+        "libsystem_sim_platform": 5
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_coreservices.dylib",
+      "sha256": "7f75d20542c466524c45485c7991257e51d2835f94e0ff26f31888a296aaa1da",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 9,
+        "libsystem_sim_platform": 2,
+        "libsystem_sim_pthread": 1
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_darwin.dylib",
+      "sha256": "e7c6e393fe247e4816fe80765107bf74cf7cbb51b7a15e7071ececcfa1885899",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 25
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_dnssd.dylib",
+      "sha256": "6c2ff15998e06300e1624906df457da086c371a67ce647750ddbdde6001dcc6b",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 16,
+        "libsystem_sim_platform": 2
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_eligibility.dylib",
+      "sha256": "5fedc890d19c96892b05699a5d058a4cc8b389e64bf533b73aaedb3adf3f2a97",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 6
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_featureflags.dylib",
+      "sha256": "dff874d953222f652faf964905b1618b51b489e7e6522525da2ff8fa2176a89a",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 5,
+        "libsystem_sim_platform": 3
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_info.dylib",
+      "sha256": "4e8f4f71eec74651c2ef359d72f24d1edfa12c710cd30ccc5e6189bd624be0b6",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 46,
+        "libsystem_sim_platform": 2,
+        "libsystem_sim_pthread": 10
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_m.dylib",
+      "sha256": "76434f80fa02788e4663f1be1c39840a6b0fe7e82459d99e978de0965235f5cb",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_malloc.dylib",
+      "sha256": "7ffe075bc378f01dad29ae5d338c35044b272359aa361c37b8fb694bbe270545",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 33,
+        "libsystem_sim_platform": 28,
+        "libsystem_sim_pthread": 6
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_networkextension.dylib",
+      "sha256": "d2f46bb4017527ebbd10dda563a9d1745e92f6f2ec1badca37df32dc71387b03",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_notify.dylib",
+      "sha256": "0d730187419b58ca5f5f86c57eb2f4295f302b288b4c1b8b0ba4470006b284eb",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 25,
+        "libsystem_sim_platform": 6
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sandbox.dylib",
+      "sha256": "b9728e96f1bc11c806b589deb924568187514b94045b3813aa6ff7a6e1328dee",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 11,
+        "libsystem_sim_platform": 6
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sanitizers.dylib",
+      "sha256": "ce66f21890e04bed1cec3e794c83077091f32ce607da26aad7028d50d390272d",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 6,
+        "libsystem_sim_pthread": 2,
+        "libsystem_sim_platform": 1
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_kernel.dylib",
+      "sha256": "2bac7f99c83be29142ce410d34ffb168f880891a47feccc844c5386991c7d7fe",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_kernel_host.dylib",
+      "sha256": "d8cc28079571f0c8329ab62b05f9b7c6a27e00b5ee041825fba7619da34ddb1a",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_platform.dylib",
+      "sha256": "5d99420afbd9d44170d9e74380b49871559b0963f6711d0da6e7e1bcb7944039",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 19
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_platform_host.dylib",
+      "sha256": "66b47df07bdf6c715bde50e15298ed08198736fc060bc1fab7ec899edd95415f",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_pthread.dylib",
+      "sha256": "98b45510af16a3cea8a39481c9aa7651decb5ee3e27276abf8d0b2c255869d1c",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 1
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_pthread_host.dylib",
+      "sha256": "7cac85a2d4335471a7bcda3a93aa2574df280744c44c1031e5b2a6734edf0ce5",
+      "host_import_counts": {},
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_trace.dylib",
+      "sha256": "7af6b3407f78b0d38639cfb00f867a1dd0bd9f1882904f49bf0fdf0f09d9c1e6",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 37,
+        "libsystem_sim_platform": 6,
+        "libsystem_sim_pthread": 5
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_trial.dylib",
+      "sha256": "f4d24f647d2691f1e6b025e747b8fb33ae987eb432f6328b8f93088d5b0ea7ce",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 1
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libunwind.dylib",
+      "sha256": "bc71daceb4bb2970750aae8aea74ddcc22495a885635a8e3d72848d21f1407fb",
+      "host_import_counts": {
+        "libsystem_sim_pthread": 3
+      },
+      "absent_wrapper_and_host_exports": []
+    },
+    {
+      "image": "runtime/ios265-simulator-extracted-v1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libxpc.dylib",
+      "sha256": "e039e79b5d2ab833472a0c0b091117b83c8ce30104e83dc2e3d17dbbe4d3a313",
+      "host_import_counts": {
+        "libsystem_sim_kernel": 65,
+        "libsystem_sim_platform": 10,
+        "libsystem_sim_pthread": 4
+      },
+      "absent_wrapper_and_host_exports": []
+    }
+  ],
+  "image_count": 190,
+  "missing_count": 856,
+  "tool": "scripts/audit-simulator-host-imports.py",
+  "tool_sha256": "7fa3337183ddb92946322950eacc7431c7f266d2a83b913b8ddfcd215f1d2464",
+  "full_goal_complete": false
+}

@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/apple-oss-distributions/xnu",
+  "source_urls": {
+    "open_dprotected_np.c": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/libsyscall/wrappers/open_dprotected_np.c",
+    "fcntl.h": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/sys/fcntl.h",
+    "syscalls.master": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/kern/syscalls.master",
+    "vfs_syscalls.c": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/vfs/vfs_syscalls.c"
+  },
+  "files": {
+    "runtime/apple-open-auth-reference-v1/open_dprotected_np.c": "97edddddaeead17d09bc6d609b4a48f4fd860a893c44d9a8189b2755391fd0a2",
+    "runtime/apple-open-auth-reference-v1/fcntl.h": "0f93c8918a70ffafe20bfe9c72e671fde67438cbee9f9de8c2f87b5c704c9a9e",
+    "runtime/apple-open-auth-reference-v1/syscalls.master": "7e866891439ad5b3464777d2cacc3b82fc2e7f439fb5a8686c3e6f160d5aeab5",
+    "runtime/apple-open-auth-reference-v1/vfs_syscalls.c": "b30d68fb85f34b864b5e71e3127541c2674e0fb52e59d6ee072c8b0ecbb46a4f"
+  },
+  "contract": "AUTH_OPEN_NOAUTHFD only omits another descriptor authentication context; target file authentication remains requested by O_DP_AUTHENTICATE. Unsupported backend must not silently perform ordinary open.",
+  "full_goal_complete": false
+}

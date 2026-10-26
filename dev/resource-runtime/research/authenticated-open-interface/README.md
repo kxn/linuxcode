@@ -1,0 +1,13 @@
+# 数据保护文件接口的真实普通I/O与明确能力错误
+
+原版iOS Security强导入openat_authenticated_np。本次复用Apple公开的完整open_dprotected_np/openat_dprotected_np/openat_authenticated_np包装函数，并将七参数原始入口路由到实际内核兼容层。包装参数检查与原版Intel参考一致：禁止认证打开时创建文件、检查authfd负值等。
+
+重要契约：AUTH_OPEN_NOAUTHFD=-1仅表示不借用另一个描述符的认证上下文，仍然请求对目标文件认证。当前Linux文件系统没有Darwin的数据保护/认证打开实现，因此认证、原始加密访问及创建指定保护类别明确返回ENOTSUP；不降级成普通打开。无这些额外要求的普通路径则实际调用现有openat后端，保留字节读写、创建权限、CLOEXEC及路径行为。
+
+首轮测试遇到旧系统调用表218号lstatv占位覆盖了新增处理函数，导致普通路径也返回ENOTSUP。两个GDB捕获保留，第二个核对实际字节与入口地址，证明七参数ABI传递正确、表项指向旧占位。已删除冲突，并在构建开始前检查重复编号。修正后完整886单元构建及原生普通读写、七参数传输、参数错误、保护操作不产生文件/不假成功等检查通过。
+
+扩展的静态工具以x86_64检查原始模拟器包装库和宿主导出名称，必要时纳入libSystem再导出名称。它只是名字检查，不证明所有再导出目标、ABI或执行正确。顶层190个镜像检查最终无名字缺口；更大范围2609个镜像中有2个检查失败，24个缺失导入涉及14个强符号，集中在Skywalk channel组。失败项保留，未作为通过。
+
+原版ibtool越过文件接口，现到CoreUtils的os_channel_advance_slot，实际报告runtime/original-storyboard-61fzrdct/result.json仍以255退出。完整Storyboard和Unity App尚未成功，默认安装环境未提升。下一步整组复用新公开的Skywalk客户端源码，并保持未实现内核通道能力的真实错误。
+
+源码已推到kxn/darling-xnu原有linuxcode/xcode-x86_64分支，身份为Comman Kang <kangxn@gmail.com>。附件仅UTF-8源码、日志、报告与摘要；不含Apple/Unity二进制、SDK、XIP、core或私钥。

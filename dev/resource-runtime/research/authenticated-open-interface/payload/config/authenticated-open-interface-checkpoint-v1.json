@@ -1,0 +1,41 @@
+{
+  "name": "authenticated-open-interface",
+  "payload": [
+    "vendor/darling/src/external/xnu/libsyscall/wrappers/open_dprotected_np.c",
+    "vendor/darling/src/external/xnu/libsyscall/CMakeLists.txt",
+    "vendor/darling/src/external/xnu/libsyscall/bsdsyscalls/___openat_dprotected_np.S",
+    "vendor/darling/src/external/xnu/bsd/kern/syscalls.master",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/CMakeLists.txt",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/bsd_syscall_table.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/fcntl/openat.h",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/fcntl/openat_dprotected.c",
+    "scripts/build-libsystem-kernel-source.py",
+    "scripts/probe-authenticated-open.py",
+    "fixtures/hello/authenticated-open-native.c",
+    "scripts/audit-simulator-host-imports.py"
+  ],
+  "reference": [
+    "artifacts/authenticated-open-source-publication-v1.json",
+    "artifacts/authenticated-open-upstream-reference-v1.json",
+    "artifacts/authenticated-open-kernel-v1-build.json",
+    "artifacts/authenticated-open-kernel-v2-build.json",
+    "artifacts/private-procfs-auditsession46-stage.json",
+    "artifacts/private-procfs-auditsession47-stage.json",
+    "runtime/authenticated-open-native-tz2is0az/result.json",
+    "runtime/authenticated-open-native-ygfcwoue/result.json",
+    "runtime/authenticated-open-native-l61ixsvf/result.json",
+    "runtime/authenticated-open-native-ry8gg80r/result.json",
+    "runtime/original-storyboard-61fzrdct/result.json",
+    "artifacts/simulator-top-level-host-imports-v1.json",
+    "artifacts/simulator-top-level-host-imports-v2.json",
+    "artifacts/simulator-framework-host-imports-v1.json",
+    "runtime/apple-open-auth-reference-v1/open_dprotected_np.c",
+    "runtime/apple-open-auth-reference-v1/fcntl.h",
+    "logs/authenticated-open-native-debug-v1.gdb.log",
+    "logs/authenticated-open-native-debug-v2.gdb.log",
+    "logs/authenticated-open-native-debug-v2.maps.log",
+    "logs/authenticated-open-kernel-v1-build.log",
+    "logs/authenticated-open-kernel-v2-build.log",
+    "config/direct-resource-tool-environment-v150.json"
+  ]
+}
