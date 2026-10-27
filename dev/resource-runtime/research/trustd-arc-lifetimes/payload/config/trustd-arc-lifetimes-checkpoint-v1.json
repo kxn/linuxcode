@@ -1,0 +1,24 @@
+{
+  "name": "trustd-arc-lifetimes",
+  "payload": [
+    "vendor/darling/src/external/security/trust/trustd/CMakeLists.txt",
+    "scripts/build-trustd-source.py",
+    "fixtures/hello/trustd-build-declarations.h",
+    "scripts/native-certificate-runtime.py",
+    "fixtures/hello/unanchored-identity-chain.c",
+    "scripts/probe-unanchored-identity-chain.py",
+    "config/native-certificate-candidate-v8.json",
+    "scripts/probe-unreal-dotnet-runtime.py"
+  ],
+  "reference": [
+    "artifacts/trustd-ARC-build-and-native-v1.json",
+    "runtime/trustd-source-nnzdc_2n/build.json",
+    "runtime/unanchored-identity-chain-jjjq36z7/result.json",
+    "runtime/unanchored-identity-chain-2ndh239q/result.json",
+    "runtime/unanchored-external-developer-trustd-fault-v1-process/result.json",
+    "artifacts/unanchored-external-developer-trustd-fault-v1-process-symbolication.json",
+    "logs/unanchored-external-developer-trustd-fault-v1-process.macho-symbolicated.log",
+    "runtime/unanchored-identity-chain-wz3ialwx/result.json",
+    "artifacts/UE-bootstrap-progress-v1.json"
+  ]
+}
