@@ -1,0 +1,82 @@
+#include <dlfcn.h>
+#include <errno.h>
+#include <pthread.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/event.h>
+#include <mach/mach.h>
+
+struct event {uint64_t ident;int16_t filter;uint16_t flags;int32_t qos;uint64_t udata;uint32_t fflags,xflags;int64_t data;uint64_t ext[4];};
+struct config {uint32_t flags,version;void(*event)(void**,int*);void(*loop)(uint64_t*,void**,int*);void(*worker)(unsigned long);uint64_t serial,label;};
+static int (*call)(uint64_t,const struct event*,int,struct event*,int,void*,unsigned long*,unsigned);
+static unsigned callbacks;
+static void fail(const char* text,int line){fprintf(stderr,"WORKLOOP_SYNC_FAIL line=%d %s errno=%d\n",line,text,errno);exit(1);}
+#define CHECK(x) do{if(!(x))fail(#x,__LINE__);}while(0)
+static void callback(uint64_t* id,void** ev,int* count){__atomic_add_fetch(&callbacks,1,__ATOMIC_RELAXED);*count=0;}
+static void worker(unsigned long p){__atomic_add_fetch(&callbacks,1,__ATOMIC_RELAXED);}
+static const uint64_t ids[]={0x571170000001,0x571170000002};
+static struct event event(uint64_t key,unsigned cmd,unsigned flags){return(struct event){.ident=key,.filter=-17,.flags=flags,.qos=0x8ff,.fflags=cmd};}
+static void change(unsigned domain,struct event ev,int error){
+ ev.flags|=EV_RECEIPT;
+ CHECK(call(ids[domain],&ev,1,&ev,1,NULL,NULL,0x403)==1);
+ if(!(ev.flags&EV_ERROR) || ev.data!=error)fprintf(stderr,"SYNC_RECEIPT domain=%u ident=%llu fflags=%x flags=%x data=%lld expected=%d\n",domain,(unsigned long long)ev.ident,ev.fflags,ev.flags,(long long)ev.data,error);
+ CHECK((ev.flags&EV_ERROR) && ev.data==error);
+}
+struct waiter {unsigned domain,done,started;uint64_t key;int result,error;};
+static void* wait_thread(void* opaque){
+ struct waiter* w=opaque;struct event ev=event(w->key,4,EV_ADD|EV_DISABLE);
+ __atomic_store_n(&w->started,1,__ATOMIC_RELEASE);
+ w->result=call(ids[w->domain],&ev,1,NULL,0,NULL,NULL,0x402);w->error=errno;
+ __atomic_store_n(&w->done,1,__ATOMIC_RELEASE);return NULL;
+}
+static void blocked(pthread_t thread,struct waiter* w){
+ for(int i=0;i<3000;i++){
+  if(!__atomic_load_n(&w->started,__ATOMIC_ACQUIRE)){usleep(1000);continue;}
+  thread_basic_info_data_t info;mach_msg_type_number_t count=THREAD_BASIC_INFO_COUNT;
+  if(thread_info(pthread_mach_thread_np(thread),THREAD_BASIC_INFO,(thread_info_t)&info,&count)==KERN_SUCCESS && info.run_state==TH_STATE_WAITING){CHECK(!__atomic_load_n(&w->done,__ATOMIC_ACQUIRE));return;}
+  CHECK(!__atomic_load_n(&w->done,__ATOMIC_ACQUIRE));usleep(1000);
+ }
+ fail("real waiter did not block",__LINE__);
+}
+static void joined(pthread_t t,struct waiter* w){CHECK(pthread_join(t,NULL)==0);CHECK(w->done && w->result==0);}
+int main(void){
+ alarm(40);setbuf(stdout,NULL);
+ call=dlsym(RTLD_DEFAULT,"kevent_id");int(*setup)(struct config*,size_t)=dlsym(RTLD_DEFAULT,"pthread_workqueue_setup");CHECK(call&&setup);
+ struct config cfg={.version=2,.loop=callback,.worker=worker};CHECK(setup(&cfg,sizeof cfg)==0);
+ /* Wake-before-wait is latched, not lost to futex scheduling order. */
+ for(unsigned s=0;s<2;s++){
+  change(s,event(100,8,EV_ADD|EV_DISABLE),0);
+  struct event ev=event(100,4,EV_ADD|EV_DISABLE);CHECK(call(ids[s],&ev,1,NULL,0,NULL,NULL,0x402)==0);
+  change(s,event(100,8,EV_ADD|EV_DISABLE),EALREADY);
+  change(s,event(100,4,EV_DELETE),0);change(s,event(100,4,EV_DELETE),ENOENT);
+  change(s,event(ids[s],4,EV_ADD|EV_DISABLE),EINVAL);
+  change(s,event(101,8,EV_ADD),EINVAL);
+  ev=event(102,4,EV_ADD|EV_DISABLE);ev.fflags|=0x20;change(s,ev,EINVAL);
+  ev=event(102,8,EV_ADD|EV_DISABLE);ev.fflags|=0x80;change(s,ev,ENOTSUP);
+  uint64_t state=12;ev=event(103,4,EV_ADD|EV_DISABLE);ev.ext[1]=(uintptr_t)&state;ev.ext[2]=UINT64_MAX;ev.ext[3]=11;
+  struct event out;CHECK(call(ids[s],&ev,1,&out,1,NULL,NULL,0x403)==1&&out.data==ESTALE&&out.ext[3]==12);
+  ev.fflags|=0x100;CHECK(call(ids[s],&ev,1,&out,1,NULL,NULL,0x403)==0);
+  change(s,event(103,4,EV_DELETE),ENOENT);
+  ev.ext[1]=8;change(s,ev,EFAULT);ev.ext[1]=9;change(s,ev,EINVAL);
+ }
+ /* Same identifiers in distinct domains must never cross-wake. */
+ for(unsigned round=0;round<32;round++){
+  struct waiter w[2]={{.domain=0,.key=200+round},{.domain=1,.key=200+round}};pthread_t t[2];
+  for(unsigned s=0;s<2;s++){CHECK(pthread_create(&t[s],NULL,wait_thread,&w[s])==0);blocked(t[s],&w[s]);}
+  change(0,event(w[0].key,8,0),0);joined(t[0],&w[0]);CHECK(!__atomic_load_n(&w[1].done,__ATOMIC_ACQUIRE));
+  change(1,event(w[1].key,8,0),0);joined(t[1],&w[1]);
+  for(unsigned s=0;s<2;s++)change(s,event(w[s].key,4,EV_DELETE),0);
+ }
+ /* Deletion wakes a real blocked thread; immediate identifier reuse cannot
+  * reuse its pinned row and lose the old wake. */
+ for(unsigned round=0;round<32;round++){
+  struct waiter w={.domain=0,.key=400};pthread_t t;CHECK(pthread_create(&t,NULL,wait_thread,&w)==0);blocked(t,&w);
+  change(0,event(400,4,EV_DELETE),0);change(0,event(400,8,EV_ADD|EV_DISABLE),0);
+  struct event ev=event(400,4,EV_ADD|EV_DISABLE);CHECK(call(ids[0],&ev,1,NULL,0,NULL,NULL,0x402)==0);
+  joined(t,&w);change(0,event(400,8,EV_DELETE),0);
+ }
+ CHECK(!callbacks);
+ puts("WORKLOOP_SYNC_REAL_BLOCK_WAKE_PREWAKE_DELETE_AND_DOMAIN_ISOLATION_OK waits=96 reuse=32");return 0;
+}

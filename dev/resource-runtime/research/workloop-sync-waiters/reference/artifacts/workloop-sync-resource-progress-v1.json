@@ -1,0 +1,22 @@
+{
+  "selected_stage": "artifacts/private-procfs-auditsession72-stage.json",
+  "original_first_fault": "runtime/assetcatalog-follow-spawn-first-fault-v1-agent/result.json",
+  "exact_fault_host_PID": 1444733,
+  "first_fault": "SIGILL in original libdispatch _dispatch_event_loop_wait_for_ownership.cold.7 with Darwin ENOTSUP45 during CoreData persistent-store replacement for CoreThemeDocument CAR compilation.",
+  "sync_waiter_command": 4,
+  "native": "runtime/workloop-sync-36w7kgpw/result.json",
+  "real_blocked_waits": 96,
+  "delete_and_identifier_reuse_rounds": 32,
+  "affected_async_queued_updates": 200,
+  "affected_async_pipe_events": 64,
+  "kernel_recompiled_units": 1,
+  "kernel_reused_units": 906,
+  "known_limitations": [
+    "No priority inheritance or Darwin scheduling guarantees",
+    "No ownership discovery/end-ownership modifiers",
+    "No synchronous IPC turnstiles",
+    "256 process-private waiter registrations; domains retained until exit; inherited domains remain unsupported"
+  ],
+  "focused_original_retest": "runtime/workloop-sync-assetcatalog-first-fault-v1/result.json",
+  "full_App_verified": false
+}

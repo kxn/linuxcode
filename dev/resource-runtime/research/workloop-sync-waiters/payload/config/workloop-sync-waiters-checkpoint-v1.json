@@ -1,0 +1,30 @@
+{
+  "name": "workloop-sync-waiters",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/kqueue/kevent_id.c",
+    "fixtures/hello/workloop-sync.c",
+    "scripts/probe-workloop-sync.py",
+    "scripts/capture-live-macho-fault.py",
+    "scripts/capture-assetcatalog-agent-fault.py"
+  ],
+  "reference": [
+    "artifacts/workloop-sync-source-publication-v1.json",
+    "logs/workloop-sync-source-push-v1.log",
+    "artifacts/workloop-sync-resource-progress-v1.json",
+    "artifacts/workloop-sync-kernel-v1-build.json",
+    "runtime/workloop-sync-kernel-v1/plan.json",
+    "runtime/workloop-sync-kernel-v1/link.log",
+    "artifacts/private-procfs-auditsession72-stage.json",
+    "runtime/workloop-sync-382ibq7a/result.json",
+    "runtime/workloop-sync-25nh08cm/result.json",
+    "runtime/workloop-sync-36w7kgpw/result.json",
+    "runtime/assetcatalog-follow-spawn-first-fault-v1/result.json",
+    "runtime/assetcatalog-follow-spawn-first-fault-v1/probe.log",
+    "runtime/assetcatalog-follow-spawn-first-fault-v1-agent/result.json",
+    "runtime/assetcatalog-follow-spawn-first-fault-v1-agent/process.gdb.log",
+    "runtime/assetcatalog-follow-spawn-first-fault-v1-agent/process.maps",
+    "logs/assetcatalog-follow-spawn-first-fault-v1.nlist-symbolicated.log",
+    "artifacts/assetcatalog-follow-spawn-first-fault-v1-map-bindings.json",
+    "artifacts/assetcatalog-follow-spawn-first-fault-v1-nlist-symbolication.json"
+  ]
+}

@@ -218,3 +218,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Receive-message flag translation](research/recvfrom-message-flags/README.md): live syscall exposes Darwin/Linux MSG_DONTWAIT mismatch; independent old-stage timeout and fixed-stage immediate EAGAIN, peek and real process events.
 
 - [Unity Storyboards and main executable link](research/unity-storyboards-and-main-link/README.md): original full build compiles/links both Storyboards and arm64 Unity main; actool remains the resource blocker, so final App signing is not claimed.
+
+- [Real synchronous workloop waits](research/workloop-sync-waiters/README.md): actual asset-agent first fault,96 blocking waits and32 delete/reuse rounds; affected async queue regression also passes.
