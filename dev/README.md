@@ -4,7 +4,9 @@
 
 UE 调试中修好的源代码运行库已接回 Unity/CocoaPods 证书构建：[stage101 整合实测](resource-runtime/research/stage101-unity-certificate-integration/README.md) 的原版 Xcode 构建、外层退出及 7 项严格签名与独立 CMS 检查全部通过。该次复用编译缓存；下文的新空构建目录流程也已通过。
 
-最新实测进展：全新 Linux Unity 6000.3.27f1 项目已完成 iOS 导出、原版 CocoaPods、空 DerivedData 中单次原版 Xcode 编译和证书签名；原生与外层正常退出，原版严格验签、独立 CMS 检查及实际 Pod 符号链接全部通过。[完整证据与可复用脚本](resource-runtime/research/unity-fresh-linux-certificate-end-to-end/README.md) 保存 48 项 Xcode 编译、282 项 IL2CPP 更新和 5 项签名记录。使用自生成测试证书；较早运行库上的 Release xcarchive/dSYM 实测仍保留，当前运行库的归档、开发者 provisioning、设备安装与完整冷重建继续推进。下文历史附件的“当前阻塞”对应其生成时的状态。
+当前 v12/stage101 也已完成[全新 Unity 项目的 Release xcarchive](resource-runtime/research/stage101-fresh-unity-release-archive/README.md)：App 和 UnityFramework 的签名、真实 dSYM、UUID 匹配及 LLVM 全量 DWARF 校验全部通过，原有 Debug 产物保留。
+
+最新实测进展：全新 Linux Unity 6000.3.27f1 项目已完成 iOS 导出、原版 CocoaPods、空 DerivedData 中单次原版 Xcode 编译和证书签名；原生与外层正常退出，原版严格验签、独立 CMS 检查及实际 Pod 符号链接全部通过。[完整证据与可复用脚本](resource-runtime/research/unity-fresh-linux-certificate-end-to-end/README.md) 保存 48 项 Xcode 编译、282 项 IL2CPP 更新和 5 项签名记录。使用自生成测试证书；当前运行库的 Release xcarchive/dSYM 也已通过下述实测；开发者 provisioning、设备安装与完整冷重建继续推进。下文历史附件的“当前阻塞”对应其生成时的状态。
 
 UE 的原版 Intel macOS SDK 已在 Darling 下成功编译完整 UnrealBuildTool：13 个项目、零警告、零错误、正常退出；生成的工具也已实际运行 `-Help` 并返回零。[完整 UBT 构建及启动证据](resource-runtime/research/unreal-original-UBT-build/README.md) 保存参数和 13 个私有产物的校验摘要。UE iOS App 仍未验证；Linux SDK 只用于下载依赖，实际编译使用原版 macOS SDK。
 

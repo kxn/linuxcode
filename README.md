@@ -9,11 +9,11 @@ Unity 授权可使用原生 Linux CLI：`linuxcode.py unity auth login`，无需
 
 新增：**完整 Unity/CocoaPods 工程已由原版 xcodebuild 调用原版 codesign 完成真实测试证书签名，构建退出码为 0。** App、内嵌 Framework 和静态库共七个产物通过原版严格验证及独立 CMS/页面/资源检查，包含双 CodeDirectory 与篡改拒绝测试。本次复用编译缓存；自签测试明确关闭 profile 要求，尚不代表开发者 provisioning 或设备安装可用。详见[完整 Unity 证书 CI](dev/resource-runtime/research/unity-certificate-ci/README.md)。
 
-最新补充已通过**单次全新 DerivedData 构建**，并确认 Unity 临时缓存入口起初也不存在：58 项 Xcode 编译、完整 IL2CPP 和资源流程成功，374 个 arm64 Unity 归档对象独立核对。修复与证据见[加载器布局和文件事件检查点](dev/resource-runtime/research/loader-layout-and-fsevents/README.md)。
+较早的 Unity 样例已通过**单次全新 DerivedData 构建**，并确认 Unity 临时缓存入口起初也不存在：58 项 Xcode 编译、完整 IL2CPP 和资源流程成功，374 个 arm64 Unity 归档对象独立核对。修复与证据见[加载器布局和文件事件检查点](dev/resource-runtime/research/loader-layout-and-fsevents/README.md)。
 
-原版 `xcodebuild archive` 已完成真实 [Unity/CocoaPods Release xcarchive 与 dSYM](dev/resource-runtime/research/unity-release-xcarchive/README.md)：iOS arm64 主程序、归档元数据、七项原版/独立验签通过，App 与 UnityFramework 的实际 DWARF 数据和 UUID 对应关系通过核对。已修复归档中的 fork 子进程队列锁；较早 [Debug 归档](dev/resource-runtime/research/unity-original-xcarchive/README.md) 的空 dSYMs 记录保留，export 仍单独推进。
+原版 `xcodebuild archive` 已在当前 v12/stage101 组合上完成全新 Unity 导出项目的 [Release xcarchive 与完整 dSYM 验证](dev/resource-runtime/research/stage101-fresh-unity-release-archive/README.md)：原生和外层退出码为零，App 与 UnityFramework 均通过严格验签和独立 CMS 检查，两份真实 DWARF4 数据及 UUID 匹配通过原生 LLVM 完整校验，原有 Debug 产物保留。较早的 [v6 Release 归档](dev/resource-runtime/research/unity-release-xcarchive/README.md) 与 [Debug 归档](dev/resource-runtime/research/unity-original-xcarchive/README.md) 记录仍保留，export 继续单独推进。
 
-成功候选来自已有研究工作区，使用单独的 CoreServices 诊断策略。样例保留明确记录的两行 AFNetworking SDK 兼容修改，Xcode 工程与 CocoaPods 配置未修改。尚未验证开发者证书、描述文件、真机安装、UE 或任意工程，也尚未实现从干净 Linux/XIP 自动重建这套完整候选。基础安装器和较早的默认候选保留；使用成功的 Unity 候选需要显式选择下述里程碑。
+成功候选来自已有研究工作区，使用单独的 CoreServices 诊断策略。较早 AFNetworking 样例保留两行已记录的 SDK 兼容修改；本次全新 Unity/本地 Pod 样例沿用生成的 Xcode 工程及 CocoaPods 工作流。尚未验证开发者证书、描述文件、真机安装、UE 或任意工程，也尚未实现从干净 Linux/XIP 自动重建这套完整候选。基础安装器和较早的默认候选保留；使用成功的 Unity 候选需要显式选择下述里程碑。
 
 此前各阶段的源码、失败记录和验证见[开发研究索引](dev/resource-runtime/README.md)。历史附件描述的是当时的状态。
 

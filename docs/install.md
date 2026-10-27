@@ -68,7 +68,7 @@ xcodebuild -workspace Unity-iPhone.xcworkspace -scheme Unity-iPhone -sdk iphoneo
 
 这里继续使用工程或原 CI 的签名设置，入口不会修改 `CODE_SIGN_IDENTITY`、provisioning 设置或工程文件。完整 Unity build 已通过；此前 v6 的 Debug/Release archive 与 Release 独立符号生成也已通过；证据来自自生成测试证书及显式关闭 profile 要求的测试命令，不能据此声称 Apple 开发者 provisioning、设备安装或 export 已通过。
 
-v12 候选采用 stage101/config154，并复用客户端 v14、独立 daemon v15、源码 SecurityServer 与完整源码 trustd。UE 调试中的 fork、时间戳、复制回退和 stat 源码修复已整合回 Unity：七个产物的原版严格验签与独立 CMS 检查通过，随后全新 Linux Unity 导出项目又在空 DerivedData 下以单次 xcodebuild 调用完成证书构建。归档仍对应较早的 v6 实测，v12 尚未验证归档。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
+v12 候选采用 stage101/config154，并复用客户端 v14、独立 daemon v15、源码 SecurityServer 与完整源码 trustd。UE 调试中的 fork、时间戳、复制回退和 stat 源码修复已整合回 Unity：七个产物的原版严格验签与独立 CMS 检查通过，随后全新 Linux Unity 导出项目又在空 DerivedData 下以单次 xcodebuild 调用完成证书构建。v12/stage101 也已通过全新 Unity 项目的 Release archive：App 与 UnityFramework 的严格/CMS 验签、非空 dSYM、UUID 匹配及 LLVM 全量 DWARF 校验通过；较早 v6 记录仍保留，export 继续单独推进。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
 
 ```python
 {
