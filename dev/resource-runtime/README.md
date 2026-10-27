@@ -216,3 +216,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Process-event notification and subscription ordering](research/process-event-channel/README.md): 64 real queued exit/update cycles and disable/re-enable retention; one kernel source unit recompiled, 906 reused.
 
 - [Receive-message flag translation](research/recvfrom-message-flags/README.md): live syscall exposes Darwin/Linux MSG_DONTWAIT mismatch; independent old-stage timeout and fixed-stage immediate EAGAIN, peek and real process events.
+
+- [Unity Storyboards and main executable link](research/unity-storyboards-and-main-link/README.md): original full build compiles/links both Storyboards and arm64 Unity main; actool remains the resource blocker, so final App signing is not claimed.
