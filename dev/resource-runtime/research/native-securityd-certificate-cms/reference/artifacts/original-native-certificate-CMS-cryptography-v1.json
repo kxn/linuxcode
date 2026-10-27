@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "original_native_CMSEncoder": true,
+  "self_generated_test_certificate_only": true,
+  "certificate_chain_trust_verified": false,
+  "original_codesign_App_signing_verified": false,
+  "positive_verification_and_tampered_content_rejection": [
+    {
+      "case": "original",
+      "exit_status": 0,
+      "log": "runtime/original-codesign-certificate-e7ruh3l0/cms-original.log"
+    },
+    {
+      "case": "tampered",
+      "exit_status": 4,
+      "log": "runtime/original-codesign-certificate-e7ruh3l0/cms-tampered.log"
+    }
+  ],
+  "CMS_file": "runtime/original-codesign-certificate-e7ruh3l0/preflight.cms",
+  "CMS_sha256": "ab34fd034025710f4317560630e60edabb92581ea462ddaa583e6a0360523864",
+  "CMS_size": 1309,
+  "certificate_sha256": "1d20f0402654c7497fced88c5c1f75c906c5759634f8f7e2ca03894ffface22f",
+  "content_sha256": "18bfe1678717ff17edda61a00f01ab1a0cef9022e6d52d20364a3e451286a5b3",
+  "native_run": "runtime/original-codesign-certificate-e7ruh3l0/result.json",
+  "securityd_source_build": "runtime/securityd-source-24j16esb/build.json",
+  "full_goal_complete": false
+}

@@ -242,3 +242,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [Local certificate parents](research/local-certificate-parent-candidates/README.md):27 native checks and actual recoverable self-signed trust result; CMS legacy module dependency remains under investigation.
 
 [Original CMS and SecurityServer](research/original-cms-securityserver/README.md):coherent old/new backends reach the same module-service dependency; paired securityd startup is stopped by its unimplemented native prerequisite.
+
+[Source SecurityServer and original certificate CMS](research/native-securityd-certificate-cms/README.md):159 translation units; original native CMS signature independently verifies and rejects tampering. App signing continues through the upstream requirement-parser bundle.

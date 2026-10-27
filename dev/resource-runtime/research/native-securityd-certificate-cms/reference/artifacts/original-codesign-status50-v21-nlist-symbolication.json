@@ -1,0 +1,32 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/original-codesign-status50-v21.gdb.log",
+  "raw_sha256": "583e968c8a725f04e87797b179b95f7b5da17e7f39d687c42000de5beba4a4d7",
+  "maps": "logs/original-codesign-status50-v21.maps.log",
+  "maps_sha256": "759b5bf93a998bc39a3839b5d1d40971c7494b8b9dc22a16426cbc4ac4e7c1c1",
+  "output": "logs/original-codesign-status50-v21.nlist-symbolicated.log",
+  "output_sha256": "f3cad922c6f7249b7c666a90a177430fb2d4548c77ae2d2642c81db321d659fe",
+  "images": {
+    "runtime/local-identity-store-parent-candidates-v9/libraries/libDarlingLocalIdentitySecurityBackend.dylib": {
+      "sha256": "8750e3bfbd7d7b726b12dcfc87d343ae42bf5f22b414b6accc59261fc6d73b27",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 42846
+    },
+    "runtime/native-codesign-ci-v3/codesign-original": {
+      "sha256": "2fc443773ac85d6640c08d54f7b572179a8490f429b2446f6de8cbf785b54d8d",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 18
+    },
+    "runtime/audit-session-runtime-84/libdyld.dylib": {
+      "sha256": "582aed92a88a3e79441cf0a7be2dae7d3efee23c18401a3d9b166b8e351a2dd8",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3505
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    }
+  }
+}

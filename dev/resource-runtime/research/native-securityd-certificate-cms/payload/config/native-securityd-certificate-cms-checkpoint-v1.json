@@ -1,0 +1,32 @@
+{
+  "name": "native-securityd-certificate-cms",
+  "payload": [
+    "scripts/build-securityd-source.py",
+    "scripts/macho-nlist-exports.py",
+    "scripts/build-csparser-source.py",
+    "scripts/stage-local-identity-store.py",
+    "scripts/build-security-code-signer-compat.py",
+    "scripts/probe-original-codesign-certificate.py",
+    "scripts/capture-codesign-status-throws.py",
+    "vendor/darling/src/external/security/securityd/src/main.cpp",
+    "vendor/darling/src/external/security/OSX/sec/Security/SecCodeSignerCompatibility.c"
+  ],
+  "reference": [
+    "runtime/securityd-source-24j16esb/build.json",
+    "runtime/securityd-source-24j16esb/reproducibility.json",
+    "runtime/securityd-source-24j16esb/attempt-8/link-inputs.json",
+    "artifacts/original-native-certificate-CMS-cryptography-v1.json",
+    "runtime/original-codesign-certificate-e7ruh3l0/result.json",
+    "runtime/original-codesign-certificate-oxya5o0a/result.json",
+    "runtime/original-codesign-certificate-4b0sg8hz/result.json",
+    "runtime/original-codesign-status50-v21/result.json",
+    "artifacts/original-codesign-status50-v21-nlist-symbolication.json",
+    "artifacts/original-codesign-status50-v21-map-bindings.json",
+    "logs/original-codesign-status50-v21.nlist-symbolicated.log",
+    "runtime/csparser-source-oy2dgby1/build.json",
+    "runtime/original-codesign-certificate-3cwydcrq/result.json",
+    "artifacts/local-identity-store-csparser-mds-v12-stage.json",
+    "logs/original-codesign-parser-layout-v22-wait-v1.nlist-symbolicated.log",
+    "artifacts/original-codesign-parser-layout-v22-wait-v1-nlist-symbolication.json"
+  ]
+}

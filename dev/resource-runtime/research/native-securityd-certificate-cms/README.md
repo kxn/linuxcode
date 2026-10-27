@@ -1,0 +1,11 @@
+# Source SecurityServer and independently verified original CMS signing
+
+The complete headless securityd and its RPC/ACL/CDSA dependencies now build from159 source translation units. The final successful attempt reuses127 unchanged objects. Missing CommonCrypto, SmartCardServices, SQLite, SecurityTokend and IOStorageFamily headers are fetched at Darling's pinned commits. Source/headers and tool/RPC inputs are recorded in the build and reproducibility reports.
+
+The source daemon follows Darling trustd's Linux startup convention instead of calling the currently unimplemented macOS named-profile initializer. It retains the normal headless root session; debug graphics/TTY flags are not enabled, and Linux namespace/host permissions remain unchanged. This is not a claim of macOS Sandbox enforcement. Only ten existing private backend definitions are exposed through export metadata; all original instructions and previous exports are preserved.
+
+With the real source daemon and paired trustd, native original CMSEncoder creates an actual detached certificate signature. OpenSSL verifies it against the exact fixture certificate; tampered content is rejected. The self-signed certificate remains untrusted (native trust result5). No zsign or synthesized signature is involved. Private keys, stores, certificates, CMS and App products are not included here.
+
+The original App codesign command still needs more work. A debugger resumes an explicitly compile-time-enabled diagnostic stop and records native exceptions. The fatal path is missing csparser.bundle, used by isAppleDeveloperCert. It is not an RSA/CMS failure. A real32-unit ANTLR parser plus two upstream requirement/OID builder units has been built into its actual bundle, with matching framework metadata; its first integrated attempt advances to DRMaker::nonAppleAnchor and then waits for the legacy module service. The next candidate preserves module metadata resources and separates daemon/client scopes. App signing is not yet claimed complete.
+
+The source change is published as Comman Kang on the existing [darling-security branch](https://github.com/kxn/darling-security/commit/fac338ea67aa7ba4795322d1ff428399882c0374). Stage83's successful fresh Unity ad-hoc build is unchanged; no unaffected full Unity build was repeated. The new source daemon and parser remain opt-in research candidates.
