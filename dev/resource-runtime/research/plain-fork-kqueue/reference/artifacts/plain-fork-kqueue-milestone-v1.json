@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "scope": "Plain fork repairs both independent kqueue backends before application child callbacks. Native negative/positive controls; complete UE build remains unverified.",
+  "negative_control": "runtime/fork-kqueue-redirect-m7jf1976/result.json",
+  "positive_control": "runtime/fork-kqueue-redirect-imkluja3/result.json",
+  "original_consumer_diagnosis": "runtime/ue-cached-restore-fork-child-v1/result.json",
+  "actual_stack": "SystemNative_ForkAndExecProcess -> sys_dup2 -> kqueue_dup -> pthread_mutex_lock -> psynch_mutexwait",
+  "positive_checks": [
+    "Application child pthread_atfork callback redirects stdout while another parent thread owns real backend mutex",
+    "Child creates and closes a fresh queue and writes through redirected descriptor",
+    "Parent receives exactly HC and observes child exit zero",
+    "Existing parent EVFILT_READ registration still reports readiness after child exits"
+  ],
+  "failed_bootstrap_variant": "runtime/fork-kqueue-redirect-lilr5zap/result.json",
+  "bootstrap_lesson": "Keep early bootstrap libSystem unchanged; select rebuilt normal and resource libraries through their established runtime scopes.",
+  "kernel_build": "artifacts/kernel-plain-fork-kqueue-v1-build.json",
+  "normal_system_build": "runtime/libsystem-fork-queue-source-fcr_z1pl/normal/build.json",
+  "resource_system_build": "runtime/libsystem-fork-queue-source-fcr_z1pl/resource/build.json",
+  "stage": "artifacts/private-procfs-auditsession95-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v154.json",
+  "source_publication": {
+    "kernel": "https://github.com/kxn/darling-xnu/commit/4734993",
+    "libSystem": "https://github.com/kxn/darling-Libsystem/commit/d0434a8"
+  },
+  "full_UE_build_verified": false
+}

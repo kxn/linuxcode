@@ -1,0 +1,25 @@
+{
+  "name": "plain-fork-kqueue",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/kqueue/kevent.c",
+    "vendor/darling/src/external/libsystem/init.c",
+    "scripts/rebuild-libsystem-source-delta.py",
+    "scripts/stage-system-library-runtime.py",
+    "scripts/resource-tool-provider-profile.py",
+    "scripts/probe-fork-kqueue-redirect.py",
+    "fixtures/hello/fork-kqueue-redirect.c"
+  ],
+  "reference": [
+    "artifacts/plain-fork-kqueue-milestone-v1.json",
+    "artifacts/kernel-plain-fork-kqueue-v1-build.json",
+    "runtime/libsystem-fork-queue-source-fcr_z1pl/objects.json",
+    "runtime/libsystem-fork-queue-source-fcr_z1pl/normal/build.json",
+    "runtime/libsystem-fork-queue-source-fcr_z1pl/resource/build.json",
+    "runtime/resource-plain-fork-system-v1/build.json",
+    "runtime/fork-kqueue-redirect-m7jf1976/result.json",
+    "runtime/fork-kqueue-redirect-imkluja3/result.json",
+    "runtime/fork-kqueue-redirect-lilr5zap/result.json",
+    "runtime/ue-cached-restore-fork-child-v1/result.json",
+    "logs/ue-cached-restore-fork-child-v1.macho-symbolicated.log"
+  ]
+}

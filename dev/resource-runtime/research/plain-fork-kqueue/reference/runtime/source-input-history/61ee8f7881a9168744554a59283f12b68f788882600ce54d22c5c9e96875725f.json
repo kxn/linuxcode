@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/61ee8f7881a9168744554a59283f12b68f788882600ce54d22c5c9e96875725f",
+  "original_sha256": "61ee8f7881a9168744554a59283f12b68f788882600ce54d22c5c9e96875725f",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/kqueue/kevent.h>\n\n#include <stddef.h>\n#include <sys/errno.h>\n\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n\nint __attribute__((weak)) __attribute__((visibility(\"default\"))) kevent_impl(int kq, ...) { return -ENOSYS; }\n\nlong sys_kevent(int\tkq, const struct kevent\t*changelist, int nchanges,\n\t\t\tstruct\tkevent *eventlist, int nevents,\n\t\t\tconst struct timespec *timeout)\n{\n\tint ret = kevent_impl(kq, changelist, nchanges, eventlist, nevents, timeout);\n\tif (ret < 0)\n\t\tret = -errno;\n\treturn ret;\n}\n"
+}
