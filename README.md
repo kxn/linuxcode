@@ -42,6 +42,17 @@ export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 
 此后在工程目录运行原来的 `xcodebuild` 命令。该入口使用里程碑记录的运行库、工具环境和服务准备步骤，并检查原生命令的实际退出码。它需要对应的研究工作区和本地产物，不能用于把一个基础 XIP 安装直接当作完整成功候选。
 
+已有完整证书候选时，可指定自己的只读身份库接入同一个 PATH 入口：
+
+```bash
+python3 linuxcode.py --workspace /path/to/experiment adopt \
+  --certificate-candidate config/native-certificate-candidate-v4.json \
+  --identity-store runtime/my-signing/store.plist
+export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
+```
+
+证书入口按本次身份库启动 SecurityServer/trustd，保留 CI 的 `xcodebuild` 参数；不会自动换证书、关闭 profile 要求或注入测试工程。身份库当前使用只读 RSA PKCS1 DER 格式，详情见[安装与证书入口](docs/install.md#证书签名入口)。证书签名链路已验证，Apple 开发者 provisioning、设备信任与任意钥匙串操作仍未验证。
+
 安装器已在全新的本地目录从 GitHub 严格核验修正后的 1,080 项清单，并直接从原始 XIP 解压、导入 Xcode；原版 xcodebuild/clang/ld 与 iPhoneOS SDK 元数据逐字节核对通过，重复导入可安全识别已安装状态。候选启动器实际执行 `xcodebuild -version` 已返回 Xcode 26.6 / 17F113，原生和外层退出均为 0；这不代表干净机器已经具备完整候选。
 
 查看安装步骤、输入来源和缺口：

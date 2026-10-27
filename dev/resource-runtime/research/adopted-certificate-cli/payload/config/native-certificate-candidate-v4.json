@@ -1,0 +1,57 @@
+{
+  "scope": "Existing-workspace original xcodebuild/codesign certificate candidate. Full Unity self-generated certificate CI is verified; accepts a caller-supplied read-only RSA identity store. Developer provisioning/device trust remains unverified.",
+  "inputs": {
+    "stage": {
+      "path": "artifacts/private-procfs-auditsession84-stage.json",
+      "sha256": "1a8975193ce83666a41fb6b7679294e3b2192a0f9722355c5eb1fbde33d0db70"
+    },
+    "configuration": {
+      "path": "config/direct-resource-tool-environment-v150.json",
+      "sha256": "d47914a7cba73b72bbf205c344e496fe1d8b7d5ef5f484f39db59ea7404c421e"
+    },
+    "identity_stage": {
+      "path": "artifacts/local-identity-store-certificate-lookup-v13-stage.json",
+      "sha256": "8f2a01c87f86c8c15c8ba7bfd8b9f9c1c8267da757bcc98b716b688810b78568"
+    },
+    "trustd_identity_stage": {
+      "path": "artifacts/local-identity-store-parent-candidates-v9-stage.json",
+      "sha256": "f02c0a3d58868f9a3314125fd6e720274b05ac00e965774e3e712aef5b1a9eb1"
+    },
+    "securityd_build": {
+      "path": "runtime/securityd-source-24j16esb/build.json",
+      "sha256": "76b9e7dbe7aef117d1e0ebeef3fc51556dd5cc34779288087481f39eb21ec5fb"
+    },
+    "launchctl": {
+      "path": "runtime/launchctl-source-6e9jbpuc/launchctl",
+      "sha256": "3e813a63c44e2739cbc06391a2d641aa499105e5356a28d8d3559c0ceee85d84"
+    }
+  },
+  "cold_reconstruction_ready": false,
+  "verified_build": {
+    "milestone": {
+      "path": "artifacts/unity-original-certificate-CI-milestone-v1.json",
+      "sha256": "5aaab68156b7415ceb8c624a97cbdfb95b4ed031d0f11b2aa350b654a2da01e3"
+    },
+    "build_report": {
+      "path": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-f83d0ecede44.json",
+      "sha256": "3fe779d8ca62af7ee43e580ef11f2107501ac3d69eeb91ebd0ea0f69750bf6a5"
+    },
+    "native_product_report": {
+      "path": "runtime/native-certificate-products-lanotbps/result.json",
+      "sha256": "6b3075b17495a219b6ed64f3b4d3c842fa0c7784b6adb41e6343a74ae291080e"
+    },
+    "independent_product_report": {
+      "path": "artifacts/unity-certificate-products-independent-v1.json",
+      "sha256": "f2fe3bc9874d32afdaa1315728afbcb899966e54dba5aaf663a4444cc1d132db"
+    }
+  },
+  "service_templates": {
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.securityd.plist": "3de83e3c4fabc964456c8a673ddf528d580bd5c9964e023ade743e3d8bbf220f",
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.trustd.plist": "1ce08dcc60a430e692be90a898503c63d3089eff46d7ac36c04743015332c474",
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchAgents/com.apple.trustd.agent.plist": "53898cb7cfa845cb3a1c5874d27ef0c6e055f101680c09b48d43254aeb072471"
+  },
+  "workspace_bind_stage": {
+    "path": "artifacts/workspace-bind-launcher-certificate-v1-stage.json",
+    "sha256": "d8b17e8ffd45aa3cf2a96eafd1e5f8012944c9d4a2bf09a578bd7ed90febce70"
+  }
+}

@@ -254,7 +254,14 @@ def setup(workspace, args):
 
 def candidate(workspace, native=None):
     engine = native and native.get('engine_milestone')
-    if engine:
+    certificate = native and native.get('certificate_candidate')
+    if certificate:
+        from linuxcode.certificates import candidate as certificate_candidate
+        helper = workspace / 'scripts/verified-file-digest.py'
+        digest = runpy.run_path(str(helper))['digest'] if helper.exists() else sha
+        module, profile, record = certificate_candidate(workspace, native, digest)
+        report_path = workspace / native['build_report']
+    elif engine:
         milestone = json.loads((workspace / engine).read_text())
         if (not milestone['verified'] or not milestone['original_xcodebuild_full_build_and_original_codesign_success']
                 or not milestone['ad_hoc_signing_only'] or milestone['zsign_used']):
@@ -337,8 +344,9 @@ def adopt(workspace, state, native=None):
          'source_runtime': profile['source_runtime'],
          'evidence_report_sha256': sha(workspace / (native['build_report'] if native else LOCK['candidate']['report'])),
          'native_candidate': native, 'diagnostic_policy': True,
-         'signed_builds_ready': bool(native), 'signing_scope': 'ad-hoc' if native else 'unsigned',
-         'certificate_signing_ready': False})
+         'signed_builds_ready': bool(native), 'signing_scope': 'certificate' if native and native.get('certificate_candidate') else 'ad-hoc' if native else 'unsigned',
+         'certificate_signing_ready': bool(native and native.get('certificate_candidate')),
+         'developer_provisioning_or_device_trust_verified': False})
     binary = state / 'bin/xcodebuild'
     binary.parent.mkdir(exist_ok=True)
     binary.write_text('#!/bin/sh\nexec ' + shlex.join([sys.executable, str(SOURCE / 'linuxcode.py'),
@@ -393,16 +401,37 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
             'original_xcodebuild_sha256': LOCK['xcode']['xcodebuild_sha256'],
             'services': [job['job']['Label'] for job in record['jobs']],
             'diagnostic_policy': True, 'signing_ready': bool(native),
-            'signing_scope': 'ad-hoc' if native else 'unsigned', 'headless': True,
-            'certificate_signing_ready': False, 'timeout_seconds': timeout_seconds}
+            'signing_scope': adopted.get('signing_scope', 'ad-hoc' if native else 'unsigned'), 'headless': True,
+            'certificate_signing_ready': bool(native and native.get('certificate_candidate')),
+            'developer_provisioning_or_device_trust_verified': False, 'timeout_seconds': timeout_seconds}
+    bindings = os.environ.get('LINUXCODE_WORKSPACE_BINDINGS')
+    if bindings:
+        if not profile.get('workspace_bind_stage'):
+            fail('This candidate does not support private workspace mappings.')
+        bindings = Path(bindings).resolve(strict=True)
+        if not bindings.is_relative_to(workspace / 'runtime'):
+            fail('Workspace mappings must be configured inside the workspace runtime directory.')
+        plan['workspace_bindings'] = {'path': str(bindings.relative_to(workspace)), 'sha256': sha(bindings)}
     if dry_run:
         return plan, None, None
     invocation = workspace / 'runtime/linuxcode-cli' / (time.strftime('%Y%m%dT%H%M%S') + '-' + uuid.uuid4().hex[:8])
     invocation.mkdir(parents=True)
+    certificate = native and native.get('certificate_candidate')
+    signing = {}
+    if certificate:
+        helper = runpy.run_path(str(workspace / 'scripts/native-certificate-runtime.py'))
+        profile = helper['prepare_services'](profile, invocation / 'signing-services')
+        signing = profile['native_certificate_runtime']
+        plan['certificate_runtime'] = signing
     jobs = []
     for index, existing in enumerate(record['jobs']):
         job = dict(existing['job'])
         job['EnvironmentVariables'] = dict(job['EnvironmentVariables'])
+        if certificate:
+            for value in profile['command']:
+                if value.startswith(('DYLD_LIBRARY_PATH=', 'DYLD_FRAMEWORK_PATH=', 'LINUXCODE_IDENTITY_STORE=')):
+                    key, setting = value.split('=', 1)
+                    job['EnvironmentVariables'][key] = setting
         job['StandardOutPath'] = job['StandardErrorPath'] = GUEST + str((invocation / f'service-{index}.log').relative_to(workspace))
         path = invocation / f'service-{index}.plist'
         path.write_bytes(plistlib.dumps(job))
@@ -411,19 +440,17 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
         jobs.append((job['Label'], GUEST + str(path.relative_to(workspace)), session))
     script = invocation / 'run.sh'
     prebuild = ''
-    if native and native.get('engine_milestone'):
+    if native and (native.get('engine_milestone') or certificate):
         prebuild_argv = json.loads((workspace / native['prebuild_file']).read_text())
         if not isinstance(prebuild_argv, list) or not prebuild_argv or not all(isinstance(v, str) for v in prebuild_argv):
             fail('Engine service prelude must contain a command argument list.')
         prebuild = shlex.join(prebuild_argv) + '\n'
     script.write_text('#!/bin/bash\nset -e\nunset DISPLAY WAYLAND_DISPLAY XAUTHORITY\nloaded=()\n' +
-        'cleanup() { local i; for ((i=${#loaded[@]}-1; i>=0; i--)); do launchctl remove "${loaded[$i]}" >/dev/null 2>&1 || true; done; }\ntrap cleanup EXIT\n' +
+        'cleanup() { local i; for ((i=${#loaded[@]}-1; i>=0; i--)); do launchctl remove "${loaded[$i]}" >/dev/null 2>&1 || true; done; ' + (signing['cleanup'] + ' || true; ' if signing else '') + '}\ntrap cleanup EXIT\n' +
+        signing.get('startup', '') +
         'launchctl remove com.apple.FileCoordination >/dev/null 2>&1 || true\n' +
         '\n'.join('launchctl load ' + session + shlex.quote(path) + '\nloaded+=(' + shlex.quote(label) + ')' for label, path, session in jobs) + '\n' +
-        '\n'.join('launchctl list ' + shlex.quote(label) for label, _, _ in jobs) + '\n' +
         "printf 'LINUXCODE_SERVICES_LOADED\\n'\n" +
-        GUEST + 'artifacts/uniform-type-identifiers-native\n' +
-        "printf 'LINUXCODE_UTI_PREFLIGHT_OK\\n'\n" +
         prebuild + 'cd ' + shlex.quote(cwd) + '\nset +e\n' +
         '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild "$@"\n' +
         'status=$?\nprintf "LINUXCODE_NATIVE_XCODE_STATUS %s\\n" "$status"\nexit "$status"\n')
@@ -432,6 +459,8 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
     command[3] = str(timeout_seconds)
     save(invocation / 'plan.json', plan)
     environment = module['environment'](profile)
+    if bindings:
+        environment['LINUXCODE_WORKSPACE_BINDINGS'] = str(bindings)
     for name in ('DISPLAY', 'WAYLAND_DISPLAY', 'XAUTHORITY'):
         environment.pop(name, None)
     return plan, invocation, (command, environment)
@@ -479,12 +508,14 @@ def xcodebuild(state, argv, dry_run):
 
 
 def package(output, include_research_history=True):
-    allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/__init__.py',
+    allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/certificates.py', 'linuxcode/__init__.py',
                'config/dependencies.lock.json', 'config/runtime-recipe.json',
                'README.md', 'docs/install.md', 'docs/runtime-inputs.md', 'LICENSE', '.gitignore',
                'validation/2026-10-19.json',
                'validation/unity-signed-app-2026-10-27.json',
-               'tests/test_installer.py', 'tests/test_engine_candidate.py', 'dev/linuxcode-dev', 'dev/README.md',
+               'validation/original-certificate-app-2026-10-27.json',
+               'validation/unity-certificate-ci-2026-10-27.json',
+               'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/locks/developer.lock.json',
                'dev/locks/source-manifest.json']
     resource = 'dev/resource-runtime/'
@@ -548,6 +579,7 @@ def main():
     sub.add_parser('restore-sources', help='clone and apply the 17 locked source patches')
     p = sub.add_parser('adopt', help='validate and attach an already-built milestone candidate')
     p.add_argument('--engine-milestone', type=Path, help='adopt a verified original Unity/CocoaPods build and its matching runtime')
+    p.add_argument('--certificate-candidate', type=Path, help='adopt a verified certificate runtime with a caller-supplied identity store')
     p.add_argument('--native-codesign-stage', type=Path)
     p.add_argument('--identity-store', type=Path)
     p.add_argument('--build-report', type=Path)
@@ -573,7 +605,19 @@ def main():
         elif args.command == 'adopt':
             native = None
             choices = [args.native_codesign_stage, args.identity_store, args.build_report, args.product_report]
-            if args.engine_milestone:
+            if args.certificate_candidate:
+                if args.engine_milestone or args.native_codesign_stage or args.build_report or args.product_report or not args.identity_store:
+                    fail('Certificate adoption requires only a certificate candidate and an identity store.')
+                path = (workspace / args.certificate_candidate).resolve().relative_to(workspace)
+                cert = json.loads((workspace / path).read_text())
+                build_path = cert['verified_build']['build_report']['path']
+                build = json.loads((workspace / build_path).read_text())
+                prebuild = build['probe_configuration']['prebuild_command_file']
+                native = dict(certificate_candidate=str(path), candidate_sha256=sha(workspace / path),
+                              identity_store=str((workspace / args.identity_store).resolve().relative_to(workspace)),
+                              build_report=build_path, stage=build['native_codesign_stage'],
+                              prebuild_file=prebuild, prebuild_sha256=sha(workspace / prebuild))
+            elif args.engine_milestone:
                 if any(choices): fail('Engine milestone adoption cannot be combined with native candidate options.')
                 milestone_path = (workspace / args.engine_milestone).resolve().relative_to(workspace)
                 milestone = json.loads((workspace / milestone_path).read_text())
@@ -603,7 +647,8 @@ def main():
                 'cold_milestone_install_ready': False,
                 'signed_build_ready': bool(adopted and adopted.get('signed_builds_ready')),
                 'signing_scope': adopted.get('signing_scope', 'unsigned') if adopted else None,
-                'certificate_signing_ready': False}, indent=2))
+                'certificate_signing_ready': bool(adopted and adopted.get('certificate_signing_ready')),
+                'developer_provisioning_or_device_trust_verified': False}, indent=2))
         return 0
     except (OSError, RuntimeError, subprocess.CalledProcessError, ValueError, KeyError, AssertionError) as error:
         print(f'linuxcode: {error}', file=sys.stderr)

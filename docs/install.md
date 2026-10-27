@@ -43,7 +43,7 @@ cd /path/to/existing/experiment/project
 xcodebuild -workspace App.xcworkspace -scheme App -sdk iphoneos CODE_SIGNING_ALLOWED=NO build
 ```
 
-adopt 不复制测试环境，也不宣称干净机器已能恢复它；它核对现有 profile 的源码、构建产物和元数据哈希链，以及成功构建报告/日志和 service jobs。新增入口每次重新核对选定候选，对命令创建独立 job、脚本和日志，沿用已验证运行配置和原版服务；实际 `cd` 后调用原版 xcodebuild。不会替换用户参数为 smoke 工程参数，不会默认关闭签名。上例手动关闭签名是因为签名尚未完成。
+adopt 不复制测试环境，也不宣称干净机器已能恢复它；它核对现有 profile 的源码、构建产物和元数据哈希链，以及成功构建报告/日志和 service jobs。新增入口核对选定候选，对命令创建独立 job、脚本和日志，沿用已验证运行配置和原版服务；实际 `cd` 后调用原版 xcodebuild。不会替换用户参数为 smoke 工程参数，不会默认关闭签名。上例使用较早的 unsigned 默认候选；完整 Unity ad-hoc 和证书候选需要显式选择。
 
 查看实际参数转换但不启动 Darling：
 
@@ -52,6 +52,41 @@ python3 linuxcode.py xcodebuild --dry-run -- -workspace App.xcworkspace -scheme 
 ```
 
 主机项目必须位于 WORKSPACE 内。`-project`、`-workspace`、`-derivedDataPath`、`-archivePath` 等显式路径选项转换为 guest 路径；其他参数原样转交。包含主机绝对路径的自定义 build setting、脚本或更复杂参数文件还未实现普遍转换。CI 中 PATH 设置是现有入口切换方式，CI 的 xcodebuild 命令可保留；这不代表任意脚本已具备完整 macOS 文件系统视图。
+
+## 证书签名入口
+
+在已有完整候选的实验工作区中，指定经过验证的证书配置和自己的身份库：
+
+```bash
+python3 linuxcode.py --workspace /path/to/experiment adopt \
+  --certificate-candidate config/native-certificate-candidate-v4.json \
+  --identity-store runtime/my-signing/store.plist
+export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
+cd /path/to/experiment/my-game
+xcodebuild -workspace Unity-iPhone.xcworkspace -scheme Unity-iPhone -sdk iphoneos build
+```
+
+这里继续使用工程或原 CI 的签名设置，入口不会修改 `CODE_SIGN_IDENTITY`、provisioning 设置或工程文件。当前完整 Unity 证据来自自生成测试证书及显式关闭 profile 要求的测试命令，不能据此声称 Apple 开发者 provisioning、设备安装和 archive/export 已通过。
+
+候选采用客户端 v13、独立 daemon v9 与源码 SecurityServer。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
+
+```python
+{
+    "version": 1,
+    "locked": False,
+    "items": [{
+        "label": "CI signing identity",
+        "certificate": certificate_der_bytes,
+        "privateKey": rsa_pkcs1_private_key_der_bytes,
+    }],
+}
+```
+
+用 Python `plistlib` 写成 plist，存放在工作区的 `runtime/` 下，文件权限为 `600`，私有目录建议为 `700`。这是只读且未加密的身份库，不是完整系统钥匙串；暂不提供自动导入 P12、EC 密钥、任意钥匙串写入及 provisioning 安装的通用兼容层。原生实现核对证书与私钥公钥一致，不授予证书信任。
+
+`status` 的 `certificate_signing_ready` 表示已采用经过验证的证书签名运行配置；`developer_provisioning_or_device_trust_verified` 仍为 false。每次调用记录实际参数、签名作用域、服务配置和原生退出码。没有重复执行 UTI smoke 探针或列出全部服务；仍检查服务加载失败并保留构建的真实失败状态。
+
+开发时需要保留绝对缓存路径又不改旧产物，可在采用支持目录映射的候选后设置 `LINUXCODE_WORKSPACE_BINDINGS`，指向 `runtime/` 中的 JSON 数组，每项为工作区相对目录 `{"source": "runtime/new-copy", "target": "runtime/original"}`。映射只对本次私有命名空间生效；越界、重叠或缺失目录会在启动原生命令前失败。普通构建无需设置此变量。
 
 ## 离线与公开打包
 

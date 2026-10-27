@@ -1,0 +1,105 @@
+{
+  "workspace": "/home/dl/linuxcode",
+  "cwd": "/Volumes/SystemRoot/workspace/.",
+  "original_argv": [
+    "-workspace",
+    "/home/dl/linuxcode/runtime/unity-ios-cocoapods-ios26-v1/ios/Unity-iPhone.xcworkspace",
+    "-scheme",
+    "Unity-iPhone",
+    "-sdk",
+    "iphoneos",
+    "-configuration",
+    "Debug",
+    "-destination",
+    "generic/platform=iOS",
+    "-derivedDataPath",
+    "/home/dl/linuxcode/runtime/unity-ios-cocoapods-clean-dd83-v2/DerivedData",
+    "CODE_SIGNING_ALLOWED=YES",
+    "CODE_SIGNING_REQUIRED=NO",
+    "CODE_SIGN_IDENTITY=1B00052D16BDB05C369EB5E49272814016EED6CC",
+    "AD_HOC_CODE_SIGNING_ALLOWED=YES",
+    "DEVELOPMENT_TEAM=",
+    "CODE_SIGN_STYLE=Manual",
+    "ARCHS=arm64",
+    "PROVISIONING_PROFILE_REQUIRED=NO",
+    "PROVISIONING_PROFILE_SUPPORTED=NO",
+    "build"
+  ],
+  "mapped_argv": [
+    "-workspace",
+    "/Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-ios26-v1/ios/Unity-iPhone.xcworkspace",
+    "-scheme",
+    "Unity-iPhone",
+    "-sdk",
+    "iphoneos",
+    "-configuration",
+    "Debug",
+    "-destination",
+    "generic/platform=iOS",
+    "-derivedDataPath",
+    "/Volumes/SystemRoot/workspace/runtime/unity-ios-cocoapods-clean-dd83-v2/DerivedData",
+    "CODE_SIGNING_ALLOWED=YES",
+    "CODE_SIGNING_REQUIRED=NO",
+    "CODE_SIGN_IDENTITY=1B00052D16BDB05C369EB5E49272814016EED6CC",
+    "AD_HOC_CODE_SIGNING_ALLOWED=YES",
+    "DEVELOPMENT_TEAM=",
+    "CODE_SIGN_STYLE=Manual",
+    "ARCHS=arm64",
+    "PROVISIONING_PROFILE_REQUIRED=NO",
+    "PROVISIONING_PROFILE_SUPPORTED=NO",
+    "build"
+  ],
+  "original_xcodebuild_sha256": "d6ceec0a4fa47e3f7a20c712d960ffb954b2246a2c94a0bf0818b2e8344065c5",
+  "services": [
+    "com.apple.cfprefsd.xpc.daemon",
+    "com.apple.FileCoordination",
+    "com.apple.configd",
+    "com.apple.diskarbitrationd",
+    "com.apple.coreservicesd",
+    "com.apple.bsd.dirhelper",
+    "com.apple.lsd"
+  ],
+  "diagnostic_policy": true,
+  "signing_ready": true,
+  "signing_scope": "certificate",
+  "headless": true,
+  "certificate_signing_ready": true,
+  "developer_provisioning_or_device_trust_verified": false,
+  "timeout_seconds": 600,
+  "workspace_bindings": {
+    "path": "runtime/unity-certificate-ci-g95jq9do/workspace-bindings.json",
+    "sha256": "ba4029fb87bf652ed767d1159ab1a7e1be2e4eab521074bef628bfb9a1ae0b74"
+  },
+  "certificate_runtime": {
+    "candidate": "config/native-certificate-candidate-v4.json",
+    "candidate_sha256": "06559c5099025c32d9f338173700fdbe7d42937bf5d93ca1a547b3a07845b673",
+    "identity_store": "runtime/original-codesign-certificate-bvdkz0ke/identity-store.plist",
+    "jobs": [
+      {
+        "path": "runtime/linuxcode-cli/20261027T133504-2447b81a/signing-services/com.apple.securityd.plist",
+        "sha256": "00a3cd58468561dce4e7905fcbc98ff45c399dfb52829160f9529de311d004f3",
+        "label": "com.apple.securityd",
+        "template": "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.securityd.plist",
+        "template_sha256": "3de83e3c4fabc964456c8a673ddf528d580bd5c9964e023ade743e3d8bbf220f"
+      },
+      {
+        "path": "runtime/linuxcode-cli/20261027T133504-2447b81a/signing-services/com.apple.trustd.plist",
+        "sha256": "ec6969f61ba468b9d4454c32c40f607f9f9023cd0abcd12a042e1bf9cf31b86b",
+        "label": "com.apple.trustd",
+        "template": "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.trustd.plist",
+        "template_sha256": "1ce08dcc60a430e692be90a898503c63d3089eff46d7ac36c04743015332c474"
+      },
+      {
+        "path": "runtime/linuxcode-cli/20261027T133504-2447b81a/signing-services/com.apple.trustd.agent.plist",
+        "sha256": "d3947a47ec1e2d6d19748f1c8b4f58cdd83f557bf62538171c1846ddbd429cec",
+        "label": "com.apple.trustd.agent",
+        "template": "runtime/rootfs/usr/libexec/darling/System/Library/LaunchAgents/com.apple.trustd.agent.plist",
+        "template_sha256": "53898cb7cfa845cb3a1c5874d27ef0c6e055f101680c09b48d43254aeb072471"
+      }
+    ],
+    "startup": "/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl remove com.apple.securityd >/dev/null 2>&1 || true\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl load /Volumes/SystemRoot/workspace/runtime/linuxcode-cli/20261027T133504-2447b81a/signing-services/com.apple.securityd.plist\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl start com.apple.securityd\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl remove com.apple.trustd >/dev/null 2>&1 || true\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl load /Volumes/SystemRoot/workspace/runtime/linuxcode-cli/20261027T133504-2447b81a/signing-services/com.apple.trustd.plist\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl start com.apple.trustd\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl remove com.apple.trustd.agent >/dev/null 2>&1 || true\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl load /Volumes/SystemRoot/workspace/runtime/linuxcode-cli/20261027T133504-2447b81a/signing-services/com.apple.trustd.agent.plist\n/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl start com.apple.trustd.agent\n",
+    "cleanup": "/Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl remove com.apple.trustd.agent >/dev/null 2>&1 || true; /Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl remove com.apple.trustd >/dev/null 2>&1 || true; /Volumes/SystemRoot/workspace/runtime/launchctl-source-6e9jbpuc/launchctl remove com.apple.securityd >/dev/null 2>&1 || true",
+    "identity_store_origin": "caller-supplied read-only RSA identity store",
+    "developer_provisioning_verified": false
+  }
+}
