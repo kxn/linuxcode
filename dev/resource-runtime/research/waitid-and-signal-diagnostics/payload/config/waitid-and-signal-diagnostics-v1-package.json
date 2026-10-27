@@ -1,0 +1,25 @@
+{
+  "name": "waitid-and-signal-diagnostics",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/bsd_syscall_table.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/waitid.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/impl/process/waitid.h",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/linux_premigration/signal/sigexc.c",
+    "fixtures/hello/waitid-child-events.c",
+    "fixtures/hello/signal-diagnostic-rpc-stress.c",
+    "fixtures/hello/fatal-signal-isolation.c",
+    "scripts/probe-waitid-child-events.py",
+    "scripts/probe-signal-diagnostic-runtime.py",
+    "scripts/run-unity-editor-build-recovery.py",
+    "config/native-certificate-candidate-v10-experimental.json"
+  ],
+  "reference": [
+    "runtime/waitid-child-events-bfidvz2f/result.json",
+    "runtime/waitid-child-events-i6d13som/result.json",
+    "runtime/signal-diagnostic-runtime-6mz5sa1o/result.json",
+    "runtime/unity-fresh-server-teardown-fault-v1/diagnosis.json",
+    "runtime/unity-fresh-server-teardown-fault-v1/core-resolved-backtrace.log",
+    "artifacts/kernel-waitid-signal-v2-build.json",
+    "artifacts/private-procfs-auditsession89-stage.json"
+  ]
+}
