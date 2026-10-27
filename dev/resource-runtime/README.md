@@ -222,3 +222,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Real synchronous workloop waits](research/workloop-sync-waiters/README.md): actual asset-agent first fault,96 blocking waits and32 delete/reuse rounds; affected async queue regression also passes.
 
 - [Asynchronous XPC connection lifetime](research/xpc-async-reply-lifetime/README.md):32 delayed replies,32 cancellations and64 exactly-once finalizers after caller release; original asset task retry continues.
+
+- [Workloop owner discovery and handoff](research/workloop-owner-handoff/README.md): actual Mach thread validation, parked delivery and stale-END resume; wrong-port null-target server failure corrected and native checks pass.

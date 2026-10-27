@@ -1,0 +1,40 @@
+{
+  "name": "workloop-owner-handoff",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/kqueue/kevent_id.c",
+    "vendor/darlingserver/duct-tape/src/thread.c",
+    "fixtures/hello/workloop-sync.c",
+    "fixtures/hello/workloop-async.c",
+    "scripts/capture-simulator-server-fault.py",
+    "config/workloop-owner-server-fault-v1-probe.json"
+  ],
+  "reference": [
+    "artifacts/workloop-owner-source-publication-v1.json",
+    "logs/workloop-owner-xnu-source-push-v1.log",
+    "logs/thread-info-null-server-source-push-v1.log",
+    "artifacts/workloop-owner-resource-progress-v1.json",
+    "artifacts/workloop-owner-kernel-v1-build.json",
+    "artifacts/workloop-owner-kernel-v2-build.json",
+    "runtime/workloop-owner-kernel-v1/plan.json",
+    "runtime/workloop-owner-kernel-v2/plan.json",
+    "runtime/workloop-owner-kernel-v2/link.log",
+    "runtime/simulator-signature-server-655n9ld3/stage.json",
+    "runtime/simulator-signature-server-655n9ld3/build.log",
+    "artifacts/private-procfs-auditsession74-stage.json",
+    "artifacts/private-procfs-auditsession75-stage.json",
+    "runtime/workloop-sync-pfmn42sy/result.json",
+    "runtime/workloop-sync-hctgu_no/result.json",
+    "runtime/workloop-owner-native-server-fault-v1/result.json",
+    "runtime/workloop-owner-native-server-fault-v1/server.gdb.log",
+    "runtime/workloop-owner-native-server-fault-v1/server.maps",
+    "runtime/workloop-owner-native-server-fault-v1/probe.log",
+    "runtime/xpc-lifetime-assetcatalog-first-fault-v1/result.json",
+    "runtime/xpc-lifetime-assetcatalog-first-fault-v1-agent/result.json",
+    "runtime/xpc-lifetime-assetcatalog-first-fault-v1-agent/process.gdb.log",
+    "runtime/xpc-lifetime-assetcatalog-first-fault-v1-agent/process.maps",
+    "logs/xpc-lifetime-assetcatalog-first-fault-v1.nlist-symbolicated.log",
+    "artifacts/xpc-lifetime-assetcatalog-first-fault-v1-map-bindings.json",
+    "artifacts/xpc-lifetime-assetcatalog-first-fault-v1-nlist-symbolication.json",
+    "logs/workloop-poke-owner-reference-v1.disassembly.log"
+  ]
+}

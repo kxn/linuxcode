@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-workloop-sync.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession74-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json"
+  ],
+  "probe_status": 1,
+  "server": "runtime/audit-session-runtime-74/darlingserver",
+  "server_sha256": "f23d0789fab7ecf0f42eea8b90328b2d45679f8d3abdac24a3b901bed6a6d634",
+  "capture": {
+    "pid": 1460788,
+    "status": 0
+  },
+  "files": {
+    "runtime/workloop-owner-native-server-fault-v1/probe.log": "af694e010034278d2461430a4d7718d1436ea974586675beec004f77b27dbe3f",
+    "runtime/workloop-owner-native-server-fault-v1/server.maps": "5cffa15c049ca7054e42afd2b4aeeb9a421e095d375affd04643e3da2f17f164",
+    "runtime/workloop-owner-native-server-fault-v1/capture.gdb": "fa0dfcc00f350c37cca50acffeedb749a890c162c617e951325840a36d16d579",
+    "runtime/workloop-owner-native-server-fault-v1/server.gdb.log": "53f8989f55bfe7b2ad5b2197837e6fb302b312df80619f14e8e856df141eb8b5"
+  },
+  "tool_sha256": "d17292763ddc6279b1f5670f0aa1f77cc6003c45cdaddbfbc91959dbfb628017",
+  "full_goal_complete": false
+}
