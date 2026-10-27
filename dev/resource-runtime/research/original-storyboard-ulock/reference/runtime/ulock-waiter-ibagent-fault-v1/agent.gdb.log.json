@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/ulock-waiter-ibagent-fault-v1/agent.gdb.log",
+  "original_sha256": "d20580632127e297423d83a8ab79933235955838c7296e836b7bee7540bbbffa",
+  "encoding": "utf-8",
+  "text": "\nwarning: \"target:/proc/1410172/exe\": could not open as an executable file: Input/output error.\n\nwarning: `target:/proc/1410172/exe': can't open to read symbols: Input/output error.\n\nwarning: Could not load vsyscall page because no executable was specified\n\nwarning: Target and debugger are in different PID namespaces; thread lists and other data are likely unreliable.  Connect to gdbserver inside the container.\n0x00007f5c6e21c74b in ?? ()\nCatchpoint 1 (syscall 'exit_group' [231])\n\nProgram terminated with signal SIGKILL, Killed.\nThe program no longer exists.\n$1 = void\n/home/dl/linuxcode/runtime/ulock-waiter-ibagent-fault-v1/capture.gdb:9: Error in sourced command file:\nThe program has no registers now.\n"
+}

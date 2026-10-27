@@ -210,3 +210,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Server-wide original activity IDs](research/mach-activity-ids/README.md):8 threads and2 exec children reserve6531 nonoverlapping IDs; original UIKit initialization advances to actual auxiliary message bytes.
 
 - [Real auxiliary message bytes and timer preallocation](research/mach-msg2-auxiliary/README.md):cross-process payloads,retained retries and3966 message checks plus real timers; original IBAgent reaches its message channel and main-queue synchronization.
+
+- [Original Unity Storyboard compilation](research/original-storyboard-ulock/README.md): original ibtool and IBAgent pass twice, with matching NIB hashes and entry mapping; real ulock waiter counts and error handling tested. Full App remains in progress.

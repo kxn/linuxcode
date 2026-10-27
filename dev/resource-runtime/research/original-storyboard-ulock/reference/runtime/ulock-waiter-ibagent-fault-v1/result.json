@@ -1,0 +1,30 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-storyboard.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession68-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--with-disk-services",
+    "--trace-launch-jobs",
+    "--timeout",
+    "120"
+  ],
+  "probe_status": 0,
+  "capture": {
+    "pid": 1410172,
+    "gdb_status": 1,
+    "log": "runtime/ulock-waiter-ibagent-fault-v1/agent.gdb.log",
+    "maps": null
+  },
+  "stage": "artifacts/private-procfs-auditsession68-stage.json",
+  "configuration": "config/direct-resource-tool-environment-v150.json",
+  "files": {
+    "runtime/ulock-waiter-ibagent-fault-v1/probe.log": "f08508679b64827fb117b42f8ff67585ebbc7d7287beb23eb2198eba5e193902",
+    "runtime/ulock-waiter-ibagent-fault-v1/capture.gdb": "7ec86927bbbaa52f6c5a591f5adec60c0b9a47b7baf048cffd4020bccadbdb45",
+    "runtime/ulock-waiter-ibagent-fault-v1/agent.gdb.log": "d20580632127e297423d83a8ab79933235955838c7296e836b7bee7540bbbffa"
+  },
+  "tool_sha256": "df9265197f700542da7f026a17517260b2b04aece9b73593281af603672a7ad4",
+  "full_goal_complete": false
+}

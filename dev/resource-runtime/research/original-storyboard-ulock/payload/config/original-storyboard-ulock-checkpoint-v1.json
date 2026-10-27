@@ -1,0 +1,41 @@
+{
+  "name": "original-storyboard-ulock",
+  "payload": [
+    "scripts/probe-ulock-waiters.py",
+    "scripts/capture-macho-process-stacks.py",
+    "fixtures/hello/ulock-waiters.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/psynch/ulock_wait.c",
+    "vendor/darling/src/external/xnu/libsyscall/bsdsyscalls/SYS.h",
+    "vendor/darling/src/external/xnu/gen/bsdsyscalls/SYS.h"
+  ],
+  "reference": [
+    "artifacts/storyboard-ulock-resource-progress-v1.json",
+    "artifacts/ulock-waiter-source-publication-v1.json",
+    "logs/ulock-waiter-source-push-v2.log",
+    "artifacts/ulock-waiter-count-kernel-v1-build.json",
+    "artifacts/ulock-waiter-count-kernel-v2-build.json",
+    "logs/ulock-waiter-count-kernel-v2-build.log",
+    "artifacts/private-procfs-auditsession67-stage.json",
+    "artifacts/private-procfs-auditsession68-stage.json",
+    "runtime/ulock-waiters-gpqkerrb/result.json",
+    "runtime/ulock-waiters-js9xxriy/result.json",
+    "runtime/original-storyboard-c4aglfju/result.json",
+    "runtime/original-storyboard-1i0qrmsv/result.json",
+    "artifacts/original-unity-storyboard-compiled-v1.json",
+    "runtime/ulock-waiter-ibagent-fault-v1/result.json",
+    "runtime/ulock-waiter-ibagent-fault-v1/agent.gdb.log",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-534f5ba33a03.json",
+    "logs/unity-storyboard-passed-live-xcode-v1.nlist-symbolicated.log",
+    "artifacts/unity-storyboard-passed-live-xcode-v1-map-bindings.json",
+    "artifacts/unity-storyboard-passed-live-xcode-v1-nlist-symbolication.json",
+    "logs/unity-storyboard-passed-live-xcrun-v1.nlist-symbolicated.log",
+    "artifacts/unity-storyboard-passed-live-xcrun-v1-map-bindings.json",
+    "artifacts/unity-storyboard-passed-live-xcrun-v1-nlist-symbolication.json",
+    "logs/unity-storyboard-passed-sdk-query-v1.nlist-symbolicated.log",
+    "artifacts/unity-storyboard-passed-sdk-query-v1-map-bindings.json",
+    "artifacts/unity-storyboard-passed-sdk-query-v1-nlist-symbolication.json",
+    "logs/unity-storyboard-passed-coreservices-v1.nlist-symbolicated.log",
+    "artifacts/unity-storyboard-passed-coreservices-v1-map-bindings.json",
+    "artifacts/unity-storyboard-passed-coreservices-v1-nlist-symbolication.json"
+  ]
+}
