@@ -1,0 +1,36 @@
+{
+  "verified": true,
+  "scope": "Configured native DNS uses UDP rather than inherited loopback-only TCP; real NuGet host lookups",
+  "created_at": "2026-10-27T11:20:56.531687+00:00",
+  "source_repository": "https://github.com/kxn/darling-libresolv",
+  "source_branch": "main",
+  "source_commit": "42cec61",
+  "source_baseline": "cf955392e5449efb269b8b3510c755085fd36a2d",
+  "complete_source_files": 27,
+  "original_exports_preserved": 146,
+  "positive_native_report": "runtime/private-native-resolver-_tw1egbt/result.json",
+  "reference_sha256": {
+    "runtime/libresolv-source-f215b1kq/build.json": "c5d53c32f61db41b7c44c2dd45edc4ff3aeabd31147022174f09b8e85a90d3ee",
+    "runtime/private-native-resolver-_tw1egbt/result.json": "b277feed97ab9b4d29081a3a4e63ebd890d45cabf6030d2af91731ff0b411517",
+    "runtime/private-native-resolver-xi4t833e/result.json": "e8b755a6554e5dc33d367169a44808e640bb5d94547dd0da22b860dfc2451a47",
+    "runtime/unreal-dotnet-native-lfevw1ma/result.json": "a279b1b286f68905fe52698954701d062dc87ed4dfd2e370ef089a9b6c9e69c9"
+  },
+  "native_API_calls": [
+    "res_query(A)",
+    "gethostbyname",
+    "getaddrinfo(AF_UNSPEC,SOCK_STREAM)"
+  ],
+  "native_hosts": [
+    "api.nuget.org",
+    "nuget.azure.cn"
+  ],
+  "private_configuration_and_host_backing_preserved": true,
+  "prior_failure_transport": "TCP port53 ECONNREFUSED while the configured server answers UDP DNS",
+  "limitations": [
+    "Real external DNS replies were observed. Controlled truncation-to-TCP, fallback-without-config and caller-preinitialized flags need separate native tests.",
+    "Full UBT restore/build remains in progress after this correction.",
+    "New source server only adds shared-remap error diagnostics; executable-memory-alias failures are not fixed."
+  ],
+  "full_UE_build_verified": false,
+  "full_goal_complete": false
+}

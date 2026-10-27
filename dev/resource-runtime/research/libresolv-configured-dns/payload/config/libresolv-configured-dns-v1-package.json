@@ -1,0 +1,22 @@
+{
+  "name": "libresolv-configured-dns",
+  "payload": [
+    "vendor/darling/src/external/libresolv/res_init.c",
+    "scripts/build-libresolv-source.py",
+    "scripts/libresolv-source-runtime-profile.py",
+    "scripts/stage-native-resolver-launcher.py",
+    "scripts/native-resolver-runtime-profile.py",
+    "scripts/probe-private-native-resolver.py",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "fixtures/hello/private-native-resolver.c"
+  ],
+  "reference": [
+    "artifacts/libresolv-configured-dns-milestone-v1.json",
+    "runtime/libresolv-source-f215b1kq/build.json",
+    "runtime/private-native-resolver-_tw1egbt/result.json",
+    "runtime/private-native-resolver-xi4t833e/result.json",
+    "runtime/unreal-dotnet-native-lfevw1ma/result.json",
+    "runtime/private-native-resolver-_tw1egbt/network.strace",
+    "runtime/private-native-resolver-xi4t833e/network.strace"
+  ]
+}
