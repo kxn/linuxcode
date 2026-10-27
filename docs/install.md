@@ -178,6 +178,6 @@ python3 linuxcode.py --workspace /path/to/experiment unity auth login
 python3 linuxcode.py --workspace /path/to/experiment unity license activate --personal --accept-eula
 ```
 
-`--accept-eula` 是官方 CLI 要求的显式条款接受选项，工具不会自动添加。账号凭据由官方 CLI 管理，Linuxcode 不记录密码或令牌。当前测试机器已完成官方网页登录、Personal 激活，并由无图形界面的原生 Linux Unity 6000.3.27f1 成功导出全新 iOS Xcode 工程；后续 CocoaPods 和原版 Xcode 构建分别记录验证结果。若 SSH/自动化父进程的 session keyring 已失效，入口会只在自己的进程树中建立可用的用户凭据 keyring，不修改父进程。修复已由官方 CLI doctor 和实际登录、激活验证。
+`--accept-eula` 是官方 CLI 要求的显式条款接受选项，工具不会自动添加。账号凭据由官方 CLI 管理，Linuxcode 不记录密码或令牌。当前测试机器已完成官方网页登录、Personal 激活，并由无图形界面的原生 Linux Unity 6000.3.27f1 成功导出全新 iOS Xcode 工程；后续 CocoaPods、原版 Xcode 构建及正常退出、原版严格验签和独立检查均已通过；首次编译后的 Darling 收尾错误经源码修复，恢复验证复用了编译缓存。当前产物为 ad-hoc 测试签名，不代表设备安装可用。若 SSH/自动化父进程的 session keyring 已失效，入口会只在自己的进程树中建立可用的用户凭据 keyring，不修改父进程。修复已由官方 CLI doctor 和实际登录、激活验证。
 
 官方说明：[Unity CLI](https://docs.unity.com/en-us/unity-cli/use-unity-cli)。

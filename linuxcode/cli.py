@@ -516,6 +516,7 @@ def package(output, include_research_history=True):
                'validation/unity-signed-app-2026-10-27.json',
                'validation/original-certificate-app-2026-10-27.json',
                'validation/unity-certificate-ci-2026-10-27.json', 'validation/unity-p12-import-2026-10-27.json',
+               'validation/unity-fresh-linux-end-to-end-2026-10-27.json',
                'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'tests/test_identity_import.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/locks/developer.lock.json',
                'dev/locks/source-manifest.json']
