@@ -1,12 +1,16 @@
 # 开发者环境
 
+最新实测进展：Linux 原生 Unity Editor 已完成真实空项目的 iOS 导出，随后原版 CocoaPods 和 Darling 下的原版 Xcode 已构建出 App；[完整流程证据](resource-runtime/research/unity-fresh-linux-end-to-end/README.md) 保留首次编译及恢复运行的边界。Release xcarchive 和 dSYM 也已有实测记录；开发者 provisioning、设备安装与完整冷重建仍未完成。下文逐项研究附件中的“当前阻塞”描述对应附件生成时的历史状态。
+
+UE 的原版 Intel macOS SDK 目前已越过 fork 后重定向死锁并完成 13 个项目的 NuGet 恢复，尚未完成 UBT 编译。新增 [普通 fork 的双事件队列修复](resource-runtime/research/plain-fork-kqueue/README.md) 和 [Linux 依赖输入准备](resource-runtime/research/unreal-dependency-input-preparation/README.md) 保存源码、正反对照与复用方式。Linux SDK 只用于下载依赖，原版 macOS 构建继续在 Darling 中执行。
+
 [完整 Unity/CocoaPods 入口](resource-runtime/research/unity-full-app-cocoapods/README.md) 保留真实工程准备、原版 CocoaPods 安装和项目结构对照。最新[完整 Unity 证书 CI](resource-runtime/research/unity-certificate-ci/README.md) 已通过原版 xcodebuild 构建签名及七项原版/独立验签；使用临时自签证书，真实 provisioning 和设备安装仍待验证。
 
 后续 Unity 工具链兼容修复见 [私有 procfs 与文件复制附件](resource-runtime/research/unity-private-procfs/README.md)：包含四个现有 fork 的源码提交、原版工具探针和独立产物检查，继续使用 Linux x86_64 与原版 Xcode 工程。
 
 整合入口在独立的 [kxn/linuxcode](https://github.com/kxn/linuxcode) 工程；Darling 和各子模块的兼容性修改继续保存在各自的 fork。本目录提供 `linuxcode-dev`，在宿主 Linux 上构建和检查组件，帮助开发者接着完善编译流程。需要 Linux x86_64；不需要 Mac，也不使用 Darling 内核模块。
 
-整合工程只使用 `main` 分支，安装器与开发者工具在同一个仓库维护；`checkout` 的固定实验工作区仍是 `runtime-2026.10.19` 对应的[早期 CocoaPods 基线](https://github.com/kxn/linuxcode/tree/375e52ea83e0f1a8dba3b16a0600d01292a9fe61)，其中 App 尚未签名。后续完整 Unity 构建、资源处理、ad-hoc 和证书签名修复保存在各研究附件与 fork 中；`checkout` 尚不会自动组装最新成功候选。工程测试仍使用 CoreServices 诊断策略；UE、归档导出、开发者 provisioning 和完整冷重建仍未验证。
+整合工程只使用 `main` 分支，安装器与开发者工具在同一个仓库维护；`checkout` 的固定实验工作区仍是 `runtime-2026.10.19` 对应的[早期 CocoaPods 基线](https://github.com/kxn/linuxcode/tree/375e52ea83e0f1a8dba3b16a0600d01292a9fe61)，其中 App 尚未签名。后续完整 Unity 构建、资源处理、ad-hoc 和证书签名修复保存在各研究附件与 fork 中；`checkout` 尚不会自动组装最新成功候选。工程测试仍使用 CoreServices 诊断策略；UE、归档后的 IPA 导出、开发者 provisioning 和完整冷重建仍未验证。
 
 ## 获取和核对源码
 
