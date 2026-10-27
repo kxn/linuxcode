@@ -236,3 +236,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [加载器布局、内部文件事件与全新构建](research/loader-layout-and-fsevents/README.md)：处理真实编译器启动冲突，隔离日志持久化自通知，并验证单次从空 DerivedData 完成 Unity/CocoaPods 构建。
 
 [Native identity leaf policy](research/local-identity-leaf-policy/README.md):23 native checks pass; original certificate codesign reaches chain construction, whose headless trust service is still being completed.
+
+[launchctl long UTF-8 strings](research/launchctl-long-strings/README.md):39 native checks; fixes truncated job environment and starts paired headless trust services.

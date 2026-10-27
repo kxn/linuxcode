@@ -1,0 +1,22 @@
+{
+  "name": "launchctl-long-strings",
+  "payload": [
+    "vendor/darling/src/launchd/support/launchctl.c",
+    "vendor/darling/src/launchd/support/launchctl-cfstring.h",
+    "scripts/build-launchctl-source.py",
+    "scripts/probe-launchctl-long-strings.py",
+    "fixtures/hello/launchctl-long-strings.c",
+    "scripts/probe-original-codesign-certificate.py"
+  ],
+  "reference": [
+    "artifacts/launchctl-long-string-source-publication-v1.json",
+    "runtime/launchctl-source-6e9jbpuc/build.json",
+    "runtime/launchctl-long-strings-t_dwrpex/result.json",
+    "runtime/original-codesign-certificate-t59gxy_3/result.json",
+    "runtime/original-codesign-certificate-h4z_iom3/result.json",
+    "logs/paired-trustd-system-source-ctl-v13-wait-v1.nlist-symbolicated.log",
+    "artifacts/paired-trustd-system-source-ctl-v13-wait-v1-nlist-symbolication.json",
+    "artifacts/paired-trustd-system-source-ctl-v13-wait-v1-map-bindings.json",
+    "runtime/paired-trustd-system-source-ctl-v13-wait-v1/result.json"
+  ]
+}

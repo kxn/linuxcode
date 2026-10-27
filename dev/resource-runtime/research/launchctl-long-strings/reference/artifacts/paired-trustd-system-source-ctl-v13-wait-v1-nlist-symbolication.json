@@ -1,0 +1,52 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/paired-trustd-system-source-ctl-v13-wait-v1.gdb.log",
+  "raw_sha256": "5c1f2eada925a8a49e33682ea21a98fdf786032c0729c8ff87d6b7f1d1d7c6ed",
+  "maps": "logs/paired-trustd-system-source-ctl-v13-wait-v1.maps.log",
+  "maps_sha256": "f1396981d7bfa962a32499eb29037b46063bab7b7e4a3f3808984177fb8fa94a",
+  "output": "logs/paired-trustd-system-source-ctl-v13-wait-v1.nlist-symbolicated.log",
+  "output_sha256": "5e357186a873045d08a9245cc24ccfdd42a57d019acbf74ae9dd20c5753bf9db",
+  "images": {
+    "runtime/audit-session-runtime-83/libsystem_kernel.dylib": {
+      "sha256": "59a39cb3eb497ef9c706784aff321a6ca987905ff0afc78e0674b8cd10538065",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2583
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/local-identity-store-leaf-policy-v8/libraries/libDarlingLocalIdentitySecurityBackend.dylib": {
+      "sha256": "8750e3bfbd7d7b726b12dcfc87d343ae42bf5f22b414b6accc59261fc6d73b27",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 42846
+    },
+    "runtime/rootfs/usr/libexec/darling/usr/libexec/trustd": {
+      "sha256": "5af5e3eb12a9b4d930974d41bb6c7d5e8450ee791bd8cc21d026951822d1d6df",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3434
+    },
+    "runtime/audit-session-runtime-83/libxpc.dylib": {
+      "sha256": "bd727fccaad0db2c81fbe6a173c2f59c3afc490d8727c519b123c7f87268e0da",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1586
+    },
+    "runtime/audit-session-runtime-83/darling-root/usr/lib/system/libsystem_pthread.dylib": {
+      "sha256": "f9ed4d2789af0d0626bc796786b5d22fd54e6509712d33de650a2b7047e15280",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 301
+    },
+    "runtime/rootfs/usr/libexec/darling/usr/libexec/darling/mldr": {
+      "sha256": "0953a5e6db6f1f9ae2d89124ac9ef1ed65cb734488623eb9a66cd43596be47ea",
+      "format": "ELF",
+      "Mach_O_symbolication": false
+    },
+    "runtime/audit-session-runtime-83/libdyld.dylib": {
+      "sha256": "582aed92a88a3e79441cf0a7be2dae7d3efee23c18401a3d9b166b8e351a2dd8",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3505
+    }
+  }
+}
