@@ -509,7 +509,7 @@ def xcodebuild(state, argv, dry_run):
 
 
 def package(output, include_research_history=True):
-    allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/certificates.py', 'linuxcode/identities.py', 'linuxcode/__init__.py',
+    allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/certificates.py', 'linuxcode/identities.py', 'linuxcode/unity.py', 'linuxcode/__init__.py',
                'config/dependencies.lock.json', 'config/runtime-recipe.json',
                'README.md', 'docs/install.md', 'docs/runtime-inputs.md', 'LICENSE', '.gitignore',
                'validation/2026-10-19.json',
@@ -593,6 +593,7 @@ def main():
     sub.add_parser('recipe', help='show cold-build stages and exact outstanding gaps')
     p = sub.add_parser('package'); p.add_argument('--output', type=Path, required=True)
     p.add_argument('--include-research-history', action='store_true', help='also bundle historical diagnostic attachments')
+    p = sub.add_parser('unity', help='run the pinned native Linux Unity CLI for account login and licensing'); p.add_argument('argv', nargs=argparse.REMAINDER)
     p = sub.add_parser('dev', help='developer environment and module builds'); p.add_argument('argv', nargs=argparse.REMAINDER)
     p = sub.add_parser('xcodebuild'); p.add_argument('--dry-run', action='store_true'); p.add_argument('argv', nargs=argparse.REMAINDER)
     args = parser.parse_args()
@@ -603,6 +604,9 @@ def main():
         elif args.command == 'cache': cache_assets(workspace)
         elif args.command == 'setup': setup(workspace, args)
         elif args.command == 'install-xcode': install_xcode(workspace, args.xip, args.sha256)
+        elif args.command == 'unity':
+            from linuxcode.unity import run as unity_run
+            return unity_run(workspace, args.argv)
         elif args.command == 'import-identity':
             from linuxcode.identities import import_p12
             print(json.dumps(import_p12(workspace,args.p12,args.output,args.password_env,args.label,args.certificate_sha256,args.legacy),indent=2))

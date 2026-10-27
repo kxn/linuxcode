@@ -1,0 +1,23 @@
+{
+  "name": "native-unity-license-and-dotnet-startup",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/helper/misc/sysctl_kern.c",
+    "fixtures/hello/memorystatus-level.c",
+    "scripts/probe-memorystatus-level.py",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "config/unreal-ubt-build-v1-arguments.json",
+    "fixtures/hello/dotnet-shared-directory-rename.c",
+    "scripts/probe-dotnet-shared-rename.py"
+  ],
+  "reference": [
+    "artifacts/UE-original-dotnet-GC-startup-milestone-v1.json",
+    "artifacts/kernel-memorystatus-level-v2-build.json",
+    "runtime/memorystatus-level-t6muu_bh/result.json",
+    "runtime/memorystatus-level-4hlbiwmg/result.json",
+    "runtime/unreal-dotnet-native-62zsfkp0/result.json",
+    "runtime/unreal-dotnet-native-k5na_kgq/result.json",
+    "runtime/dotnet-shared-rename-uun6queq/result.json",
+    "runtime/dotnet-shared-rename-uun6queq/files.strace",
+    "logs/linuxcode-native-unity-cli-version-v1.log"
+  ]
+}

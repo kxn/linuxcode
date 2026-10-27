@@ -160,3 +160,24 @@ python3 linuxcode.py --workspace /path/to/experiment adopt \
 ```
 
 将命令打印的目录加入 PATH 后，保留 CI 现有 xcodebuild 参数。入口验证原始成功构建与六项签名验证记录，选择对应运行库和资源工具环境，并执行记录中的服务准备步骤。签名范围为 ad-hoc；开发者证书、描述文件和设备安装尚未验证。详情见[Unity 签名里程碑](../dev/resource-runtime/research/unity-signed-app/README.md)。
+
+
+## Unity Editor 的 Linux 授权入口
+
+Unity Editor 和授权工具均使用原生 Linux 版。已有的 Xcode/Darling 环境不需要运行 Unity Hub。
+
+```bash
+python3 linuxcode.py --workspace /path/to/experiment unity auth login
+```
+
+入口会按固定的官方 SHA256 下载 Unity CLI 1.0.0-beta.14 到工作区 `runtime/` 中。登录命令会显示官方链接；远程或无界面机器可以在自己的浏览器打开它，保持命令等待，直到登录完成。链接有时效，超时后重新运行登录命令。
+
+确认符合并同意 Unity Personal 条款后，可以由账号本人执行：
+
+```bash
+python3 linuxcode.py --workspace /path/to/experiment unity license activate --personal --accept-eula
+```
+
+`--accept-eula` 是官方 CLI 要求的显式条款接受选项，工具不会自动添加。账号凭据由官方 CLI 管理，Linuxcode 不记录密码或令牌。此入口已实测启动和显示版本；当前测试机器尚未完成账号登录或 Personal 激活，实际 Unity 导出仍待验证。
+
+官方说明：[Unity CLI](https://docs.unity.com/en-us/unity-cli/use-unity-cli)。

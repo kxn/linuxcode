@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""Capture only the native test's directory operations, leaving bootstrap untraced."""
+from pathlib import Path
+import argparse,hashlib,json,re,runpy,shlex,subprocess,tempfile,time
+r=Path(__file__).resolve().parent.parent;p=argparse.ArgumentParser(description=__doc__);p.add_argument('--stage',required=True);a=p.parse_args();f=Path(tempfile.mkdtemp(prefix='dotnet-shared-rename-',dir=r/'runtime'));sdk=r/'runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk';source=r/'fixtures/hello/dotnet-shared-directory-rename.c';obj=f/'test.o';binary=f/'probe'
+for command in [['clang-19','-target','x86_64-apple-macos11','-isysroot',str(sdk),'-O1','-g','-c',str(source),'-o',str(obj)],['ld64.lld-19','-arch','x86_64','-platform_version','macos','11','11','-syslibroot',str(sdk),'-lSystem',str(obj),'-o',str(binary)]]:subprocess.run(command,check=True)
+m=runpy.run_path(str(r/'scripts/direct-resource-tool-runtime-profile.py'));profile=m['profile'](stage=a.stage,configuration='config/direct-resource-tool-environment-v150.json');guest=lambda path:'/Volumes/SystemRoot/workspace/'+str(path.relative_to(r));script=f/'run.sh';script.write_text('#!/bin/bash\nulimit -c 0\nunset DISPLAY WAYLAND_DISPLAY XAUTHORITY\n'+shlex.quote(guest(binary))+'\ns=$?\nprintf "SHARED_RENAME_STATUS %s\\n" "$s"\nexit "$s"\n');command=profile['command'][:-2]+['/bin/bash',guest(script)];command[3]='60';log=f/'run.log';tracer=None;print('RUNNING',f.relative_to(r),flush=True)
+with log.open('w') as out:
+    process=subprocess.Popen(command,stdout=out,stderr=subprocess.STDOUT,env=m['environment'](profile));(f/'process.json').write_text(json.dumps({'pid':process.pid})+'\n');deadline=time.monotonic()+50
+    while process.poll() is None and time.monotonic()<deadline:
+        pid=None
+        for path in Path('/proc').glob('[0-9]*/cmdline'):
+            try:argv=path.read_bytes().split(b'\0')
+            except OSError:continue
+            if argv[0]==guest(binary).encode():pid=int(path.parent.name);break
+        if pid:
+            tracer=subprocess.Popen(['sudo','-n',str(r/'runtime/tools/strace-package/unpacked/usr/bin/strace'),'-yy','-s','200','-e','trace=renameat,newfstatat,openat,close,lstat','-p',str(pid),'-o',str(f/'files.strace')],stdout=out,stderr=subprocess.STDOUT);break
+        time.sleep(.02)
+    status=process.wait(timeout=80)
+    if tracer:tracer.wait(timeout=20)
+text=log.read_text();sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();record=dict(same_parent_rename_succeeded=status==0 and 'SHARED_RENAME_RESULT result=0' in text,outer_status=status,stage=a.stage,trace=str((f/'files.strace').relative_to(r)),log=str(log.relative_to(r)),log_sha256=sha(log),source_sha256=sha(source),full_UE_build_verified=False);(f/'result.json').write_text(json.dumps(record,indent=2)+'\n');print(text[-1600:]);print('EVIDENCE',f/'result.json')
