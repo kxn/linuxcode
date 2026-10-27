@@ -1,0 +1,37 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/original-certificate-leaf-v8-wait-v1.gdb.log",
+  "raw_sha256": "bc5e20b7a5b665f0ac07b68bb7910205dd1f3b4649dbd3d98e623156b3710110",
+  "maps": "logs/original-certificate-leaf-v8-wait-v1.maps.log",
+  "maps_sha256": "d32b133e5cca203f504bef4567ad1c0d99cacc44ab764fe53b447d9cc412cbae",
+  "output": "logs/original-certificate-leaf-v8-wait-v1.nlist-symbolicated.log",
+  "output_sha256": "76f28d8a5c63c837221b8ea7f1652898148fa3502d58d7d5d24f407779e6baf5",
+  "images": {
+    "runtime/audit-session-runtime-83/libsystem_kernel.dylib": {
+      "sha256": "59a39cb3eb497ef9c706784aff321a6ca987905ff0afc78e0674b8cd10538065",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2583
+    },
+    "runtime/audit-session-runtime-83/libxpc.dylib": {
+      "sha256": "bd727fccaad0db2c81fbe6a173c2f59c3afc490d8727c519b123c7f87268e0da",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1586
+    },
+    "runtime/local-identity-store-leaf-policy-v8/libraries/libDarlingLocalIdentitySecurityBackend.dylib": {
+      "sha256": "8750e3bfbd7d7b726b12dcfc87d343ae42bf5f22b414b6accc59261fc6d73b27",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 42846
+    },
+    "runtime/native-codesign-ci-v3/codesign-original": {
+      "sha256": "2fc443773ac85d6640c08d54f7b572179a8490f429b2446f6de8cbf785b54d8d",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 18
+    },
+    "runtime/audit-session-runtime-83/libdyld.dylib": {
+      "sha256": "582aed92a88a3e79441cf0a7be2dae7d3efee23c18401a3d9b166b8e351a2dd8",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3505
+    }
+  }
+}

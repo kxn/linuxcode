@@ -1,0 +1,22 @@
+{
+  "name": "local-identity-leaf-policy",
+  "payload": [
+    "vendor/darling/src/external/security/OSX/sec/Security/SecLocalIdentityStore.c",
+    "scripts/stage-local-identity-store.py",
+    "scripts/macho-named-reexport.py",
+    "scripts/native-codesign-runtime-profile.py",
+    "scripts/probe-original-codesign-certificate.py",
+    "scripts/probe-local-identity-policy.py",
+    "fixtures/hello/local-identity-policy.c"
+  ],
+  "reference": [
+    "artifacts/local-identity-store-leaf-policy-v8-stage.json",
+    "runtime/local-identity-leaf-policy-qs0rpq_i/result.json",
+    "runtime/original-codesign-certificate-3slz_oml/result.json",
+    "runtime/original-codesign-certificate-n0anwva7/result.json",
+    "runtime/original-certificate-leaf-v8-wait-v1/result.json",
+    "artifacts/original-certificate-leaf-v8-wait-v1-nlist-symbolication.json",
+    "artifacts/original-certificate-leaf-v8-wait-v1-map-bindings.json",
+    "logs/original-certificate-leaf-v8-wait-v1.nlist-symbolicated.log"
+  ]
+}
