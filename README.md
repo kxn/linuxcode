@@ -4,7 +4,7 @@
 
 **原版 xcodebuild 已成功编译并用原版 codesign 完成真实 Unity/CocoaPods iPhoneOS/arm64 App 的 ad-hoc 签名。** 原版 Storyboard、actool、IL2CPP/Bee 和三个内嵌 Framework 均完成处理；App、三个 Framework、两个 CocoaPods 静态库通过原版严格签名验证，App 的 2,904 项资源通过独立哈希检查。详见[完整 Unity 签名里程碑](dev/resource-runtime/research/unity-signed-app/README.md)。
 
-Unity 授权现可使用原生 Linux CLI：`linuxcode.py unity auth login`，无需在 Darling 中运行 Hub；详见[安装说明](docs/install.md)。当前机器的 Editor/iOS 模块已安装，实际导出等待账号登录和激活。
+Unity 授权现可使用原生 Linux CLI：`linuxcode.py unity auth login`，无需在 Darling 中运行 Hub；详见[安装说明](docs/install.md)。当前机器已完成官方登录及 Personal 激活，**全新 Unity 6000.3.27f1 项目已在无图形界面的 Linux 上成功导出 iOS Xcode 工程**（424 个 C++ 文件）；后续 CocoaPods 与原版 Xcode 构建正在实测。详见[全新 Unity 导出里程碑](dev/resource-runtime/research/unity-fresh-linux-export/README.md)。
 
 新增 RSA P12 导入入口：`import-identity --p12 … --output runtime/my-signing/store.plist --password-env MY_P12_PASSWORD`。P12 导入后的测试身份已完成原版 Unity 构建和七个产物验证；三层链查找、原版 codesign 和独立 CMS 验证也已通过；详见[安装说明](docs/install.md)。
 

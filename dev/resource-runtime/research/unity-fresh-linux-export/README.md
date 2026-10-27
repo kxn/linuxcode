@@ -1,0 +1,7 @@
+# Fresh Unity project exported entirely on Linux
+
+The official native Linux Unity Editor 6000.3.27f1 successfully exported a newly created Unity project to a genuine iOS Xcode project in batchmode with no graphical display. The actual export returned status0, wrote the expected project and local CocoaPods fixture, and generated424 C++ files. The exported project SHA256 is recorded in the sanitized milestone report. This milestone confirms the export phase; CocoaPods installation and the subsequent original xcodebuild invocation have their own results and are not inferred from export success.
+
+Official native Unity CLI1.0.0-beta.14 completed browser authentication and Personal activation after the user explicitly accepted Personal terms. This host inherited a revoked Linux session keyring, which originally prevented saving the browser login. The wrapper now detects only missing, expired, or revoked session rings, joins a named user session ring in its own process, and links it into the user ring so later CLI invocations can read credentials. The parent session is unchanged. The original CLI doctor credential-store check, actual browser login, and Personal activation succeeded. No tokens, licensing logs, account identifiers, Unity binaries or generated game payloads are included.
+
+The fixture and drivers remain in the earlier unity-editor-export-and-p12 checkpoint. No Mac was used. Developer provisioning and device execution are not verified by this export.
