@@ -1,0 +1,40 @@
+{
+  "name": "workloop-owner-release",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/kqueue/kevent_id.c",
+    "fixtures/hello/workloop-sync.c",
+    "scripts/probe-workloop-sync.py"
+  ],
+  "reference": [
+    "artifacts/workloop-owner-delete-source-publication-v1.json",
+    "logs/workloop-owner-delete-source-push-v1.log",
+    "artifacts/workloop-repeat-wake-source-publication-v1.json",
+    "logs/workloop-repeat-wake-source-push-v1.log",
+    "artifacts/workloop-owner-delete-kernel-v1-build.json",
+    "runtime/workloop-owner-delete-kernel-v1/plan.json",
+    "runtime/workloop-owner-delete-kernel-v1/link.log",
+    "artifacts/workloop-repeat-wake-kernel-v1-build.json",
+    "runtime/workloop-repeat-wake-kernel-v1/plan.json",
+    "runtime/workloop-repeat-wake-kernel-v1/link.log",
+    "artifacts/private-procfs-auditsession76-stage.json",
+    "artifacts/private-procfs-auditsession77-stage.json",
+    "runtime/workloop-sync-6cidph9f/result.json",
+    "runtime/workloop-sync-yc20824i/result.json",
+    "runtime/workloop-owner-assetcatalog-first-fault-v1/result.json",
+    "runtime/workloop-owner-assetcatalog-first-fault-v1/probe.log",
+    "runtime/workloop-owner-assetcatalog-first-fault-v1-agent/result.json",
+    "runtime/workloop-owner-assetcatalog-first-fault-v1-agent/process.gdb.log",
+    "runtime/workloop-owner-assetcatalog-first-fault-v1-agent/process.maps",
+    "logs/workloop-owner-assetcatalog-first-fault-v1.nlist-symbolicated.log",
+    "artifacts/workloop-owner-assetcatalog-first-fault-v1-map-bindings.json",
+    "artifacts/workloop-owner-assetcatalog-first-fault-v1-nlist-symbolication.json",
+    "runtime/workloop-delete-assetcatalog-first-fault-v1/result.json",
+    "runtime/workloop-delete-assetcatalog-first-fault-v1/probe.log",
+    "runtime/workloop-delete-assetcatalog-first-fault-v1-agent/result.json",
+    "runtime/workloop-delete-assetcatalog-first-fault-v1-agent/process.gdb.log",
+    "runtime/workloop-delete-assetcatalog-first-fault-v1-agent/process.maps",
+    "logs/workloop-delete-assetcatalog-first-fault-v1.nlist-symbolicated.log",
+    "artifacts/workloop-delete-assetcatalog-first-fault-v1-map-bindings.json",
+    "artifacts/workloop-delete-assetcatalog-first-fault-v1-nlist-symbolication.json"
+  ]
+}

@@ -224,3 +224,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Asynchronous XPC connection lifetime](research/xpc-async-reply-lifetime/README.md):32 delayed replies,32 cancellations and64 exactly-once finalizers after caller release; original asset task retry continues.
 
 - [Workloop owner discovery and handoff](research/workloop-owner-handoff/README.md): actual Mach thread validation, parked delivery and stale-END resume; wrong-port null-target server failure corrected and native checks pass.
+
+- [Ownership release and repeated assurance](research/workloop-owner-release/README.md): valid delete/enable precedence and repeat wake/discovery match original dispatch; previous duplicate-wake expectation corrected with native evidence.
