@@ -4,6 +4,8 @@
 
 [复用 Mach 接口并接入真实内存统计](resource-runtime/research/host-vm-statistics-upstream-interface/README.md)：原版 Xcode 已完成 UHT 并进入 805 项 UBA 任务的调度准备，但上游现有 VM 统计占位接口返回全零，使原版调度器一直等待初始内存估计。stage104 在原接口中接入 Linux 实际页数，原生调用、历史版本与缓冲区边界检查通过；原有 XNU 分发和缓存复用，UE 代码未改。完整游戏构建继续验证，不能据此宣称 UE App 已完成。
 
+[原版 UBA 调用原版 Clang 编译 iOS 目标文件](resource-runtime/research/original-uba-clang-library-paths/README.md)：完整 Xcode 构建已越过调度等待并启动编译，随后暴露研究环境过长的库搜索路径超出 UBA 固定缓冲区。只压缩路径组织、保留原库和查找顺序后，原版 UBA 与 Clang 的定点编译正常退出，产物与直接调用 Clang 逐字节一致。完整 UE 构建已继续，签名和 UE CocoaPods 仍待验证；没有替换 UBA 或修改引擎代码。
+
 [内部任务恢复与 XNU 等待语义修正](resource-runtime/research/microthread-pending-wait-upstream-reuse/README.md) 复用原有等待队列与锁，将等待状态的清理放回真正唤醒处。定点测试修正前失败、修正后通过；stage102 的原版 UE 工程生成随后遇到另一处共享内存映射失败，尚未完整通过。Unity 的既有 stage101 验证范围不变。
 
 [等待完成与后续代码执行的复查](resource-runtime/research/microthread-wake-completion-gating/README.md) 记录 stage102 后续完整运行仍出现等待队列崩溃，以及新增的“仅恢复调度、尚未真正唤醒”测试。原版适配代码的两个路径均在该测试中失败；stage103 的状态复查使四项定点测试通过，完整 UE 流程仍待验证。

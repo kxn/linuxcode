@@ -1,0 +1,45 @@
+{
+  "verified": true,
+  "scope": "Original Mac UBA local execution and original Apple Clang compile the same iOS source after compacting the research library search paths. Full UE Xcode compilation remains pending.",
+  "unchanged_source_stage": "artifacts/private-procfs-auditsession104-stage.json",
+  "original_UBA_Clang_engine_code_modified": false,
+  "baseline_probe": "runtime/original-uba-clang-signal-v1/result.json",
+  "candidate_probe": "runtime/original-uba-clang-7ljo9927/result.json",
+  "baseline_direct_Clang_native_status": 0,
+  "baseline_UBA_native_status": 255,
+  "baseline_signal_capture_intervened": true,
+  "full_Xcode_attempt_separately_observed_Clang_SIGABRT_count": 23,
+  "diagnostic_stack": [
+    "original UBA ProcessCreator::SendMessage",
+    "Darling libc __stack_chk_fail",
+    "Darling libc __abort"
+  ],
+  "diagnostic_stack_capture_is_private": "logs/original-uba-clang-abort-v1.annotated.log",
+  "diagnosis": "Research DYLD_LIBRARY_PATH values exceeded original UBA SendMessage fixed 1024-byte temporary buffer. Release-mode append has no bounds check; shortening the composed environment makes the same original binaries pass.",
+  "library_path_lengths_before": [
+    4046,
+    4649
+  ],
+  "library_path_lengths_after": [
+    236,
+    236
+  ],
+  "compact_stage": "runtime/dyld-library-paths-uvdwex5x/stage.json",
+  "direct_and_detoured_objects_byte_identical": true,
+  "iOS_object_sha256": "c47fb9e14fda823a57775587aa05e1c5fcd96df216d350b60bc989553984ec94",
+  "iOS_object_format": "Mach-O arm64 relocatable",
+  "first_match_library_lookup_preserved": true,
+  "non_workspace_fallback_positions_preserved": true,
+  "libraries_rebuilt_or_modified": false,
+  "engine_source_modified": false,
+  "Xcode_original_command_changed": false,
+  "research_launcher_optional_compaction_selected": true,
+  "full_Xcode_attempt": "runtime/unreal-xcode-build-gqvdbmfj/attempt-compact-library-paths-v5",
+  "full_Xcode_or_UE_App_build_verified": false,
+  "files": {
+    "scripts/compact-dyld-library-search-paths.py": "67d6c86b5f15c05f744ae7be32d0db525ec050a0385aaf2e197bdfb95ae693d1",
+    "scripts/probe-original-uba-clang.py": "ff7963e17c8dbb4651872176e51987508031f6cf00fe7d0d0e5051d07710329d",
+    "scripts/probe-xcode-service-runtime.py": "b0fe1068326462e1b0c82eea184186caed3fc3dc51ce2baa02597cd77cda5289"
+  },
+  "full_goal_complete": false
+}
