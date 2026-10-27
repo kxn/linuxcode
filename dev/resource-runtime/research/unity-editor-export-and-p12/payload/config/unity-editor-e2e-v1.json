@@ -1,0 +1,22 @@
+{
+  "version": "6000.3.27f1",
+  "revision": "672d562a42a7",
+  "host": "Linux x86_64",
+  "editor_api_source": "https://services.api.unity.com/unity/editor/release/v1/releases?version=6000.3&limit=1&platform=LINUX&architecture=X86_64",
+  "manual_source": "https://docs.unity.com/en-us/engine/6000.3/manual/platform-specific/iphone/ios-building-and-delivering/build-process",
+  "download_inputs": "runtime/unity-editor-downloads-v1/inputs.json",
+  "fixture": "fixtures/UnityExportSmoke",
+  "prepared_run": "runtime/unity-editor-e2e-c5_0k69h",
+  "plan": [
+    "native Linux Unity Editor -batchmode -nographics exports new iPhoneOS device Xcode project",
+    "original Darwin CocoaPods integrates local LinuxcodeSmoke Pod into generated UnityFramework",
+    "original xcodebuild compiles fresh exported project with dedicated DerivedData and fixture signing",
+    "original codesign plus independent Mach-O/resource verification; archive separately recorded"
+  ],
+  "GUI_required": false,
+  "Mac_required": false,
+  "Unity_license_required": true,
+  "editor_installed": false,
+  "Unity_export_verified": false,
+  "full_end_to_end_verified": false
+}

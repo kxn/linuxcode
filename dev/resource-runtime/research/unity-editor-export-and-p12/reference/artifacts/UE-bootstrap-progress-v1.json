@@ -1,0 +1,24 @@
+{
+  "official_repository": "EpicGames/UnrealEngine",
+  "local_checkout": "vendor/unreal-engine",
+  "commit": "f45729c0b6f097038e72b52d366a62baeca3275b",
+  "version": "5.8.4",
+  "source_access": "Authenticated existing GitHub account access; licensed source stays local",
+  "minimal_Mac_Intel_DotNet": {
+    "files": 5040,
+    "packs": 436,
+    "root": "runtime/unreal-dotnet-mac-x64-v1",
+    "native_probe": "runtime/unreal-dotnet-native-_c387fjc/result.json",
+    "original_dotnet_started": true,
+    "hostfxr_load_succeeded": true,
+    "blocker": "Microsoft Developer ID leaf has additional critical Apple kernel-extension marker .18. Existing embedded CMS validator recognizes .13 only; content/CMS math independently verifies, full leaf policy rejects extra critical marker. No bypass or source modification applied yet.",
+    "primary_policy_reference": "https://developer.apple.com/library/archive/technotes/tn2206/",
+    "marker_validation": "9 focused ASan/UBSan cases and actual original Microsoft library full CMS/code coverage pass",
+    "updated_native_probe": "runtime/unreal-dotnet-native-xg3mmnko/result.json",
+    "updated_native_scope": "stage86 private server; original DotNet host/fxr loads and identifies .NET10.0.7 + SDK10.0.203, CoreCLR GC initialization fails0x80004005; original status137",
+    "current_blocker": "CoreCLR GCToOSInterface initialization; managed UBT has not run"
+  },
+  "UE_build_verified": false,
+  "full_goal_complete": false,
+  "priority": "Continue fresh Unity Linux Editor export at user request; UE work retained, no managed-runtime success claimed"
+}

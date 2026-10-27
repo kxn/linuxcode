@@ -1,0 +1,34 @@
+{
+  "name": "unity-editor-export-and-p12",
+  "payload": [
+    "config/native-certificate-candidate-v9.json",
+    "config/unity-editor-e2e-v1.json",
+    "scripts/record-unity-certificate-milestone.py",
+    "scripts/prepare-unity-editor-smoke.py",
+    "scripts/run-unity-editor-export.py",
+    "scripts/run-unity-editor-e2e.py",
+    "scripts/fetch-unity-linux-editor.py",
+    "scripts/install-unity-linux-editor.py",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "vendor/darlingserver/src/file-signatures.cpp",
+    "fixtures/hello/developer-id-critical-markers.cpp",
+    "fixtures/UnityExportSmoke/NativePod/Smoke.m",
+    "fixtures/UnityExportSmoke/Assets/Editor/LinuxcodeIOSExport.cs",
+    "fixtures/UnityExportSmoke/Assets/Scripts/NativePodSmoke.cs"
+  ],
+  "reference": [
+    "artifacts/unity-P12-selfsigned-full-build-milestone-v1.json",
+    "artifacts/unity-P12-selfsigned-products-independent-v1.json",
+    "artifacts/unity-P12-untrusted-chain-rejection-v1.json",
+    "runtime/native-certificate-products-af5yste1/result.json",
+    "runtime/p12-selfsigned-fixture-pij6j665/import-result.json",
+    "artifacts/unity-editor-export-readiness-v1.json",
+    "runtime/unity-editor-downloads-v1/verified-downloads.json",
+    "runtime/unity-editor-e2e-c5_0k69h/prepared.json",
+    "artifacts/developer-id-optional-kernel-marker-v1.json",
+    "runtime/unreal-dotnet-native-xg3mmnko/result.json",
+    "artifacts/UE-bootstrap-progress-v1.json",
+    "logs/P12-certificate-candidate-v9-adoption.log",
+    "logs/P12-certificate-candidate-v9-preview.json"
+  ]
+}

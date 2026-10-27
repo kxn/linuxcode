@@ -4,7 +4,7 @@
 
 **原版 xcodebuild 已成功编译并用原版 codesign 完成真实 Unity/CocoaPods iPhoneOS/arm64 App 的 ad-hoc 签名。** 原版 Storyboard、actool、IL2CPP/Bee 和三个内嵌 Framework 均完成处理；App、三个 Framework、两个 CocoaPods 静态库通过原版严格签名验证，App 的 2,904 项资源通过独立哈希检查。详见[完整 Unity 签名里程碑](dev/resource-runtime/research/unity-signed-app/README.md)。
 
-新增 RSA P12 导入入口：`import-identity --p12 … --output runtime/my-signing/store.plist --password-env MY_P12_PASSWORD`。三层证书链已通过原生查找、原版 codesign 和独立 CMS 验证；详见[安装说明](docs/install.md)。
+新增 RSA P12 导入入口：`import-identity --p12 … --output runtime/my-signing/store.plist --password-env MY_P12_PASSWORD`。P12 导入后的测试身份已完成原版 Unity 构建和七个产物验证；三层链查找、原版 codesign 和独立 CMS 验证也已通过；详见[安装说明](docs/install.md)。
 
 新增：**完整 Unity/CocoaPods 工程已由原版 xcodebuild 调用原版 codesign 完成真实测试证书签名，构建退出码为 0。** App、内嵌 Framework 和静态库共七个产物通过原版严格验证及独立 CMS/页面/资源检查，包含双 CodeDirectory 与篡改拒绝测试。本次复用编译缓存；自签测试明确关闭 profile 要求，尚不代表开发者 provisioning 或设备安装可用。详见[完整 Unity 证书 CI](dev/resource-runtime/research/unity-certificate-ci/README.md)。
 
@@ -50,7 +50,7 @@ export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 
 ```bash
 python3 linuxcode.py --workspace /path/to/experiment adopt \
-  --certificate-candidate config/native-certificate-candidate-v6.json \
+  --certificate-candidate config/native-certificate-candidate-v9.json \
   --identity-store runtime/my-signing/store.plist
 export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 ```

@@ -59,16 +59,16 @@ python3 linuxcode.py xcodebuild --dry-run -- -workspace App.xcworkspace -scheme 
 
 ```bash
 python3 linuxcode.py --workspace /path/to/experiment adopt \
-  --certificate-candidate config/native-certificate-candidate-v6.json \
+  --certificate-candidate config/native-certificate-candidate-v9.json \
   --identity-store runtime/my-signing/store.plist
 export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 cd /path/to/experiment/my-game
 xcodebuild -workspace Unity-iPhone.xcworkspace -scheme Unity-iPhone -sdk iphoneos build
 ```
 
-这里继续使用工程或原 CI 的签名设置，入口不会修改 `CODE_SIGN_IDENTITY`、provisioning 设置或工程文件。完整 Unity build、Debug/Release archive 与 Release 独立符号生成已通过；证据来自自生成测试证书及显式关闭 profile 要求的测试命令，不能据此声称 Apple 开发者 provisioning、设备安装或 export 已通过。
+这里继续使用工程或原 CI 的签名设置，入口不会修改 `CODE_SIGN_IDENTITY`、provisioning 设置或工程文件。完整 Unity build 已通过；此前 v6 的 Debug/Release archive 与 Release 独立符号生成也已通过；证据来自自生成测试证书及显式关闭 profile 要求的测试命令，不能据此声称 Apple 开发者 provisioning、设备安装或 export 已通过。
 
-候选采用 stage85、客户端 v13、独立 daemon v9 与源码 SecurityServer，包含已经定向验证并通过完整 Debug 归档的 fork 队列锁修复。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
+v9 候选采用 stage85、客户端 v14、独立 daemon v15、源码 SecurityServer 与完整源码 trustd（38 个编译单元，Objective-C 启用 ARC）。它已通过 P12 导入身份的完整 Unity 构建、七个原版严格签名检查及独立验证。stage85 保留此前归档验证通过的 fork 队列锁修复；v9 本身尚未重跑归档。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
 
 ```python
 {
@@ -97,7 +97,7 @@ unset MY_P12_PASSWORD
 
 这是只读且未加密的身份库，不是完整系统钥匙串；请保存在工作区的 `runtime/` 私有目录中。导入不会安装 provisioning profile，也不会授予证书信任。
 
-P12 中额外的公共证书保存为可选的 `certificates` DER 数组。新增客户端 v14 / daemon v15 候选支持查找这些链证书；原生三层链测试和原版 codesign 的完整 CMS 证书链已通过，完整 Unity 集成另行记录。旧 v6 候选不读取这个可选数组，不能据此宣称支持多级链。测试只使用显式测试根锚点，未修改系统信任库。
+P12 中额外的公共证书保存为可选的 `certificates` DER 数组。客户端 v14 / daemon v15 支持查找这些链证书；原生三层链测试和原版 codesign 的完整 CMS 证书链已通过。完整 Unity 构建使用从 P12 导入的自签测试身份通过；非 Apple 的三层链被原版 Xcode 正常拒绝，不再导致 trustd 崩溃。旧 v6 候选不读取这个可选数组。测试只使用显式测试根锚点，未修改系统信任库。
 
 `status` 的 `certificate_signing_ready` 表示已采用经过验证的证书签名运行配置；`developer_provisioning_or_device_trust_verified` 仍为 false。每次调用记录实际参数、签名作用域、服务配置和原生退出码。没有重复执行 UTI smoke 探针或列出全部服务；仍检查服务加载失败并保留构建的真实失败状态。
 

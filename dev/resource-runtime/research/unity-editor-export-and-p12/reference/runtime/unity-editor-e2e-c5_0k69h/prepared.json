@@ -1,0 +1,32 @@
+{
+  "project": "runtime/unity-editor-e2e-c5_0k69h/project",
+  "export": "runtime/unity-editor-e2e-c5_0k69h/ios",
+  "editor": "runtime/unity-editor-linux-6000.3.27f1/Editor/Unity",
+  "editor_version": "6000.3.27f1",
+  "command": [
+    "/home/dl/linuxcode/runtime/unity-editor-linux-6000.3.27f1/Editor/Unity",
+    "-batchmode",
+    "-nographics",
+    "-quit",
+    "-projectPath",
+    "/home/dl/linuxcode/runtime/unity-editor-e2e-c5_0k69h/project",
+    "-buildTarget",
+    "iOS",
+    "-executeMethod",
+    "Linuxcode.CI.IOSExport.Run",
+    "-logFile",
+    "/home/dl/linuxcode/runtime/unity-editor-e2e-c5_0k69h/Unity-export.log"
+  ],
+  "environment": {
+    "LINUXCODE_UNITY_EXPORT_PATH": "/home/dl/linuxcode/runtime/unity-editor-e2e-c5_0k69h/ios"
+  },
+  "source_files": {
+    "fixtures/UnityExportSmoke/NativePod/Smoke.m": "70d9e0be6aecc91ede9f54cb0ad5ae2a92ad5a0001b66816d77259afa9573936",
+    "fixtures/UnityExportSmoke/Assets/Editor/LinuxcodeIOSExport.cs": "8ec551631ac6c85e919e927c5353b75a4e1aa2e56fc924a166575f046c0a4312",
+    "fixtures/UnityExportSmoke/Assets/Scripts/NativePodSmoke.cs": "83abbe56da24cec3cf9c8873af93e559c3d72ef5c4618b6a59971858c8efe0af"
+  },
+  "Unity_export_verified": false,
+  "CocoaPods_verified": false,
+  "original_xcodebuild_verified": false,
+  "provisioned_device_install_verified": false
+}
