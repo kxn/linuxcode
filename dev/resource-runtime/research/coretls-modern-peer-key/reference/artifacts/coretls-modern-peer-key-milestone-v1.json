@@ -1,0 +1,31 @@
+{
+  "verified": true,
+  "scope": "Full three-unit source CoreTLS CF helpers; modern peer key extraction with real RSA/P256 independent signatures, corrupted digests and malformed DER rejection",
+  "created_at": "2026-10-27T11:01:10.154617+00:00",
+  "source_commit": "50f8e44",
+  "source_repository": "https://github.com/kxn/darling-coretls",
+  "positive_report": "runtime/coretls-modern-peer-key-oxbk06hf/result.json",
+  "reference_sha256": {
+    "runtime/coretls-cfhelpers-source-ce01okxu/build.json": "cbb91f663ee2b3f08888adad8b2312a1cd1112df9cf3c3c156f00edc283a895e",
+    "runtime/coretls-modern-peer-key-oxbk06hf/result.json": "3b2922424618eeb126f7a290785f715c4e7f1f1ffcb5e64e70348a3ec75ba8e8",
+    "runtime/coretls-modern-peer-key-j4073a08/result.json": "9a7b3bc3636b32d24614f57ebb8a72e701454909a026004f8fc4b327919761fc",
+    "runtime/unreal-dotnet-native-04afsycs/result.json": "8ff461aef5135ab406cdc1f41bc434cf23049110635d4e11c6f15d031f429607",
+    "runtime/unreal-dotnet-native-2_n6ac6z/result.json": "ff02ebe3af221c567dd04c4613d2919f661b287995f6d7a1e27203b2e1993bf7",
+    "runtime/unreal-dotnet-native-h90gc_6y/result.json": "dbc8acb53badb1769929f7ad3c86d8d7af84288c868824b21041efdcaeaa979c",
+    "runtime/private-native-resolver-c4n18jgb/result.json": "c57aa3af70aec1362d87e24348198764ae24e2c26c1a7b9f61f891ca7c87e3db"
+  },
+  "original_exports_preserved": 19,
+  "compiler_assertions_enabled_for_native_fixture": true,
+  "original_consumer_Security_instructions_preserved": true,
+  "real_securityd_listening_stack_sample": "runtime/ue-security-services-securityd-v2/result.json",
+  "limitations": [
+    "Native helper probe uses RTLD_LAZY. RTLD_NOW exposes the existing missing dyld_shared_cache_for_each_subcache4Rosetta import in the unrelated dependency closure.",
+    "Certificate trust evaluation and a completed TLS connection are not established by key extraction/signature tests.",
+    "Original UE MSBuild remains incomplete; prior attempt reached CSSM module failure plus .NET RX/RW alias allocation failure.",
+    "Private resolver binding matches configured bytes and preserves host/backing files, but native getaddrinfo fixture returned EAI_NONAME. DNS fix is not verified.",
+    "New service composition is experimental; it is not an adopted signing runtime."
+  ],
+  "UE_build_verified": false,
+  "completed_TLS_handshake_or_certificate_trust_verified": false,
+  "full_goal_complete": false
+}

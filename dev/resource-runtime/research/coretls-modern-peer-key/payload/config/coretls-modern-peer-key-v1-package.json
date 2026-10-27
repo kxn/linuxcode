@@ -1,0 +1,32 @@
+{
+  "name": "coretls-modern-peer-key",
+  "payload": [
+    "vendor/darling/src/external/coretls/coretls_cfhelpers/tls_helpers.c",
+    "scripts/build-coretls-cfhelpers-source.py",
+    "scripts/probe-coretls-modern-peer-key.py",
+    "scripts/coretls-cfhelpers-runtime-profile.py",
+    "fixtures/hello/coretls-modern-peer-key.c",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "scripts/native-security-services-profile.py",
+    "config/native-security-services-stage90-v1.json",
+    "scripts/stage-native-resolver-launcher.py",
+    "scripts/native-resolver-runtime-profile.py",
+    "scripts/probe-private-native-resolver.py",
+    "fixtures/hello/private-native-resolver.c"
+  ],
+  "reference": [
+    "artifacts/coretls-modern-peer-key-milestone-v1.json",
+    "runtime/coretls-cfhelpers-source-ce01okxu/build.json",
+    "runtime/coretls-modern-peer-key-oxbk06hf/result.json",
+    "runtime/coretls-modern-peer-key-j4073a08/result.json",
+    "runtime/unreal-dotnet-native-04afsycs/result.json",
+    "runtime/unreal-dotnet-native-2_n6ac6z/result.json",
+    "runtime/unreal-dotnet-native-h90gc_6y/result.json",
+    "runtime/private-native-resolver-c4n18jgb/result.json",
+    "artifacts/native-resolver-launcher-v1-stage.json",
+    "runtime/ue-security-services-securityd-v2/result.json",
+    "artifacts/ue-security-services-parent-v2-symbolication.json",
+    "logs/ue-security-services-parent-v2.macho-symbolicated.log",
+    "logs/ue-stage90-restore-parent-v1.macho-symbolicated.log"
+  ]
+}
