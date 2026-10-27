@@ -1,0 +1,39 @@
+{
+  "scope": "Experimental stage85 source kernel after deterministic kqueue spawn/fork regression; full archive is not yet verified. Not an adoptable success receipt.",
+  "inputs": {
+    "stage": {
+      "path": "artifacts/private-procfs-auditsession85-stage.json",
+      "sha256": "d5521f748fb0b590a332e394e66d86af33dafc822385f3843fb010c5635e82dd"
+    },
+    "configuration": {
+      "path": "config/direct-resource-tool-environment-v150.json",
+      "sha256": "d47914a7cba73b72bbf205c344e496fe1d8b7d5ef5f484f39db59ea7404c421e"
+    },
+    "identity_stage": {
+      "path": "artifacts/local-identity-store-certificate-lookup-v13-stage.json",
+      "sha256": "8f2a01c87f86c8c15c8ba7bfd8b9f9c1c8267da757bcc98b716b688810b78568"
+    },
+    "trustd_identity_stage": {
+      "path": "artifacts/local-identity-store-parent-candidates-v9-stage.json",
+      "sha256": "f02c0a3d58868f9a3314125fd6e720274b05ac00e965774e3e712aef5b1a9eb1"
+    },
+    "securityd_build": {
+      "path": "runtime/securityd-source-24j16esb/build.json",
+      "sha256": "76b9e7dbe7aef117d1e0ebeef3fc51556dd5cc34779288087481f39eb21ec5fb"
+    },
+    "launchctl": {
+      "path": "runtime/launchctl-source-6e9jbpuc/launchctl",
+      "sha256": "3e813a63c44e2739cbc06391a2d641aa499105e5356a28d8d3559c0ceee85d84"
+    }
+  },
+  "cold_reconstruction_ready": false,
+  "service_templates": {
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.securityd.plist": "3de83e3c4fabc964456c8a673ddf528d580bd5c9964e023ade743e3d8bbf220f",
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.trustd.plist": "1ce08dcc60a430e692be90a898503c63d3089eff46d7ac36c04743015332c474",
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchAgents/com.apple.trustd.agent.plist": "53898cb7cfa845cb3a1c5874d27ef0c6e055f101680c09b48d43254aeb072471"
+  },
+  "workspace_bind_stage": {
+    "path": "artifacts/workspace-bind-launcher-certificate-v1-stage.json",
+    "sha256": "d8b17e8ffd45aa3cf2a96eafd1e5f8012944c9d4a2bf09a578bd7ed90febce70"
+  }
+}

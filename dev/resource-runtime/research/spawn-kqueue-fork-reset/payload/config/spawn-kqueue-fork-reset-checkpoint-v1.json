@@ -1,0 +1,23 @@
+{
+  "name": "spawn-kqueue-fork-reset",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/posix_spawn.c",
+    "fixtures/hello/kqueue-spawn-fork-reset.c",
+    "scripts/probe-kqueue-spawn-fork-reset.py",
+    "scripts/stage-kernel-only-runtime.py",
+    "scripts/rebuild-kernel-source-delta.py",
+    "scripts/prepare-unity-archive-ci.py",
+    "config/native-certificate-candidate-v5.json"
+  ],
+  "reference": [
+    "artifacts/kqueue-spawn-fork-reset-milestone-v1.json",
+    "runtime/kqueue-spawn-fork-reset-6tzaw8z3/result.json",
+    "runtime/kqueue-spawn-fork-reset-r8ropgd8/result.json",
+    "artifacts/kernel-spawn-kqueue-fork-v1-build.json",
+    "artifacts/private-procfs-auditsession85-stage.json",
+    "runtime/unity-original-archive-sskujsl8/diagnostic-stop.json",
+    "logs/unity-archive-llbuild-selected-v1.nlist-symbolicated.log",
+    "artifacts/unity-archive-llbuild-selected-v1-nlist-symbolication.json",
+    "runtime/unity-original-archive-sskujsl8/symbolication-bindings.json"
+  ]
+}

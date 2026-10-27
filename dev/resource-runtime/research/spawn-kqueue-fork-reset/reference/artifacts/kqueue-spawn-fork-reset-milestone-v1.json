@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "scope": "Deterministic spawn/fork regression and complete source-kernel rebuild; full archive pending",
+  "root_cause": "Embedded libkqueue backend retained a mutex owned by another parent thread after posix_spawn fork; libSystem callback resets its own backend only",
+  "baseline_native_status": 142,
+  "fixed_native_status": 0,
+  "child_exec_and_stdout_verified": true,
+  "parent_queue_retained": true,
+  "baseline_stage": "artifacts/private-procfs-auditsession84-stage.json",
+  "fixed_stage": "artifacts/private-procfs-auditsession85-stage.json",
+  "recompiled_source_units": 1,
+  "reused_objects": 906,
+  "original_public_exports_preserved": 1434,
+  "source_commit": "0d24e0824a66dd795517b11b6f4457c5f24afef1",
+  "source_url": "https://github.com/kxn/darling-xnu/commit/0d24e0824a66dd795517b11b6f4457c5f24afef1",
+  "references": {
+    "runtime/kqueue-spawn-fork-reset-6tzaw8z3/result.json": "c1a8921f442a36ce64e83a081c79a0b176a582df66d15bdcb5b7df9306606cd0",
+    "runtime/kqueue-spawn-fork-reset-r8ropgd8/result.json": "ca1f18b6177b5691ce4575e3e2a368d5cc1a9d33b92bca0fd8afa266602226d7",
+    "artifacts/kernel-spawn-kqueue-fork-v1-build.json": "bd88140bf4f06257b601f5e98384062be8a504ed31d5b1173d00b202c1559311",
+    "artifacts/private-procfs-auditsession85-stage.json": "d5521f748fb0b590a332e394e66d86af33dafc822385f3843fb010c5635e82dd",
+    "runtime/unity-original-archive-sskujsl8/diagnostic-stop.json": "07e9ab251636148dd1ae677695d017ad7313b2951c1da45ece613831722aa12c",
+    "artifacts/unity-archive-llbuild-selected-v1-nlist-symbolication.json": "9eda7460ed40afe6324a627a2102fcf591d1bd12fa1c5e0e3256d61f0b85f9b8"
+  },
+  "full_archive_verified": false,
+  "full_goal_complete": false
+}
