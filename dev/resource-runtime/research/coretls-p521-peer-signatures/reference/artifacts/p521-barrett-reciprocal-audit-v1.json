@@ -1,0 +1,25 @@
+{
+  "source": "vendor/darling/src/external/corecrypto/src/ccec.c",
+  "source_sha256": "ab30b7cca5f8adc41ba8d2b6913947696d1c4478007dd5c2e26564ab24cb560f",
+  "word_bits": 64,
+  "rows": [
+    {
+      "field": "modulus p",
+      "modulus": "0x1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "word_count": 9,
+      "actual": "0x20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "expected": "0x80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000",
+      "match": false
+    },
+    {
+      "field": "order n",
+      "modulus": "0x1fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa51868783bf2f966b7fcc0148f709a5d03bb5c9b8899c47aebb6fb71e91386409",
+      "word_count": 9,
+      "actual": "0x2000000000000000000000000000000000000000000000000000000000000000005ae79787c40d069948033feb708f65a2fc44a36477663b851449048e16ec79bf7",
+      "expected": "0x8000000000000000000000000000000000000000000000000000000000000000016b9e5e1f10341a65200cffadc23d968bf1128d91dd98ee14512412385bb1e6fdc408f501c8d1cd2dad1d7f46221c",
+      "match": false
+    }
+  ],
+  "calculation": "floor(2 ** (2 * native_word_count * native_word_bits) / modulus), matching the source cczp_mod limb-based Barrett reduction",
+  "runtime_execution": false
+}

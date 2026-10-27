@@ -1,0 +1,36 @@
+{
+  "verified": true,
+  "scope": "Native peer certificate key import and SHA256 RSA/P256/P384/P521 independent signature verification",
+  "created_at": "2026-10-27T11:36:03.450912+00:00",
+  "source_repository": "https://github.com/kxn/darling-corecrypto",
+  "source_branch": "linuxcode/xcode-x86_64",
+  "source_commit": "99f40f7",
+  "positive_native_report": "runtime/coretls-modern-peer-key-pg3yvy1a/result.json",
+  "reference_sha256": {
+    "runtime/corecrypto-source-delta-cpgxd978/build.json": "45263f5ef16253ac27facbd0a6df2d68a0546dee6d62e9453b12fa107a1afdef",
+    "runtime/coretls-private-crypto-v6/build.json": "2e1abf09935512c3ba884f1dc94d0c51f766b55539be54cdb4bce3b51b75d86f",
+    "runtime/coretls-modern-peer-key-pg3yvy1a/result.json": "c04c414c785fd17d9da97f321e740724a4f56cf4f4babe357233cbf327a20be5",
+    "runtime/coretls-modern-peer-key-3_v6hi6m/result.json": "f61c2c0530d743351f8ba1007d063aca5505f169a2ced73364fb6046fd1c4980",
+    "runtime/coretls-modern-peer-key-ohlc5ij6/result.json": "f248be306058bd39cd691121c40fc66909fed96f9dd8665bd4fc3548be673ac7",
+    "runtime/coretls-modern-peer-key-hxc4bmxa/result.json": "8f2d9b37a9bbb083bfaf434eaaf585da0daa2fb36840821d529241d3d8a5e8c0",
+    "runtime/unreal-dotnet-native-uh8zipwi/result.json": "59a300d56befefdb25d20103184861d46cec07fb6b8854ff767011a760c064cf",
+    "artifacts/p521-barrett-reciprocal-audit-v1.json": "a14f4a61adc8d0f4de8d5436c849e2ad9ae03b1d8ddc6b58575dee4c3e8c6f0a"
+  },
+  "private_CoreCrypto_source_units": 56,
+  "recompiled_units": 1,
+  "reused_units": 55,
+  "global_CoreCrypto_replaced": false,
+  "source_CoreTLS_backend_and_umbrella_bytes_preserved": true,
+  "previous_failures": [
+    "Original .NET P521 import expected limb-padded145 rather than standard133 bytes",
+    "Legacy P384 ECDSA read beyond short hash; P521 legacy verify timed out, then rejected an independent signature"
+  ],
+  "selected_ECDSA_verifier": "Existing pinned BoringSSL static archive, with explicit public point import and real signature verification; no success stubs",
+  "scope_limits": [
+    "Tested SHA256 RSA/P256/P384/P521 signatures and corrupted digests; not every hash/curve combination.",
+    "The scalar fallback is not established by the successful BoringSSL probe. P521 reciprocal audit is mathematical only; 32-bit/other limb widths are not execution-verified.",
+    "No completed TLS/certificate trust, UE build, ECDH or new developer-provisioning claim.",
+    "Old memory-alias failures remain independent and uncorrected."
+  ],
+  "full_goal_complete": false
+}

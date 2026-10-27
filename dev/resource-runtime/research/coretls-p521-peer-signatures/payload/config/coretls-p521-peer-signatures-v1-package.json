@@ -1,0 +1,23 @@
+{
+  "name": "coretls-p521-peer-signatures",
+  "payload": [
+    "vendor/darling/src/external/corecrypto/src/ccec.c",
+    "scripts/rebuild-corecrypto-source-delta.py",
+    "scripts/stage-coretls-private-crypto.py",
+    "scripts/coretls-cfhelpers-runtime-profile.py",
+    "scripts/corecrypto-hkdf-profile.py",
+    "scripts/probe-coretls-modern-peer-key.py",
+    "fixtures/hello/coretls-modern-peer-key.c"
+  ],
+  "reference": [
+    "artifacts/coretls-p521-peer-signature-milestone-v1.json",
+    "runtime/corecrypto-source-delta-cpgxd978/build.json",
+    "runtime/coretls-private-crypto-v6/build.json",
+    "runtime/coretls-modern-peer-key-pg3yvy1a/result.json",
+    "runtime/coretls-modern-peer-key-3_v6hi6m/result.json",
+    "runtime/coretls-modern-peer-key-ohlc5ij6/result.json",
+    "runtime/coretls-modern-peer-key-hxc4bmxa/result.json",
+    "runtime/unreal-dotnet-native-uh8zipwi/result.json",
+    "artifacts/p521-barrett-reciprocal-audit-v1.json"
+  ]
+}
