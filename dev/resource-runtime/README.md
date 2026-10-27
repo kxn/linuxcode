@@ -212,3 +212,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Real auxiliary message bytes and timer preallocation](research/mach-msg2-auxiliary/README.md):cross-process payloads,retained retries and3966 message checks plus real timers; original IBAgent reaches its message channel and main-queue synchronization.
 
 - [Original Unity Storyboard compilation](research/original-storyboard-ulock/README.md): original ibtool and IBAgent pass twice, with matching NIB hashes and entry mapping; real ulock waiter counts and error handling tested. Full App remains in progress.
+
+- [Process-event notification and subscription ordering](research/process-event-channel/README.md): 64 real queued exit/update cycles and disable/re-enable retention; one kernel source unit recompiled, 906 reused.

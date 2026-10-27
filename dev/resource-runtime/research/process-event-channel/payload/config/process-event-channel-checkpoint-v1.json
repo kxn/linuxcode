@@ -1,0 +1,28 @@
+{
+  "name": "process-event-channel",
+  "payload": [
+    "scripts/rebuild-kernel-source-delta.py",
+    "scripts/probe-kqueue-proc-channel.py",
+    "fixtures/hello/kqueue-proc-channel.c",
+    "vendor/darling/src/external/libkqueue/src/linux/proc.c",
+    "vendor/darlingserver/src/kqchan.cpp"
+  ],
+  "reference": [
+    "artifacts/proc-channel-source-publication-v1.json",
+    "artifacts/proc-channel-resource-progress-v1.json",
+    "logs/proc-channel-libkqueue-source-push-v1.log",
+    "logs/proc-channel-server-source-push-v1.log",
+    "runtime/simulator-signature-server-zifpzw91/stage.json",
+    "runtime/simulator-signature-server-zifpzw91/build.log",
+    "artifacts/proc-channel-kernel-v1-build.json",
+    "artifacts/proc-channel-kernel-v2-build.json",
+    "runtime/proc-channel-kernel-v1/plan.json",
+    "runtime/proc-channel-kernel-v2/plan.json",
+    "runtime/proc-channel-kernel-v1/link.log",
+    "runtime/proc-channel-kernel-v2/link.log",
+    "artifacts/private-procfs-auditsession69-stage.json",
+    "artifacts/private-procfs-auditsession70-stage.json",
+    "runtime/kqueue-proc-channel-4k7ft5sy/result.json",
+    "runtime/kqueue-proc-channel-l_q1kfmx/result.json"
+  ]
+}
