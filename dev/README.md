@@ -1,5 +1,7 @@
 # 开发者环境
 
+开发约束：优先复用上游 Darling 已有实现。缺符号或调用失败时，先确认实际加载的库，再核对固定上游源码、构建目标、导出与依赖；已有实现应修正接入，避免在外围复制或简化重写。只有确认接口缺口或原实现错误后，才修改对应组件并保留与基线的差异和实际验证。现有组件的重新构建、版本适配和本实验环境的装配问题，应分别说明，不能统称为“Darling 没有这个组件”。
+
 最新实测进展：Linux 原生 Unity Editor 已完成真实空项目的 iOS 导出，随后原版 CocoaPods 和 Darling 下的原版 Xcode 已构建出 App；[完整流程证据](resource-runtime/research/unity-fresh-linux-end-to-end/README.md) 保留首次编译及恢复运行的边界。Release xcarchive 和 dSYM 也已有实测记录；开发者 provisioning、设备安装与完整冷重建仍未完成。下文逐项研究附件中的“当前阻塞”描述对应附件生成时的历史状态。
 
 UE 的原版 Intel macOS SDK 已在 Darling 下成功编译完整 UnrealBuildTool：13 个项目、零警告、零错误、正常退出；生成的工具也已实际运行 `-Help` 并返回零。[完整 UBT 构建及启动证据](resource-runtime/research/unreal-original-UBT-build/README.md) 保存参数和 13 个私有产物的校验摘要。UE iOS App 仍未验证；Linux SDK 只用于下载依赖，实际编译使用原版 macOS SDK。
