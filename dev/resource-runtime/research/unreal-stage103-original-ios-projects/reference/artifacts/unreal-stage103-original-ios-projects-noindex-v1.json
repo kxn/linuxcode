@@ -1,0 +1,45 @@
+{
+  "scope": "Original UBT completed headless project generation with official -NoIntelliSense; iOS pbxproj and schemes exist, workspace was subsequently removed by upstream cleanup",
+  "native_report": "runtime/unreal-dotnet-native-mq2ur5vb/result.json",
+  "native_status": 0,
+  "outer_status": 0,
+  "stage": "artifacts/private-procfs-auditsession103-stage.json",
+  "source_server_commit": "31660a2",
+  "engine_commit": "f45729c0b6f097038e72b52d366a62baeca3275b",
+  "project_fixture_authored_by_linuxcode": true,
+  "original_engine_sources_modified": false,
+  "official_generator_arguments": "config/unreal-original-generate-ios-noindex-v1-arguments.json",
+  "generated_projects": [
+    {
+      "project": "runtime/unreal-game-project-o_lk51qs/Intermediate/ProjectFilesIOS/UnrealGame (IOS).xcodeproj",
+      "project_sha256": "eff96aae6e13e950385aa72af94bbf2c5c79559de5bdaa5a6aaa86132a0c1cf2",
+      "schemes": {
+        "runtime/unreal-game-project-o_lk51qs/Intermediate/ProjectFilesIOS/UnrealGame (IOS).xcodeproj/xcshareddata/xcschemes/UnrealGame.xcscheme": "662a085ae53810743c749ff57d9228ac3554106ddaa392e08d64f20ee2d122a3"
+      }
+    },
+    {
+      "project": "runtime/unreal-game-project-o_lk51qs/Intermediate/ProjectFilesIOS/UnrealClient (IOS).xcodeproj",
+      "project_sha256": "9304af89698dddfed491c6ff02378fedb7ce6747e6db9269da7d54865a45d861",
+      "schemes": {
+        "runtime/unreal-game-project-o_lk51qs/Intermediate/ProjectFilesIOS/UnrealClient (IOS).xcodeproj/xcshareddata/xcschemes/UnrealClient.xcscheme": "c87391d4e8a40de0e7072c9b5c49aaabd473ee6d9c89adc393b1e7e6326923b1"
+      }
+    },
+    {
+      "project": "runtime/unreal-game-project-o_lk51qs/Intermediate/ProjectFilesIOS/LinuxcodeUESmoke (IOS).xcodeproj",
+      "project_sha256": "c69b86caffde1b50fa01b1f0aabf26b29d1540e00f4b76cac2a9ca9687189e69",
+      "schemes": {
+        "runtime/unreal-game-project-o_lk51qs/Intermediate/ProjectFilesIOS/LinuxcodeUESmoke (IOS).xcodeproj/xcshareddata/xcschemes/LinuxcodeUESmoke.xcscheme": "96f3050f08f5f015f57c50d02f6292db161426004a64a3e2423e0eea9ad111f5"
+      }
+    }
+  ],
+  "expected_workspace": "runtime/unreal-game-project-o_lk51qs/LinuxcodeUESmoke_IOS.xcworkspace",
+  "workspace_exists": false,
+  "workspace_cleanup_source": {
+    "file": "Engine/Source/Programs/UnrealBuildTool/ProjectFiles/Xcode/XcodeProjectFileGenerator.cs",
+    "sha256": "5a83009a94fa17a904ff1e5d016ac33ef047e5128398a94845110b8de5cc269b",
+    "reason": "With explicit ProjectPlatforms, platform-specific and null-platform workspace names coincide; modern-project cleanup deletes that path after writing it"
+  },
+  "full_default_index_generation_verified": false,
+  "full_original_UE_build_verified": false,
+  "full_goal_complete": false
+}

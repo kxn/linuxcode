@@ -1,0 +1,9 @@
+# Original UBT writes iOS Xcode projects on Linux/Darling
+
+The original Intel macOS UBT now completes project generation on stage103 with native and outer status zero. The official `-NoIntelliSense` option omits IDE indexing preparation for this headless test. Three generated iOS `.xcodeproj` files and their shared schemes are present, including the ordinary LinuxcodeUESmoke game fixture. Engine source was not changed. This fixture is authored for the compatibility test; it is not an Epic sample project.
+
+The expected workspace is absent despite the success status. Source inspection explains the upstream cleanup behavior: with explicit `-Platforms=IOS`, the null-platform and platform-specific workspace names coincide, and modern-project cleanup deletes the workspace after writing it. The attached record retains this limitation. The next test uses the generator's default Apple platform selection to keep distinct workspace names, without altering the generator or creating a workspace ourselves.
+
+The source fixture helper is included for reuse. The existing smoke fixture was initially prepared with equivalent source content before that helper was written. Generated Epic projects/binaries, the engine's raw diagnostic logs and all activation/signing material remain private. Full IDE index generation and a complete UE App build are not established by this checkpoint.
+
+The original `xcodebuild -list -json -project` also parsed the generated game project and exited with native/outer status zero. Its JSON lists the LinuxcodeUESmoke scheme, the game and build targets, and five configurations. The pbxproj hash is unchanged. This read uses the already adopted stage101/candidate12 Xcode runtime; UBT generation uses stage103. Background CoreDevice/StorageKit failures appear in the log but did not prevent this project-list operation. They have not been treated as required new implementation work.
