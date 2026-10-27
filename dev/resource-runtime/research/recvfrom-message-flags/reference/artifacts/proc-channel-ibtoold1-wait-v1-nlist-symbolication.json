@@ -1,0 +1,62 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/proc-channel-ibtoold1-wait-v1.gdb.log",
+  "raw_sha256": "0d9ec56643dead63a267007c5125526cdeaad77d71009661e92a72a066689536",
+  "maps": "logs/proc-channel-ibtoold1-wait-v1.maps.log",
+  "maps_sha256": "217cce8c722ddba5f49857e3abbd97d4b16897c61c1d24f4046698b14ce61fb2",
+  "output": "logs/proc-channel-ibtoold1-wait-v1.nlist-symbolicated.log",
+  "output_sha256": "d08b4f65c06fc2f5d325230bd344d493e019914d17215620aa66d8620e4fe31f",
+  "images": {
+    "runtime/audit-session-runtime-70/libsystem_kernel.dylib": {
+      "sha256": "97a37ff26dbb2217b2b706b73e900331126737bf76d77cec38ea0012834cefae",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2573
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/foundation-native-framework-stage/CarbonCore.framework/Versions/A/CarbonCore": {
+      "sha256": "4ccae193c819a25b4578fbff9d84d918ff19c097a727a5f6e4f6b44d8bfc1f2c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 6431
+    },
+    "runtime/foundation-native-framework-stage/CoreServicesInternal.framework/Versions/A/CoreServicesInternal": {
+      "sha256": "d784796638b405099e75b643b20fadd1c430ead10434f087a9b658e6c75423f2",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 930
+    },
+    "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation": {
+      "sha256": "ca12467c711063defa5bd340faf8e0c3ac0677e77af625605e2729e67534b271",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 14318
+    },
+    "runtime/foundation-native-framework-stage/Foundation.framework/Versions/C/Foundation": {
+      "sha256": "5007842d25682120326541352006cbd192872c4c15f414d50fc66058a30661af",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 95375
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/DVTFoundation": {
+      "sha256": "d5441c8335f76c44d03f62e5dec2d5e073cef83b97aa08623cdc66509bf3dad6",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 45014
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework/Versions/A/IDEFoundation": {
+      "sha256": "7d174076e18a4043fa5b1f8aac3a323dd39735fb4d52f575475dcef4b43d2a49",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 113784
+    },
+    "runtime/state/prefix/Applications/Xcode.app/Contents/Developer/usr/bin/ibtoold": {
+      "sha256": "5aba0dcc45c8386ae1a1577457dfb1ecb5c68d840d9658794c176cc7f9f46d3b",
+      "slice_offset": 16384,
+      "defined_nlist_symbols": 732
+    },
+    "runtime/audit-session-runtime-70/libdyld.dylib": {
+      "sha256": "582aed92a88a3e79441cf0a7be2dae7d3efee23c18401a3d9b166b8e351a2dd8",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3505
+    }
+  }
+}

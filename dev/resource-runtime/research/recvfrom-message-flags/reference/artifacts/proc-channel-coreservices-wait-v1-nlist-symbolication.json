@@ -1,0 +1,37 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/proc-channel-coreservices-wait-v1.gdb.log",
+  "raw_sha256": "73e1f76b544e99397c6901a959de32d4a21079bc912445bd2ef91258c6143cf1",
+  "maps": "logs/proc-channel-coreservices-wait-v1.maps.log",
+  "maps_sha256": "9b7c6be42abfaf6ec7e989b58f75690cb5a29c9aa1dabc62c962e5ca5eb6a3b7",
+  "output": "logs/proc-channel-coreservices-wait-v1.nlist-symbolicated.log",
+  "output_sha256": "3992080778f0c1b8607f9f216dd5323c764965968d1f65d680d2114da40ef1a7",
+  "images": {
+    "runtime/audit-session-runtime-70/libsystem_kernel.dylib": {
+      "sha256": "97a37ff26dbb2217b2b706b73e900331126737bf76d77cec38ea0012834cefae",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2573
+    },
+    "runtime/audit-session-runtime-70/darling-root/usr/lib/system/libsystem_pthread.dylib": {
+      "sha256": "f9ed4d2789af0d0626bc796786b5d22fd54e6509712d33de650a2b7047e15280",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 301
+    },
+    "runtime/foundation-native-framework-stage/CarbonCore.framework/Versions/A/CarbonCore": {
+      "sha256": "4ccae193c819a25b4578fbff9d84d918ff19c097a727a5f6e4f6b44d8bfc1f2c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 6431
+    },
+    "runtime/foundation-native-framework-stage/CoreFoundation.framework/Versions/A/CoreFoundation": {
+      "sha256": "ca12467c711063defa5bd340faf8e0c3ac0677e77af625605e2729e67534b271",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 14318
+    },
+    "runtime/audit-session-runtime-70/libdyld.dylib": {
+      "sha256": "582aed92a88a3e79441cf0a7be2dae7d3efee23c18401a3d9b166b8e351a2dd8",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3505
+    }
+  }
+}

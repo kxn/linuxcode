@@ -1,0 +1,37 @@
+{
+  "name": "recvfrom-message-flags",
+  "payload": [
+    "fixtures/hello/kqueue-proc-channel.c",
+    "scripts/probe-kqueue-proc-channel.py",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/recvfrom.c"
+  ],
+  "reference": [
+    "artifacts/recvfrom-flags-source-publication-v1.json",
+    "artifacts/recvfrom-flags-resource-progress-v1.json",
+    "logs/recvfrom-flags-source-push-v1.log",
+    "artifacts/recvfrom-flags-kernel-v1-build.json",
+    "runtime/recvfrom-flags-kernel-v1/plan.json",
+    "runtime/recvfrom-flags-kernel-v1/link.log",
+    "artifacts/private-procfs-auditsession71-stage.json",
+    "runtime/kqueue-proc-channel-zl8_tjym/result.json",
+    "runtime/kqueue-proc-channel-rkjng0o5/result.json",
+    "runtime/proc-channel-ibtoold0-wait-v1/result.json",
+    "runtime/proc-channel-ibtoold0-wait-v1/process.gdb.log",
+    "runtime/proc-channel-ibtoold0-wait-v1/process.maps",
+    "logs/proc-channel-ibtoold0-wait-v1.nlist-symbolicated.log",
+    "artifacts/proc-channel-ibtoold0-wait-v1-map-bindings.json",
+    "artifacts/proc-channel-ibtoold0-wait-v1-nlist-symbolication.json",
+    "runtime/proc-channel-ibtoold1-wait-v1/result.json",
+    "runtime/proc-channel-ibtoold1-wait-v1/process.gdb.log",
+    "runtime/proc-channel-ibtoold1-wait-v1/process.maps",
+    "logs/proc-channel-ibtoold1-wait-v1.nlist-symbolicated.log",
+    "artifacts/proc-channel-ibtoold1-wait-v1-map-bindings.json",
+    "artifacts/proc-channel-ibtoold1-wait-v1-nlist-symbolication.json",
+    "runtime/proc-channel-coreservices-wait-v1/result.json",
+    "runtime/proc-channel-coreservices-wait-v1/process.gdb.log",
+    "runtime/proc-channel-coreservices-wait-v1/process.maps",
+    "logs/proc-channel-coreservices-wait-v1.nlist-symbolicated.log",
+    "artifacts/proc-channel-coreservices-wait-v1-map-bindings.json",
+    "artifacts/proc-channel-coreservices-wait-v1-nlist-symbolication.json"
+  ]
+}

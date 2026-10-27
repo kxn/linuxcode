@@ -214,3 +214,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Original Unity Storyboard compilation](research/original-storyboard-ulock/README.md): original ibtool and IBAgent pass twice, with matching NIB hashes and entry mapping; real ulock waiter counts and error handling tested. Full App remains in progress.
 
 - [Process-event notification and subscription ordering](research/process-event-channel/README.md): 64 real queued exit/update cycles and disable/re-enable retention; one kernel source unit recompiled, 906 reused.
+
+- [Receive-message flag translation](research/recvfrom-message-flags/README.md): live syscall exposes Darwin/Linux MSG_DONTWAIT mismatch; independent old-stage timeout and fixed-stage immediate EAGAIN, peek and real process events.
