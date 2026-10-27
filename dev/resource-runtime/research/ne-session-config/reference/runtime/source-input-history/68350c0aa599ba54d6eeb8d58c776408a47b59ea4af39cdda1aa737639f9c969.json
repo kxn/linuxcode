@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/68350c0aa599ba54d6eeb8d58c776408a47b59ea4af39cdda1aa737639f9c969",
+  "original_sha256": "68350c0aa599ba54d6eeb8d58c776408a47b59ea4af39cdda1aa737639f9c969",
+  "encoding": "utf-8",
+  "text": "project(system_networkextension)\n\ncmake_minimum_required(VERSION 3.13)\n\ninclude_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)\n\nset(DYLIB_INSTALL_NAME \"/usr/lib/system/libsystem_networkextension.dylib\")\nadd_darling_library(system_networkextension\n    SHARED\n        ne_session.c\n        NEHelperClient.c\n)\ntarget_link_libraries(system_networkextension\n    PRIVATE\n        system_c\n        system_dyld\n)\nmake_fat(system_networkextension)\n\ninstall(TARGETS system_networkextension DESTINATION libexec/darling/usr/lib/system)\n"
+}
