@@ -74,10 +74,10 @@
   "remaining_product_gaps": [
     "Complete cold reconstruction DAG and verified reference-input acquisition",
     "Strict CoreServices policy compatibility",
-    "Unity/UE exported project and engine build phases",
-    "Resource tools actool/ibtool and actual resources",
+    "UE and broader Unity exports beyond the tested uEmuera/CocoaPods project",
     "Provisioned signing, archive/export and device trust",
-    "Projects outside the selected mounted workspace"
+    "Projects outside the selected mounted workspace",
+    "The sample still needs the documented two AFNetworking SDK-header import removals"
   ],
   "workspace_tag": "runtime-2026.10.19",
   "optional_verified_milestones": [
@@ -90,6 +90,28 @@
       "scope": "CocoaPods/UIKit iPhoneOS arm64 fixture, ad-hoc only",
       "cold_install_validated": false,
       "developer_certificate_and_Unity_UE_verified": false
+    },
+    {
+      "id": "original-unity-cocoapods-fresh-ad-hoc",
+      "source": "dev/resource-runtime/research/loader-layout-and-fsevents/README.md",
+      "original_xcodebuild_full_build_verified": true,
+      "original_codesign_strict_verified_products": 6,
+      "single_invocation_fresh_DerivedData_verified": true,
+      "Unity_temporary_cache_absent_at_start": true,
+      "original_Xcode_CompileC_tasks": 58,
+      "IL2CPP_updated_tasks": 442,
+      "IL2CPP_evaluated_tasks": 443,
+      "independent_arm64_Unity_archive_objects": 374,
+      "original_actool_and_Storyboard_compilation_verified": true,
+      "host": "Linux x86_64",
+      "target": "iPhoneOS arm64",
+      "ad_hoc_only": true,
+      "stage": "artifacts/private-procfs-auditsession83-stage.json",
+      "adopt_command": "linuxcode.py --workspace EXISTING_WORKSPACE adopt --engine-milestone artifacts/unity-original-fresh-signed-app-v1.json",
+      "cold_install_validated": false,
+      "developer_certificate_provisioning_or_device_trust_verified": false,
+      "UE_verified": false
     }
-  ]
+  ],
+  "current_verified_milestone": "original-xcodebuild-unity-cocoapods-fresh-deriveddata-ad-hoc"
 }

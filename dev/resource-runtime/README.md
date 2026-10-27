@@ -232,3 +232,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Original Unity asset catalog compilation and dispatch2 lifecycle](research/dispatch2-assetcatalog/README.md): original actool produces Assets.car; native tagged cancellation and vnode close/reuse checks pass.
 
 - [NULL exec/spawn environment and original bitcode_strip](research/null-exec-environment/README.md): captures the real SwiftBuild pre-exec crash, verifies empty/inherited environments and original framework-tool output.
+
+- [加载器布局、内部文件事件与全新构建](research/loader-layout-and-fsevents/README.md)：处理真实编译器启动冲突，隔离日志持久化自通知，并验证单次从空 DerivedData 完成 Unity/CocoaPods 构建。

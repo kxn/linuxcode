@@ -1,0 +1,36 @@
+{
+  "verified": true,
+  "expected_internal_loss": true,
+  "outer_status": 0,
+  "asan_ubsan": true,
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-error=misleading-indentation",
+    "-pthread",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I/home/dl/linuxcode/vendor/darlingserver/internal-include",
+    "fixtures/hello/fsevents-internal-journal-loop.cpp",
+    "runtime/audit-session-server-source-publication-v1/src/fsevents-device.cpp",
+    "vendor/darlingserver/src/fsevents-journal.cpp",
+    "-o",
+    "/home/dl/linuxcode/runtime/fsevents-device-host-gl1i_d_8/probe"
+  ],
+  "log": "runtime/fsevents-device-host-gl1i_d_8/run.log",
+  "log_sha256": "b7e362c4e8f5f0a4d5d67fb108ed4c118e4db0ff7ed154e98f9f98ebedf5a78e",
+  "files": {
+    "fixtures/hello/fsevents-internal-journal-loop.cpp": "a2aeaf1065f2ab0e537c5d02e14b24ac1a5a4afacf8390ff9afb8498fe3577ff",
+    "runtime/audit-session-server-source-publication-v1/src/fsevents-device.cpp": "62462c8c9e6de9f429232d1fcfd8c996dc74cdbd46983724f2f883c961d6b04a",
+    "vendor/darlingserver/src/fsevents-journal.cpp": "6ef63c8d3ba2bfec58b11818bf9a5778c9577cede1789fc300b0990b16d573e9",
+    "vendor/darlingserver/internal-include/darlingserver/fsevents-device.hpp": "62b6ad4fad38088ea58054ee342dfeb49b879c59a3185657fae35d48827790aa",
+    "scripts/probe-fsevents-device-host.py": "f71781f9541921775bd8983ae1743ba5437486c776602b8fc3441aa79fc48c2f"
+  },
+  "native_Darling_integration_verified": false,
+  "full_goal_complete": false
+}

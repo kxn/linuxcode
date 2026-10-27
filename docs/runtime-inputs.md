@@ -17,4 +17,4 @@ Xcode XIP 含 Xcode 工具、SDK 与开发者框架，不含完整 macOS 用户�
 
 `config/runtime-recipe.json` 给出每阶段已有入口、输入和具体缺口。列表中晚期的 server/FSEvents/vchroot/metadata 修复不能单独完成整个环境，直接依次运行那几个晚期脚本并不足够。开发入口用于继续逐模块整理、构建和测试；不是用一个很长的 shell 命令掩盖缺少前置产物。
 
-里程碑验收目前是原版 xcodebuild 对本地 CocoaPod 实际 C/Objective-C 编译、静态库和 iPhoneOS/arm64 App 链接；关闭签名，未在设备运行。资源编译、Unity/UE 导出工程、完整严格 CoreServices 策略、归档、导出、有效证书签名及设备信任仍未完成。成功日志不应自动推导为这些功能可用。
+最新验收已包括真实 Unity/CocoaPods 工程的单次全新 DerivedData 构建：启动时 DerivedData 与 Unity 临时缓存入口均不存在，IL2CPP 442 项任务更新、443 项评估通过，Xcode 58 项 CompileC 完成，两个 Unity 归档共 374 个 arm64 对象独立核对。原版 actool、Storyboard 和最终 ad-hoc 签名完成，六项原版严格验证通过。样例保留两行 AFNetworking SDK 兼容修改。完整成功环境的干净 Linux/XIP 冷重建、UE、严格 CoreServices 策略、归档导出、开发者证书、描述文件和设备信任仍未完成；全新构建目录与全新操作系统环境是两项独立验收。

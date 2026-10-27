@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "command": [
+    "clang-19",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "fixtures/hello/mldr-main-stack-host.c",
+    "-o",
+    "/home/dl/linuxcode/runtime/mldr-main-stack-host-v2/test"
+  ],
+  "outer_status": 0,
+  "log": "runtime/mldr-main-stack-host-v2/run.log",
+  "log_sha256": "6f76b058d0534198693b5c0449c860ab127ebd05fc2113e507ad793ad33e1f0a",
+  "source_files": {
+    "fixtures/hello/mldr-main-stack-host.c": "b9cdb6a3a9e3180bb0309d8ae70c25749e12f1cddb776a72e403f9d3521b2f06",
+    "vendor/darling/src/startup/mldr/main-stack.h": "0a9f8aa866da06cdd36ff7873f83d3a74e09f54814c596259b33f90a9a1fbaf3"
+  },
+  "native_macho_execution_verified": false
+}

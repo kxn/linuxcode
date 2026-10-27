@@ -1,0 +1,23 @@
+{
+  "verified_failure_localization": true,
+  "first_fresh_DerivedData_invocation": "runtime/unity-ios-cocoapods-clean-dd80-v1/invocation.json",
+  "first_fresh_DerivedData_result": "runtime/unity-ios-cocoapods-clean-dd80-v1/result.json",
+  "original_failure_log": "runtime/unity-ios-cocoapods-clean-dd80-v1/driver.log",
+  "log_sha256": "f4e4ca6654c6538566d30b2b21d98abd93bf7af9204918318ac83815b37850a2",
+  "first_native_status": 65,
+  "actual_il2cpp_failure": "438 items updated, 443 evaluated; one original compiler child fails in mldr stack allocation with EEXIST17",
+  "later_missing_il2cpp_a_is_secondary": true,
+  "production_source_fix": [
+    "vendor/darling/src/startup/mldr/mldr.c",
+    "vendor/darling/src/startup/mldr/main-stack.h"
+  ],
+  "native_forced_collision_old": "runtime/mldr-stack-native-iwcwh9pg/result.json",
+  "native_forced_collision_fixed": "runtime/mldr-stack-native-rol9iew6/result.json",
+  "test_only_worker_stack_failure": "runtime/mldr-stack-native-5vegezrc/result.json",
+  "worker_failure_first_fault": "runtime/mldr-stack-collision-native-first-fault-v1-process/result.json",
+  "worker_failure_explanation": "The fixture put a 512 KiB local array on a default 512 KiB pthread stack. Explicitly selecting a 1 MiB test thread stack fixes the fixture without another loader change.",
+  "pending_full_build": "config/unity-main-stack-clean-dd81-v1-command.json",
+  "upstream_related_issue": "https://github.com/darlinghq/darling/issues/1428",
+  "current_issue_is_actual_x86_64_Xcode_child": true,
+  "full_goal_complete": false
+}
