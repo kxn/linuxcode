@@ -4,6 +4,8 @@
 
 [内部任务恢复与 XNU 等待语义修正](resource-runtime/research/microthread-pending-wait-upstream-reuse/README.md) 复用原有等待队列与锁，将等待状态的清理放回真正唤醒处。定点测试修正前失败、修正后通过；stage102 的原版 UE 工程生成随后遇到另一处共享内存映射失败，尚未完整通过。Unity 的既有 stage101 验证范围不变。
 
+[等待完成与后续代码执行的复查](resource-runtime/research/microthread-wake-completion-gating/README.md) 记录 stage102 后续完整运行仍出现等待队列崩溃，以及新增的“仅恢复调度、尚未真正唤醒”测试。原版适配代码的两个路径均在该测试中失败；stage103 的状态复查使四项定点测试通过，完整 UE 流程仍待验证。
+
 UE 调试中修好的源代码运行库已接回 Unity/CocoaPods 证书构建：[stage101 整合实测](resource-runtime/research/stage101-unity-certificate-integration/README.md) 的原版 Xcode 构建、外层退出及 7 项严格签名与独立 CMS 检查全部通过。该次复用编译缓存；下文的新空构建目录流程也已通过。
 
 当前 v12/stage101 也已完成[全新 Unity 项目的 Release xcarchive](resource-runtime/research/stage101-fresh-unity-release-archive/README.md)：App 和 UnityFramework 的签名、真实 dSYM、UUID 匹配及 LLVM 全量 DWARF 校验全部通过，原有 Debug 产物保留。

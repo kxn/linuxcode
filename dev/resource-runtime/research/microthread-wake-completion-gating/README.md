@@ -1,0 +1,9 @@
+# Complete a wait only after the XNU wake
+
+The earlier stage102 repair preserved `TH_WAIT` across internal lock resumes, but another full original UE generator run still panicked on an already occupied turnstile wait queue. Its private core now shows the waiting bit preserved. The first repair alone does not resolve the full native failure.
+
+The expanded controlled-scheduler regression exposes a further boundary problem in the existing adapter: both a returning wait and a stored continuation proceed after a raw scheduling resume even if their XNU wait is still pending. The fixture uses the real source wait/block/unblock functions and cooperative mutex code. Both new cases fail on stage102 source (`THREAD_WAITING`, exit 12). The new source rechecks the existing XNU wait bit after resuming and before consuming a continuation. All four cases now pass (exit 0). This follows the existing XNU distinction between a runnable thread and a thread with an armed wait; it does not establish the exact producer of every extra resume in the full UE process.
+
+[Source repair](https://github.com/kxn/darlingserver/commit/31660a27f387fffe210b1ff4faeed96af04ad492) is on the same user-fork branch and uses the same human author. The full source server was staged separately as stage103. Its headless original UE generator test is pending at this checkpoint, so this record claims focused source regression success only. Original full generator, complete UE App build and scheduler timing coverage remain unverified. Private cores and raw Epic tool logs are excluded.
+
+Run `python3 scripts/probe-microthread-pending-wait.py` in the developer workspace after preparing the existing server build tree. The test supplies only scheduler hooks and a nonlocal-return continuation harness; locking and wait completion execute the source implementation.

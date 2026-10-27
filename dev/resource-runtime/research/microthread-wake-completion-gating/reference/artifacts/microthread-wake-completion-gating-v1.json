@@ -1,0 +1,33 @@
+{
+  "scope": "Duct-tape wait completion and continuation must follow actual XNU unblock, not a raw cooperative scheduling resume",
+  "source_commit": "31660a27f387fffe210b1ff4faeed96af04ad492",
+  "source_repository": "https://github.com/kxn/darlingserver",
+  "source_branch": "linuxcode/xcode-x86_64",
+  "parent_source_commit": "7578653",
+  "baseline": "runtime/microthread-pending-wait-35vb1q98/result.json",
+  "fixed": "runtime/microthread-pending-wait-9izswby9/result.json",
+  "baseline_status": 12,
+  "fixed_status": 0,
+  "focused_cases": [
+    "contended internal mutex resume preserves pending wait",
+    "genuine wake before block avoids suspension",
+    "resume without event rechecks and blocks until genuine wake",
+    "continuation after resume without event remains pending until genuine wake"
+  ],
+  "baseline_resumes_without_event_returned_THREAD_WAITING": true,
+  "actual_full_GPF_stage102_still_panicked": true,
+  "actual_stage102_fault": "artifacts/unreal-stage102-gpf-second-waitq-panic-observation-v1.json",
+  "actual_stage102_panic_capture": "runtime/unreal-stage102-waitq-panic-capture-v1/result.json",
+  "private_core_not_published": true,
+  "stage103": "artifacts/private-procfs-auditsession103-stage.json",
+  "stage103_original_UE_generation_verified": false,
+  "full_original_UE_build_verified": false,
+  "full_goal_complete": false,
+  "files": {
+    "runtime/microthread-pending-wait-35vb1q98/result.json": "ed9549f248f438c210dfdf0b805188de9c45c7620d6a9dc49f59fc78ad643c87",
+    "runtime/microthread-pending-wait-9izswby9/result.json": "43bd70a2c4b81541027c5b04641fdae6bcc4df06cda7ea3a590609f84cc928ff",
+    "fixtures/hello/microthread-pending-wait.c": "a33863bfcc305dacf5e4eafc6f50ee8bf7fe4d95117672007f7eee524bb9c255",
+    "scripts/probe-microthread-pending-wait.py": "80731bffe87e8f54f67298526f856d18dc4c259c010a6f02688db1db626728fb",
+    "vendor/darlingserver/duct-tape/src/thread.c": "568ad87296a8bb8928f329022a7f95430f72679292bb7e874b2b1b4e1ec39c5f"
+  }
+}

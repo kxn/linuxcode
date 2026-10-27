@@ -1,0 +1,13 @@
+{
+  "name": "microthread-wake-completion-gating",
+  "payload": [
+    "fixtures/hello/microthread-pending-wait.c",
+    "scripts/probe-microthread-pending-wait.py"
+  ],
+  "reference": [
+    "artifacts/microthread-wake-completion-gating-v1.json",
+    "runtime/microthread-pending-wait-35vb1q98/result.json",
+    "runtime/microthread-pending-wait-9izswby9/result.json",
+    "artifacts/unreal-stage102-gpf-second-waitq-panic-observation-v1.json"
+  ]
+}
