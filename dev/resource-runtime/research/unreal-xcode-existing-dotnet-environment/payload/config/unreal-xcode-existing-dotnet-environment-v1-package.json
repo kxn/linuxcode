@@ -1,0 +1,16 @@
+{
+  "name": "unreal-xcode-existing-dotnet-environment",
+  "payload": [
+    "scripts/probe-xcode-service-runtime.py",
+    "scripts/unreal-xcode-dotnet-environment.sh",
+    "config/unreal-xcode-dotnet-prebuild-v1.json",
+    "scripts/native-temporary-runtime-profile.py"
+  ],
+  "reference": [
+    "artifacts/unreal-xcode-original-external-build-dotnet-environment-v1.json",
+    "artifacts/unreal-xcode-dotnet-environment-live-workers-v1.json",
+    "artifacts/coredevice-existing-storagekit-scope-observation-v1.json",
+    "artifacts/native-temporary-launcher-v1-stage.json",
+    "runtime/unreal-xcode-build-gqvdbmfj/attempt-environment-v2/command.json"
+  ]
+}

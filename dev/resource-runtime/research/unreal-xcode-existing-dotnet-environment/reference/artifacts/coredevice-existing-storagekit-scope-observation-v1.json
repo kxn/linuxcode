@@ -1,0 +1,19 @@
+{
+  "scope": "Read-only targeted reuse observation; no new StorageKit implementation or runtime selection change",
+  "existing_library": {
+    "name": "storage-kit-native",
+    "source": "runtime/rebuilt-storage-kit-native/StorageKit",
+    "source_sha256": "0956552637f19dd3292ccc45dca0139252406d4044d89e37408ec4a7a26dc1be",
+    "library": "runtime/mdns-native/frameworks/StorageKit.framework/Versions/A/StorageKit",
+    "library_sha256": "0956552637f19dd3292ccc45dca0139252406d4044d89e37408ec4a7a26dc1be",
+    "reconstruction": "runtime/rebuilt-storage-kit-native/reconstruction.json",
+    "reconstruction_sha256": "cf9e150176b2897270d5ff98bf6ddfe09ae52c5d703acf98e9e317617bf4478c"
+  },
+  "stage": "artifacts/mdns-native-stage.json",
+  "stage_sha256": "ade992f66ec86e9ea45d8024583e7ef43a6b5823064625bae0ebba680b3a18c4",
+  "observed_failure": "CoreDeviceService reports StorageKit image not found",
+  "interpretation": "The existing staged library is present; the failing XPC service lacks access to the selected library scope. This is loader/environment integration, not evidence that StorageKit must be rewritten.",
+  "full_CoreDeviceService_runtime_verified": false,
+  "action": "Retain observation; prioritize actual UE build failure first",
+  "full_goal_complete": false
+}
