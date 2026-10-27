@@ -8,6 +8,8 @@
 
 [原版 UE 生成 iOS Xcode 工程并由原版 Xcode 解析](resource-runtime/research/unreal-stage103-original-ios-projects/README.md)：stage103 上 UBT 使用官方 `-NoIntelliSense` 选项正常退出，三个 iOS 工程和共享 scheme 写出；现有 stage101 Xcode CLI 读取游戏工程的 scheme、两个 target、五种配置，原生与外层退出均为 0。显式平台筛选触发的 workspace 清理问题已记录，完整 UE App 编译尚未通过。
 
+[原版 UBT 保留可用 iOS workspace](resource-runtime/research/unreal-original-ios-workspace-preserved/README.md)：使用生成器默认平台选择后，原生与外层退出均为 0，workspace 与四个引用工程、游戏 scheme 均保留。没有修改引擎或手写 workspace；原版 Xcode 的实际游戏构建继续推进。
+
 UE 调试中修好的源代码运行库已接回 Unity/CocoaPods 证书构建：[stage101 整合实测](resource-runtime/research/stage101-unity-certificate-integration/README.md) 的原版 Xcode 构建、外层退出及 7 项严格签名与独立 CMS 检查全部通过。该次复用编译缓存；下文的新空构建目录流程也已通过。
 
 当前 v12/stage101 也已完成[全新 Unity 项目的 Release xcarchive](resource-runtime/research/stage101-fresh-unity-release-archive/README.md)：App 和 UnityFramework 的签名、真实 dSYM、UUID 匹配及 LLVM 全量 DWARF 校验全部通过，原有 Debug 产物保留。
