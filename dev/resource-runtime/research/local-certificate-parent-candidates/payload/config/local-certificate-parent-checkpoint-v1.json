@@ -1,0 +1,26 @@
+{
+  "name": "local-certificate-parent-candidates",
+  "payload": [
+    "vendor/darling/src/external/security/OSX/sec/Security/SecLocalIdentityStore.c",
+    "scripts/stage-local-identity-store.py",
+    "scripts/probe-local-identity-policy.py",
+    "fixtures/hello/local-identity-policy.c",
+    "fixtures/hello/original-codesign-certificate-preflight.c",
+    "scripts/probe-original-codesign-certificate.py",
+    "scripts/stage-launchctl-runtime.py"
+  ],
+  "reference": [
+    "artifacts/local-identity-parent-source-publication-v1.json",
+    "artifacts/local-identity-store-parent-candidates-v9-stage.json",
+    "runtime/local-identity-leaf-policy-v_kgm39o/result.json",
+    "runtime/original-codesign-certificate-747fry7o/result.json",
+    "runtime/original-codesign-certificate-pgh_kimd/result.json",
+    "runtime/local-identity-leaf-policy-w3ijec0v/result.json",
+    "artifacts/local-identity-store-coherent-original-v10-stage.json",
+    "logs/certificate-native-cms-preflight-v15-wait-v1.nlist-symbolicated.log",
+    "artifacts/certificate-native-cms-preflight-v15-wait-v1-nlist-symbolication.json",
+    "artifacts/certificate-native-cms-preflight-v15-wait-v1-map-bindings.json",
+    "runtime/certificate-native-cms-preflight-v15-wait-v1/result.json",
+    "artifacts/private-procfs-auditsession84-stage.json"
+  ]
+}

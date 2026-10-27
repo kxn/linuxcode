@@ -238,3 +238,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [Native identity leaf policy](research/local-identity-leaf-policy/README.md):23 native checks pass; original certificate codesign reaches chain construction, whose headless trust service is still being completed.
 
 [launchctl long UTF-8 strings](research/launchctl-long-strings/README.md):39 native checks; fixes truncated job environment and starts paired headless trust services.
+
+[Local certificate parents](research/local-certificate-parent-candidates/README.md):27 native checks and actual recoverable self-signed trust result; CMS legacy module dependency remains under investigation.
