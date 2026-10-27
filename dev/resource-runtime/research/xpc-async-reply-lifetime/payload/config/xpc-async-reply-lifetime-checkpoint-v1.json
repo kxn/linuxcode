@@ -1,0 +1,28 @@
+{
+  "name": "xpc-async-reply-lifetime",
+  "payload": [
+    "vendor/darling/src/external/libxpc/src/connection.m",
+    "vendor/darling/src/external/libxpc/internal-include/xpc/objects/connection.h",
+    "fixtures/hello/xpc-async-reply-lifetime.m",
+    "scripts/probe-xpc-async-lifetime.py"
+  ],
+  "reference": [
+    "artifacts/xpc-async-lifetime-source-publication-v1.json",
+    "logs/xpc-async-lifetime-source-push-v1.log",
+    "artifacts/xpc-async-lifetime-resource-progress-v1.json",
+    "artifacts/xpc-async-reply-lifetime-v1-build.json",
+    "logs/xpc-async-reply-lifetime-v1-build.log",
+    "artifacts/xpc-async-reply-parent-v1-stage.json",
+    "artifacts/private-procfs-auditsession73-stage.json",
+    "runtime/xpc-async-lifetime-xfeus4wu/result.json",
+    "runtime/xpc-async-lifetime-io1uqr2g/result.json",
+    "runtime/workloop-sync-assetcatalog-first-fault-v1/result.json",
+    "runtime/workloop-sync-assetcatalog-first-fault-v1/probe.log",
+    "runtime/workloop-sync-assetcatalog-first-fault-v1-agent/result.json",
+    "runtime/workloop-sync-assetcatalog-first-fault-v1-agent/process.gdb.log",
+    "runtime/workloop-sync-assetcatalog-first-fault-v1-agent/process.maps",
+    "logs/workloop-sync-assetcatalog-first-fault-v1.nlist-symbolicated.log",
+    "artifacts/workloop-sync-assetcatalog-first-fault-v1-map-bindings.json",
+    "artifacts/workloop-sync-assetcatalog-first-fault-v1-nlist-symbolication.json"
+  ]
+}

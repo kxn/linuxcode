@@ -220,3 +220,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Unity Storyboards and main executable link](research/unity-storyboards-and-main-link/README.md): original full build compiles/links both Storyboards and arm64 Unity main; actool remains the resource blocker, so final App signing is not claimed.
 
 - [Real synchronous workloop waits](research/workloop-sync-waiters/README.md): actual asset-agent first fault,96 blocking waits and32 delete/reuse rounds; affected async queue regression also passes.
+
+- [Asynchronous XPC connection lifetime](research/xpc-async-reply-lifetime/README.md):32 delayed replies,32 cancellations and64 exactly-once finalizers after caller release; original asset task retry continues.

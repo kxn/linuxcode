@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python3",
+    "scripts/probe-original-assetcatalog.py",
+    "--stage",
+    "artifacts/private-procfs-auditsession72-stage.json",
+    "--configuration",
+    "config/direct-resource-tool-environment-v150.json",
+    "--build-log",
+    "logs/xcode-service-runtime-tool-dispatch-diagnostic-build-f4e33657f175.log",
+    "--timeout",
+    "180"
+  ],
+  "probe_status": 1,
+  "capture": {
+    "pid": 1449966,
+    "driver_status": 0,
+    "report": "runtime/workloop-sync-assetcatalog-first-fault-v1-agent/result.json"
+  },
+  "tool_sha256": "20899ad86022ae1baef4422ae8e7dd465b99e9ff20b7a3bb565494939c16b463",
+  "files": {
+    "runtime/workloop-sync-assetcatalog-first-fault-v1/probe.log": "eaf5778501a378a2395e1299baef4e42244cf078b27720dce329e4023e144902"
+  },
+  "full_goal_complete": false
+}
