@@ -1,0 +1,21 @@
+{
+  "name": "p12-certificate-chain",
+  "payload": [
+    "vendor/darling/src/external/security/OSX/sec/Security/SecLocalIdentityStore.c",
+    "scripts/prepare-p12-chain-fixture.py",
+    "scripts/probe-local-identity-chain.py",
+    "fixtures/hello/local-identity-chain.c",
+    "scripts/probe-original-codesign-certificate.py",
+    "config/native-certificate-candidate-v7.json"
+  ],
+  "reference": [
+    "artifacts/p12-import-native-chain-milestone-v1.json",
+    "artifacts/imported-p12-CMS-chain-v1.json",
+    "artifacts/imported-p12-app-independent-v1.json",
+    "runtime/local-identity-chain-dlx3vohr/result.json",
+    "runtime/original-codesign-certificate-cyuxxcvt/result.json",
+    "artifacts/local-identity-store-chain-certificates-v14-stage.json",
+    "artifacts/local-identity-store-chain-parent-candidates-v15-stage.json",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-02c349e296e8.json"
+  ]
+}

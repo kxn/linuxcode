@@ -82,7 +82,22 @@ xcodebuild -workspace Unity-iPhone.xcworkspace -scheme Unity-iPhone -sdk iphoneo
 }
 ```
 
-用 Python `plistlib` 写成 plist，存放在工作区的 `runtime/` 下，文件权限为 `600`，私有目录建议为 `700`。这是只读且未加密的身份库，不是完整系统钥匙串；暂不提供自动导入 P12、EC 密钥、任意钥匙串写入及 provisioning 安装的通用兼容层。原生实现核对证书与私钥公钥一致，不授予证书信任。
+也可以直接导入自己的 RSA P12：
+
+```bash
+read -rs -p 'P12 password: ' MY_P12_PASSWORD
+export MY_P12_PASSWORD
+python3 linuxcode.py --workspace /path/to/experiment import-identity \
+  --p12 /path/to/signing.p12 --output runtime/my-signing/store.plist \
+  --password-env MY_P12_PASSWORD
+unset MY_P12_PASSWORD
+```
+
+密码从指定环境变量读取；输出只包含身份指纹和证书数量。工具检查密钥与证书匹配，以 `600` 权限创建文件，拒绝覆盖已有身份库，并清理临时解密文件。较旧的 P12 加密算法可显式使用 `--legacy`；同一密钥对应多张证书时，用 `--certificate-sha256` 指定叶证书。当前支持 RSA PKCS1，不支持 EC。
+
+这是只读且未加密的身份库，不是完整系统钥匙串；请保存在工作区的 `runtime/` 私有目录中。导入不会安装 provisioning profile，也不会授予证书信任。
+
+P12 中额外的公共证书保存为可选的 `certificates` DER 数组。新增客户端 v14 / daemon v15 候选支持查找这些链证书；原生三层链测试和原版 codesign 的完整 CMS 证书链已通过，完整 Unity 集成另行记录。旧 v6 候选不读取这个可选数组，不能据此宣称支持多级链。测试只使用显式测试根锚点，未修改系统信任库。
 
 `status` 的 `certificate_signing_ready` 表示已采用经过验证的证书签名运行配置；`developer_provisioning_or_device_trust_verified` 仍为 false。每次调用记录实际参数、签名作用域、服务配置和原生退出码。没有重复执行 UTI smoke 探针或列出全部服务；仍检查服务加载失败并保留构建的真实失败状态。
 

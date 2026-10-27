@@ -4,6 +4,8 @@
 
 **原版 xcodebuild 已成功编译并用原版 codesign 完成真实 Unity/CocoaPods iPhoneOS/arm64 App 的 ad-hoc 签名。** 原版 Storyboard、actool、IL2CPP/Bee 和三个内嵌 Framework 均完成处理；App、三个 Framework、两个 CocoaPods 静态库通过原版严格签名验证，App 的 2,904 项资源通过独立哈希检查。详见[完整 Unity 签名里程碑](dev/resource-runtime/research/unity-signed-app/README.md)。
 
+新增 RSA P12 导入入口：`import-identity --p12 … --output runtime/my-signing/store.plist --password-env MY_P12_PASSWORD`。三层证书链已通过原生查找、原版 codesign 和独立 CMS 验证；详见[安装说明](docs/install.md)。
+
 新增：**完整 Unity/CocoaPods 工程已由原版 xcodebuild 调用原版 codesign 完成真实测试证书签名，构建退出码为 0。** App、内嵌 Framework 和静态库共七个产物通过原版严格验证及独立 CMS/页面/资源检查，包含双 CodeDirectory 与篡改拒绝测试。本次复用编译缓存；自签测试明确关闭 profile 要求，尚不代表开发者 provisioning 或设备安装可用。详见[完整 Unity 证书 CI](dev/resource-runtime/research/unity-certificate-ci/README.md)。
 
 最新补充已通过**单次全新 DerivedData 构建**，并确认 Unity 临时缓存入口起初也不存在：58 项 Xcode 编译、完整 IL2CPP 和资源流程成功，374 个 arm64 Unity 归档对象独立核对。修复与证据见[加载器布局和文件事件检查点](dev/resource-runtime/research/loader-layout-and-fsevents/README.md)。

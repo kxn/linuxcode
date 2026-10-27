@@ -509,14 +509,14 @@ def xcodebuild(state, argv, dry_run):
 
 
 def package(output, include_research_history=True):
-    allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/certificates.py', 'linuxcode/__init__.py',
+    allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/certificates.py', 'linuxcode/identities.py', 'linuxcode/__init__.py',
                'config/dependencies.lock.json', 'config/runtime-recipe.json',
                'README.md', 'docs/install.md', 'docs/runtime-inputs.md', 'LICENSE', '.gitignore',
                'validation/2026-10-19.json',
                'validation/unity-signed-app-2026-10-27.json',
                'validation/original-certificate-app-2026-10-27.json',
                'validation/unity-certificate-ci-2026-10-27.json',
-               'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'dev/linuxcode-dev', 'dev/README.md',
+               'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'tests/test_identity_import.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/locks/developer.lock.json',
                'dev/locks/source-manifest.json']
     resource = 'dev/resource-runtime/'
@@ -586,6 +586,10 @@ def main():
     p.add_argument('--build-report', type=Path)
     p.add_argument('--product-report', type=Path)
     sub.add_parser('status')
+    p = sub.add_parser('import-identity', help='import a caller P12 into a private read-only RSA identity store')
+    p.add_argument('--p12', type=Path, required=True); p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--password-env', required=True); p.add_argument('--label', default='CI signing identity')
+    p.add_argument('--certificate-sha256'); p.add_argument('--legacy', action='store_true')
     sub.add_parser('recipe', help='show cold-build stages and exact outstanding gaps')
     p = sub.add_parser('package'); p.add_argument('--output', type=Path, required=True)
     p.add_argument('--include-research-history', action='store_true', help='also bundle historical diagnostic attachments')
@@ -599,6 +603,9 @@ def main():
         elif args.command == 'cache': cache_assets(workspace)
         elif args.command == 'setup': setup(workspace, args)
         elif args.command == 'install-xcode': install_xcode(workspace, args.xip, args.sha256)
+        elif args.command == 'import-identity':
+            from linuxcode.identities import import_p12
+            print(json.dumps(import_p12(workspace,args.p12,args.output,args.password_env,args.label,args.certificate_sha256,args.legacy),indent=2))
         elif args.command == 'restore-sources':
             verify_workspace(workspace)
             run([sys.executable, workspace / 'checkpoint/restore-sources.py', '--clone'], cwd=workspace)
