@@ -1,12 +1,12 @@
 # 开发者环境
 
-[完整 Unity/CocoaPods 入口](resource-runtime/research/unity-full-app-cocoapods/README.md) 新增真实工程准备、原版 CocoaPods 安装、项目结构对照和资源工具直接调用配置；完整 App 当前仍受资源依赖阻塞。
+[完整 Unity/CocoaPods 入口](resource-runtime/research/unity-full-app-cocoapods/README.md) 保留真实工程准备、原版 CocoaPods 安装和项目结构对照。最新[完整 Unity 证书 CI](resource-runtime/research/unity-certificate-ci/README.md) 已通过原版 xcodebuild 构建签名及七项原版/独立验签；使用临时自签证书，真实 provisioning 和设备安装仍待验证。
 
 后续 Unity 工具链兼容修复见 [私有 procfs 与文件复制附件](resource-runtime/research/unity-private-procfs/README.md)：包含四个现有 fork 的源码提交、原版工具探针和独立产物检查，继续使用 Linux x86_64 与原版 Xcode 工程。
 
 整合入口在独立的 [kxn/linuxcode](https://github.com/kxn/linuxcode) 工程；Darling 和各子模块的兼容性修改继续保存在各自的 fork。本目录提供 `linuxcode-dev`，在宿主 Linux 上构建和检查组件，帮助开发者接着完善编译流程。需要 Linux x86_64；不需要 Mac，也不使用 Darling 内核模块。
 
-整合工程只使用 `main` 分支，安装器与开发者工具在同一个仓库维护；固定实验工作区保存在版本标签 `runtime-2026.10.19`。当前锁定的可复核基线是 [原版 xcodebuild 成功编译带 CocoaPod 的 iOS App 的里程碑](https://github.com/kxn/linuxcode/tree/375e52ea83e0f1a8dba3b16a0600d01292a9fe61)。该 App 尚未签名，工程测试使用 CoreServices 诊断策略；资源工具、Unity/UE、归档导出和可信签名还没有贯通。这是开发基线，不代表所有游戏工程都已兼容。
+整合工程只使用 `main` 分支，安装器与开发者工具在同一个仓库维护；`checkout` 的固定实验工作区仍是 `runtime-2026.10.19` 对应的[早期 CocoaPods 基线](https://github.com/kxn/linuxcode/tree/375e52ea83e0f1a8dba3b16a0600d01292a9fe61)，其中 App 尚未签名。后续完整 Unity 构建、资源处理、ad-hoc 和证书签名修复保存在各研究附件与 fork 中；`checkout` 尚不会自动组装最新成功候选。工程测试仍使用 CoreServices 诊断策略；UE、归档导出、开发者 provisioning 和完整冷重建仍未验证。
 
 ## 获取和核对源码
 

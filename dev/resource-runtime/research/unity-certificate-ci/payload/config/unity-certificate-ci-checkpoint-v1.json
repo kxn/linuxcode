@@ -1,0 +1,33 @@
+{
+  "name": "unity-certificate-ci",
+  "payload": [
+    "scripts/native-certificate-runtime.py",
+    "scripts/probe-native-certificate-products.py",
+    "scripts/verify-native-certificate-products.py",
+    "scripts/verify-cms-code-directories.py",
+    "scripts/verify-adhoc-generic-file.py",
+    "scripts/verify-adhoc-bundle.py",
+    "scripts/workspace-bindings.py",
+    "scripts/stage-workspace-bind-launcher.py",
+    "scripts/prepare-unity-certificate-ci.py",
+    "scripts/record-unity-certificate-milestone.py",
+    "scripts/probe-xcode-service-runtime.py",
+    "scripts/stage-local-identity-store.py",
+    "scripts/probe-local-identity-policy.py",
+    "fixtures/hello/local-identity-policy.c",
+    "vendor/darling/src/external/security/OSX/sec/Security/SecLocalIdentityStore.c",
+    "config/native-certificate-candidate-v2.json"
+  ],
+  "reference": [
+    "artifacts/unity-original-certificate-CI-milestone-v1.json",
+    "artifacts/unity-certificate-products-independent-v1.json",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-f83d0ecede44.json",
+    "runtime/native-certificate-products-lanotbps/result.json",
+    "runtime/unity-certificate-ci-ticd2uul/prepared.json",
+    "runtime/unity-certificate-ci-ticd2uul/original-guards.json",
+    "runtime/local-identity-leaf-policy-caeps4wi/result.json",
+    "artifacts/local-identity-store-certificate-lookup-v13-stage.json",
+    "artifacts/workspace-bind-launcher-certificate-v1-stage.json",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-08675fa1f493.json"
+  ]
+}
