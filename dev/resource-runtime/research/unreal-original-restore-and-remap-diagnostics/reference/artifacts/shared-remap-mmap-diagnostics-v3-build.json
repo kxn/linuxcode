@@ -1,0 +1,25 @@
+{
+  "full_server_source_build": true,
+  "baseline_build_output_restored": true,
+  "command": [
+    "cmake",
+    "--build",
+    "/home/dl/linuxcode/runtime/darlingserver-source-build",
+    "--target",
+    "darlingserver",
+    "-j",
+    "8"
+  ],
+  "parent_stage": "artifacts/private-procfs-auditsession95-stage.json",
+  "server": "runtime/remap-diagnostic-server-qviobunh/darlingserver",
+  "server_sha256": "baad55a35826980a3719a3aa4b85cf5a80ffbd41ff6a25de71575f1f4e41ba3c",
+  "runtime_execution_verified": false,
+  "full_goal_complete": false,
+  "full_report": "runtime/remap-diagnostic-server-qviobunh/stage.json",
+  "full_report_sha256": "c3e3924b19c0d91491c0ed13f29d3afd2966170058e6b28cf000eb91a5e4f421",
+  "build_log": "runtime/remap-diagnostic-server-qviobunh/build.log",
+  "source_files": {
+    "vendor/darlingserver/duct-tape/src/memory.c": "52f092fb31da6491dccdd7603fc7c0a502262ae6abc95e0830fb8f152bcb3c9f",
+    "vendor/darlingserver/src/thread.cpp": "0d91c86ed703b94cec56c6f6e631fa8c77d1a403fd48cdf40380430567e1059f"
+  }
+}

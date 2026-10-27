@@ -1,0 +1,17 @@
+{
+  "name": "unreal-original-restore-and-remap-diagnostics",
+  "payload": [
+    "scripts/fetch-unreal-gitdependency-inputs.py",
+    "scripts/build-remap-diagnostic-server.py",
+    "scripts/stage-server-only-runtime.py",
+    "vendor/darlingserver/src/thread.cpp",
+    "vendor/darlingserver/duct-tape/src/memory.c"
+  ],
+  "reference": [
+    "runtime/unreal-dotnet-native-j6l9k8ob/result.json",
+    "artifacts/unreal-UBA-library-props-input-v1.json",
+    "runtime/unreal-dependency-inputs-oguvb8uu/result.json",
+    "artifacts/shared-remap-mmap-diagnostics-v3-build.json",
+    "runtime/remap-diagnostic-server-qviobunh/build.log"
+  ]
+}
