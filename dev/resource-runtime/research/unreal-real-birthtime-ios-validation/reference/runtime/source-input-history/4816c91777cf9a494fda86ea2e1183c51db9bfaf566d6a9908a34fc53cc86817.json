@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/4816c91777cf9a494fda86ea2e1183c51db9bfaf566d6a9908a34fc53cc86817",
+  "original_sha256": "4816c91777cf9a494fda86ea2e1183c51db9bfaf566d6a9908a34fc53cc86817",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/stat/fstat.h>\n\n#include <darling/emulation/conversion/stat/common.h>\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n\nlong sys_fstat(int fd, struct stat* stat)\n{\n\tint ret;\n\tstruct linux_stat lstat;\n\n#ifdef __NR_fstat64\n\tret = LINUX_SYSCALL(__NR_fstat64, fd, &lstat);\n#else\n\tret = LINUX_SYSCALL(__NR_fstat, fd, &lstat);\n#endif\n\n\tif (ret < 0)\n\t\treturn errno_linux_to_bsd(ret);\n\n\tstat_linux_to_bsd(&lstat, stat);\n\n\treturn 0;\n}\n\nlong sys_fstat64(int fd, struct stat64* stat)\n{\n\tint ret;\n\tstruct linux_stat lstat;\n\n#ifdef __NR_fstat64\n\tret = LINUX_SYSCALL(__NR_fstat64, fd, &lstat);\n#else\n\tret = LINUX_SYSCALL(__NR_fstat, fd, &lstat);\n#endif\n\n\tif (ret < 0)\n\t\treturn errno_linux_to_bsd(ret);\n\n\tstat_linux_to_bsd64(&lstat, stat);\n\n\treturn 0;\n}\n"
+}

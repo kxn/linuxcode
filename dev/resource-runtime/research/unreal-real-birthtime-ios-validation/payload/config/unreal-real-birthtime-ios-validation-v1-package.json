@@ -1,0 +1,24 @@
+{
+  "name": "unreal-real-birthtime-ios-validation",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/conversion/stat/common.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/fstat.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/fstatat.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/lstat.c",
+    "scripts/probe-native-stat-birthtime.py",
+    "fixtures/hello/native-stat-birthtime.c",
+    "config/unreal-original-UBT-validate-ios-v1-arguments.json"
+  ],
+  "reference": [
+    "artifacts/unreal-real-birthtime-IOS-validation-milestone-v1.json",
+    "artifacts/unreal-official-sdk-config-inputs-v1.json",
+    "runtime/native-stat-birthtime-aoyns_sw/result.json",
+    "runtime/native-stat-birthtime-fvbju2xf/result.json",
+    "runtime/native-stat-birthtime-cejmkamv/result.json",
+    "runtime/unreal-dotnet-native-1ua8rif8/result.json",
+    "runtime/unreal-dotnet-native-blw2hdja/result.json",
+    "runtime/unreal-dotnet-native-zb5isv46/result.json",
+    "runtime/kernel-real-stat-birthtime-v1/plan.json",
+    "runtime/kernel-real-stat-birthtime-v2/plan.json"
+  ]
+}

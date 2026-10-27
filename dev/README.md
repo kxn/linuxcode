@@ -4,6 +4,8 @@
 
 UE 的原版 Intel macOS SDK 已在 Darling 下成功编译完整 UnrealBuildTool：13 个项目、零警告、零错误、正常退出；生成的工具也已实际运行 `-Help` 并返回零。[完整 UBT 构建及启动证据](resource-runtime/research/unreal-original-UBT-build/README.md) 保存参数和 13 个私有产物的校验摘要。UE iOS App 仍未验证；Linux SDK 只用于下载依赖，实际编译使用原版 macOS SDK。
 
+[真实文件创建时间与 iOS 平台检查](resource-runtime/research/unreal-real-birthtime-ios-validation/README.md) 已修复旧 stat 接口留下的未初始化字段。七项结果与宿主 Linux statx 精确一致，生成的原版 UBT 明确输出 `IOS VALID 26.1.1` 并正常退出；没有为这项读取修复重复完整 C# 构建。
+
 底层修复及独立对照分别见 [普通 fork 双事件队列](resource-runtime/research/plain-fork-kqueue/README.md)、[Linux 依赖准备](resource-runtime/research/unreal-dependency-input-preparation/README.md)、[时间戳与原版 Touch](resource-runtime/research/native-file-timestamps-and-msbuild-touch/README.md)、[原版 Copy 回退](resource-runtime/research/original-msbuild-copy-fallback/README.md) 和 [正常启动输出与原版 Csc](resource-runtime/research/quiet-signal-setup-original-csc/README.md)。
 
 [完整 Unity/CocoaPods 入口](resource-runtime/research/unity-full-app-cocoapods/README.md) 保留真实工程准备、原版 CocoaPods 安装和项目结构对照。最新[完整 Unity 证书 CI](resource-runtime/research/unity-certificate-ci/README.md) 已通过原版 xcodebuild 构建签名及七项原版/独立验签；使用临时自签证书，真实 provisioning 和设备安装仍待验证。
