@@ -2,6 +2,8 @@
 
 开发约束：优先复用上游 Darling 已有实现。缺符号或调用失败时，先确认实际加载的库，再核对固定上游源码、构建目标、导出与依赖；已有实现应修正接入，避免在外围复制或简化重写。只有确认接口缺口或原实现错误后，才修改对应组件并保留与基线的差异和实际验证。现有组件的重新构建、版本适配和本实验环境的装配问题，应分别说明，不能统称为“Darling 没有这个组件”。[定点核对记录](resource-runtime/research/upstream-implementation-reuse-audit/README.md) 说明已确认的复用实例及核对范围。
 
+[复用 Mach 接口并接入真实内存统计](resource-runtime/research/host-vm-statistics-upstream-interface/README.md)：原版 Xcode 已完成 UHT 并进入 805 项 UBA 任务的调度准备，但上游现有 VM 统计占位接口返回全零，使原版调度器一直等待初始内存估计。stage104 在原接口中接入 Linux 实际页数，原生调用、历史版本与缓冲区边界检查通过；原有 XNU 分发和缓存复用，UE 代码未改。完整游戏构建继续验证，不能据此宣称 UE App 已完成。
+
 [内部任务恢复与 XNU 等待语义修正](resource-runtime/research/microthread-pending-wait-upstream-reuse/README.md) 复用原有等待队列与锁，将等待状态的清理放回真正唤醒处。定点测试修正前失败、修正后通过；stage102 的原版 UE 工程生成随后遇到另一处共享内存映射失败，尚未完整通过。Unity 的既有 stage101 验证范围不变。
 
 [等待完成与后续代码执行的复查](resource-runtime/research/microthread-wake-completion-gating/README.md) 记录 stage102 后续完整运行仍出现等待队列崩溃，以及新增的“仅恢复调度、尚未真正唤醒”测试。原版适配代码的两个路径均在该测试中失败；stage103 的状态复查使四项定点测试通过，完整 UE 流程仍待验证。

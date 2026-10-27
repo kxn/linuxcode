@@ -1,0 +1,41 @@
+{
+  "verified": true,
+  "scope": "Existing Darling host VM statistics reports measured Linux page states; original UE/UBA/Xcode consumer validation is running separately. This is not a completed UE app build.",
+  "upstream_server_HEAD": "89751e64bc6c2082f7725061824ee0e33395b0de",
+  "upstream_remote_HEAD_checked": true,
+  "upstream_current_vm_stats_is_zero_stub": true,
+  "upstream_XNU_dispatch_and_cache_reused": true,
+  "original_UE_UBA_modified": false,
+  "source_fork": "https://github.com/kxn/darlingserver",
+  "source_commit": "214fd5db38e283b37f98fb947fe96fe68ec11c6d",
+  "source_file": "vendor/darlingserver/duct-tape/src/host.c",
+  "source_sha256": "21f28900c5bb27d21ca85b996fae1b5c4ccbc4efdf7c9ffd8aef188731958abe",
+  "baseline_probe": "runtime/host-vm-statistics-3dk21or8/result.json",
+  "candidate_probe": "runtime/host-vm-statistics-fz081_cs/result.json",
+  "candidate_stage": "artifacts/private-procfs-auditsession104-stage.json",
+  "full_server_source_build": "runtime/remap-diagnostic-server-9iz8voyg/stage.json",
+  "baseline_full_count_values": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "candidate_initial_page_counts": {
+    "page_size": 4096,
+    "free_count": 1285465,
+    "active_count": 4391472,
+    "inactive_count": 4948922,
+    "wire_count": 31
+  },
+  "native_legacy_and_64_revision_and_buffer_ABI_passed": true,
+  "actual_host_reference_agrees": true,
+  "supported_vm64_revision": 1,
+  "newer_SDK_revision_handled_by_count_negotiation": true,
+  "limitations": [
+    "Linux Unevictable describes only a userspace subset of Darwin wired pages; kernel wired accounting is not claimed complete.",
+    "Other Darwin-specific cumulative, compressor, purgeable and internal/external counters remain zero.",
+    "This stage is experimental and is not adopted into the frozen Unity certificate candidate."
+  ],
+  "primary_mapping_reference": "https://docs.kernel.org/filesystems/proc.html#meminfo",
+  "full_goal_complete": false
+}

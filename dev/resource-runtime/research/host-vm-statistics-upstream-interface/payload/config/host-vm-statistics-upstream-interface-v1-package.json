@@ -1,0 +1,18 @@
+{
+  "name": "host-vm-statistics-upstream-interface",
+  "payload": [
+    "vendor/darlingserver/duct-tape/src/host.c",
+    "fixtures/hello/host-vm-statistics.c",
+    "scripts/probe-host-vm-statistics.py",
+    "scripts/build-remap-diagnostic-server.py",
+    "scripts/stage-server-only-runtime.py"
+  ],
+  "reference": [
+    "artifacts/host-vm-statistics-upstream-interface-v1.json",
+    "artifacts/unreal-xcode-original-UBA-zero-memory-statistics-wait-v3.json",
+    "runtime/host-vm-statistics-3dk21or8/result.json",
+    "runtime/host-vm-statistics-fz081_cs/result.json",
+    "runtime/remap-diagnostic-server-9iz8voyg/stage.json",
+    "artifacts/private-procfs-auditsession104-stage.json"
+  ]
+}
