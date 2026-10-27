@@ -1,0 +1,40 @@
+{
+  "name": "null-exec-environment",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/execve.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/posix_spawn.c",
+    "fixtures/hello/null-exec-environment.c",
+    "fixtures/hello/direct-tool-environment.c",
+    "fixtures/hello/spawn-diagnostic-command.c",
+    "scripts/probe-null-exec-environment.py",
+    "scripts/test-direct-tool-environment.py",
+    "scripts/probe-original-bitcode-strip.py",
+    "scripts/capture-live-macho-fault.py",
+    "scripts/capture-command-process-fault.py"
+  ],
+  "reference": [
+    "artifacts/null-exec-environment-source-publication-v1.json",
+    "logs/null-exec-environment-source-push-v1.log",
+    "artifacts/null-exec-environment-kernel-v1-build.json",
+    "runtime/null-exec-environment-kernel-v1/plan.json",
+    "runtime/null-exec-environment-kernel-v1/link.log",
+    "artifacts/private-procfs-auditsession80-stage.json",
+    "runtime/null-exec-environment-ffz527zj/result.json",
+    "runtime/null-exec-environment-dzmszqto/result.json",
+    "runtime/direct-tool-environment-test-mkpe310v/result.json",
+    "runtime/direct-tool-environment-test-mkpe310v/run.log",
+    "runtime/original-bitcode-strip-55cn58fx/result.json",
+    "runtime/original-bitcode-strip-jwvi6og0/result.json",
+    "artifacts/unity-CAR-full-build-next-blocker-v1.json",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-6519e9b8f63c.json",
+    "runtime/unity-full-bitcode-first-fault-v1/result.json",
+    "runtime/unity-live-bitcode-spawn-first-fault-v1/result.json",
+    "runtime/unity-live-bitcode-spawn-first-fault-v1/process.gdb.log",
+    "runtime/unity-live-bitcode-spawn-first-fault-v1/process.maps",
+    "artifacts/unity-live-bitcode-spawn-first-fault-v1-map-bindings.json",
+    "artifacts/unity-live-bitcode-spawn-first-fault-v1-nlist-symbolication.json",
+    "logs/unity-live-bitcode-spawn-first-fault-v1.nlist-symbolicated.log",
+    "artifacts/original-unity-assets-car-v1.json",
+    "config/unity-nullenv-dd76-full-build-v1-command.json"
+  ]
+}

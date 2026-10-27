@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/d0864c2f4cfe495bf1c1bac66302d62acedd7cc81b325111703920cc137ddc10",
+  "original_sha256": "d0864c2f4cfe495bf1c1bac66302d62acedd7cc81b325111703920cc137ddc10",
+  "encoding": "utf-8",
+  "text": "#include <spawn.h>\n#include <stdio.h>\n#include <sys/wait.h>\n#include <unistd.h>\nextern char **environ;\nint main(int argc,char** argv) {\n if(argc<2)return 2;\n /* Leave time for the host debugger to attach before the one target spawn. */\n sleep(3);pid_t child;int error=posix_spawn(&child,argv[1],NULL,NULL,argv+1,environ);\n if(error){fprintf(stderr,\"DIAGNOSTIC_SPAWN_ERROR %d\\n\",error);return 2;}\n int status;while(waitpid(child,&status,0)<0){}\n if(WIFSIGNALED(status)){printf(\"DIAGNOSTIC_CHILD_SIGNAL %d\\n\",WTERMSIG(status));return 128+WTERMSIG(status);}\n return WIFEXITED(status)?WEXITSTATUS(status):2;\n}\n"
+}

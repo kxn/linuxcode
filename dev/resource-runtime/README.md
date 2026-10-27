@@ -228,3 +228,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Ownership release and repeated assurance](research/workloop-owner-release/README.md): valid delete/enable precedence and repeat wake/discovery match original dispatch; previous duplicate-wake expectation corrected with native evidence.
 
 - [Original Unity asset catalog compilation and dispatch2 lifecycle](research/dispatch2-assetcatalog/README.md): original actool produces Assets.car; native tagged cancellation and vnode close/reuse checks pass.
+
+- [NULL exec/spawn environment and original bitcode_strip](research/null-exec-environment/README.md): captures the real SwiftBuild pre-exec crash, verifies empty/inherited environments and original framework-tool output.

@@ -1,0 +1,282 @@
+{
+  "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/execve.c": {
+    "sha256": "2f64c5115f5ead3378bf3e3666be214e680e5712e20292ab971cf6432dc118dd",
+    "attachment": "payload/vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/execve.c",
+    "wrapped_utf8": false
+  },
+  "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/posix_spawn.c": {
+    "sha256": "8273be2a88ce7ffec3ffd9a1221e7077a33d762961233dd65b914aa3e17bdb53",
+    "attachment": "payload/vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/posix_spawn.c",
+    "wrapped_utf8": false
+  },
+  "fixtures/hello/null-exec-environment.c": {
+    "sha256": "f68709fdcc82ff7611869b88dee447246b9eacd63ed31d66369ec278f45473fb",
+    "attachment": "payload/fixtures/hello/null-exec-environment.c",
+    "wrapped_utf8": false
+  },
+  "fixtures/hello/direct-tool-environment.c": {
+    "sha256": "e7494e2b747c13c3e8ef1a97d1e4bae6d905a86c720b043ca590433ed81b08b2",
+    "attachment": "payload/fixtures/hello/direct-tool-environment.c",
+    "wrapped_utf8": false
+  },
+  "fixtures/hello/spawn-diagnostic-command.c": {
+    "sha256": "153569c1433f92cd7e6422f8309656d613d2b93f93d45041da7794febb0408fd",
+    "attachment": "payload/fixtures/hello/spawn-diagnostic-command.c",
+    "wrapped_utf8": false
+  },
+  "scripts/probe-null-exec-environment.py": {
+    "sha256": "d81fa6194ce834e249d9289d1272bf01d5f0d116317e0fb78367cd919d47b821",
+    "attachment": "payload/scripts/probe-null-exec-environment.py",
+    "wrapped_utf8": false
+  },
+  "scripts/test-direct-tool-environment.py": {
+    "sha256": "023abca755103eff89a12b3e62a02a2b76f71803436dbab79b2489ff52c69559",
+    "attachment": "payload/scripts/test-direct-tool-environment.py",
+    "wrapped_utf8": false
+  },
+  "scripts/probe-original-bitcode-strip.py": {
+    "sha256": "f2ca1f2e6d0c5e2281d138ad00c31a2f62d9a266f60e1c43bd9ae50fadbd70f4",
+    "attachment": "payload/scripts/probe-original-bitcode-strip.py",
+    "wrapped_utf8": false
+  },
+  "scripts/capture-live-macho-fault.py": {
+    "sha256": "65c7f9bb8406437c5e7269253fb1eaf605536ff94834b94b88aefde111181a69",
+    "attachment": "payload/scripts/capture-live-macho-fault.py",
+    "wrapped_utf8": false
+  },
+  "scripts/capture-command-process-fault.py": {
+    "sha256": "d3269f57b840f968a4db63509550a16f740370f88719ebf86e03220736938f5b",
+    "attachment": "payload/scripts/capture-command-process-fault.py",
+    "wrapped_utf8": false
+  },
+  "scripts/package-runtime-research.py": {
+    "sha256": "4c18ea1875934518d54046171ee33be86861b7d76e4584e35152774975eb6da2",
+    "attachment": "payload/scripts/package-runtime-research.py",
+    "wrapped_utf8": false
+  },
+  "config/null-exec-environment-checkpoint-v1.json": {
+    "sha256": "57262c99555fc3505156d9f97e08ab8fb1d281f0cb1e13817ca1f23487e3aa94",
+    "attachment": "payload/config/null-exec-environment-checkpoint-v1.json",
+    "wrapped_utf8": false
+  },
+  "artifacts/null-exec-environment-source-publication-v1.json": {
+    "sha256": "363593a2a81be448e18da9beb55f6f7b1e07f8f9ac12442b3bd1c08fafd426dd",
+    "attachment": "reference/artifacts/null-exec-environment-source-publication-v1.json",
+    "wrapped_utf8": false
+  },
+  "logs/null-exec-environment-source-push-v1.log": {
+    "sha256": "2ed516e0374089f80545ba7ee566f0426a18db68a2ff854ded480fe162812e8f",
+    "attachment": "reference/logs/null-exec-environment-source-push-v1.log.json",
+    "wrapped_utf8": true
+  },
+  "artifacts/null-exec-environment-kernel-v1-build.json": {
+    "sha256": "b4867dea50b1d26896cf6a6d33ca06f605bbd3e77436374876e050992a5d1620",
+    "attachment": "reference/artifacts/null-exec-environment-kernel-v1-build.json",
+    "wrapped_utf8": false
+  },
+  "runtime/null-exec-environment-kernel-v1/plan.json": {
+    "sha256": "84407a5cc0f614ece8b6ff8dde0cc85d4dffe0ee487d764409faa51b9c7458fa",
+    "attachment": "reference/runtime/null-exec-environment-kernel-v1/plan.json",
+    "wrapped_utf8": false
+  },
+  "runtime/null-exec-environment-kernel-v1/link.log": {
+    "sha256": "1e81500d6ec2fddb47a2fd7ded342d911d1fc360ca5e60235f333e090bc3e1f5",
+    "attachment": "reference/runtime/null-exec-environment-kernel-v1/link.log.json",
+    "wrapped_utf8": true
+  },
+  "artifacts/private-procfs-auditsession80-stage.json": {
+    "sha256": "228fd2ce8a274b78b60fd89a435c8c9ab82ab4121f5e6a9bf71eaba9cb9e777b",
+    "attachment": "reference/artifacts/private-procfs-auditsession80-stage.json",
+    "wrapped_utf8": false
+  },
+  "runtime/null-exec-environment-ffz527zj/result.json": {
+    "sha256": "09e3bc2e46f85e59d4a66fff8d302e8361df7a50a80692a320e3e2cd44c77051",
+    "attachment": "reference/runtime/null-exec-environment-ffz527zj/result.json",
+    "wrapped_utf8": false
+  },
+  "runtime/null-exec-environment-ffz527zj/run.log": {
+    "sha256": "7111f34649ed375040892fa1345536e2f5165e35214673c75a1f4ac873a0d433",
+    "attachment": "reference/runtime/null-exec-environment-ffz527zj/run.log.json",
+    "wrapped_utf8": true
+  },
+  "runtime/null-exec-environment-dzmszqto/result.json": {
+    "sha256": "afbb796efdd7078dea6f4d20ad64714a9306ba9393d0161056396162d6c90137",
+    "attachment": "reference/runtime/null-exec-environment-dzmszqto/result.json",
+    "wrapped_utf8": false
+  },
+  "runtime/null-exec-environment-dzmszqto/run.log": {
+    "sha256": "e53ad2b75104172145dce19416e003ffc97a09c049695774c62cf200ce9af27f",
+    "attachment": "reference/runtime/null-exec-environment-dzmszqto/run.log.json",
+    "wrapped_utf8": true
+  },
+  "runtime/direct-tool-environment-test-mkpe310v/result.json": {
+    "sha256": "2bc72343b6b5a8f6dba70ef5c8162c23af946979f0c04c20ecb1850d1586cc5a",
+    "attachment": "reference/runtime/direct-tool-environment-test-mkpe310v/result.json",
+    "wrapped_utf8": false
+  },
+  "runtime/direct-tool-environment-test-mkpe310v/run.log": {
+    "sha256": "de7197b225533b9bf29a3c42f47979243d12eac43b3ab0a49625c8ca6f291a81",
+    "attachment": "reference/runtime/direct-tool-environment-test-mkpe310v/run.log.json",
+    "wrapped_utf8": true
+  },
+  "runtime/original-bitcode-strip-55cn58fx/result.json": {
+    "sha256": "aea8f6fcf43dce6b1f2c046dea2dd6bbc3d908d5beeb88f831816a783db4aca5",
+    "attachment": "reference/runtime/original-bitcode-strip-55cn58fx/result.json",
+    "wrapped_utf8": false
+  },
+  "runtime/original-bitcode-strip-55cn58fx/run.log": {
+    "sha256": "b5e10b55289acdcb0b881f549f4e683006eeb6c0431b16207431cd7b8c02f20f",
+    "attachment": "reference/runtime/original-bitcode-strip-55cn58fx/run.log.json",
+    "wrapped_utf8": true
+  },
+  "runtime/original-bitcode-strip-jwvi6og0/result.json": {
+    "sha256": "0e0a7d1df9243c1476cce80c9d04eaef1b25fc27891a66d57ccc254ffb777a8a",
+    "attachment": "reference/runtime/original-bitcode-strip-jwvi6og0/result.json",
+    "wrapped_utf8": false
+  },
+  "runtime/original-bitcode-strip-jwvi6og0/run.log": {
+    "sha256": "4b1ee54909a85fc242656d1bbe0dac720d8e8864a043f2550a8d1d2810d2694a",
+    "attachment": "reference/runtime/original-bitcode-strip-jwvi6og0/run.log.json",
+    "wrapped_utf8": true
+  },
+  "artifacts/unity-CAR-full-build-next-blocker-v1.json": {
+    "sha256": "3b844355b4bf061c6ab7f67b9861ec3305e3cedf60fb43144ce7fdebef0a9fec",
+    "attachment": "reference/artifacts/unity-CAR-full-build-next-blocker-v1.json",
+    "wrapped_utf8": false
+  },
+  "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-6519e9b8f63c.json": {
+    "sha256": "f678969136be8624bd26ee022713a5a8b7a9f8284da858892a01a465e1bf864b",
+    "attachment": "reference/artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-6519e9b8f63c.json",
+    "wrapped_utf8": false
+  },
+  "logs/xcode-service-runtime-tool-dispatch-diagnostic-build-6519e9b8f63c.log": {
+    "sha256": "904f4f560100c4df1e2734b74812ce6b14c0811f01d24f0aafc3dae2dee6aee9",
+    "attachment": "reference/logs/xcode-service-runtime-tool-dispatch-diagnostic-build-6519e9b8f63c.log.json",
+    "wrapped_utf8": true
+  },
+  "runtime/unity-full-bitcode-first-fault-v1/result.json": {
+    "sha256": "2346bfc7cbc5ea7232c4bb7fc722e2fea60fcfc81b333cbcae452051f26c9ab5",
+    "attachment": "reference/runtime/unity-full-bitcode-first-fault-v1/result.json",
+    "wrapped_utf8": false
+  },
+  "runtime/unity-live-bitcode-spawn-first-fault-v1/result.json": {
+    "sha256": "c91e27c0478259c340cb62af5c3195ae55eabc31335b649cc9c9ada71c032ec4",
+    "attachment": "reference/runtime/unity-live-bitcode-spawn-first-fault-v1/result.json",
+    "wrapped_utf8": false
+  },
+  "runtime/unity-live-bitcode-spawn-first-fault-v1/process.gdb.log": {
+    "sha256": "1926bb1619c49c308f5b9b7c7af9129cfeafd7e5cd168ef2ec3835f218310806",
+    "attachment": "reference/runtime/unity-live-bitcode-spawn-first-fault-v1/process.gdb.log.json",
+    "wrapped_utf8": true
+  },
+  "runtime/unity-live-bitcode-spawn-first-fault-v1/process.maps": {
+    "sha256": "e1508eded36e08984118bfe3728a09b26c7cee51d7615f1a0f042fca92178810",
+    "attachment": "reference/runtime/unity-live-bitcode-spawn-first-fault-v1/process.maps.json",
+    "wrapped_utf8": true
+  },
+  "artifacts/unity-live-bitcode-spawn-first-fault-v1-map-bindings.json": {
+    "sha256": "ab140c0eaeb32e48fb48728fd195f1de1b36207f152e5284fe6ef089d53ed115",
+    "attachment": "reference/artifacts/unity-live-bitcode-spawn-first-fault-v1-map-bindings.json",
+    "wrapped_utf8": false
+  },
+  "artifacts/unity-live-bitcode-spawn-first-fault-v1-nlist-symbolication.json": {
+    "sha256": "a38bca60f3aff697bd7337a9f54bc07ce2bf8b50b61dbae0c8904d33cc2f8c83",
+    "attachment": "reference/artifacts/unity-live-bitcode-spawn-first-fault-v1-nlist-symbolication.json",
+    "wrapped_utf8": false
+  },
+  "logs/unity-live-bitcode-spawn-first-fault-v1.nlist-symbolicated.log": {
+    "sha256": "2e3731ef14b679ab8b6d6b00ecf14a2358b5e51533018bb11c498863a9634e5c",
+    "attachment": "reference/logs/unity-live-bitcode-spawn-first-fault-v1.nlist-symbolicated.log.json",
+    "wrapped_utf8": true
+  },
+  "artifacts/original-unity-assets-car-v1.json": {
+    "sha256": "c3ef5b802185a78b1828af7fc985c8ce1ce252e3610d6835ed72cd5c25ad4a7f",
+    "attachment": "reference/artifacts/original-unity-assets-car-v1.json",
+    "wrapped_utf8": false
+  },
+  "config/unity-nullenv-dd76-full-build-v1-command.json": {
+    "sha256": "7b9178d13d5e2a6d3a82a15a55d07a04ed785a9b53eddf1efb473012071ea308",
+    "attachment": "reference/config/unity-nullenv-dd76-full-build-v1-command.json",
+    "wrapped_utf8": false
+  },
+  "runtime/source-input-history/864395da5e109ec0653401baf0d89bde535bb117e3c2d43c89fecfc0fb70c74d": {
+    "sha256": "864395da5e109ec0653401baf0d89bde535bb117e3c2d43c89fecfc0fb70c74d",
+    "attachment": "reference/runtime/source-input-history/864395da5e109ec0653401baf0d89bde535bb117e3c2d43c89fecfc0fb70c74d.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/6bda2f900e618f6e59467c9a50ef0eb5855da22cbfc11778c79de89b7bc55031": {
+    "sha256": "6bda2f900e618f6e59467c9a50ef0eb5855da22cbfc11778c79de89b7bc55031",
+    "attachment": "reference/runtime/source-input-history/6bda2f900e618f6e59467c9a50ef0eb5855da22cbfc11778c79de89b7bc55031.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/ff4bf4f48253fad95e060454efaf3d2cf749c1f1cef01f3f1c7e18406d581726": {
+    "sha256": "ff4bf4f48253fad95e060454efaf3d2cf749c1f1cef01f3f1c7e18406d581726",
+    "attachment": "reference/runtime/source-input-history/ff4bf4f48253fad95e060454efaf3d2cf749c1f1cef01f3f1c7e18406d581726.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/aeb9e8647e0ba89676dfeb1cf3cda9c4b12746ea31ea3f7ab911d0b4e120e49e": {
+    "sha256": "aeb9e8647e0ba89676dfeb1cf3cda9c4b12746ea31ea3f7ab911d0b4e120e49e",
+    "attachment": "reference/runtime/source-input-history/aeb9e8647e0ba89676dfeb1cf3cda9c4b12746ea31ea3f7ab911d0b4e120e49e.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/9cf7e4435b2dda150a874c08c0abe661525a4535bcee072f792b1479897e6754": {
+    "sha256": "9cf7e4435b2dda150a874c08c0abe661525a4535bcee072f792b1479897e6754",
+    "attachment": "reference/runtime/source-input-history/9cf7e4435b2dda150a874c08c0abe661525a4535bcee072f792b1479897e6754.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/e724e5500d1411743140106b4f7c97154e8c36e97a3e93d8d6d4ad890eba19b2": {
+    "sha256": "e724e5500d1411743140106b4f7c97154e8c36e97a3e93d8d6d4ad890eba19b2",
+    "attachment": "reference/runtime/source-input-history/e724e5500d1411743140106b4f7c97154e8c36e97a3e93d8d6d4ad890eba19b2.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/d0864c2f4cfe495bf1c1bac66302d62acedd7cc81b325111703920cc137ddc10": {
+    "sha256": "d0864c2f4cfe495bf1c1bac66302d62acedd7cc81b325111703920cc137ddc10",
+    "attachment": "reference/runtime/source-input-history/d0864c2f4cfe495bf1c1bac66302d62acedd7cc81b325111703920cc137ddc10.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/ee40934d8adb21b512d4931735cc8324843ab892a681bc9586f109a5311b57f8": {
+    "sha256": "ee40934d8adb21b512d4931735cc8324843ab892a681bc9586f109a5311b57f8",
+    "attachment": "reference/runtime/source-input-history/ee40934d8adb21b512d4931735cc8324843ab892a681bc9586f109a5311b57f8.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/10b48118baf595b55a10ce76d8216dd861c9e92f55722c838b9a4e2110c58dca": {
+    "sha256": "10b48118baf595b55a10ce76d8216dd861c9e92f55722c838b9a4e2110c58dca",
+    "attachment": "reference/runtime/source-input-history/10b48118baf595b55a10ce76d8216dd861c9e92f55722c838b9a4e2110c58dca.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/ddf9617d2e33d4d4c6a31768555e68b853af5934013f18ff6efe18361b1bd5fc": {
+    "sha256": "ddf9617d2e33d4d4c6a31768555e68b853af5934013f18ff6efe18361b1bd5fc",
+    "attachment": "reference/runtime/source-input-history/ddf9617d2e33d4d4c6a31768555e68b853af5934013f18ff6efe18361b1bd5fc.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/c211423c80a3e3db92d0a916cdd0fc4cf17de1c122a56face04ee937a763f097": {
+    "sha256": "c211423c80a3e3db92d0a916cdd0fc4cf17de1c122a56face04ee937a763f097",
+    "attachment": "reference/runtime/source-input-history/c211423c80a3e3db92d0a916cdd0fc4cf17de1c122a56face04ee937a763f097.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/ff00b923de942202743fa8e109cd2f324eb96fbd1ee955d62c5efe32c59556cd": {
+    "sha256": "ff00b923de942202743fa8e109cd2f324eb96fbd1ee955d62c5efe32c59556cd",
+    "attachment": "reference/runtime/source-input-history/ff00b923de942202743fa8e109cd2f324eb96fbd1ee955d62c5efe32c59556cd.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/0ded6472c40b4cc1702476bea74d0b547ae1ba44229d07c8a4332fd4af8ef3b6": {
+    "sha256": "0ded6472c40b4cc1702476bea74d0b547ae1ba44229d07c8a4332fd4af8ef3b6",
+    "attachment": "reference/runtime/source-input-history/0ded6472c40b4cc1702476bea74d0b547ae1ba44229d07c8a4332fd4af8ef3b6.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/06ba1084ab87f4841e6bea3f4fe5981d1976d514ccc63e9f84cf3977d55e6dd6": {
+    "sha256": "06ba1084ab87f4841e6bea3f4fe5981d1976d514ccc63e9f84cf3977d55e6dd6",
+    "attachment": "reference/runtime/source-input-history/06ba1084ab87f4841e6bea3f4fe5981d1976d514ccc63e9f84cf3977d55e6dd6.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/2bc9bf8dab672a7fb7626d7a2ab44b3354de7a5e0212f09b04b2cb026e1e68a7": {
+    "sha256": "2bc9bf8dab672a7fb7626d7a2ab44b3354de7a5e0212f09b04b2cb026e1e68a7",
+    "attachment": "reference/runtime/source-input-history/2bc9bf8dab672a7fb7626d7a2ab44b3354de7a5e0212f09b04b2cb026e1e68a7.json",
+    "wrapped_utf8": true
+  },
+  "runtime/source-input-history/142adad8b89e70f20209dbc9cd485bb1cde0a7d9703ec37ed62dc50eee5246ee": {
+    "sha256": "142adad8b89e70f20209dbc9cd485bb1cde0a7d9703ec37ed62dc50eee5246ee",
+    "attachment": "reference/runtime/source-input-history/142adad8b89e70f20209dbc9cd485bb1cde0a7d9703ec37ed62dc50eee5246ee.json",
+    "wrapped_utf8": true
+  }
+}
