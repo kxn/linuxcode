@@ -1,0 +1,1 @@
+<Project><Target Name="Probe"><WriteLinesToFile File="$(MSBuildThisFileDirectory)source.txt" Lines="original MSBuild copy content" Overwrite="true"/><Copy SourceFiles="$(MSBuildThisFileDirectory)source.txt" DestinationFiles="$(MSBuildThisFileDirectory)destination.txt" Retries="0"/><Message Importance="high" Text="ORIGINAL_MSBUILD_COPY_PASSED"/></Target></Project>

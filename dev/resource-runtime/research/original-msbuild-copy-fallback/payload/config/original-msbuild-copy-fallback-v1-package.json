@@ -1,0 +1,23 @@
+{
+  "name": "original-msbuild-copy-fallback",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/clonefile.c",
+    "scripts/probe-original-dotnet10-copyfile.py",
+    "fixtures/hello/original-dotnet10-copyfile.c",
+    "runtime/native-msbuild-copy-v1/test.proj",
+    "runtime/native-msbuild-copy-v2/test.proj",
+    "config/native-msbuild-copy-v1-arguments.json",
+    "config/native-msbuild-copy-v2-arguments.json"
+  ],
+  "reference": [
+    "artifacts/original-msbuild-copy-fallback-milestone-v1.json",
+    "artifacts/original-msbuild-copy-fallback-v1.json",
+    "artifacts/original-dotnet10-copyfile-controls-v1.json",
+    "runtime/original-dotnet10-copyfile-zqfi2nlg/result.json",
+    "runtime/original-dotnet10-copyfile-zqfi2nlg/run.log",
+    "runtime/unreal-dotnet-native-3eptx_g5/result.json",
+    "runtime/unreal-dotnet-native-r_n2rfli/result.json",
+    "runtime/unreal-dotnet-native-fqv_i9g6/result.json",
+    "runtime/kernel-clonefile-unsupported-v1/plan.json"
+  ]
+}

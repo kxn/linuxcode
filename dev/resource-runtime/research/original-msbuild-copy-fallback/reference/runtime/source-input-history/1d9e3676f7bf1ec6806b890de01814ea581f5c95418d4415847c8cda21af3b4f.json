@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/1d9e3676f7bf1ec6806b890de01814ea581f5c95418d4415847c8cda21af3b4f",
+  "original_sha256": "1d9e3676f7bf1ec6806b890de01814ea581f5c95418d4415847c8cda21af3b4f",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/misc/clonefile.h>\n\n#include <signal.h>\n\n#include <darling/emulation/conversion/duct_errno.h>\n\nlong sys_clonefileat(int src_fd, const char* src_path, int dest_fd, const char* dest_path, uint32_t flags) {\n\treturn -ENOSYS;\n}\n\nlong sys_fclonefileat(int src_fd, int dest_fd, const char* dest_path, uint32_t flags) {\n\treturn -ENOSYS;\n}\n"
+}
