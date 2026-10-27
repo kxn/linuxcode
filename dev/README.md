@@ -4,6 +4,8 @@
 
 UE 的原版 Intel macOS SDK 目前已越过 fork 后重定向死锁并完成 13 个项目的 NuGet 恢复，尚未完成 UBT 编译。新增 [普通 fork 的双事件队列修复](resource-runtime/research/plain-fork-kqueue/README.md) 和 [Linux 依赖输入准备](resource-runtime/research/unreal-dependency-input-preparation/README.md) 保存源码、正反对照与复用方式。Linux SDK 只用于下载依赖，原版 macOS 构建继续在 Darling 中执行。
 
+原版构建已生成三个真实的中间程序集，随后遇到 MSBuild Touch 时间戳错误。[时间戳修复与原版 Touch 对照](resource-runtime/research/native-file-timestamps-and-msbuild-touch/README.md) 保存十项原生检查及原版任务的失败/成功证据；完整 UBT 正在继续验证。
+
 [完整 Unity/CocoaPods 入口](resource-runtime/research/unity-full-app-cocoapods/README.md) 保留真实工程准备、原版 CocoaPods 安装和项目结构对照。最新[完整 Unity 证书 CI](resource-runtime/research/unity-certificate-ci/README.md) 已通过原版 xcodebuild 构建签名及七项原版/独立验签；使用临时自签证书，真实 provisioning 和设备安装仍待验证。
 
 后续 Unity 工具链兼容修复见 [私有 procfs 与文件复制附件](resource-runtime/research/unity-private-procfs/README.md)：包含四个现有 fork 的源码提交、原版工具探针和独立产物检查，继续使用 Linux x86_64 与原版 Xcode 工程。

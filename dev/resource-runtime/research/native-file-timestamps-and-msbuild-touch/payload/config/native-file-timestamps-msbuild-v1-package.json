@@ -1,0 +1,25 @@
+{
+  "name": "native-file-timestamps-and-msbuild-touch",
+  "payload": [
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/time/futimes.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/xattr/setattrlist_generic.c",
+    "scripts/rebuild-kernel-source-delta.py",
+    "scripts/probe-native-file-timestamps.py",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "fixtures/hello/native-file-timestamps.c",
+    "runtime/native-timestamp-touch-v1/test.proj",
+    "runtime/native-timestamp-touch-v2/test.proj",
+    "config/native-timestamp-touch-v1-arguments.json",
+    "config/native-timestamp-touch-v2-arguments.json"
+  ],
+  "reference": [
+    "artifacts/native-file-timestamps-msbuild-milestone-v1.json",
+    "runtime/native-file-timestamps-zb949kt4/result.json",
+    "runtime/native-file-timestamps-xwobadcf/result.json",
+    "runtime/unreal-dotnet-native-nxgi_axt/result.json",
+    "runtime/unreal-dotnet-native-491rweuk/result.json",
+    "runtime/unreal-dotnet-native-ltzpx1kq/result.json",
+    "runtime/unreal-original-managed-products-nlgpsaw0/inspection.json",
+    "runtime/kernel-file-timestamps-v1/plan.json"
+  ]
+}

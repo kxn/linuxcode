@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/9a05f2133d2f87184cf61e62928a475b46ef0d165697822ec36bc127f1bb3d34",
+  "original_sha256": "9a05f2133d2f87184cf61e62928a475b46ef0d165697822ec36bc127f1bb3d34",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/time/futimes.h>\n\n#include <stddef.h>\n\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n\n\nlong sys_futimes(int fd, struct bsd_timeval* tv)\n{\n\tint ret;\n\tstruct linux_timeval ltv[2];\n\n\tltv[0].tv_sec = tv[0].tv_sec;\n\tltv[0].tv_usec = tv[0].tv_usec;\n\tltv[1].tv_sec = tv[1].tv_sec;\n\tltv[1].tv_usec = tv[1].tv_usec;\n\n\tret = LINUX_SYSCALL(__NR_utimensat, fd, NULL, ltv, 0);\n\tif (ret < 0)\n\t\tret = errno_linux_to_bsd(ret);\n\n\treturn ret;\n}\n"
+}
