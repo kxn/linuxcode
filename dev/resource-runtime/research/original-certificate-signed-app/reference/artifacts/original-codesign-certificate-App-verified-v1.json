@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "native_report": "runtime/original-codesign-certificate-924gzxz5/result.json",
+  "native_report_sha256": "e5db143f6f91e49e4d48be0079c338796688de44118c4c1c724cc1fe6229b77e",
+  "application": "runtime/original-codesign-certificate-924gzxz5/iOSCocoaPodsSmoke.app",
+  "original_codesign_and_strict_verify_completed": true,
+  "independent_bundle_verification": {
+    "verified": true,
+    "code_pages": 18,
+    "special_slots": 3,
+    "sealed_resources": 2,
+    "identifier": "org.linuxcode.iOSCocoaPodsSmoke",
+    "hash_algorithm": "sha256",
+    "certificate_or_device_trust_verified": false,
+    "certificate_CMS": {
+      "verified": true,
+      "ad_hoc_flag": false,
+      "CodeDirectory_SHA256": "60e418af8906d0820105fcb3dea0999b3db314e248b02c9f105ef849d06937d1",
+      "CMS_SHA256": "bf1278c93a4e5cea290df7ffdbe3bce54a03e8b6eb32f105a4a652c7af52e9d0",
+      "CMS_bytes": 1789,
+      "tampered_CodeDirectory_rejected": true,
+      "certificate_chain_trust_verified": false
+    }
+  },
+  "independent_tamper_controls": [
+    {
+      "case": "code-page",
+      "rejected": true
+    },
+    {
+      "case": "Info.plist",
+      "rejected": true
+    },
+    {
+      "case": "CodeResources",
+      "rejected": true
+    }
+  ],
+  "public_certificate_SHA256": "50d55cec6480231f242db1e78248f680be56fbf5afa07ab198158bd70f11defb",
+  "signing_scope": "self-generated fixture certificate; no Apple developer provisioning or device trust",
+  "private_evidence_directory": "runtime/native-certificate-verification-8t7xv_9o",
+  "verifier_sources": {
+    "scripts/verify-adhoc-bundle.py": "81917405298b49bcd61b8b77feb6c44bf65acc287a349162c23ed18b35291754",
+    "scripts/verify-certificate-bundle.py": "57e312fba0919b6e73692f8683fbedcdcf49cc662183ca45f2304fdf30f3e983"
+  },
+  "full_goal_complete": false
+}

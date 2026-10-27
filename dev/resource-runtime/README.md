@@ -244,3 +244,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [Original CMS and SecurityServer](research/original-cms-securityserver/README.md):coherent old/new backends reach the same module-service dependency; paired securityd startup is stopped by its unimplemented native prerequisite.
 
 [Source SecurityServer and original certificate CMS](research/native-securityd-certificate-cms/README.md):159 translation units; original native CMS signature independently verifies and rejects tampering. App signing continues through the upstream requirement-parser bundle.
+
+[Original certificate-signed iOS App](research/original-certificate-signed-app/README.md):original codesign sign/strict verification and independent CMS/code/resource checks pass; full Unity certificate CI and provisioning remain open.

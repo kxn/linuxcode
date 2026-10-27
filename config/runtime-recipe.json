@@ -111,6 +111,21 @@
       "cold_install_validated": false,
       "developer_certificate_provisioning_or_device_trust_verified": false,
       "UE_verified": false
+    },
+    {
+      "id": "original-certificate-signed-ios-smoke",
+      "source": "dev/resource-runtime/research/original-certificate-signed-app/README.md",
+      "host": "Linux x86_64 Darling",
+      "target": "iPhoneOS arm64",
+      "original_codesign_certificate_sign_and_strict_verify": true,
+      "ad_hoc": false,
+      "self_generated_test_certificate_only": true,
+      "independent_SHA256_pages": 18,
+      "independent_CMS_and_tamper_checks": true,
+      "existing_workspace_candidate": "config/native-certificate-candidate-v1.json",
+      "full_Unity_certificate_CI": false,
+      "developer_provisioning_or_device_trust": false,
+      "cold_install_validated": false
     }
   ],
   "current_verified_milestone": "original-xcodebuild-unity-cocoapods-fresh-deriveddata-ad-hoc"

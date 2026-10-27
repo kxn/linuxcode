@@ -1,0 +1,19 @@
+{
+  "name": "original-certificate-signed-app",
+  "payload": [
+    "scripts/probe-original-codesign-certificate.py",
+    "scripts/stage-local-identity-store.py",
+    "scripts/verify-adhoc-bundle.py",
+    "scripts/verify-certificate-bundle.py",
+    "config/native-certificate-candidate-v1.json"
+  ],
+  "reference": [
+    "artifacts/original-codesign-certificate-App-milestone-v1.json",
+    "artifacts/original-codesign-certificate-App-verified-v1.json",
+    "runtime/original-codesign-certificate-924gzxz5/result.json",
+    "artifacts/local-identity-store-csparser-mds-v12-stage.json",
+    "runtime/csparser-source-oy2dgby1/build.json",
+    "runtime/securityd-source-24j16esb/build.json",
+    "artifacts/original-native-certificate-CMS-cryptography-v1.json"
+  ]
+}

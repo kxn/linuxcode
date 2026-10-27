@@ -1,0 +1,32 @@
+{
+  "scope": "Existing-workspace pure Linux/Darling original certificate signing candidate; self-generated fixture validation, no provisioning or device trust",
+  "inputs": {
+    "stage": {
+      "path": "artifacts/private-procfs-auditsession84-stage.json",
+      "sha256": "1a8975193ce83666a41fb6b7679294e3b2192a0f9722355c5eb1fbde33d0db70"
+    },
+    "configuration": {
+      "path": "config/direct-resource-tool-environment-v150.json",
+      "sha256": "d47914a7cba73b72bbf205c344e496fe1d8b7d5ef5f484f39db59ea7404c421e"
+    },
+    "identity_stage": {
+      "path": "artifacts/local-identity-store-csparser-mds-v12-stage.json",
+      "sha256": "8fc947289bd15ec29dcfc3056ad77ac37daceb190f40dcae98180120c0ec56cf"
+    },
+    "trustd_identity_stage": {
+      "path": "artifacts/local-identity-store-parent-candidates-v9-stage.json",
+      "sha256": "f02c0a3d58868f9a3314125fd6e720274b05ac00e965774e3e712aef5b1a9eb1"
+    },
+    "securityd_build": {
+      "path": "runtime/securityd-source-24j16esb/build.json",
+      "sha256": "76b9e7dbe7aef117d1e0ebeef3fc51556dd5cc34779288087481f39eb21ec5fb"
+    },
+    "launchctl": {
+      "path": "runtime/launchctl-source-6e9jbpuc/launchctl",
+      "sha256": "3e813a63c44e2739cbc06391a2d641aa499105e5356a28d8d3559c0ceee85d84"
+    }
+  },
+  "native_report": "runtime/original-codesign-certificate-924gzxz5/result.json",
+  "independent_report": "artifacts/original-codesign-certificate-App-verified-v1.json",
+  "cold_reconstruction_ready": false
+}
