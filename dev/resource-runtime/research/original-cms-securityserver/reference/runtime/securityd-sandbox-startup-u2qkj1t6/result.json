@@ -1,0 +1,40 @@
+{
+  "observed_unimplemented_startup_dependency": true,
+  "outer_status": 0,
+  "source": "fixtures/hello/securityd-sandbox-initialization.c",
+  "source_sha256": "f642e53612eb83d9b07f92134a20316055577659c47346c3eadba99cb1c24fb6",
+  "driver_sha256": "0d446965d96993e76b8e65fb517d7a082c20cc33050f1e66bc9f6ef717a04784",
+  "commands": [
+    [
+      "clang-19",
+      "-target",
+      "x86_64-apple-macos11",
+      "-isysroot",
+      "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-O2",
+      "-c",
+      "/home/dl/linuxcode/fixtures/hello/securityd-sandbox-initialization.c",
+      "-o",
+      "/home/dl/linuxcode/runtime/securityd-sandbox-startup-u2qkj1t6/probe.o"
+    ],
+    [
+      "ld64.lld-19",
+      "-arch",
+      "x86_64",
+      "-platform_version",
+      "macos",
+      "11",
+      "11",
+      "-syslibroot",
+      "/home/dl/linuxcode/runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-lSystem",
+      "/home/dl/linuxcode/runtime/securityd-sandbox-startup-u2qkj1t6/probe.o",
+      "-o",
+      "/home/dl/linuxcode/runtime/securityd-sandbox-startup-u2qkj1t6/probe"
+    ]
+  ],
+  "stage": "artifacts/private-procfs-auditsession84-stage.json",
+  "log": "runtime/securityd-sandbox-startup-u2qkj1t6/run.log",
+  "log_sha256": "8dc36b13c5b17470b02c8ff4e004349d12d45a3043d1e654dc6f37b786667a74",
+  "securityd_or_CMS_signing_ready": false
+}

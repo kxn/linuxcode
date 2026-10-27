@@ -240,3 +240,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 [launchctl long UTF-8 strings](research/launchctl-long-strings/README.md):39 native checks; fixes truncated job environment and starts paired headless trust services.
 
 [Local certificate parents](research/local-certificate-parent-candidates/README.md):27 native checks and actual recoverable self-signed trust result; CMS legacy module dependency remains under investigation.
+
+[Original CMS and SecurityServer](research/original-cms-securityserver/README.md):coherent old/new backends reach the same module-service dependency; paired securityd startup is stopped by its unimplemented native prerequisite.

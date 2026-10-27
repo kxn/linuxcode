@@ -1,0 +1,37 @@
+{
+  "symbolication_only": true,
+  "format_validation": false,
+  "raw": "logs/coherent-original-cms-preflight-v17-wait-v1.gdb.log",
+  "raw_sha256": "7b7c4e24e32d39896a7cb07b7c7859750bb56a49b7aeb1e905392e0a937bd511",
+  "maps": "logs/coherent-original-cms-preflight-v17-wait-v1.maps.log",
+  "maps_sha256": "4dd8b13653abfcfdb53e49733b39242f6ff34dc61d60d1d88728a243c3cd76b7",
+  "output": "logs/coherent-original-cms-preflight-v17-wait-v1.nlist-symbolicated.log",
+  "output_sha256": "e6f49781405fa6d10f944161b259599aebed15d87b1d14cfeb6d9c86101fd060",
+  "images": {
+    "runtime/audit-session-runtime-84/libsystem_kernel.dylib": {
+      "sha256": "59a39cb3eb497ef9c706784aff321a6ca987905ff0afc78e0674b8cd10538065",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 2583
+    },
+    "runtime/dispatch-exclaves-resource-v1/libraries/libdispatch.dylib": {
+      "sha256": "aeaf06ed3d4a56a2c34392f1a7bf66c9fa1ae858c87d946da16ea52d117d287c",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 1628
+    },
+    "runtime/local-identity-store-coherent-original-v10/libraries/libDarlingLocalIdentitySecurityBackend.dylib": {
+      "sha256": "d21d18477fcc7b7d4c68b0eb8c26e6a37e54c90e17fbc73bcd199b08adb2b74d",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 24446
+    },
+    "runtime/certificate-native-preflight-v1/preflight": {
+      "sha256": "2dfe19efb91627c72a49889e72e08b6a879138cbd2e8902158c550b7667b1097",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3
+    },
+    "runtime/audit-session-runtime-84/libdyld.dylib": {
+      "sha256": "582aed92a88a3e79441cf0a7be2dae7d3efee23c18401a3d9b166b8e351a2dd8",
+      "slice_offset": 0,
+      "defined_nlist_symbols": 3505
+    }
+  }
+}

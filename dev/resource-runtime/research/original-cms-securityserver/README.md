@@ -1,0 +1,9 @@
+# Original CMS encoding still needs the legacy module service
+
+One coherent newer original Security backend passes the same27 native identity/policy/RSA/parent checks. Running the original CMS API against that backend still reaches SecCertificateGetAlgorithmID -> CSSM_ModuleLoad -> MDS -> SecurityServer. The older paired backend reproduces the same dependency. The passive captures identify actual executing symbols and images; changing the framework version does not remove this requirement.
+
+The separate legacy trust daemon process retains its own coherent Security scope, while the newer client uses its own objects. They exchange serialized XPC data. This works through actual trust evaluation: status0, result5 (recoverable untrusted self-signed certificate), and one certificate in the constructed chain. It does not establish trusted developer signing. CMS creation, signer insertion, chain-mode selection, detached-content selection and content update return0; CMS copy/finish does not complete.
+
+Loading the packaged paired securityd with the fixed source launchctl gives immediate exit1. An exact native prerequisite probe calls sandbox_init_with_parameters with the same profile, flags and LEGACY_TOKENS_ENABLED=NO parameters. The active libsystem_sandbox returns-1, Darwin ENOTSUP45, and 'Sandbox profiles are not implemented'. This is the first explicit exit condition in securityd main and explains why that service cannot process the module request. No guard was changed and no success, signature or certificate trust was synthesized.
+
+The next work is the source securityd/startup compatibility path and its module service, or a deliberately selected signing-core fallback. Existing successful Unity ad-hoc compilation remains unchanged. Only affected native probes ran; no unaffected complete Unity compilation was repeated. Test keys, identities, signed products, CMS and Apple binaries are excluded.

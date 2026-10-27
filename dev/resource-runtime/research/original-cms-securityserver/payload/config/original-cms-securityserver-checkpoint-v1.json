@@ -1,0 +1,22 @@
+{
+  "name": "original-cms-securityserver",
+  "payload": [
+    "scripts/probe-original-codesign-certificate.py",
+    "scripts/probe-securityd-startup.py",
+    "fixtures/hello/securityd-sandbox-initialization.c",
+    "fixtures/hello/original-codesign-certificate-preflight.c",
+    "vendor/darling/src/external/security/securityd/src/main.cpp"
+  ],
+  "reference": [
+    "runtime/local-identity-leaf-policy-w3ijec0v/result.json",
+    "artifacts/local-identity-store-coherent-original-v10-stage.json",
+    "runtime/original-codesign-certificate-dgrdaf_1/result.json",
+    "runtime/original-codesign-certificate-9b5kecxb/result.json",
+    "runtime/original-codesign-certificate-bbo1hntl/result.json",
+    "runtime/securityd-sandbox-startup-u2qkj1t6/result.json",
+    "logs/coherent-original-cms-preflight-v17-wait-v1.nlist-symbolicated.log",
+    "artifacts/coherent-original-cms-preflight-v17-wait-v1-nlist-symbolication.json",
+    "artifacts/coherent-original-cms-preflight-v17-wait-v1-map-bindings.json",
+    "runtime/coherent-original-cms-preflight-v17-wait-v1/result.json"
+  ]
+}
