@@ -8,7 +8,7 @@
 
 最新补充已通过**单次全新 DerivedData 构建**，并确认 Unity 临时缓存入口起初也不存在：58 项 Xcode 编译、完整 IL2CPP 和资源流程成功，374 个 arm64 Unity 归档对象独立核对。修复与证据见[加载器布局和文件事件检查点](dev/resource-runtime/research/loader-layout-and-fsevents/README.md)。
 
-原版 `xcodebuild archive` 也已完成真实 [Unity/CocoaPods Debug xcarchive](dev/resource-runtime/research/unity-original-xcarchive/README.md)：实际 iOS arm64 主程序、归档元数据、七项原版/独立验签通过。已修复归档中遇到的 fork 子进程队列锁；Debug 独立 dSYM、Release 和 export 仍分别验证，不把目录存在视为符号生成成功。
+原版 `xcodebuild archive` 已完成真实 [Unity/CocoaPods Release xcarchive 与 dSYM](dev/resource-runtime/research/unity-release-xcarchive/README.md)：iOS arm64 主程序、归档元数据、七项原版/独立验签通过，App 与 UnityFramework 的实际 DWARF 数据和 UUID 对应关系通过核对。已修复归档中的 fork 子进程队列锁；较早 [Debug 归档](dev/resource-runtime/research/unity-original-xcarchive/README.md) 的空 dSYMs 记录保留，export 仍单独推进。
 
 成功候选来自已有研究工作区，使用单独的 CoreServices 诊断策略。样例保留明确记录的两行 AFNetworking SDK 兼容修改，Xcode 工程与 CocoaPods 配置未修改。尚未验证开发者证书、描述文件、真机安装、UE 或任意工程，也尚未实现从干净 Linux/XIP 自动重建这套完整候选。基础安装器和较早的默认候选保留；使用成功的 Unity 候选需要显式选择下述里程碑。
 
