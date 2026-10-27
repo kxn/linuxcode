@@ -1,0 +1,11 @@
+# Original Intel macOS SDK builds and runs UnrealBuildTool on Linux/Darling
+
+The unchanged UBT build command now succeeds using Epic's original Intel macOS .NET SDK 10.0.203 under Darling. All 13 projects compile: 12 shared libraries and UnrealBuildTool. The original command reports zero warnings/errors and exits zero. The original SDK's produced UBT also runs `-Help`, enumerates its modes, writes its UBA trace and exits zero.
+
+The host Linux SDK was used only to download NuGet dependencies on a private licensed source copy. No Linux-compiled project assets or assemblies were transferred into the original build. The 13 actual managed products are privately snapshotted and independently checked for PE/CLI metadata, with sizes/hashes recorded here. Epic source/binaries, Apple SDKs, private keys and Unity activation data are excluded.
+
+The accumulated compatibility work is preserved in separate checkpoints: both fork queue backends reset before application callbacks; precise configured DNS; modern peer-key/ECDSA operations; correct timestamp units and unsupported inode-time results; unsupported clonefile signals allowing the original managed copy fallback; normal signal initialization no longer emits a spurious compiler error. Each narrow repair has its actual negative/positive or consumer proof. Unchanged objects were reused, and the established bootstrap libSystem remains intact.
+
+The exact original build invocation is `dotnet build Programs/UnrealBuildTool/UnrealBuildTool.csproj -c Development --verbosity minimal`, working from Engine/Source. The private runtime composition uses stage99/config154, the optional original Security services composition, configured DNS, private TLS v6 and the documented dependency caches. Reuse the scripts and matching stage/report inputs from an established workspace; this evidence is not a complete cold-runtime installer.
+
+This is a UBT toolchain milestone. No UE iOS App, Xcode project generation, native UnrealHeaderTool C++ build, device provisioning, complete TLS handshake or trusted IPA export is claimed. The earlier intermittent S2C mmap cancellation remains unresolved, though this successful build and tool launch exit normally. The default released installer baseline remains separate from this experimental candidate.

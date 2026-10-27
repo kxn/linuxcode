@@ -2,9 +2,9 @@
 
 最新实测进展：Linux 原生 Unity Editor 已完成真实空项目的 iOS 导出，随后原版 CocoaPods 和 Darling 下的原版 Xcode 已构建出 App；[完整流程证据](resource-runtime/research/unity-fresh-linux-end-to-end/README.md) 保留首次编译及恢复运行的边界。Release xcarchive 和 dSYM 也已有实测记录；开发者 provisioning、设备安装与完整冷重建仍未完成。下文逐项研究附件中的“当前阻塞”描述对应附件生成时的历史状态。
 
-UE 的原版 Intel macOS SDK 目前已越过 fork 后重定向死锁并完成 13 个项目的 NuGet 恢复，尚未完成 UBT 编译。新增 [普通 fork 的双事件队列修复](resource-runtime/research/plain-fork-kqueue/README.md) 和 [Linux 依赖输入准备](resource-runtime/research/unreal-dependency-input-preparation/README.md) 保存源码、正反对照与复用方式。Linux SDK 只用于下载依赖，原版 macOS 构建继续在 Darling 中执行。
+UE 的原版 Intel macOS SDK 已在 Darling 下成功编译完整 UnrealBuildTool：13 个项目、零警告、零错误、正常退出；生成的工具也已实际运行 `-Help` 并返回零。[完整 UBT 构建及启动证据](resource-runtime/research/unreal-original-UBT-build/README.md) 保存参数和 13 个私有产物的校验摘要。UE iOS App 仍未验证；Linux SDK 只用于下载依赖，实际编译使用原版 macOS SDK。
 
-原版构建已生成三个真实的中间程序集，随后遇到 MSBuild Touch 时间戳错误。[时间戳修复与原版 Touch 对照](resource-runtime/research/native-file-timestamps-and-msbuild-touch/README.md) 保存十项原生检查及原版任务的失败/成功证据；完整 UBT 正在继续验证。
+底层修复及独立对照分别见 [普通 fork 双事件队列](resource-runtime/research/plain-fork-kqueue/README.md)、[Linux 依赖准备](resource-runtime/research/unreal-dependency-input-preparation/README.md)、[时间戳与原版 Touch](resource-runtime/research/native-file-timestamps-and-msbuild-touch/README.md)、[原版 Copy 回退](resource-runtime/research/original-msbuild-copy-fallback/README.md) 和 [正常启动输出与原版 Csc](resource-runtime/research/quiet-signal-setup-original-csc/README.md)。
 
 [完整 Unity/CocoaPods 入口](resource-runtime/research/unity-full-app-cocoapods/README.md) 保留真实工程准备、原版 CocoaPods 安装和项目结构对照。最新[完整 Unity 证书 CI](resource-runtime/research/unity-certificate-ci/README.md) 已通过原版 xcodebuild 构建签名及七项原版/独立验签；使用临时自签证书，真实 provisioning 和设备安装仍待验证。
 
