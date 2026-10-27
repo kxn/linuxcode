@@ -1,0 +1,21 @@
+{
+  "capture": "runtime/dispatch2-boot-original-context-v3-process/result.json",
+  "original_saved_linux_ucontext": {
+    "rip": "0x7fb2296ff58c",
+    "file_offset": "0x6e58c",
+    "fault_address": "0xffffffffbae78b00",
+    "trapno": 14,
+    "rdi": "0xffffffffbae78a40",
+    "rax": "0xffffffffbae78a40"
+  },
+  "original_symbol": "knt_RB_NEXT+0xc",
+  "cause": "New close traversal called generated RB functions without visible pointer-returning prototypes; implicit int return truncated the knote pointer.",
+  "secondary_fault": "Existing sys_reboot formatter omits opt argument; not the bootstrap root cause.",
+  "files": {
+    "runtime/dispatch2-boot-original-context-v3-process/result.json": "d7add6d6f8b0364ec4609b1091e5ce36b0a5fdb996566f0032a1a175ca033a20",
+    "runtime/dispatch2-boot-original-context-v3-process/fault-stack.json": "767e2dee7ffa4256a5f2e4e9511ff176453ce46042d68d72300c02090f2df4eb",
+    "runtime/dispatch2-boot-original-context-v3-process/process.maps": "fe01217024da3671c58948f6461962222333cddcb110b9a2941bdf05368d6ceb",
+    "runtime/dispatch2-lifecycle-kernel-v2/libsystem_kernel.dylib": "b040930e3a3d53ee37c72002188aaae00814f54076fee70b2c07e590c47f3664"
+  },
+  "full_goal_complete": false
+}

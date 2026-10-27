@@ -226,3 +226,5 @@ python3 dev/resource-runtime/tests/test_overlay.py --base /path/to/workspace
 - [Workloop owner discovery and handoff](research/workloop-owner-handoff/README.md): actual Mach thread validation, parked delivery and stale-END resume; wrong-port null-target server failure corrected and native checks pass.
 
 - [Ownership release and repeated assurance](research/workloop-owner-release/README.md): valid delete/enable precedence and repeat wake/discovery match original dispatch; previous duplicate-wake expectation corrected with native evidence.
+
+- [Original Unity asset catalog compilation and dispatch2 lifecycle](research/dispatch2-assetcatalog/README.md): original actool produces Assets.car; native tagged cancellation and vnode close/reuse checks pass.
