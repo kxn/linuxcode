@@ -1,0 +1,29 @@
+{
+  "name": "coretls-caller-and-process-enumeration",
+  "payload": [
+    "vendor/darling/src/external/coretls/lib/tls_handshake.c",
+    "vendor/darling/src/external/coretls/lib/tls_handshake.h",
+    "vendor/darling/src/external/coretls/lib/tls_handshake_priv.h",
+    "vendor/darling/src/external/coretls/lib/tls_metrics.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/proc_info.c",
+    "scripts/build-coretls-source.py",
+    "scripts/stage-coretls-private-crypto.py",
+    "scripts/coretls-source-runtime-profile.py",
+    "scripts/probe-coretls-source.py",
+    "scripts/probe-proc-listpids.py",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "fixtures/hello/coretls-caller-clienthello.c",
+    "fixtures/hello/proc-listpids-native.c"
+  ],
+  "reference": [
+    "artifacts/coretls-caller-and-process-enumeration-milestone-v1.json",
+    "runtime/coretls-source-1rgbqy3l/build.json",
+    "runtime/coretls-private-crypto-v2/build.json",
+    "runtime/coretls-native-7suo55rs/result.json",
+    "runtime/proc-listpids-native-nbgdm3x3/result.json",
+    "runtime/unreal-dotnet-native-91518syq/result.json",
+    "runtime/unreal-dotnet-native-pgfbkyyy/result.json",
+    "artifacts/kernel-proc-listpids-v1-build.json",
+    "artifacts/private-procfs-auditsession90-stage.json"
+  ]
+}
