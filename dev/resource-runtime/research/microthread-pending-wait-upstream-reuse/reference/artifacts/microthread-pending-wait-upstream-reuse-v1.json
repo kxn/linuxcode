@@ -1,0 +1,39 @@
+{
+  "scope": "Reuse existing XNU wake semantics in Darling microthread scheduling; focused regression passes, UE project generation still fails later",
+  "upstream_checked": {
+    "repository": "https://github.com/darlinghq/darlingserver",
+    "head": "89751e64bc6c2082f7725061824ee0e33395b0de",
+    "same_as_vendor_base": true,
+    "existing_wait_queue_and_mutex_implementation_reused": true,
+    "reference": "duct-tape/xnu/osfmk/kern/sched_prim.c:614"
+  },
+  "source_commit": "7578653dbec52131831766081c8a85158b028f60",
+  "source_repository": "https://github.com/kxn/darlingserver",
+  "source_branch": "linuxcode/xcode-x86_64",
+  "change": "Preserve an armed XNU wait across internal lock resumes; clear wait bits at the actual thread_unblock using the paired XNU state update",
+  "baseline_fixture": "runtime/microthread-pending-wait-8wbjq0lq/result.json",
+  "fixed_fixture": "runtime/microthread-pending-wait-7x5cr75r/result.json",
+  "baseline_status": 1,
+  "fixed_status": 0,
+  "fixture_scope": "Actual duct-tape lock/wait/block/unblock functions and controlled scheduler hooks; internal mutex resume then genuine wake, plus genuine wake before block; no full scheduler or timer coverage",
+  "previous_server_fault": "artifacts/unreal-gpf-waitq-panic-observation-v1.json",
+  "private_core_not_published": true,
+  "server_build": "runtime/remap-diagnostic-server-avgctct9/stage.json",
+  "runtime_stage": "artifacts/private-procfs-auditsession102-stage.json",
+  "original_UE_generation": "runtime/unreal-dotnet-native-5ixhaa5n/result.json",
+  "original_UE_generation_native_status": 134,
+  "original_UE_generation_outer_status": 134,
+  "observed_waitq_panic_in_this_candidate_run": false,
+  "UE_project_generation_verified": false,
+  "next_failure": "Shared remap synchronization KERN_FAILURE followed by original dotnet RX/RW mapping fatal error; do not infer real memory exhaustion from that generic text",
+  "unchanged_Unity_Debug_and_Release_tests_not_repeated": true,
+  "files": {
+    "runtime/microthread-pending-wait-8wbjq0lq/result.json": "d17998539f182ed838b4b4f945da421fc41e5a408cc46618800dd82759bce186",
+    "runtime/microthread-pending-wait-7x5cr75r/result.json": "898f63eac4cb9a9ffc9ffe865d8280b0bc3a648f1c7281d08adbb3c6250f0efd",
+    "runtime/unreal-dotnet-native-5ixhaa5n/result.json": "31b6083fb683b023d2e6a7314c3fd1249562c18034715f31b4b6437ae2e23a1c",
+    "vendor/darlingserver/duct-tape/src/thread.c": "22592734209fd0afa217e2a1a49682a6208ed614834400a6d8c08164ac134f2c",
+    "fixtures/hello/microthread-pending-wait.c": "45f53535c09c42e3a0c9e327b705cdba6a93dcedd86b48c1283dc7d246abd124",
+    "scripts/probe-microthread-pending-wait.py": "80731bffe87e8f54f67298526f856d18dc4c259c010a6f02688db1db626728fb"
+  },
+  "full_goal_complete": false
+}

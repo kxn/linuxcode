@@ -2,6 +2,8 @@
 
 开发约束：优先复用上游 Darling 已有实现。缺符号或调用失败时，先确认实际加载的库，再核对固定上游源码、构建目标、导出与依赖；已有实现应修正接入，避免在外围复制或简化重写。只有确认接口缺口或原实现错误后，才修改对应组件并保留与基线的差异和实际验证。现有组件的重新构建、版本适配和本实验环境的装配问题，应分别说明，不能统称为“Darling 没有这个组件”。[定点核对记录](resource-runtime/research/upstream-implementation-reuse-audit/README.md) 说明已确认的复用实例及核对范围。
 
+[内部任务恢复与 XNU 等待语义修正](resource-runtime/research/microthread-pending-wait-upstream-reuse/README.md) 复用原有等待队列与锁，将等待状态的清理放回真正唤醒处。定点测试修正前失败、修正后通过；stage102 的原版 UE 工程生成随后遇到另一处共享内存映射失败，尚未完整通过。Unity 的既有 stage101 验证范围不变。
+
 UE 调试中修好的源代码运行库已接回 Unity/CocoaPods 证书构建：[stage101 整合实测](resource-runtime/research/stage101-unity-certificate-integration/README.md) 的原版 Xcode 构建、外层退出及 7 项严格签名与独立 CMS 检查全部通过。该次复用编译缓存；下文的新空构建目录流程也已通过。
 
 当前 v12/stage101 也已完成[全新 Unity 项目的 Release xcarchive](resource-runtime/research/stage101-fresh-unity-release-archive/README.md)：App 和 UnityFramework 的签名、真实 dSYM、UUID 匹配及 LLVM 全量 DWARF 校验全部通过，原有 Debug 产物保留。
