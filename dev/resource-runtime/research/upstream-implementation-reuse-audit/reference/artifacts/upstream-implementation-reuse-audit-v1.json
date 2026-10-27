@@ -1,0 +1,28 @@
+{
+  "scope": "Targeted check of original pinned source and existing component evidence; not a claim that every historical patch is necessary",
+  "kernel_base": "fa29287aa2f0115271e091f1031f53c9e024005d",
+  "examples": [
+    {
+      "source": "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/time/futimes.c",
+      "base_sha256": "9a05f2133d2f87184cf61e62928a475b46ef0d165697822ec36bc127f1bb3d34",
+      "classification": "Existing upstream implementation with unit-conversion bug"
+    },
+    {
+      "source": "darling/src/libsystem_kernel/emulation/src/conversion/stat/common.c",
+      "base_sha256": "e88f4474132c10b84ae466864a11285f73f47641974d7c30511acde5decd3e07",
+      "classification": "Existing upstream stat conversion with uninitialized birth-time output"
+    },
+    {
+      "source": "darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/clonefile.c",
+      "base_sha256": "1d9e3676f7bf1ec6806b890de01814ea581f5c95418d4415847c8cda21af3b4f",
+      "classification": "Upstream registered syscall stubs returning ENOSYS; no clone implementation added"
+    }
+  ],
+  "existing_copyfile_control": "artifacts/original-dotnet10-copyfile-controls-v1.json",
+  "coretls_source": "vendor/darling/src/external/coretls/CMakeLists.txt",
+  "coretls_base": "b61a4f075726e7d5ef4652033f8d7b829c008d06",
+  "coretls_existing_target": "system_coretls with complete listed source units; libcoretls facade uses dummy.c",
+  "system_existing_exports": "vendor/darling/src/external/libsystem/CMakeLists.txt reexports system_copyfile and system_coretls",
+  "fork_note": "The selected direct kernel queue adds an independent backend; paired fork recovery includes requirements introduced by this experimental integration",
+  "user_rule": "Reuse upstream implementation; check selected provider and build/export wiring before implementation changes; fix integration instead of duplicating code"
+}
