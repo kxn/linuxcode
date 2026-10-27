@@ -1,0 +1,7 @@
+# Private native temporary filesystem for original .NET
+
+Original macOS Intel .NET progressed past GC startup but could not create its named-mutex shared directory. A minimal native reproduction traced renameat of a temporary directory to EXDEV even with both parent descriptors pointing to /state/prefix/private/tmp. The prefix lives on an overlay that does not support this directory rename; the host /tmp tmpfs was not the filesystem seen by Darwin processes.
+
+A separately staged launcher now mounts a new tmpfs, mode1777 with nosuid,nodev, over Darwin /private/tmp inside only the running Darling server mount namespace. Backing prefix contents and previous launchers remain intact. The filesystem disappears with the session. No host /tmp or other application mount namespace changes. A native probe confirms that the same-parent rename now succeeds and mountinfo identifies the private tmpfs. This does not repair directory rename on the general prefix overlay.
+
+The genuine UBT build then advances to its next failure: System.Diagnostics.Process child monitoring calls unimplemented Darwin syscall416, waitid_nocancel, and aborts. Original .NET startup and temporary-directory progress do not establish a successful UBT or UE application build. The payload contains launcher/profile helpers and the minimal probe; it contains no Epic source or Apple runtime binary. The experimental launcher has not replaced the previously verified Unity profile. Cold reconstruction remains separate work.

@@ -1,0 +1,17 @@
+{
+  "name": "native-private-tmpfs",
+  "payload": [
+    "scripts/stage-native-temporary-launcher.py",
+    "scripts/native-temporary-runtime-profile.py",
+    "scripts/probe-dotnet-shared-rename.py",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "fixtures/hello/dotnet-shared-directory-rename.c",
+    "config/unreal-ubt-build-v1-arguments.json"
+  ],
+  "reference": [
+    "artifacts/native-private-tmpfs-rename-milestone-v1.json",
+    "artifacts/native-temporary-launcher-v1-stage.json",
+    "runtime/dotnet-shared-rename-0zio0d8d/result.json",
+    "runtime/dotnet-shared-rename-vsvhp6u_/result.json"
+  ]
+}
