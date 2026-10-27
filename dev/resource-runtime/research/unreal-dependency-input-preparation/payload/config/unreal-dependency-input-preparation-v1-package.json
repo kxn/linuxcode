@@ -1,0 +1,19 @@
+{
+  "name": "unreal-dependency-input-preparation",
+  "payload": [
+    "scripts/prefetch-unreal-nuget-dependencies.py",
+    "scripts/publish-nuget-dependency-cache.py",
+    "scripts/probe-unreal-dotnet-runtime.py",
+    "scripts/native-security-services-profile.py",
+    "config/unreal-dotnet-linux-sdk-10.0.203.json",
+    "config/unreal-ubt-build-v1-arguments.json",
+    "fixtures/hello/private-native-resolver-options.c"
+  ],
+  "reference": [
+    "runtime/unreal-nuget-prefetch-v1/restore-result.json",
+    "runtime/unreal-nuget-prefetch-xrfe07f2/restore-result.json",
+    "runtime/nuget-cache-import-yztut0yo/result.json",
+    "runtime/nuget-cache-import-xh9x1gvl/result.json",
+    "runtime/private-native-resolver-hhequjrt/result.json"
+  ]
+}
