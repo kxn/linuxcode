@@ -59,16 +59,16 @@ python3 linuxcode.py xcodebuild --dry-run -- -workspace App.xcworkspace -scheme 
 
 ```bash
 python3 linuxcode.py --workspace /path/to/experiment adopt \
-  --certificate-candidate config/native-certificate-candidate-v4.json \
+  --certificate-candidate config/native-certificate-candidate-v6.json \
   --identity-store runtime/my-signing/store.plist
 export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 cd /path/to/experiment/my-game
 xcodebuild -workspace Unity-iPhone.xcworkspace -scheme Unity-iPhone -sdk iphoneos build
 ```
 
-这里继续使用工程或原 CI 的签名设置，入口不会修改 `CODE_SIGN_IDENTITY`、provisioning 设置或工程文件。当前完整 Unity 证据来自自生成测试证书及显式关闭 profile 要求的测试命令，不能据此声称 Apple 开发者 provisioning、设备安装和 archive/export 已通过。
+这里继续使用工程或原 CI 的签名设置，入口不会修改 `CODE_SIGN_IDENTITY`、provisioning 设置或工程文件。完整 Unity build 与 Debug archive 已通过；证据来自自生成测试证书及显式关闭 profile 要求的测试命令，不能据此声称 Apple 开发者 provisioning、设备安装、Release 独立符号生成或 export 已通过。
 
-候选采用客户端 v13、独立 daemon v9 与源码 SecurityServer。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
+候选采用 stage85、客户端 v13、独立 daemon v9 与源码 SecurityServer，包含已经定向验证并通过完整 Debug 归档的 fork 队列锁修复。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
 
 ```python
 {

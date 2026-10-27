@@ -321,7 +321,8 @@ def candidate(workspace, native=None):
     if sha(workspace / record['log']) != record['log_sha256']:
         fail('Candidate success log checksum changed.')
     text = (workspace / record['log']).read_text()
-    if 'BUILD SUCCEEDED' not in text or not re.search(r'^SERVICE_RUNTIME_XCODE_STATUS 0$', text, re.M):
+    success_marker = 'ARCHIVE SUCCEEDED' if record.get('xcode_arguments', [])[-1:] == ['archive'] else 'BUILD SUCCEEDED'
+    if success_marker not in text or not re.search(r'^SERVICE_RUNTIME_XCODE_STATUS 0$', text, re.M):
         fail('Candidate log does not contain the successful native build status.')
     if record['source_runtime'] != profile['source_runtime']:
         fail('Candidate evidence and runtime profile do not select identical source components.')

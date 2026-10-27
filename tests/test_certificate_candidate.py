@@ -15,6 +15,30 @@ cli = importlib.util.module_from_spec(spec); spec.loader.exec_module(cli)
 
 
 class CertificateCandidateTests(unittest.TestCase):
+    def archive_receipt(self, root, marker):
+        original=root/'runtime/state/prefix/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild'
+        original.parent.mkdir(parents=True);original.write_bytes(b'original executable fixture')
+        (root/'archive.log').write_text(marker+'\nSERVICE_RUNTIME_XCODE_STATUS 0\n')
+        record=dict(exit_status=0,xcode_process_returned=True,source_runtime={},native_codesign_stage='native.json',
+                    xcode_arguments=['-scheme','Unity-iPhone','archive'],log='archive.log',log_sha256=cli.sha(root/'archive.log'),jobs=[])
+        cli.save(root/'build.json',record)
+        native=dict(certificate_candidate='candidate.json',build_report='build.json',stage='native.json')
+        return original,record,native
+
+    def test_adoption_accepts_actual_archive_success_marker(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);original,record,native=self.archive_receipt(root,'** ARCHIVE SUCCEEDED **')
+            with patch.object(certificates,'candidate',return_value=({}, {'source_runtime':{}},record)), \
+                 patch.dict(cli.LOCK,{'xcode':{'xcodebuild_sha256':cli.sha(original)}}):
+                self.assertEqual(cli.candidate(root,native)[2],record)
+
+    def test_archive_adoption_rejects_build_only_success_log(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);original,record,native=self.archive_receipt(root,'** BUILD SUCCEEDED **')
+            with patch.object(certificates,'candidate',return_value=({}, {'source_runtime':{}},record)), \
+                 self.assertRaisesRegex(RuntimeError,'successful native build status'):
+                cli.candidate(root,native)
+
     def receipt(self, root):
         write = lambda name, value: cli.save(root / name, value)
         row = lambda name: dict(path=name, sha256=cli.sha(root / name))
