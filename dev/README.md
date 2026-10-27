@@ -2,9 +2,9 @@
 
 开发约束：优先复用上游 Darling 已有实现。缺符号或调用失败时，先确认实际加载的库，再核对固定上游源码、构建目标、导出与依赖；已有实现应修正接入，避免在外围复制或简化重写。只有确认接口缺口或原实现错误后，才修改对应组件并保留与基线的差异和实际验证。现有组件的重新构建、版本适配和本实验环境的装配问题，应分别说明，不能统称为“Darling 没有这个组件”。[定点核对记录](resource-runtime/research/upstream-implementation-reuse-audit/README.md) 说明已确认的复用实例及核对范围。
 
-UE 调试中修好的源代码运行库已接回 Unity/CocoaPods 证书构建：[stage101 整合实测](resource-runtime/research/stage101-unity-certificate-integration/README.md) 的原版 Xcode 构建、外层退出及 7 项严格签名与独立 CMS 检查全部通过。该次复用编译缓存；新的空构建目录流程单独验证。
+UE 调试中修好的源代码运行库已接回 Unity/CocoaPods 证书构建：[stage101 整合实测](resource-runtime/research/stage101-unity-certificate-integration/README.md) 的原版 Xcode 构建、外层退出及 7 项严格签名与独立 CMS 检查全部通过。该次复用编译缓存；下文的新空构建目录流程也已通过。
 
-最新实测进展：Linux 原生 Unity Editor 已完成真实空项目的 iOS 导出，随后原版 CocoaPods 和 Darling 下的原版 Xcode 已构建出 App；[完整流程证据](resource-runtime/research/unity-fresh-linux-end-to-end/README.md) 保留首次编译及恢复运行的边界。Release xcarchive 和 dSYM 也已有实测记录；开发者 provisioning、设备安装与完整冷重建仍未完成。下文逐项研究附件中的“当前阻塞”描述对应附件生成时的历史状态。
+最新实测进展：全新 Linux Unity 6000.3.27f1 项目已完成 iOS 导出、原版 CocoaPods、空 DerivedData 中单次原版 Xcode 编译和证书签名；原生与外层正常退出，原版严格验签、独立 CMS 检查及实际 Pod 符号链接全部通过。[完整证据与可复用脚本](resource-runtime/research/unity-fresh-linux-certificate-end-to-end/README.md) 保存 48 项 Xcode 编译、282 项 IL2CPP 更新和 5 项签名记录。使用自生成测试证书；较早运行库上的 Release xcarchive/dSYM 实测仍保留，当前运行库的归档、开发者 provisioning、设备安装与完整冷重建继续推进。下文历史附件的“当前阻塞”对应其生成时的状态。
 
 UE 的原版 Intel macOS SDK 已在 Darling 下成功编译完整 UnrealBuildTool：13 个项目、零警告、零错误、正常退出；生成的工具也已实际运行 `-Help` 并返回零。[完整 UBT 构建及启动证据](resource-runtime/research/unreal-original-UBT-build/README.md) 保存参数和 13 个私有产物的校验摘要。UE iOS App 仍未验证；Linux SDK 只用于下载依赖，实际编译使用原版 macOS SDK。
 

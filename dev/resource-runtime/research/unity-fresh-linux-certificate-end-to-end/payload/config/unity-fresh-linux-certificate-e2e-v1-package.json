@@ -1,0 +1,22 @@
+{
+  "name": "unity-fresh-linux-certificate-end-to-end",
+  "payload": [
+    "scripts/prepare-unity-editor-smoke.py",
+    "scripts/run-unity-editor-export.py",
+    "scripts/run-unity-editor-e2e.py",
+    "scripts/record-unity-editor-e2e-milestone.py",
+    "fixtures/UnityExportSmoke/Assets/Editor/LinuxcodeIOSExport.cs",
+    "fixtures/UnityExportSmoke/Assets/Scripts/NativePodSmoke.cs",
+    "fixtures/UnityExportSmoke/NativePod/Smoke.m"
+  ],
+  "reference": [
+    "artifacts/unity-fresh-linux-certificate-end-to-end-milestone-v1.json",
+    "artifacts/unity-fresh-certificate-build-transcript-v1.json",
+    "runtime/unity-editor-e2e-qkpyu3u9/end-to-end-result.json",
+    "runtime/unity-editor-e2e-qkpyu3u9/prepared.json",
+    "runtime/unity-editor-e2e-qkpyu3u9/independent-products.json",
+    "runtime/linuxcode-cli/20261027T224905-6156583c/result.json",
+    "runtime/linuxcode-cli/20261027T224905-6156583c/plan.json",
+    "runtime/native-certificate-products-ov03c6fl/result.json"
+  ]
+}

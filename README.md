@@ -2,10 +2,9 @@
 
 在 Linux x86_64 上安装隔离的 Darling 和用户提供的原版 Xcode，并管理经过验证的兼容性候选。
 
-**原版 xcodebuild 已成功编译并用原版 codesign 完成真实 Unity/CocoaPods iPhoneOS/arm64 App 的 ad-hoc 签名。** 原版 Storyboard、actool、IL2CPP/Bee 和三个内嵌 Framework 均完成处理；App、三个 Framework、两个 CocoaPods 静态库通过原版严格签名验证，App 的 2,904 项资源通过独立哈希检查。详见[完整 Unity 签名里程碑](dev/resource-runtime/research/unity-signed-app/README.md)。
+**已从全新 Unity 6000.3.27f1 工程完成 Linux 导出、原版 CocoaPods、空构建目录中的原版 xcodebuild 和原版 codesign 证书签名。** 单次 xcodebuild 调用的原生与外层退出码均为 0：48 项 Xcode 编译、282 项 IL2CPP 更新、5 项签名操作完成；真实 iPhoneOS/arm64 App 和内嵌 UnityFramework 通过原版严格验签及独立 CMS、代码页面和资源检查，实际 Pod 函数已链接。使用自生成 P12 测试证书，尚未验证 Apple 开发者 provisioning 与设备安装。详见[全新 Unity 证书完整链路](dev/resource-runtime/research/unity-fresh-linux-certificate-end-to-end/README.md)。
 
-Unity 授权现可使用原生 Linux CLI：`linuxcode.py unity auth login`，无需在 Darling 中运行 Hub；详见[安装说明](docs/install.md)。当前机器已完成官方登录及 Personal 激活，**全新 Unity 6000.3.27f1 项目已在无图形界面的 Linux 上成功导出 iOS Xcode 工程**（424 个 C++ 文件）；**CocoaPods、原版 Xcode 构建的内外退出码、原版严格验签、独立资源/页面检查和 Pod 符号链接均已通过**。首次编译成功后修复了 Darling 收尾崩溃，恢复验证复用了编译缓存；尚未验证设备安装。详见[完整链路记录](dev/resource-runtime/research/unity-fresh-linux-end-to-end/README.md)。详见[全新 Unity 导出里程碑](dev/resource-runtime/research/unity-fresh-linux-export/README.md)。
-
+Unity 授权可使用原生 Linux CLI：`linuxcode.py unity auth login`，无需在 Darling 中运行 Hub；详见[安装说明](docs/install.md)。原生 Linux Editor 在无图形界面下导出 424 个 C++ 文件。较早的 [ad-hoc 与恢复构建记录](dev/resource-runtime/research/unity-fresh-linux-end-to-end/README.md) 和[初次导出记录](dev/resource-runtime/research/unity-fresh-linux-export/README.md) 保留。
 新增 RSA P12 导入入口：`import-identity --p12 … --output runtime/my-signing/store.plist --password-env MY_P12_PASSWORD`。P12 导入后的测试身份已完成原版 Unity 构建和七个产物验证；三层链查找、原版 codesign 和独立 CMS 验证也已通过；详见[安装说明](docs/install.md)。
 
 新增：**完整 Unity/CocoaPods 工程已由原版 xcodebuild 调用原版 codesign 完成真实测试证书签名，构建退出码为 0。** App、内嵌 Framework 和静态库共七个产物通过原版严格验证及独立 CMS/页面/资源检查，包含双 CodeDirectory 与篡改拒绝测试。本次复用编译缓存；自签测试明确关闭 profile 要求，尚不代表开发者 provisioning 或设备安装可用。详见[完整 Unity 证书 CI](dev/resource-runtime/research/unity-certificate-ci/README.md)。
@@ -52,7 +51,7 @@ export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 
 ```bash
 python3 linuxcode.py --workspace /path/to/experiment adopt \
-  --certificate-candidate config/native-certificate-candidate-v9.json \
+  --certificate-candidate config/native-certificate-candidate-v12.json \
   --identity-store runtime/my-signing/store.plist
 export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 ```

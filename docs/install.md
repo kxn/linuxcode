@@ -59,7 +59,7 @@ python3 linuxcode.py xcodebuild --dry-run -- -workspace App.xcworkspace -scheme 
 
 ```bash
 python3 linuxcode.py --workspace /path/to/experiment adopt \
-  --certificate-candidate config/native-certificate-candidate-v9.json \
+  --certificate-candidate config/native-certificate-candidate-v12.json \
   --identity-store runtime/my-signing/store.plist
 export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 cd /path/to/experiment/my-game
@@ -68,7 +68,7 @@ xcodebuild -workspace Unity-iPhone.xcworkspace -scheme Unity-iPhone -sdk iphoneo
 
 这里继续使用工程或原 CI 的签名设置，入口不会修改 `CODE_SIGN_IDENTITY`、provisioning 设置或工程文件。完整 Unity build 已通过；此前 v6 的 Debug/Release archive 与 Release 独立符号生成也已通过；证据来自自生成测试证书及显式关闭 profile 要求的测试命令，不能据此声称 Apple 开发者 provisioning、设备安装或 export 已通过。
 
-v9 候选采用 stage85、客户端 v14、独立 daemon v15、源码 SecurityServer 与完整源码 trustd（38 个编译单元，Objective-C 启用 ARC）。它已通过 P12 导入身份的完整 Unity 构建、七个原版严格签名检查及独立验证。stage85 保留此前归档验证通过的 fork 队列锁修复；v9 本身尚未重跑归档。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
+v12 候选采用 stage101/config154，并复用客户端 v14、独立 daemon v15、源码 SecurityServer 与完整源码 trustd。UE 调试中的 fork、时间戳、复制回退和 stat 源码修复已整合回 Unity：七个产物的原版严格验签与独立 CMS 检查通过，随后全新 Linux Unity 导出项目又在空 DerivedData 下以单次 xcodebuild 调用完成证书构建。归档仍对应较早的 v6 实测，v12 尚未验证归档。每次实际运行按本次身份库配置 headless 服务；adopt 与参数预览不会创建或启动服务，也不需要旧实验私钥。身份库内容不绑定到历史测试证书，可以替换为自己的匹配 RSA 密钥和证书。运行前须满足原生 API 支持的格式：
 
 ```python
 {
@@ -178,6 +178,6 @@ python3 linuxcode.py --workspace /path/to/experiment unity auth login
 python3 linuxcode.py --workspace /path/to/experiment unity license activate --personal --accept-eula
 ```
 
-`--accept-eula` 是官方 CLI 要求的显式条款接受选项，工具不会自动添加。账号凭据由官方 CLI 管理，Linuxcode 不记录密码或令牌。当前测试机器已完成官方网页登录、Personal 激活，并由无图形界面的原生 Linux Unity 6000.3.27f1 成功导出全新 iOS Xcode 工程；后续 CocoaPods、原版 Xcode 构建及正常退出、原版严格验签和独立检查均已通过；首次编译后的 Darling 收尾错误经源码修复，恢复验证复用了编译缓存。当前产物为 ad-hoc 测试签名，不代表设备安装可用。若 SSH/自动化父进程的 session keyring 已失效，入口会只在自己的进程树中建立可用的用户凭据 keyring，不修改父进程。修复已由官方 CLI doctor 和实际登录、激活验证。
+`--accept-eula` 是官方 CLI 要求的显式条款接受选项，工具不会自动添加。账号凭据由官方 CLI 管理，Linuxcode 不记录密码或令牌。当前测试机器已完成官方网页登录、Personal 激活，并由无图形界面的原生 Linux Unity 6000.3.27f1 成功导出全新 iOS Xcode 工程；随后原版 CocoaPods、空 DerivedData 中单次原版 Xcode 构建和正常退出、原版证书签名及严格验签和独立 CMS 检查均已通过。当前使用自生成 P12 测试证书，尚未验证 Apple 开发者 provisioning 或设备安装。若 SSH/自动化父进程的 session keyring 已失效，入口会只在自己的进程树中建立可用的用户凭据 keyring，不修改父进程。修复已由官方 CLI doctor 和实际登录、激活验证。
 
 官方说明：[Unity CLI](https://docs.unity.com/en-us/unity-cli/use-unity-cli)。
