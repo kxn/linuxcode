@@ -539,7 +539,7 @@ def package(output, include_research_history=True):
             continue
         name = Path(relative)
         if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
-                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb', '.S', '.s', '.inc')
+                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb', '.S', '.s', '.inc', '.proj')
                     and name.name not in ('CMakeLists.txt', 'pthread.aliases', 'syscalls.master')
                     and not name.name.endswith(('.h.in', '.exp-in')))):
             fail('Invalid research source path: ' + relative)
