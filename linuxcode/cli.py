@@ -253,7 +253,38 @@ def setup(workspace, args):
 
 
 def candidate(workspace, native=None):
-    if native:
+    engine = native and native.get('engine_milestone')
+    if engine:
+        milestone = json.loads((workspace / engine).read_text())
+        if (not milestone['verified'] or not milestone['original_xcodebuild_full_build_and_original_codesign_success']
+                or not milestone['ad_hoc_signing_only'] or milestone['zsign_used']):
+            fail('Engine milestone does not record a successful original signed build.')
+        report_path = workspace / native['build_report']
+        if (milestone['build_report'] != native['build_report']
+                or milestone['build_report_sha256'] != sha(report_path)):
+            fail('Engine build evidence changed.')
+        signed_path = workspace / milestone['signature_report']
+        signed = json.loads(signed_path.read_text())
+        if (sha(signed_path) != milestone['signature_report_sha256'] or not signed['verified']
+                or not signed['ad_hoc_only'] or signed['zsign_used']
+                or signed['stage'] != milestone['stage']
+                or signed['configuration'] != milestone['resource_environment']
+                or signed['outer_status'] != 0 or len(signed['native_statuses']) != 6
+                or any(status != '0' for index, status in signed['native_statuses'])
+                or not all(value['verified'] for value in signed['independent_checks'].values())):
+            fail('Engine product signatures do not match the successful candidate.')
+        if sha(workspace / signed['log']) != signed['log_sha256']:
+            fail('Engine signature verification log changed.')
+        for name, evidence in milestone['file_evidence'].items():
+            if sha(workspace / name) != evidence['sha256']:
+                fail('Engine product changed: ' + name)
+        module = runpy.run_path(str(workspace / 'scripts/direct-resource-tool-runtime-profile.py'))
+        profile = module['profile'](stage=milestone['stage'], configuration=milestone['resource_environment'])
+        if profile['source_runtime'] != signed['source_runtime']:
+            fail('Engine signature checks selected different source components.')
+        if sha(workspace / native['prebuild_file']) != native['prebuild_sha256']:
+            fail('Engine service prelude changed.')
+    elif native:
         module = runpy.run_path(str(workspace / 'scripts/native-codesign-runtime-profile.py'))
         profile = module['profile'](native_codesign_stage=native['stage'],
                                    identity_store=native['identity_store'], diagnostic=True)
@@ -289,6 +320,8 @@ def candidate(workspace, native=None):
         fail('Candidate evidence and runtime profile do not select identical source components.')
     if native and record.get('native_codesign_stage') != native['stage']:
         fail('Native signing stage differs from the actual Xcode build evidence.')
+    if engine and record.get('private_procfs_stage') != milestone['stage']:
+        fail('Engine runtime stage differs from the actual Xcode build evidence.')
     if sha(workspace / 'runtime/state/prefix/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild') != LOCK['xcode']['xcodebuild_sha256']:
         fail('Installed original xcodebuild differs from the locked milestone.')
     for job in record['jobs']:
@@ -377,6 +410,12 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
         session = '-S Background ' if existing['name'] in ['distnoted-agent', 'cfprefsd-agent'] else ''
         jobs.append((job['Label'], GUEST + str(path.relative_to(workspace)), session))
     script = invocation / 'run.sh'
+    prebuild = ''
+    if native and native.get('engine_milestone'):
+        prebuild_argv = json.loads((workspace / native['prebuild_file']).read_text())
+        if not isinstance(prebuild_argv, list) or not prebuild_argv or not all(isinstance(v, str) for v in prebuild_argv):
+            fail('Engine service prelude must contain a command argument list.')
+        prebuild = shlex.join(prebuild_argv) + '\n'
     script.write_text('#!/bin/bash\nset -e\nunset DISPLAY WAYLAND_DISPLAY XAUTHORITY\nloaded=()\n' +
         'cleanup() { local i; for ((i=${#loaded[@]}-1; i>=0; i--)); do launchctl remove "${loaded[$i]}" >/dev/null 2>&1 || true; done; }\ntrap cleanup EXIT\n' +
         'launchctl remove com.apple.FileCoordination >/dev/null 2>&1 || true\n' +
@@ -385,7 +424,7 @@ def prepare_invocation(workspace, state, argv, dry_run=False):
         "printf 'LINUXCODE_SERVICES_LOADED\\n'\n" +
         GUEST + 'artifacts/uniform-type-identifiers-native\n' +
         "printf 'LINUXCODE_UTI_PREFLIGHT_OK\\n'\n" +
-        'cd ' + shlex.quote(cwd) + '\nset +e\n' +
+        prebuild + 'cd ' + shlex.quote(cwd) + '\nset +e\n' +
         '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild "$@"\n' +
         'status=$?\nprintf "LINUXCODE_NATIVE_XCODE_STATUS %s\\n" "$status"\nexit "$status"\n')
     command = profile['command'][:-2] + ['/bin/bash', GUEST + str(script.relative_to(workspace)), *mapped]
@@ -439,12 +478,13 @@ def xcodebuild(state, argv, dry_run):
         return exit_status
 
 
-def package(output):
+def package(output, include_research_history=True):
     allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/__init__.py',
                'config/dependencies.lock.json', 'config/runtime-recipe.json',
                'README.md', 'docs/install.md', 'docs/runtime-inputs.md', 'LICENSE', '.gitignore',
                'validation/2026-10-19.json',
-               'tests/test_installer.py', 'dev/linuxcode-dev', 'dev/README.md',
+               'validation/unity-signed-app-2026-10-27.json',
+               'tests/test_installer.py', 'tests/test_engine_candidate.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/locks/developer.lock.json',
                'dev/locks/source-manifest.json']
     resource = 'dev/resource-runtime/'
@@ -460,10 +500,15 @@ def package(output):
             fail('Developer source payload checksum mismatch: ' + relative)
         allowed.append(payload)
     for relative, digest in overlay.get('research_files', {}).items():
+        # Public installers retain developer sources and README files. The
+        # large historical diagnostics are an explicit CLI opt-in.
+        if not include_research_history and '/reference/' in relative:
+            continue
         name = Path(relative)
         if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
-                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb')
-                    and name.name != 'CMakeLists.txt' and not name.name.endswith(('.h.in', '.exp-in')))):
+                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb', '.S', '.s', '.inc')
+                    and name.name not in ('CMakeLists.txt', 'pthread.aliases', 'syscalls.master')
+                    and not name.name.endswith(('.h.in', '.exp-in')))):
             fail('Invalid research source path: ' + relative)
         source = resource + relative
         if sha(SOURCE / source) != digest:
@@ -502,6 +547,7 @@ def main():
         p.add_argument('--sha256', help='expected SHA256 of locally supplied XIP')
     sub.add_parser('restore-sources', help='clone and apply the 17 locked source patches')
     p = sub.add_parser('adopt', help='validate and attach an already-built milestone candidate')
+    p.add_argument('--engine-milestone', type=Path, help='adopt a verified original Unity/CocoaPods build and its matching runtime')
     p.add_argument('--native-codesign-stage', type=Path)
     p.add_argument('--identity-store', type=Path)
     p.add_argument('--build-report', type=Path)
@@ -509,6 +555,7 @@ def main():
     sub.add_parser('status')
     sub.add_parser('recipe', help='show cold-build stages and exact outstanding gaps')
     p = sub.add_parser('package'); p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--include-research-history', action='store_true', help='also bundle historical diagnostic attachments')
     p = sub.add_parser('dev', help='developer environment and module builds'); p.add_argument('argv', nargs=argparse.REMAINDER)
     p = sub.add_parser('xcodebuild'); p.add_argument('--dry-run', action='store_true'); p.add_argument('argv', nargs=argparse.REMAINDER)
     args = parser.parse_args()
@@ -526,7 +573,16 @@ def main():
         elif args.command == 'adopt':
             native = None
             choices = [args.native_codesign_stage, args.identity_store, args.build_report, args.product_report]
-            if any(choices):
+            if args.engine_milestone:
+                if any(choices): fail('Engine milestone adoption cannot be combined with native candidate options.')
+                milestone_path = (workspace / args.engine_milestone).resolve().relative_to(workspace)
+                milestone = json.loads((workspace / milestone_path).read_text())
+                build = json.loads((workspace / milestone['build_report']).read_text())
+                prebuild = build['probe_configuration']['prebuild_command_file']
+                native = dict(engine_milestone=str(milestone_path), build_report=milestone['build_report'],
+                              stage=build['native_codesign_stage'], prebuild_file=prebuild,
+                              prebuild_sha256=sha(workspace / prebuild))
+            elif any(choices):
                 if not all(choices): fail('Native adoption requires stage, identity store, build report and product report.')
                 native = {key: str((workspace / path).resolve().relative_to(workspace)) for key, path in zip(
                     ['stage', 'identity_store', 'build_report', 'product_report'], choices)}
@@ -537,7 +593,7 @@ def main():
             return subprocess.run([sys.executable, str(SOURCE / 'dev/linuxcode-dev'),
                                    '--workspace', str(workspace), *dev_args]).returncode
         elif args.command == 'recipe': print((SOURCE / 'config/runtime-recipe.json').read_text())
-        elif args.command == 'package': package(args.output)
+        elif args.command == 'package': package(args.output, include_research_history=args.include_research_history)
         elif args.command == 'status':
             adopted = json.loads((state / 'adopted.json').read_text()) if (state / 'adopted.json').exists() else None
             print(json.dumps({'workspace': str(workspace),

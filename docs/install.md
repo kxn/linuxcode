@@ -99,3 +99,14 @@ export PATH="$HOME/.local/share/linuxcode/launcher/bin:$PATH"
 报告路径以本机实际结果为准。入口核对产物、静态库签名扩展属性、同一候选和原生退出证据，再保留 CI 中的工作目录及 xcodebuild 参数。该入口已从项目目录、全新 DerivedData 实际完成 CocoaPods iOS App 编译和原版 ad-hoc 签名，且独立复核了 App 和两个静态库。主机与 Darling 内的显示相关环境变量均移除。
 
 `status` 会显示 `signing_scope: ad-hoc` 和 `certificate_signing_ready: false`。这不是开发者证书签名、Unity/UE 兼容性或完整冷安装成功的声明。
+
+## 选择已验证的 Unity 候选
+
+这一步用于已有完整研究运行环境，不能替代从 XIP 安装基础环境，也不自动冷重建全部依赖：
+
+```bash
+python3 linuxcode.py --workspace /path/to/experiment adopt \
+  --engine-milestone artifacts/unity-original-signed-app-v1.json
+```
+
+将命令打印的目录加入 PATH 后，保留 CI 现有 xcodebuild 参数。入口验证原始成功构建与六项签名验证记录，选择对应运行库和资源工具环境，并执行记录中的服务准备步骤。签名范围为 ad-hoc；开发者证书、描述文件和设备安装尚未验证。详情见[Unity 签名里程碑](../dev/resource-runtime/research/unity-signed-app/README.md)。

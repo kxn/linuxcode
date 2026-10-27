@@ -64,7 +64,7 @@ class InstallerChecks(unittest.TestCase):
     def test_source_package_uses_allowlist_and_never_includes_private_inputs(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / 'source.tar.gz'
-            cli.package(output)
+            cli.package(output, include_research_history=False)
             with tarfile.open(output) as archive:
                 names = archive.getnames()
                 self.assertIn('linuxcode/linuxcode/cli.py', names)
@@ -80,9 +80,10 @@ class InstallerChecks(unittest.TestCase):
                 self.assertIn('linuxcode/dev/resource-runtime/research/cloudkit-standalone/payload/vendor/darling/src/external/objc4/runtime/objc-os.mm', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/cloudkit-standalone/payload/vendor/darling/src/external/security/OSX/sec/Security/SecExports.exp-in', names)
                 self.assertFalse(any('/.local/' in n or n.endswith(('.xip', '.dylib', '.p12')) for n in names))
+                self.assertFalse(any('/reference/' in n for n in names))
                 self.assertTrue(all(i.isfile() for i in archive.getmembers()))
             with self.assertRaisesRegex(RuntimeError, 'replace'):
-                cli.package(output)
+                cli.package(output, include_research_history=False)
 
     def test_generated_service_jobs_have_launchctl_permissions_and_session(self):
         with tempfile.TemporaryDirectory() as directory:

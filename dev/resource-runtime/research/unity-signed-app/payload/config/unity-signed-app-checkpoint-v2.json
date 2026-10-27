@@ -1,0 +1,31 @@
+{
+  "name": "unity-signed-app",
+  "payload": [
+    "scripts/record-unity-signed-app-milestone.py",
+    "scripts/check-unity-signed-product-tamper.py",
+    "scripts/verify-adhoc-bundle.py",
+    "scripts/verify-adhoc-generic-file.py",
+    "scripts/probe-original-codesign-products.py",
+    "distribution/linuxcode/linuxcode/cli.py",
+    "distribution/linuxcode/tests/test_engine_candidate.py"
+  ],
+  "reference": [
+    "artifacts/unity-original-signed-app-v1.json",
+    "artifacts/unity-signed-app-tamper-controls-v1.json",
+    "runtime/original-codesign-products-ocj8njxy/result.json",
+    "runtime/original-codesign-products-ocj8njxy/run.log",
+    "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-9e1908267515.json",
+    "artifacts/unity-integrated-launcher-success-v3.json",
+    "runtime/linuxcode-cli/20261027T101627-c9af4f68/result.json",
+    "runtime/linuxcode-cli/20261027T101627-c9af4f68/plan.json",
+    "runtime/linuxcode-cli/20261027T101627-c9af4f68/output.log",
+    "runtime/linuxcode-cli/20261027T101627-c9af4f68/run.sh",
+    "runtime/linuxcode-unity80-launcher-v1/adopted.json",
+    "logs/unity-engine-launcher-evidence-tests-v1.log",
+    "artifacts/unity-ios26-header-fixture-v1.json",
+    "artifacts/original-unity-assets-car-v1.json",
+    "artifacts/null-exec-environment-source-publication-v1.json",
+    "artifacts/dispatch2-lifecycle-kqueue-source-publication-v1.json",
+    "config/unity-engine-launcher-full-build-v1-command.json"
+  ]
+}

@@ -1,5 +1,7 @@
 # 资源工具和签名候选的开发源码
 
+最新里程碑：[原版 xcodebuild 完整编译并签名 Unity/CocoaPods App](research/unity-signed-app/README.md)。原版严格验证及独立资源、代码页检查均通过；整合入口新增显式 engine milestone 选择。下列早期附件及固定 overlay 的缺口描述保留当时状态，不代表最新候选。冷重建、开发者证书和真机验证仍未完成。
+
 [Contacts 原版依赖组附件](research/contacts-original-dependencies/README.md) 保存九个原版映像、保留明确准备选项的批量工具及单会话原版 dyld 正/负例验证。原始指令/绑定检查和真实 Unity/CocoaPods 构建已继续推进到 Vision 类缺失，完整 App 仍未生成；默认安装候选没有提升。
 
 [AVFAudio 转导出与符号表修复附件](research/avfaudio-reexport-symbol-tables/README.md) 保存原版 AVFAudio 和 AudioSession 的真实对象/CFString 对照，并修复提取件追加转导出别名未计入动态符号表的问题。原版 dyld 校验、独立分组/索引检查及真实 Unity/CocoaPods 构建已越过此前缺口，当前缺 Contacts 类；完整 App 仍未生成。
