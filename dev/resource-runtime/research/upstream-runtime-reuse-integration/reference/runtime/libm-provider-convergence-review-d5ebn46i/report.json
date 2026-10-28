@@ -1,0 +1,121 @@
+{
+  "review_complete": true,
+  "scope": "Read-only review narrowed to existing source-build log2 family wiring; no other math-family implementation work and no native run",
+  "source_wiring_verdict": "The observed two CMake changes correctly replace the scaled-log legacy double implementation with the existing complete Apple BASE2 implementation, while retaining existing nonlegacy xmm_log extra definitions.",
+  "observed_changes": {
+    "remove_from_main_sources": "Source/Intel/xmm_log.c",
+    "enable_main_source": "Source/Intel/log.S",
+    "retain_extra_source": "Source/Intel/xmm_log.c with existing -UBUILDING_FOR_CARBONCORE_LEGACY",
+    "global_macro_retained": "BUILDING_FOR_CARBONCORE_LEGACY selects only BASE2 in log.S; despite its name, here it is a packaging selector, not the approximate algorithm"
+  },
+  "symbol_ownership": [
+    {
+      "symbols": [
+        "_log2",
+        "_log2$fenv_access_off"
+      ],
+      "source": "Source/Intel/log.S:414 + log_universal.h:23",
+      "note": "Only BASE2 is instantiated under the existing global macro; keep that macro on this assembler source. The existing libmathCommonIntel.alias supplies the $fenv_access_off alias."
+    },
+    {
+      "symbols": [
+        "_log",
+        "_log1p",
+        "_log10"
+      ],
+      "source": "system_m_extra / Source/Intel/xmm_log.c nonlegacy branch at 451-922",
+      "note": "Removing the legacy main object is safe only while retaining this extra. Float fallbacks inside this C file are commented out."
+    },
+    {
+      "symbols": [
+        "_log2f",
+        "_log2f$fenv_access_off"
+      ],
+      "source": "Source/Intel/log2f.S:367 and Exports/libm_Intel.a.alias:92",
+      "note": "Independent existing table/reduction algorithm, not the scaled-log fallback; power-of-two branch explicitly avoids inexact."
+    },
+    {
+      "symbols": [
+        "_log2l",
+        "_log2l$fenv_access_off"
+      ],
+      "source": "Source/Intel/log2.S:32 and Exports/libm_Intel.a.alias:271",
+      "note": "Despite file name log2.S, it exports long double log2l only: stack long-double argument and x87 result. No duplicate double log2."
+    }
+  ],
+  "abi_assessment": [
+    "New double implementation reads and returns XMM0 on x86_64. Its temporary x87 result is explicitly rounded/stored to double and returned in XMM0; ordinary-path x87 temporaries are popped.",
+    "Existing float path uses XMM0 with cvtsd2ss conversion; existing long-double path retains its original stack input and x87 return ABI. No wrappers, new symbols or alternate calling convention are needed.",
+    "CMake change does not remove or alter the existing fenv.c implementation. Keep global CPU/ASM flags and alias lists unchanged; do not silently disable SSE denormal handling or alter caller rounding controls.",
+    "Both shared and static targets use libm_sources, while system_m_extra remains included in both. Static alias/archive behavior is inherited from the existing build, not independently revalidated here."
+  ],
+  "necessary_targeted_validation": [
+    {
+      "what": "Export/ownership and linker completeness",
+      "cases": "Compare complete before/after libsystem_m export names, including ordinary and $fenv_access_off log2/f/l; ensure one strong definition per public name and original log/log1p/log10 are retained. Confirm actual ld log2 call resolves to the source-built new implementation."
+    },
+    {
+      "what": "Exact binary powers",
+      "cases": "Reuse existing 2098 double-power input control; include float powers spanning -149..127 and long-double powers representable by its real ABI, including subnormals. Confirm log2(16384)==14 exactly and no FE_INEXACT on exact cases in the default environment."
+    },
+    {
+      "what": "General algorithm path and boundaries",
+      "cases": "Use a small deterministic set of nonpowers, nextafter neighbors of 1/powers, minimum normal/subnormal and large finite values. Compare with the existing complete Apple math oracle using a stated ULP tolerance; powers alone bypass most of the new routine."
+    },
+    {
+      "what": "Floating environment",
+      "cases": "At least nearest/up/down/towardzero for representative exact and inexact values; record zero/negative/infinity/qNaN/sNaN outcomes, FE_DIVBYZERO/FE_INVALID/FE_INEXACT and preservation of control modes/x87 stack balance. Source NaN path ucomisd then jp9f/ret should be measured before claiming IEEE equivalence."
+    },
+    {
+      "what": "Actual consumer",
+      "cases": "Reuse the already prepared minimal original direct/UBA ld oslogstring link plus the original rsp path, then final original xcodebuild. Do not replace these with a synthetic success marker or rerun unrelated engine matrices."
+    }
+  ],
+  "existing_binary_oracle_assessment": {
+    "provider": {
+      "path": "runtime/rebuilt-simd-math-resource-native/libsystem_m.dylib",
+      "sha256": "02afab32c362a56e0041460de12f259d99a16c862fc2c79b42f51e7411afc3c2",
+      "export_count": 846,
+      "export_command": [
+        "llvm-objdump-19",
+        "--macho",
+        "--exports-trie",
+        "runtime/rebuilt-simd-math-resource-native/libsystem_m.dylib"
+      ],
+      "export_listing": "runtime/libm-provider-convergence-review-d5ebn46i/apple_component-exports.txt"
+    },
+    "legacy_export_count": 539,
+    "apple_export_count": 846,
+    "shared_export_names": 534,
+    "legacy_names_missing_from_apple": [
+      "___fyl2x",
+      "_abs",
+      "_cosisin",
+      "_cosisinf",
+      "_cosisinl"
+    ],
+    "dependencies": "libdyld, libcompiler_rt, weak libsystem_pthread; only five actual binds: weak ____chkstk_darwin plus ___muldc3/___mulsc3/___mulxc3/___truncdfhf2.",
+    "reconstruction_has_no_new_function_overrides": true,
+    "function_resolvers": 24,
+    "recommendation": "Keep this existing complete original image as the numeric/ABI oracle and existing SIMD provider. The source-level log2 selection fix is smaller and preserves the current full libm provider. A full provider replacement is unnecessary for this family fix and is not implied by 534 matching export names.",
+    "prior_native_evidence": "runtime/original-simd-math-test-fovwwg9_/result.json: existing legacy 364 failures among 2098 powers; original Apple reference 0 failures. This review did not rerun it.",
+    "broad_scalar_correctness_claimed": false
+  },
+  "sources": {
+    "vendor/darling/src/libm/CMakeLists.txt": "577e3ef49564b0b58c271fdf0aa3d181e75ec5c2f2a770d351693c21e95204bf",
+    "vendor/darling/src/libm/Source/Intel/log.S": "736c8b2b863200a1715c1114f528261b0384e543378ffcdd331d9318efeda6c1",
+    "vendor/darling/src/libm/Source/Intel/log_universal.h": "ed0b8a37310e00fa97b4782dacdd603402e6b7c3b2225823b81b70a864a8986e",
+    "vendor/darling/src/libm/Source/Intel/log2f.S": "d6b8f02a2b348bc48f5f6dad61113ee9bf552383fea6a2d58722455590a9bb82",
+    "vendor/darling/src/libm/Source/Intel/log2.S": "ac0a193248429ca2a8f5b3d66af86320722b3cdd3aaf895f1ef4aa69f31ca2d0",
+    "vendor/darling/src/libm/Source/Intel/xmm_log.c": "e882c10622d193c27b44b49e08715ac7fb973524dfdd29f9becffc09db7703c8",
+    "vendor/darling/src/libm/Exports/libm_Intel.a.alias": "712f0ebb5423638f9882530e13bfe983df5577e14880e43e459965a299e68e79",
+    "vendor/darling/src/libm/Exports/libmathCommonIntel.alias": "df99d631ed4319d09d3b21dc7d0078cfb473bad7a1565c04d604c7e18aa1b471",
+    "vendor/darling/src/libm/Source/Intel/abi.h": "fec51057318120e17f4e41a1e82ac2c632a544bc3803bc86017f154a0703b7b3",
+    "runtime/rebuilt-simd-math-resource-native/reconstruction.json": "48b063d45adcd07e90c6e6e6c24d75aafbad667402a41e866530c02886935713",
+    "runtime/original-simd-math-test-fovwwg9_/result.json": "093df1bdb4a2bb483ff635b5ff4d11ebcff3194fb564ba0ed5eb9164384a48e4"
+  },
+  "native_started": false,
+  "source_modified": false,
+  "s2c_files_modified": false,
+  "full_math_IEEE_or_ABI_equivalence_verified": false
+}

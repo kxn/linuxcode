@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/9c6d8f02217ecca22b794f4ef9b7048b28e6f4a4999cc12ea5db07bd1515419e",
+  "original_sha256": "9c6d8f02217ecca22b794f4ef9b7048b28e6f4a4999cc12ea5db07bd1515419e",
+  "encoding": "utf-8",
+  "text": "/* Public SIMD ABI: three 32-byte columns, each containing three doubles. */\ntypedef double darling_simd_double3 __attribute__((ext_vector_type(3)));\ntypedef struct { darling_simd_double3 columns[3]; } darling_simd_double3x3;\n_Static_assert(sizeof(darling_simd_double3x3) == 96, \"SIMD double3x3 size\");\n_Static_assert(_Alignof(darling_simd_double3x3) == 32, \"SIMD double3x3 alignment\");\nconst darling_simd_double3x3 matrix_identity_double3x3 = {\n    .columns = {{1., 0., 0.}, {0., 1., 0.}, {0., 0., 1.}}\n};\n"
+}

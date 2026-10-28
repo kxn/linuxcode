@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-28",
+  "scope": "Pure Linux/Darling, original Intel macOS executables; measured component progress, not complete UE or macOS Editor export",
+  "source_forks": {
+    "darlingserver": {
+      "url": "https://github.com/kxn/darlingserver/commit/4328b8010abad9ff1dbef2bd255da06b505c49ca",
+      "behavior": "Preserve a completed XNU wait result when entering signal handling"
+    },
+    "darling_xnu_s2c": {
+      "url": "https://github.com/kxn/darling-xnu/commit/4819a14c8d0952a584a3935598f623ae92ac3c5e",
+      "behavior": "Atomically dequeue, execute and reply to S2C calls against signal RPC reentry; retain interruptibility while idle"
+    },
+    "darling_xnu_vchroot": {
+      "url": "https://github.com/kxn/darling-xnu/commit/2a7f7d8a2287aa9187f2639de1ba741967a48fc0",
+      "behavior": "Reuse existing case-insensitive component lookup in dyld bootstrap"
+    },
+    "darling_objc4": {
+      "url": "https://github.com/kxn/darling-objc4/commit/616842454d8dbd828f3a253671aa8fe15040ffa3",
+      "behavior": "Backport Apple objc4-951.1 Intel ARC claim with existing TLS ownership helper"
+    },
+    "darling_libm": {
+      "url": "https://github.com/kxn/darling/commit/ac67b22188ad02448a07be78d371cba25c645fbd",
+      "behavior": "Select the already present complete Apple log.S BASE2 implementation instead of legacy scaled log; retain original extra log/log1p/log10"
+    }
+  },
+  "sigexc_wait": {
+    "workspace_evidence": "runtime/thread-sigexc-wait-4v9f110n/result.json",
+    "sha256": "4ae7d5ffc8136614475283ddb6f6edd8bf78fe2200e6b48e212c0861c08ca9f1",
+    "verified": true
+  },
+  "client_signal_boundary": {
+    "workspace_evidence": "runtime/client-s2c-signal-boundary-ie0iuse4/result.json",
+    "sha256": "95c70192d936b10662c20983e88f34b72bf736e0c92cc171b0ce336395359d0f",
+    "verified": true
+  },
+  "objc_claim": {
+    "workspace_evidence": "runtime/objc-claim-return-3f8d4_7j/result.json",
+    "sha256": "73898d00e38467e6e3200b16ddac789d2e9dfe504d21624a14033c5df8b940aa",
+    "verified": true
+  },
+  "macho_source_version": {
+    "workspace_evidence": "runtime/macho-source-version-probe-qo4d4dmi/result.json",
+    "sha256": "ad87f3fb0f507d82a78715fdc0b8123c498da8b383b409309bf20dc51952f3fe",
+    "verified": true,
+    "checks": [
+      "20"
+    ],
+    "outer_status": 0,
+    "native_status": [
+      "0"
+    ]
+  },
+  "original_macos_Unity_version": {
+    "workspace_evidence": "runtime/unity-macos-editor-smoke-te2h9zdx/version-result.json",
+    "sha256": "8065718c012f464d8fafd84bd992926e6e4ffa0bbea700bb7d6700e5f3525561",
+    "outer_status": 0,
+    "native_status": [
+      "0"
+    ],
+    "expected_marker_observed": true,
+    "gate_passed": true,
+    "elapsed_seconds": 23.23990072403103,
+    "license_activation_requested_by_runner": false,
+    "full_editor_startup_verified": false,
+    "ios_export_verified": false,
+    "App_build_verified": false
+  },
+  "boundaries": [
+    "Version output does not establish Editor initialization, licensing, project export or App build.",
+    "Original UBT completed all four remaining actions and deployment plist preparation; final arm64 executable contains the actual CocoaPods local_add symbol. Original full Xcode App packaging, signing and device execution are separate checks.",
+    "Queue routing candidate passes five native tests but is not the default and still retains a separate upstream libc queue implementation.",
+    "No original Apple/Epic payloads, credentials, signatures or raw private tool logs are included."
+  ],
+  "complete_libm_build": {
+    "workspace_evidence": "artifacts/libm-upstream-log-source-v3-build.json",
+    "sha256": "91b2cfe6e5b40a885ff26d1807f5baf88df8045acad8f574846b94800d43bbae",
+    "full_libm_source_build": true,
+    "complete_source_files": 126,
+    "source_units": 120,
+    "extra_units": 6,
+    "baseline_exports_preserved": 539,
+    "source_exports": 542,
+    "missing_original_exports": [],
+    "library_sha256": "eb6f4770b8a0926abc0e918e48ce18f8d9fea3c1094c4d5a74f0551210e4a71a"
+  },
+  "libm_numeric": {
+    "workspace_evidence": "runtime/original-simd-math-test-715p3cgg/result.json",
+    "sha256": "cd9e1829af708b13782b10aadc99fef695b0b34f58b8c6f1898cb5c0f1cf8ba5",
+    "verified": true,
+    "expected_failure": false,
+    "cases": 2098,
+    "counts": [
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "outer_status": 0,
+    "original_apple_scalar_reference": true
+  },
+  "original_tiny_link": {
+    "workspace_evidence": "runtime/original-uba-clang-hdz0xjni/result.json",
+    "sha256": "bcac7e1f767181d1d1909def74dd90540ada23b0ce12728fca1d94e547bb7f13",
+    "verified": true,
+    "operation": "link",
+    "outer_status": 0,
+    "native_statuses": {
+      "DIRECT": [
+        "0"
+      ],
+      "UBA": [
+        "0"
+      ]
+    },
+    "objects": {
+      "direct": {
+        "exists": true,
+        "sha256": "fea7e8909f264a0e3e1400de4ecfd376d47da6544a163bb5b215ed643271db28",
+        "arm64_macho_expected_type": true
+      },
+      "detoured": {
+        "exists": true,
+        "sha256": "11ca482e18a215c56169ecfd43fe05f03fbc7d5f9aadf3a78c4959555b2b9f6a",
+        "arm64_macho_expected_type": true
+      }
+    }
+  },
+  "libm_family": {
+    "workspace_evidence": "artifacts/libm-upstream-log-validation-v1.json",
+    "sha256": "e055550cd297d7162fa6a9cfc2a759d03388d2b3ba6fd63f27a4c2cd0a580a42",
+    "verified": true,
+    "powers": {
+      "cases": 2098,
+      "failures": 0,
+      "reference_failures": 0
+    },
+    "family": {
+      "cases": 35192,
+      "failures": 0,
+      "mainline_max_ulp": 0,
+      "allowed_nonpower_ULP": 2,
+      "rounding_modes": [
+        "nearest",
+        "downward",
+        "upward",
+        "towardzero"
+      ],
+      "double_nonpower_cases": 2080,
+      "float_power_cases": 277,
+      "long_double_power_cases": 32829,
+      "special_value_records": 6,
+      "special_value_full_IEEE_equivalence_claimed": false
+    },
+    "linker_case": {
+      "input": 16384,
+      "historical_truncation": 13,
+      "candidate_and_original_apple_truncation": 14
+    }
+  },
+  "original_UBT": {
+    "workspace_evidence": "runtime/unreal-dotnet-native-3rmcm_db/result.json",
+    "sha256": "fe4fc8687fd16d882883262e5bf6b5ed866e0f1cd201fa931aab012ed6af3230",
+    "verified": true,
+    "outer_status": 0
+  },
+  "real_Pod_in_UE_executable": {
+    "workspace_evidence": "runtime/unreal-dotnet-native-3rmcm_db/pod-linked-evidence.json",
+    "sha256": "dcc4050363188b882868efa9b4f01bbd82e73dfa4e72928d445077a983fc4da1",
+    "verified": true
+  }
+}

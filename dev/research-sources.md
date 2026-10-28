@@ -22,6 +22,7 @@ python3 dev/research-sources.py inspect xnu-wait-atomic-suspension-handoff \
 
 | 需求 | 包名与实际范围 |
 | --- | --- |
+| 本轮完整上游组件复用与信号交接 | [upstream-runtime-reuse-integration](resource-runtime/research/upstream-runtime-reuse-integration/README.md)：完整 libm 源构建、Apple ARC/Mach-O API、既有 vchroot 查询和 S2C/XNU 等待修复；原始 UBT 链接与 macOS Unity 版本查询通过，完整 App/Editor 导出以当前验证记录为准 |
 | stage104 VM 统计 | [host-vm-statistics-upstream-interface](resource-runtime/research/host-vm-statistics-upstream-interface/README.md)：补齐上游现有 Mach host 接口的真实 Linux 测量；原分发与缓存保留，不能视为完整 Darwin VM 记账或 UE 构建完成 |
 | stage106 原子等待交接 | [xnu-wait-atomic-suspension-handoff](resource-runtime/research/xnu-wait-atomic-suspension-handoff/README.md)：复用现有 XNU 锁和“挂起时释放锁”接口；八项 Linux C/C++ 回归和真实 actool 查询通过；被拒绝的 stage105 不是升级步骤 |
 | 后续活线程 S2C 中断修复 | [s2c-interrupted-reply-transaction](resource-runtime/research/s2c-interrupted-reply-transaction/README.md)：复用既有 perform 信号量，在活线程的 reply wait 被中断时保持事务所有权；五项宿主回归通过、旧源码负对照复现故障；死亡/exec 和完整 UE 构建仍待验证 |

@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "candidate_scalar_oracle": "runtime/original-simd-math-test-715p3cgg/result.json",
+  "powers": {
+    "cases": 2098,
+    "failures": 0,
+    "reference_failures": 0
+  },
+  "family": {
+    "cases": 35192,
+    "failures": 0,
+    "mainline_max_ulp": 0,
+    "allowed_nonpower_ULP": 2,
+    "rounding_modes": [
+      "nearest",
+      "downward",
+      "upward",
+      "towardzero"
+    ],
+    "double_nonpower_cases": 2080,
+    "float_power_cases": 277,
+    "long_double_power_cases": 32829,
+    "special_value_records": 6,
+    "special_value_full_IEEE_equivalence_claimed": false
+  },
+  "historical_double_power_failures": 364,
+  "linker_case": {
+    "input": 16384,
+    "historical_truncation": 13,
+    "candidate_and_original_apple_truncation": 14
+  },
+  "original_linker_outputs": {
+    "direct": {
+      "path": "runtime/original-uba-clang-hdz0xjni/direct.exe",
+      "sha256": "fea7e8909f264a0e3e1400de4ecfd376d47da6544a163bb5b215ed643271db28",
+      "oslog_section": {
+        "segment": "__TEXT",
+        "section": "__oslogstring",
+        "address": 4295000064,
+        "size": 41,
+        "file_offset": 32768,
+        "alignment_power": 14
+      },
+      "encryption_info": {
+        "cryptoff": 16384,
+        "cryptsize": 16384,
+        "cryptid": 0,
+        "pad": 0
+      }
+    },
+    "detoured": {
+      "path": "runtime/original-uba-clang-hdz0xjni/detoured.exe",
+      "sha256": "11ca482e18a215c56169ecfd43fe05f03fbc7d5f9aadf3a78c4959555b2b9f6a",
+      "oslog_section": {
+        "segment": "__TEXT",
+        "section": "__oslogstring",
+        "address": 4295000064,
+        "size": 41,
+        "file_offset": 32768,
+        "alignment_power": 14
+      },
+      "encryption_info": {
+        "cryptoff": 16384,
+        "cryptsize": 16384,
+        "cryptid": 0,
+        "pad": 0
+      }
+    }
+  },
+  "files": {
+    "runtime/original-simd-math-test-715p3cgg/result.json": "cd9e1829af708b13782b10aadc99fef695b0b34f58b8c6f1898cb5c0f1cf8ba5",
+    "runtime/original-simd-math-test-715p3cgg/scalar.log": "fa018f85dc05f1d73ed6b3f1d8c37a9d3ae77cbe560c8e3705d37f610b31ef96",
+    "runtime/original-simd-math-test-fovwwg9_/result.json": "093df1bdb4a2bb483ff635b5ff4d11ebcff3194fb564ba0ed5eb9164384a48e4",
+    "runtime/original-simd-math-test-fovwwg9_/scalar.log": "e298d33fe9f94a06799fd9621fe472c8d8095729371feccf9c625fca84b3af97",
+    "runtime/original-uba-clang-k9l4lrxb/result.json": "3bfd4628256b90cf13b79c80924f2d374dd3b3bddc82caf5c0080494d238ee55",
+    "runtime/original-uba-clang-k9l4lrxb/run.log": "c22b0d4727683d789205bdfb7e8bdab5309f74e8c0e58cbcf6e2a9bd887601b9",
+    "runtime/original-uba-clang-hdz0xjni/result.json": "bcac7e1f767181d1d1909def74dd90540ada23b0ce12728fca1d94e547bb7f13",
+    "runtime/original-uba-clang-hdz0xjni/run.log": "596f691d46d0a6eae610c03a5e0f1c9b719d383007c3ee2133961785bbc40ccb",
+    "artifacts/libm-upstream-log-source-v3-build.json": "91b2cfe6e5b40a885ff26d1807f5baf88df8045acad8f574846b94800d43bbae",
+    "fixtures/hello/libm-log2-powers.c": "52a7202f92c2485bd0a664f575cd33362b1448a329c2623e89d32b0821fc7616",
+    "fixtures/hello/ios-oslogstring-alignment.c": "007ddf32bdc2ead7299572b423eb3864046cf1638a5a511bb1db910b9557d29d"
+  },
+  "superseded_diagnostic": "runtime/original-simd-math-test-nvsyledq used same-leaf reference shadowed by candidate search path; explicitly not an independent oracle and not included as validation.",
+  "full_UE_build_verified": false
+}

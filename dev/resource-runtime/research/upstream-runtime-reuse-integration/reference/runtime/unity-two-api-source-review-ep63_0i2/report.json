@@ -1,0 +1,93 @@
+{
+  "created_at": "2026-10-28T04:18:29.537303+00:00",
+  "scope": "Intel objc_claimAutoreleasedReturnValue source backport and actual native ARC behavior; macho_source_version primary-source handoff to ue_pods",
+  "objc": {
+    "implemented": true,
+    "shared_source_archived_before_edit": true,
+    "darling_objc_commit": "1a12df76d12bfc9fdfffadb290f7742763568765",
+    "modern_source_commit": "fb265098298302243cd7eeaa1f63f0ba7786dd9a",
+    "modern_source_tag": "objc4-951.1",
+    "official_primary_source": "https://github.com/apple-oss-distributions/objc4/blob/objc4-951.1/runtime/NSObject.mm#L2347",
+    "source_api_lines": [
+      2344,
+      2352
+    ],
+    "body_adaptation": "Exact modern body except acceptOptimizedReturn(/*expectsNop*/false) becomes existing acceptOptimizedReturn(); implementation and declaration guarded by __x86_64__.",
+    "adapted_body_equality_verified": true,
+    "contract": "Accept +0 return for +1 ownership: consume an existing +1 TLS handoff without another retain, otherwise call real objc_retain. It is not the unsafe +0 claim API.",
+    "architecture_evidence": "Modern objc-config.h:172-180 enables return-address autorelease elision only on arm64. On x86_64 acceptOptimizedReturn ignores expectsNOP and consumes/resets its TLS disposition. The old runtime already implements the same Intel TLS ownership disposition.",
+    "producer_evidence": "Both pinned old and modern Intel caller recognizers accept retainAutoreleasedReturnValue or unsafeClaimAutoreleasedReturnValue, not the new claim symbol. New claim callers therefore use a correct autorelease + retain fallback; this preserves lifetime rather than asserting optimization.",
+    "review_patch": "runtime/unity-two-api-source-review-ep63_0i2/actual-intel-backport.patch",
+    "build": "runtime/objc-claim-return-source-v1/build.json",
+    "build_sha256": "a2f0f42caf60795b03bbcb23b12bb11b1ac894580a7f3529287b95b7909cc466",
+    "library": "runtime/objc-claim-return-source-v1/libobjc.A.dylib",
+    "library_sha256": "f4ef726d2d284c32e66977aad2ae57ea56452b1cd0c508568dee2e11b3bbce27",
+    "complete_source_files": 43,
+    "original_export_count": 770,
+    "candidate_export_count": 774,
+    "missing_original_exports": [],
+    "private_configuration": "runtime/objc-claim-return-source-v1/resource-configuration.json",
+    "native_result": "runtime/objc-claim-return-3f8d4_7j/result.json",
+    "native_result_sha256": "73898d00e38467e6e3200b16ddac789d2e9dfe504d21624a14033c5df8b940aa",
+    "native_verified": true,
+    "native_checks": 21,
+    "verified_cases": [
+      "Exact pre-candidate objc4 lacks the weak-imported API (negative control)",
+      "Candidate actual dlsym/dladdr provider is the independent complete source library",
+      "nil with +0 and seeded +1 clears the real reserved TSD state",
+      "Fallback retain keeps an actual NSObject subclass alive until two matching releases",
+      "Seeded actual TSD +1 is consumed and cleared exactly once; a repeated claim performs a real retain",
+      "Original producer to existing retain helper follows actual x86 optimized callsite without retain/autorelease",
+      "Original producer to new claim helper follows actual unrecognized callsite with one autorelease and one retain; deallocation occurs on pool drain after consumer release"
+    ],
+    "tls_seed_limit": "The isolated +1-consumption test writes the real upstream reserved pthread TSD slot. It does not claim an old producer naturally recognizes the new claim callsite. The separate original-producer tests exercise both real callsites and actual object lifetime.",
+    "native_lock_released_nonblocking_verified": true,
+    "full_Unity_or_full_ARC_compatibility_verified": false
+  },
+  "macho_source_version": {
+    "owner": "ue_pods parallel integration; no shared macho/dyld source edited here",
+    "source_commit": "fd8d0c4d52320ebf64db34f3cb280310d905c5ae",
+    "source_tag": "dyld-1378",
+    "official_primary_source": "https://github.com/apple-oss-distributions/dyld/blob/dyld-1378/libdyld/utils.cpp#L455",
+    "definition": "vendor/apple-dyld/libdyld/utils.cpp:455",
+    "header_contract": "vendor/apple-dyld/include/mach-o/utils_priv.h:168",
+    "helper_definitions": [
+      "vendor/apple-dyld/mach_o/UnsafeHeader.cpp:124",
+      "vendor/apple-dyld/mach_o/UnsafeHeader.cpp:131",
+      "vendor/apple-dyld/mach_o/UnsafeHeader.cpp:1064",
+      "vendor/apple-dyld/mach_o/UnsafeHeader.cpp:1104",
+      "vendor/apple-dyld/mach_o/UnsafeHeader.cpp:1305"
+    ],
+    "contract": "Returns false for unsupported magic or no LC_SOURCE_VERSION; success writes the original packed 64-bit version. Preserve upstream parser behavior rather than return a constant.",
+    "available_build_integration": "Existing pinned Apple selected-source libDarlingCacheIntrospection component and existing libSystem reexport. Its current header-selected object already provides hasMachOMagic; add the exact sourceVersion/load-command methods and API to that same component, with existing Error object, not another per-call shim.",
+    "prepared_original_sources": [
+      "runtime/unity-two-api-source-review-ep63_0i2/source-version-header-selected.cpp",
+      "runtime/unity-two-api-source-review-ep63_0i2/source-version-api.cpp"
+    ],
+    "prepared_host_commands": "runtime/unity-two-api-source-review-ep63_0i2/macho-host-commands.json",
+    "prepared_sources_compiled_here": false,
+    "cctools_local_status": "Both vendor/darling/src/external/cctools and cctools-port directories are empty in this checkout. No local libmacho implementation of this modern API was found. Original API belongs to modern libdyld.",
+    "original_calling_provider": "GameControllerFoundation imports macho_source_version through /usr/lib/libSystem.B.dylib; GameController imports objc_claimAutoreleasedReturnValue from /usr/lib/libobjc.A.dylib.",
+    "native_verified": false
+  },
+  "default_config154_changed": false,
+  "old_overlay_modified": false,
+  "vendor_HEAD_moved": false,
+  "committed": false,
+  "sources": {
+    "vendor/darling/src/external/objc4/runtime/NSObject.mm": "db25871938b5cfc8a2629070293369512e6c0992afcc380c5098de242853f815",
+    "vendor/darling/src/external/objc4/runtime/objc-internal.h": "904129de95702c1ae3f108de9b458c5a4b28645a630e73b2928805befe7aa217",
+    "vendor/darling/src/external/objc4/runtime/objc-object.h": "adca980b988cfaa347a4e5328c0611058f1ac653f34772eb23627da5f1f21880",
+    "vendor/darling/src/external/objc4/runtime/objc-os.h": "42657ce3d749058ed957f5fdc00d5fee602154dde599da91062470d5811c9bcf",
+    "vendor/apple-objc4/runtime/NSObject.mm": "0488b064f8d2465317a849fa997d2fa3ab8e67e870fcca5674aeffce6026e289",
+    "vendor/apple-objc4/runtime/objc-object.h": "66d5b71adf82243b5dc78c75a67d6a31d6b632bbe000ac3d2aa9ca5214d72a95",
+    "vendor/apple-objc4/runtime/objc-config.h": "37dafb420bb6213e32fffdd9fdb9b3fe9a0440cef85b907dd3685fca78a0db26",
+    "vendor/apple-objc4/runtime/objc-internal.h": "8562d82bf50f0e0f8751f97d45864789261780b9d12b9aeabac4c1fa0ae01a79",
+    "vendor/apple-dyld/libdyld/utils.cpp": "21212f0343843f3f6c1f5d36b832a1cdbd90e4face7d2d9658465bec4718e30e",
+    "vendor/apple-dyld/mach_o/UnsafeHeader.cpp": "eb16814de57adc5fa5c0273996daa16c75f02ec473f8b15a98d91304a1da4be9",
+    "vendor/apple-dyld/include/mach-o/utils_priv.h": "6d8648ada021bcf2920686ca3a507e397f975222be911f5f0b25963fd9a3517a",
+    "scripts/build-objc-source.py": "434c8a0a08bf8a21826dd2224e3576de0fa657b082fcae985aa0d2e2ec6d416b",
+    "scripts/probe-objc-claim-return.py": "883dac65615a68ff59913fc548ddcc36b1e85fd15c2d53a91d39ac7c8e726c96",
+    "fixtures/hello/objc-claim-return.m": "517eff186296f96897fb6433453721019ef15f91a5546f1a64c1e7c81d3f789d"
+  }
+}

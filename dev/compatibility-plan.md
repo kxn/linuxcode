@@ -11,7 +11,7 @@
 | 原版 macOS Unity Editor → iOS 工程 | 已安装同版本原始输入；Intel 6000.3.27f1 在 Darling 中原生 `-version` 通过 | 真实 batchmode 初始化、原版授权客户端及实际导出 |
 | 独立安装及开发者工程 | 公共源码可在新目录重建 darlingserver；有 XIP/Recovery 输入处理及源码包 | 从干净 Linux 输入装配完整已验证运行环境，仍未自动化完成 |
 
-UE 当前已使用 stage110 越过原版 MSBuild/UBT 的两处信号交接死锁，进入 UBA → Clang → ld 的真实最终链接。新的 ld 段对齐断言可用四行独立 C 源同时在直接链接与原版 UBA 链接中复现：当前 legacy libm 将 `log2(16384)` 算成略小于 14，ld 截断后得到 13。Darling 源码已经包含完整 Apple `log.S`，但 CMake 禁用了它并选择了近似实现；正在修正完整数学库的源码选择，避免修改 UE 参数或另写数学特判。2098 个可表示二次幂的对照中，旧实现 364 个不精确，已有原 Apple 库全部正确。这是故障定位结果，尚不是修复后 UE 链接通过记录。
+UE 当前已使用 stage110 越过原版 MSBuild/UBT 的两处信号交接死锁，进入 UBA → Clang → ld 的真实最终链接。新的 ld 段对齐断言可用四行独立 C 源同时在直接链接与原版 UBA 链接中复现：当前 legacy libm 将 `log2(16384)` 算成略小于 14，ld 截断后得到 13。Darling 源码已经包含完整 Apple `log.S`，但 CMake 禁用了它并选择了近似实现；已修正完整数学库的源码选择，没有修改 UE 参数或另写数学特判。2098 个可表示二次幂的对照中，旧实现 364 个不精确，已有原 Apple 库全部正确。完整 126 单元 libm 候选保留所有旧导出；修复后的数值检查和原版 direct/UBA 最小链接通过。原始 UBT 四个后续构建动作已全部成功，最终 arm64 可执行文件包含真实 CocoaPods `_local_add` 符号。完整原 Xcode App 打包和签名正在执行；尚未验证设备运行。
 
 macOS Unity 复用了既有资源工具的完整框架闭包，补入原始 GameController 及其依赖；加载器恢复既有大小写查询，解决包内 `libPcre2` 与加载名称大小写不同的问题。ARC claim 直接移植 Apple objc4-951.1 的 Intel 所有权语义，21 项真实运行检查通过；`macho_source_version` 复用 Apple dyld-1378 及既有组件，20 项真实 Mach-O 检查通过。原版 Editor `-version` 返回正确版本且退出 0；这不代表初始化、授权或导出已通过。源码 fork 和精确证据摘要见[本轮进展](../validation/runtime-source-reuse-progress-2026-10-28.json)。
 
