@@ -6,13 +6,13 @@
     "darlingserver": "89751e64bc6c2082f7725061824ee0e33395b0de",
     "network_check_repeated": false
   },
-  "summary": "The strongest confirmed duplication is two stateful libkqueue owners in currently mapped images. A second problem is already-built upstream CoreTLS not selected in the current composition. The Security adapter is genuinely partial while reusing its real local backend. Runtime selection additionally depends on historical build/probe closure; that storage dependency must be separated from active provider identity.",
+  "summary": "The strongest confirmed duplication is at least two separately embedded libkqueue implementations; a third upstream libc copy requires binding verification. A second problem is already-built upstream CoreTLS not selected in the current composition. The Security adapter is genuinely partial while reusing its real local backend. Runtime selection additionally depends on historical build/probe closure; that storage dependency must be separated from active provider identity.",
   "findings": [
     {
       "id": "active-double-kqueue-state",
       "priority": 1,
-      "classification": "Confirmed duplicate stateful upstream implementation in two currently mapped providers",
-      "title": "Darling processes currently load two complete libkqueue instances and maintain two fork-repair paths",
+      "classification": "At least two embedded queue backends with separate private storage; upstream libc third copy found, active call binding requires verification",
+      "title": "Darling direct-kernel composition adds a queue backend alongside upstream libSystem/libc embeddings",
       "evidence": [
         {
           "path": "vendor/darling/src/external/libsystem/CMakeLists.txt",
@@ -55,6 +55,13 @@
           "end_line": 39,
           "sha256": "05bd74dcb13877aa7ce959cfa37902468a8fb726ace076ef1d50e94b6cb94418",
           "role": "Mutex and once state belong to each embedded copy"
+        },
+        {
+          "path": "vendor/darling/src/external/libc/CMakeLists.txt",
+          "start_line": 157,
+          "end_line": 186,
+          "sha256": "372ebd1fdc0b398b4c084d4b00c440eb2b00283f29943b4230cb16b153c0dbec",
+          "role": "Upstream system_c embeds the same kqueue object target; this third copy predates the direct-kernel backend"
         }
       ],
       "provider_evidence": {
@@ -68,11 +75,144 @@
           "kevent_impl",
           "kevent64_impl",
           "kqueue_atfork"
-        ]
+        ],
+        "observed_libc": "/state/prefix/usr/lib/system/libsystem_c.dylib",
+        "third_copy_status": "Private local storage and strong public helper definitions verified; native call routing pending"
       },
-      "impact": "This is live duplicated queue/mutex/fork state, not a count of historical scripts. Every fork/spawn repair or queue feature must now account for two backend instances and for which dylib resolves a call.",
-      "convergence": "For the normal Darling-libSystem composition, select a single upstream libkqueue owner and make the other image use the existing implementation/reexport wiring. Keep the embedded direct backend only for a documented composition with an original Apple libSystem that lacks Darling libkqueue. Make this a provider-composition choice, not another per-call shim. Reuse both current fork/spawn controls when validating that consolidation.",
-      "limits": "No new binding trace or current failure reproduction was run. Having duplicate definitions does not prove every kqueue request uses both copies. The direct backend has a real original-Apple-libSystem use case and cannot simply be deleted globally."
+      "impact": "The new direct-kernel queue backend adds fork/spawn repair requirements to upstream libSystem/libc composition. Each image contains private queue storage; symbol definitions alone do not prove which copies receive real queue calls. Active binding must be checked before removing or rebuilding upstream providers.",
+      "convergence": "Use an explicit composition choice and existing exports/reexport wiring. The current private v2 omits libSystem queue objects and routes its public helpers to the unchanged direct kernel, retaining upstream libc. An alternative Darling-only kernel build could preserve upstream weak fallback selection while retaining a separate direct-kernel composition for original Apple libSystem. Neither route currently proves process-wide physical deduplication; validate actual calls before adoption.",
+      "limits": "No new binding trace or current failure reproduction was run. Having duplicate definitions does not prove every kqueue request uses both copies. The direct backend has a real original-Apple-libSystem use case and cannot simply be deleted globally. Follow-up found the upstream libc target also embeds kqueue (CMakeLists.txt:186). Public helper exports in all three selected images are strong, and queue mutex/map storage is non-external; this rules out merging the private storage by weak symbol coalescing, but not dormant copies. Do not infer three active queue owners from nm alone.",
+      "followup_host_binding_report": "runtime/kqueue-single-owner-kernel-candidate-v1/host-binding-review-v2.json",
+      "coalescing_assessment": {
+        "public_export_flags": "Selected libSystem/kernel/libc kqueue_impl, kevent_impl, kqueue_atfork export terminal flags are 0 (strong); candidate uses named kernel reexports, flags 8.",
+        "storage": "All three original images have non-external/private-external kq_mtx/once and local kqmap; weak binding cannot merge this private storage.",
+        "weak_stream": "libc has strong-definition markers for kqueue_impl/kevent_impl. These advertise strong definitions to override weak users; they do not make libc queue helpers weak or merge local state.",
+        "upstream_design": "Original kernel syscall wrappers define weak fallback queue/close/dup helpers; upstream libSystem/libc embed strong implementations. The direct-kernel build adds strong implementations within kernel.",
+        "native_limit": "No dlsym/dladdr native observation has run in this follow-up. Presence of private copies does not prove each receives live queue calls."
+      },
+      "composition_choices": [
+        {
+          "choice": "Opt-in libSystem-to-direct-kernel routing candidate",
+          "existing_code_reused": "Keep direct kernel unchanged, omit libSystem queue objects, named-reexport its ten existing helper symbols through existing kernel dependency; initialize/fork-repair via existing kqueue_atfork. Keep upstream libc as-is.",
+          "benefit": "Removes libSystem private queue storage and its second kernel-vs-libSystem fork-reset path for the selected composition, retaining original Apple libSystem support.",
+          "limit": "Does not eliminate upstream libc physical code/state. Explicit libc-local calls and process-wide binding remain native verification questions. This is routing convergence, not full-process single ownership.",
+          "candidate_stage": "artifacts/private-procfs-auditsessionqueueownerkernelv2-stage.json"
+        },
+        {
+          "choice": "Keep upstream Darling queue ownership in a separate kernel composition",
+          "existing_code_reused": "For a Darling-libSystem composition, retain upstream kernel weak fallback/helper binding and existing libSystem/libc strong backend selection; original Apple libSystem still uses a separate direct-kernel composition.",
+          "benefit": "Preserves upstream existing two-image strategy; avoids adding another strong queue backend to this Darling composition.",
+          "limit": "Requires a matching kernel build without the direct queue objects and validation of close/dup/fork/kevent_qos bindings. No such candidate was built here; upstream libSystem/libc duplication remains unchanged. Do not remove direct backend globally."
+        }
+      ],
+      "followup_host_binding_evidence": {
+        "report": "runtime/kqueue-single-owner-kernel-candidate-v1/host-binding-review-v2.json",
+        "report_sha256": "8c3751dcc92f78b0874670631cc2a8b1163bacd2946aea40c76b12f51a9c112f",
+        "queue_public_export_flags": {
+          "baseline_libSystem": {
+            "_kqueue_impl": {
+              "terminal_hex": "0080ac07",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            },
+            "_kevent_impl": {
+              "terminal_hex": "00c08307",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            },
+            "_kqueue_atfork": {
+              "terminal_hex": "00e0aa07",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            }
+          },
+          "kernel": {
+            "_kqueue_impl": {
+              "terminal_hex": "00f0c81c",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            },
+            "_kevent_impl": {
+              "terminal_hex": "00a0a01c",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            },
+            "_kqueue_atfork": {
+              "terminal_hex": "00d0c71c",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            }
+          },
+          "upstream_libc": {
+            "_kqueue_impl": {
+              "terminal_hex": "00b0d539",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            },
+            "_kevent_impl": {
+              "terminal_hex": "00b0eb38",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            },
+            "_kqueue_atfork": {
+              "terminal_hex": "0090d439",
+              "flags": 0,
+              "weak": false,
+              "reexport": false
+            }
+          },
+          "candidate_libSystem": {
+            "_kqueue_impl": {
+              "terminal_hex": "080900",
+              "flags": 8,
+              "weak": false,
+              "reexport": true
+            },
+            "_kevent_impl": {
+              "terminal_hex": "080900",
+              "flags": 8,
+              "weak": false,
+              "reexport": true
+            },
+            "_kqueue_atfork": {
+              "terminal_hex": "080900",
+              "flags": 8,
+              "weak": false,
+              "reexport": true
+            }
+          }
+        },
+        "private_storage": {
+          "baseline_libSystem": [
+            "00000000000234a8 (__DATA,__data) non-external (was a private external) _kq_is_initialized",
+            "0000000000023468 (__DATA,__data) non-external (was a private external) _kq_mtx",
+            "0000000000024eb0 (__DATA,__bss) non-external _kqmap"
+          ],
+          "kernel": [
+            "00000000000db9a0 (__DATA,__data) non-external (was a private external) _kq_is_initialized",
+            "00000000000db960 (__DATA,__data) non-external (was a private external) _kq_mtx",
+            "000000000010a678 (__DATA,__bss) non-external _kqmap"
+          ],
+          "upstream_libc": [
+            "00000000000ff9a0 (__DATA,__data) non-external (was a private external) _kq_is_initialized",
+            "00000000000ff960 (__DATA,__data) non-external (was a private external) _kq_mtx",
+            "0000000000105480 (__DATA,__bss) non-external _kqmap"
+          ],
+          "candidate_libSystem": []
+        },
+        "candidate_initializer_lazy_binding": "libsystem_kernel _kqueue_atfork",
+        "owner_kernel_mismatch_rejected": true,
+        "native_binding_verified": false,
+        "process_wide_physical_single_owner_verified": false
+      }
     },
     {
       "id": "complete-coretls-not-selected",
@@ -273,5 +413,16 @@
   "source_mutation_during_review": false,
   "committed": false,
   "full_UE_build_verified": false,
-  "signing_success_claimed": false
+  "signing_success_claimed": false,
+  "followup_candidate_status": {
+    "scope": "Optional libSystem-to-kernel route convergence; upstream libc retained",
+    "host_initializer_and_three_object_link_verified": true,
+    "native_binding_fork_spawn_receipts_verified": false,
+    "defaults_or_immutable_stage108_changed": false,
+    "full_process_physical_deduplication_claimed": false,
+    "full_UE_or_signing_verified": false,
+    "candidate_is_private_and_not_default": true,
+    "template_scope": "Normal stage108 libSystem (58 named reexports); resource-tools baseline has 81. A future resource-tools adoption must preserve its additional helper reexports and dependencies with the existing resource-template linker path; small queue probes do not establish this closure."
+  },
+  "followup_source_report_sha256": "923c6671c9ce841428fab4e0096661819807f9c5c331fbe64d3a82acb24adf17"
 }

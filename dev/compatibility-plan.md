@@ -21,12 +21,18 @@ UE v10 的链接失败为 UBA 临时响应文件路径无法打开；v11 改用�
 
 | 发现 | 改进方式与边界 |
 | --- | --- |
-| libSystem 与 libsystem_kernel 同时包含完整 libkqueue，各有队列锁和 fork 修复 | 正常 Darling libSystem 组合收敛到单个所有者；使用原版 Apple libSystem 的组合仍需独立后端，不能全局删除 |
+| 至少两处分别嵌入 libkqueue；进一步核对发现上游 libc 也包含第三份 | 上游原有 libSystem/libc 双嵌入；direct-kernel 构建又增加一份。先核对真实绑定和调用，不能用符号数量推断三份状态都在活跃工作 |
 | 完整 31 单元 CoreTLS 后端和匹配 crypto 已有，但当前 UE 选择链未接入 | 需要 TLS 的工作负载先复用现有 selector，并确认实际映射；不因链接错误而无关地替换 TLS |
 | Security 远程签名适配入口返回未实现，较新上游已有实际源码 | 明确能力范围；按实际需求集成完整依赖和 ABI。保留已通过的真实本地签名后端，不增加假成功接口 |
 | 活跃运行选择依赖历史 probe 日志和链接对象 | 将源码/构建审计与运行时提供库清单分开；启动仍验证实际二进制身份、依赖及使用范围，历史记录保留 |
 
-双队列收敛先做独立可选构建，不改变正在验证的 stage108。已验证的 XNU 等待交接、S2C 回复和 exec/checkin 修复本身复用了既有队列、锁与 monitor，不等于需要另写调度器。
+三份原有二进制的 `kqueue_impl`、`kevent_impl` 和 `kqueue_atfork` 均为强导出；各自的 `kq_mtx`、once 状态和 `kqmap` 为非外部或私有符号。libc 的 weak-bind 流中有 strong-definition 标记，用于覆盖弱使用者，不会把这些私有状态合并。上游 kernel 原本提供弱 fallback，实际使用哪个强后端仍须结合绑定与真实调用判断。
+
+当前 v2 是独立可选的 **libSystem → kernel 路由收敛** 候选：保留 direct kernel 和上游 libc，省去 libSystem 内的队列对象，通过现有 kernel 导出与 reexport 依赖复用实现。host 已完成三个源对象的重链，确认十个队列导出转到 kernel，初始化器的 `kqueue_atfork` 导入也指向 kernel；尚未完成 native 身份、fork、spawn 和队列小用例。它没有实现全进程物理去重，也没有改变默认组合或 immutable stage108。原版 Apple libSystem 仍需要 direct backend，不能全局删除。
+
+另一条可选路线是为 Darling libSystem 保留上游 kernel 弱 fallback 与 libSystem/libc 强实现的既有组合，将原版 Apple libSystem 的 direct-kernel 组合单独保留。这能避免再加入第三个强后端，但需要匹配的 kernel 构建和 close、dup、fork、kevent_qos 绑定验证；目前没有构建或采纳这条路线，也不计划为物理删副本重编整个 libc。两条路线都应先复用现有导出与修复机制。
+
+已验证的 XNU 等待交接、S2C 回复和 exec/checkin 修复本身复用了既有队列、锁与 monitor，不等于需要另写调度器。
 
 ## 修复归属与复用顺序
 
