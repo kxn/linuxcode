@@ -54,3 +54,9 @@ v17 源码准备支持从已物化镜像精确替换四个服务，保留其余�
 同 v20 的后续端到端验证仍未完成：原版 codesign 达到限时，未出现 sign/verify 完成标记；原版 CoreCLR HTTPS 完成 DNS/TCP、进入 TLS 后正常 managed timeout，未完成握手或请求。公共 API gate 的成功不能代替这两项结果，也不能宣称统一环境完整 Xcode build 或 Unity 导出已通过。本轮新增 server 公开提交另在全新六仓库工作区用既有 -j2 入口完成 29/29 命令，审计无私有头或本机 vendor 输入；新 ELF 没有执行。公开 source pin、同版本配对及各项实际范围见 shared-metadata-iopm 与 public-server-stage116 两份摘要。
 
 较长的 v20 App 尝试还观察到具体后续故障：FileHelper 已通过原版 SecTask 权限检查、执行请求并发送回复，遍历部分路径时出现权限修复日志；该 errorHandler 会继续遍历，不能据此推断 fixFiles 最终结果。trustd 继续 user migration，mbr_uid_to_uuid(uid 282) 返回 ENOSYS (78)，导致 srcPath 为 nil，随后构造文件 NSURL 触发 NSInvalidArgumentException/ABRT，反复三次。短 CoreCLR 样本只到 helper 初始化，不能据其 8 秒限时将 TLS 未完成归因为死锁或单纯等待不足。源码检查点保留这些未完成范围，后续按实际 membership/路径来源继续复用完整上游实现。
+
+公共 v21 保留 stage116、原版完整 Libinfo client 和所有共享库及索引，直接在两个物理树的 canonical 路径安装完整三单元本地 OpenDirectory daemon。原 client 的 UID 282→UUID 转换、六类 user/group identifier 往返/name/type 共 64 项与原 daemon protocol 的 primary/unknown/SACL/refresh 共 20 项实际完成，外层状态 0、含启动约 3.91 秒；未知记录另验证 ENOENT/member=0，不计入这 84 项。identifier 转换与授权判断分开，使用真实本地记录和组成员关系，没有无条件 member=true；远程目录服务和完整 macOS 授权策略不在本次验证范围。134 项 translator 和 36 项实际/私有 NSS 宿主检查保存既有证明，没有为打包重复运行。
+
+同一 cohort 还预装已提取的同 25G83 原版完整 cfprefsd 和两个原 plist，不加程序专属 DYLD、不改原 sandbox 分支。此处仅记录部署，未声称当前 cohort 的独立 Preferences roundtrip 已验证。clone 工具显式声明新增 entry 及两树安装前像，保留原 12 项和所有公共 provider；旧 134 项源码的完整检查和 public server 构建没有重复。OpenDirectory 源码发布到同 kxn 新 fork 的既有默认 master，Darling 只更新对应 gitlink 和 URL；其他 component pin 与 vendor HEAD 保持。
+
+v21 原 App 尝试已跨过此前 UUID 缺失导致的 migration srcPath=nil/NSURL 异常，但仍达到限时，未完成签名或 verify。新的真实异常在原 Security SFAnalytics hwModelID：NULL 传给 NSPlaceholderString initWithUTF8String，继而 trustd ABRT。没有改 trustd 的迁移或 analytics 算法来跳过它。因这一具体后续故障已明，v21 没有重复 HTTPS；最近 HTTPS 证据仍为 v20 未完成，不能写成 v21 实测。精选范围见 shared-directory-membership 摘要。

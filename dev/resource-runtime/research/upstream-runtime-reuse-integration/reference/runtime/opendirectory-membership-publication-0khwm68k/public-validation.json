@@ -1,0 +1,87 @@
+{
+  "schema": "linuxcode-public-validation-v1",
+  "date": "2026-10-28",
+  "milestone": "Original Libinfo identity and membership RPCs complete through the shared local OpenDirectory daemon",
+  "verified": true,
+  "source_repository": "https://github.com/kxn/darling-opendirectory",
+  "source_commit": "44d71c48eb5d325e372de66a8f28f447734701e6",
+  "default_branch": "master",
+  "source_parent_commit": "67a8ad2ed0b06775bf53839446e2df7d49ab1c96",
+  "source_fork_parent": "https://github.com/darlinghq/darling-opendirectory",
+  "author_and_committer": "Comman Kang <kangxn@gmail.com>",
+  "changed_files": [
+    "opendirectoryd/CMakeLists.txt",
+    "opendirectoryd/src/main.c",
+    "opendirectoryd/src/identifier-translation.c",
+    "opendirectoryd/src/identifier-translation.h",
+    "opendirectoryd/src/local-membership-check.c",
+    "opendirectoryd/src/local-membership-check.h"
+  ],
+  "implementation": {
+    "complete_local_daemon_translation_units": 3,
+    "original_Libinfo_client_unchanged": true,
+    "one_library_configuration_for_entire_run": true,
+    "numeric_UID_GID_name_and_compatibility_UUID_translation": true,
+    "distinct_user_group_prefixes_and_big_endian_IDs": true,
+    "identity_encoding_does_not_assert_record_existence": true,
+    "membership_uses_current_passwd_group_and_supplementary_records": true,
+    "SACL_all_services_before_specific_group": true,
+    "no_identifier_cache": true,
+    "strict_RPC_payload_types": true,
+    "old_unconditional_membership_results_removed": true,
+    "old_odd_log_removed": true,
+    "inactive_client_fallback_included": false
+  },
+  "native_validation": {
+    "outer_status": 0,
+    "elapsed_seconds": 3.9086380450753495,
+    "identity_marker_checks": 64,
+    "protocol_marker_checks": 20,
+    "total_marker_checks": 84,
+    "unknown_record_authorization_separate": {
+      "errno": 2,
+      "errno_name": "ENOENT",
+      "member": false,
+      "not_counted_in_84_marker_checks": true
+    },
+    "configuration": "config/unified-runtime-v21.json",
+    "configuration_sha256": "7860661692c0f003d005a345d2ac5221a5c9d1db2d3f9d75efba7db3604f7211",
+    "source_stage": "artifacts/private-procfs-auditsession116-stage.json"
+  },
+  "host_validation": {
+    "translator_checks": 134,
+    "translator_sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "membership_checks": 36,
+    "membership_live_NSS_checks": 4,
+    "membership_private_files_NSS_checks": 32,
+    "more_than_16_supplementary_groups": true,
+    "actual_host_accounts_unchanged": true
+  },
+  "limits": {
+    "local_passwd_group_backend": true,
+    "opaque_UUID_directory_implemented": false,
+    "network_SID_AD_backend_implemented": false,
+    "full_Apple_DirectoryService_claimed": false,
+    "whole_Libinfo_rebuilt": false,
+    "full_app_build_or_signing_verified": false,
+    "https_verified": false
+  },
+  "evidence_sha256": {
+    "native_result": "f225be0ef5eadbab5bdf3a181a1b90c757f05c5e3b3cafc04e7f2ea54427c621",
+    "host_translator": "957f389a8f69d2faba1723b8b203d31f22c45cfd23ad9ed30cf3a9fe28f758ab",
+    "host_membership": "5438c96f9c890ad48188bd936691b7a44a466690080c0c6624d5ff301e1857d4",
+    "whole_daemon_build": "544dff5e7f50c42fd9d0294bbe1e3d25fe53d1648e7907a5e049d2ae31521b47"
+  },
+  "source_file_sha256": {
+    "opendirectoryd/CMakeLists.txt": "81f96a5190faeb376fff6ecd7d77c57a58ca88c8d6a502c01f3d9f9dd95a3868",
+    "opendirectoryd/src/main.c": "70865bb5900bd6f648dedfd1039347f4637f13b04d3f051e6aa8ccb38fc09ca1",
+    "opendirectoryd/src/identifier-translation.c": "678c591575e157597b1b48814fd0655ac8be0a9dbc1a72f3e1ce2f24dbcb7c06",
+    "opendirectoryd/src/identifier-translation.h": "34d5a067aa72001d4327f5abcd949588b892cae3785acc64e6d284b93e1de7f8",
+    "opendirectoryd/src/local-membership-check.c": "175410ff979431952f928fd2b22335fce3885bb78169df588cfa9682944bc0cb",
+    "opendirectoryd/src/local-membership-check.h": "c05b5bed268474092698b30e8875768ec25bb49c8027be0900227d68890b5789"
+  },
+  "publication_scope": "Own source and sanitized validation metadata only; no Apple/Unity binaries, original entitlements, account credentials, raw service logs or cores."
+}

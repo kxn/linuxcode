@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/34d5a067aa72001d4327f5abcd949588b892cae3785acc64e6d284b93e1de7f8",
+  "original_sha256": "34d5a067aa72001d4327f5abcd949588b892cae3785acc64e6d284b93e1de7f8",
+  "encoding": "utf-8",
+  "text": "/* Local identifier translation; identity conversion does not prove membership. */\n#ifndef ODD_IDENTIFIER_TRANSLATION_H\n#define ODD_IDENTIFIER_TRANSLATION_H\n#include <membership.h>\n#include <membershipPriv.h>\n#include <stddef.h>\n#include <sys/types.h>\n#include <uuid/uuid.h>\n\n/* Return zero or an errno value. `record_type` is MBR_REC_TYPE_USER/GROUP.\n * Compatibility UUID decoding does not test whether the record exists. */\nint od_compat_uuid_decode(const uuid_t uuid, id_t *identifier, int *record_type);\n\n/* On success *result is malloc-owned; *result_size is its exact wire size.\n * Names include their terminating NUL, UUIDs have 16 bytes, IDs sizeof(id_t).\n * All outputs remain unchanged on error. Local records have no GeneratedUID\n * attribute, so numeric and named records share Apple's compatibility format. */\nint od_identifier_resolve(int type, const void *identifier, size_t size,\n                        int target_type, void **result, size_t *result_size,\n                        int *record_type);\n#endif\n"
+}

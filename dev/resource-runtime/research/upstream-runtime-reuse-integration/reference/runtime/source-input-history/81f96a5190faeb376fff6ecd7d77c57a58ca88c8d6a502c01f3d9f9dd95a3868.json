@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/81f96a5190faeb376fff6ecd7d77c57a58ca88c8d6a502c01f3d9f9dd95a3868",
+  "original_sha256": "81f96a5190faeb376fff6ecd7d77c57a58ca88c8d6a502c01f3d9f9dd95a3868",
+  "encoding": "utf-8",
+  "text": "project(OpenDirectory-opendirectoryd)\n\ninclude_directories(\n\tinclude/\n)\n\nadd_darling_executable(opendirectoryd\n\tsrc/main.c\n    src/identifier-translation.c\n    src/local-membership-check.c\n)\n\ninstall(TARGETS opendirectoryd DESTINATION libexec/darling/usr/libexec)\ninstall(FILES com.apple.opendirectoryd.plist DESTINATION libexec/darling/System/Library/LaunchDaemons)\n"
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "linuxcode-public-validation-v1",
+  "date": "2026-10-28",
+  "scope": "Shared source-built local directory daemon with original complete Libinfo client",
+  "configuration": "config/unified-runtime-v21.json",
+  "configuration_sha256": "7860661692c0f003d005a345d2ac5221a5c9d1db2d3f9d75efba7db3604f7211",
+  "core_stage": "artifacts/private-procfs-auditsession116-stage.json",
+  "core_stage_unchanged": true,
+  "shared_library_environment_unchanged": true,
+  "original_Libinfo_client_unchanged": true,
+  "research_Libinfo_module_installed": false,
+  "daemon": {
+    "complete_translation_units": 3,
+    "binary_sha256": "d5ce1d1da14c1b0ee07a18f9f885cf1fd6acb69b8710003fd6d61637d0f873c2",
+    "canonical_installed_in_both_trees": true,
+    "typed_identifier_translation": true,
+    "local_record_lookup": true,
+    "membership_and_service_checks": true,
+    "unconditional_member_true": false,
+    "no_membership_cache": true,
+    "remote_directory_services_verified": false
+  },
+  "native_validation": {
+    "verified": true,
+    "outer_status": 0,
+    "elapsed_seconds": 3.909,
+    "original_client_UID282_UUID_conversion_status": 0,
+    "identifier_checks": 64,
+    "identifier_cases": "Six user/group identifier classes, round trips, names and types",
+    "unknown_records_authorization_result": "ENOENT with member=0",
+    "original_daemon_protocol_checks": 20,
+    "protocol_cases": [
+      "primary membership",
+      "unknown records",
+      "service SACL",
+      "cache refresh without a membership cache"
+    ],
+    "all_processes_share_one_configuration": true,
+    "total_marker_checks": 84,
+    "unknown_record_authorization_not_counted_in_marker_total": true
+  },
+  "cfprefsd": {
+    "original_complete_same_25G83_binary_and_two_plists_preinstalled": true,
+    "binary_sha256": "1c00f5a616dc0c76d7c78d104ebf150abb873b1e505310f2420a59d142778eca",
+    "per_program_environment_added": false,
+    "independent_current_cohort_Preferences_roundtrip_verified": false
+  },
+  "private_native_evidence": {
+    "path": "runtime/membership-native-unified-v21/result.json",
+    "sha256": "f225be0ef5eadbab5bdf3a181a1b90c757f05c5e3b3cafc04e7f2ea54427c621",
+    "included": false
+  },
+  "prior_API_matrix_repeated": false,
+  "public_server_build_repeated": false,
+  "native_started_by_packaging": false,
+  "cold_environment_install_verified": false,
+  "excluded": [
+    "Apple executables and plists",
+    "Raw logs, traces and cores",
+    "Private DNS snapshots and credentials"
+  ],
+  "source_publication": {
+    "repository": "https://github.com/kxn/darling-opendirectory",
+    "commit": "44d71c48eb5d325e372de66a8f28f447734701e6",
+    "branch": "master",
+    "new_fork_under_existing_account": true,
+    "author_and_committer": "Comman Kang <kangxn@gmail.com>",
+    "umbrella_repository": "https://github.com/kxn/darling",
+    "umbrella_commit": "2cb8e7d4eac3b71def8f166c8d157f298d7e31d8",
+    "umbrella_branch": "linuxcode/xcode-x86_64",
+    "umbrella_only_changes": [
+      "src/external/OpenDirectory gitlink",
+      ".gitmodules OpenDirectory fork URL"
+    ],
+    "other_component_pins_preserved": true,
+    "vendor_HEADs_unchanged": true
+  },
+  "host_validation": {
+    "translator_checks": 134,
+    "membership_checks": 36,
+    "live_NSS_checks": 4,
+    "private_files_NSS_checks": 32,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "not_repeated_by_packaging": true
+  },
+  "end_to_end": {
+    "v21_original_codesign_completed": false,
+    "outer_status": -9,
+    "native_sign_status": [],
+    "native_verify_status": [],
+    "old_migration_source_path_nil_failure_not_observed": true,
+    "new_observed_block": "Security SFAnalytics hwModelID passes NULL to NSPlaceholderString initWithUTF8String, followed by trustd ABRT.",
+    "analytics_algorithm_modified": false,
+    "v21_HTTPS_retested": false,
+    "latest_HTTPS_configuration": "config/unified-runtime-v20.json",
+    "latest_HTTPS_completed": false,
+    "full_Xcode_build_verified": false,
+    "Unity_export_verified": false
+  },
+  "private_App_evidence": {
+    "path": "runtime/original-codesign-certificate-yzhf1sae/result.json",
+    "sha256": "38788a58b9a78347dea790d36ad9624fae2e79ea4a8f5a00d8123d34036b8d3a",
+    "included": false
+  }
+}

@@ -158,7 +158,17 @@ if a.clone_image_stage:
         assert (changed or provider_changes) and len(set(changed))==len(changed)
         assert len(set(provider_changes))==len(provider_changes)
         previous=image['service_cohort']['files']
-        assert set(rows)==set(previous), 'Cloning a service cohort must preserve all account and service entries'
+        added=cohort.get('clone_additional_files',[])
+        assert len(set(added))==len(added) and not set(added)&set(previous)
+        assert set(rows)==set(previous)|set(added), 'Cloning must preserve existing entries and explicitly declare additions'
+        assert set(added)<=set(changed)
+        for name in added:
+            assert name in cohort['clone_new_entry_preimages']
+            for key,tree in [('whole_system_root',system),('shared_prefix',prefix)]:
+                before=cohort['clone_new_entry_preimages'][name][key];path=tree/name
+                if before is None:assert not path.exists() and not path.is_symlink()
+                else:assert path.is_file() and sha(path)==before
+
         assert {name for name,row in rows.items() if previous.get(name,{}).get('sha256')!=row['sha256']}==set(changed)
         for name in changed:
             relative=PurePosixPath(name);assert not relative.is_absolute() and name==relative.as_posix()

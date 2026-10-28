@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/c05b5bed268474092698b30e8875768ec25bb49c8027be0900227d68890b5789",
+  "original_sha256": "c05b5bed268474092698b30e8875768ec25bb49c8027be0900227d68890b5789",
+  "encoding": "utf-8",
+  "text": "/* Local NSS membership checks; successful identifier translation is not a grant. */\n#ifndef ODD_LOCAL_MEMBERSHIP_CHECK_H\n#define ODD_LOCAL_MEMBERSHIP_CHECK_H\n#include <stdbool.h>\n#include <stddef.h>\n/* Return zero or a positive errno. The output is always zero on error.\n * No cache is maintained: refresh and ordinary checks both read current NSS.\n * Only local passwd/group identities are supported. Network/SID forms return\n * ENOTSUP. NSS is responsible for any nested membership it can represent. */\nint linuxcode_check_membership(int user_type, const void *user, size_t user_size,\n    int group_type, const void *group, size_t group_size, bool refresh, int *is_member);\n/* Apple SACL order: all_services if it exists, otherwise the specific group;\n * neither defined -> ENOENT, never an implicit successful membership result. */\nint linuxcode_check_service_membership(int user_type, const void *user,\n    size_t user_size, const char *service, int *is_member);\n#endif\n"
+}
