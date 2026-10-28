@@ -1,0 +1,195 @@
+{
+  "verified": true,
+  "repositories": [
+    {
+      "name": "integration-build-support",
+      "path": ".",
+      "selected_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "actual_head": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/linuxcode.git",
+      "tree": "92479f2d1b72a3dce9a860ad86a17deafa7d5fd3",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darling",
+      "path": "vendor/darling",
+      "selected_commit": "e6b769a692d6dd709557761369e0afe3964afccf",
+      "actual_head": "e6b769a692d6dd709557761369e0afe3964afccf",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darling.git",
+      "tree": "77fd89284c0e2f4c4736c46501bead9480b380e8",
+      "local_object_alternates": false
+    },
+    {
+      "name": "bootstrap-cmds",
+      "path": "vendor/darling/src/external/bootstrap_cmds",
+      "selected_commit": "0f300a7a04bb1174a3b7db58b57d738aadc14e13",
+      "actual_head": "0f300a7a04bb1174a3b7db58b57d738aadc14e13",
+      "dirty_status": "",
+      "origin": "https://github.com/darlinghq/darling-bootstrap_cmds.git",
+      "tree": "5646b68710fade9469d3e230bce2b53bea39cfbc",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darling-xnu",
+      "path": "vendor/darling/src/external/xnu",
+      "selected_commit": "75eabd3bedadac9873f26002421787d685084d42",
+      "actual_head": "75eabd3bedadac9873f26002421787d685084d42",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darling-xnu.git",
+      "tree": "0fab66640b111e8ceb88d9800f51fdb72ecd0f2e",
+      "local_object_alternates": false
+    },
+    {
+      "name": "libpthread-headers",
+      "path": "vendor/darling/src/external/libpthread",
+      "selected_commit": "f07f265bfbcf071c1adfc808de971e053ea5edc5",
+      "actual_head": "f07f265bfbcf071c1adfc808de971e053ea5edc5",
+      "dirty_status": "",
+      "origin": "https://github.com/darlinghq/darling-libpthread.git",
+      "tree": "3f4a68dfbf5d819272f729d05d141ada153d4fb5",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darlingserver",
+      "path": "vendor/darlingserver",
+      "selected_commit": "ed13f2153fde8c150455062f26035e8e291e66d4",
+      "actual_head": "ed13f2153fde8c150455062f26035e8e291e66d4",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darlingserver.git",
+      "tree": "5159644c1b231e9ff86da8fc5fd12385b1b2d515",
+      "local_object_alternates": false
+    }
+  ],
+  "binary": "runtime/developer/server/darlingserver/darlingserver",
+  "binary_sha256": "e58b35559cd5f0150c52f0092f94ad14bf1e281d15c965ddb19883c4a268789e",
+  "compiler_dependency_audit": {
+    "verified": true,
+    "distinct_paths": 1380,
+    "categories": {
+      "public_source": 731,
+      "generated_build": 116,
+      "system_host": 533
+    },
+    "local_vendor_or_private_Apple_inputs_found": false
+  },
+  "legacy_developer_build_record": {
+    "schema": 1,
+    "checked_at": "2026-10-28T01:30:40.776007+00:00",
+    "module": "server",
+    "commands": [
+      [
+        "cmake",
+        "-S",
+        "build-support/darlingserver",
+        "-B",
+        "/home/dl/linuxcode/runtime/public-server-source-build-6p96vnoy/workspace/runtime/developer/server",
+        "-G",
+        "Ninja",
+        "-DCMAKE_C_COMPILER=clang-19",
+        "-DCMAKE_CXX_COMPILER=clang++-19",
+        "-DCMAKE_ASM_COMPILER=clang-19",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBISON_EXECUTABLE=/home/dl/linuxcode/runtime/host-build-tools/usr/bin/bison",
+        "-DFLEX_EXECUTABLE=/home/dl/linuxcode/runtime/host-build-tools/usr/bin/flex"
+      ],
+      [
+        "cmake",
+        "--build",
+        "/home/dl/linuxcode/runtime/public-server-source-build-6p96vnoy/workspace/runtime/developer/server",
+        "--target",
+        "darlingserver",
+        "-j",
+        "2"
+      ]
+    ],
+    "binary": "runtime/developer/server/darlingserver/darlingserver",
+    "binary_sha256": "e58b35559cd5f0150c52f0092f94ad14bf1e281d15c965ddb19883c4a268789e",
+    "milestone": {
+      "repository": "https://github.com/kxn/linuxcode.git",
+      "commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "tag": "runtime-2026.10.19"
+    },
+    "default_runtime_changed": false,
+    "host_regression_executed": false,
+    "darling_runtime_execution_verified": false
+  },
+  "legacy_milestone_is_current_source_selection": false,
+  "authoritative_source_selection": "repositories selected_commit/actual_head/dirty_status above",
+  "source_lock_sha256": "a495c3c7ce4247e5fcb4a690677f76fd837a2d9e6cb9aa2adc01dde01c4aabe2",
+  "host_only": true,
+  "server_executed": false,
+  "Apple_linker_executed": false,
+  "default_runtime_changed": false,
+  "session_lock_acquired": false,
+  "cold_Darling_Xcode_rebuild_ready": false,
+  "old_doctor_exact_checkpoint_asserted": false,
+  "schema": 1,
+  "scope": "Fresh public source build of Linux darlingserver component only",
+  "actual_build_verified": true,
+  "network_fetched_public_sources": true,
+  "initially_empty_component_build_directory": true,
+  "retry_reused_only_objects_from_this_same_fresh_attempt": true,
+  "protected_build_touched": false,
+  "local_vendor_sources_copied": false,
+  "actual_build_command": [
+    "/usr/bin/python3",
+    "/home/dl/linuxcode/distribution/linuxcode/dev/linuxcode-dev",
+    "--workspace",
+    "/home/dl/linuxcode/runtime/public-server-source-build-6p96vnoy/workspace",
+    "build",
+    "server",
+    "--jobs",
+    "2"
+  ],
+  "build_jobs": 2,
+  "host_tools": {
+    "clang-19": {
+      "path": "/usr/bin/clang-19",
+      "sha256": "0a3c55936ac43954fbe4914e6e73b577ca9e35e75d89ef13d3e28c187f41ca1a",
+      "version": "Debian clang version 19.1.7 (3+b1)",
+      "status": 0
+    },
+    "clang++-19": {
+      "path": "/usr/bin/clang++-19",
+      "sha256": "0a3c55936ac43954fbe4914e6e73b577ca9e35e75d89ef13d3e28c187f41ca1a",
+      "version": "Debian clang version 19.1.7 (3+b1)",
+      "status": 0
+    },
+    "cmake": {
+      "path": "/usr/bin/cmake",
+      "sha256": "9a2692f4d712265eb29c90c3366bfc40df400ea586b0477edabbcf3bae745dc1",
+      "version": "cmake version 3.31.6",
+      "status": 0
+    },
+    "ninja": {
+      "path": "/usr/bin/ninja",
+      "sha256": "e8e646527e23aa7a66d0f04b86b89f1bb2f25edcc1c5e402a0989e5364c8779b",
+      "version": "1.12.1",
+      "status": 0
+    },
+    "bison": {
+      "path": "/home/dl/linuxcode/runtime/host-build-tools/usr/bin/bison",
+      "sha256": "39fc36c38e29481dc3be2d08652e0564b9ea9aa297e38ed21ff0da0ff36967e8",
+      "version": "bison (GNU Bison) 3.8.2",
+      "status": 0
+    },
+    "flex": {
+      "path": "/home/dl/linuxcode/runtime/host-build-tools/usr/bin/flex",
+      "sha256": "2f756d9099e5e926d938e916b342b36f11e209a413e2bbedee059fa4a87560bf",
+      "version": "flex 2.6.4",
+      "status": 0
+    },
+    "m4": {
+      "path": "/home/dl/linuxcode/runtime/host-build-tools/usr/bin/m4",
+      "sha256": "24066e3ebc4b7a0eeb33b3d50e108afcfd384f1f01dd1797fa0423d5494cce16",
+      "version": "m4 (GNU M4) 1.4.19",
+      "status": 0
+    }
+  },
+  "original_fresh_attempt": "runtime/public-server-source-build-6p96vnoy/result-after-libpthread.json",
+  "current_read_only_inspection": "runtime/public-server-source-build-6p96vnoy/public-entry-inspection.json",
+  "unit_regressions_passed": 6,
+  "full_UE_App_build_verified": false
+}

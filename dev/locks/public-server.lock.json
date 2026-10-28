@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "scope": "Linux darlingserver component only; public source pins, not a complete runtime candidate",
+  "developer_tool_sha256": "a73a2d7ba918f58c4de66ef95a6a6bb23a8be684c6704e713b70c682139b1f99",
+  "build_support_sha256": "488dd27ebc3799e9bf44212e12ba16d38ac52382298c991d7501eb4658ea40cd",
+  "repositories": [
+    {
+      "name": "integration-build-support",
+      "path": ".",
+      "url": "https://github.com/kxn/linuxcode.git",
+      "commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "sparse_paths": ["build-support/darlingserver"]
+    },
+    {
+      "name": "darling",
+      "path": "vendor/darling",
+      "url": "https://github.com/kxn/darling.git",
+      "commit": "e6b769a692d6dd709557761369e0afe3964afccf",
+      "sparse_paths": [
+        "cmake", "basic-headers", "src/startup", "src/include", "src/libsimple",
+        "Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
+        "src/external/bootstrap_cmds", "src/external/xnu", "src/external/libpthread"
+      ]
+    },
+    {
+      "name": "bootstrap-cmds",
+      "path": "vendor/darling/src/external/bootstrap_cmds",
+      "url": "https://github.com/darlinghq/darling-bootstrap_cmds.git",
+      "commit": "0f300a7a04bb1174a3b7db58b57d738aadc14e13",
+      "superproject": "vendor/darling",
+      "gitlink_path": "src/external/bootstrap_cmds"
+    },
+    {
+      "name": "darling-xnu",
+      "path": "vendor/darling/src/external/xnu",
+      "url": "https://github.com/kxn/darling-xnu.git",
+      "commit": "75eabd3bedadac9873f26002421787d685084d42",
+      "superproject": "vendor/darling",
+      "gitlink_path": "src/external/xnu"
+    },
+    {
+      "name": "libpthread-headers",
+      "path": "vendor/darling/src/external/libpthread",
+      "url": "https://github.com/darlinghq/darling-libpthread.git",
+      "commit": "f07f265bfbcf071c1adfc808de971e053ea5edc5",
+      "superproject": "vendor/darling",
+      "gitlink_path": "src/external/libpthread"
+    },
+    {
+      "name": "darlingserver",
+      "path": "vendor/darlingserver",
+      "url": "https://github.com/kxn/darlingserver.git",
+      "commit": "ed13f2153fde8c150455062f26035e8e291e66d4"
+    }
+  ]
+}

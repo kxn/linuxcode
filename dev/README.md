@@ -96,6 +96,8 @@ shell 的工作目录为指定 workspace，设置 `CC=clang-19`、`CXX=clang++-1
 
 ## 按模块修改、构建和回归
 
+另有已实际通过的[公开固定源码 server 构建入口](public-server-build.md)：只取六个公开仓库的锁定源码，在全新工作区复用现有 `build server --jobs 2`，产出 Linux ELF 并记录真实 HEAD/dirty。它独立于下述旧 17 仓库检查点，不安装候选、不运行 server，也不声明完整冷 Darling/Xcode 可用。
+
 动作命令默认实际执行，`--plan` 只输出 argv 和输出路径。构建目录默认在 `runtime/developer/<module>/`，首次创建后带专用标记；拒绝覆盖没有标记的既有目录。不会安装系统库，也不会替换当前默认 server、持久 prefix 或运行根。可用 `--output-dir /path/to/workspace/runtime/developer/my-change` 保留多个候选。
 
 ```bash

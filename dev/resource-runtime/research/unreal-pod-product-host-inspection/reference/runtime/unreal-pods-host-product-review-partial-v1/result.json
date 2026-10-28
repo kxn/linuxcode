@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-10-28T01:30:56.791578+00:00",
+  "verified": true,
+  "full_app_product_verified": false,
+  "pod_archive_verified": true,
+  "scope": "Pod archive and fixture sources only; App has not been checked",
+  "files": {
+    "runtime/unreal-game-project-o_lk51qs/unreal-pods-preparation.json": {
+      "path": "runtime/unreal-game-project-o_lk51qs/unreal-pods-preparation.json",
+      "bytes": 10381,
+      "sha256": "6a996ee2445799f59bd8b6f6b1e38508abd9abe07a86b8902275d7f4ef9c5bc9"
+    },
+    "runtime/unreal-game-project-o_lk51qs/Source/LinuxcodeUESmoke/LinuxcodeUESmoke.cpp": {
+      "path": "runtime/unreal-game-project-o_lk51qs/Source/LinuxcodeUESmoke/LinuxcodeUESmoke.cpp",
+      "bytes": 535,
+      "sha256": "c6f89935f979b8387529724e1a421043778635d6359bce06d802d3575751a418"
+    },
+    "runtime/unreal-game-project-o_lk51qs/Source/LinuxcodeUESmoke/LinuxcodeUESmoke.Build.cs": {
+      "path": "runtime/unreal-game-project-o_lk51qs/Source/LinuxcodeUESmoke/LinuxcodeUESmoke.Build.cs",
+      "bytes": 891,
+      "sha256": "1b50c312658befbfd14f1b36c01ee054dbd908457ec98298b941d5c37e929610"
+    },
+    "runtime/unreal-game-project-o_lk51qs/Dependencies/LocalMath/LocalMath.c": {
+      "path": "runtime/unreal-game-project-o_lk51qs/Dependencies/LocalMath/LocalMath.c",
+      "bytes": 83,
+      "sha256": "6aa31024edb8294b31add77a5d8d39e2c6189e93ad70d59f72a6fbf4453fe7c2"
+    },
+    "runtime/unreal-game-project-o_lk51qs/Dependencies/LocalMath/LocalMath.h": {
+      "path": "runtime/unreal-game-project-o_lk51qs/Dependencies/LocalMath/LocalMath.h",
+      "bytes": 36,
+      "sha256": "28db164871a2d7c430a832183986cc13a4eaf0568f6e75c0607dc9acf7b0d3d6"
+    },
+    "runtime/unreal-game-project-o_lk51qs/Dependencies/LocalMath/LocalMath.podspec": {
+      "path": "runtime/unreal-game-project-o_lk51qs/Dependencies/LocalMath/LocalMath.podspec",
+      "bytes": 558,
+      "sha256": "8bab819b901683a93d9ea44b832ad04e7b57f61242e9d625a797ce3135a3b310"
+    },
+    "runtime/unreal-game-project-o_lk51qs/Intermediate/LinuxcodePods/Development-iphoneos/libLocalMath.a": {
+      "path": "runtime/unreal-game-project-o_lk51qs/Intermediate/LinuxcodePods/Development-iphoneos/libLocalMath.a",
+      "bytes": 7136,
+      "sha256": "c865ec45a68744a981be5d32ff29427a5446345d7b91130a36ddd4d7a7fa3705"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/llvm-readobj-19",
+        "--file-headers",
+        "--macho-version-min",
+        "/home/dl/linuxcode/runtime/unreal-game-project-o_lk51qs/Intermediate/LinuxcodePods/Development-iphoneos/libLocalMath.a"
+      ],
+      "cwd": "/home/dl/linuxcode",
+      "status": 0,
+      "stdout": "runtime/unreal-pods-host-product-review-partial-v1/00.stdout",
+      "stderr": "runtime/unreal-pods-host-product-review-partial-v1/00.stderr",
+      "stdout_sha256": "e666310c9e2d0866af9b75805c6f8f10fb01d2d6ee7e1b05541a1a0012b405fd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1131
+    },
+    {
+      "argv": [
+        "/usr/bin/llvm-ar-19",
+        "t",
+        "/home/dl/linuxcode/runtime/unreal-game-project-o_lk51qs/Intermediate/LinuxcodePods/Development-iphoneos/libLocalMath.a"
+      ],
+      "cwd": "/home/dl/linuxcode",
+      "status": 0,
+      "stdout": "runtime/unreal-pods-host-product-review-partial-v1/01.stdout",
+      "stderr": "runtime/unreal-pods-host-product-review-partial-v1/01.stderr",
+      "stdout_sha256": "0effff7347e132a956a16c3a4f3ef4c3317c8ed8926368f771c513a5dc0fc82c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 30
+    },
+    {
+      "argv": [
+        "/usr/bin/llvm-nm-19",
+        "--format=posix",
+        "--no-demangle",
+        "--defined-only",
+        "/home/dl/linuxcode/runtime/unreal-game-project-o_lk51qs/Intermediate/LinuxcodePods/Development-iphoneos/libLocalMath.a"
+      ],
+      "cwd": "/home/dl/linuxcode",
+      "status": 0,
+      "stdout": "runtime/unreal-pods-host-product-review-partial-v1/02.stdout",
+      "stderr": "runtime/unreal-pods-host-product-review-partial-v1/02.stderr",
+      "stdout_sha256": "f018bc33aaa5328ada24adb7a7d444814a05cfa5b4be6e047155213f0b0b0697",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 387
+    }
+  ],
+  "source_sha256": "d84bb0a4ec172f55b7cc4ab7e6ef4d20e8a0363e6bf7491940bacbc0d6577fce",
+  "signing_verified": false,
+  "device_execution_verified": false,
+  "full_goal_complete": false,
+  "native_process_started": false,
+  "project": "runtime/unreal-game-project-o_lk51qs",
+  "target": "LinuxcodeUESmoke",
+  "configuration": "Development",
+  "pod_archive": {
+    "path": "runtime/unreal-game-project-o_lk51qs/Intermediate/LinuxcodePods/Development-iphoneos/libLocalMath.a",
+    "verified": true,
+    "architecture": "arm64",
+    "platform": "iPhoneOS",
+    "file_type": "Relocatable",
+    "Mach_O_members_or_slices": 2,
+    "members": [
+      "LocalMath.o",
+      "LocalMath-dummy.o"
+    ],
+    "definition": {
+      "verified": true,
+      "symbol": "_local_add",
+      "matches": [
+        "_local_add T 0 0"
+      ]
+    }
+  }
+}

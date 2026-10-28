@@ -72,6 +72,9 @@ class InstallerChecks(unittest.TestCase):
                 self.assertIn('linuxcode/dev/resource-runtime/apply-overlay.py', names)
                 self.assertIn('linuxcode/dev/research-sources.py', names)
                 self.assertIn('linuxcode/dev/research-sources.md', names)
+                self.assertIn('linuxcode/dev/build-public-server.py', names)
+                self.assertIn('linuxcode/dev/locks/public-server.lock.json', names)
+                self.assertIn('linuxcode/validation/public-server-source-build-2026-10-28.json', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unreal-cocoapods-workspace-integration/payload/fixtures/UECocoaPodsSmoke/Podfile.template', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unreal-cocoapods-workspace-integration/payload/fixtures/iOSCocoaPodsSmoke/LocalMath/LocalMath.podspec', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unreal-xcode-existing-dotnet-environment/payload/scripts/unreal-xcode-dotnet-environment.sh', names)
@@ -102,6 +105,14 @@ class InstallerChecks(unittest.TestCase):
             self.assertTrue(selected['payload_verified'])
             self.assertFalse(selected['historical_evidence_complete'])
             self.assertFalse(selected['cold_candidate_rebuild_ready'])
+            fresh_workspace = Path(directory) / 'public-server-plan-only'
+            result = subprocess.run([sys.executable, str(unpacked / 'linuxcode/dev/build-public-server.py'),
+                                     '--workspace', str(fresh_workspace), '--plan'],
+                                    text=True, capture_output=True, check=True)
+            plan = json.loads(result.stdout)
+            self.assertEqual(len(plan['repositories']), 6)
+            self.assertFalse(plan['commands_executed'])
+            self.assertFalse(fresh_workspace.exists())
             with self.assertRaisesRegex(RuntimeError, 'replace'):
                 cli.package(output, include_research_history=False)
 
