@@ -13,6 +13,9 @@ p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--template-report', required=True)
 p.add_argument('--output-dir', required=True)
 p.add_argument('--report', required=True)
+p.add_argument('--prepare-only',action='store_true',help='Compile/verify the explicit delta and write the immutable link plan without starting native ld')
+p.add_argument('--configuration',help='Explicit shared unified runtime for the original native linker')
+p.add_argument('--private-procfs-stage',help='Validated complete cohort selected with --configuration')
 p.add_argument('--changed-source', action='append', default=[])
 p.add_argument('--changed-header',action='append',default=[])
 p.add_argument('--recompile-group',action='append',default=[])
@@ -34,7 +37,7 @@ consumer_input=json.loads((root/a.header_consumers_file).read_text()) if a.heade
 explicit_headers=consumer_input.get('headers',{})
 header_consumers=set()
 resolve=runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
-assert not a.reuse_recorded_source_snapshots or explicit_headers, 'Historical object reuse requires explicit header consumer evidence'
+assert not a.reuse_recorded_source_snapshots or explicit_headers or (a.changed_source and not changed_headers), 'Historical reuse requires explicit source changes or header consumer evidence'
 assert a.changed_source or changed_headers, 'Specify changed sources or headers'
 if explicit_headers:
     assert changed_headers==set(explicit_headers) and not groups
@@ -120,14 +123,33 @@ cmd = [str(root / 'bin/darling'), 'shell', '/Applications/Xcode.app/Contents/Dev
 if d['experimental_direct_kevent_workqueue']:
     cmd += ['-lsystem_pthread', '-lsystem_malloc', '-lsystem_platform']
 cmd += ['-filelist', guest(filelist), '-o', guest(output)]
+link_environment=None
+if a.configuration or a.private_procfs_stage:
+    assert a.configuration and a.private_procfs_stage
+    configuration=json.loads((root/a.configuration).read_text())
+    assert configuration.get('runtime_mode')=='unified' and 'executables' not in configuration
+    module=runpy.run_path(str(root/'scripts/direct-resource-tool-runtime-profile.py'))
+    profile=module['profile'](stage=a.private_procfs_stage,configuration=a.configuration)
+    assert not any(value.startswith('DARLING_DYLD_OVERRIDE_') for value in profile['command'])
+    cmd=profile['command'][:-2]+cmd[2:]
+    cmd[3]='120'
+    link_environment=module['environment'](profile)
 plan = dict(template=a.template_report, template_sha256=sha(template), tool_sha256=sha(Path(__file__)), explicit_changed_sources=sorted(changes), explicit_changed_headers=sorted(changed_headers), explicit_changed_included_sources=sorted(included), direct_include_consumers_recompiled=sorted(included_consumers), complete_recompiled_groups=sorted(groups), recompiled_objects=len(commands), reused_objects=len(objects)-len(commands), compile_commands=commands, link_command=cmd, objects={str(obj.relative_to(root)): sha(obj) for obj in objects}, recorded_headers_verified=True, all_header_dependencies_recorded=False)
+if a.reuse_recorded_source_snapshots:
+    plan.update(historical_reused_sources=historical_reused_sources,reused_template_object_identities_verified=True)
+if a.configuration:
+    plan.update(shared_runtime_configuration=a.configuration,shared_runtime_configuration_sha256=sha(root/a.configuration),private_procfs_stage=a.private_procfs_stage)
 if explicit_headers:
     plan.update(header_consumers_file=a.header_consumers_file,header_consumers_file_sha256=sha(root/a.header_consumers_file),
                 explicit_header_consumers=explicit_headers,compiled_consumer_dependency_sha256=compiled_dependencies,
                 historical_reused_sources=historical_reused_sources,reused_template_object_identities_verified=a.reuse_recorded_source_snapshots)
 (folder / 'plan.json').write_text(json.dumps(plan, indent=2) + '\n')
+if a.prepare_only:
+    (folder/'deferred-build.json').write_text(json.dumps(dict(build=d,updated_sources=rows,native_link_not_executed=True,requested_report=a.report),indent=2)+'\n')
+    print('KERNEL_SOURCE_DELTA_PLAN',str((folder/'plan.json').relative_to(root)),'recompiled',len(commands),'reused',len(objects)-len(commands),'native_link_executed=False')
+    raise SystemExit(0)
 with (folder / 'link.log').open('w') as out:
-    subprocess.run(cmd, check=True, timeout=120, stdout=out, stderr=subprocess.STDOUT)
+    subprocess.run(cmd, check=True, timeout=120, stdout=out, stderr=subprocess.STDOUT,env=link_environment)
 old = root / d['variant_root']
 variant = folder / 'darling-root'
 subprocess.run(['cp', '-a', '--reflink=auto', str(old), str(variant)], check=True)

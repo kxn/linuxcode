@@ -17,3 +17,7 @@ macOS Unity 输入工具下载并检查同版本的官方 Intel Editor/iOS 模�
 已有源码和测试无变化时不重复运行旧矩阵。共享 Darling 会话使用既有锁；宿主构建、源码审查和输入准备可以并行。
 
 后续审查修正了诊断用旧 profile 合并：`scope=all` 同时补入 caller 与 resource 覆盖路径，`resource-tools` 仅补 resource；六项 host 控制通过。完整 Xcode 使用新生成 profile，不受旧诊断合并缺口影响。原始 UBT/数学库证据保持原摘要；旧脚本由源码历史保留。完整 UE build、签名与独立校验已通过，见 reference 中新增的 signed-app 验证摘要。
+
+本次增量仍为源码检查点，继续更新同一 payload、reference 和源码历史。v5/v6 改为整个 run 共用公开库路径：在首个 Mach-O、launchd 和后台服务启动前，物化完整 root/prefix 中的 loader、框架及库；upper/workdir 从同一父目录挂载，并有界等待首次服务就绪。统一模式禁止重新套用旧证书客户端/daemon 分组。新增源码还保存真实 AF_UNIX 地址长度修复、宿主 ASan/UBSan fixture、完整 kernel 增量构建入口，以及使用同一 Security 对象工厂的公共 identity store。
+
+公开 bootstrap 摘要仅验证启动及被观测进程使用同一环境。前述完整 UE/签名结果属于此前的运行配置，不能代替 v5/v6 验收：统一环境下 identity 查询成功，但本次原 codesign 尝试在 120 秒超时；完整签名、原 Xcode 全构建和 macOS Unity 导出仍未完成。本目录不包含安装好的镜像、原 Apple 二进制、credentials、cores 或私有原始日志。

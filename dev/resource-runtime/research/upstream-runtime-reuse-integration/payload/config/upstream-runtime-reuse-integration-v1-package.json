@@ -38,7 +38,26 @@
     "fixtures/hello/ios-oslogstring-alignment.c",
     "config/direct-resource-tool-environment-v155.json",
     "scripts/prepare-unity-stage-regression.py",
-    "scripts/retarget-unity-stage-regression.py"
+    "scripts/retarget-unity-stage-regression.py",
+    "scripts/stage-run-environment-launcher.py",
+    "scripts/stage-kernel-only-runtime.py",
+    "scripts/native-certificate-runtime.py",
+    "scripts/coretls-source-runtime-profile.py",
+    "scripts/coretls-cfhelpers-runtime-profile.py",
+    "scripts/libresolv-source-runtime-profile.py",
+    "scripts/test-sockaddr-length-host.py",
+    "fixtures/hello/sockaddr-length-host.c",
+    "fixtures/hello/sockaddr-length-host-support.h",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/helper/network/duct.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/conversion/network/duct.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/network/duct.h",
+    "scripts/stage-local-identity-store.py",
+    "scripts/macho-named-reexport.py",
+    "vendor/darling/src/external/security/OSX/sec/Security/SecLocalIdentityStore.c",
+    "scripts/probe-original-codesign-certificate.py",
+    "config/unified-runtime-v5.json",
+    "config/unified-runtime-v6.json",
+    "fixtures/hello/original-codesign-certificate-preflight.c"
   ],
   "reference": [
     "distribution/linuxcode/validation/runtime-source-reuse-progress-2026-10-28.json",
@@ -51,7 +70,9 @@
     "runtime/objc-claim-return-source-v1/build.json",
     "runtime/dotnet-profile-source-scope-merge-98mxliwf/result.json",
     "runtime/dotnet-profile-source-scope-merge-98mxliwf/review.json",
-    "distribution/linuxcode/validation/unreal-stage110-original-xcode-signed-app-2026-10-28.json"
+    "distribution/linuxcode/validation/unreal-stage110-original-xcode-signed-app-2026-10-28.json",
+    "distribution/linuxcode/validation/unified-runtime-bootstrap-2026-10-28.json",
+    "distribution/linuxcode/validation/unified-runtime-source-checkpoint-2026-10-28.json"
   ],
   "private_logs": []
 }

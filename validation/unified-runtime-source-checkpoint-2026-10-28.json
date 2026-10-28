@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "checkpoint": "upstream-runtime-reuse-integration",
+  "package_kind": "source_only",
+  "scope": "Whole-run unified runtime assembly and compatibility source checkpoint; not a cold installation or completed engine validation",
+  "shared_runtime_from_first_MachO": true,
+  "per_executable_library_selection": false,
+  "bootstrap_validation": "validation/unified-runtime-bootstrap-2026-10-28.json",
+  "source_configurations": [
+    "config/unified-runtime-v5.json",
+    "config/unified-runtime-v6.json"
+  ],
+  "kernel_candidate": "artifacts/socketaddr-length-kernel-unified-v5-build.json",
+  "source_kernel_report_fields_consistent": true,
+  "source_history_preserved": true,
+  "common_Security_object_factories_owner": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+  "common_Security_original_internal_direct_calls_unchanged": true,
+  "codesign_last_observation": {
+    "identity_query_succeeded": true,
+    "full_signing_completed": false,
+    "original_codesign_attempt_timeout_seconds": 120
+  },
+  "Unity_export_completed": false,
+  "full_Xcode_build_verified_in_unified_environment": false,
+  "excluded": [
+    "Apple/Epic/Unity binaries",
+    "credentials and license materials",
+    "private raw logs",
+    "cores",
+    "installed runtime images"
+  ],
+  "native_execution_performed_for_packaging": false,
+  "source_kernel_fork_commit": "f84c522",
+  "Unity_last_observation": {
+    "UPM_socket_connection_succeeded": true,
+    "UPM_exited_status": 11,
+    "client_handshake_status": 500,
+    "managed_method_completed": false,
+    "export_completed": false,
+    "batchmode_timed_out": true,
+    "raw_private_logs_included": false
+  }
+}

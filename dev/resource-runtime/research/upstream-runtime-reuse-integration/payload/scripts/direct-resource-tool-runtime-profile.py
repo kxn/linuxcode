@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Give original resource tools an exact-path library scope while preserving the caller's environment."""
+"""Select a complete runtime; unified candidates share providers across all processes."""
 from pathlib import Path
 import hashlib
 import json
@@ -10,13 +10,45 @@ root = Path(__file__).resolve().parent.parent
 verified_digest = __import__('runpy').run_path(str(root / 'scripts/verified-file-digest.py'))['digest']
 parent = runpy.run_path(str(root / 'scripts/private-procfs-runtime-profile.py'))
 
+def prepend_library_directories(profile, directories, *, scope='all'):
+    """Keep caller, resource metadata and rendered override paths in step."""
+    assert scope in ('all', 'resource-tools')
+    if profile.get('direct_resource_environment', {}).get('runtime_mode') == 'unified':
+        assert scope == 'all', 'Unified runtimes cannot scope a library to a program group'
+    directories = list(directories)
+    assert all(isinstance(path, str) and path.startswith('/') and ':' not in path for path in directories)
+    if not directories:
+        return profile
+    prefix = ':'.join(directories) + ':'
+    command = list(profile['command'])
+    keys = ['DARLING_DYLD_OVERRIDE_LIBRARY_PATH']
+    if scope == 'all':
+        keys.insert(0, 'DYLD_LIBRARY_PATH')
+    for key in keys:
+        positions = [i for i, value in enumerate(command) if value.startswith(key + '=')]
+        if key == 'DARLING_DYLD_OVERRIDE_LIBRARY_PATH' and not positions:
+            continue
+        assert len(positions) == 1, 'Expected exactly one ' + key
+        index = positions[0]
+        command[index] = key + '=' + prefix + command[index].split('=', 1)[1]
+    direct = dict(profile['direct_resource_environment'])
+    tool = dict(direct['tool_environment'])
+    tool['DYLD_LIBRARY_PATH'] = prefix + tool['DYLD_LIBRARY_PATH']
+    direct['tool_environment'] = tool
+    return {**profile, 'command': command, 'direct_resource_environment': direct}
+
 def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
     config = json.loads((root / configuration).read_text())
     sha = lambda path: verified_digest(path)
     for key in ['resource_stage', 'graphics_stage']:
         assert sha(root / config[key]) == config[key+'_sha256']
-    assert config['executables'] and len(set(config['executables'])) == len(config['executables'])
-    assert all(path.startswith('/') and ':' not in path for path in config['executables'])
+    unified = config.get('runtime_mode') == 'unified'
+    executables = config.get('executables', [])
+    if unified:
+        assert not executables, 'Unified runtimes cannot select libraries by executable'
+    else:
+        assert executables and len(set(executables)) == len(executables)
+        assert all(path.startswith('/') and ':' not in path for path in executables)
     resource = runpy.run_path(str(root / 'scripts/coregraphics-native-security-profile.py'))['profile'](
         stage=config['resource_stage'], graphics_stage=config['graphics_stage'])
     environment = dict(arg.split('=', 1) for arg in resource['command'] if arg.startswith(('DYLD_FRAMEWORK_PATH=', 'DYLD_LIBRARY_PATH=')))
@@ -227,28 +259,45 @@ def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
         environment['DYLD_LIBRARY_PATH'] = '/Volumes/SystemRoot/workspace/'+str(directory.relative_to(root))+':'+environment['DYLD_LIBRARY_PATH']
     system_path = '/Volumes/SystemRoot/workspace/' + str(Path(system_library).parent)
     environment['DYLD_LIBRARY_PATH'] = system_path + ':' + environment['DYLD_LIBRARY_PATH']
-    additions = ['DARLING_DYLD_OVERRIDE_EXECUTABLES=' + ':'.join(config['executables']),
-        'DARLING_DYLD_OVERRIDE_FRAMEWORK_PATH=' + environment['DYLD_FRAMEWORK_PATH'],
-        'DARLING_DYLD_OVERRIDE_LIBRARY_PATH=' + environment['DYLD_LIBRARY_PATH']]
-    command = p['command'][:-2] + additions + p['command'][-2:]
-    launcher_stage = config.get('resource_launcher_stage')
+    if unified:
+        assert objc_scope == 'all' and all(scope == 'all' for _, scope in source_library_directories)
+        command = [value for value in p['command'] if not value.startswith('DARLING_DYLD_OVERRIDE_')]
+        for key, value in environment.items():
+            positions = [i for i, arg in enumerate(command) if arg.startswith(key + '=')]
+            assert len(positions) == 1, key
+            command[positions[0]] = key + '=' + value
+    else:
+        additions = ['DARLING_DYLD_OVERRIDE_EXECUTABLES=' + ':'.join(executables),
+            'DARLING_DYLD_OVERRIDE_FRAMEWORK_PATH=' + environment['DYLD_FRAMEWORK_PATH'],
+            'DARLING_DYLD_OVERRIDE_LIBRARY_PATH=' + environment['DYLD_LIBRARY_PATH']]
+        command = p['command'][:-2] + additions + p['command'][-2:]
+    launcher_stage = config.get('run_launcher_stage', config.get('resource_launcher_stage'))
     if launcher_stage:
-        assert sha(root/launcher_stage) == config['resource_launcher_stage_sha256']
+        launcher_digest = config['run_launcher_stage_sha256'] if config.get('run_launcher_stage') else config['resource_launcher_stage_sha256']
+        assert sha(root/launcher_stage) == launcher_digest
         launcher = json.loads((root/launcher_stage).read_text())
+        if config.get('run_launcher_stage'):
+            assert unified and launcher['run_environment_shared_from_bootstrap']
+            image = launcher.get('materialized_shared_runtime')
+            if image:
+                image_stage = root / image['runtime_stage']
+                assert sha(image_stage) == image['runtime_stage_sha256']
+                assert json.loads(image_stage.read_text())['source_runtime'] == p['source_runtime'], \
+                    'The preinstalled system image must use the same runtime providers as this run'
         assert launcher['private_canonical_PlugInKit_mount'] and launcher['original_provider_bytes_preserved']
         resolve = runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
         for name, digest in launcher['files'].items():
             resolve(name, digest)
         assert command.count(launcher['parent_launcher']) == 1
         command[command.index(launcher['parent_launcher'])] = launcher['launcher']
-    if objc_directory and objc_scope == 'all':
+    if not unified and objc_directory and objc_scope == 'all':
         index = next(i for i, value in enumerate(command) if value.startswith('DYLD_LIBRARY_PATH='))
         command[index] = 'DYLD_LIBRARY_PATH='+objc_directory+':'+command[index].split('=', 1)[1]
     for directory, scope in source_library_directories:
-        if scope == 'all':
+        if not unified and scope == 'all':
             index = next(i for i, value in enumerate(command) if value.startswith('DYLD_LIBRARY_PATH='))
             command[index] = 'DYLD_LIBRARY_PATH='+directory+':'+command[index].split('=', 1)[1]
-    return {**p, 'command': command, 'direct_resource_environment': dict(configuration=configuration,
+    result = {**p, 'command': command, 'direct_resource_environment': dict(configuration=configuration,
         configuration_sha256=sha(root / configuration), tool_environment=environment,
         source_library_builds=config.get('source_library_builds', []),
         source_library_directories=[dict(directory=directory,scope=scope) for directory,scope in source_library_directories],
@@ -266,11 +315,34 @@ def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
         resource_launcher_stage=launcher_stage,
         objc_source_build=config.get('objc_source_build'),
         objc_source_scope=objc_scope if objc_directory else None,
-        executables=config['executables'], parent_DYLD_paths_changed=bool((objc_directory and objc_scope == 'all') or any(scope=='all' for _,scope in source_library_directories)),
+        runtime_mode='unified' if unified else 'legacy-scoped', executables=executables, parent_DYLD_paths_changed=bool(unified or (objc_directory and objc_scope == 'all') or any(scope=='all' for _,scope in source_library_directories)),
         original_tool_binaries_modified=False, original_resource_compilation_verified=False)}
+    for key, selector in [('coretls_source_build', 'coretls-source-runtime-profile.py'),
+                          ('coretls_cfhelpers_build', 'coretls-cfhelpers-runtime-profile.py')]:
+        if config.get(key):
+            assert sha(root/config[key]) == config[key+'_sha256']
+            result = runpy.run_path(str(root/'scripts'/selector))['select'](result, config[key])
+    if unified:
+        assert not any(value.startswith('DARLING_DYLD_OVERRIDE_') for value in result['command'])
+        for key, value in result['direct_resource_environment']['tool_environment'].items():
+            assert key+'='+value in result['command'], key
+    return result
 
 def profile(stage, configuration='config/direct-resource-tool-environment-v2.json'):
     return select(parent['profile'](stage=stage), configuration)
 
 def environment(p):
-    return parent['environment'](p)
+    environment = parent['environment'](p)
+    if p.get('direct_resource_environment', {}).get('runtime_mode') == 'unified':
+        assert not any(argument.startswith('DARLING_DYLD_OVERRIDE_') for argument in p['command']), \
+            'Program-specific library overrides are not permitted in a unified run'
+        environment = {key: value for key, value in environment.items()
+                       if not key.startswith('DARLING_DYLD_OVERRIDE_')}
+        for key in ('DYLD_LIBRARY_PATH', 'DYLD_FRAMEWORK_PATH', 'OBJC_DISABLE_TAGGED_POINTERS'):
+            values = [argument.split('=', 1)[1] for argument in p['command'] if argument.startswith(key+'=')]
+            assert len(values) == 1, key
+            selected = p['direct_resource_environment']['tool_environment'].get(key)
+            assert selected is None or selected == values[0], \
+                'The command must use the common runtime library configuration: ' + key
+            environment['LINUXCODE_RUN_'+key] = values[0]
+    return environment

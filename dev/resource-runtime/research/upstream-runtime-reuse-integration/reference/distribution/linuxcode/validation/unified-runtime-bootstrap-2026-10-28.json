@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "verified": true,
+  "scope": "Shared runtime bootstrap and observed processes; not a full Xcode or Unity export validation",
+  "configuration": "config/unified-runtime-v5.json",
+  "configuration_sha256": "fae2c686ce8cda7e6781952e8afea6f56d8aefe0feeaa3546617facd8a74fc95",
+  "run_stage": "runtime/run-environment-launcher-zv72zf64/stage.json",
+  "run_stage_sha256": "7ab00a0f3c8fdbdc04e6c994ef55a11b4cd010ef092da8e591132dd1f80b0297",
+  "result": {
+    "outer_status": 0,
+    "native_shell_started": true,
+    "ready_for_maps": true,
+    "maps_captured": true
+  },
+  "common_environment_keys": [
+    "DYLD_FRAMEWORK_PATH",
+    "DYLD_LIBRARY_PATH",
+    "OBJC_DISABLE_TAGGED_POINTERS"
+  ],
+  "distinct_runtime_environments": 1,
+  "processes": [
+    "darlingserver",
+    "/sbin/launchd",
+    "/bin/launchctl",
+    "/usr/sbin/iokitd",
+    "/usr/sbin/memberd",
+    "/usr/libexec/opendirectoryd",
+    "/usr/libexec/shellspawn",
+    "/usr/sbin/notifyd",
+    "/usr/bin/darling",
+    "/usr/libexec/shellspawn",
+    "/bin/bash",
+    "/bin/sleep"
+  ],
+  "bootstrap_map_sha256": "bfa8a13bb52398ea2bcb8980fc1118e359789da158579d6013dfed43d18adb8a",
+  "ready_map_sha256": "579b65fef578425598ff0e3106fd0fe479b995fe3ec6e714c757ab0605201bbd",
+  "fixes": [
+    "Materialize all providers before first Mach-O process",
+    "Pass one common library environment through bootstrap, services and commands",
+    "Bind overlay upper and workdir through the same parent mount",
+    "Allow bounded bootstrap readiness after the original client timeout"
+  ],
+  "per_executable_library_selection": false,
+  "legacy_signing_scope_allowed": false,
+  "full_xcode_build_verified_in_this_environment": false,
+  "macos_unity_export_verified": false
+}

@@ -28,6 +28,7 @@ args=parser.parse_args();assert 1<=args.timeout_seconds<=86400
 stage=args.stage;configuration=args.configuration
 m=runpy.run_path(str(r/'scripts/direct-resource-tool-runtime-profile.py'));p=m['profile'](stage=stage,configuration=configuration)
 if args.profile_report:
+ assert p['direct_resource_environment'].get('runtime_mode') != 'unified', 'Unified runtime must use its common profile, not a captured per-program environment'
  assert args.scope=='caller', 'An actual caller command must not be replaced with the resource scope'
  snapshot=json.loads((r/args.profile_report).read_text());prefix=list(snapshot['command'])
  cut=prefix.index('/bin/bash');prefix=prefix[:cut]
