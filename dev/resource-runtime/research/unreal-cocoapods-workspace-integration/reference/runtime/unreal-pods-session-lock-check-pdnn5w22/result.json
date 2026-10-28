@@ -1,0 +1,53 @@
+{
+  "verified": true,
+  "scope": "Linux Bash launcher lock prefix only, isolated session lock",
+  "runtime_stage": "artifacts/private-procfs-v5-stage.json",
+  "original_launcher": "runtime/native-codesign-ci-v3/darling",
+  "original_launcher_sha256": "45a88bce3f7fc58fc2ebcdcb5d61a9fc9115cbd59d0d605bf677208e8fbe63e4",
+  "original_launcher_unchanged": true,
+  "exact_single_line_clone_verified": true,
+  "inherited_flock_reentry_did_not_block": true,
+  "profile_timeout_wrapper_preserved_in_lock_probes": true,
+  "independent_processes_excluded_while_parent_or_child_holds_lock": true,
+  "child_exit_preserves_parent_lock": true,
+  "parent_close_preserves_child_lock": true,
+  "lock_released_after_last_close": true,
+  "omitted_pass_fds_rejected": true,
+  "duplicate_launcher_command_rejected": true,
+  "launchers": [
+    {
+      "original_launcher": "runtime/native-codesign-ci-v3/darling",
+      "original_launcher_sha256": "45a88bce3f7fc58fc2ebcdcb5d61a9fc9115cbd59d0d605bf677208e8fbe63e4",
+      "private_launcher": "runtime/child-exits-first/darling",
+      "private_launcher_sha256": "239e2478d319a23768e48ad0e9542fb9b9f7940752c5da2735e636640553dc31",
+      "preserved_namespace": "runtime/native-codesign-ci-v3/runtime-ns.sh",
+      "preserved_namespace_sha256": "24bb39b0d26f0aec5f264eb3cfbedd86d0139f5f3b06cbb05d59a3cfd13fce30",
+      "inherited_lock_fd": 3,
+      "lock_open_replacement_count": 1,
+      "parent_launcher_command_occurrences": 1,
+      "original_flock_preserved": true,
+      "parent_and_child_share_lock_open_description": true
+    },
+    {
+      "original_launcher": "runtime/native-codesign-ci-v3/darling",
+      "original_launcher_sha256": "45a88bce3f7fc58fc2ebcdcb5d61a9fc9115cbd59d0d605bf677208e8fbe63e4",
+      "private_launcher": "runtime/parent-closes-first/darling",
+      "private_launcher_sha256": "239e2478d319a23768e48ad0e9542fb9b9f7940752c5da2735e636640553dc31",
+      "preserved_namespace": "runtime/native-codesign-ci-v3/runtime-ns.sh",
+      "preserved_namespace_sha256": "24bb39b0d26f0aec5f264eb3cfbedd86d0139f5f3b06cbb05d59a3cfd13fce30",
+      "inherited_lock_fd": 3,
+      "lock_open_replacement_count": 1,
+      "parent_launcher_command_occurrences": 1,
+      "original_flock_preserved": true,
+      "parent_and_child_share_lock_open_description": true
+    }
+  ],
+  "native_process_started": false,
+  "namespace_entered": false,
+  "pod_install_verified": false,
+  "full_app_build_verified": false,
+  "files": {
+    "scripts/check-unreal-pods-session-lock.py": "e740ec531f81472d5025630c801e303b3743563dbab2fab42ca3d2126b9eda4a",
+    "scripts/install-unreal-ios-cocoapods.py": "d0fb0defee709932127a1a69f08944b21fee1081c2cc150c7c62a3479ec1e39e"
+  }
+}

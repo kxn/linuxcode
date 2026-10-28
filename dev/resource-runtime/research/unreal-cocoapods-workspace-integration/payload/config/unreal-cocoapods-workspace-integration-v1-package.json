@@ -1,0 +1,40 @@
+{
+  "name": "unreal-cocoapods-workspace-integration",
+  "payload": [
+    "scripts/prepare-unreal-ios-cocoapods.py",
+    "scripts/install-unreal-ios-cocoapods.py",
+    "scripts/inspect-unreal-pods-project.rb",
+    "scripts/check-unreal-pods-hooks.rb",
+    "scripts/check-unreal-pods-session-lock.py",
+    "scripts/archive-source-inputs.py",
+    "fixtures/UECocoaPodsSmoke/Podfile.template",
+    "fixtures/iOSCocoaPodsSmoke/LocalMath/LocalMath.c",
+    "fixtures/iOSCocoaPodsSmoke/LocalMath/LocalMath.h",
+    "fixtures/iOSCocoaPodsSmoke/LocalMath/LocalMath.podspec"
+  ],
+  "reference": [
+    "runtime/unreal-pods-preparation-check-qz7f_1vz/result.json",
+    "runtime/unreal-pods-session-lock-check-pdnn5w22/result.json",
+    "runtime/unreal-pods-hook-check-20261028-2152780-ah0k2c/result.json",
+    "runtime/unreal-ios-pod-install-9upnq787/result.json",
+    "runtime/unreal-pods-xcconfig-integration-00v_u8qk/result.json"
+  ],
+  "private_logs": [
+    "runtime/unreal-ios-pod-install-9upnq787/run.log",
+    "runtime/unreal-pods-xcconfig-integration-00v_u8qk/run.log"
+  ],
+  "verification": {
+    "source_only": true,
+    "ordinary_UE_project_fixture": true,
+    "fixture_authored_by_linuxcode": true,
+    "native_runtime_stage": "artifacts/private-procfs-auditsession106-stage.json",
+    "native_pod_install_verified": true,
+    "native_app_xcconfig_integration_verified": true,
+    "first_original_UE_baseline_preserved": true,
+    "engine_source_modified": false,
+    "pod_compile_verified": false,
+    "UBT_Pod_link_verified": false,
+    "full_App_build_verified": false,
+    "full_goal_complete": false
+  }
+}

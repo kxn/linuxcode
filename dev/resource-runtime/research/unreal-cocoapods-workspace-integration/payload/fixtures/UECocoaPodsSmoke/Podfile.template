@@ -1,0 +1,58 @@
+platform :ios, '15.0'
+source 'file:///Volumes/SystemRoot/workspace/fixtures/CocoaPodsSmoke/LocalSpecs'
+require '@INSPECTOR@'
+unreal_root = Pathname.new(__dir__)
+unreal_baseline = unreal_root + 'unreal-pods-before.json'
+if unreal_baseline.file?
+  unreal_before = JSON.parse(unreal_baseline.read)
+else
+  unreal_before = LinuxcodeUnrealPods.snapshot(unreal_root, '@TARGET@')
+  File.open(unreal_baseline, 'wx') { |file| file.write(JSON.pretty_generate(unreal_before) + "\n") }
+end
+project '@PROJECT@',
+        'Debug' => :debug, 'DebugGame' => :debug,
+        'Development' => :release, 'Test' => :release, 'Shipping' => :release
+workspace '@TARGET@ (IOS)'
+
+target '@TARGET@' do
+  pod 'LocalMath', :path => 'Dependencies/LocalMath'
+end
+
+post_install do |installer|
+  # UBT receives PLATFORM_NAME=iphoneos but UE sets EFFECTIVE_PLATFORM_NAME=IOS.
+  # Share one explicit directory instead of relying on these different suffixes.
+  output = File.join(installer.sandbox.root.dirname, 'Intermediate', 'LinuxcodePods',
+                     '$(CONFIGURATION)-$(PLATFORM_NAME)')
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['CONFIGURATION_BUILD_DIR'] = output
+    end
+  end
+end
+
+post_integrate do |installer|
+  root = installer.sandbox.root.dirname
+  project = Xcodeproj::Project.open(LinuxcodeUnrealPods.project_path(root, '@TARGET@'))
+  legacy = project.targets.find { |target| target.name == '@TARGET@_Build' }
+  raise 'Original UE legacy build target missing' unless legacy && legacy.isa == 'PBXLegacyTarget'
+  raise 'Original UE build environment is not exported' unless legacy.pass_build_settings_in_environment == '1'
+  original_tool = legacy.build_tool_path
+  original_arguments = legacy.build_arguments_string
+  pods = Xcodeproj::Project.open(root + 'Pods/Pods.xcodeproj')
+  dependency = pods.targets.find { |target| target.name == 'LocalMath' }
+  raise 'CocoaPods LocalMath target missing' unless dependency
+
+  # Reuse xcodeproj's subproject and cross-project dependency implementations.
+  project.main_group.new_file(pods.path.to_s) unless project.reference_for_path(pods.path)
+  legacy.add_dependency(dependency)
+  legacy.build_configurations.each do |config|
+    config.build_settings['LINUXCODE_POD_LIBRARY_DIR'] =
+      File.join(root, 'Intermediate', 'LinuxcodePods', '$(CONFIGURATION)-$(PLATFORM_NAME)')
+  end
+  LinuxcodeUnrealPods.integrate_xcconfigs(root, '@TARGET@', project, unreal_before)
+  project.save
+  report = LinuxcodeUnrealPods.verify(root, '@TARGET@', unreal_before)
+  raise 'Original UE tool changed' unless report['original_build_tool'] == original_tool
+  raise 'Original UE arguments changed' unless report['original_build_arguments'] == original_arguments
+  (root + 'unreal-pods-integration.json').write(JSON.pretty_generate(report) + "\n")
+end
