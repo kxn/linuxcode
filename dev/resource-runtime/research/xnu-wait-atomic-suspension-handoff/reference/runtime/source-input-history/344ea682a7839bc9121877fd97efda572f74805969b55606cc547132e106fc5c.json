@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/344ea682a7839bc9121877fd97efda572f74805969b55606cc547132e106fc5c",
+  "original_sha256": "344ea682a7839bc9121877fd97efda572f74805969b55606cc547132e106fc5c",
+  "encoding": "utf-8",
+  "text": "#ifndef _DARLINGSERVER_DUCT_TAPE_LOCKS_H_\n#define _DARLINGSERVER_DUCT_TAPE_LOCKS_H_\n\n#include <stdint.h>\n#include <sys/queue.h>\n\n#include <libsimple/lock.h>\n\ntypedef struct dtape_mutex_link {\n\tTAILQ_ENTRY(dtape_mutex_link) link;\n} dtape_mutex_link_t;\n\ntypedef TAILQ_HEAD(dtape_mutex_head, dtape_mutex_link) dtape_mutex_head_t;\n\ntypedef struct dtape_mutex {\n\tvolatile uintptr_t dtape_owner;\n\tlibsimple_lock_t dtape_queue_lock;\n\tdtape_mutex_head_t dtape_queue_head;\n} dtape_mutex_t;\n\ntypedef struct lck_mtx {\n\tdtape_mutex_t dtape_mutex;\n} lck_mtx_t;\n\ntypedef struct lck_spin {\n\tlck_mtx_t dtape_interlock;\n} lck_spin_t;\n\nvoid dtape_mutex_init(dtape_mutex_t* mutex);\nvoid dtape_mutex_lock(dtape_mutex_t* mutex);\nvoid dtape_mutex_unlock(dtape_mutex_t* mutex);\nbool dtape_mutex_try_lock(dtape_mutex_t* mutex);\nvoid dtape_mutex_assert(dtape_mutex_t* mutex, bool should_be_owned);\n\n#endif // _DARLINGSERVER_DUCT_TAPE_LOCKS_H_\n"
+}

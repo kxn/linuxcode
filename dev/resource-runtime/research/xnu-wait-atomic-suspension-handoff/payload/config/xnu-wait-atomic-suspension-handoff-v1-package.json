@@ -1,0 +1,25 @@
+{
+  "name": "xnu-wait-atomic-suspension-handoff",
+  "payload": [
+    "vendor/darlingserver/duct-tape/src/thread.c",
+    "vendor/darlingserver/duct-tape/src/locks.c",
+    "vendor/darlingserver/duct-tape/internal-include/darlingserver/duct-tape/locks.h",
+    "vendor/darlingserver/src/thread.cpp",
+    "vendor/darlingserver/internal-include/darlingserver/thread.hpp",
+    "fixtures/hello/thread-resume-handoff.cpp",
+    "fixtures/hello/thread-resume-handoff-c.c",
+    "scripts/probe-thread-resume-handoff.py",
+    "scripts/build-remap-diagnostic-server.py",
+    "scripts/stage-server-only-runtime.py"
+  ],
+  "reference": [
+    "artifacts/xnu-wait-atomic-suspension-handoff-v1.json",
+    "runtime/thread-handoff-m04xrfg2/result.json",
+    "runtime/remap-diagnostic-server-9iz8voyg/stage.json",
+    "runtime/remap-diagnostic-server-zwefful3/stage.json",
+    "runtime/remap-diagnostic-server-gez65ff_/stage.json",
+    "artifacts/private-procfs-auditsession106-stage.json",
+    "runtime/unreal-stage106-resource-query-nnw322v_/prepared.json",
+    "runtime/unreal-stage106-resource-query-nnw322v_/result.json"
+  ]
+}

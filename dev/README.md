@@ -2,6 +2,8 @@
 
 开发约束：优先复用上游 Darling 已有实现。缺符号或调用失败时，先确认实际加载的库，再核对固定上游源码、构建目标、导出与依赖；已有实现应修正接入，避免在外围复制或简化重写。只有确认接口缺口或原实现错误后，才修改对应组件并保留与基线的差异和实际验证。现有组件的重新构建、版本适配和本实验环境的装配问题，应分别说明，不能统称为“Darling 没有这个组件”。[定点核对记录](resource-runtime/research/upstream-implementation-reuse-audit/README.md) 说明已确认的复用实例及核对范围。
 
+[XNU 等待与既有挂起接口的原子交接](resource-runtime/research/xnu-wait-atomic-suspension-handoff/README.md)：stage106 保持上游 C++ 调度器原样，通过现有“挂起时释放锁”接口消除检查等待条件到挂起之间的唤醒丢失窗口。实际 C/C++ 时序回归 8 项通过，原版 UE 资源目录的 actool 查询正常返回且输出 plist 可解析；过宽的 stage105 唤醒标志方案经负对照发现风险后已撤销。完整 UE/CocoaPods App 编译与签名继续推进。
+
 [复用 Mach 接口并接入真实内存统计](resource-runtime/research/host-vm-statistics-upstream-interface/README.md)：原版 Xcode 已完成 UHT 并进入 805 项 UBA 任务的调度准备，但上游现有 VM 统计占位接口返回全零，使原版调度器一直等待初始内存估计。stage104 在原接口中接入 Linux 实际页数，原生调用、历史版本与缓冲区边界检查通过；原有 XNU 分发和缓存复用，UE 代码未改。完整游戏构建继续验证，不能据此宣称 UE App 已完成。
 
 [原版 UBA 调用原版 Clang 编译 iOS 目标文件](resource-runtime/research/original-uba-clang-library-paths/README.md)：完整 Xcode 构建已越过调度等待并启动编译，随后暴露研究环境过长的库搜索路径超出 UBA 固定缓冲区。只压缩路径组织、保留原库和查找顺序后，原版 UBA 与 Clang 的定点编译正常退出，产物与直接调用 Clang 逐字节一致。完整 UE 构建已继续，签名和 UE CocoaPods 仍待验证；没有替换 UBA 或修改引擎代码。

@@ -1,0 +1,17 @@
+# Atomic XNU wait handoff through the existing suspension mechanism
+
+The UE Xcode attempt with compact library paths reached the original asset query and waited indefinitely for a Mach-port event reply. The server had 758 queued kernel-async tasks, a positive semaphore count of 756 and two available-but-suspended workers. The captured client event thread held the kqueue lock while awaiting that reply, so other client closes also waited. The attempt eventually ended at the wrapper deadline (124), without a native Xcode success status. Original logs and live captures remain private.
+
+The existing C wait code checked `TH_WAIT`, unlocked the cooperative thread lock, then asked the C++ microthread to suspend. A wake in that gap could be discarded before `_suspended` was armed, or could queue work before `_running` cleared and be discarded by the existing scheduler. This is an integration error between the existing XNU wait state and suspension hook, not a missing replacement scheduler.
+
+The source fix factors the existing mutex unlock into an ownership-release operation that returns its still-held queue interlock. Both C wait loops hand that interlock to the existing `thread_suspend(..., unlockMe)` path. The existing context handoff releases it after leaving the old context and clearing `_running`; a waker cannot pass the thread lock earlier. The original mutex owner, waiter queue, wake operation and C++ scheduler remain in use. No RPC ABI, new task queue or alternate executor is introduced.
+
+An earlier experimental stage105 approach retained broad C++ wake flags. Additional tests and review found that it could wake a later unrelated internal mutex prematurely (creating a queue self-link) and drop a dead thread's active-call completion. It was rejected. Stage106 restores the exact pre-candidate C++ scheduler sources and fixes the lock handoff in C instead. The failed candidate is retained only as a negative control.
+
+## Verification
+
+The deterministic Linux regression executes the actual C XNU wait/block/unblock code, duct-tape mutex, C++ Thread `doWork/suspend/resume`, ucontext and StackPool. Enqueue and opaque task lifecycle boundaries are controlled; it does not claim a complete XNU boot or full historical binary test. Eight cases pass: two wake windows with stackful/continuation restoration, both continuation re-wait windows, a consumed wake followed by an independent mutex wait, and a dead active call. Exact archived stage104 C/C++ sources with their matching C++ header fail seven target cases; the rejected stage105 sources fail the two extra safety cases. Other non-thread objects and the factored mutex library are current in those negative controls, as the report explicitly states.
+
+A complete source server build produced a separate stage106. The same original UE `actool --print-asset-tag-combinations --output-format xml1` query then returned native/outer zero, and its actual XML plist parsed successfully. The service setup remained headless. This focused run exits deliberately before Xcode invocation and is not presented as a full Xcode build.
+
+The source fix is published on the user's existing darlingserver fork branch; see the selected artifact for the exact commit. The integration package contains source and selected evidence only. Full UE C++ compilation, Pod linking and App signing remain pending. The frozen Unity stage101 candidate and its prior successful builds are preserved; stage106 is not yet adopted as a verified full-game candidate.
