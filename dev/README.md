@@ -2,9 +2,11 @@
 
 开发约束：优先复用上游 Darling 已有实现。缺符号或调用失败时，先确认实际加载的库，再核对固定上游源码、构建目标、导出与依赖；已有实现应修正接入，避免在外围复制或简化重写。只有确认接口缺口或原实现错误后，才修改对应组件并保留与基线的差异和实际验证。现有组件的重新构建、版本适配和本实验环境的装配问题，应分别说明，不能统称为“Darling 没有这个组件”。[定点核对记录](resource-runtime/research/upstream-implementation-reuse-audit/README.md) 说明已确认的复用实例及核对范围。
 
+[信号中断时保留已发送的内部 RPC 事务](resource-runtime/research/s2c-interrupted-reply-transaction/README.md)：真实故障抓取确认成功的旧 `mmap` 回复与新 `munmap` 回复碰撞；stage107 保留既有串行令牌，直到取走真实回复。五项实际 C++ 事务回归通过，旧源码负对照复现三项协议故障；原版 UE 构建继续验证，死亡与 exec 生命周期仍待处理。
+
 [XNU 等待与既有挂起接口的原子交接](resource-runtime/research/xnu-wait-atomic-suspension-handoff/README.md)：stage106 保持上游 C++ 调度器原样，通过现有“挂起时释放锁”接口消除检查等待条件到挂起之间的唤醒丢失窗口。实际 C/C++ 时序回归 8 项通过，原版 UE 资源目录的 actool 查询正常返回且输出 plist 可解析；过宽的 stage105 唤醒标志方案经负对照发现风险后已撤销。完整 UE/CocoaPods App 编译与签名继续推进。
 
-[原版 UE workspace 接入真实 CocoaPods](resource-runtime/research/unreal-cocoapods-workspace-integration/README.md)：原版 Darwin CocoaPods 已安装 LocalMath，原 workspace 的四个 UE 工程引用、scheme 和 UBT 命令保留，只增加 Pods 依赖；原 UE 配置通过 wrapper 与 Pods 配置合并，首次基线及 UE 原配置字节保持。原生安装和配置检查通过，带 Pod 的完整 Xcode 构建已启动；实际 Pod 编译、UBT 链接和最终 App 仍待验证。
+[原版 UE workspace 接入真实 CocoaPods](resource-runtime/research/unreal-cocoapods-workspace-integration/README.md)：原版 Darwin CocoaPods 已安装 LocalMath，原 workspace 的四个 UE 工程引用、scheme 和 UBT 命令保留，只增加 Pods 依赖；原 UE 配置通过 wrapper 与 Pods 配置合并，首次基线及 UE 原配置字节保持。原生安装和配置检查通过，原版 Xcode 已实际编译 Pod（见下一项）；UBT 最终链接和完整 App 仍待验证。
 
 [原版 Xcode 已实际编译 UE 的 CocoaPod](resource-runtime/research/unreal-real-pod-archive/README.md)：同一 workspace 已生成真实 `libLocalMath.a`，LLVM 独立解析确认两个 arm64 对象及 `_local_add` 定义。后续 server 信号量调用崩溃使完整构建未完成；下一次继续复用 Pod 产物并抓取真实故障栈。此进展尚不代表 UBT 最终链接、UE App 或签名成功。
 
