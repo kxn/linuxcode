@@ -8,10 +8,12 @@
 | --- | --- | --- |
 | Unity Linux Editor → iOS 工程 → CocoaPods → 原版 Xcode | stage101 的全新 Debug App、Release xcarchive 通过；stage108 隔离增量构建、实际签名及独立 CMS/内容检查也通过 | 这次回归复用 IL2CPP 缓存；没有 Apple 设备信任或 App Store 交付结论 |
 | 原版 macOS UE 工具 → iOS workspace → CocoaPods → 原版 Xcode | UBT、UHT、实际 Pod 静态库和全部游戏 C++ 编译已执行；stage108 v10 已进入最终链接 | 最终链接、完整 App、签名 |
-| 原版 macOS Unity Editor → iOS 工程 | 尚无原生启动或导出通过记录 | Intel Editor、iOS 模块、授权客户端、无界面启动及实际导出 |
+| 原版 macOS Unity Editor → iOS 工程 | 已安装同版本原始输入；Intel 6000.3.27f1 在 Darling 中原生 `-version` 通过 | 真实 batchmode 初始化、原版授权客户端及实际导出 |
 | 独立安装及开发者工程 | 公共源码可在新目录重建 darlingserver；有 XIP/Recovery 输入处理及源码包 | 从干净 Linux 输入装配完整已验证运行环境，仍未自动化完成 |
 
-UE v10 的链接失败为 UBA 临时响应文件路径无法打开；v11 改用官方 UBA_ROOT 环境选项后，观测到原版 ld 子进程加载了 Mac UBA detours，然后在初始化阶段崩溃。两者不能混为一个已证实的原因，也不能据此替换 UBA 或重写链接器。v11 是定位实验，未作为正式环境修复采纳。
+UE 当前已使用 stage110 越过原版 MSBuild/UBT 的两处信号交接死锁，进入 UBA → Clang → ld 的真实最终链接。新的 ld 段对齐断言可用四行独立 C 源同时在直接链接与原版 UBA 链接中复现：当前 legacy libm 将 `log2(16384)` 算成略小于 14，ld 截断后得到 13。Darling 源码已经包含完整 Apple `log.S`，但 CMake 禁用了它并选择了近似实现；正在修正完整数学库的源码选择，避免修改 UE 参数或另写数学特判。2098 个可表示二次幂的对照中，旧实现 364 个不精确，已有原 Apple 库全部正确。这是故障定位结果，尚不是修复后 UE 链接通过记录。
+
+macOS Unity 复用了既有资源工具的完整框架闭包，补入原始 GameController 及其依赖；加载器恢复既有大小写查询，解决包内 `libPcre2` 与加载名称大小写不同的问题。ARC claim 直接移植 Apple objc4-951.1 的 Intel 所有权语义，21 项真实运行检查通过；`macho_source_version` 复用 Apple dyld-1378 及既有组件，20 项真实 Mach-O 检查通过。原版 Editor `-version` 返回正确版本且退出 0；这不代表初始化、授权或导出已通过。源码 fork 和精确证据摘要见[本轮进展](../validation/runtime-source-reuse-progress-2026-10-28.json)。
 
 2026-10-28 对官方远端 HEAD 的一次性核对表明，本地基础提交与上游一致：Darling 为 60ba801decee7a00782f74f6be4c8ffb013f79ff，darlingserver 为 89751e64bc6c2082f7725061824ee0e33395b0de。基础版本与后来叠加的修改、实际装载的二进制是不同概念。已有的上游复用审查只覆盖少数接口，不代表所有历史补丁都已审查。
 
@@ -28,7 +30,7 @@ UE v10 的链接失败为 UBA 临时响应文件路径无法打开；v11 改用�
 
 三份原有二进制的 `kqueue_impl`、`kevent_impl` 和 `kqueue_atfork` 均为强导出；各自的 `kq_mtx`、once 状态和 `kqmap` 为非外部或私有符号。libc 的 weak-bind 流中有 strong-definition 标记，用于覆盖弱使用者，不会把这些私有状态合并。上游 kernel 原本提供弱 fallback，实际使用哪个强后端仍须结合绑定与真实调用判断。
 
-当前 v2 是独立可选的 **libSystem → kernel 路由收敛** 候选：保留 direct kernel 和上游 libc，省去 libSystem 内的队列对象，通过现有 kernel 导出与 reexport 依赖复用实现。host 已完成三个源对象的重链，确认十个队列导出转到 kernel，初始化器的 `kqueue_atfork` 导入也指向 kernel；尚未完成 native 身份、fork、spawn 和队列小用例。它没有实现全进程物理去重，也没有改变默认组合或 immutable stage108。原版 Apple libSystem 仍需要 direct backend，不能全局删除。
+当前 v2 是独立可选的 **libSystem → kernel 路由收敛** 候选：保留 direct kernel 和上游 libc，省去 libSystem 内的队列对象，通过现有 kernel 导出与 reexport 依赖复用实现。host 已完成三个源对象的重链，确认十个队列导出转到 kernel，初始化器的 `kqueue_atfork` 导入也指向 kernel。五项 native 小测试通过：baseline/candidate 的真实 `dlsym`/`dladdr` 身份、持锁 fork、持锁 spawn、receipt/error/readiness；候选的 default/libSystem 查询均落到 kernel，libc 仍独立。它没有实现全进程物理去重，也没有改变默认组合或 immutable stage108。当前仅验证 normal 模板的队列路径，resource-tools 另有 23 个 helper reexport 及依赖尚未纳入候选；不能据此用于完整 UE 流程。原版 Apple libSystem 仍需要 direct backend，不能全局删除。
 
 另一条可选路线是为 Darling libSystem 保留上游 kernel 弱 fallback 与 libSystem/libc 强实现的既有组合，将原版 Apple libSystem 的 direct-kernel 组合单独保留。这能避免再加入第三个强后端，但需要匹配的 kernel 构建和 close、dup、fork、kevent_qos 绑定验证；目前没有构建或采纳这条路线，也不计划为物理删副本重编整个 libc。两条路线都应先复用现有导出与修复机制。
 
@@ -50,7 +52,7 @@ UE v10 的链接失败为 UBA 临时响应文件路径无法打开；v11 改用�
 
 ## 执行顺序
 
-1. **UE 链接。** 复用原版 Clang/UBA 定点工具增加链接模式，复现父子进程、IPC 初始化和文件路径问题；与直接调用原版链接器对照。定位真正失败接口后在对应组件修复。保留已经完成的对象文件，只有链接链通过才回到原 workspace 的完整构建。
+1. **UE 链接。** 修正 libm 构建配置以选用源码中已有的完整 Apple log2 算法，验证整库导出、特殊值和原版直接/UBA 最小链接，再执行复用现有对象的真实 UBT 链接。通过后回到原 workspace 的完整 Xcode 构建与签名。
 2. **UE App 与签名。** 原版 xcodebuild 完成 App，验证 iPhoneOS arm64、真实 Pod 调用已进入最终可执行文件，再由原版 codesign 签名 App 与嵌入框架并独立检查。测试证书与 Apple 开发者签名范围明确区分。
 3. **底层修复跨引擎验证。** 影响进程、线程、VM 或加载器的修改，通过隔离的 Unity 工程/DerivedData 副本验证；不得覆盖 stage101 已验证产物。只影响某个工具配置的修改不触发全矩阵重跑。
 4. **macOS Unity 原版导出。** 并行准备 Intel Editor 和同版本 iOS 模块；按可执行文件加载、版本查询、batchmode/nographics 空项目、原版授权客户端、iOS 导出逐级验证。以实际导出的 Xcode 工程接回 CocoaPods/原版 xcodebuild，最终形成全程 Linux、执行 macOS 原版 Editor 的端到端记录。无显示不等于没有 AppKit/图形库依赖，按真实调用审查。

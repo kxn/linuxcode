@@ -1,6 +1,6 @@
 {
   "created_at": "2026-10-28T03:13:47.711812+00:00",
-  "scope": "Read-only architecture review of active stage108/UE-v10 provider selection and selected upstream source reuse; no new native execution or old matrix reruns.",
+  "scope": "Original read-only review of active stage108/UE-v10 provider selection, followed by an isolated opt-in queue-routing candidate host build and five targeted native probes; no full old matrix rerun.",
   "vendor_heads_confirmed_by_parent": {
     "darling": "60ba801decee7a00782f74f6be4c8ffb013f79ff",
     "darlingserver": "89751e64bc6c2082f7725061824ee0e33395b0de",
@@ -81,14 +81,14 @@
       },
       "impact": "The new direct-kernel queue backend adds fork/spawn repair requirements to upstream libSystem/libc composition. Each image contains private queue storage; symbol definitions alone do not prove which copies receive real queue calls. Active binding must be checked before removing or rebuilding upstream providers.",
       "convergence": "Use an explicit composition choice and existing exports/reexport wiring. The current private v2 omits libSystem queue objects and routes its public helpers to the unchanged direct kernel, retaining upstream libc. An alternative Darling-only kernel build could preserve upstream weak fallback selection while retaining a separate direct-kernel composition for original Apple libSystem. Neither route currently proves process-wide physical deduplication; validate actual calls before adoption.",
-      "limits": "No new binding trace or current failure reproduction was run. Having duplicate definitions does not prove every kqueue request uses both copies. The direct backend has a real original-Apple-libSystem use case and cannot simply be deleted globally. Follow-up found the upstream libc target also embeds kqueue (CMakeLists.txt:186). Public helper exports in all three selected images are strong, and queue mutex/map storage is non-external; this rules out merging the private storage by weak symbol coalescing, but not dormant copies. Do not infer three active queue owners from nm alone.",
+      "limits": "The original read-only review did not run a new binding trace or reproduce the current failure. Having duplicate definitions does not prove every kqueue request uses both copies. The direct backend has a real original-Apple-libSystem use case and cannot simply be deleted globally. Follow-up found the upstream libc target also embeds kqueue (CMakeLists.txt:186). Public helper exports in all three selected images are strong, and queue mutex/map storage is non-external; this rules out merging the private storage by weak symbol coalescing, but not dormant copies. Do not infer three active queue owners from nm alone. Follow-up targeted native checks passed for baseline/candidate identity plus candidate fork/spawn/receipts. They do not provide a process-wide physical deduplication or full-engine result.",
       "followup_host_binding_report": "runtime/kqueue-single-owner-kernel-candidate-v1/host-binding-review-v2.json",
       "coalescing_assessment": {
         "public_export_flags": "Selected libSystem/kernel/libc kqueue_impl, kevent_impl, kqueue_atfork export terminal flags are 0 (strong); candidate uses named kernel reexports, flags 8.",
         "storage": "All three original images have non-external/private-external kq_mtx/once and local kqmap; weak binding cannot merge this private storage.",
         "weak_stream": "libc has strong-definition markers for kqueue_impl/kevent_impl. These advertise strong definitions to override weak users; they do not make libc queue helpers weak or merge local state.",
         "upstream_design": "Original kernel syscall wrappers define weak fallback queue/close/dup helpers; upstream libSystem/libc embed strong implementations. The direct-kernel build adds strong implementations within kernel.",
-        "native_limit": "No dlsym/dladdr native observation has run in this follow-up. Presence of private copies does not prove each receives live queue calls."
+        "native_limit": "Targeted native dlsym/dladdr now confirms three distinct baseline provider function addresses and candidate default/libSystem routing to kernel. This does not establish which libc-local queue calls execute in a full UE process, or physical state removal from libc."
       },
       "composition_choices": [
         {
@@ -210,7 +210,7 @@
         },
         "candidate_initializer_lazy_binding": "libsystem_kernel _kqueue_atfork",
         "owner_kernel_mismatch_rejected": true,
-        "native_binding_verified": false,
+        "native_binding_verified": true,
         "process_wide_physical_single_owner_verified": false
       }
     },
@@ -406,8 +406,7 @@
   ],
   "provider_inspection": "provider-inspection.json",
   "provider_inspection_sha256": "ea6c26fe511d498a15bbbaf814085eb203d366ffe4a340cee842280808e51987",
-  "native_process_started": false,
-  "compiler_or_test_matrix_run": false,
+  "native_process_started": true,
   "host_LLVM_readonly_inspection": true,
   "vendor_HEAD_modified": false,
   "source_mutation_during_review": false,
@@ -417,12 +416,20 @@
   "followup_candidate_status": {
     "scope": "Optional libSystem-to-kernel route convergence; upstream libc retained",
     "host_initializer_and_three_object_link_verified": true,
-    "native_binding_fork_spawn_receipts_verified": false,
+    "native_binding_fork_spawn_receipts_verified": true,
     "defaults_or_immutable_stage108_changed": false,
     "full_process_physical_deduplication_claimed": false,
     "full_UE_or_signing_verified": false,
     "candidate_is_private_and_not_default": true,
-    "template_scope": "Normal stage108 libSystem (58 named reexports); resource-tools baseline has 81. A future resource-tools adoption must preserve its additional helper reexports and dependencies with the existing resource-template linker path; small queue probes do not establish this closure."
+    "template_scope": "Normal stage108 libSystem (58 named reexports); resource-tools baseline has 81. A future resource-tools adoption must preserve its additional helper reexports and dependencies with the existing resource-template linker path; small queue probes do not establish this closure.",
+    "native_smoke_report": "runtime/kqueue-single-owner-kernel-candidate-v1/native-completion-v2.json",
+    "native_smoke_report_sha256": "6c903e44ebdfbbac9382e8a29643b5d70dd9191eb6e1cb79f63b5e0be8a9a2dc",
+    "targeted_native_probes_passed": 5,
+    "native_observation": "RTLD_DEFAULT/libSystem functions match explicit kernel addresses for kqueue_impl/kevent_impl/kqueue_atfork; explicit libc remains distinct."
   },
-  "followup_source_report_sha256": "923c6671c9ce841428fab4e0096661819807f9c5c331fbe64d3a82acb24adf17"
+  "followup_source_report_sha256": "923c6671c9ce841428fab4e0096661819807f9c5c331fbe64d3a82acb24adf17",
+  "original_audit_native_process_started": false,
+  "original_audit_compiler_or_test_matrix_run": false,
+  "full_test_matrix_run": false,
+  "followup_updated_at": "2026-10-28T03:52:34.748673+00:00"
 }
