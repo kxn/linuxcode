@@ -1,0 +1,28 @@
+{
+  "scope": "Keep an already-sent S2C request serialized until its real reply is consumed across signal-interrupted waits on a live target. No new protocol or scheduler.",
+  "source_fix": {
+    "path": "vendor/darlingserver/src/thread.cpp",
+    "sha256": "2bb7e29795bb2faf32a8da48e68981af2bff75bcdf1cdf545a06358908b1818b",
+    "fork_commit": "ed13f2153fde8c150455062f26035e8e291e66d4",
+    "branch": "linuxcode/xcode-x86_64"
+  },
+  "failure_evidence": "runtime/unreal-server-null-semaphore-fault-xdmd4z_r/selected-fault.json",
+  "regression": {
+    "path": "runtime/s2c-interrupted-reply-cg9dc7l5/result.json",
+    "sha256": "7faa347c8089d84846ad281c663b8a84fbbbfafe015778dc4803c61e994f46d4",
+    "candidate_passes": 5,
+    "historical_expected_protocol_failures": 3,
+    "historical_control_passes": 2
+  },
+  "source_build": "runtime/remap-diagnostic-server-scqr1r7d/stage.json",
+  "stage": "artifacts/private-procfs-auditsession107-stage.json",
+  "native_ue_attempt": "runtime/unreal-xcode-build-gqvdbmfj/attempt-stage107-s2c-v8/prepared.json",
+  "native_ue_terminal_result": null,
+  "not_covered": [
+    "Real XNU semaphore blocking in host fixture",
+    "Actual S2C signal enter/exit handshake in host fixture",
+    "Dead target and exec generation semaphore lifetime",
+    "Complete UE compilation, Pod linkage, App signing"
+  ],
+  "full_goal_complete": false
+}

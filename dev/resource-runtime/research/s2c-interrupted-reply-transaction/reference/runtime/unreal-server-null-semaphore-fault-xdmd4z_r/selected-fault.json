@@ -1,0 +1,33 @@
+{
+  "scope": "Actual original Xcode/UE stage106 failure, selected server fault and S2C state only; private process core and original tool logs excluded.",
+  "stage": "artifacts/private-procfs-auditsession106-stage.json",
+  "server_sha256": "4ac73837c0aee36b06fee941d8d7630a7ee1187344f96bc7e945f65c93131d52",
+  "native_xcode_status": 132,
+  "server_signal": "SIGABRT",
+  "server_failure": "Received S2C reply but thread already had one pending",
+  "throw_site": "vendor/darlingserver/src/call.cpp:143",
+  "existing_reply": {
+    "s2c_number": "mmap",
+    "bytes": 40,
+    "errno_result": 0
+  },
+  "incoming_reply": {
+    "s2c_number": "munmap",
+    "bytes": 28
+  },
+  "target_thread": {
+    "dead": false,
+    "terminating": false,
+    "interrupted_for_signal": true,
+    "handling_interrupted_call": true,
+    "reply_semaphore_count": -1,
+    "perform_semaphore_count": 0
+  },
+  "inference": "Consistent with the already-sent S2C wait being interrupted and returning its perform gate before consuming the late reply. Different reply types exclude a simple duplicate of one client reply. This does not independently prove all exec/death lifetime paths.",
+  "private_evidence": {
+    "runtime/unreal-server-null-semaphore-fault-xdmd4z_r/capture.log": "6b5177b338a3ab207d0d48e1223642114c6044ea732391db1da96fe5a7db5c8e",
+    "runtime/unreal-server-null-semaphore-fault-xdmd4z_r/s2c-detail.log": "f24f15015fa17814ab337e56cc9b8b7cfd6a7127effe7f992df88428177d3dc9",
+    "runtime/unreal-server-null-semaphore-fault-xdmd4z_r/frames.log": "da6d237832d96aded6313d0b570971a967aa3b9a2cd4468966ae3b7c063d991f"
+  },
+  "full_goal_complete": false
+}

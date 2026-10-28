@@ -1,0 +1,21 @@
+{
+  "name": "s2c-interrupted-reply-transaction",
+  "payload": [
+    "vendor/darlingserver/src/thread.cpp",
+    "fixtures/hello/s2c-interrupted-reply.cpp",
+    "fixtures/hello/thread-resume-handoff-c.c",
+    "scripts/probe-s2c-interrupted-reply.py",
+    "scripts/resolve-evidence-history.py",
+    "scripts/build-remap-diagnostic-server.py",
+    "scripts/stage-server-only-runtime.py"
+  ],
+  "reference": [
+    "artifacts/s2c-interrupted-reply-transaction-v1.json",
+    "runtime/unreal-server-null-semaphore-fault-xdmd4z_r/selected-fault.json",
+    "runtime/s2c-interrupted-reply-cg9dc7l5/result.json",
+    "runtime/remap-diagnostic-server-gez65ff_/stage.json",
+    "runtime/remap-diagnostic-server-scqr1r7d/stage.json",
+    "artifacts/private-procfs-auditsession107-stage.json",
+    "runtime/unreal-xcode-build-gqvdbmfj/attempt-stage107-s2c-v8/prepared.json"
+  ]
+}
