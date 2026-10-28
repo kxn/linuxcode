@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "scope": "Only the Recovery ICU data inputs and version metadata consumed by the existing ICU staging step",
+  "version": "26.6.2",
+  "build": "25G83",
+  "archive_root": "macOS Base System",
+  "image": {
+    "name": "BaseSystem.dmg",
+    "length": 960530321,
+    "sha256": "edddd0d5869caaa12e29e6996a04f11590280580976a119dbd42c24fa62fe18e"
+  },
+  "pin_provenance": {
+    "chunklist_sha256": "06f7c498f856341f467ba1faedf2717fb2c172ae0aff4658a1467cbf46b711f9",
+    "image_chunks": 92,
+    "original_signed_chunklist_and_image_verified_when_establishing_pin": true,
+    "verifier_url": "https://raw.githubusercontent.com/acidanthera/OpenCorePkg/81ecf1a7e75c318dfc859ddabe5b91f4af757231/Utilities/macrecovery/macrecovery.py",
+    "verifier_sha256": "3023a9b4ca79a5255d93c00f25ab5df37e6f938b729b797d9ecea56184b17aff"
+  },
+  "files": {
+    "usr/share/icu/icudt78l.dat": {
+      "length": 35444880,
+      "sha256": "666a97d4dd1139f537290d74a661cc6b6da6cc58da24486b3cb282eacbcfa549"
+    },
+    "usr/share/icu/icutzformat.txt": {
+      "length": 3,
+      "sha256": "327d09f9e798492441b2a7839e2ce11498c64ae4c36ea98e248b89c5fc3172fe"
+    },
+    "System/Library/CoreServices/SystemVersion.plist": {
+      "length": 603,
+      "sha256": "6151cb883e5b48d43a33d4d41956405a1cd502e0c8622319388d943e2cb804a1"
+    }
+  }
+}

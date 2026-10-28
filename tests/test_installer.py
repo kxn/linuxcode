@@ -75,6 +75,9 @@ class InstallerChecks(unittest.TestCase):
                 self.assertIn('linuxcode/dev/build-public-server.py', names)
                 self.assertIn('linuxcode/dev/locks/public-server.lock.json', names)
                 self.assertIn('linuxcode/validation/public-server-source-build-2026-10-28.json', names)
+                self.assertIn('linuxcode/dev/import-recovery-icu.py', names)
+                self.assertIn('linuxcode/dev/locks/recovery-icu-25G83.lock.json', names)
+                self.assertIn('linuxcode/validation/recovery-icu-explicit-import-2026-10-28.json', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unreal-cocoapods-workspace-integration/payload/fixtures/UECocoaPodsSmoke/Podfile.template', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unreal-cocoapods-workspace-integration/payload/fixtures/iOSCocoaPodsSmoke/LocalMath/LocalMath.podspec', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/unreal-xcode-existing-dotnet-environment/payload/scripts/unreal-xcode-dotnet-environment.sh', names)
@@ -113,6 +116,15 @@ class InstallerChecks(unittest.TestCase):
             self.assertEqual(len(plan['repositories']), 6)
             self.assertFalse(plan['commands_executed'])
             self.assertFalse(fresh_workspace.exists())
+            recovery_output = Path(directory) / 'recovery-plan-only'
+            result = subprocess.run([sys.executable, str(unpacked / 'linuxcode/dev/import-recovery-icu.py'),
+                                     '--image', '/not-present/BaseSystem.dmg', '--sevenzip', '/not-present/7z',
+                                     '--output', str(recovery_output), '--plan'],
+                                    text=True, capture_output=True, check=True)
+            recovery_plan = json.loads(result.stdout)
+            self.assertEqual(len(recovery_plan['selected_files']), 3)
+            self.assertFalse(recovery_plan['commands_executed'])
+            self.assertFalse(recovery_output.exists())
             with self.assertRaisesRegex(RuntimeError, 'replace'):
                 cli.package(output, include_research_history=False)
 

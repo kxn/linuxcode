@@ -67,6 +67,8 @@ UE 的原版 Intel macOS SDK 已在 Darling 下成功编译完整 UnrealBuildToo
 
 ## 工具链和输入
 
+新增的 [Recovery ICU 显式导入](recovery-icu-inputs.md)仅补齐旧 recovery 提取遗漏的两个 ICU 文件，用 Linux 7zip 和准确镜像 SHA 在新私有目录导入，路径直接兼容既有 consumer；不运行原生工具，也不代表完整输入或冷候选已经组装。
+
 `doctor` 不启动 Darling，不安装依赖，输出 JSON，分别列出工具版本、源文件差异和运行输入。命令本身完成检查时返回 0；请检查 `sources.exact_checkpoint`、`tools`、`inputs` 与 `cold_candidate_rebuild_ready`，不能仅凭 doctor 的退出码推断环境已经能编译 iOS。
 
 实际组件脚本使用 Linux Clang/LLVM 19、GNU C++、CMake/Ninja、Bison/Flex/M4。Debian 13 的宿主包清单在 `debian-packages.txt`，需要时可由开发者安装：

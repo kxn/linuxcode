@@ -518,10 +518,13 @@ def package(output, include_research_history=True):
                'validation/unity-certificate-ci-2026-10-27.json', 'validation/unity-p12-import-2026-10-27.json',
                'validation/unity-fresh-linux-end-to-end-2026-10-27.json',
                'validation/public-server-source-build-2026-10-28.json',
+               'validation/recovery-icu-explicit-import-2026-10-28.json',
                'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'tests/test_identity_import.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/research-sources.py', 'dev/research-sources.md',
                'dev/build-public-server.py', 'dev/public-server-build.md', 'dev/locks/public-server.lock.json',
                'tests/test_public_server_build.py',
+               'dev/import-recovery-icu.py', 'dev/recovery-icu-inputs.md',
+               'dev/locks/recovery-icu-25G83.lock.json', 'tests/test_recovery_icu_import.py',
                'tests/test_research_sources.py', 'dev/locks/developer.lock.json',
                'dev/locks/source-manifest.json']
     resource = 'dev/resource-runtime/'

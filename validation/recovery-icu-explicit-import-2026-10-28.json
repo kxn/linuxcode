@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "verified": true,
+  "scope": "One explicit Recovery ICU input closure only; not a complete cold runtime assembly",
+  "image": {
+    "sha256": "edddd0d5869caaa12e29e6996a04f11590280580976a119dbd42c24fa62fe18e",
+    "length": 960530321
+  },
+  "version": "26.6.2",
+  "build": "25G83",
+  "files": {
+    "usr/share/icu/icudt78l.dat": {
+      "path": "macOS Base System/usr/share/icu/icudt78l.dat",
+      "length": 35444880,
+      "sha256": "666a97d4dd1139f537290d74a661cc6b6da6cc58da24486b3cb282eacbcfa549"
+    },
+    "usr/share/icu/icutzformat.txt": {
+      "path": "macOS Base System/usr/share/icu/icutzformat.txt",
+      "length": 3,
+      "sha256": "327d09f9e798492441b2a7839e2ce11498c64ae4c36ea98e248b89c5fc3172fe"
+    },
+    "System/Library/CoreServices/SystemVersion.plist": {
+      "path": "macOS Base System/System/Library/CoreServices/SystemVersion.plist",
+      "length": 603,
+      "sha256": "6151cb883e5b48d43a33d4d41956405a1cd502e0c8622319388d943e2cb804a1"
+    }
+  },
+  "original_offline_OpenCore_verifier_sha256": "3023a9b4ca79a5255d93c00f25ab5df37e6f938b729b797d9ecea56184b17aff",
+  "signed_chunklist_sha256": "06f7c498f856341f467ba1faedf2717fb2c172ae0aff4658a1467cbf46b711f9",
+  "image_chunks": 92,
+  "original_offline_signed_chunklist_and_image_verification_passed": true,
+  "ordinary_import_rechecks_fixed_image_SHA_only": true,
+  "sevenzip_exit_status": 0,
+  "sevenzip_sha256": "244096cca12b8ec2b1330573071a53550f2369da8f2687af183f41ebdf52a9f5",
+  "output_layout_preserves_original_recovery_consumer_paths": true,
+  "original_consumer": "scripts/stage-icu-data-runtime.py",
+  "original_prepare_recovery_behavior_changed": false,
+  "read_only_import_recheck_passed": true,
+  "unit_regressions_passed": 7,
+  "frozen_candidate_v12_sha256": "bf36711cd7f93b7c6c6c4361d16e9ea99717429698b98b39a3df40d041c42759",
+  "frozen_candidate_modified": false,
+  "default_runtime_changed": false,
+  "native_runtime_launched": false,
+  "session_lock_acquired": false,
+  "private_identity_or_activation_files_accessed": false,
+  "full_recovery_input_set_imported": false,
+  "cold_Darling_Xcode_rebuild_ready": false,
+  "private_input_proof": "runtime/recovery-icu-input-proof-yfbps6_o/input-proof.json",
+  "private_import_report": "runtime/recovery-icu-input-proof-yfbps6_o/import-result.json"
+}

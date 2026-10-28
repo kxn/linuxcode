@@ -28,6 +28,23 @@
       "gap": "Recovery 'latest' lookup may no longer yield 25G83; current cache-image pins reject changed input. Exact recovery metadata must be locked before this can be a stable cold recipe."
     },
     {
+      "id": "recovery-icu-explicit-input",
+      "automated": true,
+      "automatic_setup_integration": false,
+      "command": "python3 dev/import-recovery-icu.py --image /path/to/BaseSystem.dmg --sevenzip /usr/lib/7zip/7z --output NEW_WORKSPACE/runtime/recovery",
+      "source": "dev/recovery-icu-inputs.md",
+      "input_lock": "dev/locks/recovery-icu-25G83.lock.json",
+      "requires": [
+        "Explicit matching 26.6.2 / 25G83 Recovery image",
+        "Linux 7zip",
+        "New private output directory"
+      ],
+      "selected_input_closure_validated": true,
+      "cold_install_validated": false,
+      "result": "Imports only the two ICU resources and SystemVersion metadata in the existing consumer layout; never runs staging or changes a selected runtime.",
+      "gap": "Complete matching recovery acquisition, caches, paired libraries and the remaining cold candidate assembly remain separate."
+    },
+    {
       "id": "fullsystem-reference",
       "automated_upstream_entry": "scripts/prepare-intel-system-image.sh",
       "requires": [
