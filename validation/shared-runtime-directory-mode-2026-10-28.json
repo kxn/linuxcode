@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "package_kind": "source_only",
+  "scope": "Confirmed common-runtime bootstrap directory-permission correction; original signing remains unfinished",
+  "configuration": "config/unified-runtime-v12.json",
+  "configuration_sha256": "11a19fd0187a776085a0403b4c429d252cb3591196771d2460a14c6923840568",
+  "launcher_stage": "runtime/run-environment-launcher-bcf18o5u/stage.json",
+  "launcher_stage_sha256": "7580ede27bbd6eaebf8f7490f05fa20a324f73de2ca2780a27b9a5913d58af86",
+  "runtime_stage": "artifacts/private-procfs-auditsession112-stage.json",
+  "runtime_stage_sha256": "29f0875e8df34740bc71d3d50743e0418ab13e5c46dc2bca353e97ebb651d993",
+  "source": {
+    "builder": "scripts/stage-run-environment-launcher.py",
+    "sha256": "09dcb3da9987c7c6d90a5ea8df097f1bee52c7883f3ee623f98d41fa2a3cf239"
+  },
+  "confirmed_previous_blocker": {
+    "configuration": "config/unified-runtime-v11.json",
+    "only_registered_job": "bootstrapper",
+    "registered_jobs": 1,
+    "new_launch_directory_mode": "0775",
+    "launchctl_original_permission_check_rejected_group_writable_directory": true
+  },
+  "fix": {
+    "new_directories_inherit_matching_lower_mode": true,
+    "missing_lower_directory_default_mode": "0755",
+    "existing_directories_chmodded": false,
+    "original_launchctl_permission_check_modified": false,
+    "effective_launch_directories": [
+      {
+        "directory": "System/Library/LaunchDaemons",
+        "mode": "0o755"
+      },
+      {
+        "directory": "System/Library/LaunchAgents",
+        "mode": "0o755"
+      },
+      {
+        "directory": "Library/LaunchDaemons",
+        "mode": "0o755"
+      },
+      {
+        "directory": "Library/LaunchAgents",
+        "mode": "0o755"
+      }
+    ]
+  },
+  "actual_v12": {
+    "bootstrap_succeeded": true,
+    "original_codesign_entered": true,
+    "initial_shellspawn_timeout_warning_observed": false,
+    "identity_query_status": 0,
+    "identity_matches": 1,
+    "outer_status": -9,
+    "attempt_limit_seconds": 120,
+    "native_sign_status": [],
+    "native_verify_status": [],
+    "original_codesign_frontend_completed": false,
+    "result_sha256": "7da736322f500d35a1c470a23597291004b4f2c53a95438a467f9459d358c7b9",
+    "private_log_sha256": "6fc1f324709d2aa194be62d60c371f476be0d18f5a164667e857654693deeb05"
+  },
+  "unchanged_shared_search": {
+    "stage": "runtime/shared-runtime-search-kwjo974f/stage.json",
+    "all_processes_common": true,
+    "library_directories": 2,
+    "participated_in_this_successful_bootstrap": true,
+    "independent_performance_speedup_verified": false
+  },
+  "boundaries": [
+    "The proven bootstrap blocker was directory permissions; previous metadata-search and old-core observations describe separate overhead",
+    "Original certificate signing and strict verification did not finish in this attempt",
+    "This is not a new Unity export or full Xcode validation",
+    "Private identity material, logs, traces, binaries and cores are excluded"
+  ]
+}

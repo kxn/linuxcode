@@ -29,3 +29,5 @@ stage112/v9 的公共网络修复已发布到同一 XNU fork 分支：接口枚�
 后续 v10/v11 源码候选接入了已有 raw Linux mounts 读取实现、从新 prefix 克隆排除历史 core，并按原优先级聚合共享库搜索。共享搜索层在宿主选择同一组 187 个 Intel dylib，将库目录从 71 个收敛到 2 个，并保留 framework fallback。v11 实际仍在 90 秒 bootstrap 等待后退出，未进入 codesign；这些源码准备和宿主等价检查不构成原生启动或性能验收。对应精选结果见 reference 中的 shared-network-runtime-source-checkpoint 摘要。
 
 共享搜索工具另增加了未来输入的重名保护：NFD 分解和 ASCII 大小写折叠后发生冲突的库保留整组原目录顺序，framework 冲突组保留原 fallback，不生成快速别名；原有 `@loader_path` 处理保留。两目录小型宿主样例的 28 项检查覆盖旧工具误选后一个 provider、大小写/NFD 冲突及普通输入。当前 v11 名称集合没有这类冲突，此保护不改变既有 v11 索引或其启动失败结论。
+
+v11 的确定启动阻断随后由真实 job 表定位：新建 LaunchDaemons/Agents 目录为 `0775`，原 launchctl 权限检查过滤整个服务目录，只剩 bootstrapper。v12 让新建目录继承对应 lower 目录权限，lower 不存在时用 `0755`，保留已有目录和原权限检查。实际 v12 已成功 bootstrap、进入原版 codesign，identity 查询返回 0、匹配 1 项；之后达到 120 秒限时，签名及 verify 仍未完成。相同共享搜索层参与这次成功启动，但没有单独验证性能提速；此前搜索和历史 core 的开销不能代替这次已确认的目录权限根因。精选结果见 shared-runtime-directory-mode 摘要。

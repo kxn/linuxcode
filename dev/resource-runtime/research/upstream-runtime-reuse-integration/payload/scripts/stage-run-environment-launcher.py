@@ -110,6 +110,31 @@ if a.runtime_stage:
     for source,target in [(base,system),(root/'runtime/state/prefix',prefix)]:
         print('REFLINK_COPY',source,target,flush=True)
         subprocess.run(['cp','-a','--reflink=always','--no-preserve=links',str(source),str(target)],check=True)
+    created_install_directories=[]
+    def install_directory(destination,tree):
+        """Create only missing image directories with the lower system mode.
+
+        A host umask of 002 must not create a group-writable upper directory
+        which hides a safe lower LaunchDaemons/LaunchAgents directory.
+        Existing prefix/project directories retain their original permissions.
+        """
+        relative=destination.relative_to(tree)
+        current=tree
+        for part in relative.parts:
+            current=current/part
+            assert current.resolve().is_relative_to(tree.resolve()),current
+            if current.exists():
+                assert current.is_dir(),current
+                continue
+            lower=base/current.relative_to(tree)
+            mode=(lower.stat().st_mode & 0o7777) if lower.is_dir() else 0o755
+            current.mkdir(mode=mode)
+            # mkdir applies the caller's umask; restore the selected mode only
+            # on the directory just created, never on existing user content.
+            current.chmod(mode)
+            created_install_directories.append(dict(tree=str(tree.relative_to(root)),
+                directory=str(current.relative_to(tree)),mode=oct(mode),
+                inherited_from_lower=str(lower.relative_to(root)) if lower.is_dir() else None))
     # A runtime prefix is not an archive of earlier debugging sessions. Keep
     # the original evidence in place; discard only our newly cloned copies.
     excluded_count=excluded_bytes=0
@@ -161,7 +186,7 @@ if a.runtime_stage:
         else:files['.']=dict(sha256=sha(source))
         inventory[target]=dict(source=str(source.relative_to(root)),files=files)
         for tree in [system,prefix]:
-            destination=tree/target;destination.parent.mkdir(parents=True,exist_ok=True)
+            destination=tree/target;install_directory(destination.parent,tree)
             assert destination.parent.resolve().is_relative_to(tree.resolve()),destination
             if destination.is_symlink() or destination.is_file():destination.unlink()
             elif destination.is_dir():shutil.rmtree(destination)
@@ -172,7 +197,7 @@ if a.runtime_stage:
         for tree in [system,prefix]:
             destination=tree/target
             assert destination.parent.resolve().is_relative_to(tree.resolve()),destination
-            destination.parent.mkdir(parents=True,exist_ok=True)
+            install_directory(destination.parent,tree)
             assert not destination.is_symlink() and not destination.is_dir(),destination
             shutil.copy2(source,destination)
             assert sha(destination)==digest
@@ -186,7 +211,7 @@ if a.runtime_stage:
             for tree in [system,prefix]:
                 destination=tree/str(home_path).lstrip('/')
                 assert destination.parent.resolve().is_relative_to(tree.resolve()),destination
-                destination.mkdir(mode=0o755,parents=True,exist_ok=True)
+                install_directory(destination,tree)
         # A complete cohort cannot be overridden by a post-bootstrap account mount.
         start=namespace_text.index('# Validate optional account fixtures before entering the Linux rootfs.')
         end=namespace_text.index('# The selected original Xcode package',start)
@@ -265,6 +290,7 @@ mount --bind "$project/{private_state}" "$rootfs/state"
                       removed_cloned_session_IPC=removed,providers=inventory,all_provider_bytes_installed_before_first_Darling=True,
                       excluded_cloned_diagnostics=dict(root_numeric_core_files=excluded_count,logical_bytes=excluded_bytes,original_evidence_modified=False),
                       late_provider_mounts=0,remaining_late_mounts=['private Darwin temporary tmpfs']+([] if cohort_path else ['optional account database files']))
+    materialized['created_install_directories']=created_install_directories
     if cohort_path:
         materialized['service_cohort']=dict(manifest=str(cohort_path.relative_to(root)),manifest_sha256=sha(cohort_path),
                                            files=cohort_inventory,service_home=home,all_files_installed_before_first_Mach_O=True)
