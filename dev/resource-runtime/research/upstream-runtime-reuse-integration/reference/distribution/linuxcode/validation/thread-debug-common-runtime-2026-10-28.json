@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "package_kind": "source_only",
+  "scope": "Native x86 Mach debug-state milestone; original Client still fails later",
+  "source_fork": {
+    "url": "https://github.com/kxn/darlingserver",
+    "branch": "linuxcode/xcode-x86_64",
+    "parent": "4328b8010abad9ff1dbef2bd255da06b505c49ca",
+    "commit": "de357b095584fbe9b24b37a404d691b1e4d872d7"
+  },
+  "configuration": "config/unified-runtime-v13.json",
+  "configuration_sha256": "81ad34478551d9ec89a73662270c20b195108ceb66130ba8ddeef0a86a61b990",
+  "stage": "artifacts/private-procfs-auditsession113-stage.json",
+  "stage_sha256": "49feb22effaec95e9685a647e513668e039023a892a10ff5881ab6464be671c4",
+  "source_delta": {
+    "full_server_source_build": false,
+    "translation_units": 2,
+    "parent_private_stage": "artifacts/private-procfs-auditsession112-stage.json",
+    "baseline_server_sha256": "a0c314193296629db2318f7afd4934ff45bc391fe2a1ba969fe6268f823b5410",
+    "baseline_relink_identical": true,
+    "server_sha256": "b8a60a6f5cc12579c71397d01ab6b4262d1562dd571f0fce9927304ad2a43514",
+    "compiler_dependencies": 763,
+    "source_files": {
+      "vendor/darlingserver/duct-tape/src/thread.c": "b8a1cccfdcc4756eea971ef17a0dce0283016522d964faa75f0f50b961982bd3",
+      "vendor/darlingserver/duct-tape/include/darlingserver/duct-tape/hooks.h": "21e5a7b1acbf84c876bb37543e393655526d90e8a5ccdf4eda9760c373155e10",
+      "vendor/darlingserver/src/server.cpp": "6d348b36aecdb4f45b60af7b17eee1b3e5a82adedc9404771cf5d35f4cbac308",
+      "vendor/darlingserver/internal-include/darlingserver/linux-debug-registers.hpp": "3babc5db08510939cfb5f9b5d6d0aa69371c910ca03a3a0e036d16fb80a946cd",
+      "vendor/darlingserver/duct-tape/internal-include/darlingserver/duct-tape/thread-debug-state.h": "c6b9cdb752c258bd9cebca62d9137bb76fe7ed6ecbfcc4a5601b10d110752f7c"
+    },
+    "kernel_changed": false,
+    "kernel_sha256": "24b971f2faa556abb83eccb0f36da5e2bba24f80e90cad00ee20d6705f8a1907",
+    "public_RPC_layout_changed": false,
+    "hook_ABI_append_only": true
+  },
+  "host_controls": {
+    "checks": 117,
+    "real_owned_Linux_child_worker_thread": true,
+    "nonzero_DR0_DR1_DR7_get_set": true,
+    "original_group_SIGSTOP_preserved": true,
+    "pending_SIGUSR1_and_23_realtime_signals_preserved": true,
+    "invalid_write_rollback": true,
+    "target_exit_ESRCH": true,
+    "existing_tracer_EPERM_refusal": true,
+    "production_Mach_marshaller": true,
+    "strict_flavor_and_count_checks": true,
+    "compat32_marshalling_only": true,
+    "Darwin_32bit_runtime_verified": false,
+    "reusable_entry": "scripts/test-thread-debug-registers-host.py",
+    "reusable_entry_executed": false,
+    "manual_commands_executed": true,
+    "repeated_original_controls": false,
+    "result_sha256": "1967df2505b1a0581ad0797b26a5967f025c62b38aaec59bda6ef41f8bdf84e9"
+  },
+  "actual_native_Mach": {
+    "outer_status": 0,
+    "native_status": [
+      "0"
+    ],
+    "gate_passed": true,
+    "elapsed_seconds": 3.950952824088745,
+    "external_GDB": false,
+    "result_sha256": "0946f8999b5f37d93c6ce82bea1fc82819e6418f93d37ad09c39daabc432a68d",
+    "fixture": "fixtures/hello/mach-thread-debug-state.c",
+    "fixture_sha256": "7be9654c2446a16a46889d11ab09ae95ceac0ab8077298c5a3d33088738c731f"
+  },
+  "original_Client": {
+    "outer_status": 139,
+    "native_status": [
+      "139"
+    ],
+    "elapsed_seconds": 23.352652161964215,
+    "external_GDB": false,
+    "named_pipe_started": true,
+    "old_MachExceptionInfo_error_observed": false,
+    "old_abort_default_effects_observed": false,
+    "later_SIGSEGV_unresolved": true,
+    "gate_passed": false,
+    "license_verified": false,
+    "Editor_started": false,
+    "result_sha256": "681ef9cb1ac22d6841ad165d28d27eb06a09b08766a24ba7622bc22dada312c1"
+  },
+  "boundaries": [
+    "Mach API success is separate from original Client completion",
+    "The current original Client naturally exited with SIGSEGV/139; absence of the old debug-state abort does not establish licensing success",
+    "No replacement libunwind was installed for this milestone",
+    "Original Unity export and full Xcode regression have not been validated on this server candidate",
+    "Private ELF files, credentials, raw logs and cores are excluded"
+  ]
+}

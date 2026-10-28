@@ -31,3 +31,7 @@ stage112/v9 的公共网络修复已发布到同一 XNU fork 分支：接口枚�
 共享搜索工具另增加了未来输入的重名保护：NFD 分解和 ASCII 大小写折叠后发生冲突的库保留整组原目录顺序，framework 冲突组保留原 fallback，不生成快速别名；原有 `@loader_path` 处理保留。两目录小型宿主样例的 28 项检查覆盖旧工具误选后一个 provider、大小写/NFD 冲突及普通输入。当前 v11 名称集合没有这类冲突，此保护不改变既有 v11 索引或其启动失败结论。
 
 v11 的确定启动阻断随后由真实 job 表定位：新建 LaunchDaemons/Agents 目录为 `0775`，原 launchctl 权限检查过滤整个服务目录，只剩 bootstrapper。v12 让新建目录继承对应 lower 目录权限，lower 不存在时用 `0755`，保留已有目录和原权限检查。实际 v12 已成功 bootstrap、进入原版 codesign，identity 查询返回 0、匹配 1 项；之后达到 120 秒限时，签名及 verify 仍未完成。相同共享搜索层参与这次成功启动，但没有单独验证性能提速；此前搜索和历史 core 的开销不能代替这次已确认的目录权限根因。精选结果见 shared-runtime-directory-mode 摘要。
+
+公共 v13/stage113 接入服务端 x86 Mach debug-state get/set。该 server 是在逐字节一致的 stage112 基线重链接上更新 2 个编译单元的已验证增量，保持 `full_server_source_build=false`；kernel112、公共库、账号和目录权限保持原配置。117 项真实 Linux 子线程控制与生产 Mach marshaller 检查已通过；复用入口随包保存，没有为发布重复运行原控制。公共 Mach API 读写随后在真实 v13 中通过，外层/原生状态均为 0，含启动共 3.95 秒，无外部 GDB。
+
+同 v13 的原版 Client 单次无 GDB 运行仍失败：named-pipe 已启动，本次未观察到旧的 debug-state MachExceptionInfo unsupported/SIGABRT，随后自然 SIGSEGV/139 退出。Mach API 已通过不表示 Client、许可验证或 Unity 导出已完成。本轮没有接入猜测性的 libunwind 替换。源码已发布到原有 darlingserver 分支，精选结果见 thread-debug-common-runtime 摘要。

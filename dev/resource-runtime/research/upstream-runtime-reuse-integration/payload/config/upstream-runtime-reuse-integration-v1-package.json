@@ -87,7 +87,17 @@
     "vendor/darling/src/external/security/keychain/ot/OTConstants.h",
     "vendor/darling/src/external/security/OSX/sec/Security/SecPolicy.c",
     "vendor/darling/src/external/security/OSX/sec/Security/SecPolicyChecks.list",
-    "config/unified-runtime-v12.json"
+    "config/unified-runtime-v12.json",
+    "vendor/darlingserver/duct-tape/include/darlingserver/duct-tape/hooks.h",
+    "vendor/darlingserver/src/server.cpp",
+    "vendor/darlingserver/internal-include/darlingserver/linux-debug-registers.hpp",
+    "vendor/darlingserver/duct-tape/internal-include/darlingserver/duct-tape/thread-debug-state.h",
+    "scripts/stage-server-only-runtime.py",
+    "scripts/test-thread-debug-registers-host.py",
+    "fixtures/hello/linux-debug-registers-host.cpp",
+    "fixtures/hello/thread-debug-state-host-bridge.c",
+    "fixtures/hello/mach-thread-debug-state.c",
+    "config/unified-runtime-v13.json"
   ],
   "reference": [
     "distribution/linuxcode/validation/runtime-source-reuse-progress-2026-10-28.json",
@@ -105,7 +115,8 @@
     "distribution/linuxcode/validation/unified-runtime-source-checkpoint-2026-10-28.json",
     "runtime/unity-macos-editor-metadata/batchmode-unified-v9-outcome.json",
     "distribution/linuxcode/validation/shared-network-runtime-source-checkpoint-2026-10-28.json",
-    "distribution/linuxcode/validation/shared-runtime-directory-mode-2026-10-28.json"
+    "distribution/linuxcode/validation/shared-runtime-directory-mode-2026-10-28.json",
+    "distribution/linuxcode/validation/thread-debug-common-runtime-2026-10-28.json"
   ],
   "private_logs": []
 }
