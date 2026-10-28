@@ -6,7 +6,7 @@
 
 | 流程 | 已确认 | 尚未完成 |
 | --- | --- | --- |
-| Unity Linux Editor → iOS 工程 → CocoaPods → 原版 Xcode | stage101 的全新 Debug App、Release xcarchive 通过；stage108 隔离增量构建、实际签名及独立 CMS/内容检查也通过 | 这次回归复用 IL2CPP 缓存；没有 Apple 设备信任或 App Store 交付结论 |
+| Unity Linux Editor → iOS 工程 → CocoaPods → 原版 Xcode | stage101 的全新 Debug App、Release xcarchive 通过；stage108 以及 stage110/v155 隔离增量构建、实际签名及独立 CMS/内容检查也通过 | 这次回归复用 IL2CPP 缓存；没有 Apple 设备信任或 App Store 交付结论 |
 | 原版 macOS UE 工具 → iOS workspace → CocoaPods → 原版 Xcode | stage110/v155 原始 UBT 和完整 Xcode build 成功；App、真实 Pod 调用、原版签名与独立检查通过 | UE 内容烘焙、游戏暂存和设备运行未验证 |
 | 原版 macOS Unity Editor → iOS 工程 | 已安装同版本原始输入；Intel 6000.3.27f1 在 Darling 中原生 `-version` 通过 | 真实 batchmode 初始化、原版授权客户端及实际导出 |
 | 独立安装及开发者工程 | 公共源码可在新目录重建 darlingserver；有 XIP/Recovery 输入处理及源码包 | 从干净 Linux 输入装配完整已验证运行环境，仍未自动化完成 |
@@ -54,7 +54,7 @@ macOS Unity 复用了既有资源工具的完整框架闭包，补入原始 Game
 
 1. **UE 链接（已通过）。** 修正 libm 构建配置以选用源码中已有的完整 Apple log2 算法，验证整库导出、特殊值和原版直接/UBA 最小链接，再执行复用现有对象的真实 UBT 链接。通过后回到原 workspace 的完整 Xcode 构建与签名。
 2. **UE App 与签名（已通过）。** 原版 xcodebuild 完成 App，验证 iPhoneOS arm64、真实 Pod 调用已进入最终可执行文件，再由原版 codesign 签名 App 与嵌入框架并独立检查。测试证书与 Apple 开发者签名范围明确区分。
-3. **底层修复跨引擎验证。** 影响进程、线程、VM 或加载器的修改，通过隔离的 Unity 工程/DerivedData 副本验证；不得覆盖 stage101 已验证产物。只影响某个工具配置的修改不触发全矩阵重跑。
+3. **底层修复跨引擎验证（本轮已通过）。** 影响进程、线程、VM 或加载器的修改，通过隔离的 Unity 工程/DerivedData 副本验证；不得覆盖 stage101 已验证产物。只影响某个工具配置的修改不触发全矩阵重跑。
 4. **macOS Unity 原版导出。** 并行准备 Intel Editor 和同版本 iOS 模块；按可执行文件加载、版本查询、batchmode/nographics 空项目、原版授权客户端、iOS 导出逐级验证。以实际导出的 Xcode 工程接回 CocoaPods/原版 xcodebuild，最终形成全程 Linux、执行 macOS 原版 Editor 的端到端记录。无显示不等于没有 AppKit/图形库依赖，按真实调用审查。
 5. **收敛与交付。** 每个通过的行为修复连同源码归属进入 fork；独立 linuxcode 工程记录同一候选的构建与装配依赖。用新工作区验证完整安装和开发者重建后才称为可复现整包。源码构建成功、单个符号补齐或检查脚本通过都不是完整流程里程碑。
 
@@ -67,3 +67,5 @@ macOS Unity 复用了既有资源工具的完整框架闭包，补入原始 Game
 - 运行配置校验当前实际输入；历史负对照和证据恢复用于审查及复现。已有摘要缓存继续复用，不以删除校验来掩盖选错二进制。
 
 当前公开源码重建入口见 [public-server-build.md](public-server-build.md)，历史补丁定位入口见 [research-sources.md](research-sources.md)。这些入口不会自动证明完整候选环境已经从零装配成功。
+
+本轮 stage110/v155 的[隔离 Unity 回归](../validation/unity-stage110-incremental-regression-2026-10-28.json)通过：IL2CPP 0 项更新、283 项评估、3 次实际 CodeSign，App 与内嵌 UnityFramework 的独立 CMS/代码页/资源检查通过。原项目及冻结产物前后 bytes/mode/mtime/xattr 一致；不是新的 Editor 导出。
