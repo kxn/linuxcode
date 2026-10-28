@@ -1,6 +1,6 @@
 # 从公开固定源码构建 Linux darlingserver 组件
 
-当前入口已在另一全新私有工作区，从网络获取六个公开仓库的准确提交，使用原有 `dev/linuxcode-dev build server --jobs 2` 和已公开的 `build-support/darlingserver` 成功构建 `4328b801` server。这个提交包含 stage109/110 所用的信号进入等待修复：保留已完成的唤醒结果，让活动等待通过原有 XNU `clear_wait_internal` 转移。29 个命令全部退出 0，没有复用已有目标文件。产物是 Linux ELF64/x86_64；六个源码仓库的实际 HEAD 均匹配所选提交，包含未跟踪文件的 Git 状态均为空。源码锁仅将 server 从 `577b168` 更新到 `4328b801`，其他五仓库和构建工具固定值不变。没有从本机原 vendor 或受保护 build 复制源码或生成头，没有修改这些公开源码。较早 `ed13f21` 和 stage108 `577b168` 的源码、产物及成功证明保留；新编译的 ELF 未执行，原版 UE/Unity 的运行验证仍由独立候选和证据描述。
+当前入口已在全新私有工作区，从网络获取六个公开仓库的准确提交，使用原有 `dev/linuxcode-dev build server --jobs 2` 和已公开的 `build-support/darlingserver` 成功构建 `de357b0` server。该提交在原有 lifecycle、完成等待保留修复上实现 x86 Mach debug-state get/set。29 个命令全部退出 0，没有复用已有目标文件；产物为 Linux ELF64/x86_64，六个源码仓库实际 HEAD 均匹配所选提交，包含未跟踪文件的 Git 状态均为空。源码锁仅将 server 从 `4328b801` 更新到 `de357b0`，其他五仓库和构建工具固定值不变。新增 `linux-debug-registers.hpp` 和 `thread-debug-state.h` 均是已跟踪公开源码，并出现在真实编译依赖中。没有从本机 vendor 或受保护 build 复制源码或私有头，没有修改这些公开源码。此前 stage109/108 和 `ed13f21` 的源码、产物及成功证明保留；新编译的 ELF 未执行，原版 Mach API、UE/Unity 的运行验证仍引用独立候选及证据。
 
 这是一个可复用的 Linux 组件源码构建入口，不是完整 Darling/Xcode 冷安装器。它不执行 server、Darling、Apple 链接器或任何原版工具，不获取全局 `runtime/session.lock`，不替换默认 server、prefix、运行候选或其他构建目录。
 
@@ -31,7 +31,7 @@ python3 dev/build-public-server.py --workspace /path/to/ANOTHER-NEW-public-serve
 | darlinghq/darling-bootstrap_cmds：Linux 上构建 MIG | `0f300a7a04bb1174a3b7db58b57d738aadc14e13` |
 | kxn/darling-xnu：配套公开头文件 | `75eabd3bedadac9873f26002421787d685084d42` |
 | darlinghq/darling-libpthread：配套 `_pthread` 头文件 | `f07f265bfbcf071c1adfc808de971e053ea5edc5` |
-| kxn/darlingserver：含既有 lifecycle 修复及保留已完成唤醒结果的 server | `4328b8010abad9ff1dbef2bd255da06b505c49ca` |
+| kxn/darlingserver：含既有 lifecycle/等待修复及 x86 Mach debug-state get/set | `de357b095584fbe9b24b37a404d691b1e4d872d7` |
 
 前三个 Darling 子仓库的 SHA 和 URL 均按公开主仓库的 gitlink 与 `.gitmodules` 校验。`Developer/Platforms/.../MacOSX.sdk/usr/include` 在这里是 Darling Git 仓库内的公开源码头文件/符号链接布局，不是从 Xcode 拷贝的私有 SDK。最初的稀疏取源遗漏这个布局、XNU 和 pthread 后，MIG 编译分别报缺 `mach/boolean.h`、`sys/_pthread/_pthread_types.h`；补取相应公开提交后完成编译，没有用本机未发布头文件填补。没有下载其余不参与该组件构建的全部 Darling 子模块。
 
@@ -45,8 +45,8 @@ python3 dev/build-public-server.py --workspace /path/to/EXISTING-public-server -
 
 检查会重新核对公开 commit、干净源码、子模块 URL/gitlink、Linux ELF 头和原构建收据，并审计 Ninja 记录的绝对及相对编译依赖。依赖必须属于已跟踪的公开源、该私有 build 的生成文件或系统宿主头；不能悄悄引入工作区里未跟踪的私有头。检查不会重新编译、执行 server 或判断它能够启动完整用户态。
 
-[当前 server 源码构建摘要](../validation/public-server-stage109-source-build-2026-10-28.json)保存本次真实产物、六仓库来源与干净状态、29/29 命令结果和受新锁影响的入口测试。编译依赖审计包含 731 个公开源码、116 个本次生成文件和 533 个系统宿主头。本次使用完整已知依赖闭包，在不存在的新工作区内一次完成取源和构建。
+[当前 server 源码构建摘要](../validation/public-server-stage113-source-build-2026-10-28.json)保存本次真实产物、六仓库来源与干净状态、29/29 命令结果和受新锁影响的入口测试。编译依赖审计包含 733 个公开源码、116 个本次生成文件和 533 个系统宿主头。本次使用完整已知依赖闭包，在不存在的新工作区内一次完成取源和构建。
 
-较早的 [stage108 摘要](../validation/public-server-stage108-source-build-2026-10-28.json)及 [ed13f21 摘要](../validation/public-server-source-build-2026-10-28.json)、对应工作区 HEAD 和 ELF 保持原样；它们对应当时的源码选择，不能用当前新锁重新解释。旧 ed13f21 构建曾在补足公开头文件闭包后复用同一私有工作区内的先前对象，不计入本次全新构建。
+较早的 [stage109 摘要](../validation/public-server-stage109-source-build-2026-10-28.json)、[stage108 摘要](../validation/public-server-stage108-source-build-2026-10-28.json)及 [ed13f21 摘要](../validation/public-server-source-build-2026-10-28.json)、对应工作区 HEAD 和 ELF 保持原样；它们对应当时的源码选择，不能用当前新锁重新解释。旧 ed13f21 构建曾在补足公开头文件闭包后复用同一私有工作区内的先前对象，不计入本次全新构建。
 
 原有 UE/Xcode 构建、系统运行前缀和受保护 server build 保持独立。本入口验证公开源码依赖闭包与 Linux 组件编译；新编译产物的启动及 UE/Unity 运行需引用单独候选实测。此入口没有执行 server 或重复 lifecycle 原生回归，完整 Darling/Xcode 冷重建仍未在此验证。

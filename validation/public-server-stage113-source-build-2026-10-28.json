@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "verified": true,
+  "scope": "Fresh public-source Linux darlingserver component build at de357b0; not a complete Darling/Xcode cold install or execution of this newly built ELF",
+  "server_source_commit": "de357b095584fbe9b24b37a404d691b1e4d872d7",
+  "source_lock_sha256": "4754eed9170b7e99dc84c073bc4eef5a9cb9a7a166b5ce6ed71ce1d95ba1625a",
+  "lock_change": {
+    "repository": "darlingserver",
+    "previous_commit": "4328b8010abad9ff1dbef2bd255da06b505c49ca",
+    "other_five_repository_pins_and_build_tool_checksums_unchanged": true
+  },
+  "repositories": [
+    {
+      "name": "integration-build-support",
+      "path": ".",
+      "selected_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "actual_head": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/linuxcode.git",
+      "tree": "92479f2d1b72a3dce9a860ad86a17deafa7d5fd3",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darling",
+      "path": "vendor/darling",
+      "selected_commit": "e6b769a692d6dd709557761369e0afe3964afccf",
+      "actual_head": "e6b769a692d6dd709557761369e0afe3964afccf",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darling.git",
+      "tree": "77fd89284c0e2f4c4736c46501bead9480b380e8",
+      "local_object_alternates": false
+    },
+    {
+      "name": "bootstrap-cmds",
+      "path": "vendor/darling/src/external/bootstrap_cmds",
+      "selected_commit": "0f300a7a04bb1174a3b7db58b57d738aadc14e13",
+      "actual_head": "0f300a7a04bb1174a3b7db58b57d738aadc14e13",
+      "dirty_status": "",
+      "origin": "https://github.com/darlinghq/darling-bootstrap_cmds.git",
+      "tree": "5646b68710fade9469d3e230bce2b53bea39cfbc",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darling-xnu",
+      "path": "vendor/darling/src/external/xnu",
+      "selected_commit": "75eabd3bedadac9873f26002421787d685084d42",
+      "actual_head": "75eabd3bedadac9873f26002421787d685084d42",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darling-xnu.git",
+      "tree": "0fab66640b111e8ceb88d9800f51fdb72ecd0f2e",
+      "local_object_alternates": false
+    },
+    {
+      "name": "libpthread-headers",
+      "path": "vendor/darling/src/external/libpthread",
+      "selected_commit": "f07f265bfbcf071c1adfc808de971e053ea5edc5",
+      "actual_head": "f07f265bfbcf071c1adfc808de971e053ea5edc5",
+      "dirty_status": "",
+      "origin": "https://github.com/darlinghq/darling-libpthread.git",
+      "tree": "3f4a68dfbf5d819272f729d05d141ada153d4fb5",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darlingserver",
+      "path": "vendor/darlingserver",
+      "selected_commit": "de357b095584fbe9b24b37a404d691b1e4d872d7",
+      "actual_head": "de357b095584fbe9b24b37a404d691b1e4d872d7",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darlingserver.git",
+      "tree": "322eccabc0fb83839462873ab2aa12a643eb6557",
+      "local_object_alternates": false
+    }
+  ],
+  "binary": "runtime/developer/server/darlingserver/darlingserver",
+  "binary_sha256": "e65f8c08a147c58f155c2c39cf83e97c088b2350860b6c98fefdc419038f2ad5",
+  "binary_format": "Linux ELF64/x86_64",
+  "compiler_dependency_audit": {
+    "verified": true,
+    "distinct_paths": 1382,
+    "categories": {
+      "public_source": 733,
+      "generated_build": 116,
+      "system_host": 533
+    },
+    "local_vendor_or_private_Apple_inputs_found": false
+  },
+  "new_header_closure": [
+    {
+      "path": "vendor/darlingserver/internal-include/darlingserver/linux-debug-registers.hpp",
+      "sha256": "3babc5db08510939cfb5f9b5d6d0aa69371c910ca03a3a0e036d16fb80a946cd",
+      "tracked_public_source": true,
+      "in_actual_compiler_dependencies": true
+    },
+    {
+      "path": "vendor/darlingserver/duct-tape/internal-include/darlingserver/duct-tape/thread-debug-state.h",
+      "sha256": "c6b9cdb752c258bd9cebca62d9137bb76fe7ed6ecbfcc4a5601b10d110752f7c",
+      "tracked_public_source": true,
+      "in_actual_compiler_dependencies": true
+    }
+  ],
+  "fresh_public_sources_fetched": true,
+  "new_workspace_and_empty_build_directory": true,
+  "preexisting_component_object_cache_reused": false,
+  "local_vendor_sources_copied": false,
+  "jobs": 2,
+  "command_statuses": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "command_elapsed_seconds": 71.254,
+  "affected_entry_test": {
+    "name": "PublicServerBuildChecks.test_plan_selects_published_server_and_executes_nothing",
+    "passed": true,
+    "tests_run": 1,
+    "unrelated_test_matrix_repeated": false,
+    "log_sha256": "d10ffbd9f0faa72cd6837063279524e199b59fbc3d035051302a1e8dbc4b36ad",
+    "test_source_sha256": "9adc26f9364457426dc1628e17638fed826e534216ca8907df211b512aaf0a4d"
+  },
+  "previous_stage109_unchanged": {
+    "summary_sha256": "a244aa756fe5f959318da61c0e7efde74a10869c5788df86bbb49b0fd4f1a526",
+    "server_head": "4328b8010abad9ff1dbef2bd255da06b505c49ca",
+    "server_binary_sha256": "d2054b4a16723f00c5f926ac47850cbc83160f027eb69a1e9948c28bbd56c088",
+    "summary_and_report_and_ELF_stat_before_after_equal": true,
+    "private_guards_sha256": "b4dc502ae862a3a37bfb62603365fd3b3610a8b117f5ed0753a49d0549015bc0"
+  },
+  "earlier_stage108_and_ed13_evidence_retained": true,
+  "original_private_source_build_report": "runtime/public-server-stage113-source-4s8gz7dx/workspace/runtime/public-server-build/result.json",
+  "original_private_source_build_report_sha256": "f81fdc519f3df8dccf6d916b744b6e01557d84bac48e2ac6db9e5d8595a77326",
+  "host_only": true,
+  "server_executed": false,
+  "Darling_executed": false,
+  "Apple_linker_executed": false,
+  "session_lock_acquired": false,
+  "default_runtime_changed": false,
+  "cold_Darling_Xcode_rebuild_ready": false,
+  "old_doctor_exact_checkpoint_asserted": false,
+  "build_entry_sha256": "c2569dd813e01c09f549d19f82f88bd8ff5422ee1fa38fec1156ebe4e36c828e",
+  "separate_native_API_validation": "validation/thread-debug-common-runtime-2026-10-28.json",
+  "separate_native_validation_does_not_execute_this_new_ELF": true
+}
