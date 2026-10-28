@@ -5,8 +5,8 @@ Reuse an existing namespace launcher and its mounts. Every clean environment
 receives one run-level payload, including the initial server/launchd bootstrap.
 The original stage and configuration are left unchanged; nothing is launched.
 """
-from pathlib import Path
-import argparse,hashlib,json,os,runpy,shutil,subprocess,tempfile
+from pathlib import Path, PurePosixPath
+import argparse,hashlib,json,os,re,runpy,shutil,subprocess,tempfile
 
 root=Path(__file__).resolve().parent.parent
 p=argparse.ArgumentParser(description=__doc__)
@@ -14,11 +14,52 @@ p.add_argument('--parent-stage',required=True)
 p.add_argument('--runtime-stage',help='Materialize a matching full system root and independent writable prefix before bootstrap')
 p.add_argument('--shared-profile-input',help='Unified profile metadata used only to resolve shared Developer/Apple provider inputs')
 p.add_argument('--preinstall-common-security',action='store_true',help='Install the public Security framework and its common identity store into the shared image')
+p.add_argument('--service-cohort',help='Pinned common account and service files preinstalled in both trees before the first Mach-O')
+p.add_argument('--dyld-build',help='Source loader build preinstalled for every process in the shared image')
 a=p.parse_args()
 sha=lambda path:hashlib.sha256(path.read_bytes()).hexdigest()
+cohort_path=None;cohort_rows=[]
+if a.service_cohort:
+    assert a.runtime_stage and a.shared_profile_input
+    cohort_path=(root/a.service_cohort).resolve(strict=True)
+    assert cohort_path.is_relative_to(root/'runtime') and cohort_path.is_file()
+    cohort=json.loads(cohort_path.read_text());assert cohort['host_verified'] and not cohort['installed']
+    seen=set()
+    for category in ['prefix_files','system_files']:
+        for item in cohort[category]:
+            name=item['destination'];relative=PurePosixPath(name)
+            assert name and not relative.is_absolute() and name==relative.as_posix()
+            assert all(part not in ('','.', '..') for part in name.split('/'))
+            assert name not in seen;seen.add(name)
+            spelling=PurePosixPath(item['source'])
+            assert not spelling.is_absolute() and '..' not in spelling.parts
+            source=(root/item['source']).resolve(strict=True)
+            assert source.is_relative_to(root/'runtime') and source.is_file() and not (root/item['source']).is_symlink()
+            assert sha(source)==item['sha256'],item['source']
+            assert not source.stat().st_mode & 0o7000
+            cohort_rows.append((name,source,item['sha256']))
+    if cohort.get('common_security_build'):
+        build_name=PurePosixPath(cohort['common_security_build'])
+        assert not build_name.is_absolute() and '..' not in build_name.parts
+        build_path=(root/cohort['common_security_build']).resolve(strict=True)
+        assert build_path.is_relative_to(root/'runtime')
+        assert sha(build_path)==cohort['common_security_build_sha256']
 parent_path=root/a.parent_stage;parent=json.loads(parent_path.read_text())
 resolve=runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
 for name,digest in parent['files'].items():resolve(name,digest)
+dyld_build=None
+dyld_provider=root/'runtime/dyld-vchroot-casefold-component-v2/dyld'
+if a.dyld_build:
+    assert a.runtime_stage and a.shared_profile_input
+    dyld_path=(root/a.dyld_build).resolve(strict=True)
+    assert dyld_path.is_relative_to(root/'runtime')
+    dyld_build=json.loads(dyld_path.read_text())
+    assert dyld_build['old_ImageLoader_ABI_preserved'] and dyld_build['source_component_update']
+    assert dyld_build['original_prefix_globals_preserved']
+    assert dyld_build['component_dynamic_imports']==dyld_build['component_rebases']==dyld_build['component_writable_segments']==0
+    for name,digest in dyld_build['files'].items():resolve(name,digest)
+    dyld_provider=(root/dyld_build['loader']).resolve(strict=True)
+    assert dyld_provider.is_relative_to(root/'runtime') and sha(dyld_provider)==dyld_build['loader_sha256']
 namespace_text=(root/parent['namespace']).read_text()
 needle='rootfs="$project/runtime/rootfs"\n'
 assert namespace_text.count(needle)==1
@@ -69,13 +110,19 @@ if a.runtime_stage:
     for source,target in [(base,system),(root/'runtime/state/prefix',prefix)]:
         print('REFLINK_COPY',source,target,flush=True)
         subprocess.run(['cp','-a','--reflink=always','--no-preserve=links',str(source),str(target)],check=True)
+    # A runtime prefix is not an archive of earlier debugging sessions. Keep
+    # the original evidence in place; discard only our newly cloned copies.
+    excluded_count=excluded_bytes=0
+    for path in prefix.iterdir():
+        if re.fullmatch(r'core(?:\.\d+)?',path.name) and path.is_file() and not path.is_symlink():
+            excluded_bytes+=path.stat().st_size;excluded_count+=1;path.unlink()
     removed=[]
     for name in ['.init.pid','.darlingserver.sock','.shellspawn.sock','private/var/run/shellspawn.sock']:
         path=prefix/name
         if path.exists() or path.is_symlink():
             assert not path.is_dir();path.unlink();removed.append(name)
     providers={
-        'usr/lib/dyld':root/'runtime/dyld-vchroot-casefold-component-v2/dyld',
+        'usr/lib/dyld':dyld_provider,
         'System/Library/PrivateFrameworks/PlugInKit.framework':root/parent['canonical_provider'],
         'usr/lib/swift/libswiftC6.dylib':root/'runtime/signed-compat-runtime-2083wv0o/libswiftC6.dylib',
         'usr/bin/codesign':root/'runtime/native-codesign-ci-v3/codesign',
@@ -120,6 +167,43 @@ if a.runtime_stage:
             elif destination.is_dir():shutil.rmtree(destination)
             if source.is_dir():shutil.copytree(source,destination,symlinks=True,copy_function=shutil.copy2)
             else:shutil.copy2(source,destination)
+    cohort_inventory={}
+    for target,source,digest in cohort_rows:
+        for tree in [system,prefix]:
+            destination=tree/target
+            assert destination.parent.resolve().is_relative_to(tree.resolve()),destination
+            destination.parent.mkdir(parents=True,exist_ok=True)
+            assert not destination.is_symlink() and not destination.is_dir(),destination
+            shutil.copy2(source,destination)
+            assert sha(destination)==digest
+        cohort_inventory[target]=dict(source=str(source.relative_to(root)),sha256=digest,
+                                      installed_in_system_and_prefix=True,mode=oct(source.stat().st_mode & 0o777))
+    if cohort_path:
+        home=cohort.get('user',{}).get('home')
+        if home:
+            home_path=PurePosixPath(home)
+            assert home_path.is_absolute() and '..' not in home_path.parts
+            for tree in [system,prefix]:
+                destination=tree/str(home_path).lstrip('/')
+                assert destination.parent.resolve().is_relative_to(tree.resolve()),destination
+                destination.mkdir(mode=0o755,parents=True,exist_ok=True)
+        # A complete cohort cannot be overridden by a post-bootstrap account mount.
+        start=namespace_text.index('# Validate optional account fixtures before entering the Linux rootfs.')
+        end=namespace_text.index('# The selected original Xcode package',start)
+        namespace_text=namespace_text[:start]+'''[[ -z ${LINUXCODE_ACCOUNT_DATABASE:-} ]] || {
+    echo "Accounts are already installed in the common image before bootstrap" >&2; exit 2;
+}
+account_database_relative=''
+'''+namespace_text[end:]
+        late_accounts='''    if [[ -n ${account_database_relative:-} ]]; then
+        for account_file in passwd master.passwd group; do
+            /usr/bin/nsenter --target "$account_server_pid" --mount \\
+                /usr/bin/mount --bind "/workspace/$account_database_relative/$account_file" "/state/prefix/private/etc/$account_file"
+        done
+    fi
+'''
+        assert namespace_text.count(late_accounts)==1
+        namespace_text=namespace_text.replace(late_accounts,'',1)
     # All former binary/framework substitutions are already present in both
     # physical trees; an overlay lookup must never see an old shadow inode.
     for variable in ['developer_overlay_relative','apple_overlay_relative']:
@@ -179,7 +263,11 @@ mount --bind "$project/{private_state}" "$rootfs/state"
                       shared_profile_input=a.shared_profile_input,shared_profile_input_sha256=sha(shared_path),
                       prefix_source='runtime/state/prefix',prefix_source_modified=False,reflink_independent_inodes=True,
                       removed_cloned_session_IPC=removed,providers=inventory,all_provider_bytes_installed_before_first_Darling=True,
-                      late_provider_mounts=0,remaining_late_mounts=['private Darwin temporary tmpfs','optional account database files'])
+                      excluded_cloned_diagnostics=dict(root_numeric_core_files=excluded_count,logical_bytes=excluded_bytes,original_evidence_modified=False),
+                      late_provider_mounts=0,remaining_late_mounts=['private Darwin temporary tmpfs']+([] if cohort_path else ['optional account database files']))
+    if cohort_path:
+        materialized['service_cohort']=dict(manifest=str(cohort_path.relative_to(root)),manifest_sha256=sha(cohort_path),
+                                           files=cohort_inventory,service_home=home,all_files_installed_before_first_Mach_O=True)
 namespace.write_text(namespace_text)
 launcher_text=(root/parent['launcher']).read_text()
 assert launcher_text.count(parent['namespace'])==1
@@ -198,7 +286,14 @@ stage={**parent,'launcher':str(launcher.relative_to(root)),'namespace':str(names
        'parent_run_environment_stage':a.parent_stage,'parent_run_environment_stage_sha256':sha(parent_path),
        'runtime_execution_verified':False,'full_goal_complete':False}
 if materialized:stage['materialized_shared_runtime']=materialized
+if dyld_build:
+    stage['bootstrap_component_build']=a.dyld_build
+    stage['files'].update(dyld_build['files'])
+    stage['files'][a.dyld_build]=sha(root/a.dyld_build)
 for path in [Path(__file__),parent_path,launcher,namespace]:stage['files'][str(path.relative_to(root))]=sha(path)
+if cohort_path:
+    stage['files'][str(cohort_path.relative_to(root))]=sha(cohort_path)
+    for _,source,digest in cohort_rows:stage['files'][str(source.relative_to(root))]=digest
 out=folder/'stage.json';out.write_text(json.dumps(stage,indent=2)+'\n')
 report=dict(prepared=True,stage=str(out.relative_to(root)),launcher=stage['launcher'],namespace=stage['namespace'],
             old_stage_unmodified=sha(parent_path)==stage['parent_run_environment_stage_sha256'],

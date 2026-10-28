@@ -322,6 +322,24 @@ def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
         if config.get(key):
             assert sha(root/config[key]) == config[key+'_sha256']
             result = runpy.run_path(str(root/'scripts'/selector))['select'](result, config[key])
+    if config.get('shared_search_stage'):
+        assert unified
+        path = root/config['shared_search_stage']
+        assert sha(path) == config['shared_search_stage_sha256']
+        search = json.loads(path.read_text())
+        assert search['runtime_mode'] == 'unified'
+        assert search['original_environment'] == result['direct_resource_environment']['tool_environment']
+        resolve = runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
+        for name, digest in search['files'].items():resolve(name, digest)
+        for name, target in search['links'].items():assert os.readlink(root/name) == target
+        command = list(result['command'])
+        for key, value in search['environment'].items():
+            positions = [index for index, argument in enumerate(command) if argument.startswith(key+'=')]
+            assert len(positions) == 1, key
+            command[positions[0]] = key+'='+value
+        direct = {**result['direct_resource_environment'], 'tool_environment': search['environment'],
+                  'shared_search_stage': config['shared_search_stage']}
+        result = {**result, 'command': command, 'direct_resource_environment': direct}
     if unified:
         assert not any(value.startswith('DARLING_DYLD_OVERRIDE_') for value in result['command'])
         for key, value in result['direct_resource_environment']['tool_environment'].items():

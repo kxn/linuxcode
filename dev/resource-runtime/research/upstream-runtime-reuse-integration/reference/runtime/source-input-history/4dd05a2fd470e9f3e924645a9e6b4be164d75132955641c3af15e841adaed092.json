@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/4dd05a2fd470e9f3e924645a9e6b4be164d75132955641c3af15e841adaed092",
+  "original_sha256": "4dd05a2fd470e9f3e924645a9e6b4be164d75132955641c3af15e841adaed092",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/conversion/network/recvmsg.h>\n\n#include <darling/emulation/conversion/network/getsockopt.h>\n\nint socket_level_bsd_to_linux(int level)\n{\n\tswitch (level)\n\t{\n\t\tcase BSD_SOL_SOCKET:\n\t\t\treturn LINUX_SOL_SOCKET;\n\t\tdefault:\n\t\t\treturn level;\n\t}\n}\n\nint socket_level_linux_to_bsd(int level)\n{\n\tswitch (level)\n\t{\n\t\tcase LINUX_SOL_SOCKET:\n\t\t\treturn BSD_SOL_SOCKET;\n\t\tdefault:\n\t\t\treturn level;\n\t}\n}\n"
+}

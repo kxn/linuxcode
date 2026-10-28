@@ -89,7 +89,10 @@ def build_common_owner(args):
     library = folder / 'libraries/libDarlingCommonIdentityStore.dylib'
     library.parent.mkdir()
     exports = folder / 'store.exports'
-    exports.write_text('\n'.join(NAMES) + '\n')
+    selected_names = list(NAMES)
+    objects = [obj]
+    extra_inputs = []
+    trust_sources = None
     commands = []
 
     def run(command):
@@ -102,12 +105,67 @@ def build_common_owner(args):
     run(['clang-19', '-target', 'x86_64-apple-macos11', '-isysroot', sdk, '-O2',
          '-Wno-deprecated-declarations', '-DLINUXCODE_IDENTITY_COMMON_OWNER=1',
          '-c', source, '-o', obj])
+    if args.trust_service_source:
+        security = ROOT / 'vendor/darling/src/external/security'
+        template = ROOT / 'runtime/trustd-source-nnzdc_2n/compile-state.json'
+        state = json.loads(template.read_text())
+        reference = next(value for key, value in state.items() if key.endswith('/SecPolicyServer.c'))
+        command = reference['command']
+        command = command[:command.index('-MMD')]
+        include = folder / 'include/os'
+        include.mkdir(parents=True)
+        # The Darling header replaces feature decisions with zero. The actual
+        # shared runtime already provides Apple's feature-flag ABI via libSystem.
+        # Preserve the source macro's domain/name arguments and default value.
+        feature_header = include / 'feature_private.h'
+        feature_header.write_text(
+            '#pragma once\n#include <stdbool.h>\n'
+            'bool _os_feature_enabled_impl(const char *, const char *);\n'
+            'bool _os_feature_enabled_simple_impl(const char *, const char *, bool);\n'
+            '#define os_feature_enabled(domain,name) _os_feature_enabled_impl(#domain,#name)\n'
+            '#define os_feature_enabled_simple(domain,name,value) _os_feature_enabled_simple_impl(#domain,#name,value)\n')
+        ot_source = security / 'keychain/ot/OTConstants.m'
+        ot_obj = folder / 'OTConstants.o'
+        dep = folder / 'OTConstants.d'
+        run([command[0], '-I' + str(folder / 'include'), *command[1:], '-fobjc-arc',
+             '-MMD', '-MF', dep, '-c', ot_source, '-o', ot_obj])
+        # Use the complete upstream list and its exact definition macro, so
+        # policy spelling and CFString representation have one source of truth.
+        policy_source = security / 'OSX/sec/Security/SecPolicy.c'
+        policy_list = security / 'OSX/sec/Security/SecPolicyChecks.list'
+        text = policy_source.read_text()
+        start = text.index('#undef POLICYCHECKMACRO')
+        end = text.index('#include "SecPolicyChecks.list"', start)
+        policy_constants = folder / 'SecPolicyCheckConstants.c'
+        policy_constants.write_text('#include <CoreFoundation/CoreFoundation.h>\n' +
+                                    text[start:end] + '#include "' + str(policy_list) + '"\n')
+        policy_obj = folder / 'SecPolicyCheckConstants.o'
+        run(['clang-19', '-target', 'x86_64-apple-macos11', '-isysroot', sdk, '-O2',
+             '-c', policy_constants, '-o', policy_obj])
+        additions = ['_SecErrorIsNestedErrorCappingEnabled',
+                     '_SecErrorSetOverrideNestedErrorCappingIsEnabled',
+                     '_kSecPolicyCheckKeyUsageReportOnly']
+        assert not any(name.encode() in initial_exports for name in additions)
+        selected_names += additions
+        objects += [ot_obj, policy_obj]
+        import shlex
+        dependencies = shlex.split(dep.read_text().replace('\\\n', ' ').split(':', 1)[1])
+        extra_inputs += [template, feature_header, ot_source, ot_obj, policy_source,
+                         policy_list, policy_constants, policy_obj, dep]
+        extra_inputs += [Path(name) for name in dependencies if Path(name).is_file()]
+        trust_sources = dict(complete_OTConstants_source=True, complete_policy_check_list=True,
+                             feature_flag_backend='existing original FeatureFlags through libSystem',
+                             override_setter_preserved=True, added_exports=additions,
+                             compile_template=str(template.relative_to(ROOT)))
+    exports.write_text('\n'.join(selected_names) + '\n')
     run(['ld64.lld-19', '-dylib', '-arch', 'x86_64', '-platform_version', 'macos', '11', '11',
          '-syslibroot', sdk, '-F', framework.parent, '-framework', 'Security',
-         '-framework', 'CoreFoundation', '-lSystem', '-install_name', '/usr/lib/' + library.name,
-         '-exported_symbols_list', exports, obj, '-o', library])
+         '-framework', 'CoreFoundation', '-lobjc',
+         *(['-L', ROOT / 'runtime/resource-plain-fork-system-v1/libraries'] if args.trust_service_source else []),
+         '-lSystem', '-install_name', '/usr/lib/' + library.name,
+         '-dead_strip', '-exported_symbols_list', exports, *objects, '-o', library])
     payload, redirects = HELPER['add'](output.read_bytes(), '/usr/lib/' + library.name,
-                                      NAMES, replace_existing=True)
+                                      selected_names, replace_existing=True)
     output.write_bytes(payload)
     final_exports = layout(payload)[2]
     assert set(initial_exports) <= set(final_exports)
@@ -117,7 +175,7 @@ def build_common_owner(args):
         assert final_exports[('_linuxcode_original_' + name[1:]).encode()] == initial_exports[name.encode()]
     assert all(original[offset:offset + size] == payload[offset:offset + size]
                for offset, size in layout(original)[3])
-    assert set(layout(library.read_bytes())[2]) == {name.encode() for name in NAMES}
+    assert set(layout(library.read_bytes())[2]) == {name.encode() for name in selected_names}
     binds = run(['llvm-objdump-19', '--macho', '--bind', '--lazy-bind', library])
     assert 'libDarlingLocalIdentitySecurityBackend' not in binds
     for name in NAMES:
@@ -125,12 +183,15 @@ def build_common_owner(args):
     factory_names = ['_SecIdentityCreate', '_SecCertificateCreateWithData', '_SecKeyCreateWithData']
     for name in factory_names:
         assert any('Security' in line and name in line for line in binds.splitlines()), name
+    if args.trust_service_source:
+        assert any('libSystem' in line and '__os_feature_enabled_impl' in line for line in binds.splitlines())
     loads = run(['llvm-objdump-19', '--macho', '--dylibs-used', library])
     assert INSTALL_NAME in loads and 'LocalIdentitySecurityBackend' not in loads
+    assert '/System/Library/Frameworks/Foundation.framework/' not in loads, 'Preserve original Security upward Foundation edge'
     assert b'libDarlingLocalIdentitySecurityBackend' not in library.read_bytes()
     assert b'libDarlingSecurityCodeSignerCompatibility' not in library.read_bytes()
     files = [base, source, Path(__file__), ROOT / 'scripts/macho-named-reexport.py', obj,
-             output, library, exports]
+             output, library, exports, *extra_inputs]
     report = dict(host_verified=True, native_verified=False, installed=False,
                   base=str(base.relative_to(ROOT)), framework=str(output.relative_to(ROOT)),
                   library=str(library.relative_to(ROOT)), original_exports=len(initial_exports),
@@ -138,12 +199,14 @@ def build_common_owner(args):
                   original_entry_aliases_preserved=True, original_section_bytes_preserved=True,
                   unchanged_export_payloads=len(initial_exports) - len(NAMES),
                   object_factories_owner=INSTALL_NAME, old_security_backend_loaded=False,
+                  trust_service_source=trust_sources, component_direct_Foundation_dependency=False,
                   fallback='direct references to the four original common-owner aliases',
                   namespace_cycle='Security -> store component -> same Security; no component constructors',
                   limits=['No native lifecycle or signing test yet.',
                           'Internal direct calls in original Security retain their original implementation.',
                           'securityd/trustd integration remains unverified with this owner.'],
-                  files={str(p.relative_to(ROOT)): digest(p) for p in files},
+                  files={str(p.relative_to(ROOT)): digest(p) for p in files if p.is_relative_to(ROOT)},
+                  toolchain_headers={str(p): digest(p) for p in files if not p.is_relative_to(ROOT)},
                   redirects=redirects, commands=commands)
     report_path = folder / 'build.json'
     report_path.write_text(json.dumps(report, indent=2) + '\n')
@@ -151,12 +214,13 @@ def build_common_owner(args):
 
 
 r=Path(__file__).resolve().parent.parent
-a=argparse.ArgumentParser();a.add_argument('--tag',required=True);a.add_argument('--export-overlay-base');a.add_argument('--backend-base');a.add_argument('--csparser-build');a.add_argument('--common-owner-base', help='Complete modern Security image: preserve original queries as aliases; never load a second Security owner');args=a.parse_args()
+a=argparse.ArgumentParser();a.add_argument('--tag',required=True);a.add_argument('--export-overlay-base');a.add_argument('--backend-base');a.add_argument('--csparser-build');a.add_argument('--common-owner-base', help='Complete modern Security image: preserve original queries as aliases; never load a second Security owner');a.add_argument('--trust-service-source',action='store_true',help='Modern owner: compile the complete upstream OTConstants unit and policy-check macro list');args=a.parse_args()
 assert re.fullmatch('[a-z0-9-]+',args.tag)
 if args.common_owner_base:
     assert not any([args.export_overlay_base, args.backend_base, args.csparser_build])
     build_common_owner(args)
     raise SystemExit(0)
+assert not args.trust_service_source, '--trust-service-source requires --common-owner-base'
 w=r/('runtime/local-identity-store-'+args.tag);assert not w.exists();w.mkdir()
 sdk=r/'runtime/state/prefix/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk'
 base=r/(args.backend_base or 'runtime/security-cryptokit-constants/frameworks/Security.framework/Versions/A/Security')

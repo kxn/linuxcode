@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/3174a6e41354d2b52221abd516ff86fc277b7dc7858981edf40610eb10503c6e",
+  "original_sha256": "3174a6e41354d2b52221abd516ff86fc277b7dc7858981edf40610eb10503c6e",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/network/getpeername.h>\n\n#include <sys/socket.h>\n\n#include <darling/emulation/common/base.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darling/emulation/linux_premigration/linux-syscalls/linux.h>\n#include <darling/emulation/xnu_syscall/bsd/helper/network/duct.h>\n#include <darling/emulation/linux_premigration/vchroot_expand.h>\n\nextern __SIZE_TYPE__ strlen(const char* src);\nextern char* strcpy(char* dest, const char* src);\nextern char *strncpy(char *dest, const char *src, __SIZE_TYPE__ n);\n\nlong sys_getpeername(int fd, void* asa, int* socklen)\n{\n\tint ret;\n\tstruct sockaddr_fixup* fixed;\n\n#ifdef __NR_socketcall\n\tret = LINUX_SYSCALL(__NR_socketcall, LINUX_SYS_GETPEERNAME,\n\t\t((long[6]) { fd, asa, socklen }));\n#else\n\tret = LINUX_SYSCALL(__NR_getpeername, fd, asa, socklen);\n#endif\n\n\tif (ret < 0)\n\t\tret = errno_linux_to_bsd(ret);\n\telse\n\t{\n\t\tfixed = (struct sockaddr_fixup*) asa;\n\t\tret = *socklen = sockaddr_fixup_from_linux(fixed, asa, *socklen);\n\t\tif (ret > 0)\n\t\t\tret = 0;\n\t}\n\n\treturn ret;\n}\n"
+}

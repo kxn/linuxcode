@@ -14,6 +14,8 @@ p.add_argument('--template-report', required=True)
 p.add_argument('--output-dir', required=True)
 p.add_argument('--report', required=True)
 p.add_argument('--prepare-only',action='store_true',help='Compile/verify the explicit delta and write the immutable link plan without starting native ld')
+p.add_argument('--complete-prepared',action='store_true',help='Verify an existing prepared plan and link its unchanged objects with the selected common runtime')
+p.add_argument('--completion-label',help='Preserve an additional completion attempt separately under this prepared build')
 p.add_argument('--configuration',help='Explicit shared unified runtime for the original native linker')
 p.add_argument('--private-procfs-stage',help='Validated complete cohort selected with --configuration')
 p.add_argument('--changed-source', action='append', default=[])
@@ -25,6 +27,97 @@ p.add_argument('--reuse-recorded-source-snapshots',action='store_true',
                help='Verify exact historical sources and sealed objects for unselected units instead of requiring their working-tree copies')
 a = p.parse_args()
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+
+def complete_prepared():
+    assert not a.prepare_only and a.configuration and a.private_procfs_stage
+    assert not any([a.changed_source,a.changed_header,a.recompile_group,a.changed_included_source,a.header_consumers_file])
+    folder = root / a.output_dir
+    assert folder.resolve().is_relative_to(root/'runtime') and folder.is_dir()
+    plan_path = folder/'plan.json'; deferred_path = folder/'deferred-build.json'
+    plan = json.loads(plan_path.read_text()); deferred = json.loads(deferred_path.read_text())
+    assert deferred['native_link_not_executed'] and deferred['requested_report'] == a.report
+    assert plan['template'] == a.template_report and sha(root/a.template_report) == plan['template_sha256']
+    resolve = runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
+    resolve('scripts/rebuild-kernel-source-delta.py',plan['tool_sha256'])
+    d = deferred['build']; rows = deferred['updated_sources']
+    assert len(rows) == d['complete_source_files'] == len(plan['objects'])
+    assert len(rows) == plan['recompiled_objects'] + plan['reused_objects']
+    for repo,commit in d['actual_source_repositories'].items():
+        assert subprocess.check_output(['git','-C',str(root/repo),'rev-parse','HEAD'],text=True).strip() == commit,repo
+    for key in ['metadata_source_headers','source_list_headers','included_source_inputs']:
+        for name,digest in d.get(key,{}).items(): assert sha(root/name) == digest,name
+    if plan.get('header_consumers_file'):
+        assert sha(root/plan['header_consumers_file']) == plan['header_consumers_file_sha256']
+    for dependencies in plan.get('compiled_consumer_dependency_sha256',{}).values():
+        for name,digest in dependencies.items(): assert sha(root/name) == digest,name
+    objects = []
+    for row in rows:
+        obj = Path(row['command'][row['command'].index('-o')+1])
+        assert obj.resolve().is_relative_to(root)
+        assert sha(obj) == plan['objects'][str(obj.relative_to(root))],obj
+        if row['command'] in plan['compile_commands']:
+            assert sha(root/row['source']) == row['sha256'],row['source']
+        else:
+            resolve(row['source'],row['sha256'])
+        objects.append(obj)
+    guest = lambda path: '/Volumes/SystemRoot/workspace/'+str(path.relative_to(root))
+    assert (folder/'objects.filelist').read_text() == ''.join(guest(obj)+'\n' for obj in objects)
+    output = folder/'libsystem_kernel.dylib'; report = root/a.report
+    assert not output.exists() and not report.exists() and not (folder/'darling-root').exists()
+    if a.completion_label:
+        import re
+        assert re.fullmatch('[a-z0-9-]+',a.completion_label)
+        attempt = folder/('completion-'+a.completion_label)
+        assert not attempt.exists()
+        completion_plan = attempt/'plan.json'; completion_result = attempt/'result.json'
+    else:
+        attempt = folder
+        completion_plan = folder/'completion-plan.json'; completion_result = folder/'completion-result.json'
+    assert not completion_plan.exists() and not completion_result.exists()
+    module = runpy.run_path(str(root/'scripts/direct-resource-tool-runtime-profile.py'))
+    config = json.loads((root/a.configuration).read_text())
+    assert config.get('runtime_mode') == 'unified' and not config.get('executables')
+    profile = module['profile'](stage=a.private_procfs_stage,configuration=a.configuration)
+    assert not any(value.startswith('DARLING_DYLD_OVERRIDE_') for value in profile['command'])
+    linker = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld'
+    assert plan['link_command'].count(linker) == 1
+    arguments = plan['link_command'][plan['link_command'].index(linker):]
+    assert arguments[arguments.index('-filelist')+1] == guest(folder/'objects.filelist')
+    assert arguments[arguments.index('-o')+1] == guest(output)
+    command = profile['command'][:-2]+arguments
+    assert command[0] == 'timeout'; command[3] = '120'
+    completion = dict(prepared_plan=str(plan_path.relative_to(root)),prepared_plan_sha256=sha(plan_path),
+        deferred_build_sha256=sha(deferred_path),tool_sha256=sha(Path(__file__)),
+        prepared_runtime_configuration=plan.get('shared_runtime_configuration'),
+        prepared_runtime_configuration_sha256=plan.get('shared_runtime_configuration_sha256'),
+        link_runtime_configuration=a.configuration,link_runtime_configuration_sha256=sha(root/a.configuration),
+        link_private_procfs_stage=a.private_procfs_stage,link_private_procfs_stage_sha256=sha(root/a.private_procfs_stage),
+        link_command=command,recompiled_during_completion=0,verified_objects=len(objects))
+    if attempt != folder: attempt.mkdir()
+    completion['link_log'] = str((attempt/'link.log').relative_to(root))
+    completion_plan.write_text(json.dumps(completion,indent=2)+'\n')
+    with (attempt/'link.log').open('w') as log:
+        result = subprocess.run(command,timeout=125,stdout=log,stderr=subprocess.STDOUT,env=module['environment'](profile))
+    completion['link_exit_status'] = result.returncode
+    completion_result.write_text(json.dumps(completion,indent=2)+'\n')
+    assert result.returncode == 0,result.returncode
+    old = root/d['variant_root']
+    import re,shutil
+    exports = lambda binary:set(re.findall(r'^0x[\da-fA-F]+\s+(\S+)',subprocess.check_output(['llvm-objdump-19','--macho','--exports-trie',str(binary)],text=True),re.M))
+    assert exports(old/'usr/lib/system/libsystem_kernel.dylib') == exports(output)
+    variant = folder/'darling-root'
+    subprocess.run(['cp','-a','--reflink=auto',str(old),str(variant)],check=True)
+    shutil.copy2(output,variant/'usr/lib/system/libsystem_kernel.dylib')
+    for name in ['libquarantine.dylib','libsystem_sandbox.dylib','libdyld.dylib']:
+        shutil.copy2(variant/'usr/lib/system'/name,folder/name)
+    d.update(sources=rows,binary_sha256=sha(output),variant_root=str(variant.relative_to(root)),runtime_execution_verified=False,
+        incremental_source_build={**plan,'completed_prepared_source_build':completion})
+    report.write_text(json.dumps(d,indent=2)+'\n')
+    print('KERNEL_SOURCE_DELTA_COMPLETED',a.report,'recompiled',0,'verified_objects',len(objects))
+
+if a.complete_prepared:
+    complete_prepared()
+    raise SystemExit(0)
 template = root / a.template_report
 d = json.loads(template.read_text())
 folder = root / a.output_dir

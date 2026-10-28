@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "package_kind": "source_only",
+  "scope": "Network compatibility milestone and unfinished whole-run runtime candidates",
+  "source_fork": {
+    "url": "https://github.com/kxn/darling-xnu",
+    "branch": "linuxcode/xcode-x86_64",
+    "commit": "60358549f04819147172b90c83bcab79be190b35"
+  },
+  "kernel": {
+    "stage": "artifacts/private-procfs-auditsession112-stage.json",
+    "stage_sha256": "29f0875e8df34740bc71d3d50743e0418ab13e5c46dc2bca353e97ebb651d993",
+    "binary_sha256": "24b971f2faa556abb83eccb0f36da5e2bba24f80e90cad00ee20d6705f8a1907",
+    "translation_units": 907,
+    "compiled_units": 4,
+    "reused_units": 903,
+    "completion_recompiled_units": 0,
+    "actual_link_configuration": "config/unified-runtime-v6.json",
+    "actual_link_exit_status": 0,
+    "previous_v8_bootstrap_failure_retained": true
+  },
+  "host_controls": [
+    {
+      "kind": "optional socket addresses",
+      "checks": 61,
+      "ASan_UBSan": true,
+      "real_Linux_sockets": true,
+      "old_accept_crash_negative_control": true,
+      "old_sendmsg_and_sendto_negative_controls": true,
+      "evidence_sha256": "5f51675c3fd9a2997657106f7994e501e44c1b3338fd6c91b2eed18297c14c2f"
+    },
+    {
+      "kind": "Darwin routing sysctl",
+      "checks": 553,
+      "ASan_UBSan": true,
+      "actual_Darwin_SDK_headers": true,
+      "real_Linux_libc_getifaddrs": true,
+      "real_64bit_procfs_counters": true,
+      "active_routes_independently_compared_with_Linux_rtnetlink": true,
+      "old_IFLIST2_EINVAL_negative_control": true,
+      "evidence_sha256": "62ad9429c5a9e82a778898faac66053748fe08891824a825ad58a42a7cc80d72"
+    }
+  ],
+  "original_CoreCLR_v9": {
+    "verified": true,
+    "outer_status": 0,
+    "runtime_sha256": "c9f6d341d47e8fc366d4946bb619f6e9624da057ecb615c06b29f9b1b576d75d",
+    "managed_fixture_sha256": "e7b107c244c5c7241ece52d5b5067b63f12d71602cb147075832b50acd234ccf",
+    "enumerated_interface_count": 2,
+    "completed": true,
+    "client_business_code_executed": false,
+    "network_addresses_printed": false,
+    "private_log_sha256": "e3943e39a341b95dbc193871dbb46641c75d4f12934475380bf4f0335ce28273"
+  },
+  "v9_configuration": {
+    "path": "config/unified-runtime-v9.json",
+    "sha256": "3196c028ea63c1712d73e813ea0accaf8d524c9480239221c7b503715951dbca",
+    "whole_run_shared": true
+  },
+  "same_managed_fixture_failed_on_previous_v6": true,
+  "Unity_v9": {
+    "selected_evidence": "runtime/unity-macos-editor-metadata/batchmode-unified-v9-outcome.json",
+    "selected_evidence_sha256": "f93b49d45679fb18ef030a67bf9bd5e2507d11cab8a4f5dab7f85f9970615c8f",
+    "outer_status": -9,
+    "elapsed_seconds": 185.00343451998197,
+    "actual_Editor_UPM_IPC_connected": true,
+    "UPM_exit_11_observed": false,
+    "UPM_package_resolution_complete": false,
+    "Client_named_pipe_server_started_in_private_log": true,
+    "Client_native_SIGSEGV_then_SIGABRT_observed": true,
+    "managed_method_completed": false,
+    "license_verified": false,
+    "macOS_iOS_export_verified": false,
+    "missing_old_exception_does_not_prove_licensing_fixed": true
+  },
+  "source_candidates": {
+    "configurations": [
+      {
+        "path": "config/unified-runtime-v10.json",
+        "sha256": "313f9ec85a54bb460dca962f75120b628ca66aea72cbec99c968d66d73ba17d8"
+      },
+      {
+        "path": "config/unified-runtime-v11.json",
+        "sha256": "227426a8d4301e3ce03d2caa58fc9266346c769dd6ff9b8c9d416a1173e6170a"
+      }
+    ],
+    "embedded_dyld_uses_existing_raw_Linux_mounts_reader": true,
+    "history_core_files_excluded_from_new_prefix_clones": true,
+    "shared_search": {
+      "original_library_directories": 71,
+      "selected_library_directories": 2,
+      "Intel_library_choices": 187,
+      "host_priority_preserving": true,
+      "original_framework_fallbacks_preserved": true,
+      "original_provider_bytes_modified": false,
+      "native_verified": false
+    },
+    "v11_attempt": {
+      "outer_status": 1,
+      "bootstrap_readiness_timeout_seconds": 90,
+      "entered_codesign": false,
+      "original_codesign_frontend_completed": false,
+      "result_sha256": "249e1eb9dfa13b6cab54e2132444089999e46e066d158d74487bd93242be4307"
+    }
+  },
+  "full_Xcode_build_verified_in_these_unified_configurations": false,
+  "cold_install_verified": false,
+  "excluded": [
+    "Apple/Epic/Unity binaries",
+    "SDK headers",
+    "credentials/account databases",
+    "private logs/traces",
+    "cores"
+  ]
+}

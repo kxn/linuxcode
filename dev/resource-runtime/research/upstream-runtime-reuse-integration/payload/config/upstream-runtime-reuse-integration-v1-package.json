@@ -57,7 +57,36 @@
     "scripts/probe-original-codesign-certificate.py",
     "config/unified-runtime-v5.json",
     "config/unified-runtime-v6.json",
-    "fixtures/hello/original-codesign-certificate-preflight.c"
+    "fixtures/hello/original-codesign-certificate-preflight.c",
+    "scripts/test-network-optional-address-host.py",
+    "fixtures/hello/network-optional-address-host.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/accept.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/sendmsg.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/recvmsg.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/sendto.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/recvfrom.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/getpeername.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/network/getsockname.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/conversion/network/recvmsg.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/helper/misc/sysctl_net.c",
+    "fixtures/hello/sysctl-net-host.c",
+    "fixtures/hello/sysctl-net-host-support.h",
+    "fixtures/hello/sysctl-net-host-linux.c",
+    "scripts/test-sysctl-net-host.py",
+    "fixtures/hello/ManagedNetworkInterfacesSmoke.cs",
+    "config/unified-runtime-v9.json",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/statfs.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/stat/fstatfs.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/include/xnu_syscall/bsd/helper/stat/mounts.h",
+    "scripts/stage-shared-runtime-search.py",
+    "scripts/capture-live-macho-fault.py",
+    "scripts/capture-command-process-fault.py",
+    "config/unified-runtime-v10.json",
+    "config/unified-runtime-v11.json",
+    "vendor/darling/src/external/security/keychain/ot/OTConstants.m",
+    "vendor/darling/src/external/security/keychain/ot/OTConstants.h",
+    "vendor/darling/src/external/security/OSX/sec/Security/SecPolicy.c",
+    "vendor/darling/src/external/security/OSX/sec/Security/SecPolicyChecks.list"
   ],
   "reference": [
     "distribution/linuxcode/validation/runtime-source-reuse-progress-2026-10-28.json",
@@ -72,7 +101,9 @@
     "runtime/dotnet-profile-source-scope-merge-98mxliwf/review.json",
     "distribution/linuxcode/validation/unreal-stage110-original-xcode-signed-app-2026-10-28.json",
     "distribution/linuxcode/validation/unified-runtime-bootstrap-2026-10-28.json",
-    "distribution/linuxcode/validation/unified-runtime-source-checkpoint-2026-10-28.json"
+    "distribution/linuxcode/validation/unified-runtime-source-checkpoint-2026-10-28.json",
+    "runtime/unity-macos-editor-metadata/batchmode-unified-v9-outcome.json",
+    "distribution/linuxcode/validation/shared-network-runtime-source-checkpoint-2026-10-28.json"
   ],
   "private_logs": []
 }
