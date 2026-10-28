@@ -110,7 +110,31 @@
     "scripts/verify-service-compat-signatures.py",
     "scripts/verify-adhoc-macho-file.py",
     "scripts/verify-entitlements-der.py",
-    "scripts/verify-apple-legacy-entitlements.py"
+    "scripts/verify-apple-legacy-entitlements.py",
+    "config/unified-runtime-v18.json",
+    "config/unified-runtime-v19.json",
+    "fixtures/hello/csops-signature-metadata.c",
+    "scripts/prepare-csops-metadata-probe.py",
+    "scripts/run-csops-metadata-probe.py",
+    "fixtures/hello/iokit-power-registration-smoke.c",
+    "scripts/build-iokit-core-clients.py",
+    "vendor/darling/src/external/IOKitUser/IOKitLib.c",
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/csops.c",
+    "runtime/csops-metadata-source-40ohoeq3/darlingserver/src/call.cpp",
+    "runtime/csops-metadata-source-40ohoeq3/darlingserver/src/file-signatures.cpp",
+    "runtime/csops-metadata-source-40ohoeq3/darlingserver/duct-tape/src/task.c",
+    "runtime/csops-metadata-source-40ohoeq3/darlingserver/internal-include/darlingserver/file-signatures.hpp",
+    "runtime/csops-metadata-source-40ohoeq3/darlingserver/duct-tape/include/darlingserver/duct-tape.h",
+    "runtime/csops-metadata-source-40ohoeq3/darlingserver/scripts/generate-rpc-wrappers.py",
+    "runtime/csops-metadata-source-40ohoeq3/generated/include/darlingserver/rpc.h",
+    "runtime/csops-metadata-source-40ohoeq3/generated/internal-include/darlingserver/rpc.internal.h",
+    "runtime/csops-metadata-source-40ohoeq3/generated/src/rpc.c",
+    "runtime/csops-metadata-trace-_syrj356/call.cpp",
+    "runtime/csops-metadata-source-40ohoeq3/rpc-layout-proof.c",
+    "config/upstream-runtime-reuse-integration-v1-package.json",
+    "config/unified-runtime-v20.json",
+    "runtime/csops-metadata-backing-hwe755cw/call.cpp",
+    "runtime/csops-metadata-backing-hwe755cw/include/darlingserver/proc-maps.hpp"
   ],
   "reference": [
     "distribution/linuxcode/validation/runtime-source-reuse-progress-2026-10-28.json",
@@ -139,7 +163,14 @@
     "runtime/darling-security-platform-guards-vvxclcfz/public-audit.json",
     "runtime/resolver-clone-block-host-5cp6jkq5/result.json",
     "artifacts/security-services-compat-progress-unified-v17-2026-10-28.json",
-    "artifacts/managed-https-network-progress-unified-v16-2026-10-28.json"
+    "artifacts/managed-https-network-progress-unified-v16-2026-10-28.json",
+    "runtime/iokit-lp64-publication-2mss3yor/public-validation.json",
+    "runtime/csops-metadata-source-40ohoeq3/append-only-rpc-proof.json",
+    "runtime/csops-metadata-source-40ohoeq3/interrupt-reply-union-proof.json",
+    "runtime/csops-kernel-compile-overlay-v1.json",
+    "distribution/linuxcode/validation/shared-metadata-iopm-2026-10-28.json",
+    "runtime/csops-signature-metadata-milestone-bbmn06ew/result.json",
+    "distribution/linuxcode/validation/public-server-stage116-source-build-2026-10-28.json"
   ],
   "private_logs": []
 }

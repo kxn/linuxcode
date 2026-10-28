@@ -1,0 +1,31 @@
+{
+  "template": "artifacts/network-interface-common-kernel-v1-build.json",
+  "template_sha256": "3696424baf16ce35a62b23b5d2376ebd2334e51c7895419c83c602e660aec36d",
+  "overrides": {
+    "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/csops.c": {
+      "before_sha256": "3a84867460f1ea0ea09375bc090ce0fa877b04c2795fe9b8f79e0309518561e7",
+      "source": "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/csops.c",
+      "source_sha256": "483eca072a17c310cbe91a669db993cc2e2c885a24da6df27dff3546cc177778",
+      "prepend_include_directories": [
+        "runtime/csops-metadata-source-40ohoeq3/generated/include"
+      ],
+      "expected_dependencies": {
+        "runtime/csops-metadata-source-40ohoeq3/generated/include/darlingserver/rpc.h": "43ed1627b29ddbed5594a85b2059d8eb7efd549af799bdec7b0747efa0999fab"
+      }
+    },
+    "runtime/darlingserver-source-build/darlingserver/src/rpc.c": {
+      "before_sha256": "2444a195879de1115ded537595f83353d51502061990251d86b1e2a9d1e71a26",
+      "source": "runtime/csops-metadata-source-40ohoeq3/generated/src/rpc.c",
+      "source_sha256": "47864a080ee97f029953b6459645299a97da73dc65a0d66e883d1ca55882df8d",
+      "prepend_include_directories": [
+        "runtime/csops-metadata-source-40ohoeq3/generated/include"
+      ],
+      "expected_dependencies": {
+        "runtime/csops-metadata-source-40ohoeq3/generated/include/darlingserver/rpc.h": "43ed1627b29ddbed5594a85b2059d8eb7efd549af799bdec7b0747efa0999fab"
+      }
+    }
+  },
+  "evidence": {
+    "runtime/csops-metadata-source-40ohoeq3/server-build.json": "bdba387754198b8be2f6bd0fb19d43727bb77e726e081e5b5561fb9c2821d843"
+  }
+}

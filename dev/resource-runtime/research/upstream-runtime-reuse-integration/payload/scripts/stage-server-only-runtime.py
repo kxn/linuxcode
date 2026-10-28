@@ -10,6 +10,7 @@ parser.add_argument('--server-build', required=True)
 parser.add_argument('--tag', required=True)
 parser.add_argument('--verified-source-delta', action='store_true', help='Require parent-matching baseline relink and sealed delta inputs instead of a full source build')
 parser.add_argument('--baseline-relinked-server', help='Actual baseline relink ELF required for a verified source delta')
+parser.add_argument('--paired-kernel-build',help='Complete selected kernel using the same new append-only RPC header and wrapper')
 args = parser.parse_args(); assert re.fullmatch('[a-z0-9]+', args.tag)
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 data = json.loads((root / args.parent_stage).read_text())
@@ -18,7 +19,7 @@ resolve = runpy.run_path(str(root / 'scripts/resolve-evidence-history.py'))['res
 delta_validation = None
 if args.verified_source_delta:
     assert not build['full_server_source_build'] and args.baseline_relinked_server
-    assert build['parent_private_stage'] == args.parent_stage
+    assert build['parent_private_stage'] == args.parent_stage or (args.paired_kernel_build and data.get('kernel_only_parent_stage') == build['parent_private_stage'])
     baseline = data['source_runtime']['LINUXCODE_DARLING_SERVER']['sha256']
     assert build['baseline_server_sha256'] == baseline and build['baseline_relink_identical']
     proof_path = root / build['baseline_relink_proof']; proof = json.loads(proof_path.read_text())
@@ -26,11 +27,39 @@ if args.verified_source_delta:
     assert proof['expected_stage112_server_sha256'] == proof['actual_relinked_sha256'] == baseline
     assert sha(root / args.baseline_relinked_server) == baseline
     assert proof['protected_output_untouched'] and build['baseline_build_output_restored_and_untouched']
-    assert build['kernel_change_required'] is False and build['public_RPC_layout_changed'] is False
+    assert build['public_RPC_layout_changed'] is False
+    rpc_inputs={}
+    if args.paired_kernel_build:
+        assert build['kernel_change_required'] and build['RPC_appended']
+        rpc_proof_path=root/build['append_only_rpc_proof']
+        assert sha(rpc_proof_path)==build['append_only_rpc_proof_sha256']
+        rpc_proof=json.loads(rpc_proof_path.read_text())
+        assert rpc_proof['verified'] and rpc_proof['old_runtime_header_identical_to_regenerated_baseline']
+        assert rpc_proof['old_call_numbers_identical']>0 and rpc_proof['old_struct_declarations_byte_identical']>0
+        assert rpc_proof['old_wrapper_bodies_and_signatures_identical_after_removing_new_reply_union_member']>0
+        assert rpc_proof['interrupt_enter_new_reply_union_member_only']
+        assert rpc_proof['old_compiled_struct_sizes_alignments_and_call_numbers_identical'] and rpc_proof['old_call_reply_layouts_identical']
+        for name,digest in rpc_proof['inputs'].items():rpc_inputs[resolve(name,digest)]=digest
+        kernel_path=root/args.paired_kernel_build;kernel=json.loads(kernel_path.read_text())
+        assert kernel['full_libsystem_kernel_source_build'] and kernel['complete_source_files']==len(kernel['sources'])
+        assert data['source_builds']['kernel']==args.paired_kernel_build
+        assert data['source_runtime']['LINUXCODE_LIBSYSTEM_KERNEL']['sha256']==kernel['binary_sha256']
+        assert sha(root/build['new_rpc_header'])==build['new_rpc_header_sha256']
+        assert sha(root/build['new_rpc_source'])==build['new_rpc_source_sha256']
+        sources={row['source']:row for row in kernel['sources']}
+        assert sources[build['new_rpc_source']]['sha256']==build['new_rpc_source_sha256']
+        compiled=kernel['incremental_source_build']['compiled_consumer_dependency_sha256']
+        consumers=[build['new_rpc_source']]+[name for name in compiled if name.endswith('/csops.c')]
+        assert len(consumers)>=2
+        for name in consumers:assert compiled[name][build['new_rpc_header']]==build['new_rpc_header_sha256']
+        for name in [args.paired_kernel_build,build['append_only_rpc_proof'],build['new_rpc_header'],build['new_rpc_source']]:rpc_inputs[name]=sha(root/name)
+    else:
+        assert build['kernel_change_required'] is False
+
     assert build['hook_ABI_append_only'] and build['source_delta_units'] == len(build['objects']) > 0
     assert build['source_files'] and all(build['compiler_dependencies'].get(name) == digest
                                       for name,digest in build['source_files'].items())
-    inputs = {}
+    inputs = dict(rpc_inputs)
     for group in [proof['original_link_inputs'], build['source_files'], build['compiler_dependencies'], build['objects']]:
         for name,digest in group.items():
             if name in inputs: assert inputs[name] == digest,name
@@ -74,9 +103,10 @@ if args.verified_source_delta:
         baseline_relink_proof_sha256=sha(proof_path),source_files=len(build['source_files']),
         compiler_dependencies=len(build['compiler_dependencies']),verified_objects=linked_objects,
         original_link_inputs=len(proof['original_link_inputs']),sealed_input_files=len(inputs),
-        kernel_changed=False,public_RPC_layout_changed=False,hook_ABI_append_only=True)
+        kernel_changed=bool(args.paired_kernel_build),public_RPC_layout_changed=False,hook_ABI_append_only=True)
+    if args.paired_kernel_build:delta_validation.update(paired_kernel_build=args.paired_kernel_build,append_only_rpc_proof=build['append_only_rpc_proof'],new_rpc_header_sha256=build['new_rpc_header_sha256'])
 else:
-    assert not args.baseline_relinked_server and build['full_server_source_build']
+    assert not args.baseline_relinked_server and not args.paired_kernel_build and build['full_server_source_build']
 assert sha(root / build['server']) == build['server_sha256']
 for name, digest in data['files'].items(): resolve(name, digest)
 for row in data['source_runtime'].values(): assert sha(root / row['path']) == row['sha256']

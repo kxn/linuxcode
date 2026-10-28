@@ -19,6 +19,7 @@ p.add_argument('--completion-label',help='Preserve an additional completion atte
 p.add_argument('--configuration',help='Explicit shared unified runtime for the original native linker')
 p.add_argument('--private-procfs-stage',help='Validated complete cohort selected with --configuration')
 p.add_argument('--changed-source', action='append', default=[])
+p.add_argument('--compile-overrides-file',help='Pinned per-unit replacement source/include inputs; never modify the sealed template files')
 p.add_argument('--changed-header',action='append',default=[])
 p.add_argument('--recompile-group',action='append',default=[])
 p.add_argument('--changed-included-source',action='append',default=[])
@@ -30,7 +31,7 @@ sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
 
 def complete_prepared():
     assert not a.prepare_only and a.configuration and a.private_procfs_stage
-    assert not any([a.changed_source,a.changed_header,a.recompile_group,a.changed_included_source,a.header_consumers_file])
+    assert not any([a.changed_source,a.changed_header,a.recompile_group,a.changed_included_source,a.header_consumers_file,a.compile_overrides_file])
     folder = root / a.output_dir
     assert folder.resolve().is_relative_to(root/'runtime') and folder.is_dir()
     plan_path = folder/'plan.json'; deferred_path = folder/'deferred-build.json'
@@ -48,6 +49,8 @@ def complete_prepared():
         for name,digest in d.get(key,{}).items(): assert sha(root/name) == digest,name
     if plan.get('header_consumers_file'):
         assert sha(root/plan['header_consumers_file']) == plan['header_consumers_file_sha256']
+    if plan.get('compile_overrides_file'):
+        assert sha(root/plan['compile_overrides_file']) == plan['compile_overrides_file_sha256']
     for dependencies in plan.get('compiled_consumer_dependency_sha256',{}).values():
         for name,digest in dependencies.items(): assert sha(root/name) == digest,name
     objects = []
@@ -125,13 +128,29 @@ assert folder.is_relative_to(root / 'runtime') and not folder.exists()
 assert not (root / a.report).exists()
 for repo, commit in d['actual_source_repositories'].items():
     assert subprocess.check_output(['git', '-C', str(root / repo), 'rev-parse', 'HEAD'], text=True).strip() == commit
+override_input=json.loads((root/a.compile_overrides_file).read_text()) if a.compile_overrides_file else {}
+overrides=override_input.get('overrides',{})
+if overrides:
+    assert override_input['template']==a.template_report and override_input['template_sha256']==sha(template)
+    original_rows={row['source']:row for row in d['sources']}
+    assert set(overrides)<=set(original_rows) and override_input.get('evidence')
+    resolve_input=runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
+    for name,digest in override_input['evidence'].items():resolve_input(name,digest)
+    for name,row in overrides.items():
+        assert row['before_sha256']==original_rows[name]['sha256']
+        source=(root/row['source']).resolve(strict=True)
+        assert source.is_relative_to(root) and source.is_file() and sha(source)==row['source_sha256']
+        for directory in row.get('prepend_include_directories',[]):
+            path=(root/directory).resolve(strict=True);assert path.is_relative_to(root) and path.is_dir()
+        assert row.get('expected_dependencies')
+        for dependency,digest in row['expected_dependencies'].items():assert sha(root/dependency)==digest
 changed_headers=set(a.changed_header);seen_headers=set();groups=set(a.recompile_group)
 consumer_input=json.loads((root/a.header_consumers_file).read_text()) if a.header_consumers_file else {}
 explicit_headers=consumer_input.get('headers',{})
 header_consumers=set()
 resolve=runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
-assert not a.reuse_recorded_source_snapshots or explicit_headers or (a.changed_source and not changed_headers), 'Historical reuse requires explicit source changes or header consumer evidence'
-assert a.changed_source or changed_headers, 'Specify changed sources or headers'
+assert not a.reuse_recorded_source_snapshots or explicit_headers or ((a.changed_source or overrides) and not changed_headers), 'Historical reuse requires explicit source changes or header consumer evidence'
+assert a.changed_source or changed_headers or overrides, 'Specify changed sources or headers'
 if explicit_headers:
     assert changed_headers==set(explicit_headers) and not groups
     assert consumer_input.get('evidence'), 'Supporting consumer/regression evidence is required'
@@ -156,6 +175,7 @@ for name,row in explicit_headers.items():
 assert groups<={row['group'] for row in d['sources']}
 changes = set(a.changed_source)
 assert len(changes) == len(a.changed_source)
+changes.update(overrides)
 historical_reused_sources={}
 for row in d['sources']:
     current=sha(root/row['source'])
@@ -164,7 +184,8 @@ for row in d['sources']:
         sealed=root/resolve(row['source'],row['sha256']);assert sha(sealed)==row['sha256']
         historical_reused_sources[row['source']]=dict(recorded_sha256=row['sha256'],current_sha256=current,sealed_source=str(sealed.relative_to(root)))
     if a.reuse_recorded_source_snapshots:assert sha(root/resolve(row['source'],row['sha256']))==row['sha256']
-assert {row['source'] for row in d['sources'] if sha(root / row['source']) != row['sha256']} - set(historical_reused_sources) == changes
+actual_changes={row['source'] for row in d['sources'] if sha(root / row['source']) != row['sha256']} - set(historical_reused_sources)
+assert actual_changes<=changes and changes-actual_changes<=set(overrides)
 assert header_consumers <= {row['source'] for row in d['sources']}
 included = set(a.changed_included_source)
 included_consumers = set()
@@ -192,20 +213,30 @@ for row in rows:
     if row['source'] in changes or row['source'] in included_consumers or row['group'] in groups or row['source'] in header_consumers:
         obj = folder / obj.name
         row['command'][row['command'].index('-o') + 1] = str(obj)
-        if row['source'] in header_consumers:
+        original_source=row['source'];override=overrides.get(original_source)
+        if override:
+            assert row['command'].count(str(root/original_source))==1
+            row['command'][row['command'].index(str(root/original_source))]=str(root/override['source'])
+            row['source']=override['source']
+            row['command'][1:1]=['-I'+str(root/name) for name in override.get('prepend_include_directories',[])]
+        if original_source in header_consumers or override:
             dependency_file=folder/(obj.stem+'.d')
-            row['command']+=['-MMD','-MF',str(dependency_file)]
+            # An inherited compile command may already carry a frozen depfile.
+            if '-MF' in row['command']:row['command'][row['command'].index('-MF')+1]=str(dependency_file)
+            else:row['command']+=['-MMD','-MF',str(dependency_file)]
         commands.append(row['command'])
         with (folder / (obj.stem + '.compile.log')).open('w') as out:
             subprocess.run(row['command'], check=True, stdout=out, stderr=subprocess.STDOUT)
         row['sha256'] = sha(root / row['source'])
-        if row['source'] in header_consumers:
+        if original_source in header_consumers or override:
             dependencies={}
             for name in shlex.split(dependency_file.read_text().split(':',1)[1].replace('\\\n',' ')):
                 path=Path(name).resolve();dependencies[str(path.relative_to(root)) if path.is_relative_to(root) else str(path)]=sha(path)
             compiled_dependencies[row['source']]=dependencies
+            if override:
+                for name,digest in override['expected_dependencies'].items():assert dependencies.get(name)==digest,(name,row['source'])
             for name,hdr in explicit_headers.items():
-                if row['source'] in hdr['consumers']:assert dependencies.get(name)==hdr['after_sha256'],(name,row['source'])
+                if original_source in hdr['consumers']:assert dependencies.get(name)==hdr['after_sha256'],(name,row['source'])
     objects.append(obj)
 guest = lambda path: '/Volumes/SystemRoot/workspace/' + str(path.relative_to(root))
 filelist = folder / 'objects.filelist'
@@ -236,6 +267,10 @@ if explicit_headers:
     plan.update(header_consumers_file=a.header_consumers_file,header_consumers_file_sha256=sha(root/a.header_consumers_file),
                 explicit_header_consumers=explicit_headers,compiled_consumer_dependency_sha256=compiled_dependencies,
                 historical_reused_sources=historical_reused_sources,reused_template_object_identities_verified=a.reuse_recorded_source_snapshots)
+if overrides:
+    plan.update(compile_overrides_file=a.compile_overrides_file,compile_overrides_file_sha256=sha(root/a.compile_overrides_file),
+        explicit_compile_overrides=overrides,compiled_consumer_dependency_sha256=compiled_dependencies)
+    for row in overrides.values():d['metadata_source_headers'].update(row['expected_dependencies'])
 (folder / 'plan.json').write_text(json.dumps(plan, indent=2) + '\n')
 if a.prepare_only:
     (folder/'deferred-build.json').write_text(json.dumps(dict(build=d,updated_sources=rows,native_link_not_executed=True,requested_report=a.report),indent=2)+'\n')

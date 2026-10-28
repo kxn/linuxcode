@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "host_only": true,
+  "old_runtime_header_identical_to_regenerated_baseline": true,
+  "old_runtime_header_sha256": "e2f65af6580069ece6cdaa7a3555ff016c9ef4752edf8215ebb17339976aa1ac",
+  "old_call_numbers_identical": 97,
+  "old_struct_declarations_byte_identical": 306,
+  "old_wrapper_bodies_and_signatures_identical_after_removing_new_reply_union_member": 188,
+  "interrupt_enter_new_reply_union_member_only": true,
+  "old_compiled_struct_sizes_alignments_and_call_numbers_identical": true,
+  "old_call_reply_layouts_identical": true,
+  "new_call_number": "95U",
+  "new_wrappers": [
+    "dserver_rpc_csops",
+    "dserver_rpc_explicit_csops"
+  ],
+  "commands": [
+    [
+      "clang-19",
+      "-std=gnu11",
+      "-I/home/dl/linuxcode/runtime/csops-metadata-source-40ohoeq3/baseline-generated/include",
+      "/home/dl/linuxcode/runtime/csops-metadata-source-40ohoeq3/rpc-layout-proof.c",
+      "-o",
+      "/home/dl/linuxcode/runtime/csops-metadata-source-40ohoeq3/baseline-rpc-layout"
+    ],
+    [
+      "clang-19",
+      "-std=gnu11",
+      "-I/home/dl/linuxcode/runtime/csops-metadata-source-40ohoeq3/generated/include",
+      "/home/dl/linuxcode/runtime/csops-metadata-source-40ohoeq3/rpc-layout-proof.c",
+      "-o",
+      "/home/dl/linuxcode/runtime/csops-metadata-source-40ohoeq3/candidate-rpc-layout"
+    ]
+  ],
+  "inputs": {
+    "vendor/darlingserver/scripts/generate-rpc-wrappers.py": "2d3395a6cc24ecc8f99d065c8cf1eb35a8969845506f845b1c09b8dfa1e9ef92",
+    "runtime/csops-metadata-source-40ohoeq3/darlingserver/scripts/generate-rpc-wrappers.py": "281fc92f8e8de92c54669837126c003c0b981790c60085070339b4caf02ecce6",
+    "runtime/csops-metadata-source-40ohoeq3/baseline-generated/include/darlingserver/rpc.h": "e2f65af6580069ece6cdaa7a3555ff016c9ef4752edf8215ebb17339976aa1ac",
+    "runtime/csops-metadata-source-40ohoeq3/generated/include/darlingserver/rpc.h": "43ed1627b29ddbed5594a85b2059d8eb7efd549af799bdec7b0747efa0999fab",
+    "runtime/csops-metadata-source-40ohoeq3/baseline-generated/src/rpc.c": "2444a195879de1115ded537595f83353d51502061990251d86b1e2a9d1e71a26",
+    "runtime/csops-metadata-source-40ohoeq3/generated/src/rpc.c": "47864a080ee97f029953b6459645299a97da73dc65a0d66e883d1ca55882df8d",
+    "runtime/csops-metadata-source-40ohoeq3/rpc-layout-proof.c": "fbe7cbf5774070391cef9b947d786ad7949f68d13e1ade06d64bcc1c0beb5ba4",
+    "runtime/csops-metadata-source-40ohoeq3/baseline-rpc-layout.txt": "eacaac857df4204f6f323365b38b7c5f852dddb8368f5c5c8c71e2047ce6b7a1",
+    "runtime/csops-metadata-source-40ohoeq3/candidate-rpc-layout.txt": "eacaac857df4204f6f323365b38b7c5f852dddb8368f5c5c8c71e2047ce6b7a1"
+  }
+}

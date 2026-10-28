@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/483eca072a17c310cbe91a669db993cc2e2c885a24da6df27dff3546cc177778",
+  "original_sha256": "483eca072a17c310cbe91a669db993cc2e2c885a24da6df27dff3546cc177778",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/misc/csops.h>\n#include <darling/emulation/conversion/errno.h>\n#include <darlingserver/rpc.h>\n#include <stdint.h>\n\n/* The server validates the actual loaded executable and audit generation,\n * verifies its descriptor-backed code signature and safely copies its metadata.\n * No AMFI/platform identity or entitlement enforcement is synthesized here. */\nlong sys_csops_audittoken(int pid, unsigned int ops, void* useraddr, size_t usersize, audit_token_t* token) {\n    int ret = dserver_rpc_csops(pid, ops, (uint64_t)(uintptr_t)useraddr,\n        usersize, (uint64_t)(uintptr_t)token);\n    return ret < 0 ? errno_linux_to_bsd(ret) : ret;\n}\n\nlong sys_csops(int pid, unsigned int ops, void* useraddr, size_t usersize) {\n    return sys_csops_audittoken(pid, ops, useraddr, usersize, 0);\n}\n"
+}

@@ -44,3 +44,13 @@ v17 源码准备支持从已物化镜像精确替换四个服务，保留其余�
 
 
 后续通用 clone 路径会替换继承的 resolver 挂载块，避免每代重复累加相同 bind；实际函数的四代宿主控制和已有三重复块输入均收敛为一块，未修改已运行的 v17 image，也未新增原生检查。
+
+公共 v20/stage116 接入真实进程绑定的 csops 签名元数据，复用既有服务端文件签名解析模块，处理 unsigned、thin、FAT 和独立 peer。v18 最初的 STATUS EAGAIN 由 v19 精确 trace 定位到 overlay 的 fd stat 设备号与实际 VMA backing 设备号差异；修复用同一 fd 的临时映射桥接身份，仍比较 device、inode、执行映像和 slice，并检查 stat 快照稳定。没有删除身份检查或给不同文件强行视为同一来源。35 项 ASan/UBSan 宿主控制覆盖真实 overlay、独立 peer、替换、错误 inode/offset/slice、匿名映射和死亡进程拒绝。
+
+同一公共 v20 的四类自有输入真实完成 227 项检查，外层和各 case 状态均为 0，原版 Security 的 SecTask 消费完成三次；此能力仅为读取真实文件/进程签名元数据，不声称 Apple 平台身份或完整内核权限执行。新 RPC 为 append-only：原 call number、结构布局及上限保持，kernel 的两个实际 consumer 使用同一新头，更新 2 个单元、复用 905 个密封对象，并由原版 ld 链接。server 逐字节相同基线重链、编译依赖、实际对象消费及配套 kernel 都经显式验证，不把增量构建写成完整 server 重建。既有源码 fork 已发布生产实现；payload 中保留精确私有构建路径的源码快照用于历史核对，当前生产源码以公开 commit 为准。
+
+公共 IOKit 同版补入完整已有 IOPMLib.c，与原六个 core client 单元一起构建。LP64 通知改走现成 64 位 MIG、保持 pointer-sized 引用并初始化保留槽，复用已有 IOPowerRootDomain 服务端。原公共 v18 的 main port、root domain、Mach receive right、direct open/interest/deregister/close 及 convenience 注册和关闭均完成；这只是被动通知注册，不表示宿主真实休眠、恢复回调或 acknowledgement barrier 已验证。IOKitUser 与 Darling gitlink 均在原有分支发布，未移动 vendor HEAD。
+
+同 v20 的后续端到端验证仍未完成：原版 codesign 达到限时，未出现 sign/verify 完成标记；原版 CoreCLR HTTPS 完成 DNS/TCP、进入 TLS 后正常 managed timeout，未完成握手或请求。公共 API gate 的成功不能代替这两项结果，也不能宣称统一环境完整 Xcode build 或 Unity 导出已通过。本轮新增 server 公开提交另在全新六仓库工作区用既有 -j2 入口完成 29/29 命令，审计无私有头或本机 vendor 输入；新 ELF 没有执行。公开 source pin、同版本配对及各项实际范围见 shared-metadata-iopm 与 public-server-stage116 两份摘要。
+
+较长的 v20 App 尝试还观察到具体后续故障：FileHelper 已通过原版 SecTask 权限检查、执行请求并发送回复，遍历部分路径时出现权限修复日志；该 errorHandler 会继续遍历，不能据此推断 fixFiles 最终结果。trustd 继续 user migration，mbr_uid_to_uuid(uid 282) 返回 ENOSYS (78)，导致 srcPath 为 nil，随后构造文件 NSURL 触发 NSInvalidArgumentException/ABRT，反复三次。短 CoreCLR 样本只到 helper 初始化，不能据其 8 秒限时将 TLS 未完成归因为死锁或单纯等待不足。源码检查点保留这些未完成范围，后续按实际 membership/路径来源继续复用完整上游实现。

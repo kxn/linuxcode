@@ -103,7 +103,7 @@ def install_source_libraries(system,prefix):
     return records,inputs
 
 if a.clone_image_stage:
-    assert not any([a.parent_stage,a.runtime_stage,a.preinstall_common_security,a.dyld_build])
+    assert not any([a.parent_stage,a.preinstall_common_security,a.dyld_build])
     parent_path=root/a.clone_image_stage;stage=json.loads(parent_path.read_text())
     resolve=runpy.run_path(str(root/'scripts/resolve-evidence-history.py'))['resolve']
     for name,digest in stage['files'].items():resolve(name,digest)
@@ -120,6 +120,32 @@ if a.clone_image_stage:
     for path in prefix.iterdir():
         if re.fullmatch(r'core(?:\.\d+)?',path.name) and path.is_file() and not path.is_symlink():path.unlink()
     namespace=folder/'runtime-ns.sh';launcher=folder/'darling'
+    if a.runtime_stage:
+        runtime_path=root/a.runtime_stage;runtime=json.loads(runtime_path.read_text())
+        previous_runtime=json.loads((root/image['runtime_stage']).read_text())
+        assert set(runtime['source_runtime'])==set(previous_runtime['source_runtime'])
+        for name,digest in runtime['files'].items():resolve(name,digest)
+        core={'LINUXCODE_LIBXPC':'usr/lib/system/libxpc.dylib','LINUXCODE_LAUNCHD':'sbin/launchd',
+              'LINUXCODE_LIBSYSTEM_KERNEL':'usr/lib/system/libsystem_kernel.dylib',
+              'LINUXCODE_QUARANTINE':'usr/lib/system/libquarantine.dylib',
+              'LINUXCODE_SANDBOX':'usr/lib/system/libsystem_sandbox.dylib','LINUXCODE_LIBDYLD':'usr/lib/system/libdyld.dylib'}
+        updates={}
+        for key,row in runtime['source_runtime'].items():
+            source=(root/row['path']).resolve(strict=True)
+            assert source.is_relative_to(root/'runtime') and sha(source)==row['sha256']
+            stage['files'][row['path']]=row['sha256']
+            if key in core:
+                target=core[key]
+                for tree in [system,prefix]:
+                    destination=tree/target;assert destination.parent.resolve().is_relative_to(tree.resolve())
+                    assert destination.is_file() and not destination.is_symlink()
+                    if sha(destination)!=row['sha256']:destination.unlink();shutil.copy2(source,destination)
+                    assert sha(destination)==row['sha256']
+                image['providers'][target]=dict(source=row['path'],files={'.':dict(sha256=row['sha256'])})
+            if row['sha256']!=previous_runtime['source_runtime'][key]['sha256']:
+                updates[key]=dict(before_sha256=previous_runtime['source_runtime'][key]['sha256'],**row)
+        image.update(runtime_stage=a.runtime_stage,runtime_stage_sha256=sha(runtime_path),cloned_runtime_updates=updates)
+        stage['files'][a.runtime_stage]=sha(runtime_path)
     library_updates,library_inputs=install_source_libraries(system,prefix)
     if a.service_cohort:
         cohort_path=root/a.service_cohort;cohort=json.loads(cohort_path.read_text())
@@ -128,7 +154,9 @@ if a.clone_image_stage:
             resolve(name,digest);stage['files'][name]=digest
         rows={row['destination']:row for category in ['prefix_files','system_files'] for row in cohort[category]}
         assert len(rows)==sum(len(cohort[category]) for category in ['prefix_files','system_files'])
-        changed=cohort['clone_delta_files'];assert changed and len(set(changed))==len(changed)
+        changed=cohort['clone_delta_files'];provider_changes=cohort.get('clone_delta_runtime_providers',[])
+        assert (changed or provider_changes) and len(set(changed))==len(changed)
+        assert len(set(provider_changes))==len(provider_changes)
         previous=image['service_cohort']['files']
         assert set(rows)==set(previous), 'Cloning a service cohort must preserve all account and service entries'
         assert {name for name,row in rows.items() if previous.get(name,{}).get('sha256')!=row['sha256']}==set(changed)
@@ -147,8 +175,35 @@ if a.clone_image_stage:
                 mode=oct(source.stat().st_mode & 0o777),
                 original_Apple_service_or_plist=row['original_Apple_service_or_plist'])
             stage['files'][row['source']]=row['sha256']
+        providers={row['destination']:row for row in cohort.get('runtime_providers',[])}
+        assert set(provider_changes)<=set(providers)
+        for name in provider_changes:
+            relative=PurePosixPath(name);assert not relative.is_absolute() and name==relative.as_posix()
+            assert all(part not in ('','.', '..') for part in name.split('/'))
+            row=providers[name];source=(root/row['source']).resolve(strict=True)
+            assert source.is_relative_to(root/'runtime') and not (root/row['source']).is_symlink()
+            actual={}
+            paths=source.rglob('*') if source.is_dir() else [source]
+            for path in paths:
+                key=str(path.relative_to(source)) if source.is_dir() else '.'
+                if path.is_symlink():
+                    assert path.resolve(strict=True).is_relative_to(source.resolve())
+                    actual[key]=dict(symlink=os.readlink(path))
+                elif path.is_file():
+                    assert not path.stat().st_mode & 0o7000
+                    actual[key]=dict(sha256=sha(path));stage['files'][str(path.relative_to(root))]=sha(path)
+            assert actual==row['files'],name
+            for tree in [system,prefix]:
+                destination=tree/name
+                assert destination.parent.resolve().is_relative_to(tree.resolve()) and destination.parent.is_dir()
+                if destination.is_symlink() or destination.is_file():destination.unlink()
+                elif destination.is_dir():shutil.rmtree(destination)
+                if source.is_dir():shutil.copytree(source,destination,symlinks=True,copy_function=shutil.copy2)
+                else:shutil.copy2(source,destination)
+            image['providers'][name]=dict(source=row['source'],files=actual)
         image['service_cohort'].update(manifest=a.service_cohort,manifest_sha256=sha(cohort_path),
-            cloned_service_delta_files=changed,modified_services_claim_original_Apple_signature=False)
+            cloned_service_delta_files=changed,cloned_runtime_provider_delta_files=provider_changes,
+            runtime_provider_destinations=list(providers),modified_services_claim_original_Apple_signature=False)
         stage['files'][a.service_cohort]=sha(cohort_path)
     if a.shared_profile_input:
         shared_path=root/a.shared_profile_input;shared=json.loads(shared_path.read_text())

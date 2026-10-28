@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/3a84867460f1ea0ea09375bc090ce0fa877b04c2795fe9b8f79e0309518561e7",
+  "original_sha256": "3a84867460f1ea0ea09375bc090ce0fa877b04c2795fe9b8f79e0309518561e7",
+  "encoding": "utf-8",
+  "text": "#include <darling/emulation/xnu_syscall/bsd/impl/misc/csops.h>\n\n#include <stdint.h>\n#include <sys/codesign.h>\n#include <strings.h>\n\n#include <darling/emulation/conversion/duct_errno.h>\n\n// TODO: actually implement this\n// this is just a dummy implementation for now that returns no actual data for any operation\nlong sys_csops(int pid, unsigned int ops, void* useraddr, size_t usersize) {\n\tint ret = 0;\n\n\tswitch (ops) {\n\t\tcase CS_OPS_STATUS: {\n\t\t\t*(uint32_t*)useraddr = CS_VALID;\n\t\t} break;\n\n\t\tcase CS_OPS_BLOB:\n\t\tcase CS_OPS_ENTITLEMENTS_BLOB:\n\t\tcase CS_OPS_IDENTITY: {\n\t\t\tmemset(useraddr, 0, usersize);\n\t\t} break;\n\n\t\t// all other operations are completely unsupported\n\t\tdefault: {\n\t\t\tret = -ENOSYS;\n\t\t} break;\n\t}\n\n\treturn ret;\n}\n\n// also more or less a stub\nlong sys_csops_audittoken(int pid, unsigned int ops, void* useraddr, size_t usersize, audit_token_t* audit_token) {\n\t// just defer to the regular csops\n\treturn sys_csops(pid, ops, useraddr, usersize);\n}\n"
+}

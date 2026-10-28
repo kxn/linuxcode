@@ -1,0 +1,168 @@
+{
+  "schema": "linuxcode-public-validation-v1",
+  "date": "2026-10-28",
+  "scope": "Shared IOKit power registration and file-signature metadata APIs; source checkpoint",
+  "configuration": "config/unified-runtime-v20.json",
+  "configuration_sha256": "91254edf93d0a679c1d1967b82ec99f79a9b9f996d455f19ba8ba88d9396d829",
+  "runtime_stage": "artifacts/private-procfs-auditsession116-stage.json",
+  "runtime_stage_sha256": "f68727b492d99897d8fb8d66d8113ef87f994d5b57a30cfde11cfbb3e8efd9c6",
+  "one_runtime_from_first_Mach_O": true,
+  "per_executable_library_selection": false,
+  "file_signature_metadata": {
+    "verified": true,
+    "outer_status": 0,
+    "elapsed_seconds": 15.17,
+    "cases": {
+      "unsigned": 5,
+      "signed_thin": 74,
+      "signed_FAT": 74,
+      "separate_peer": 74
+    },
+    "native_statuses": [
+      [
+        "unsigned",
+        "0"
+      ],
+      [
+        "signed-thin",
+        "0"
+      ],
+      [
+        "signed-fat",
+        "0"
+      ],
+      [
+        "signed-peer",
+        "0"
+      ]
+    ],
+    "original_Security_SecTask_completions": 3,
+    "self_owned_fixture_inputs": true,
+    "metadata_reading_only": true,
+    "platform_identity_or_kernel_enforcement_claimed": false,
+    "initial_v18_STATUS_failed": "EAGAIN",
+    "diagnostic_v19_identified": "Overlay fstat device identity differs from kernel VMA backing identity.",
+    "final_v20_fix": "Compare stable descriptor identity through a temporary mapping of the same fd, retaining device, inode, executable identity and slice checks.",
+    "unrelated_or_replaced_inputs_rejected": true,
+    "host_ASAN_UBSAN_checks": 35,
+    "original_kernel_objects_recompiled": 2,
+    "original_kernel_objects_reused": 905
+  },
+  "IOKit": {
+    "verified_on_v18": true,
+    "complete_source_translation_units": 7,
+    "public_validation": "runtime/iokit-lp64-publication-2mss3yor/public-validation.json",
+    "public_validation_sha256": "1cda6729c2eda8625527b0004e83dbe9759fcd6117db65d04a9479c6070fdeca",
+    "physical_suspend_or_resume_callback_verified": false
+  },
+  "end_to_end": {
+    "original_certificate_codesign_completed": false,
+    "original_codesign_outer_status": -9,
+    "native_sign_status": [],
+    "native_verify_status": [],
+    "CMS_independently_verified": false,
+    "HTTPS_succeeded": false,
+    "HTTPS_outer_status": 1,
+    "HTTPS_elapsed_seconds": 16.844,
+    "DNS_resolution_completed": true,
+    "TCP_connection_completed": true,
+    "TLS_handshake_started": true,
+    "TLS_handshake_completed": false,
+    "normal_managed_timeout": true,
+    "trace_events": [
+      [
+        "System.Net.Http",
+        "RequestStart"
+      ],
+      [
+        "System.Net.NameResolution",
+        "ResolutionStart"
+      ],
+      [
+        "System.Net.NameResolution",
+        "ResolutionStop"
+      ],
+      [
+        "System.Net.Sockets",
+        "ConnectStart"
+      ],
+      [
+        "System.Net.Sockets",
+        "ConnectStop"
+      ],
+      [
+        "System.Net.Security",
+        "HandshakeStart"
+      ],
+      [
+        "System.Net.Http",
+        "RequestLeftQueue"
+      ],
+      [
+        "System.Net.Http",
+        "RequestFailed"
+      ],
+      [
+        "System.Net.Http",
+        "RequestStop"
+      ]
+    ],
+    "event_payloads_published": false,
+    "complete_Xcode_build_in_this_cohort_verified": false,
+    "Unity_export_verified": false,
+    "observed_after_metadata": {
+      "FileHelper_SecTask_passed": true,
+      "FileHelper_reply_sent": true,
+      "trustd_uid": 282,
+      "trustd_UUID_lookup_error": "ENOSYS (78)",
+      "trustd_nil_file_URL_exception": "NSInvalidArgumentException from NSURL initFileURLWithPath:isDirectory: with nil string",
+      "trustd_abort_observed": true,
+      "trustd_repeated_abort_instances": 3,
+      "FileHelper_entitlement_checks_passed": true,
+      "FileHelper_processed_and_replied": true,
+      "partial_directory_enumeration_permission_warning_observed": true,
+      "warning_handler_continued_enumeration": true,
+      "fixFiles_final_result_inferred_from_warning": false,
+      "trustd_UUID_lookup_function": "mbr_uid_to_uuid",
+      "trustd_migration_source_path_nil": true
+    },
+    "sample_limits": "The short CoreCLR sample only reached helper initialization. The longer App signing attempt exposed later trustd exceptions; a TLS deadlock or merely insufficient timeout has not been established.",
+    "observed_causal_block": "User migration derives a nil source path after mbr_uid_to_uuid(uid 282) returns ENOSYS (78), then NSURL construction raises NSInvalidArgumentException. Partial enumeration warnings are not established as the primary blocker."
+  },
+  "source_publication": {
+    "server_repository": "https://github.com/kxn/darlingserver",
+    "server_commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+    "XNU_repository": "https://github.com/kxn/darling-xnu",
+    "XNU_commit": "09a7e034d81919877d1c890b7a08a35d44587a37",
+    "Darling_repository": "https://github.com/kxn/darling",
+    "Darling_gitlink_commit": "949e96a4344108a1439b8dff083192ca5d876060",
+    "branch": "linuxcode/xcode-x86_64",
+    "author": "Comman Kang <kangxn@gmail.com>",
+    "vendor_HEADs_unchanged": true
+  },
+  "private_native_evidence": {
+    "path": "runtime/csops-metadata-native-xc1f701v/result.json",
+    "sha256": "450a48333a6d76e8b234e8b03d6740c9f062f06fde8083ec04e5522be7293bbb",
+    "included": false
+  },
+  "published_payload_excludes": [
+    "Apple/Unity executables or libraries",
+    "Original entitlement or signature blobs",
+    "Resolver snapshots and private network addresses",
+    "Raw process logs, traces, cores and credentials"
+  ],
+  "cold_environment_install_verified": false,
+  "private_end_to_end_evidence": [
+    {
+      "path": "runtime/original-codesign-certificate-kixgqt8h/result.json",
+      "sha256": "1cc93b7d00d1c3bc435118382c668e7de5f25a43a97ca5bdd0926884efb3c8c8",
+      "included": false
+    },
+    {
+      "path": "runtime/managed-http-probe-7ucw_8n1/result.json",
+      "sha256": "1efbed906a3ea4f3fba65cb764aba73ca482c0f84a088c346f1e008f81651f45",
+      "included": false
+    }
+  ],
+  "fresh_public_server_build_validation": "validation/public-server-stage116-source-build-2026-10-28.json"
+}

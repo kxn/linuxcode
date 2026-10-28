@@ -1,0 +1,154 @@
+{
+  "verified": true,
+  "milestone": "Real process-bound csops signature metadata and original SecTask consumption",
+  "publication_safe": true,
+  "raw_logs_or_Apple_binaries_embedded": false,
+  "validation": {
+    "native_Darling": true,
+    "configuration": "config/unified-runtime-v20.json",
+    "configuration_sha256": "91254edf93d0a679c1d1967b82ec99f79a9b9f996d455f19ba8ba88d9396d829",
+    "stage": "artifacts/private-procfs-auditsession116-stage.json",
+    "stage_sha256": "f68727b492d99897d8fb8d66d8113ef87f994d5b57a30cfde11cfbb3e8efd9c6",
+    "all_macOS_processes_share_one_common_runtime": true,
+    "native_result": "runtime/csops-metadata-native-xc1f701v/result.json",
+    "native_result_sha256": "450a48333a6d76e8b234e8b03d6740c9f062f06fde8083ec04e5522be7293bbb",
+    "outer_status": 0,
+    "elapsed_seconds": 15.171523920958862,
+    "cases": [
+      {
+        "name": "unsigned",
+        "status": 0,
+        "checks": 5
+      },
+      {
+        "name": "signed-thin",
+        "status": 0,
+        "checks": 74
+      },
+      {
+        "name": "signed-fat",
+        "status": 0,
+        "checks": 74
+      },
+      {
+        "name": "signed-peer",
+        "status": 0,
+        "checks": 74
+      }
+    ],
+    "total_checks": 227,
+    "original_SecTask_completions": 3,
+    "owned_fixture_markers": [
+      "CSOPS_UNSIGNED_METADATA_OK checks=5",
+      "CSOPS_CASE_STATUS unsigned 0",
+      "CSOPS_SIGNED_METADATA_AND_ORIGINAL_SECTASK_OK checks=74 peer=0",
+      "CSOPS_CASE_STATUS signed-thin 0",
+      "CSOPS_SIGNED_METADATA_AND_ORIGINAL_SECTASK_OK checks=74 peer=0",
+      "CSOPS_CASE_STATUS signed-fat 0",
+      "CSOPS_SIGNED_METADATA_AND_ORIGINAL_SECTASK_OK checks=74 peer=1",
+      "CSOPS_CASE_STATUS signed-peer 0"
+    ],
+    "verified_behaviors": [
+      "unsigned STATUS=0 and entitlement EINVAL",
+      "signed thin and FAT slice selection",
+      "XML/DER big-endian sizing headers, ERANGE and bounded copyout",
+      "actual CDHash from verified CodeDirectory",
+      "valid audit token and stale-generation rejection without output mutation",
+      "invalid caller pointer EFAULT",
+      "separate caller and signed peer target",
+      "original SecTask true, false, string and absent entitlement values"
+    ]
+  },
+  "host_controls": {
+    "real_overlay_fd_to_VMA_identity": {
+      "report": "runtime/csops-metadata-backing-hwe755cw/host-controls-v2/result.json",
+      "sha256": "4e88138589f0f3231b563a45376d70d664a968219fde853ca74ccf395f9ae439",
+      "checks": 35,
+      "sanitizers": "ASAN+UBSAN",
+      "actual_different_process": true,
+      "strict_backing_device_inode_slice": true,
+      "path_replacement_and_snapshot_mutation_rejected": true
+    },
+    "production_signature_parser": {
+      "report": "runtime/csops-metadata-source-40ohoeq3/metadata-host-controls-v2.json",
+      "sha256": "a3dbc728aa76dee03a5290e00c338ac0fa858cb19fa9bdebd9a3b550c5180933",
+      "actual_four_signed_FAT_service_inputs_verified": true,
+      "code_page_and_XML_DER_signature_tampering_rejected": true
+    }
+  },
+  "published_sources": {
+    "branch": "linuxcode/xcode-x86_64",
+    "server": {
+      "repository": "https://github.com/kxn/darlingserver",
+      "base": "de357b095584fbe9b24b37a404d691b1e4d872d7",
+      "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+      "url": "https://github.com/kxn/darlingserver/commit/d728445d2124584dbfb72dd58f0e67a432ee8514"
+    },
+    "xnu": {
+      "repository": "https://github.com/kxn/darling-xnu",
+      "base": "60358549f04819147172b90c83bcab79be190b35",
+      "commit": "09a7e034d81919877d1c890b7a08a35d44587a37",
+      "url": "https://github.com/kxn/darling-xnu/commit/09a7e034d81919877d1c890b7a08a35d44587a37"
+    },
+    "author": "Comman Kang <kangxn@gmail.com>",
+    "committer": "Comman Kang <kangxn@gmail.com>",
+    "remote_refs_verified": true,
+    "source_files": {
+      "darlingserver/src/call.cpp": {
+        "sha256": "c371d4ee202a6280570e5e966541e524200892218dd57f541d1e2584ded8fc32",
+        "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+        "exact_selected_source": true
+      },
+      "darlingserver/internal-include/darlingserver/proc-maps.hpp": {
+        "sha256": "57afd269ba81003993da77097228260881593d3fdeb8f40f3af322e0022c473c",
+        "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+        "exact_selected_source": true
+      },
+      "darlingserver/src/file-signatures.cpp": {
+        "sha256": "c1593bfa23df8ef964b84422178ec3ffe450371167bb136f5c3e1c5f66fc647a",
+        "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+        "exact_selected_source": true
+      },
+      "darlingserver/internal-include/darlingserver/file-signatures.hpp": {
+        "sha256": "f3a1f608813b61c5298250e99c6da37f68a7db372bab80a5375569401347e9fa",
+        "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+        "exact_selected_source": true
+      },
+      "darlingserver/scripts/generate-rpc-wrappers.py": {
+        "sha256": "281fc92f8e8de92c54669837126c003c0b981790c60085070339b4caf02ecce6",
+        "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+        "exact_selected_source": true
+      },
+      "darlingserver/duct-tape/include/darlingserver/duct-tape.h": {
+        "sha256": "dcdaa0f2f92cc6288b1421e194c9aef40d0e548f1bf9f6ee0e32e9a30556147e",
+        "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+        "exact_selected_source": true
+      },
+      "darlingserver/duct-tape/src/task.c": {
+        "sha256": "68798b738bd68e460886b7e24a9a0db7855c73dce1e0013f3fdad309e4676f60",
+        "commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
+        "exact_selected_source": true
+      },
+      "xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/misc/csops.c": {
+        "sha256": "483eca072a17c310cbe91a669db993cc2e2c885a24da6df27dff3546cc177778",
+        "commit": "09a7e034d81919877d1c890b7a08a35d44587a37",
+        "exact_selected_source": true
+      }
+    },
+    "main_vendor_heads_unchanged": true,
+    "umbrella_gitlink_update_owner": "s2c_regression"
+  },
+  "limits": {
+    "Intel64_runtime_only": true,
+    "alternate_CodeDirectories_implemented": false,
+    "mutating_CS_OPS_implemented": false,
+    "Apple_platform_identity_established": false,
+    "AMFI_or_entitlement_permission_enforcement_implemented": false,
+    "certificate_chain_trust_established_by_csops": false,
+    "full_App_codesign_or_HTTPS_success_tested_here": false
+  },
+  "prior_failures_preserved": [
+    "runtime/csops-metadata-native-cr8d2c66/result.json",
+    "runtime/csops-metadata-native-aab1fb71/result.json"
+  ]
+}

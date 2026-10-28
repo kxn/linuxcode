@@ -1,0 +1,81 @@
+{
+  "schema": "linuxcode-public-validation-v1",
+  "date": "2026-10-28",
+  "milestone": "Shared LP64 IOKit power registration uses complete existing source modules and real notification transport",
+  "verified": true,
+  "platform": "Linux x86_64 running macOS Intel binaries in Darling",
+  "single_shared_runtime": true,
+  "per_executable_library_configuration": false,
+  "source_changes": {
+    "IOKitUser_repository": "https://github.com/kxn/darling-iokituser",
+    "IOKitUser_commit": "425a343ebda2d82d5713de9b5db276cb9edc1319",
+    "Darling_repository": "https://github.com/kxn/darling",
+    "Darling_commit": "f01754a78dc29c67b65829a187d404331043c281",
+    "branch": "linuxcode/xcode-x86_64",
+    "author": "Comman Kang <kangxn@gmail.com>",
+    "IOKitUser_changed_files": [
+      "IOKitLib.c"
+    ],
+    "Darling_changed_files": [
+      "src/external/IOKitUser"
+    ],
+    "upstream_master_checked": "534684e6748dffbd875c6cd1942477a52b66a077"
+  },
+  "problem": "LP64 notification clients selected legacy MIG 2850, which reached an unsupported legacy daemon handler; callback and context references also had the wrong transport width.",
+  "implementation": [
+    "Use the existing 64-bit interest and matching notification RPCs for LP64 clients.",
+    "Keep reference arrays pointer-sized and initialize reserved entries.",
+    "Compile the existing complete IOPMLib.c together with the six existing IOKit core client translation units.",
+    "Reuse the existing Linux-backed IOPowerRootDomain daemon and real Mach connection/notifier lifetime implementation."
+  ],
+  "native_validation": {
+    "verified": true,
+    "outer_status": 0,
+    "elapsed_seconds": 6.67421652097255,
+    "configuration": "config/unified-runtime-v18.json",
+    "configuration_sha256": "99e98402653ac37c90bcb6c9f81fd1e4edef18f35ad7bce8f1783e1260a5adb8",
+    "stage": "artifacts/private-procfs-auditsession114-stage.json",
+    "stage_sha256": "902b1895e52aac2707d4c55fb0153b9d1051ba3dde589005b9fe8c0f695a7da3",
+    "observed_stages": [
+      "main-port status=0 present=1",
+      "root-domain present=1",
+      "notification-port status=0 present=1 receive-right=1",
+      "direct-open status=0 present=1",
+      "direct-interest status=0 present=1",
+      "direct-deregister status=0 cleared=1",
+      "direct-close status=0",
+      "convenience connection=1 notification-port=1 notifier=1",
+      "convenience-deregister status=0 cleared=1",
+      "convenience-close status=0"
+    ],
+    "passive_registration_only": true
+  },
+  "host_validation": {
+    "verified": true,
+    "checks": 10,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "scope": "Exact extracted interest wrapper with a declared host MIG callee stub; high-bit references, reserved slot and error propagation. Actual Mach transport success comes from the separate native fixture."
+  },
+  "limits": {
+    "physical_host_suspend_verified": false,
+    "resume_callback_delivery_verified": false,
+    "sleep_acknowledgement_barrier_implemented": false,
+    "full_securityd_startup_verified": false,
+    "app_build_or_signing_verified": false,
+    "ILP32_native_execution_verified": false
+  },
+  "evidence_digests": {
+    "native_result_sha256": "6ffe909f8afc1d9e7922ccdb7b223cf5dac7d661d13d8650a3739e21c905f4f4",
+    "host_result_sha256": "13521832c37df26f37e0fac10914ef872e896b49a435515766011eac2482b6cc",
+    "source_client_build_sha256": "14ae2e2994e88890d47986a96bd1893fd7320e569b8d964a52b1779f98b69831"
+  },
+  "own_source_sha256": {
+    "vendor/darling/src/external/IOKitUser/IOKitLib.c": "ad4293dc2efd6026a1e02304b6905f7aa0e02e31fb60899a00f0873afd893e4e",
+    "scripts/build-iokit-core-clients.py": "e999ddb7b3a8b96787155746b78b52a5e84e779434a421138eefd09f99d6fc7f",
+    "fixtures/hello/iokit-power-registration-smoke.c": "3bddc8cd4333f30eb3442792f68b2af6457248cb47c66b4f2d21129912fe776d"
+  },
+  "publication_scope": "Own source and sanitized validation metadata only. No Apple or Unity binaries, original entitlements, credentials, raw process logs or cores are included."
+}
