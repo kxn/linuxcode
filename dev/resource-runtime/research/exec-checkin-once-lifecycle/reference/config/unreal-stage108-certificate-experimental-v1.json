@@ -1,0 +1,43 @@
+{
+  "scope": "Experimental stage108 serializes exec pipe completion with main-thread checkin and distinguishes pthread/fork. Ten actual C++ lifecycle regressions pass; native original UE rerun pending. Not adopted.",
+  "inputs": {
+    "stage": {
+      "path": "artifacts/private-procfs-auditsession108-stage.json",
+      "sha256": "9204020c39781583380747971da0d12308219e2148a251b3a0317df808bd2584"
+    },
+    "configuration": {
+      "path": "config/direct-resource-tool-environment-v154.json",
+      "sha256": "f3ad941f6b2d0f0695326ca011e6068c86f596c38c403bcf55193f985b5e1370"
+    },
+    "identity_stage": {
+      "path": "artifacts/local-identity-store-chain-certificates-v14-stage.json",
+      "sha256": "5330e1bee4438d0ed7688cb66ac52bcdc269575641d9339c1d2ae650ddb360bc"
+    },
+    "trustd_identity_stage": {
+      "path": "artifacts/local-identity-store-chain-parent-candidates-v15-stage.json",
+      "sha256": "ece6ef04877a8812fdcd5086df4637dae93381dcd0764da2700daaf990f677e6"
+    },
+    "securityd_build": {
+      "path": "runtime/securityd-source-24j16esb/build.json",
+      "sha256": "76b9e7dbe7aef117d1e0ebeef3fc51556dd5cc34779288087481f39eb21ec5fb"
+    },
+    "launchctl": {
+      "path": "runtime/launchctl-source-6e9jbpuc/launchctl",
+      "sha256": "3e813a63c44e2739cbc06391a2d641aa499105e5356a28d8d3559c0ceee85d84"
+    },
+    "trustd_build": {
+      "path": "runtime/trustd-source-nnzdc_2n/build.json",
+      "sha256": "9a483c869136f1091c334ea655cdeae76942c945c92e44729adc607daa39cb07"
+    }
+  },
+  "cold_reconstruction_ready": false,
+  "service_templates": {
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.securityd.plist": "3de83e3c4fabc964456c8a673ddf528d580bd5c9964e023ade743e3d8bbf220f",
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchDaemons/com.apple.trustd.plist": "1ce08dcc60a430e692be90a898503c63d3089eff46d7ac36c04743015332c474",
+    "runtime/rootfs/usr/libexec/darling/System/Library/LaunchAgents/com.apple.trustd.agent.plist": "53898cb7cfa845cb3a1c5874d27ef0c6e055f101680c09b48d43254aeb072471"
+  },
+  "workspace_bind_stage": {
+    "path": "artifacts/workspace-bind-launcher-certificate-v1-stage.json",
+    "sha256": "d8b17e8ffd45aa3cf2a96eafd1e5f8012944c9d4a2bf09a578bd7ed90febce70"
+  }
+}

@@ -26,7 +26,7 @@ class PublicServerBuildChecks(unittest.TestCase):
                 build.main()
             result = json.loads(stream.getvalue())
             server = next(row for row in result['repositories'] if row['name'] == 'darlingserver')
-            self.assertEqual(server['commit'], 'ed13f2153fde8c150455062f26035e8e291e66d4')
+            self.assertEqual(server['commit'], '577b168d4c9a3af676fd4c9e859d70d2f56924ee')
             self.assertEqual(len(result['repositories']), 6)
             self.assertEqual(result['build_command'][-2:], ['--jobs', '2'])
             self.assertFalse(workspace.exists())

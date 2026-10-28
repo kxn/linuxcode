@@ -1,0 +1,143 @@
+{
+  "scope": "Once-only exec-pipe completion shared by the original monitor and main-thread checkin; pthread checkin performs no process replacement or fork notification.",
+  "source_fix": {
+    "fork_commit": "577b168d4c9a3af676fd4c9e859d70d2f56924ee",
+    "fork_commit_url": "https://github.com/kxn/darlingserver/commit/577b168d4c9a3af676fd4c9e859d70d2f56924ee",
+    "branch": "linuxcode/xcode-x86_64",
+    "files": {
+      "vendor/darlingserver/src/process.cpp": "d22503dec3b3e256b27f4a2142990583974e85818d3afdf374b32bc3760d955c",
+      "vendor/darlingserver/src/call.cpp": "93197d38b66aab2268e129390d2a3f09f3fc4bdb098e47b1215be2fbcd5ed895",
+      "vendor/darlingserver/internal-include/darlingserver/process.hpp": "d2aec7b62693a18fe4cf67ba8640e13c2c378887b57cc4398b001461df9329b6"
+    }
+  },
+  "regression": {
+    "path": "runtime/exec-checkin-lifecycle-lusdu7ng/result.json",
+    "sha256": "62ebc8fbb74d4ce94f5c50b917ef7c74570f805d4a95f0c8634a07e7d9969aaa",
+    "candidate_passes": 10,
+    "historical_expected_failures": 6,
+    "historical_control_passes": 4,
+    "expected_historical_failures": [
+      "disclaim-success",
+      "exec-double-late-monitors",
+      "exec-main-before-monitor",
+      "fork-once",
+      "initial-startup",
+      "pthread-not-fork"
+    ],
+    "scope": "Actual Call checkout/checkin, Process notifyCheckin and exec lifecycle, Thread pushCallReply and registry; real Linux pipe success EOF/failure marker, actual stored monitor callbacks dispatched in controlled order. Controlled XNU construction/destruction and output transport; no full server event loop, actual Linux exec, native Darling session, or Mach-O integration.",
+    "negative_control": "Exact archived stage107 Thread/Process/Call sources with matching private headers; current read-only copied non-replaced objects. Not a historical complete-server binary.",
+    "negative_control_inputs": {
+      "vendor/darlingserver/src/process.cpp": {
+        "sha256": "1dbca853b13fceca7da55aefedfb63d0b4f107c04877b259ece105a9ac540265",
+        "resolved_source": "runtime/source-input-history/1dbca853b13fceca7da55aefedfb63d0b4f107c04877b259ece105a9ac540265"
+      },
+      "vendor/darlingserver/src/call.cpp": {
+        "sha256": "8500d13da249bf71ef03c6d3da61ebe4cf785ccd793aa14d0b2c60ebafbf3f4d",
+        "resolved_source": "runtime/source-input-history/8500d13da249bf71ef03c6d3da61ebe4cf785ccd793aa14d0b2c60ebafbf3f4d"
+      },
+      "vendor/darlingserver/internal-include/darlingserver/process.hpp": {
+        "sha256": "2281b8cbd0079ab96f9cec22c000777e76ad46ce137e7fd66a759cfbd3dd4d0a",
+        "resolved_source": "runtime/source-input-history/2281b8cbd0079ab96f9cec22c000777e76ad46ce137e7fd66a759cfbd3dd4d0a"
+      },
+      "vendor/darlingserver/src/thread.cpp": {
+        "sha256": "2bb7e29795bb2faf32a8da48e68981af2bff75bcdf1cdf545a06358908b1818b",
+        "resolved_source": "vendor/darlingserver/src/thread.cpp"
+      },
+      "vendor/darlingserver/internal-include/darlingserver/thread.hpp": {
+        "sha256": "e124327951a023caa0946c07fc70842ee0a741141f058fb40b47986dc1a90afe",
+        "resolved_source": "vendor/darlingserver/internal-include/darlingserver/thread.hpp"
+      },
+      "vendor/darlingserver/internal-include/darlingserver/call.hpp": {
+        "sha256": "b1ded70aa88019e75b1dc2f8c66b1dcfb2e667d37f7768fb7f775d8eda585ed4",
+        "resolved_source": "vendor/darlingserver/internal-include/darlingserver/call.hpp"
+      }
+    }
+  },
+  "native_stage107_observation": {
+    "completed_UBT_actions": 794,
+    "total_UBT_actions": 800,
+    "remaining_original_Clang_processes": [
+      {
+        "parent_host_pid": 2190833,
+        "child_host_pid": 2190835
+      },
+      {
+        "parent_host_pid": 2200592,
+        "child_host_pid": 2200595
+      }
+    ],
+    "parent_state": "Original mapped mldr __darling_thread_create yields waiting for args.pth to clear.",
+    "child_state": "darling_thread_entry waits in explicit_checkin recvmsg on RPC FD 10239.",
+    "server_observation": "Server remained alive; the two corresponding child threads had no registry entries; selected inbox/outbox and client socket queues were empty.",
+    "native_exec_monitor_checkin_order_traced": false,
+    "causal_claim": "The source defect reproduces the same child self-unregistration and missing checkin reply under controlled order. The exact ordering in this native run was not recorded.",
+    "selected_evidence": "runtime/unreal-v8-final-clang-spin-v1/message-lifecycle-audit.json",
+    "later_cancellation": {
+      "UBT_signal": "SIGINT",
+      "native_Xcode_status_after_cancellation": 65,
+      "reason": "Confirmed thread-registration stall after 794 actions; preserve completed compiler products.",
+      "Info_Template_and_rsync_diagnostics": "Consequences of the unfinished/cancelled build, not proof of an independent template or rsync root cause.",
+      "observer_status": 1,
+      "observer_failure": "Host observer chmod failed on a root-owned nonfatal GDB core; native build continued until separately cancelled."
+    },
+    "private_capture_files_excluded": true
+  },
+  "source_builds": {
+    "stage107": {
+      "report": "runtime/remap-diagnostic-server-scqr1r7d/stage.json",
+      "sha256": "0006db04dd63370b86ba08932a4f19d1625b9e2f974b7500c0ca46b809be9444",
+      "server_sha256": "2ef292d085b40bc652bc685d96c84e000e5b0254d7bd9f1eb9af6e125f67bae7"
+    },
+    "stage108": {
+      "report": "runtime/remap-diagnostic-server-7cxdgysv/stage.json",
+      "sha256": "ac4ed63a391c54963b4ee1dd91dc674e2e628d97b7f00c1add8664ddfefb005e",
+      "server_sha256": "52a1fbb5aaed8d9a11ba4bed78f435f0a3d88e852c021f95ff8ab33da917d5fe",
+      "stage": "artifacts/private-procfs-auditsession108-stage.json",
+      "stage_sha256": "9204020c39781583380747971da0d12308219e2148a251b3a0317df808bd2584"
+    }
+  },
+  "native_stage108_terminal_result": {
+    "attempt": "runtime/unreal-xcode-build-gqvdbmfj/attempt-stage108-exec-v10/prepared.json",
+    "original_host_report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-151afe2866bf.json",
+    "original_host_report_sha256": "7572d29dcd28a8a5d1401f73142bb28bc7bdaf4a00c2941afbe45a445d5b9898",
+    "original_host_report_attached": false,
+    "native_Xcode_status": 75,
+    "UBT_result": "OtherCompilationError",
+    "reused_completed_actions": 794,
+    "remaining_actions": 6,
+    "previously_stalled_compiler_actions_completed": [
+      "CoreUObject.13",
+      "Niagara.13"
+    ],
+    "link_action_reached": 3,
+    "link_succeeded": false,
+    "App_constructed": false,
+    "signing_verified": false,
+    "diagnosis": "Original ld could not open the UBA temporary response file; the diagnostic named both /var/root and canonical /private/var/root aliases.",
+    "response_file_requested": "/var/root/.epic/UnrealBuildAccelerator/sessions/261028_024304/temp/00/response-f79b62.txt",
+    "response_file_canonical": "/private/var/root/.epic/UnrealBuildAccelerator/sessions/261028_024304/temp/00/response-f79b62.txt",
+    "private_UBT_log": "runtime/unreal-stage108-link-response-failure-v1/UBT-private.log",
+    "private_log_attached": false,
+    "causal_limit": "The new attempt passed the two previous stalled compile actions. This does not trace the earlier native exec/checkin event order or prove that the lifecycle change was its sole cause."
+  },
+  "native_stage108_status_at_packaging": "v10 terminated with native Xcode 75 after completing the two previously stalled compile actions and reaching Link; full link, App and signing did not succeed.",
+  "not_covered": [
+    "Exact event order in the stalled original UE/Xcode run",
+    "Full server event loop or actual Linux exec in the controlled host regression",
+    "Real XNU object/semaphore lifecycles in the host regression",
+    "Remaining S2C dead-target and exec-generation lifetime issues",
+    "Complete UE linking, final App construction, original codesign/CMS verification, provisioning or device execution"
+  ],
+  "full_UE_build_verified": false,
+  "App_signing_verified": false,
+  "full_goal_complete": false,
+  "next_native_comparison": {
+    "preparation": "runtime/unreal-xcode-build-gqvdbmfj/attempt-stage108-canonical-uba-v11/prepared.json",
+    "scope": "Only official UBA_ROOT environment selection moves storage/temp into the workspace; original Xcode CLI and UE engine remain unchanged.",
+    "UBA_ROOT": "/Volumes/SystemRoot/workspace/runtime/unreal-uba-canonical-root-v1",
+    "original_UE_source_modified": false,
+    "original_Xcode_arguments_modified": false,
+    "result_in_this_package": null,
+    "hypothesis_test_not_adopted_fix": true
+  }
+}

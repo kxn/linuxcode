@@ -75,6 +75,7 @@ class InstallerChecks(unittest.TestCase):
                 self.assertIn('linuxcode/dev/build-public-server.py', names)
                 self.assertIn('linuxcode/dev/locks/public-server.lock.json', names)
                 self.assertIn('linuxcode/validation/public-server-source-build-2026-10-28.json', names)
+                self.assertIn('linuxcode/validation/public-server-stage108-source-build-2026-10-28.json', names)
                 self.assertIn('linuxcode/dev/import-recovery-icu.py', names)
                 self.assertIn('linuxcode/dev/locks/recovery-icu-25G83.lock.json', names)
                 self.assertIn('linuxcode/validation/recovery-icu-explicit-import-2026-10-28.json', names)

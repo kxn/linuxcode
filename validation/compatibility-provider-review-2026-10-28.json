@@ -1,0 +1,277 @@
+{
+  "created_at": "2026-10-28T03:13:47.711812+00:00",
+  "scope": "Read-only architecture review of active stage108/UE-v10 provider selection and selected upstream source reuse; no new native execution or old matrix reruns.",
+  "vendor_heads_confirmed_by_parent": {
+    "darling": "60ba801decee7a00782f74f6be4c8ffb013f79ff",
+    "darlingserver": "89751e64bc6c2082f7725061824ee0e33395b0de",
+    "network_check_repeated": false
+  },
+  "summary": "The strongest confirmed duplication is two stateful libkqueue owners in currently mapped images. A second problem is already-built upstream CoreTLS not selected in the current composition. The Security adapter is genuinely partial while reusing its real local backend. Runtime selection additionally depends on historical build/probe closure; that storage dependency must be separated from active provider identity.",
+  "findings": [
+    {
+      "id": "active-double-kqueue-state",
+      "priority": 1,
+      "classification": "Confirmed duplicate stateful upstream implementation in two currently mapped providers",
+      "title": "Darling processes currently load two complete libkqueue instances and maintain two fork-repair paths",
+      "evidence": [
+        {
+          "path": "vendor/darling/src/external/libsystem/CMakeLists.txt",
+          "start_line": 31,
+          "end_line": 37,
+          "sha256": "acc02e7fa7ba3b3f8be9125a5cf33c611a5002b244af830e4ed1efe633c93d16",
+          "role": "Upstream libSystem target already embeds the kqueue object target"
+        },
+        {
+          "path": "scripts/build-libsystem-kernel-source.py",
+          "start_line": 154,
+          "end_line": 167,
+          "sha256": "c8c26fe8b43e0080586e71d7a7bb0cf4f3497161521b7f9cdcc30359b60705f9",
+          "role": "The direct-kevent build embeds the same 17 upstream queue sources again in libsystem_kernel"
+        },
+        {
+          "path": "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/kqueue/kevent.c",
+          "start_line": 12,
+          "end_line": 20,
+          "sha256": "a7011fc3d0395418d3f8384bf68e7af41fb670534e2f171d785614185c36dce1",
+          "role": "New hook explicitly states that this image owns a separate libkqueue"
+        },
+        {
+          "path": "vendor/darling/src/external/libsystem/init.c",
+          "start_line": 429,
+          "end_line": 436,
+          "sha256": "d04d841d3da7d117e667e037edd58d124ef0763bce977ee03d07e543a9bc346d",
+          "role": "Normal fork child repairs the libkernel copy and then libSystem copy"
+        },
+        {
+          "path": "vendor/darling/src/external/xnu/darling/src/libsystem_kernel/emulation/src/xnu_syscall/bsd/impl/process/posix_spawn.c",
+          "start_line": 125,
+          "end_line": 136,
+          "sha256": "73acc97b21271fe89de8557ecae1c55fdefc1e5077a88f098a4ffa8a69b1c5f0",
+          "role": "Spawn child separately repairs the added direct kernel instance"
+        },
+        {
+          "path": "vendor/darling/src/external/libkqueue/src/common/kqueue.c",
+          "start_line": 38,
+          "end_line": 39,
+          "sha256": "05bd74dcb13877aa7ce959cfa37902468a8fb726ace076ef1d50e94b6cb94418",
+          "role": "Mutex and once state belong to each embedded copy"
+        }
+      ],
+      "provider_evidence": {
+        "maps": "runtime/unreal-v8-final-clang-spin-v1/coreuobject.maps",
+        "maps_sha256": "a53e6772f1aef87a53abedb266f66ebc5270373be8227166a40a17e640e64713",
+        "observed_libSystem": "/workspace/runtime/audit-session-runtime-95/libraries/libSystem.B.dylib",
+        "observed_libkernel": "/state/prefix/usr/lib/system/libsystem_kernel.dylib",
+        "inspection": "provider-inspection.json",
+        "defined_in_both": [
+          "kqueue_impl",
+          "kevent_impl",
+          "kevent64_impl",
+          "kqueue_atfork"
+        ]
+      },
+      "impact": "This is live duplicated queue/mutex/fork state, not a count of historical scripts. Every fork/spawn repair or queue feature must now account for two backend instances and for which dylib resolves a call.",
+      "convergence": "For the normal Darling-libSystem composition, select a single upstream libkqueue owner and make the other image use the existing implementation/reexport wiring. Keep the embedded direct backend only for a documented composition with an original Apple libSystem that lacks Darling libkqueue. Make this a provider-composition choice, not another per-call shim. Reuse both current fork/spawn controls when validating that consolidation.",
+      "limits": "No new binding trace or current failure reproduction was run. Having duplicate definitions does not prove every kqueue request uses both copies. The direct backend has a real original-Apple-libSystem use case and cannot simply be deleted globally."
+    },
+    {
+      "id": "complete-coretls-not-selected",
+      "priority": 2,
+      "classification": "Complete upstream source build exists, but is not selected by the current UE provider chain",
+      "title": "CoreTLS has a complete 31-unit source backend and selector, while this UE invocation uses the default library",
+      "evidence": [
+        {
+          "path": "vendor/darling/src/external/coretls/CMakeLists.txt",
+          "start_line": 50,
+          "end_line": 108,
+          "sha256": "9e50d5cd0901c11ad268dde623b8bd58fe119bbc1148bded3d0ad47314cf14be",
+          "role": "Upstream already defines the complete system_coretls target"
+        },
+        {
+          "path": "scripts/build-coretls-source.py",
+          "start_line": 20,
+          "end_line": 40,
+          "sha256": "acdc44bd8eaae49a5185f17bd3f073188f61b034a9bdb7de40851ab2ee65efa8",
+          "role": "The source builder extracts configured source units rather than inventing TLS APIs"
+        },
+        {
+          "path": "scripts/coretls-source-runtime-profile.py",
+          "start_line": 5,
+          "end_line": 13,
+          "sha256": "8ff698a8b2d906dbd00b59b13c8b79f2b559bdda3ffff7376f9ed3d55a7adfc4",
+          "role": "Existing selector prepends the matching complete backend and umbrella for normal and resource scopes"
+        },
+        {
+          "path": "scripts/probe-xcode-service-runtime.py",
+          "start_line": 158,
+          "end_line": 165,
+          "sha256": "b0fe1068326462e1b0c82eea184186caed3fc3dc51ce2baa02597cd77cda5289",
+          "role": "Current driver selects libSystem and direct-resource profiles; no CoreTLS selector is invoked"
+        },
+        {
+          "path": "config/direct-resource-tool-environment-v154.json",
+          "start_line": 1,
+          "end_line": 65,
+          "sha256": "f3ad941f6b2d0f0695326ca011e6068c86f596c38c403bcf55193f985b5e1370",
+          "role": "The active direct-resource manifest contains no CoreTLS source-build selection"
+        }
+      ],
+      "provider_evidence": {
+        "source_build": "runtime/coretls-private-crypto-v6/build.json",
+        "source_build_sha256": "2e1abf09935512c3ba884f1dc94d0c51f766b55539be54cdb4bce3b51b75d86f",
+        "complete_source_files": 31,
+        "source_backend": "runtime/coretls-private-crypto-v6/libraries/libsystem_coretls.dylib",
+        "source_backend_sha256": "7776bf18fe596f3795d2101aa85aa56c81e1d2dd00ad26c5df7a540f6cfecab5",
+        "source_backend_exists_and_digest_matches": true,
+        "current_default_file": "runtime/rootfs/usr/libexec/darling/usr/lib/system/libsystem_coretls.dylib",
+        "default_file_sha256": "ceac3cd0e73cd56330f9f3595451824510ad3f8b34d745227c03b1e8a7f29d38",
+        "explicit_current_search_path_matching_CoreTLS": [],
+        "maps": "runtime/unreal-v8-final-clang-spin-v1/coreuobject.maps",
+        "mapped_name": "/state/prefix/usr/lib/system/libsystem_coretls.dylib"
+      },
+      "impact": "A fix compiled into the complete source backend does not benefit this UE composition. Adding more TLS symbol shims to the default library would duplicate available upstream code while leaving the actual provider-selection omission unresolved.",
+      "convergence": "When a real UE/TLS requirement appears, use the existing CoreTLS selector as an explicit manifest choice and select its matching private crypto dependency/umbrella together. Verify the loaded image identity once in the target process before writing further implementations. Do not silently broaden or replace the frozen successful Unity composition.",
+      "limits": "The current UE link failure is not a TLS failure. This review inspected selected search paths, file digests and an existing map capture; it did not hash every loaded page or execute a TLS handshake. The complete CoreTLS source is built, not absent."
+    },
+    {
+      "id": "selected-security-partial-adapter",
+      "priority": 2,
+      "classification": "Active compatibility adapter shadows available upstream entry points; full modern implementation is not integrated",
+      "title": "The selected Security export route deliberately ends remote signing at a shim even though pinned modern Security contains its implementation",
+      "evidence": [
+        {
+          "path": "vendor/darling/src/external/security/OSX/sec/Security/SecCodeSignerCompatibility.c",
+          "start_line": 19,
+          "end_line": 29,
+          "sha256": "c47b2ad8209243b9f871b7a6be3a34e504fa07b4e406c057328e1809794a0367",
+          "role": "Remote constructors/signing return errSecUnimplemented"
+        },
+        {
+          "path": "vendor/darling/src/external/security/OSX/sec/Security/SecCodeSignerCompatibility.c",
+          "start_line": 42,
+          "end_line": 55,
+          "sha256": "c47b2ad8209243b9f871b7a6be3a34e504fa07b4e406c057328e1809794a0367",
+          "role": "Local signer constructor checks selected parameters then dlopens the real backend"
+        },
+        {
+          "path": "vendor/darling/src/external/security/OSX/libsecurity_codesigning/lib/SecCodeSigner.cpp",
+          "start_line": 87,
+          "end_line": 105,
+          "sha256": "1fa9a061d8f68c2b5dd844cde3328105ba410959ecbeaf118ef437e2dc59ae57",
+          "role": "Existing legacy upstream already has the real local constructor"
+        },
+        {
+          "path": "vendor/apple-security/OSX/libsecurity_codesigning/lib/SecCodeSignerRemote.cpp",
+          "start_line": 38,
+          "end_line": 58,
+          "sha256": "69323d24e2ddfe33753aa1f360e1aedca7eb240a59483457d90b9c36b9b9a19b",
+          "role": "Pinned modern upstream has the real remote constructor and CodeSignerRemote object"
+        },
+        {
+          "path": "scripts/build-security-code-signer-compat.py",
+          "start_line": 10,
+          "end_line": 17,
+          "sha256": "a886659a91568e3537a1912f888b3b0b765661b8af23eadcfc55fbc4ef8e923c",
+          "role": "Independent component compilation plus binary reexport redirects public Security symbols"
+        },
+        {
+          "path": "vendor/darling/src/external/security/OSX/libsecurity_codesigning/CMakeLists.txt",
+          "start_line": 74,
+          "end_line": 82,
+          "sha256": "b62f0e49b91fd3a60518813f95b733c6de333e76f04a67bd490a546051382959",
+          "role": "Normal source target includes the real local signer; the compatibility C component is wired separately"
+        }
+      ],
+      "provider_evidence": {
+        "inspection": "provider-inspection.json",
+        "selected_framework": "runtime/local-identity-store-chain-certificates-v14/frameworks/Security.framework/Versions/A/Security",
+        "reexport_provider": "libDarlingSecurityCodeSignerCompatibility",
+        "symbols": [
+          "SecCodeSignerCreate",
+          "SecCodeSignerRemoteCreate",
+          "SecCodeSignerRemoteAddSignature",
+          "SecTrustCopyCertificateChain"
+        ],
+        "local_signature_control": "artifacts/unity-stage101-selfsigned-full-build-milestone-v1.json"
+      },
+      "impact": "This should be accounted for as one partial, selected API adapter rather than complete modern Security support. The real local implementation is reused, but public API policy is split across a wrapper and backend and is constructed outside the normal target graph. Remote exports existing in the image do not mean remote signing is implemented.",
+      "convergence": "Preserve the already working local signer path and explicit unsupported errors. If remote signing becomes necessary, first import the compatible upstream CodeSignerRemote implementation and its actual dependency closure into the existing Security backend/target; do not add more success-returning facade exports. Prefer target-level export wiring over accumulating independent constructor wrappers. A straightforward modern-file compile is not assumed ABI-safe against the old backend.",
+      "limits": "This is convergence debt and a documented capability gap, not evidence that the seven previously verified local CMS signatures were fake or broken. No remote-signing request was observed in this UE build, and the inspected selected framework was not shown loaded in the stalled Clang map."
+    },
+    {
+      "id": "runtime-selection-needs-historical-build-products",
+      "priority": 2,
+      "classification": "Active provider-selection architecture depends on historical probe logs and object files",
+      "title": "Normal runtime selection validates historical test inputs beyond the selected provider closure",
+      "evidence": [
+        {
+          "path": "scripts/direct-resource-tool-runtime-profile.py",
+          "start_line": 67,
+          "end_line": 71,
+          "sha256": "24d5474f65164a8a062516ced9c286916f2c79c3f1dfd5f0d312df3260555c8e",
+          "role": "Selecting the current resource libSystem requires every historical files/link_inputs item"
+        },
+        {
+          "path": "scripts/direct-resource-tool-runtime-profile.py",
+          "start_line": 95,
+          "end_line": 108,
+          "sha256": "24d5474f65164a8a062516ced9c286916f2c79c3f1dfd5f0d312df3260555c8e",
+          "role": "Dispatch selection requires prior probe case logs and their hashes"
+        },
+        {
+          "path": "scripts/direct-resource-tool-runtime-profile.py",
+          "start_line": 123,
+          "end_line": 139,
+          "sha256": "24d5474f65164a8a062516ced9c286916f2c79c3f1dfd5f0d312df3260555c8e",
+          "role": "C++ selection requires a prior new_object/existing object set and probe logs"
+        },
+        {
+          "path": "scripts/libsystem-kqueue-runtime-profile.py",
+          "start_line": 15,
+          "end_line": 23,
+          "sha256": "4e29e6a2963cf5413e345222c2995a13387af59916d6753978ce318bea614147",
+          "role": "The current main libSystem selector also resolves all recorded link input objects"
+        },
+        {
+          "path": "scripts/probe-xcode-service-runtime.py",
+          "start_line": 158,
+          "end_line": 165,
+          "sha256": "b0fe1068326462e1b0c82eea184186caed3fc3dc51ce2baa02597cd77cda5289",
+          "role": "These selectors are on the active original-Xcode invocation path"
+        }
+      ],
+      "provider_evidence": {
+        "active_configuration": "config/direct-resource-tool-environment-v154.json",
+        "configuration_sha256": "f3ad941f6b2d0f0695326ca011e6068c86f596c38c403bcf55193f985b5e1370",
+        "original_Xcode_report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-151afe2866bf.json",
+        "report_sha256": "7572d29dcd28a8a5d1401f73142bb28bc7bdaf4a00c2941afbe45a445d5b9898"
+      },
+      "impact": "A source-correct, hash-identical selected dylib can become unusable at launch merely because an old object file or historical probe log is missing. This couples execution wiring to research history, magnifies checkpoint/replay work and makes historical size look like implementation dependency. It is an architectural selection problem, not proof that all historical compatibility code runs.",
+      "convergence": "Keep the historical evidence intact, but split build/research attestation from a small immutable runtime-provider manifest. Validate the selected binary digest, install-name/export/dependency closure, scope and attestation digest at launch; leave full source/object/log replay verification to an explicit build/audit command. Do not weaken provider identity checks or delete evidence to make launches pass.",
+      "limits": "No history was removed and no new runtime attempt was made. Large research storage alone is not classified as duplicate active implementation; this finding concerns the actual select() call graph and concrete required object/log paths."
+    }
+  ],
+  "priority_order": [
+    "active-double-kqueue-state",
+    "complete-coretls-not-selected",
+    "selected-security-partial-adapter",
+    "runtime-selection-needs-historical-build-products"
+  ],
+  "distinctions": [
+    "Historical scripts/reference size is not counted as runtime code duplication.",
+    "A source file existing upstream does not prove ABI-compatible integration or runtime selection.",
+    "Built, selected, mapped and behaviorally exercised are separate evidence levels.",
+    "The atomic XNU wait-handoff and once-only exec-pipe fixes reuse the existing wait locks, context switch and monitor mechanism; they do not introduce a replacement scheduler.",
+    "None of these findings proves the stalled native run exact exec/checkin event order or the later UBA response-file root cause."
+  ],
+  "provider_inspection": "provider-inspection.json",
+  "provider_inspection_sha256": "ea6c26fe511d498a15bbbaf814085eb203d366ffe4a340cee842280808e51987",
+  "native_process_started": false,
+  "compiler_or_test_matrix_run": false,
+  "host_LLVM_readonly_inspection": true,
+  "vendor_HEAD_modified": false,
+  "source_mutation_during_review": false,
+  "committed": false,
+  "full_UE_build_verified": false,
+  "signing_success_claimed": false
+}

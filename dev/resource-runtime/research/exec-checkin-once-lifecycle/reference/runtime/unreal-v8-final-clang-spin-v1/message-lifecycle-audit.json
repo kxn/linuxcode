@@ -1,0 +1,46 @@
+{
+  "created_unix": 1793154385.0630007,
+  "scope": "Read-only source and existing offline server core analysis; no native invocation, source mutation, message injection, or credential fabrication.",
+  "core": "runtime/unreal-xcode-build-gqvdbmfj/attempt-stage107-s2c-v8/server.core",
+  "binary": "runtime/audit-session-runtime-107/darlingserver",
+  "server_address": "0x56327c0bc3f0",
+  "listener_fd": 3,
+  "inbox_count": 0,
+  "outbox_count": 0,
+  "core_can_read": true,
+  "core_can_write": true,
+  "queue_evidence": "runtime/unreal-v8-final-clang-spin-v1/message-queues.log",
+  "socket_evidence": "runtime/unreal-v8-final-clang-spin-v1/unix-sockets.txt",
+  "client_socket_queues": {
+    "2190833:10239": {
+      "inode": 30401668,
+      "recv_q": 0,
+      "send_q": 0
+    },
+    "2200592:10239": {
+      "inode": 30556031,
+      "recv_q": 0,
+      "send_q": 0
+    }
+  },
+  "candidate_explanation": {
+    "status": "Static plausible lifecycle race; not yet demonstrated as this run exact root cause",
+    "sequence": [
+      "Exec success is delivered asynchronously by exec listener HangUp monitor; callback sets Process::_pendingReplacement.",
+      "If main image checkin is processed before that monitor, notifyCheckin sees no pending replacement.",
+      "A later new pthread checkin can consume _pendingReplacement: Checkin::processCall ignores body.is_fork and calls process->notifyCheckin for every thread.",
+      "notifyCheckin exec branch retains only mainThread and calls notifyDead on every nonmain thread, including the thread currently performing Checkin.",
+      "notifyDead unregisters that child. Checkin reply enters Thread::pushCallReply, which drops replies when _dead, leaving client blocked in recvmsg."
+    ]
+  },
+  "source_refs": [
+    "vendor/darlingserver/src/call.cpp:298",
+    "vendor/darlingserver/src/call.cpp:342",
+    "vendor/darlingserver/src/process.cpp:339",
+    "vendor/darlingserver/src/thread.cpp:1384",
+    "vendor/darlingserver/src/thread.cpp:1473"
+  ],
+  "diagnostic_next_step": "Passively record main/child Checkin and setPendingReplacement ordering, plus notifyDead current caller and child nsid, on controlled next native attempt. Do not paper over by unconditional reply injection.",
+  "logging_note": "dserver.log is append-only and contains old and current timestamps; old numeric matches alone do not identify current target activity. Actual FD4 points at this log, stderr FD1/2 at current original-Xcode log.",
+  "full_goal_complete": false
+}

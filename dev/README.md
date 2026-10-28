@@ -1,5 +1,9 @@
 # 开发者环境
 
+当前推进顺序与修复归属见 [原版 Xcode 与游戏引擎兼容性计划](compatibility-plan.md)。UE 已完成 C++ 编译并进入最终链接，当前定位原版 ld/UBA 初始化与响应文件问题；macOS 原版 Unity Editor 在 Darling 内导出尚待实现。下文保留各历史阶段的记录，不能把其中较早的阻塞状态当作当前状态。
+
+stage108 的 [Unity 隔离增量回归](../validation/unity-stage108-incremental-regression-2026-10-28.json) 已通过原版 Xcode 构建、两项实际签名及独立 CMS/代码页/资源检查；原工程和 stage101 已验证产物未变。这次 IL2CPP 评估 283 项、更新 0 项，不能作为新的全量编译或 macOS Editor 导出记录。
+
 开发约束：优先复用上游 Darling 已有实现。缺符号或调用失败时，先确认实际加载的库，再核对固定上游源码、构建目标、导出与依赖；已有实现应修正接入，避免在外围复制或简化重写。只有确认接口缺口或原实现错误后，才修改对应组件并保留与基线的差异和实际验证。现有组件的重新构建、版本适配和本实验环境的装配问题，应分别说明，不能统称为“Darling 没有这个组件”。[定点核对记录](resource-runtime/research/upstream-implementation-reuse-audit/README.md) 说明已确认的复用实例及核对范围。
 
 [信号中断时保留已发送的内部 RPC 事务](resource-runtime/research/s2c-interrupted-reply-transaction/README.md)：真实故障抓取确认成功的旧 `mmap` 回复与新 `munmap` 回复碰撞；stage107 保留既有串行令牌，直到取走真实回复。五项实际 C++ 事务回归通过，旧源码负对照复现三项协议故障；原版 UE 构建继续验证，死亡与 exec 生命周期仍待处理。

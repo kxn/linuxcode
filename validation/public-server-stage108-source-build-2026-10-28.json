@@ -1,0 +1,180 @@
+{
+  "repositories": [
+    {
+      "name": "integration-build-support",
+      "path": ".",
+      "selected_commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "actual_head": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/linuxcode.git",
+      "tree": "92479f2d1b72a3dce9a860ad86a17deafa7d5fd3",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darling",
+      "path": "vendor/darling",
+      "selected_commit": "e6b769a692d6dd709557761369e0afe3964afccf",
+      "actual_head": "e6b769a692d6dd709557761369e0afe3964afccf",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darling.git",
+      "tree": "77fd89284c0e2f4c4736c46501bead9480b380e8",
+      "local_object_alternates": false
+    },
+    {
+      "name": "bootstrap-cmds",
+      "path": "vendor/darling/src/external/bootstrap_cmds",
+      "selected_commit": "0f300a7a04bb1174a3b7db58b57d738aadc14e13",
+      "actual_head": "0f300a7a04bb1174a3b7db58b57d738aadc14e13",
+      "dirty_status": "",
+      "origin": "https://github.com/darlinghq/darling-bootstrap_cmds.git",
+      "tree": "5646b68710fade9469d3e230bce2b53bea39cfbc",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darling-xnu",
+      "path": "vendor/darling/src/external/xnu",
+      "selected_commit": "75eabd3bedadac9873f26002421787d685084d42",
+      "actual_head": "75eabd3bedadac9873f26002421787d685084d42",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darling-xnu.git",
+      "tree": "0fab66640b111e8ceb88d9800f51fdb72ecd0f2e",
+      "local_object_alternates": false
+    },
+    {
+      "name": "libpthread-headers",
+      "path": "vendor/darling/src/external/libpthread",
+      "selected_commit": "f07f265bfbcf071c1adfc808de971e053ea5edc5",
+      "actual_head": "f07f265bfbcf071c1adfc808de971e053ea5edc5",
+      "dirty_status": "",
+      "origin": "https://github.com/darlinghq/darling-libpthread.git",
+      "tree": "3f4a68dfbf5d819272f729d05d141ada153d4fb5",
+      "local_object_alternates": false
+    },
+    {
+      "name": "darlingserver",
+      "path": "vendor/darlingserver",
+      "selected_commit": "577b168d4c9a3af676fd4c9e859d70d2f56924ee",
+      "actual_head": "577b168d4c9a3af676fd4c9e859d70d2f56924ee",
+      "dirty_status": "",
+      "origin": "https://github.com/kxn/darlingserver.git",
+      "tree": "8984637c9042428e67a9255ab5ff88ae80863473",
+      "local_object_alternates": false
+    }
+  ],
+  "binary": "runtime/developer/server/darlingserver/darlingserver",
+  "binary_sha256": "27451097c6be07a47047f7cea3b565438f6a00a38c5fe5df9198548798678c7f",
+  "compiler_dependency_audit": {
+    "verified": true,
+    "distinct_paths": 1380,
+    "categories": {
+      "public_source": 731,
+      "generated_build": 116,
+      "system_host": 533
+    },
+    "local_vendor_or_private_Apple_inputs_found": false
+  },
+  "legacy_developer_build_record": {
+    "schema": 1,
+    "checked_at": "2026-10-28T02:43:27.396782+00:00",
+    "module": "server",
+    "commands": [
+      [
+        "cmake",
+        "-S",
+        "build-support/darlingserver",
+        "-B",
+        "/home/dl/linuxcode/runtime/public-server-stage108-source-hi6ujpjq/workspace/runtime/developer/server",
+        "-G",
+        "Ninja",
+        "-DCMAKE_C_COMPILER=clang-19",
+        "-DCMAKE_CXX_COMPILER=clang++-19",
+        "-DCMAKE_ASM_COMPILER=clang-19",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DBISON_EXECUTABLE=/home/dl/linuxcode/runtime/host-build-tools/usr/bin/bison",
+        "-DFLEX_EXECUTABLE=/home/dl/linuxcode/runtime/host-build-tools/usr/bin/flex"
+      ],
+      [
+        "cmake",
+        "--build",
+        "/home/dl/linuxcode/runtime/public-server-stage108-source-hi6ujpjq/workspace/runtime/developer/server",
+        "--target",
+        "darlingserver",
+        "-j",
+        "2"
+      ]
+    ],
+    "binary": "runtime/developer/server/darlingserver/darlingserver",
+    "binary_sha256": "27451097c6be07a47047f7cea3b565438f6a00a38c5fe5df9198548798678c7f",
+    "milestone": {
+      "repository": "https://github.com/kxn/linuxcode.git",
+      "commit": "375e52ea83e0f1a8dba3b16a0600d01292a9fe61",
+      "tag": "runtime-2026.10.19"
+    },
+    "default_runtime_changed": false,
+    "host_regression_executed": false,
+    "darling_runtime_execution_verified": false
+  },
+  "legacy_milestone_is_current_source_selection": false,
+  "authoritative_source_selection": "repositories selected_commit/actual_head/dirty_status above",
+  "source_lock_sha256": "caf3bf5fdb3d12a55910b66287866d2425d6273584ecd473977a8161b6807b27",
+  "host_only": true,
+  "server_executed": false,
+  "Apple_linker_executed": false,
+  "default_runtime_changed": false,
+  "session_lock_acquired": false,
+  "cold_Darling_Xcode_rebuild_ready": false,
+  "old_doctor_exact_checkpoint_asserted": false,
+  "schema": 1,
+  "verified": true,
+  "scope": "Fresh public source build of stage108-code Linux darlingserver only; no runtime or engine verification",
+  "server_source_commit": "577b168d4c9a3af676fd4c9e859d70d2f56924ee",
+  "actual_build_verified": true,
+  "fresh_public_sources_fetched": true,
+  "new_workspace_and_empty_build_directory": true,
+  "preexisting_component_object_cache_reused": false,
+  "jobs": 2,
+  "command_statuses": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "original_private_source_build_report": "runtime/public-server-stage108-source-hi6ujpjq/workspace/runtime/public-server-build/result.json",
+  "original_private_source_build_report_sha256": "4ee045e98193572aa6e99091d8f0a09f47d87a1fd523e3be8b70f0698f95fec0",
+  "previous_ed13_validation_preserved": true,
+  "previous_ed13_checkout_HEAD_preserved": true,
+  "previous_ed13_binary_preserved": true,
+  "previous_proof_guards": {
+    "old_ed13_summary_sha256": "a7cc0f8044198e0195ce472aad496c7bb85ee5740d26386a125316139d8bd65b",
+    "old_source_head": "ed13f2153fde8c150455062f26035e8e291e66d4",
+    "old_binary_sha256": "e58b35559cd5f0150c52f0092f94ad14bf1e281d15c965ddb19883c4a268789e"
+  },
+  "unit_entry_regressions_passed": 6,
+  "lifecycle_runtime_regressions_executed_by_this_entry": false,
+  "UE_or_Unity_execution_verified_by_this_source_build": false
+}

@@ -2,7 +2,7 @@
 
 `linuxcode-dev checkout` 仍锁定较早的 `375e52e` 开发基线，固定的 `apply-overlay.py` 也只应用其声明的资源更新。它们不会自动组合后续 stage104/106、Unity 成功候选或最新 UE 修复。后续源码已随本仓库及默认公开 source 包保留，可以先独立核验和导出，审阅后再合并到自己的固定源码工作区；这一步不安装运行时，不需要启动 Darling。
 
-若只需要从已公开 fork 编译 Linux darlingserver，可直接使用[六仓库固定源码构建入口](public-server-build.md)。该路径已实际构建 `ed13f21`，不需要先把研究包整文件覆盖到旧基线，也不代表完整运行候选已冷重建。
+若只需要从已公开 fork 编译 Linux darlingserver，可直接使用[六仓库固定源码构建入口](public-server-build.md)。当前锁已在另一全新目录实际构建 stage108 所用的 `577b168`，较早 `ed13f21` 证明保留；不需要先把研究包整文件覆盖到旧基线，也不代表完整运行候选已冷重建或新产物已运行 UE/Unity。
 
 在整合仓库或解开的 source 包根目录运行：
 
