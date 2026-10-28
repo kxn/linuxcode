@@ -1,0 +1,169 @@
+{
+  "host_only": true,
+  "native_execution": false,
+  "namespace_created_not_installed": true,
+  "transport_cases": [
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING",
+      "value": null,
+      "status": 0,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING",
+      "value": "0",
+      "status": 0,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING",
+      "value": "1",
+      "status": 0,
+      "guest_values": [
+        "LIBUNWIND_PRINT_UNWINDING=1"
+      ]
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING",
+      "value": "",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING",
+      "value": "2",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING",
+      "value": "invalid",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS",
+      "value": null,
+      "status": 0,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS",
+      "value": "0",
+      "status": 0,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS",
+      "value": "1",
+      "status": 0,
+      "guest_values": [
+        "LIBUNWIND_PRINT_APIS=1"
+      ]
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS",
+      "value": "",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS",
+      "value": "2",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS",
+      "value": "invalid",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF",
+      "value": null,
+      "status": 0,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF",
+      "value": "0",
+      "status": 0,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF",
+      "value": "1",
+      "status": 0,
+      "guest_values": [
+        "LIBUNWIND_PRINT_DWARF=1"
+      ]
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF",
+      "value": "",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF",
+      "value": "2",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "host": "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF",
+      "value": "invalid",
+      "status": 2,
+      "guest_values": []
+    },
+    {
+      "case": "all-three",
+      "status": 0,
+      "guest_values": [
+        "LIBUNWIND_PRINT_UNWINDING=1",
+        "LIBUNWIND_PRINT_APIS=1",
+        "LIBUNWIND_PRINT_DWARF=1"
+      ]
+    }
+  ],
+  "case_count": 19,
+  "source": "scripts/stage-run-environment-launcher.py",
+  "source_sha256": "46e7cc594981d520b6bdcc7a8b8cc37bb517990c932b2414cbe18f7a2dd5fe28",
+  "ast_selected_actual_transport_function": true,
+  "old_namespace": "runtime/run-environment-launcher-m_ktpaw5/runtime-ns.sh",
+  "old_namespace_sha256": "7ed2be015620c750980d90c0eb0b6db80484dde31b680339129b37e171927c54",
+  "old_namespace_modified": false,
+  "generated_namespace": "/home/dl/linuxcode/runtime/run-unwind-transport-host-sj3yqlxt/runtime-ns.sh",
+  "generated_namespace_sha256": "cfdff084f1bdfcfeb8f29521c888af47733219688714989219c0cd5f866c1694",
+  "bash_syntax_verified": true,
+  "transform_reapplication_identical": true,
+  "default_unset_unchanged": true,
+  "all_three_env_i_share_same_run_environment": true,
+  "optional_metadata": {
+    "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING": {
+      "guest": "LIBUNWIND_PRINT_UNWINDING",
+      "enabled_value": "1",
+      "zero": "omit",
+      "unset": "omit",
+      "invalid": "exit 2",
+      "scope": "whole run including bootstrap"
+    },
+    "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS": {
+      "guest": "LIBUNWIND_PRINT_APIS",
+      "enabled_value": "1",
+      "zero": "omit",
+      "unset": "omit",
+      "invalid": "exit 2",
+      "scope": "whole run including bootstrap"
+    },
+    "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF": {
+      "guest": "LIBUNWIND_PRINT_DWARF",
+      "enabled_value": "1",
+      "zero": "omit",
+      "unset": "omit",
+      "invalid": "exit 2",
+      "scope": "whole run including bootstrap"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "source_build": "runtime/libunwind-common-source-reuse-v1/build.json",
+  "library_sha256": "0345511259ff9e9df8116d3d0fc77a1719030c5cc6747e615b9c6cce71e9dffa",
+  "compiled_normal_log_switches": {
+    "LIBUNWIND_PRINT_APIS": "Public unwind API calls",
+    "LIBUNWIND_PRINT_UNWINDING": "Unwind cursor/compact and DWARF selection trace",
+    "LIBUNWIND_PRINT_DWARF": "Detailed DWARF instruction parsing"
+  },
+  "all_switch_strings_present_in_existing_binary": true,
+  "enable_contract": "Presence of the variable enables the cached flag, including string 0. Omit the variable to disable. Set uniformly from the first bootstrap for every process; do not set per trustd.",
+  "recommended_first_trace": "LIBUNWIND_PRINT_UNWINDING=1",
+  "source_functions": "libunwind/src/libunwind.cpp304-336; config.h185-213",
+  "native_executed": false,
+  "source_patch_or_recompile_required": false,
+  "external_dump_or_debugger": false,
+  "scope_limit": "These switches enable their existing macros only; getInfoFromCompactEncodingSection has a separate const bool log=false that these flags do not override. No claim of every compact-table read being logged."
+}

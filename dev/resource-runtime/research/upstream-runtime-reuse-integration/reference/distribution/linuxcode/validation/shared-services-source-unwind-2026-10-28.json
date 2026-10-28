@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "checkpoint": "unified-runtime-v26",
+  "package_kind": "source_only",
+  "configuration": "config/unified-runtime-v26.json",
+  "configuration_sha256": "5e8b33a11106601d8b9215722ae53cc1e948a5f53a8a37b9dd994dbc6cd19932",
+  "core_stage": "artifacts/private-procfs-auditsession118-stage.json",
+  "core_stage_sha256": "f4b8fd7fee885377d814e70ae32338002333262a68038d8cc06f4d5efa0d4c17",
+  "whole_image_stage": "runtime/run-environment-launcher-pf2gn1_n/stage.json",
+  "whole_image_stage_sha256": "2742b4245c3db74401ddb68a25b6bbf718f632ad6ffc11defc00a7ebaaf0abe7",
+  "same_common_runtime_for_all_processes_before_first_MachO": true,
+  "per_executable_library_selection": false,
+  "service_cohort": {
+    "source": "runtime/xcode-working-services-cohort-v4/prepared-cohort.json",
+    "source_sha256": "1a04cae64464302dd82da625fecc84744f1f7e74b64505713b10adb2713ed0d8",
+    "new_original_daemons": [
+      "filecoordinationd",
+      "configd",
+      "diskarbitrationd",
+      "CarbonCore coreservicesd"
+    ],
+    "new_files": 8,
+    "whole_original_frameworks": [
+      "SystemConfiguration",
+      "DiskArbitration",
+      "CoreServices with all nine selected nested principals preserved"
+    ],
+    "canonical_and_shared_index_same_providers": true,
+    "old_modern_Security_IOKit_OpenDirectory_and_Foundation_unchanged": true,
+    "old_accounts_and_service_files_retained": true,
+    "LaunchDaemons_Agents_mode": "0755",
+    "unselected_50_network_plugins_or_8021x_added": false,
+    "extra_GUI_launchservicesd_enabled": false
+  },
+  "libunwind_candidate": {
+    "source_pin": "a91da1a0e262e04eb601152a84228ff733e48422",
+    "upstream_Apple_tag": "libunwind-201",
+    "same_source_revision_as_baseline": true,
+    "complete_translation_units": 9,
+    "exports": 105,
+    "imports": 20,
+    "exports_and_imports_match_baseline": true,
+    "library_sha256": "0345511259ff9e9df8116d3d0fc77a1719030c5cc6747e615b9c6cce71e9dffa",
+    "no_recompile_or_relink_in_this_integration": true,
+    "build_manifest_native_verified_field_left_false": true,
+    "frozen_configuration_retains_source_build_only_native_pending_history": true,
+    "newer_upstream_fix_or_original_Client_fault_fix_claimed": false
+  },
+  "first_native_gate": {
+    "receipt": "runtime/common-services-unwind-gate-4b6dxxvp/result.json",
+    "receipt_sha256": "6465196538bf705606f1509a09b1ffe911d4d35e06d1e811eab72513b67ef050",
+    "verified": true,
+    "outer_status": 0,
+    "elapsed_seconds": 19.789955661981367,
+    "phase_statuses": [
+      [
+        "diskarbitration",
+        "0"
+      ],
+      [
+        "systemconfiguration",
+        "0"
+      ],
+      [
+        "static-unwind-walk",
+        "0"
+      ],
+      [
+        "native-exceptions",
+        "0"
+      ],
+      [
+        "managed-implicit-null",
+        "0"
+      ]
+    ],
+    "phase_markers": {
+      "diskarbitration": true,
+      "systemconfiguration": true,
+      "static-unwind-walk": true,
+      "native-exceptions": true,
+      "managed-implicit-null": true
+    },
+    "scope": {
+      "DiskArbitration": "Original public DA session creation succeeded; not full device arbitration coverage",
+      "SystemConfiguration": "Existing public store and notification fixture, 16 checks, actual configd loaded; not a trace of each request IPC",
+      "static_unwind": "Existing successful static section/walk binary reused; original record lacks source-to-binary hash so current source and expected markers are recorded separately",
+      "native_exceptions": "Fresh self-owned real C++ and original Foundation exception/destructor fixture, four checks",
+      "CoreCLR": "Original CoreCLR caught main/threadpool JIT implicit-null exceptions, two checks; no license business assembly executed"
+    },
+    "external_debugger_or_other_process_memory_used": false,
+    "raw_log_included": false
+  },
+  "candidate_gate_host": {
+    "verified": true,
+    "checks": 14,
+    "validation": "Explicit source-build-only selection, full sources/objects/link consumption/library/import/export hashes; native_pending is not a fabricated probe",
+    "old_verified_probe_default_preserved": true,
+    "unchanged_symbol_decoding_cached_by_verified_content_only": true
+  },
+  "optional_whole_run_unwind_logging": {
+    "host_Bash_cases": 19,
+    "controls": [
+      "LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING",
+      "LINUXCODE_RUN_LIBUNWIND_PRINT_APIS",
+      "LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF"
+    ],
+    "one_enables": true,
+    "zero_or_unset_omitted": true,
+    "other_values_rejected": true,
+    "old_launchers_not_modified": true
+  },
+  "Unity_current_configuration": {
+    "configuration": "config/unified-runtime-v26.json",
+    "full_CI_attempt_running_at_publication": true,
+    "build_verified": false,
+    "not_a_success_claim": true
+  },
+  "last_verified_original_codesign_configuration": "config/unified-runtime-v24.json",
+  "original_codesign_retested_in_v26": false,
+  "HTTPS_completed": false,
+  "original_Mac_Unity_export_completed": false,
+  "full_Xcode_engine_build_verified_in_current_common_runtime": false,
+  "cold_install_verified": false,
+  "kernel_recompiled_or_linked": false,
+  "old_API_matrices_repeated_for_publication": false,
+  "source_payload_inputs": 194,
+  "excluded": [
+    "Apple/Epic/Unity binary and original resource/plist payloads",
+    "credentials/test identities",
+    "private raw logs/cores",
+    "installed images"
+  ]
+}

@@ -98,6 +98,8 @@ def main():
                         help='Also migrate the complete previously working configd/DA/CarbonCore/filecoordination chain')
     parser.add_argument('--framework-principals-file',
                         help='Explicit destination/source/SHA map of already-selected common framework principals')
+    parser.add_argument('--common-framework-index',
+                        help='Exact parent common framework index, used to retain every active nested CoreServices principal')
     args = parser.parse_args()
     paths = {name: (ROOT / value).resolve(strict=True) for name, value in vars(args).items()
              if name not in ('expected_os_build', 'output_dir', 'xcode_build_services') and value is not None}
@@ -177,8 +179,9 @@ def main():
     (output / 'runtime-provider.json').write_text(json.dumps(provider, indent=2) + '\n')
 
     extra_providers, runtime_components = [], []
+    nested_principals = []
     if args.xcode_build_services:
-        assert args.framework_principals_file
+        assert args.framework_principals_file and args.common_framework_index
         choices = json.loads(paths['framework_principals_file'].read_text())
         required = {'System/Library/Frameworks/' + name + '.framework' for name in
                     ['SystemConfiguration', 'DiskArbitration', 'CoreServices']}
@@ -194,16 +197,60 @@ def main():
                 original_bundle_version=plistlib.loads((os_root / spelling / 'Resources/Info.plist').read_bytes()).get('CFBundleVersion'))
             runtime_components.append(evidence)
             extra_providers.append(provider_entry(row['destination'], component, inventory))
+        core = output / 'frameworks/CoreServices.framework'
+        original_core = os_root / 'System/Library/Frameworks/CoreServices.framework'
+        for nested in sorted(original_core.rglob('*.framework')):
+            if not nested.is_dir():
+                continue
+            name = nested.stem
+            local = core / nested.relative_to(original_core)
+            explicit = output / 'frameworks' / nested.name
+            if name in ('LaunchServices', 'CarbonCore'):
+                assert explicit.is_dir() and not explicit.is_symlink()
+                shutil.rmtree(local)
+                shutil.copytree(explicit, local, symlinks=True, copy_function=shutil.copy2)
+                shutil.rmtree(explicit)
+                explicit.symlink_to(local.relative_to(output / 'frameworks'))
+            selected_principal = paths['common_framework_index'] / nested.name / name
+            if not selected_principal.is_file():
+                canonical = 'System/Library/Frameworks/CoreServices.framework/' + nested.relative_to(original_core).as_posix() + '/Versions/A/' + name
+                selected_principal = next((tree / canonical for tree in roots.values() if (tree / canonical).is_file()), None)
+            if selected_principal is None:
+                nested_principals.append(dict(framework=nested.name, selected=False,
+                    reason='No current common/index or canonical principal; original metadata only'))
+                continue
+            target = local / 'Versions/A' / name
+            assert target.parent.is_dir() and not target.is_symlink()
+            shutil.copy2(selected_principal, target)
+            assert sha(target) == sha(selected_principal)
+            alias = local / name
+            if not alias.exists() and not alias.is_symlink():
+                alias.symlink_to('Versions/Current/' + name)
+            assert alias.resolve(strict=True) == target
+            if not explicit.exists() and not explicit.is_symlink():
+                explicit.symlink_to(local.relative_to(output / 'frameworks'))
+            nested_principals.append(dict(framework=nested.name, selected=True,
+                principal_source=relative(selected_principal.resolve()), principal_sha256=sha(selected_principal),
+                canonical_principal=relative(target), common_index_alias=relative(explicit)))
+        # All parent and child inventories now describe the composed tree.
+        provider = provider_entry(FRAMEWORK, (core / 'Versions/A/Frameworks/LaunchServices.framework').resolve(), inventory)
+        for row in extra_providers:
+            source = output / 'frameworks' / Path(row['destination']).name
+            row.update(provider_entry(row['destination'], source.resolve(), inventory))
+        for evidence in runtime_components:
+            evidence['candidate_inventory'] = inventory((ROOT / evidence['candidate']).resolve())
+        assert all(not row['selected'] or (ROOT / row['canonical_principal']).is_file() for row in nested_principals)
         plugins = os_root / 'System/Library/SystemConfiguration'
         copied_plugins = output / 'runtime-data/SystemConfiguration'
         before_plugins = inventory(plugins)
         shutil.copytree(plugins, copied_plugins, symlinks=True, copy_function=shutil.copy2)
         assert inventory(copied_plugins) == before_plugins == inventory(plugins)
         runtime_components.append(dict(original=relative(plugins), original_inventory=before_plugins,
-                                       candidate=relative(copied_plugins), candidate_inventory=before_plugins))
-        extra_providers.append(provider_entry('System/Library/SystemConfiguration', copied_plugins, inventory))
+            candidate=relative(copied_plugins), candidate_inventory=before_plugins,
+            selected_for_installation=False,
+            scope='Separate OS configd plugin catalog, absent in the verified working installation. Retained for host audit without enabling additional network configuration capabilities.'))
     else:
-        assert not args.framework_principals_file
+        assert not args.framework_principals_file and not args.common_framework_index
 
     cohort = copy.deepcopy(parent)
     existing = {row['destination']: row for category in ['prefix_files', 'system_files']
@@ -254,6 +301,7 @@ def main():
     # A whole CoreServices bundle is installed before its explicitly selected
     # complete LS/CarbonCore children; every final principal remains unchanged.
     providers = sorted(selected.values(), key=lambda row: row['destination'].count('/'))
+    (output / 'runtime-provider.json').write_text(json.dumps(provider, indent=2) + '\n')
     cohort.update(host_verified=True, native_verified=False, installed=False, configuration_modified=False,
         derived_from=relative(parent_path), derived_from_sha256=sha(parent_path),
         clone_delta_files=changed, clone_additional_files=added, clone_new_entry_preimages=preimages,
@@ -277,6 +325,7 @@ def main():
         reconstruction_report_sha256=sha(paths['reconstruction_report']),
         original_cache_image_sha256=reconstruction['original_image_sha256'],
         complete_xcode_service_chain=args.xcode_build_services, additional_runtime_components=runtime_components,
+        active_nested_principals_preserved=nested_principals,
         canonical_original_entry_restorations=source_origins,
         registration=registration, prepared_cohort=relative(cohort_path), prepared_cohort_sha256=sha(cohort_path),
         source_bundles_unchanged=True, original_plists_unchanged=True, account_changes=False,

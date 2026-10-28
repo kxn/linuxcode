@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "native_execution": false,
+  "production_source": "scripts/direct-resource-tool-runtime-profile.py",
+  "production_source_sha256": "80fa46454730bdaa4dba3bba5c1de9312c1352f59b660ee61640cb08a566790a",
+  "candidate_build": "runtime/libunwind-common-source-reuse-v1/build.json",
+  "candidate_build_sha256": "e280c2166f0a2265b0f62b9e459193ae687b640397b0e1ccaddb52c39a853142",
+  "positive": {
+    "component": "libunwind",
+    "validation": "source-build-only",
+    "library": "runtime/libunwind-source-pin-a91da1-v2/libraries/libunwind.dylib",
+    "library_sha256": "0345511259ff9e9df8116d3d0fc77a1719030c5cc6747e615b9c6cce71e9dffa",
+    "complete_source_files": 9,
+    "compiled_objects": 9,
+    "exports": 105,
+    "imports": 20,
+    "native_verified": false,
+    "native_pending": true
+  },
+  "checks": [
+    "complete real source candidate accepted with native pending",
+    "unchanged verified binary symbols cached without caching runtime proof",
+    "resource-only candidate rejected",
+    "unknown validation rejected",
+    "unselected candidate hash rejected",
+    "invented verified probe rejected",
+    "native claim rejected",
+    "runtime execution claim rejected",
+    "missing declared export rejected",
+    "changed import set rejected",
+    "missing source unit rejected",
+    "source hash mismatch rejected",
+    "object hash mismatch rejected",
+    "compiled object absent from link rejected"
+  ],
+  "check_count": 14,
+  "recompiled": false,
+  "relinked": false,
+  "prior_native_matrices_repeated": false
+}

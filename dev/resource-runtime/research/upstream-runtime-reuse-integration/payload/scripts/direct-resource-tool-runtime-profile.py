@@ -5,10 +5,84 @@ import hashlib
 import json
 import os
 import runpy
+import subprocess
+import sys
+import types
 
 root = Path(__file__).resolve().parent.parent
 verified_digest = __import__('runpy').run_path(str(root / 'scripts/verified-file-digest.py'))['digest']
 parent = runpy.run_path(str(root / 'scripts/private-procfs-runtime-profile.py'))
+
+def validate_source_build_candidate(selected, build, *, digest, resolve):
+    """Validate a first-run whole-source candidate without inventing runtime proof.
+
+    This explicit alternative is deliberately narrower than the default probe
+    path: one complete, successful compilation/link, unchanged exports/imports,
+    and an explicitly selected library digest. It grants no native verification.
+    """
+    assert selected['validation'] == 'source-build-only'
+    assert selected['scope'] == 'all', 'Unproven candidates must be shared for the whole run'
+    assert 'probe' not in selected and 'probe_sha256' not in selected
+    assert selected['candidate_library_sha256'] == build['library_sha256']
+    assert build['native_verified'] is False and build['runtime_execution_verified'] is False
+    assert not build.get('missing_original_exports') and not build.get('added_exports')
+    assert build['imports_identical'] is True
+    assert build['baseline_import_count'] == build['source_import_count'] == len(set(build['imports']))
+    assert build['baseline_exports_preserved'] == build['source_export_count'] == len(set(build['exports']))
+    original_path = root / resolve(build['original_build'], build['original_build_sha256'])
+    original = json.loads(Path(original_path).read_text())
+    count = build['complete_source_files']
+    assert original['complete_source_units'] == count == len(original['source_units']) > 0
+    assert len(original['objects']) == count and len(original['commands']) == count + 1
+    assert original['link_status'] == 0 and not original.get('failure')
+    assert original['source_pin'] == original['source_actual_HEAD'] == build['source_pin']
+    assert original['source_dirty'] is False
+    assert original['library'] == build['library'] and original['library_sha256'] == build['library_sha256']
+    assert original['baseline_library'] == build['baseline_library']
+    assert original['baseline_sha256'] == build['baseline_library_sha256']
+    assert original['source_CMake'] == build['source_CMake']
+    assert original['source_CMake_sha256'] == build['source_CMake_sha256']
+    resolve(build['source_CMake'], build['source_CMake_sha256'])
+    expected_sources = {str(Path(original['source']) / name) for name, _ in original['source_units']}
+    assert len(expected_sources) == count
+    assert {row['source'] for row in build['sources']} == expected_sources
+    compiled_objects = set()
+    for row, command in zip(build['sources'], original['commands'][:-1]):
+        assert row['sha256'] == original['source_dependencies'][row['source']]
+        assert row['command'] == command and command.count('-c') == command.count('-o') == 1
+        assert Path(command[command.index('-c') + 1]).resolve() == (root / row['source']).resolve()
+        object_path = Path(command[command.index('-o') + 1]).resolve()
+        assert object_path.is_relative_to(root / 'runtime')
+        name = str(object_path.relative_to(root))
+        assert name in original['objects'] and name not in compiled_objects
+        assert build['files'][name] == original['objects'][name]
+        resolve(name, original['objects'][name])
+        compiled_objects.add(name)
+    link = original['commands'][-1]
+    assert '-o' in link and Path(link[link.index('-o') + 1]).resolve() == (root / build['library']).resolve()
+    assert all(str(root / name) in link for name in compiled_objects)
+    for name, expected in {**original['source_dependencies'], **original['compiler_headers']}.items():
+        resolve(name, expected)
+    baseline = root / resolve(build['baseline_library'], build['baseline_library_sha256'])
+    library = root / build['library']
+    assert digest(library) == build['library_sha256']
+    # Selectors are loaded repeatedly with runpy. Only reuse symbol decoding
+    # for the same currently verified bytes; no runtime result is cached.
+    symbol_cache = sys.modules.setdefault('_linuxcode_source_candidate_symbols_v1', types.SimpleNamespace(tables={})).tables
+    def symbols(path, *options):
+        key = (digest(path), options)
+        if key not in symbol_cache:
+            output = subprocess.check_output(['llvm-nm-19', '--arch=x86_64', *options, str(path)], text=True)
+            symbol_cache[key] = frozenset(line.split()[-1] for line in output.splitlines() if line.strip())
+        return symbol_cache[key]
+    exports = symbols(library, '--defined-only', '--extern-only')
+    imports = symbols(library, '--undefined-only')
+    assert exports == set(build['exports']) == symbols(baseline, '--defined-only', '--extern-only')
+    assert imports == set(build['imports']) == symbols(baseline, '--undefined-only')
+    return dict(component=selected['component'], validation='source-build-only',
+        library=build['library'], library_sha256=build['library_sha256'],
+        complete_source_files=count, compiled_objects=len(compiled_objects),
+        exports=len(exports), imports=len(imports), native_verified=False, native_pending=True)
 
 def prepend_library_directories(profile, directories, *, scope='all'):
     """Keep caller, resource metadata and rendered override paths in step."""
@@ -90,6 +164,7 @@ def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
             assert len(resolved) == len(set(resolved)), 'Duplicate resource overlay search path'
             environment[key] = ':'.join(resolved)+':'+environment[key]
     source_library_directories = []
+    source_library_validation = []
     for selected in config.get('source_library_builds', []):
         assert selected['scope'] in ('all', 'resource-tools')
         component = selected['component']
@@ -108,13 +183,19 @@ def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
             resolver(row['source'], row['sha256'])
         for name, digest in {**build['source_headers'], **build['files']}.items():
             resolver(name, digest)
-        proof_path = selected['probe']
-        assert sha(root/proof_path) == selected['probe_sha256']
-        proof = json.loads((root/proof_path).read_text())
-        assert proof['verified'] and not proof.get('expected_failure', False)
-        assert proof['files'][build['library']] == build['library_sha256']
-        for name, digest in proof['files'].items():
-            resolver(name, digest)
+        validation = selected.get('validation', 'verified-probe')
+        assert validation in ('verified-probe', 'source-build-only')
+        if validation == 'source-build-only':
+            assert unified, 'First-run source candidates require a unified runtime'
+            source_library_validation.append(validate_source_build_candidate(selected, build, digest=sha, resolve=resolver))
+        else:
+            proof_path = selected['probe']
+            assert sha(root/proof_path) == selected['probe_sha256']
+            proof = json.loads((root/proof_path).read_text())
+            assert proof['verified'] and not proof.get('expected_failure', False)
+            assert proof['files'][build['library']] == build['library_sha256']
+            for name, digest in proof['files'].items():
+                resolver(name, digest)
         directory = '/Volumes/SystemRoot/workspace/'+str(library.parent.relative_to(root))
         source_library_directories.append((directory, selected['scope']))
         environment['DYLD_LIBRARY_PATH'] = directory+':'+environment['DYLD_LIBRARY_PATH']
@@ -300,6 +381,7 @@ def select(p, configuration='config/direct-resource-tool-environment-v2.json'):
     result = {**p, 'command': command, 'direct_resource_environment': dict(configuration=configuration,
         configuration_sha256=sha(root / configuration), tool_environment=environment,
         source_library_builds=config.get('source_library_builds', []),
+        source_library_validation=source_library_validation,
         source_library_directories=[dict(directory=directory,scope=scope) for directory,scope in source_library_directories],
         resource_system_build=config.get('resource_system_build'),
         resource_dispatch_build=config.get('resource_dispatch_build'),

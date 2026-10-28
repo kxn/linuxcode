@@ -1,0 +1,6 @@
+{
+  "original_path": "runtime/source-input-history/ddef91782b318a3b898c2418d123d4c6f2a7438decabce76785c680935f04889",
+  "original_sha256": "ddef91782b318a3b898c2418d123d4c6f2a7438decabce76785c680935f04889",
+  "encoding": "utf-8",
+  "text": "#include <DiskArbitration/DiskArbitration.h>\n#include <CoreFoundation/CoreFoundation.h>\n#include <dlfcn.h>\n#include <stdio.h>\n#include <unistd.h>\nint main(void) {\n Dl_info owner={0};dladdr((void*)DASessionCreate,&owner);\n fprintf(stderr,\"DA_SESSION_READY_OWNER %s\\n\",owner.dli_fname);\n for(unsigned i=0;i<30;++i) {\n  DASessionRef session=DASessionCreate(kCFAllocatorDefault);\n  if(session){fprintf(stderr,\"DA_SESSION_READY_NATIVE_OK type=%lu\\n\",(unsigned long)CFGetTypeID(session));CFRelease(session);return 0;}\n  usleep(100000);\n }\n fprintf(stderr,\"DA_SESSION_READY_NATIVE_FAILED\\n\");return 1;\n}\n"
+}

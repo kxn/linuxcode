@@ -7,7 +7,7 @@
   "per_executable_library_selection": false,
   "bootstrap_validation": "validation/unified-runtime-bootstrap-2026-10-28.json",
   "source_configurations": [
-    "config/unified-runtime-v25.json"
+    "config/unified-runtime-v26.json"
   ],
   "kernel_candidate": "artifacts/sigexc-self-image-kernel-v1-build.json",
   "source_kernel_report_fields_consistent": true,
@@ -71,7 +71,9 @@
     },
     "completed": false,
     "observation": "SimHost/simdiskImage service startup repeatedly waited for unavailable DiskArbitration; no compile/link/sign action ran. This is not evidence of an xcodebuild main-process crash.",
-    "project_inputs_unchanged": true
+    "project_inputs_unchanged": true,
+    "v26_full_CI_attempt_running_at_publication": true,
+    "latest_completed_attempt_configuration": "config/unified-runtime-v25.json"
   },
   "historical_initial_checkpoint": {
     "schema": 1,
@@ -118,8 +120,8 @@
   },
   "historical_initial_fields_scope": "The preserved initial snapshot describes v5/v6 only. Current refs and observations below supersede its selection; old evidence remains historical.",
   "current_checkpoint": {
-    "configuration": "config/unified-runtime-v25.json",
-    "configuration_sha256": "371a74e874398e79729ebf30447bd39ffbe465cb529f68e874ec70c05cfeb5a5",
+    "configuration": "config/unified-runtime-v26.json",
+    "configuration_sha256": "5e8b33a11106601d8b9215722ae53cc1e948a5f53a8a37b9dd994dbc6cd19932",
     "core_stage": "artifacts/private-procfs-auditsession118-stage.json",
     "core_stage_sha256": "f4b8fd7fee885377d814e70ae32338002333262a68038d8cc06f4d5efa0d4c17",
     "kernel_sha256": "cb4b3c1b9da165ed65d84a6ffb99dedafa368ddbcf43741f9480b0d2bfc14160",
@@ -127,7 +129,7 @@
     "server_fork_commit": "d728445d2124584dbfb72dd58f0e67a432ee8514",
     "OpenDirectory_fork_commit": "44d71c48eb5d325e372de66a8f28f447734701e6",
     "IOKitUser_fork_commit": "425a343ebda2d82d5713de9b5db276cb9edc1319",
-    "source_payload_inputs": 180,
+    "source_payload_inputs": 194,
     "resource_validation": "validation/shared-security-resource-cohort-2026-10-28.json",
     "sysctl_validation": "artifacts/sysctl-hardware-strings-unified-v22-2026-10-28.json",
     "directory_validation": "validation/shared-directory-membership-2026-10-28.json",
@@ -139,7 +141,12 @@
     "whole_framework_files": 521,
     "whole_framework_runtime_MachO_images": 12,
     "original_codesign_milestone": "validation/original-codesign-shared-runtime-v24-2026-10-28.json",
-    "signal_and_LaunchServices_validation": "validation/shared-launchservices-signal-2026-10-28.json"
+    "signal_and_LaunchServices_validation": "validation/shared-launchservices-signal-2026-10-28.json",
+    "services_and_unwind_validation": "validation/shared-services-source-unwind-2026-10-28.json",
+    "whole_image_stage": "runtime/run-environment-launcher-pf2gn1_n/stage.json",
+    "whole_image_stage_sha256": "2742b4245c3db74401ddb68a25b6bbf718f632ad6ffc11defc00a7ebaaf0abe7",
+    "unwind_first_native_gate_verified": true,
+    "source_build_only_frozen_metadata_not_rewritten": true
   },
   "HTTPS_last_observation": {
     "configuration": "config/unified-runtime-v23.json",
@@ -149,5 +156,5 @@
     "normal_managed_timeout": true,
     "native_fault_observed": false
   },
-  "bootstrap_validation_scope": "The linked process-map observation is historical v5/v6. Current v25 recoverable signal/official LaunchServices registration completed bootstrap; no unrelated process-map matrix was repeated."
+  "bootstrap_validation_scope": "The linked process-map observation remains historical v5/v6. v26 completed one actual five-phase DA/SC/unwind/native-exception/CoreCLR gate including bootstrap; no unrelated map/API matrix was repeated."
 }

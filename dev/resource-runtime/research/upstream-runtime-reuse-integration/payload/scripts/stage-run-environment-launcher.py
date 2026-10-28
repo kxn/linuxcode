@@ -28,14 +28,45 @@ log_transport='''if [[ -n ${LINUXCODE_RUN_DARLING_OS_LOG_STDERR+x} ]]; then
     run_environment+=("DARLING_OS_LOG_STDERR=$LINUXCODE_RUN_DARLING_OS_LOG_STDERR")
 fi
 '''
+unwind_log_inputs = {
+    'LINUXCODE_RUN_LIBUNWIND_PRINT_UNWINDING': 'LIBUNWIND_PRINT_UNWINDING',
+    'LINUXCODE_RUN_LIBUNWIND_PRINT_APIS': 'LIBUNWIND_PRINT_APIS',
+    'LINUXCODE_RUN_LIBUNWIND_PRINT_DWARF': 'LIBUNWIND_PRINT_DWARF',
+}
+optional_unwind_log_metadata = {
+    host: dict(guest=guest, enabled_value='1', zero='omit', unset='omit',
+               invalid='exit 2', scope='whole run including bootstrap')
+    for host, guest in unwind_log_inputs.items()
+}
+
 def optional_log_transport(text):
-    if 'LINUXCODE_RUN_DARLING_OS_LOG_STDERR' in text:return text
     anchor='''if [[ -n ${LINUXCODE_RUN_OBJC_DISABLE_TAGGED_POINTERS+x} ]]; then
     run_environment+=("OBJC_DISABLE_TAGGED_POINTERS=$LINUXCODE_RUN_OBJC_DISABLE_TAGGED_POINTERS")
 fi
 '''
-    assert text.count(anchor)==1
-    return text.replace(anchor,anchor+log_transport,1)
+    if 'LINUXCODE_RUN_DARLING_OS_LOG_STDERR' not in text:
+        assert text.count(anchor)==1
+        text=text.replace(anchor,anchor+log_transport,1)
+    additions=[]
+    for host,guest in unwind_log_inputs.items():
+        marker='if [[ -n ${'+host+'+x} ]]; then'
+        assert text.count(marker)<=1
+        if marker in text:continue
+        # Upstream libunwind checks getenv presence; forwarding =0 would turn
+        # tracing on. Only the explicit host value 1 enters the shared array.
+        additions.append(f'''if [[ -n ${{{host}+x}} ]]; then
+    [[ ${host} == 0 || ${host} == 1 ]] || {{
+        echo "{host} must be 0 or 1" >&2; exit 2;
+    }}
+    if [[ ${host} == 1 ]]; then
+        run_environment+=("{guest}=1")
+    fi
+fi
+''')
+    if additions:
+        assert text.count(log_transport)==1
+        text=text.replace(log_transport,log_transport+''.join(additions),1)
+    return text
 
 def install_host_resolver(folder,system,prefix,text):
     source=Path(a.host_resolver).resolve(strict=True);data=source.read_bytes()
@@ -243,7 +274,8 @@ if a.clone_image_stage:
     stage['files'].update(library_inputs)
     stage.update(launcher=str(launcher.relative_to(root)),namespace=str(namespace.relative_to(root)),
         runtime_execution_verified=False,full_goal_complete=False,cloned_installed_image=a.clone_image_stage,
-        cloned_installed_image_sha256=sha(parent_path),optional_run_log_transport='LINUXCODE_RUN_DARLING_OS_LOG_STDERR')
+        cloned_installed_image_sha256=sha(parent_path),optional_run_log_transport='LINUXCODE_RUN_DARLING_OS_LOG_STDERR',
+        optional_run_unwind_log_transports=optional_unwind_log_metadata)
     for path in [Path(__file__),parent_path,launcher,namespace,folder/'resolv.conf']:stage['files'][str(path.relative_to(root))]=sha(path)
     out=folder/'stage.json';out.write_text(json.dumps(stage,indent=2)+'\n');print('RUN_ENVIRONMENT_STAGE',out,flush=True)
     raise SystemExit(0)
@@ -573,6 +605,7 @@ stage={**parent,'launcher':str(launcher.relative_to(root)),'namespace':str(names
        'parent_run_environment_stage':a.parent_stage,'parent_run_environment_stage_sha256':sha(parent_path),
        'runtime_execution_verified':False,'full_goal_complete':False}
 stage['optional_run_log_transport']='LINUXCODE_RUN_DARLING_OS_LOG_STDERR'
+stage['optional_run_unwind_log_transports']=optional_unwind_log_metadata
 if materialized:
     stage['materialized_shared_runtime']=materialized
     stage['files'][str((folder/'resolv.conf').relative_to(root))]=sha(folder/'resolv.conf')
