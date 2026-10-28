@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-28",
+  "verified": true,
+  "outer_status": 0,
+  "configuration": "config/unified-runtime-v15.json",
+  "configuration_sha256": "1149c3efc5890322d07b8898b5a74f046c2a89686709de5e35f6909fccbf8a54",
+  "fixture_source": "fixtures/hello/ManagedImplicitNullSmoke.cs",
+  "fixture_source_sha256": "0dbb60d8074b44fe91f34c03c0666e89687f19dc8655a1d556ef833729b92b7e",
+  "semantics": [
+    "Main-thread JIT implicit null field access becomes a caught NullReferenceException",
+    "Threadpool JIT implicit null field access becomes a caught NullReferenceException",
+    "Both original managed stack traces contain the original ReadField JIT frame",
+    "Original CoreCLR execute and shutdown return zero"
+  ],
+  "same_library_configuration_for_all_processes": true,
+  "external_debugger": false,
+  "other_process_memory_accessed": false,
+  "raw_log_published": false,
+  "Unity_Editor_or_licensing_client_success_claimed": false
+}

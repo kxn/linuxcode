@@ -1,0 +1,37 @@
+{
+  "verified": true,
+  "metadata_adapter_only": true,
+  "files": {
+    "runtime/libresolv-source-f215b1kq/libraries/libresolv.9.dylib": "2f036e768be0f1a988c1fb98c2ec1bbb8bb1b08fe5efc0637bd494f7f6931c4e",
+    "runtime/libresolv-source-f215b1kq/build.json": "c5d53c32f61db41b7c44c2dd45edc4ff3aeabd31147022174f09b8e85a90d3ee",
+    "runtime/private-native-resolver-_tw1egbt/result.json": "b277feed97ab9b4d29081a3a4e63ebd890d45cabf6030d2af91731ff0b411517",
+    "fixtures/hello/private-native-resolver.c": "ec913f21ce7a8c9b29a013385f910878b39828eb1ccfbc9b278a279519bd49ff",
+    "runtime/private-native-resolver-hhequjrt/result.json": "2ca4266b2e107e8ddf6d956355aad865b6ad0e6e3e9ce5e444f3ab9c74d6457e",
+    "fixtures/hello/private-native-resolver-options.c": "fa95c076bc067a05d42641283c97e94b223a86c159733f17bc9cc23b13aaf699"
+  },
+  "historical_native_results": [
+    {
+      "case": "real DNS lookups",
+      "original_result": "runtime/private-native-resolver-_tw1egbt/result.json",
+      "original_result_sha256": "b277feed97ab9b4d29081a3a4e63ebd890d45cabf6030d2af91731ff0b411517",
+      "original_configuration": "config/direct-resource-tool-environment-v153.json",
+      "original_stage": "artifacts/private-procfs-auditsession90-stage.json",
+      "verified": true,
+      "outer_status": 0,
+      "original_log_sha256": "09e165ae8c9567af0be22a9b6dbb215d36f32e865edcfce962f9b0a395be6827"
+    },
+    {
+      "case": "default UDP and explicit TCP flags",
+      "original_result": "runtime/private-native-resolver-hhequjrt/result.json",
+      "original_result_sha256": "2ca4266b2e107e8ddf6d956355aad865b6ad0e6e3e9ce5e444f3ab9c74d6457e",
+      "original_configuration": "config/direct-resource-tool-environment-v153.json",
+      "original_stage": "artifacts/private-procfs-auditsession92-stage.json",
+      "verified": true,
+      "outer_status": 0,
+      "original_log_sha256": "fcdf981bd0ea94987fe0d2b69f1cc8a5862761b804377d14b797a5d4601c5e6b"
+    }
+  ],
+  "new_native_execution": false,
+  "execution_verified_on_current_common_runtime": false,
+  "scope": "Existing historical native resolver probes; not a v15 common-runtime DNS validation"
+}

@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-28",
+  "scope": "Unified whole-run runtime source checkpoint; selected public outcomes only",
+  "runtime_unified_from_first_Mach_O": true,
+  "per_program_library_selection": false,
+  "cold_install_verified": false,
+  "original_Xcode_full_build_in_this_cohort_verified": false,
+  "Unity_export_verified": false,
+  "network": {
+    "v15": {
+      "DNS_resolution": false,
+      "TCP_started": false,
+      "TLS_started": false,
+      "outer_status": 1,
+      "elapsed_seconds": 10.53
+    },
+    "v16": {
+      "existing_complete_resolver_reused": true,
+      "source_units": 27,
+      "recompiled_units": 0,
+      "baseline_exports": 146,
+      "original_build_unchanged": true,
+      "source_commit": "42cec61dc32b9167805741d6d15303c45b1f1578",
+      "source_repository": "https://github.com/kxn/darling-libresolv",
+      "host_DNS_shared_by_all_processes": true,
+      "DNS_resolution": true,
+      "TCP_connection": true,
+      "TLS_handshake_started": true,
+      "TLS_completed": false,
+      "HTTPS_succeeded": false,
+      "outer_status": 1,
+      "elapsed_seconds": 16.87
+    },
+    "v17": {
+      "DNS_resolution": true,
+      "TCP_connection": true,
+      "TLS_handshake_started": true,
+      "TLS_completed": false,
+      "HTTPS_succeeded": false,
+      "outer_status": 1,
+      "elapsed_seconds": 16.63,
+      "normal_managed_timeout": true,
+      "native_crash_observed": false,
+      "remaining_observed_service_failure": "trustdFileHelper rejected unavailable caller entitlement metadata: SecTaskLoadEntitlements error 78"
+    }
+  },
+  "services": {
+    "v14_original_certificate_codesign_completed": false,
+    "v15_original_service_observation_completed": true,
+    "v15_service_count": 4,
+    "v15_services_exit_status": 1,
+    "v15_reason": "Named sandbox profiles are not implemented; original services exit after loader/bootstrap prerequisites.",
+    "global_existing_libtrace_stderr_transport": true,
+    "transport_default": "unset",
+    "compatibility_service_count": 4,
+    "original_Apple_service_signatures_preserved": false,
+    "Apple_platform_identity_claimed": false,
+    "real_local_ad_hoc_signatures": true,
+    "independent_signature_verification": true,
+    "independent_non_signature_content_verification": true,
+    "verified_architecture_slices": 8,
+    "verified_sections": 240,
+    "securityd_system_CodeDirectory_flags": "0x2002",
+    "other_original_CodeDirectory_options_retained": true,
+    "v17_native_execution_attempted": true,
+    "v17_outer_status": -9,
+    "v17_original_codesign_frontend_completed": false,
+    "v17_sign_status_markers": [],
+    "v17_verify_status_markers": [],
+    "v17_trustd_passed_startup_sandbox_guard": true,
+    "v17_trustd_read_Admin_and_TrustSettings": true,
+    "v17_FileHelper_started": true,
+    "v17_FileHelper_rejected_unavailable_entitlement_metadata": true,
+    "v17_SecTaskLoadEntitlements_error": 78,
+    "v17_securityd_UnixError": 22,
+    "v17_securityd_abort_status": 134,
+    "certificate_sign_and_verify_succeeded": false,
+    "remaining_general_API_gap": "sys_csops currently supplies placeholder status/XML and lacks DER metadata; implement real file-signature metadata rather than granting invented permissions.",
+    "future_clone_resolver_bind_idempotent": true,
+    "current_v17_image_unchanged_by_future_clone_fix": true
+  },
+  "managed_implicit_null": {
+    "original_CoreCLR": true,
+    "main_JIT_fault_caught": true,
+    "threadpool_JIT_fault_caught": true,
+    "ReadField_stack_observed": true,
+    "outer_status": 0,
+    "elapsed_seconds": 8.06,
+    "external_debugger": false
+  },
+  "private_evidence": [
+    {
+      "path": "runtime/original-security-services-log-probe-v15/result.json",
+      "sha256": "0e0731ca089afb642113bf06114c7695826de545f69fa7923ef7e8bc9390e7d5",
+      "included": false
+    },
+    {
+      "path": "runtime/managed-http-event-trace-76sz8dv8/https-result.json",
+      "sha256": "6f8f40329a859f2fbd6f663bd5686b3d88cc253cf2edf5d80a0aaf60d04e5c0f",
+      "included": false
+    },
+    {
+      "path": "runtime/managed-http-probe-llzm2t1v/result.json",
+      "sha256": "0beb6da2e26e31af98b1a1765a9371b654fa0cbae655990fba5931cc49b3f931",
+      "included": false
+    },
+    {
+      "path": "runtime/managed-implicit-null-v15/result.json",
+      "sha256": "f0c7655b2a66ea09cfdd08f0cc415f7a348831f0a839e9c01164f40ddea2e714",
+      "included": false
+    },
+    {
+      "path": "runtime/zsign-security-platform-guards-flags-v2-dt1nhtyg/independent-signature-check.json",
+      "sha256": "4e213fced9a3cd3bd3389ab8d8d07432e001074c2f4779268d02c4cfb20ad3d8",
+      "included": false
+    },
+    {
+      "path": "runtime/zsign-security-platform-guards-flags-v2-dt1nhtyg/independent-content-check.json",
+      "sha256": "125d4de24c10bb6e7628b41cf9e09c925a51e2170d6d50677ff0d0af7cb68626",
+      "included": false
+    },
+    {
+      "path": "runtime/original-codesign-certificate-pp9cv91n/result.json",
+      "sha256": "52604f16d67bcb1840da153e666d9a4fdaad5f7a2b994c2a0c067ffc074c4f22",
+      "included": false
+    },
+    {
+      "path": "runtime/managed-http-probe-ae3kcc3t/result.json",
+      "sha256": "7d6ccfe08eef763629904a7f7f309ed784443cacef7c197d9774c74be2453409",
+      "included": false
+    }
+  ],
+  "excluded": [
+    "Original Apple/Unity executables and libraries",
+    "Entitlement XML/DER/CMS payloads",
+    "Resolver snapshot and private nameserver values",
+    "Raw logs, traces, cores and credentials"
+  ],
+  "future_clone_host_control": {
+    "path": "runtime/resolver-clone-block-host-5cp6jkq5/result.json",
+    "sha256": "92e9c09a5798497919753b97b06c3a1b185846e29bff6fc1f368ed7cdca5138c",
+    "production_function_executed": true,
+    "native_execution": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-28",
+  "scope": "Same-version original 25G83 security services in the whole-run shared Linux/Darling environment",
+  "configuration": "config/unified-runtime-v15.json",
+  "configuration_sha256": "1149c3efc5890322d07b8898b5a74f046c2a89686709de5e35f6909fccbf8a54",
+  "same_library_configuration_for_all_processes": true,
+  "whole_runtime_bootstrap_succeeded": true,
+  "original_services": [
+    {
+      "service": "trustd",
+      "started_original_Apple_executable": true,
+      "observed_startup_error": "Failed to enter trustd sandbox: Sandbox profiles are not implemented",
+      "launchd_last_exit_status": 256,
+      "exited_with_status": 1
+    },
+    {
+      "service": "securityd",
+      "started_original_Apple_executable": true,
+      "observed_startup_error": "SecServer: unable to enter sandbox: Sandbox profiles are not implemented",
+      "launchd_last_exit_status": 256,
+      "exited_with_status": 1
+    },
+    {
+      "service": "trustdFileHelper",
+      "started_original_Apple_executable": true,
+      "observed_startup_error": "Failed to enter trustdFileHelper sandbox: Sandbox profiles are not implemented",
+      "launchd_last_exit_status": 256,
+      "exited_with_status": 1
+    },
+    {
+      "service": "securityd_system",
+      "started_original_Apple_executable": true,
+      "observed_startup_error": "Failed to instantiate sandbox: -1 Sandbox profiles are not implemented",
+      "launchd_last_exit_status": 256,
+      "exited_with_status": 1
+    }
+  ],
+  "diagnostic_library_implementation": "Existing Darling libtrace DARLING_OS_LOG_STDERR=1, applied to all processes before first Mach-O",
+  "diagnostic_run_outer_status": 0,
+  "original_codesign_frontend_completed": false,
+  "codesign_identity_query_succeeded": true,
+  "signing_wait_stopped_early_after_required_services_exited": true,
+  "public_source_implementation_does_not_claim_named_profile_enforcement": true,
+  "raw_logs_or_Apple_binaries_published": false,
+  "full_Unity_export_verified": false
+}

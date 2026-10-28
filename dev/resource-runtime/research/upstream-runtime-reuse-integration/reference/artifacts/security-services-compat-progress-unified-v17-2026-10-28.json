@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-28",
+  "scope": "Whole-run same-version security daemon compatibility build",
+  "configuration": "config/unified-runtime-v17.json",
+  "configuration_sha256": "febabae8803c9e07914ec20b3c238f36a37cfdccd25c0c6d39cfe789b659398b",
+  "all_processes_use_same_shared_libraries": true,
+  "four_compatibility_services_installed": true,
+  "source_guard_bytes_per_Intel_image": 5,
+  "original_files_preserved": true,
+  "ad_hoc_signed_on_Linux": true,
+  "original_Apple_platform_identity_claimed": false,
+  "independent_signature_verification": {
+    "images": 4,
+    "slices": 8,
+    "all_code_pages_and_special_slots_verified": true,
+    "original_XML_and_DER_entitlement_semantics_preserved": true,
+    "CodeDirectory_nonadhoc_flags_preserved": true
+  },
+  "independent_content_verification": {
+    "sections": 240,
+    "all_non_signature_bytes_preserved_from_guard_input": true
+  },
+  "actual_native_progress": {
+    "trustd_passed_named_sandbox_startup": true,
+    "trustd_read_trust_settings": true,
+    "trustdFileHelper_started": true,
+    "trustdFileHelper_rejected_caller_because_csops_entitlement_metadata_returned_ENOSYS": true,
+    "securityd_passed_named_sandbox_startup": true,
+    "securityd_later_uncaught_UnixError": 22,
+    "securityd_last_exit_status": 134
+  },
+  "original_codesign_frontend_completed": false,
+  "original_codesign_outer_status": -9,
+  "native_sign_status": [],
+  "native_verify_status": [],
+  "raw_logs_disassembly_Apple_binaries_and_entitlement_blobs_published": false,
+  "full_Xcode_App_build_or_Unity_export_claimed": false
+}

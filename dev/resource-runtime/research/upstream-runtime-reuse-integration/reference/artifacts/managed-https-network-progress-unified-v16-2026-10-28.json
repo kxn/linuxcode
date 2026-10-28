@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-28",
+  "scope": "Original macOS CoreCLR public HTTPS request on Linux/Darling",
+  "configuration": "config/unified-runtime-v16.json",
+  "configuration_sha256": "581ca05646d79e4e90135b563d4a6d15bd497febc781fdabfeb842727b8ba3b6",
+  "whole_run_shared_library_configuration": true,
+  "complete_upstream_resolver_reused": true,
+  "resolver_translation_units": 27,
+  "resolver_exports_preserved": 146,
+  "DNS_resolution_completed": true,
+  "TCP_connect_completed": true,
+  "TLS_handshake_started": true,
+  "HTTPS_request_completed": false,
+  "outer_status": 1,
+  "normal_managed_timeout_reported": true,
+  "native_crash_observed": false,
+  "trace_events": [
+    [
+      "System.Net.Http",
+      "RequestStart"
+    ],
+    [
+      "System.Net.NameResolution",
+      "ResolutionStart"
+    ],
+    [
+      "System.Net.NameResolution",
+      "ResolutionStop"
+    ],
+    [
+      "System.Net.Sockets",
+      "ConnectStart"
+    ],
+    [
+      "System.Net.Sockets",
+      "ConnectStop"
+    ],
+    [
+      "System.Net.Security",
+      "HandshakeStart"
+    ],
+    [
+      "System.Net.Http",
+      "RequestLeftQueue"
+    ],
+    [
+      "System.Net.Http",
+      "RequestFailed"
+    ],
+    [
+      "System.Net.Http",
+      "RequestStop"
+    ]
+  ],
+  "event_payloads_recorded": false,
+  "original_runtime_sha256": "c9f6d341d47e8fc366d4946bb619f6e9624da057ecb615c06b29f9b1b576d75d",
+  "source_runner_sha256": "be945dd60858651e936f7d579d8b8c9e6a325fa0c9298b070cca9fd5d929bfc2",
+  "raw_log_or_proprietary_binaries_published": false,
+  "public_fork_commit": "42cec61dc32b9167805741d6d15303c45b1f1578"
+}

@@ -1,0 +1,327 @@
+{
+  "scope": "Four complete original 25G83 service images with a pinned local Darling startup guard",
+  "own_source": "scripts/build-pinned-platform-guards.py",
+  "current_source_sha256": "f0bffa0b95d469062cb105e7353fcee7b5dcda3ad5c96bdbea925e574499f71d",
+  "build_source_sha256": "b4c85f7c53d86c603efe03b9d09d6e34a05724564e3df566e38cf986689dd3f6",
+  "historical_build_source_archived": true,
+  "input_manifest": "runtime/original-security-service-startup-audit-jix4j150/platform-guard-build-inputs.json",
+  "input_manifest_sha256": "3642eff0074910eb383ecadd6cbeb3ae3461b0850064542c318287a995e84449",
+  "state": "invalid-signature-not-installed",
+  "installed": false,
+  "native_executed_by_builder": false,
+  "original_algorithms_and_other_image_bytes_unchanged": true,
+  "shared_sandbox_API_unchanged": true,
+  "macOS_named_sandbox_enforcement": false,
+  "Apple_signature_claim": false,
+  "independent_native_signing_and_verification_pending": true,
+  "host_controls": "runtime/darling-platform-guard-controls-v2xywux2/result.json",
+  "host_controls_sha256": "b770548b7adfb2d30814d2409e78608ad07f68fc6878c4dfe842caf3189d37a7",
+  "images": [
+    {
+      "name": "trustd",
+      "original_sha256": "9bfa3e7afa0567b0298954fb7d1fa295fec00f340d13b230166e18e2c0f41f05",
+      "guarded_sha256": "1dd2198b50a927bb3fa89e87186e6f7802b70caa96afabde71a5041675bb5e7f",
+      "identifier": "com.apple.trustd",
+      "guard": {
+        "file_offset": 34336,
+        "site_vm": "0x100004620",
+        "target_vm": "0x10000462d",
+        "before": "e8ffbb0600",
+        "after": "e908000000",
+        "text_bytes_replaced": 5,
+        "all_other_bytes_identical": true
+      },
+      "source_proofs": [
+        {
+          "path": "runtime/common-trustd-modern-source-a957j0ej/Security-Security-61901.120.67/trust/trustd/trustd.c",
+          "sha256": "604b5145d19d93a1f1d3b27b74d51953c3a424bebeee421c5fbd3dcdc6c6afce"
+        },
+        {
+          "path": "vendor/darling/src/external/security/trust/trustd/trustd.c",
+          "sha256": "3a30a8a856be9bdf97484ed40d97d7520251a09956655423875679ed92c7e748"
+        }
+      ],
+      "control_flow": "Skip startup named profile call/test/fatal branch; preserve temp/cache free and all subsequent trustd initialization.",
+      "original_signature_metadata": [
+        {
+          "cpu_type": 16777223,
+          "cpu_subtype": 3,
+          "identifier": "com.apple.trustd",
+          "code_directory_version": 132096,
+          "code_directory_flags": 0,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "fda8099007234230a8ba8f4fb362942351b09b8df8381a9447f6792a1ec16270",
+          "der_sha256": "b7ca68716cc3a9886c86ed9e2a20a629789c9dcfec3a00fd39379ed33eaab6e8",
+          "entitlement_keys": [
+            "application-identifier",
+            "com.apple.application-identifier",
+            "com.apple.private.amfi.version-restriction",
+            "com.apple.private.assets.accessible-asset-types",
+            "com.apple.private.assets.bypass-asset-types-check",
+            "com.apple.private.biome.client-identifier",
+            "com.apple.private.biome.read-write",
+            "com.apple.private.keychain.certificates",
+            "com.apple.private.necp.match",
+            "com.apple.private.network.delegation-whitelist",
+            "com.apple.private.network.socket-delegate",
+            "com.apple.private.security.storage.SFAnalytics",
+            "com.apple.private.security.storage.trustd",
+            "com.apple.private.security.storage.trustd-private",
+            "com.apple.private.tcc.manager.check-by-audit-token",
+            "com.apple.private.trustd.FileHelp"
+          ]
+        },
+        {
+          "cpu_type": 16777228,
+          "cpu_subtype": 2147483650,
+          "identifier": "com.apple.trustd",
+          "code_directory_version": 132096,
+          "code_directory_flags": 0,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "fda8099007234230a8ba8f4fb362942351b09b8df8381a9447f6792a1ec16270",
+          "der_sha256": "b7ca68716cc3a9886c86ed9e2a20a629789c9dcfec3a00fd39379ed33eaab6e8",
+          "entitlement_keys": [
+            "application-identifier",
+            "com.apple.application-identifier",
+            "com.apple.private.amfi.version-restriction",
+            "com.apple.private.assets.accessible-asset-types",
+            "com.apple.private.assets.bypass-asset-types-check",
+            "com.apple.private.biome.client-identifier",
+            "com.apple.private.biome.read-write",
+            "com.apple.private.keychain.certificates",
+            "com.apple.private.necp.match",
+            "com.apple.private.network.delegation-whitelist",
+            "com.apple.private.network.socket-delegate",
+            "com.apple.private.security.storage.SFAnalytics",
+            "com.apple.private.security.storage.trustd",
+            "com.apple.private.security.storage.trustd-private",
+            "com.apple.private.tcc.manager.check-by-audit-token",
+            "com.apple.private.trustd.FileHelp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "securityd",
+      "original_sha256": "2c3f73ca7fa0b8634ec3e0dddeb74587a78ea4b0a1af039171a8f2c6c182bfb1",
+      "guarded_sha256": "09651461bfb70d588e621bf8278499540289b40f02864ed11f215e893ba90cf3",
+      "identifier": "com.apple.securityd",
+      "guard": {
+        "file_offset": 101769,
+        "site_vm": "0x100014d89",
+        "target_vm": "0x100014dde",
+        "before": "e800500500",
+        "after": "e950000000",
+        "text_bytes_replaced": 5,
+        "all_other_bytes_identical": true
+      },
+      "source_proofs": [
+        {
+          "path": "runtime/common-trustd-modern-source-a957j0ej/Security-Security-61901.120.67/securityd/src/main.cpp",
+          "sha256": "140e2b76f47cb2e26442bd3634e6e1970f629da6f62dbeb24152a0e0271114a6"
+        },
+        {
+          "path": "vendor/darling/src/external/security/trust/trustd/trustd.c",
+          "sha256": "3a30a8a856be9bdf97484ed40d97d7520251a09956655423875679ed92c7e748"
+        }
+      ],
+      "control_flow": "Skip named profile call/test/fatal branch AND entered-sandbox success log; preserve installation/options/server initialization.",
+      "original_signature_metadata": [
+        {
+          "cpu_type": 16777223,
+          "cpu_subtype": 3,
+          "identifier": "com.apple.securityd",
+          "code_directory_version": 132096,
+          "code_directory_flags": 0,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "7ddd177c58f322c2276411b8d71a9f4eb800243000e7478c85574f5a11e69e90",
+          "der_sha256": "5fb38b3596cdbe5c6c5375965f0d0e8296310eb7a553f3c4789eba0c069c727c",
+          "entitlement_keys": [
+            "com.apple.keystore.keybag.create",
+            "com.apple.private.amfi.version-restriction",
+            "com.apple.private.applekeystored",
+            "com.apple.private.security.storage.SFAnalytics",
+            "com.apple.private.security.storage.SystemKeychain",
+            "com.apple.private.securityd.keychain",
+            "com.apple.private.securityd.stash",
+            "com.apple.private.securityd.stash-agent-client",
+            "com.apple.private.tcc.allow",
+            "com.apple.security.script-restrictions",
+            "com.apple.security.smartcard"
+          ]
+        },
+        {
+          "cpu_type": 16777228,
+          "cpu_subtype": 2147483650,
+          "identifier": "com.apple.securityd",
+          "code_directory_version": 132096,
+          "code_directory_flags": 0,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "7ddd177c58f322c2276411b8d71a9f4eb800243000e7478c85574f5a11e69e90",
+          "der_sha256": "5fb38b3596cdbe5c6c5375965f0d0e8296310eb7a553f3c4789eba0c069c727c",
+          "entitlement_keys": [
+            "com.apple.keystore.keybag.create",
+            "com.apple.private.amfi.version-restriction",
+            "com.apple.private.applekeystored",
+            "com.apple.private.security.storage.SFAnalytics",
+            "com.apple.private.security.storage.SystemKeychain",
+            "com.apple.private.securityd.keychain",
+            "com.apple.private.securityd.stash",
+            "com.apple.private.securityd.stash-agent-client",
+            "com.apple.private.tcc.allow",
+            "com.apple.security.script-restrictions",
+            "com.apple.security.smartcard"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "securityd_system",
+      "original_sha256": "12208fa210befe03621015a7db03010ff4f09cca9ae71c4f735dc8af753e7e07",
+      "guarded_sha256": "4241a8f2f443d49ea46bf94f58beb3313b864b1ea7ecf3d190f3d61e7cb062a2",
+      "identifier": "com.apple.securityd_system",
+      "guard": {
+        "file_offset": 105468,
+        "site_vm": "0x100015bfc",
+        "target_vm": "0x100015c09",
+        "before": "e869cc0200",
+        "after": "e908000000",
+        "text_bytes_replaced": 5,
+        "all_other_bytes_identical": true
+      },
+      "source_proofs": [
+        {
+          "path": "runtime/common-trustd-modern-source-a957j0ej/Security-Security-61901.120.67/OSX/sec/ipc/server.c",
+          "sha256": "d356fd0813195f9a2057639a61517eecb4253eea03e2c58230bdc277afc9d49a"
+        },
+        {
+          "path": "vendor/darling/src/external/security/trust/trustd/trustd.c",
+          "sha256": "3a30a8a856be9bdf97484ed40d97d7520251a09956655423875679ed92c7e748"
+        }
+      ],
+      "control_flow": "Skip named profile call/test/fatal branch; preserve the immediate original DB/server initialization calls.",
+      "original_signature_metadata": [
+        {
+          "cpu_type": 16777223,
+          "cpu_subtype": 3,
+          "identifier": "com.apple.securityd_system",
+          "code_directory_version": 132096,
+          "code_directory_flags": 8192,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "960bbb288b868a956523e1c11cf5765cc5593aee7a776c9551ee53bd080a9fd9",
+          "der_sha256": "d56563a3e04ee6313e6763137e43c712d5e6a2d26119aa69382a5333d0e75d10",
+          "entitlement_keys": [
+            "application-identifier",
+            "com.apple.application-identifier",
+            "com.apple.keystore.access-keychain-keys",
+            "com.apple.keystore.keybag.create",
+            "com.apple.keystore.lockassertion",
+            "com.apple.mkb.usersession.info",
+            "com.apple.private.MobileGestalt.AllowedProtectedKeys",
+            "com.apple.private.applecredentialmanager.allow",
+            "com.apple.private.security.storage.Keychains",
+            "com.apple.private.sqlite.sqlite-encryption",
+            "com.apple.private.xpc.launchd.ios-system-session",
+            "com.apple.security.script-restrictions",
+            "com.apple.symptom_diagnostics.report"
+          ]
+        },
+        {
+          "cpu_type": 16777228,
+          "cpu_subtype": 2147483650,
+          "identifier": "com.apple.securityd_system",
+          "code_directory_version": 132096,
+          "code_directory_flags": 8192,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "960bbb288b868a956523e1c11cf5765cc5593aee7a776c9551ee53bd080a9fd9",
+          "der_sha256": "d56563a3e04ee6313e6763137e43c712d5e6a2d26119aa69382a5333d0e75d10",
+          "entitlement_keys": [
+            "application-identifier",
+            "com.apple.application-identifier",
+            "com.apple.keystore.access-keychain-keys",
+            "com.apple.keystore.keybag.create",
+            "com.apple.keystore.lockassertion",
+            "com.apple.mkb.usersession.info",
+            "com.apple.private.MobileGestalt.AllowedProtectedKeys",
+            "com.apple.private.applecredentialmanager.allow",
+            "com.apple.private.security.storage.Keychains",
+            "com.apple.private.sqlite.sqlite-encryption",
+            "com.apple.private.xpc.launchd.ios-system-session",
+            "com.apple.security.script-restrictions",
+            "com.apple.symptom_diagnostics.report"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "trustdFileHelper",
+      "original_sha256": "cb4211f16716011dc181d1ee3df43f3153e7fc0f6b4156dd2bece22ae5db9247",
+      "guarded_sha256": "1ecb3959d0f6189663e0dd2cc7f280349317f1b0edc9901dbbcd077cf118a5ef",
+      "identifier": "com.apple.trustdFileHelper",
+      "guard": {
+        "file_offset": 23847,
+        "site_vm": "0x100001d27",
+        "target_vm": "0x100001d30",
+        "before": "e8ec1b0000",
+        "after": "e904000000",
+        "text_bytes_replaced": 5,
+        "all_other_bytes_identical": true
+      },
+      "source_proofs": [
+        {
+          "path": "runtime/common-trustd-modern-source-a957j0ej/Security-Security-61901.120.67/trust/trustd/trustdFileHelper/main.m",
+          "sha256": "0a083d6a4242e5c0afa76adeed963ac3da48ec20046782b56425d37f8ecee700"
+        },
+        {
+          "path": "vendor/darling/src/external/security/trust/trustd/trustd.c",
+          "sha256": "3a30a8a856be9bdf97484ed40d97d7520251a09956655423875679ed92c7e748"
+        }
+      ],
+      "control_flow": "Skip named profile call/test/fatal branch; preserve temp/cache free and original XPC listener setup.",
+      "original_signature_metadata": [
+        {
+          "cpu_type": 16777223,
+          "cpu_subtype": 3,
+          "identifier": "com.apple.trustdFileHelper",
+          "code_directory_version": 132096,
+          "code_directory_flags": 0,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "1235247833925de4f5559aef3a3f8392b54df1f02beb87b19374b0d71bf33cd0",
+          "der_sha256": "c5cac1bcfba345c9ef889e338a74dc6a5f0ebd34b90f28f147b81dcf3e68af45",
+          "entitlement_keys": [
+            "com.apple.private.security.storage.SFAnalytics",
+            "com.apple.private.security.storage.trustd"
+          ]
+        },
+        {
+          "cpu_type": 16777228,
+          "cpu_subtype": 2147483650,
+          "identifier": "com.apple.trustdFileHelper",
+          "code_directory_version": 132096,
+          "code_directory_flags": 0,
+          "code_directory_runtime": null,
+          "code_directory_platform": 26,
+          "xml_sha256": "1235247833925de4f5559aef3a3f8392b54df1f02beb87b19374b0d71bf33cd0",
+          "der_sha256": "c5cac1bcfba345c9ef889e338a74dc6a5f0ebd34b90f28f147b81dcf3e68af45",
+          "entitlement_keys": [
+            "com.apple.private.security.storage.SFAnalytics",
+            "com.apple.private.security.storage.trustd"
+          ]
+        }
+      ]
+    }
+  ],
+  "excluded_from_public_payload": [
+    "Original and guarded Apple executable files",
+    "Original XML/DER/CMS signature blobs and raw disassembly",
+    "Private native logs"
+  ],
+  "complete_source_fallback": "runtime/trustd-source-7fsub002/host-build-progress.json"
+}

@@ -35,3 +35,12 @@ v11 的确定启动阻断随后由真实 job 表定位：新建 LaunchDaemons/Ag
 公共 v13/stage113 接入服务端 x86 Mach debug-state get/set。该 server 是在逐字节一致的 stage112 基线重链接上更新 2 个编译单元的已验证增量，保持 `full_server_source_build=false`；kernel112、公共库、账号和目录权限保持原配置。117 项真实 Linux 子线程控制与生产 Mach marshaller 检查已通过；复用入口随包保存，没有为发布重复运行原控制。公共 Mach API 读写随后在真实 v13 中通过，外层/原生状态均为 0，含启动共 3.95 秒，无外部 GDB。
 
 同 v13 的原版 Client 单次无 GDB 运行仍失败：named-pipe 已启动，本次未观察到旧的 debug-state MachExceptionInfo unsupported/SIGABRT，随后自然 SIGSEGV/139 退出。Mach API 已通过不表示 Client、许可验证或 Unity 导出已完成。本轮没有接入猜测性的 libunwind 替换。源码已发布到原有 darlingserver 分支，精选结果见 thread-debug-common-runtime 摘要。
+
+v14–v16 继续使用整个 run 的同一镜像。v14 在首个 Mach-O 前预装四个完整原服务、五个原 plist 和两个完整依赖；v15 将宿主当前 resolver 配置快照同时提供给 Linux 与 Darwin，并可选转发现成 libtrace 的 stderr 开关。该开关默认不设置，不能用于选择不同程序的库。原服务实际均在 named sandbox profile 尚未实现处退出 1；codesign 仍未完成。
+
+原版 CoreCLR 的事件序列明确定位了下一处公共缺口：v15 HTTPS 尝试在 DNS 阶段失败，没有进入 TCP 或 TLS。v16 直接复用此前已完成、已发布的完整 27 单元 libresolv，通过只转换元数据的 adapter 接入全部进程，并预装 canonical 库和别名；没有重新实现 resolver 或重编 27 单元。相同原版 CoreCLR 随后完成 DNS 与 TCP，进入 TLS HandshakeStart，之后正常 managed timeout，HTTPS 尚未成功。自有 main/ThreadPool 隐式 null fixture 则已由原版 CoreCLR 捕获 NullReferenceException、保留 ReadField 栈，并正常退出 0。
+
+v17 源码准备支持从已物化镜像精确替换四个服务，保留其余公共库、搜索索引、账号、原 plist 和 resolver。兼容服务经过本地真实 ad-hoc 签名，独立验证全部代码页、特殊槽、entitlement 语义及签名前后非签名内容；八个输入架构 slice、240 个 section 的静态核验不代表新增 ARM 运行支持。这些副本明确不保留 Apple 原签名，也不声称 Apple 平台身份；原始失效签名的中间副本不会安装。同一公共 v17 的实际尝试中，trustd 已越过启动 sandbox 分支并读取 Admin/TrustSettings，FileHelper 也已启动；随后真实 SecTaskLoadEntitlements 错误 78 使请求被拒，securityd 则因 UnixError 22 中止。原版 codesign 达到限时，未出现 sign/verify 完成标记。同一 v17 的原版 CoreCLR HTTPS 再次完成 DNS/TCP、进入 TLS，随后 16.63 秒正常 managed timeout，无原生崩溃；日志仍指向 FileHelper 的 entitlement 元数据拒绝。下一项缺口是复用完整文件签名解析补齐通用 csops 元数据，而非伪造权限。此结果不能视为证书签名、HTTPS、Unity 授权或导出已通过。镜像、Apple 文件、entitlement payload、宿主 DNS 内容和私有日志均不包含在源码检查点中。
+
+
+后续通用 clone 路径会替换继承的 resolver 挂载块，避免每代重复累加相同 bind；实际函数的四代宿主控制和已有三重复块输入均收敛为一块，未修改已运行的 v17 image，也未新增原生检查。

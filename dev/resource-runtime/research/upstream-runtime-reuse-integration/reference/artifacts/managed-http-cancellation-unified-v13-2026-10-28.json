@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-28",
+  "scope": "Own public API fixture using original macOS CoreCLR 7.0.20 on Linux/Darling",
+  "configuration": "config/unified-runtime-v13.json",
+  "configuration_sha256": "81ad34478551d9ec89a73662270c20b195108ceb66130ba8ddeef0a86a61b990",
+  "same_library_configuration_for_all_processes": true,
+  "local_checks_verified": 15,
+  "phases": {
+    "tasks": {
+      "checks": 7,
+      "passed": true
+    },
+    "http": {
+      "checks": 4,
+      "passed": true
+    },
+    "cancel": {
+      "checks": 4,
+      "passed": true
+    },
+    "https": {
+      "passed": false,
+      "outer_status": 1,
+      "normal_managed_timeout_returned": true,
+      "native_crash_observed": false
+    }
+  },
+  "original_runtime_sha256": "c9f6d341d47e8fc366d4946bb619f6e9624da057ecb615c06b29f9b1b576d75d",
+  "fixture_source": "fixtures/hello/ManagedHttpCancellationSmoke.cs",
+  "fixture_source_sha256": "f2964c6136aca8978715186d786f4386cdec3cf081f40471d5b32e5ee8b17177",
+  "raw_logs_and_proprietary_assemblies_published": false,
+  "external_debugger": false,
+  "Unity_Editor_export_verified": false,
+  "original_codesign_verified": false
+}
