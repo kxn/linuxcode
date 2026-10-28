@@ -67,7 +67,7 @@
   },
   "boundaries": [
     "Version output does not establish Editor initialization, licensing, project export or App build.",
-    "Original UBT completed all four remaining actions and deployment plist preparation; final arm64 executable contains the actual CocoaPods local_add symbol. Original full Xcode App packaging, signing and device execution are separate checks.",
+    "Original UBT and complete original Xcode build passed. App/framework passed native strict codesign and independent CMS/pages/resources verification; actual Pod archive, module reference and final symbol are present. UE content cooking/staging, Apple provisioning and device execution remain unverified.",
     "Queue routing candidate passes five native tests but is not the default and still retains a separate upstream libc queue implementation.",
     "No original Apple/Epic payloads, credentials, signatures or raw private tool logs are included."
   ],
@@ -167,5 +167,28 @@
     "workspace_evidence": "runtime/unreal-dotnet-native-3rmcm_db/pod-linked-evidence.json",
     "sha256": "dcc4050363188b882868efa9b4f01bbd82e73dfa4e72928d445077a983fc4da1",
     "verified": true
+  },
+  "full_original_UE_Xcode": {
+    "workspace_evidence": "artifacts/unreal-stage110-original-xcode-signed-app-milestone-v1.json",
+    "sha256": "f1529c4819d094527a709dc8e783c6d8b3bb9b1fca1918513a1d0506db13ce8f",
+    "verified": true,
+    "outer_status": 0,
+    "native_xcode_status": 0,
+    "actual_codesign_actions": 4
+  },
+  "original_CLR7_mutex": {
+    "workspace_evidence": "runtime/unity-coreclr-mutex-68waptyq/temporary-result.json",
+    "sha256": "085a0095f1b5002f9690557f33b68b394cf2fda95b01d54fb2c9c398e9507807",
+    "outer_status": 0,
+    "native_status": [
+      "0"
+    ],
+    "mutex_semantics_verified": true,
+    "checks": [
+      "21"
+    ],
+    "client_business_code_executed": false,
+    "license_or_account_data_access_requested": false,
+    "macos_Editor_initialization_verified": false
   }
 }

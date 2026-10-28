@@ -15,3 +15,5 @@ macOS Unity 输入工具下载并检查同版本的官方 Intel Editor/iOS 模�
 行为修复优先发布到原有组件 fork，整合和开发工具留在 linuxcode 独立仓库。本目录的 payload 是工作区源码快照；使用前通过 `dev/research-sources.py inspect` 比较自己的版本，不能把全部文件直接覆盖到旧 checkout。构建器仍依赖显式锁定的 SDK、既有组件输入和运行配置，尚未实现完整环境冷装配。
 
 已有源码和测试无变化时不重复运行旧矩阵。共享 Darling 会话使用既有锁；宿主构建、源码审查和输入准备可以并行。
+
+后续审查修正了诊断用旧 profile 合并：`scope=all` 同时补入 caller 与 resource 覆盖路径，`resource-tools` 仅补 resource；六项 host 控制通过。完整 Xcode 使用新生成 profile，不受旧诊断合并缺口影响。原始 UBT/数学库证据保持原摘要；旧脚本由源码历史保留。完整 UE build、签名与独立校验已通过，见 reference 中新增的 signed-app 验证摘要。

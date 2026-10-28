@@ -2,6 +2,20 @@
 """Launch Epic's locally acquired original Intel macOS dotnet under Darling."""
 from pathlib import Path
 import argparse,hashlib,json,runpy,shlex,subprocess,tempfile
+
+def merge_profile_source_libraries(prefix, selections):
+ merged=list(prefix)
+ for selected in selections:
+  assert selected['scope'] in ('all','resource-tools')
+  keys=['DARLING_DYLD_OVERRIDE_LIBRARY_PATH']
+  if selected['scope']=='all':keys.insert(0,'DYLD_LIBRARY_PATH')
+  for key in keys:
+   positions=[i for i,value in enumerate(merged) if value.startswith(key+'=')]
+   assert len(positions)==1, 'Captured profile must have exactly one '+key
+   index=positions[0]
+   merged[index]=key+'='+selected['directory']+':'+merged[index].split('=',1)[1]
+ return merged
+
 r=Path(__file__).resolve().parent.parent
 folder=Path(tempfile.mkdtemp(prefix='unreal-dotnet-native-',dir=r/'runtime'))
 parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--stage',default='artifacts/private-procfs-auditsession85-stage.json');parser.add_argument('--configuration',default='config/direct-resource-tool-environment-v150.json');parser.add_argument('--arguments-file');parser.add_argument('--temporary-stage');parser.add_argument('--resolver-stage');parser.add_argument('--libresolv-build');parser.add_argument('--nuget-http-cache');parser.add_argument('--cli-home');parser.add_argument('--coretls-build');parser.add_argument('--cfhelpers-build');parser.add_argument('--trace-memory',action='store_true');parser.add_argument('--security-services-candidate');parser.add_argument('--trace-files',action='store_true');parser.add_argument('--cwd',default='.');parser.add_argument('--timeout-seconds',type=int,default=90)
@@ -20,10 +34,7 @@ if args.profile_report:
  assert prefix[:3]==['timeout','-k','5'] and prefix.count('/usr/bin/env')==1
  # Preserve the real caller's scopes while applying explicitly selected
  # complete source libraries from this candidate configuration.
- for selected in p['direct_resource_environment'].get('source_library_directories', []):
-  if selected['scope']=='all':
-   index=next(i for i,v in enumerate(prefix) if v.startswith('DYLD_LIBRARY_PATH='))
-   prefix[index]='DYLD_LIBRARY_PATH='+selected['directory']+':'+prefix[index].split('=',1)[1]
+ prefix=merge_profile_source_libraries(prefix,p['direct_resource_environment'].get('source_library_directories', []))
  p={**p,'command':prefix+['/bin/bash','unused']}
 if args.temporary_stage:p=runpy.run_path(str(r/'scripts/native-temporary-runtime-profile.py'))['select'](p,args.temporary_stage)
 guest=lambda n:'/Volumes/SystemRoot/workspace/'+str(n.relative_to(r))

@@ -1,0 +1,61 @@
+{
+  "review_complete": true,
+  "scope": "Whole-component libm builder, generic source_library_builds selector, captured-caller prefix merge and v155; source/read-only audit except root-authorized minimal prefix fix",
+  "findings": [
+    {
+      "priority": 2,
+      "file": "scripts/probe-unreal-dotnet-runtime.py",
+      "original_lines": [
+        23,
+        26
+      ],
+      "problem": "Captured profile merging prepended all-scope source libraries only to ordinary DYLD_LIBRARY_PATH. Captured DARLING_DYLD_OVERRIDE_LIBRARY_PATH retained v154, so matching resource tool execs could revert to old math; resource-tools source libraries were ignored.",
+      "status": "Fixed after archiving old source, with explicit root authorization",
+      "fix": "Single merge helper prepends all-scope directories to both normal and captured resource library paths; resource-tools directories affect only resource path. Missing required override key fails explicitly instead of silently ignoring the requested scope. Other prefix bytes remain unchanged.",
+      "host_regression": "runtime/dotnet-profile-source-scope-merge-98mxliwf/result.json",
+      "host_regression_sha256": "12175a74dace7aa010068b74d7c641d45b5050029bf2301a3e22b3f544412d27",
+      "native_rerun_required_for_this_prefix_only_fix": false,
+      "fresh_full_Xcode_profile_affected": false
+    }
+  ],
+  "checked_without_new_matrix": [
+    {
+      "item": "Full source list",
+      "result": "Builder parses the two actual CMake libm source sets and existing six Intel extra units: 120 primary +6 extra compilations. Four paths intentionally occur in both macro configurations, so126 compilation units represent122 distinct source paths; this matches CMake rather than duplicating provider libraries."
+    },
+    {
+      "item": "log2 family ownership",
+      "result": "Complete log.S replaces the legacy scaled-log main xmm_log.c; extra nonlegacy xmm_log.c remains. Existing log2f.S/log2.S provide float/long-double; aliases stay in original lists."
+    },
+    {
+      "item": "Alias handling",
+      "result": "235 alias pairs are passed as structured ld64.lld argv; $fenv_access_off names do not undergo shell expansion. Current build reports539 original exports preserved and542 output exports."
+    },
+    {
+      "item": "Runtime binary/evidence binding",
+      "result": "v155 build report SHA, probe report SHA and actual libsystem_m SHA all match. Successful native proof files explicitly bind the same candidate library SHA; selected directory currently contains only that dylib, not competing provider binaries."
+    },
+    {
+      "item": "Fresh scope selection",
+      "result": "The direct-resource selector validates complete source report/source hashes/header+file provenance/probe+binary binding, adds the candidate to resource tool paths, and adds it to normal caller paths only for scope=all. v154 has no selection and remains unaffected."
+    },
+    {
+      "item": "Captured UBT scope",
+      "result": "The authorized merge correction preserves the exact captured normal/resource path tails and every other command-prefix item; original argv,cwd,UBA_ROOT,Pod directory and dotnet environment inputs remain handled separately as before."
+    }
+  ],
+  "no_other_concrete_blocking_issue_found": true,
+  "library": "runtime/libm-upstream-log-source-v3/libsystem_m.dylib",
+  "library_sha256": "eb6f4770b8a0926abc0e918e48ce18f8d9fea3c1094c4d5a74f0551210e4a71a",
+  "configuration": "config/direct-resource-tool-environment-v155.json",
+  "configuration_sha256": "fedff9d820615b5ee83554557ed8f410e7dd08ce9c1846bb1efdc996e8254631",
+  "sources": {
+    "scripts/build-libm-source.py": "465186d27e5ebca117c722d834a4108c8750ddc3a2192c66b272c5e0800d9132",
+    "scripts/direct-resource-tool-runtime-profile.py": "740c4bf07dbfa36c3f3e52919220f6f4942f6904e8db39af247def161be3b944",
+    "scripts/probe-unreal-dotnet-runtime.py": "d964df4daa55f061fc0ca4bcfab9484e24dd98af83a43fc9f9cc5325cf8b57c5",
+    "config/direct-resource-tool-environment-v155.json": "fedff9d820615b5ee83554557ed8f410e7dd08ce9c1846bb1efdc996e8254631"
+  },
+  "native_started": false,
+  "new_framework_or_provider_created": false,
+  "committed": false
+}

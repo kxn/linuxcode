@@ -2,18 +2,21 @@
 
 在 Linux x86_64 上安装隔离的 Darling 和用户提供的原版 Xcode，并管理经过验证的兼容性候选。
 
-**已从全新 Unity 6000.3.27f1 工程完成 Linux 导出、原版 CocoaPods、空构建目录中的原版 xcodebuild 和原版 codesign 证书签名。** 单次 xcodebuild 调用的原生与外层退出码均为 0：48 项 Xcode 编译、282 项 IL2CPP 更新、5 项签名操作完成；真实 iPhoneOS/arm64 App 和内嵌 UnityFramework 通过原版严格验签及独立 CMS、代码页面和资源检查，实际 Pod 函数已链接。使用自生成 P12 测试证书，尚未验证 Apple 开发者 provisioning 与设备安装。详见[全新 Unity 证书完整链路](dev/resource-runtime/research/unity-fresh-linux-certificate-end-to-end/README.md)。
+当前已经验证两条游戏引擎构建链：
 
-Unity 授权可使用原生 Linux CLI：`linuxcode.py unity auth login`，无需在 Darling 中运行 Hub；详见[安装说明](docs/install.md)。原生 Linux Editor 在无图形界面下导出 424 个 C++ 文件。较早的 [ad-hoc 与恢复构建记录](dev/resource-runtime/research/unity-fresh-linux-end-to-end/README.md) 和[初次导出记录](dev/resource-runtime/research/unity-fresh-linux-export/README.md) 保留。
-新增 RSA P12 导入入口：`import-identity --p12 … --output runtime/my-signing/store.plist --password-env MY_P12_PASSWORD`。P12 导入后的测试身份已完成原版 Unity 构建和七个产物验证；三层链查找、原版 codesign 和独立 CMS 验证也已通过；详见[安装说明](docs/install.md)。
+| 流程 | 实测结果 |
+| --- | --- |
+| 原版 macOS UE 工具 → CocoaPods → 原版 Xcode → 原版 codesign | **stage110/v155 完整 build 成功**；真实 iPhoneOS arm64 App 和 MarketplaceKitWrapper 通过原版严格验签及独立 CMS、代码页、资源检查，实际 Pod 函数已链接。[证据](validation/unreal-stage110-original-xcode-signed-app-2026-10-28.json) |
+| Linux Unity 6000.3.27f1 导出 → CocoaPods → 原版 Xcode → 原版 codesign | stage101 全新项目、空 DerivedData 构建成功；另有 Release xcarchive 与 dSYM 验证。[全新构建](dev/resource-runtime/research/unity-fresh-linux-certificate-end-to-end/README.md)、[Release 归档](dev/resource-runtime/research/stage101-fresh-unity-release-archive/README.md) |
+| 原版 macOS Intel Unity Editor 在 Darling 中执行并导出 | 原版 `-version` 通过；batchmode、授权客户端与实际 iOS 导出继续推进。[计划与进展](dev/compatibility-plan.md) |
 
-新增：**完整 Unity/CocoaPods 工程已由原版 xcodebuild 调用原版 codesign 完成真实测试证书签名，构建退出码为 0。** App、内嵌 Framework 和静态库共七个产物通过原版严格验证及独立 CMS/页面/资源检查，包含双 CodeDirectory 与篡改拒绝测试。本次复用编译缓存；自签测试明确关闭 profile 要求，尚不代表开发者 provisioning 或设备安装可用。详见[完整 Unity 证书 CI](dev/resource-runtime/research/unity-certificate-ci/README.md)。
+UE 本次最终 Xcode 调用复用了前面完成的 C++ 对象；原始 UBT 已完成实际最终链接，Xcode 随后完成资源、App 和四项签名操作。App 和嵌入框架的 109,201 个代码页经过独立检查。尚未验证 UE 内容烘焙、完整游戏暂存目录或设备运行。两条成功链均使用自生成测试证书，尚未验证 Apple 开发者 provisioning 与设备信任。
 
-较早的 Unity 样例已通过**单次全新 DerivedData 构建**，并确认 Unity 临时缓存入口起初也不存在：58 项 Xcode 编译、完整 IL2CPP 和资源流程成功，374 个 arm64 Unity 归档对象独立核对。修复与证据见[加载器布局和文件事件检查点](dev/resource-runtime/research/loader-layout-and-fsevents/README.md)。
+本轮修复优先接回已有完整上游实现。例如，Darling 已含 Apple 完整 `log2` 汇编，本次修正构建选择，消除了原版 ld 的段对齐断言；没有修改 UE 的链接参数或另写数学特判。ARC 和 Mach-O API 复用 Apple 开源实现。源码、构建工具及精确证据集中保存在[整合源码检查点](dev/resource-runtime/research/upstream-runtime-reuse-integration/README.md)，行为修复同时进入原有组件 fork。
 
-原版 `xcodebuild archive` 已在当前 v12/stage101 组合上完成全新 Unity 导出项目的 [Release xcarchive 与完整 dSYM 验证](dev/resource-runtime/research/stage101-fresh-unity-release-archive/README.md)：原生和外层退出码为零，App 与 UnityFramework 均通过严格验签和独立 CMS 检查，两份真实 DWARF4 数据及 UUID 匹配通过原生 LLVM 完整校验，原有 Debug 产物保留。较早的 [v6 Release 归档](dev/resource-runtime/research/unity-release-xcarchive/README.md) 与 [Debug 归档](dev/resource-runtime/research/unity-original-xcarchive/README.md) 记录仍保留，export 继续单独推进。
+Linux Unity 授权可使用原生 Linux CLI：`linuxcode.py unity auth login`，无需在 Darling 中运行 Hub；RSA P12 导入可使用 `import-identity --p12 … --output runtime/my-signing/store.plist --password-env MY_P12_PASSWORD`。详见[安装说明](docs/install.md)。macOS Editor 的授权与导出是独立验证项，不能由 Linux Editor 的成功替代。
 
-成功候选来自已有研究工作区，使用单独的 CoreServices 诊断策略。较早 AFNetworking 样例保留两行已记录的 SDK 兼容修改；本次全新 Unity/本地 Pod 样例沿用生成的 Xcode 工程及 CocoaPods 工作流。尚未验证开发者证书、描述文件、真机安装、UE 或任意工程，也尚未实现从干净 Linux/XIP 自动重建这套完整候选。基础安装器和较早的默认候选保留；使用成功的 Unity 候选需要显式选择下述里程碑。
+这些成功结果来自已有研究工作区，使用显式候选及单独的 CoreServices 诊断策略。尚未实现从干净 Linux/XIP 自动重建完整候选，也不能据此保证任意工程可用。基础安装器与较早默认候选保留；使用成功候选需要对应组件、输入和运行配置。
 
 此前各阶段的源码、失败记录和验证见[开发研究索引](dev/resource-runtime/README.md)。历史附件描述的是当时的状态。
 
@@ -70,7 +73,7 @@ python3 linuxcode.py package --output dist/linuxcode-0.1.0-source.tar.gz
 
 默认包保留安装器、开发源码和文档，省略体积较大的历史诊断附件；需要完整历史时添加 `package --include-research-history`。公开包只含安装器、开发源码、文档和依赖锁定；不含 Xcode、SDK、Apple 框架、运行前缀、XIP、证书或私钥。离线安装、精确锁定、依赖说明见 [安装文档](docs/install.md)；系统参考输入与冷重建限制见 [运行时输入](docs/runtime-inputs.md)。
 
-以下说明保留固定安装基线与历史检查点的当时状态；最新 Unity 候选见本文开头。
+以下说明保留固定安装基线与历史检查点的当时状态；最新引擎结果见本文开头。
 
 研究代码锁定到 [运行时快照 runtime-2026.10.19](https://github.com/kxn/linuxcode/tree/375e52ea83e0f1a8dba3b16a0600d01292a9fe61)，其 `checkpoint/source-manifest.json` 记录了 17 个源码仓库的精确修订和补丁，`checkpoint/evidence/` 保存首次成功 iOS 编译日志与产物检查。后续里程碑应更新锁文件和证据，不追踪随时变化的分支。
 

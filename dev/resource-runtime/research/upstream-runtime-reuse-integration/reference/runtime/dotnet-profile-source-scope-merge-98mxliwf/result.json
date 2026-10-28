@@ -1,0 +1,64 @@
+{
+  "verified": true,
+  "scope": "Host-only execution of the production helper extracted by AST; no profile/native execution, no mocked replacement implementation",
+  "cases": [
+    {
+      "name": "none",
+      "passed": true,
+      "normal_prefix": [],
+      "resource_prefix": [],
+      "all_other_prefix_bytes_preserved": true,
+      "input_unmodified": true
+    },
+    {
+      "name": "all",
+      "passed": true,
+      "normal_prefix": [
+        "/new/all"
+      ],
+      "resource_prefix": [
+        "/new/all"
+      ],
+      "all_other_prefix_bytes_preserved": true,
+      "input_unmodified": true
+    },
+    {
+      "name": "resource-tools",
+      "passed": true,
+      "normal_prefix": [],
+      "resource_prefix": [
+        "/new/resource"
+      ],
+      "all_other_prefix_bytes_preserved": true,
+      "input_unmodified": true
+    },
+    {
+      "name": "mixed",
+      "passed": true,
+      "normal_prefix": [
+        "/new/all"
+      ],
+      "resource_prefix": [
+        "/new/resource",
+        "/new/all"
+      ],
+      "all_other_prefix_bytes_preserved": true,
+      "input_unmodified": true
+    },
+    {
+      "name": "actual-v155-libm-on-v13-prefix",
+      "passed": true,
+      "directory": "/Volumes/SystemRoot/workspace/runtime/libm-upstream-log-source-v3",
+      "normal_and_resource_selected": true
+    },
+    {
+      "name": "missing-resource-prefix-rejected",
+      "passed": true
+    }
+  ],
+  "source": "scripts/probe-unreal-dotnet-runtime.py",
+  "source_sha256": "d964df4daa55f061fc0ca4bcfab9484e24dd98af83a43fc9f9cc5325cf8b57c5",
+  "actual_profile_report": "artifacts/xcode-service-runtime-tool-dispatch-diagnostic-build-2235ed6fa705.json",
+  "actual_profile_report_sha256": "a4ed55091b8d12de6970bbb7754d4ec476dca0f444a77f5006b446871ddbd832",
+  "native_started": false
+}

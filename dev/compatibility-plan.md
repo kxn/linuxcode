@@ -7,11 +7,11 @@
 | 流程 | 已确认 | 尚未完成 |
 | --- | --- | --- |
 | Unity Linux Editor → iOS 工程 → CocoaPods → 原版 Xcode | stage101 的全新 Debug App、Release xcarchive 通过；stage108 隔离增量构建、实际签名及独立 CMS/内容检查也通过 | 这次回归复用 IL2CPP 缓存；没有 Apple 设备信任或 App Store 交付结论 |
-| 原版 macOS UE 工具 → iOS workspace → CocoaPods → 原版 Xcode | UBT、UHT、实际 Pod 静态库和全部游戏 C++ 编译已执行；stage108 v10 已进入最终链接 | 最终链接、完整 App、签名 |
+| 原版 macOS UE 工具 → iOS workspace → CocoaPods → 原版 Xcode | stage110/v155 原始 UBT 和完整 Xcode build 成功；App、真实 Pod 调用、原版签名与独立检查通过 | UE 内容烘焙、游戏暂存和设备运行未验证 |
 | 原版 macOS Unity Editor → iOS 工程 | 已安装同版本原始输入；Intel 6000.3.27f1 在 Darling 中原生 `-version` 通过 | 真实 batchmode 初始化、原版授权客户端及实际导出 |
 | 独立安装及开发者工程 | 公共源码可在新目录重建 darlingserver；有 XIP/Recovery 输入处理及源码包 | 从干净 Linux 输入装配完整已验证运行环境，仍未自动化完成 |
 
-UE 当前已使用 stage110 越过原版 MSBuild/UBT 的两处信号交接死锁，进入 UBA → Clang → ld 的真实最终链接。新的 ld 段对齐断言可用四行独立 C 源同时在直接链接与原版 UBA 链接中复现：当前 legacy libm 将 `log2(16384)` 算成略小于 14，ld 截断后得到 13。Darling 源码已经包含完整 Apple `log.S`，但 CMake 禁用了它并选择了近似实现；已修正完整数学库的源码选择，没有修改 UE 参数或另写数学特判。2098 个可表示二次幂的对照中，旧实现 364 个不精确，已有原 Apple 库全部正确。完整 126 单元 libm 候选保留所有旧导出；修复后的数值检查和原版 direct/UBA 最小链接通过。原始 UBT 四个后续构建动作已全部成功，最终 arm64 可执行文件包含真实 CocoaPods `_local_add` 符号。完整原 Xcode App 打包和签名正在执行；尚未验证设备运行。
+UE 当前已使用 stage110 越过原版 MSBuild/UBT 的两处信号交接死锁，进入 UBA → Clang → ld 的真实最终链接。新的 ld 段对齐断言可用四行独立 C 源同时在直接链接与原版 UBA 链接中复现：当前 legacy libm 将 `log2(16384)` 算成略小于 14，ld 截断后得到 13。Darling 源码已经包含完整 Apple `log.S`，但 CMake 禁用了它并选择了近似实现；已修正完整数学库的源码选择，没有修改 UE 参数或另写数学特判。2098 个可表示二次幂的对照中，旧实现 364 个不精确，已有原 Apple 库全部正确。完整 126 单元 libm 候选保留所有旧导出；修复后的数值检查和原版 direct/UBA 最小链接通过。原始 UBT 四个后续构建动作已全部成功，最终 arm64 可执行文件包含真实 CocoaPods `_local_add` 符号。完整原 Xcode App 打包和四项签名随后成功，App 与嵌入框架通过原版严格验证和独立 CMS/109,201 代码页/资源检查。[完整证据](../validation/unreal-stage110-original-xcode-signed-app-2026-10-28.json)。尚未验证 UE 内容烘焙、游戏暂存和设备运行。
 
 macOS Unity 复用了既有资源工具的完整框架闭包，补入原始 GameController 及其依赖；加载器恢复既有大小写查询，解决包内 `libPcre2` 与加载名称大小写不同的问题。ARC claim 直接移植 Apple objc4-951.1 的 Intel 所有权语义，21 项真实运行检查通过；`macho_source_version` 复用 Apple dyld-1378 及既有组件，20 项真实 Mach-O 检查通过。原版 Editor `-version` 返回正确版本且退出 0；这不代表初始化、授权或导出已通过。源码 fork 和精确证据摘要见[本轮进展](../validation/runtime-source-reuse-progress-2026-10-28.json)。
 
@@ -52,8 +52,8 @@ macOS Unity 复用了既有资源工具的完整框架闭包，补入原始 Game
 
 ## 执行顺序
 
-1. **UE 链接。** 修正 libm 构建配置以选用源码中已有的完整 Apple log2 算法，验证整库导出、特殊值和原版直接/UBA 最小链接，再执行复用现有对象的真实 UBT 链接。通过后回到原 workspace 的完整 Xcode 构建与签名。
-2. **UE App 与签名。** 原版 xcodebuild 完成 App，验证 iPhoneOS arm64、真实 Pod 调用已进入最终可执行文件，再由原版 codesign 签名 App 与嵌入框架并独立检查。测试证书与 Apple 开发者签名范围明确区分。
+1. **UE 链接（已通过）。** 修正 libm 构建配置以选用源码中已有的完整 Apple log2 算法，验证整库导出、特殊值和原版直接/UBA 最小链接，再执行复用现有对象的真实 UBT 链接。通过后回到原 workspace 的完整 Xcode 构建与签名。
+2. **UE App 与签名（已通过）。** 原版 xcodebuild 完成 App，验证 iPhoneOS arm64、真实 Pod 调用已进入最终可执行文件，再由原版 codesign 签名 App 与嵌入框架并独立检查。测试证书与 Apple 开发者签名范围明确区分。
 3. **底层修复跨引擎验证。** 影响进程、线程、VM 或加载器的修改，通过隔离的 Unity 工程/DerivedData 副本验证；不得覆盖 stage101 已验证产物。只影响某个工具配置的修改不触发全矩阵重跑。
 4. **macOS Unity 原版导出。** 并行准备 Intel Editor 和同版本 iOS 模块；按可执行文件加载、版本查询、batchmode/nographics 空项目、原版授权客户端、iOS 导出逐级验证。以实际导出的 Xcode 工程接回 CocoaPods/原版 xcodebuild，最终形成全程 Linux、执行 macOS 原版 Editor 的端到端记录。无显示不等于没有 AppKit/图形库依赖，按真实调用审查。
 5. **收敛与交付。** 每个通过的行为修复连同源码归属进入 fork；独立 linuxcode 工程记录同一候选的构建与装配依赖。用新工作区验证完整安装和开发者重建后才称为可复现整包。源码构建成功、单个符号补齐或检查脚本通过都不是完整流程里程碑。

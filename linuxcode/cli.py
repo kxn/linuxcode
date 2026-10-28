@@ -521,6 +521,8 @@ def package(output, include_research_history=True):
                'validation/public-server-stage108-source-build-2026-10-28.json',
                'validation/unity-stage108-incremental-regression-2026-10-28.json',
                'validation/compatibility-provider-review-2026-10-28.json',
+               'validation/runtime-source-reuse-progress-2026-10-28.json',
+               'validation/unreal-stage110-original-xcode-signed-app-2026-10-28.json',
                'validation/recovery-icu-explicit-import-2026-10-28.json',
                'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'tests/test_identity_import.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/research-sources.py', 'dev/research-sources.md', 'dev/compatibility-plan.md',
