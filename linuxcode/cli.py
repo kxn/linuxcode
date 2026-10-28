@@ -524,6 +524,19 @@ def package(output, include_research_history=True):
                'validation/runtime-source-reuse-progress-2026-10-28.json',
                'validation/unreal-stage110-original-xcode-signed-app-2026-10-28.json',
                'validation/recovery-icu-explicit-import-2026-10-28.json',
+               'validation/unified-runtime-bootstrap-2026-10-28.json',
+               'validation/unified-runtime-source-checkpoint-2026-10-28.json',
+               'validation/shared-network-runtime-source-checkpoint-2026-10-28.json',
+               'validation/shared-runtime-directory-mode-2026-10-28.json',
+               'validation/thread-debug-common-runtime-2026-10-28.json',
+               'validation/common-runtime-network-services-2026-10-28.json',
+               'validation/shared-metadata-iopm-2026-10-28.json',
+               'validation/shared-directory-membership-2026-10-28.json',
+               'validation/shared-security-resource-cohort-2026-10-28.json',
+               'validation/original-codesign-shared-runtime-v24-2026-10-28.json',
+               'validation/public-server-stage109-source-build-2026-10-28.json',
+               'validation/public-server-stage113-source-build-2026-10-28.json',
+               'validation/public-server-stage116-source-build-2026-10-28.json',
                'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'tests/test_identity_import.py', 'dev/linuxcode-dev', 'dev/README.md',
                'dev/debian-packages.txt', 'dev/research-sources.py', 'dev/research-sources.md', 'dev/compatibility-plan.md',
                'dev/build-public-server.py', 'dev/public-server-build.md', 'dev/locks/public-server.lock.json',
@@ -551,7 +564,7 @@ def package(output, include_research_history=True):
             continue
         name = Path(relative)
         if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
-                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb', '.sh', '.podspec', '.S', '.s', '.inc', '.proj')
+                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb', '.sh', '.podspec', '.S', '.s', '.inc', '.proj', '.plist')
                     and name.name not in ('CMakeLists.txt', 'pthread.aliases', 'syscalls.master', 'Podfile.template')
                     and not name.name.endswith(('.h.in', '.exp-in')))):
             fail('Invalid research source path: ' + relative)

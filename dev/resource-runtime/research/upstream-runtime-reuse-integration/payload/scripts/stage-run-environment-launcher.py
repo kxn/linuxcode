@@ -205,7 +205,16 @@ if a.clone_image_stage:
             assert actual==row['files'],name
             for tree in [system,prefix]:
                 destination=tree/name
-                assert destination.parent.resolve().is_relative_to(tree.resolve()) and destination.parent.is_dir()
+                assert destination.parent.resolve().is_relative_to(tree.resolve())
+                current=tree
+                for part in destination.parent.relative_to(tree).parts:
+                    current=current/part
+                    assert current.resolve().is_relative_to(tree.resolve())
+                    if current.exists():assert current.is_dir()
+                    else:
+                        lower=system/current.relative_to(tree)
+                        mode=(lower.stat().st_mode & 0o7777) if lower.is_dir() else 0o755
+                        current.mkdir(mode=mode);current.chmod(mode)
                 if destination.is_symlink() or destination.is_file():destination.unlink()
                 elif destination.is_dir():shutil.rmtree(destination)
                 if source.is_dir():shutil.copytree(source,destination,symlinks=True,copy_function=shutil.copy2)

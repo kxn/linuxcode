@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "milestone": "same-version complete Security and Certificates resources in one shared runtime",
+  "pure_linux": true,
+  "runtime_mode": "unified",
+  "per_executable_library_selection": false,
+  "configuration": "config/unified-runtime-v23.json",
+  "configuration_sha256": "504c056a173c637f473fd18ada8f5b429ad808b70d276d20f4c975fdd189e686",
+  "run_launcher_stage": "runtime/run-environment-launcher-auy_o6zg/stage.json",
+  "run_launcher_stage_sha256": "a83579150215fa8e67154b3fa8a56e558183fdfde38421fef0d5ffdc2871d77a",
+  "core_stage": "artifacts/private-procfs-auditsession117-stage.json",
+  "resource_origin_OS_build": "25G83",
+  "Security_version": "61901.160.44",
+  "Security_resources_files": 42,
+  "Security_binary_unchanged": true,
+  "Certificates_bundle_files": 305,
+  "Certificates_original_distinct_anchor_certificates": 290,
+  "added_or_modified_trust_anchors": false,
+  "installed_before_first_MachO_in_root_and_prefix": true,
+  "shared_framework_index_selects_entire_resource_bundle": true,
+  "resource_sources": [
+    "runtime/security-framework-resource-cohort-v1/build.json",
+    "runtime/certificates-bundle-25g83-tool-v1/build.json"
+  ],
+  "native_original_codesign": {
+    "result": "runtime/original-codesign-certificate-uura113r/result.json",
+    "sha256": "47677e4957a914b764c05f92cfa778722ef0c7a56b245cba6fa85e83b5929dfe",
+    "outer_status": 1,
+    "sign_status": [
+      "1"
+    ],
+    "verify_status": [],
+    "signing_completed": false,
+    "securityd_startup_markers": [
+      "CSSM ready with CSP",
+      "Entering service",
+      "start thread"
+    ],
+    "previous_startup_aborts_observed": false,
+    "self_signed_certificate_trust_rejection": true,
+    "CLI_explicitly_marks_trust_rejection_nonfatal": true,
+    "remaining_error": "errSecParam; exact API failure under investigation"
+  },
+  "native_original_CoreCLR_HTTPS": {
+    "result": "runtime/managed-http-probe-a05_qzcr/result.json",
+    "sha256": "346450ed789f2d324677c9690202faa04889af809c02be0343bb9e3028c6d06b",
+    "outer_status": 1,
+    "verified": false,
+    "elapsed_seconds": 17.005917157046497,
+    "DNS_and_TCP_completed": true,
+    "request_timeout_seconds": 8,
+    "exception_types": [
+      [
+        "System.Threading.Tasks.TaskCanceledException",
+        "-2146233029"
+      ],
+      [
+        "System.TimeoutException",
+        "-2146233083"
+      ],
+      [
+        "System.Threading.Tasks.TaskCanceledException",
+        "-2146233029"
+      ]
+    ],
+    "native_crash_observed": false
+  },
+  "Apple_binaries_or_resources_publishable": false,
+  "raw_logs_publishable": false,
+  "full_unified_Xcode_build_verified": false,
+  "native_Unity_export_verified": false
+}

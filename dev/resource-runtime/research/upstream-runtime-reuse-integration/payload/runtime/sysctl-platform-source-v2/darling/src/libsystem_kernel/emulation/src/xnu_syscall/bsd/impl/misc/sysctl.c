@@ -1,0 +1,158 @@
+#include <darling/emulation/xnu_syscall/bsd/impl/misc/sysctl.h>
+
+#include <sys/errno.h>
+#include <stddef.h>
+#include <limits.h>
+
+#include <darling/emulation/common/base.h>
+#include <darling/emulation/conversion/errno.h>
+#include <darling/emulation/common/simple.h>
+#include <darling/emulation/conversion/misc/sysctl_inc.h>
+#include <darling/emulation/xnu_syscall/bsd/helper/misc/sysctl_hw.h>
+#include <darling/emulation/xnu_syscall/bsd/helper/misc/sysctl_unspec.h>
+#include <darling/emulation/xnu_syscall/bsd/helper/misc/sysctl_kern.h>
+#include <darling/emulation/xnu_syscall/bsd/helper/misc/sysctl_machdep.h>
+#include <darling/emulation/xnu_syscall/bsd/helper/misc/sysctl_sysctl.h>
+#include <darling/emulation/xnu_syscall/bsd/helper/misc/sysctl_net.h>
+#include <darling/emulation/xnu_syscall/bsd/helper/misc/sysctl_vm.h>
+
+extern void* memcpy(void* destination, const void* source, __SIZE_TYPE__ count);
+extern char *strchr(const char *s, int c);
+extern int strncmp(const char *s1, const char *s2, __SIZE_TYPE__ n);
+extern int strcmp(const char *s1, const char *s2);
+extern int strlcpy(char* dst, const char* src, __SIZE_TYPE__ n);
+extern __SIZE_TYPE__ strlen(const char* src);
+extern char* strtok_r(char* str, const char* delim, char** saveptr);
+
+#define _CTL_SYSCTL	100
+
+const struct known_sysctl sysctls_global[] = {
+	{ .oid = CTL_UNSPEC, .type = CTLTYPE_NODE, .exttype = "", .name = "unspec", .subctls = sysctls_unspec },
+	{ .oid = CTL_HW, .type = CTLTYPE_NODE, .exttype = "", .name = "hw", .subctls = sysctls_hw },
+	{ .oid = CTL_KERN, .type = CTLTYPE_NODE, .exttype = "", .name = "kern", .subctls = sysctls_kern },
+	{ .oid = CTL_MACHDEP, .type = CTLTYPE_NODE, .exttype = "", .name = "machdep", .subctls = sysctls_machdep },
+	{ .oid = _CTL_SYSCTL, .type = CTLTYPE_NODE, .exttype = "", .name = "sysctl", .subctls = sysctls_sysctl },
+	{ .oid = CTL_NET, .type = CTLTYPE_NODE, .exttype = "", .name = "net", .subctls = sysctls_net },
+	{ .oid = CTL_VM, .type = CTLTYPE_NODE, .exttype = "", .name = "vm", .subctls = sysctls_vm },
+	{ .oid = -1 }, /* terminating entry */
+};
+
+const struct known_sysctl sysctls_root = {
+	.oid = 0, .type = CTLTYPE_NODE, .exttype = "", .name = "", .subctls = sysctls_global
+};
+
+long copyout_string(const char* str, char* out, unsigned long* out_len)
+{
+	/* XNU sysctl_io_string includes the terminating NUL. sysctl_old_user
+	 * rejects an undersized output before copying any bytes. */
+	unsigned long len = strlen(str) + 1;
+	if (out_len == NULL)
+		return out == NULL ? 0 : -EFAULT;
+	if (out != NULL && *out_len < len) {
+		*out_len = 0;
+		return -ENOMEM;
+	}
+	if (out != NULL)
+		memcpy(out, str, len);
+	*out_len = len;
+	return 0;
+}
+
+long copyout_readonly_string(const char* str, char* out, unsigned long* out_len, const void* new_value, unsigned long new_len)
+{
+	/* sysctl_create_user_req drops newptr when newlen is zero. Read-only
+	 * OIDs are rejected by sysctl_root before their handler or copyout. */
+	if (new_value != NULL && new_len != 0)
+		return -EPERM;
+	return copyout_string(str, out, out_len);
+}
+
+long sys_sysctl(int* name, unsigned int nlen, void* old,
+		unsigned long* oldlen, void* _new, unsigned long newlen)
+{
+	int i;
+	const struct known_sysctl* current = &sysctls_root;
+
+	// __simple_printf("sysctl %d,%d\n", name[0], name[1]);
+
+	for (i = 0; i < nlen; i++)
+	{
+		int j;
+		const struct known_sysctl* next = NULL;
+
+		for (j = 0; current->subctls[j].oid != -1; j++)
+		{
+			if (current->subctls[j].oid == name[i])
+			{
+				next = &current->subctls[j];
+				break;
+			}
+		}
+
+		if (!next)
+		{
+			// __simple_printf("%d not found in %s\n", name[i], current->name);
+			return -ENOENT;
+		}
+
+		current = next;
+		if (next->type != CTLTYPE_NODE)
+			break;
+	}
+
+	if (current->type == CTLTYPE_NODE)
+	{
+		// __simple_printf("-->ISDIR: %s\n", current->name);
+		return -EISDIR;
+	}
+
+	long rv = current->handler(name, nlen, old, oldlen, _new, newlen);
+	// __simple_printf("sysctl rv %d\n", rv);
+	return rv;
+}
+
+
+long sys_sysctlbyname(const char* name, unsigned long namelen, void* old, unsigned long* oldlen, void* _new, unsigned long newlen)
+{
+	const struct known_sysctl* current = &sysctls_root;
+	char* saveptr;
+	const char* token;
+	char name_copy[128];
+	// __simple_printf("sysctlbyname: %s\n", name);
+
+	// Used by launchd, assumed to succeed
+	if (strcmp(name, "vfs.generic.noremotehang") == 0)
+		return 0;
+	
+	strlcpy(name_copy, name, sizeof(name_copy));
+	token = strtok_r(name_copy, ".", &saveptr);
+
+	while (token != NULL)
+	{
+		const struct known_sysctl* next = NULL;
+		int i;
+
+		if (current->type != CTLTYPE_NODE)
+			return -ENOTDIR;
+
+		for (i = 0; current->subctls[i].oid != -1; i++)
+		{
+			if (strcmp(current->subctls[i].name, token) == 0)
+			{
+				next = &current->subctls[i];
+				break;
+			}
+		}
+
+		if (next == NULL)
+			return -ENOENT;
+
+		current = next;
+		token = strtok_r(NULL, ".", &saveptr);
+	}
+
+	if (current->type == CTLTYPE_NODE)
+		return -EISDIR;
+
+	return current->handler(NULL, 0, old, oldlen, _new, newlen);
+}

@@ -2,7 +2,9 @@
 
 在 Linux x86_64 上安装隔离的 Darling 和用户提供的原版 Xcode，并管理经过验证的兼容性候选。
 
-当前已经验证两条游戏引擎构建链：
+最新的共享环境里程碑是 **v24 原版 codesign 证书签名与严格验签均为 0**：所有 Mach-O 从启动起共用同一库配置，使用完整同版 Security/Certificates bundle，为自有小 Mac Contents App 签名；独立 CMS、CodeDirectory 绑定和 hash-agility 验证通过。样例只有 6 个代码页、3 个特殊槽，没有普通 sealed resource 文件；使用自生成测试证书，未验证 Apple provisioning 或设备信任。[本次证据](validation/original-codesign-shared-runtime-v24-2026-10-28.json)。当前共享环境的完整 Unity/UE 构建、macOS Unity 导出及 HTTPS 仍需后续验证。
+
+以下两条游戏引擎成功链保留各自当时的显式候选，不能代替 v24 共享环境验收：
 
 | 流程 | 实测结果 |
 | --- | --- |
@@ -28,6 +30,8 @@ python3 linuxcode.py setup --xip /path/to/Xcode_26.6_Universal.xip
 ```
 
 `setup` 安装基础 Linux/Darling 环境并从 XIP 导入 Xcode。它需要主机具备文档中的依赖，基础 rootfs 安装通过 sudo 完成，Darling 日常执行使用用户命名空间；不安装内核模块。**基础安装完成不等于已经组装出成功构建的兼容性候选。** 当前不会把缺失组件当作安装成功，也不会把原版工具错误改成成功。
+
+以下 adopt 示例保留较早的安装基线与显式引擎候选，不会自动组装 v24 共享环境；v24 的来源和当前范围见[整合源码检查点](dev/resource-runtime/research/upstream-runtime-reuse-integration/README.md)。
 
 已有成功实验工作区时，可以直接接入经过验证的候选，而不用旧的基础入口：
 

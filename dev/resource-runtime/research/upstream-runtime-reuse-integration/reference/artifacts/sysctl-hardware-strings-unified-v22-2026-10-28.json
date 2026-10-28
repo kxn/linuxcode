@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "milestone": "shared sysctl hardware string contract",
+  "pure_linux": true,
+  "original_x86_64_darwin_binary_execution": true,
+  "all_processes_use_common_libraries": true,
+  "per_executable_library_selection": false,
+  "native_probe": {
+    "result": "runtime/sysctl-hardware-strings-v22-r2/result.json",
+    "sha256": "e6a0c7e5122e685376f5d0741f8a6ffdf114edf8f0c7ca4f696bbc4dfb0137c9",
+    "outer_status": 0,
+    "elapsed_seconds": 3.824965788051486,
+    "assertions": [
+      "machine is exact x86_64 plus NUL",
+      "model string nonempty and complete",
+      "numeric and byname values byte-identical",
+      "nametomib roundtrips",
+      "short read ENOMEM/returned length zero/buffer unchanged",
+      "readonly write EPERM/old bytes and length unchanged",
+      "newlen zero ignores nonnull new pointer"
+    ]
+  },
+  "source_host_contract_checks": 1533,
+  "source_host_sanitizers": [
+    "ASan",
+    "UBSan"
+  ],
+  "source_commit": "f9604624fa0ead3be6da8b1d9c674ee35701bfee",
+  "umbrella_commit": "f24109eae58c59b31e8e798c1da962d188f1dbd3",
+  "kernel_translation_units_rebuilt": 5,
+  "kernel_objects_reused": 902,
+  "kernel_total_objects": 907,
+  "configuration": "config/unified-runtime-v22.json",
+  "configuration_sha256": "96d7811352a46d2933ddb876eab90a9ccb2eb057725e5f9d508da56e01597730",
+  "original_codesign_followup": {
+    "result": "runtime/original-codesign-certificate-rzbdqway/result.json",
+    "sha256": "12215fa38b15cf863e8776f24fa8224801e6cf9f3d156cdd4db52609b003ec99",
+    "outer_status": -9,
+    "signing_completed": false,
+    "previous_SFAnalytics_null_string_exception_observed": false,
+    "confirmed_remaining_errors": [
+      "securityd static MDS database missing: CSSMERR_DL_DATASTORE_DOESNOT_EXIST after readonly open ENOENT",
+      "trustd original anchor resource absent: Anchors.plist wrong type followed by abort"
+    ],
+    "timeout_seconds": 45
+  },
+  "host_model_value_printed": false,
+  "serial_or_uuid_requested": false,
+  "raw_logs_publishable": false,
+  "full_unified_Xcode_build_verified": false,
+  "native_Unity_export_verified": false
+}

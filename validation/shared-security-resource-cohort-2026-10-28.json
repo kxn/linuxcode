@@ -1,0 +1,167 @@
+{
+  "schema": "linuxcode-public-validation-v1",
+  "date": "2026-10-28",
+  "scope": "Whole same-version Security and Certificates resource deployment in one shared runtime",
+  "configuration": "config/unified-runtime-v23.json",
+  "configuration_sha256": "504c056a173c637f473fd18ada8f5b429ad808b70d276d20f4c975fdd189e686",
+  "core_stage": "artifacts/private-procfs-auditsession117-stage.json",
+  "core_stage_sha256": "8016c1a6434f4804cac9127286422ec7309832e109b925f90745f8852934cba1",
+  "source_OS_build": "25G83",
+  "Security": {
+    "resource_files": 42,
+    "resource_bytes": 520277,
+    "bundle_version": "61901.160.44",
+    "common_binary_sha256": "37dd934a9e28afa849ed4d85776bef47b29ba86062013b5db39301adfa62ad53",
+    "binary_unchanged_from_prior_common_owner": true,
+    "source_bundle_unchanged": true,
+    "index_target": "runtime/security-framework-resource-cohort-v1/frameworks/Security.framework",
+    "canonical_root_and_prefix_same_bundle": true,
+    "static_MDS_database_headers_checked": true
+  },
+  "Certificates": {
+    "resource_files": 305,
+    "resource_bytes": 768704,
+    "bundle_version": "2026062400",
+    "source_Anchors_keys": 286,
+    "source_Anchors_records": 314,
+    "certificate_files_hashes_verified": 290,
+    "original_manifest_members_verified": 4,
+    "source_bundle_unchanged": true,
+    "canonical_root_and_prefix_same_bundle": true,
+    "bundle_original_Apple_signature_verified": false,
+    "zero_length_original_signature_entries_preserved": true,
+    "trust_contents_manufactured_or_modified": false
+  },
+  "runtime": {
+    "shared_from_first_Mach_O": true,
+    "per_executable_environment": false,
+    "core_runtime_unchanged_from_v22": true,
+    "daemon_binary_or_store_library_modified": false,
+    "active_previous_bundles_or_indexes_modified": false
+  },
+  "native_HTTPS": {
+    "outer_status": 1,
+    "elapsed_seconds": 17.006,
+    "DNS_and_TCP_completed": true,
+    "trace_events": [
+      [
+        "System.Net.Http",
+        "RequestStart"
+      ],
+      [
+        "System.Net.NameResolution",
+        "ResolutionStart"
+      ],
+      [
+        "System.Net.NameResolution",
+        "ResolutionStop"
+      ],
+      [
+        "System.Net.Sockets",
+        "ConnectStart"
+      ],
+      [
+        "System.Net.Sockets",
+        "ConnectStop"
+      ],
+      [
+        "System.Net.Security",
+        "HandshakeStart"
+      ],
+      [
+        "System.Net.Http",
+        "RequestLeftQueue"
+      ],
+      [
+        "System.Net.Http",
+        "RequestFailed"
+      ],
+      [
+        "System.Net.Http",
+        "RequestStop"
+      ]
+    ],
+    "request_completed": false,
+    "normal_managed_timeout": true,
+    "native_fault_observed": false
+  },
+  "prior_v22_resource_failures": {
+    "Security_static_MDS_open_ENOENT": true,
+    "CSSM_error": "CSSMERR_DL_DATASTORE_DOESNOT_EXIST",
+    "Anchors_missing_OTAPKI_creation_NULL_confirmed": true,
+    "helper_direct_abort_instruction_proven": false,
+    "subsequent_SIGABRT_observed": true
+  },
+  "sysctl_public_validation": "artifacts/sysctl-hardware-strings-unified-v22-2026-10-28.json",
+  "private_native_evidence": [
+    {
+      "path": "runtime/original-codesign-certificate-uura113r/result.json",
+      "sha256": "47677e4957a914b764c05f92cfa778722ef0c7a56b245cba6fa85e83b5929dfe",
+      "included": false
+    },
+    {
+      "path": "runtime/managed-http-probe-a05_qzcr/result.json",
+      "sha256": "346450ed789f2d324677c9690202faa04889af809c02be0343bb9e3028c6d06b",
+      "included": false
+    }
+  ],
+  "public_scope": "Own preparation/verifier/source files and selected validation only; no Apple resource/binary payload, credentials, raw service logs or cores.",
+  "full_Xcode_build_or_Unity_export_completed": false,
+  "v24_complete_framework_candidate": {
+    "configuration": "config/unified-runtime-v24.json",
+    "configuration_sha256": "83a7f0518207c7a80e3c80073d6b5234aac0114036423e5a5361c6dcde61b9f4",
+    "core_stage_unchanged": true,
+    "host_verified": true,
+    "native_validation_pending_at_publication": false,
+    "framework": "runtime/security-framework-whole-cohort-v2/frameworks/Security.framework",
+    "files": 521,
+    "runtime_MachO_images": 12,
+    "all_original_runtime_directories_and_aliases_preserved": true,
+    "principal_binary_unchanged": true,
+    "principal_binary_sha256": "37dd934a9e28afa849ed4d85776bef47b29ba86062013b5db39301adfa62ad53",
+    "canonical_both_trees_and_global_index_same_whole_provider": true,
+    "Certificates_305_file_provider_unchanged": true,
+    "parser_or_CMS_success_claimed": true,
+    "original_codesign_sign_status": 0,
+    "original_strict_verify_status": 0,
+    "outer_status": 0,
+    "requirement_parser_valid_expressions_and_roundtrip_verified": true,
+    "independent_CMS_binding_and_hash_agility_verified": true,
+    "code_pages": 6,
+    "special_slots": 3,
+    "ordinary_sealed_resources": 0,
+    "signing_identity": "self-generated test certificate",
+    "certificate_chain_or_device_trust_verified": false
+  },
+  "v23_missing_runtime_component_observation": {
+    "valid_requirement_identifier_and_anchor_apple_returned": "errSecParam (-50)",
+    "source_default_error_path_after_missing_csparser_bundle_identified": true,
+    "whole_framework_reused_instead_of_single_plugin_overlay": true
+  },
+  "v23_additional_HTTPS_sample": {
+    "explicit_request_timeout_seconds": 20,
+    "elapsed_seconds": 28.8,
+    "request_completed": false,
+    "default_8_second_sample_preserved": true,
+    "no_further_timeout_increase_claimed": true
+  },
+  "native_App_v23": {
+    "outer_status": 1,
+    "native_sign_status": [
+      "1"
+    ],
+    "native_verify_status": [],
+    "original_codesign_completed": false,
+    "securityd_CSSM_ready_observed": true,
+    "securityd_entering_service_and_thread_observed": true,
+    "prior_daemon_abort_not_observed_in_this_attempt": true,
+    "trust_evaluation_invoked": true,
+    "self_signed_root_reported_untrusted": true,
+    "untrusted_self_signed_root_treated_nonfatal_by_consumer": true,
+    "next_signing_error": "errSecParam",
+    "signature_or_CMS_success_claimed": false,
+    "configuration": "config/unified-runtime-v23.json"
+  },
+  "v24_native_milestone": "validation/original-codesign-shared-runtime-v24-2026-10-28.json",
+  "legacy_API_limit": "The specific deprecated SecCertificateGetAlgorithmID/CMS preflight path still returns -50. It is not a blocker for the independently verified original codesign CLI path."
+}

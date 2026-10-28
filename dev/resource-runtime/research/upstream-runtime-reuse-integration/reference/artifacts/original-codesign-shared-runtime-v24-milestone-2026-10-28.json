@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "milestone": "Original codesign certificate signing and strict verification in one shared Darling runtime",
+  "pure_linux": true,
+  "host_execution_architecture": "x86_64",
+  "Mac_used": false,
+  "GUI_requested": false,
+  "runtime_mode": "unified",
+  "shared_library_configuration_from_first_MachO": true,
+  "per_executable_library_selection": false,
+  "original_codesign_frontend": true,
+  "original_Security_signing_implementation": true,
+  "common_identity_object_factories_owner": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+  "signing_identity": "self-generated test certificate",
+  "developer_provisioning_or_device_trust_verified": false,
+  "outer_status": 0,
+  "original_sign_status": [
+    "0"
+  ],
+  "original_strict_verify_status": [
+    "0"
+  ],
+  "configuration": "config/unified-runtime-v24.json",
+  "configuration_sha256": "83a7f0518207c7a80e3c80073d6b5234aac0114036423e5a5361c6dcde61b9f4",
+  "run_launcher_stage": "runtime/run-environment-launcher-do1uag64/stage.json",
+  "run_launcher_stage_sha256": "b76faa82ebc2ed11f0efec83e6ca59423917bdc5f028cbc29534f3c0cb098021",
+  "core_stage": "artifacts/private-procfs-auditsession117-stage.json",
+  "core_stage_sha256": "8016c1a6434f4804cac9127286422ec7309832e109b925f90745f8852934cba1",
+  "Security_OS_build": "25G83",
+  "Security_version": "61901.160.44",
+  "complete_Security_framework_files": 521,
+  "complete_Security_framework_MachO_images": 12,
+  "principal_Security_binary_unchanged": true,
+  "complete_Certificates_bundle_files": 305,
+  "original_anchor_certificates": 290,
+  "trust_anchors_added_or_modified": false,
+  "requirement_parser_valid_expressions_and_roundtrip_verified": true,
+  "independent_verification": {
+    "result": "runtime/original-codesign-certificate-zki_dvsl/independent-verification.json",
+    "sha256": "d69e33ac79c294be974741d9acb4e0b7df7d4dd249bbba8b2685f2064abd10d5",
+    "CMS_signature_valid": true,
+    "CMS_binds_actual_CodeDirectory": true,
+    "hash_agility_v1_and_v2_verified": true,
+    "CodeDirectory_SHA256": "49e1555a392f8b5fd35b4155def941f6bee341851faaa0f4857f55c695d1bdb6",
+    "CMS_SHA256": "f4528d4c234fff980ed4d9c1df8a7784b92979107beebf1925ab5deba5b45090",
+    "code_pages": 6,
+    "special_slots": 3,
+    "sealed_resources": 0,
+    "bundle_layout": "mac-contents",
+    "tamper_controls_repeated": false,
+    "previous_host_verifier_controls": "runtime/bundle-layout-host-9f9z4vc4/result.json"
+  },
+  "native_result": "runtime/original-codesign-certificate-zki_dvsl/result.json",
+  "native_result_sha256": "e31189904076623f4b9bf0720965dccbc7fa87e9115e9ea74e635adf229a74a7",
+  "private_keys_Apple_binaries_App_and_raw_logs_in_public_payload": false,
+  "limits": [
+    "Small self-owned Mac Contents App; contains no ordinary sealed resource files",
+    "Full Unity or UE build under this common runtime remains next validation",
+    "Original macOS Unity export not yet completed",
+    "Specific deprecated certificate/CMS API path still returns -50; original codesign succeeds",
+    "Actual managed public HTTPS remains under investigation"
+  ]
+}
