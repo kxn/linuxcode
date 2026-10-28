@@ -508,7 +508,7 @@ def xcodebuild(state, argv, dry_run):
         return exit_status
 
 
-def package(output, include_research_history=True):
+def package(output, include_research_history=True, research_reference_packages=()):
     allowed = ['linuxcode.py', 'linuxcode/cli.py', 'linuxcode/certificates.py', 'linuxcode/identities.py', 'linuxcode/unity.py', 'linuxcode/__init__.py',
                'config/dependencies.lock.json', 'config/runtime-recipe.json',
                'README.md', 'docs/install.md', 'docs/runtime-inputs.md', 'LICENSE', '.gitignore',
@@ -547,6 +547,11 @@ def package(output, include_research_history=True):
                'dev/locks/source-manifest.json']
     resource = 'dev/resource-runtime/'
     overlay = json.loads((SOURCE / resource / 'overlay.json').read_text())
+    reference_packages = set(research_reference_packages)
+    for name in reference_packages:
+        if (not isinstance(name, str) or Path(name).name != name or name in ('.', '..')
+                or not any(path.startswith('research/' + name + '/') for path in overlay.get('research_files', {}))):
+            fail('Unknown research reference package: ' + str(name))
     allowed += [resource + name for name in ('README.md', 'apply-overlay.py',
         'build-resources.py', 'overlay.json', 'evidence/summary.json', 'tests/test_overlay.py')]
     for relative, entry in overlay['files'].items():
@@ -560,7 +565,8 @@ def package(output, include_research_history=True):
     for relative, digest in overlay.get('research_files', {}).items():
         # Public installers retain developer sources and README files. The
         # large historical diagnostics are an explicit CLI opt-in.
-        if not include_research_history and '/reference/' in relative:
+        if (not include_research_history and '/reference/' in relative
+                and Path(relative).parts[1] not in reference_packages):
             continue
         name = Path(relative)
         if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
@@ -619,6 +625,7 @@ def main():
     sub.add_parser('recipe', help='show cold-build stages and exact outstanding gaps')
     p = sub.add_parser('package'); p.add_argument('--output', type=Path, required=True)
     p.add_argument('--include-research-history', action='store_true', help='also bundle historical diagnostic attachments')
+    p.add_argument('--research-reference-package', action='append', default=[], help='include references for one named source checkpoint without all historical diagnostics')
     p = sub.add_parser('unity', help='run the pinned native Linux Unity CLI for account login and licensing'); p.add_argument('argv', nargs=argparse.REMAINDER)
     p = sub.add_parser('dev', help='developer environment and module builds'); p.add_argument('argv', nargs=argparse.REMAINDER)
     p = sub.add_parser('xcodebuild'); p.add_argument('--dry-run', action='store_true'); p.add_argument('argv', nargs=argparse.REMAINDER)
@@ -675,7 +682,7 @@ def main():
             return subprocess.run([sys.executable, str(SOURCE / 'dev/linuxcode-dev'),
                                    '--workspace', str(workspace), *dev_args]).returncode
         elif args.command == 'recipe': print((SOURCE / 'config/runtime-recipe.json').read_text())
-        elif args.command == 'package': package(args.output, include_research_history=args.include_research_history)
+        elif args.command == 'package': package(args.output, include_research_history=args.include_research_history, research_reference_packages=args.research_reference_package)
         elif args.command == 'status':
             adopted = json.loads((state / 'adopted.json').read_text()) if (state / 'adopted.json').exists() else None
             print(json.dumps({'workspace': str(workspace),

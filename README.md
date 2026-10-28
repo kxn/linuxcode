@@ -75,7 +75,7 @@ python3 linuxcode.py status
 python3 linuxcode.py package --output dist/linuxcode-0.1.0-source.tar.gz
 ```
 
-默认包保留安装器、开发源码和文档，省略体积较大的历史诊断附件；需要完整历史时添加 `package --include-research-history`。公开包只含安装器、开发源码、文档和依赖锁定；不含 Xcode、SDK、Apple 框架、运行前缀、XIP、证书或私钥。离线安装、精确锁定、依赖说明见 [安装文档](docs/install.md)；系统参考输入与冷重建限制见 [运行时输入](docs/runtime-inputs.md)。
+默认包保留安装器、开发源码和文档，省略体积较大的历史诊断附件；需要完整历史时添加 `package --include-research-history`；只保留本轮源码检查点的证据与历史可用 `package --research-reference-package upstream-runtime-reuse-integration`，避免带入其他旧诊断附件。公开包只含安装器、开发源码、文档和依赖锁定；不含 Xcode、SDK、Apple 框架、运行前缀、XIP、证书或私钥。离线安装、精确锁定、依赖说明见 [安装文档](docs/install.md)；系统参考输入与冷重建限制见 [运行时输入](docs/runtime-inputs.md)。
 
 以下说明保留固定安装基线与历史检查点的当时状态；最新引擎结果见本文开头。
 
