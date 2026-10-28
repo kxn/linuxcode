@@ -27,3 +27,5 @@ stage112/v9 的公共网络修复已发布到同一 XNU fork 分支：接口枚�
 完整 macOS Unity v9 仍未通过：Editor 已连接 UPM，本轮没有观察到旧的 UPM 退出 11，但 package resolution 未完成；LicensingClient 曾启动 named-pipe server，随后出现原生 SIGSEGV/SIGABRT，未完成 managed 方法、许可验证或 iOS 导出。不能根据旧异常字符串消失推断授权流程已修复。
 
 后续 v10/v11 源码候选接入了已有 raw Linux mounts 读取实现、从新 prefix 克隆排除历史 core，并按原优先级聚合共享库搜索。共享搜索层在宿主选择同一组 187 个 Intel dylib，将库目录从 71 个收敛到 2 个，并保留 framework fallback。v11 实际仍在 90 秒 bootstrap 等待后退出，未进入 codesign；这些源码准备和宿主等价检查不构成原生启动或性能验收。对应精选结果见 reference 中的 shared-network-runtime-source-checkpoint 摘要。
+
+共享搜索工具另增加了未来输入的重名保护：NFD 分解和 ASCII 大小写折叠后发生冲突的库保留整组原目录顺序，framework 冲突组保留原 fallback，不生成快速别名；原有 `@loader_path` 处理保留。两目录小型宿主样例的 28 项检查覆盖旧工具误选后一个 provider、大小写/NFD 冲突及普通输入。当前 v11 名称集合没有这类冲突，此保护不改变既有 v11 索引或其启动失败结论。
