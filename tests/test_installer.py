@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import struct
+import subprocess
 import sys
 import tarfile
 import tempfile
@@ -69,6 +70,12 @@ class InstallerChecks(unittest.TestCase):
                 names = archive.getnames()
                 self.assertIn('linuxcode/linuxcode/cli.py', names)
                 self.assertIn('linuxcode/dev/resource-runtime/apply-overlay.py', names)
+                self.assertIn('linuxcode/dev/research-sources.py', names)
+                self.assertIn('linuxcode/dev/research-sources.md', names)
+                self.assertIn('linuxcode/dev/resource-runtime/research/unreal-cocoapods-workspace-integration/payload/fixtures/UECocoaPodsSmoke/Podfile.template', names)
+                self.assertIn('linuxcode/dev/resource-runtime/research/unreal-cocoapods-workspace-integration/payload/fixtures/iOSCocoaPodsSmoke/LocalMath/LocalMath.podspec', names)
+                self.assertIn('linuxcode/dev/resource-runtime/research/unreal-xcode-existing-dotnet-environment/payload/scripts/unreal-xcode-dotnet-environment.sh', names)
+                self.assertIn('linuxcode/dev/resource-runtime/research/s2c-interrupted-reply-transaction/payload/vendor/darlingserver/src/thread.cpp', names)
                 self.assertIn('linuxcode/dev/resource-runtime/payload/scripts/rebuild-c-cache-image.py', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/native-resource-dependencies/payload/fixtures/SwiftInverseEnvironment/InverseKeyPath.swift', names)
                 self.assertIn('linuxcode/dev/resource-runtime/research/native-resource-dependencies/payload/vendor/darling/src/sandbox/CMakeLists.txt', names)
@@ -82,6 +89,19 @@ class InstallerChecks(unittest.TestCase):
                 self.assertFalse(any('/.local/' in n or n.endswith(('.xip', '.dylib', '.p12')) for n in names))
                 self.assertFalse(any('/reference/' in n for n in names))
                 self.assertTrue(all(i.isfile() for i in archive.getmembers()))
+                unpacked = Path(directory) / 'unpacked'
+                for member in archive.getmembers():
+                    destination = unpacked / member.name
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    destination.write_bytes(archive.extractfile(member).read())
+            standalone = unpacked / 'linuxcode/dev/research-sources.py'
+            result = subprocess.run([sys.executable, str(standalone), 'inspect',
+                                     'xnu-wait-atomic-suspension-handoff'],
+                                    text=True, capture_output=True, check=True)
+            selected = json.loads(result.stdout)
+            self.assertTrue(selected['payload_verified'])
+            self.assertFalse(selected['historical_evidence_complete'])
+            self.assertFalse(selected['cold_candidate_rebuild_ready'])
             with self.assertRaisesRegex(RuntimeError, 'replace'):
                 cli.package(output, include_research_history=False)
 

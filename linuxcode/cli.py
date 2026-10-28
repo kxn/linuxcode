@@ -518,7 +518,8 @@ def package(output, include_research_history=True):
                'validation/unity-certificate-ci-2026-10-27.json', 'validation/unity-p12-import-2026-10-27.json',
                'validation/unity-fresh-linux-end-to-end-2026-10-27.json',
                'tests/test_installer.py', 'tests/test_engine_candidate.py', 'tests/test_certificate_candidate.py', 'tests/test_identity_import.py', 'dev/linuxcode-dev', 'dev/README.md',
-               'dev/debian-packages.txt', 'dev/locks/developer.lock.json',
+               'dev/debian-packages.txt', 'dev/research-sources.py', 'dev/research-sources.md',
+               'tests/test_research_sources.py', 'dev/locks/developer.lock.json',
                'dev/locks/source-manifest.json']
     resource = 'dev/resource-runtime/'
     overlay = json.loads((SOURCE / resource / 'overlay.json').read_text())
@@ -539,8 +540,8 @@ def package(output, include_research_history=True):
             continue
         name = Path(relative)
         if (name.is_absolute() or '..' in name.parts or name.parts[0] != 'research'
-                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb', '.S', '.s', '.inc', '.proj')
-                    and name.name not in ('CMakeLists.txt', 'pthread.aliases', 'syscalls.master')
+                or (name.suffix not in ('.py', '.json', '.m', '.mm', '.c', '.h', '.cpp', '.hpp', '.md', '.swift', '.cs', '.rb', '.sh', '.podspec', '.S', '.s', '.inc', '.proj')
+                    and name.name not in ('CMakeLists.txt', 'pthread.aliases', 'syscalls.master', 'Podfile.template')
                     and not name.name.endswith(('.h.in', '.exp-in')))):
             fail('Invalid research source path: ' + relative)
         source = resource + relative

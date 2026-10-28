@@ -1,5 +1,7 @@
 # 资源工具和签名候选的开发源码
 
+较新 stage104/106、UE CocoaPods 和原版 Unity 证明的选择与复现边界见[研究源码核验和审阅指南](../research-sources.md)。独立工具可从默认 source 包验 SHA、比较文件并导出到新审阅目录；本页下方的固定 overlay 不会自动装配这些后续运行候选。
+
 最新里程碑：[原版 xcodebuild 完整编译并签名 Unity/CocoaPods App](research/unity-signed-app/README.md)。原版严格验证及独立资源、代码页检查均通过；整合入口新增显式 engine milestone 选择。下列早期附件及固定 overlay 的缺口描述保留当时状态，不代表最新候选。冷重建、开发者证书和真机验证仍未完成。
 
 [Contacts 原版依赖组附件](research/contacts-original-dependencies/README.md) 保存九个原版映像、保留明确准备选项的批量工具及单会话原版 dyld 正/负例验证。原始指令/绑定检查和真实 Unity/CocoaPods 构建已继续推进到 Vision 类缺失，完整 App 仍未生成；默认安装候选没有提升。

@@ -109,6 +109,8 @@ P12 中额外的公共证书保存为可选的 `certificates` DER 数组。客�
 
 `package` 使用固定代码 allowlist，不遍历实验工作区，不收集运行时或 Apple 二进制。不提供把个人前缀自动打成公开镜像的功能。项目根下 `.local/`、运行收据、证书与 XIP 不会纳入源包。需要本机归档时应自行将 Apple 输入和私有材料放在自己的存储中，公开发布只使用 source 包。
 
+默认包也保留后续研究源码、显式打包 spec 和 README，可用 `python3 dev/research-sources.py list` 发现并核验；详见[研究源码审阅指南](../dev/research-sources.md)。历史 `reference/` 证据默认省略，添加 `package --include-research-history` 才包含。导出研究源码供合并审阅不会安装 stage104/106 或自动重建最新成功候选。
+
 ## 固定源码和模块开发
 
 整合工程独立于 Darling 源码仓库。开发模块位于 `dev/`，可从根 CLI 转交参数：

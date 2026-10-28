@@ -46,6 +46,8 @@ UE 的原版 Intel macOS SDK 已在 Darling 下成功编译完整 UnrealBuildToo
 
 ## 获取和核对源码
 
+较新的 stage104/106 与 UE/Unity 研究源码不由旧 `checkout` 或固定 overlay 自动组合。可按[研究源码核验和审阅指南](research-sources.md)使用随默认 source 包提供的 `research-sources.py` 列举、核验、比较和导出；它不覆盖工作区，也不声明完整冷启动可用。
+
 所有工具命令均在整合工程目录运行；`--workspace` 指向实际实验工作区，无需切换到该目录。路径中有空格时应加引号。
 
 ```bash
