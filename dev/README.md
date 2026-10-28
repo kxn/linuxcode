@@ -6,6 +6,8 @@
 
 [原版 UE workspace 接入真实 CocoaPods](resource-runtime/research/unreal-cocoapods-workspace-integration/README.md)：原版 Darwin CocoaPods 已安装 LocalMath，原 workspace 的四个 UE 工程引用、scheme 和 UBT 命令保留，只增加 Pods 依赖；原 UE 配置通过 wrapper 与 Pods 配置合并，首次基线及 UE 原配置字节保持。原生安装和配置检查通过，带 Pod 的完整 Xcode 构建已启动；实际 Pod 编译、UBT 链接和最终 App 仍待验证。
 
+[原版 Xcode 已实际编译 UE 的 CocoaPod](resource-runtime/research/unreal-real-pod-archive/README.md)：同一 workspace 已生成真实 `libLocalMath.a`，LLVM 独立解析确认两个 arm64 对象及 `_local_add` 定义。后续 server 信号量调用崩溃使完整构建未完成；下一次继续复用 Pod 产物并抓取真实故障栈。此进展尚不代表 UBT 最终链接、UE App 或签名成功。
+
 [复用 Mach 接口并接入真实内存统计](resource-runtime/research/host-vm-statistics-upstream-interface/README.md)：原版 Xcode 已完成 UHT 并进入 805 项 UBA 任务的调度准备，但上游现有 VM 统计占位接口返回全零，使原版调度器一直等待初始内存估计。stage104 在原接口中接入 Linux 实际页数，原生调用、历史版本与缓冲区边界检查通过；原有 XNU 分发和缓存复用，UE 代码未改。完整游戏构建继续验证，不能据此宣称 UE App 已完成。
 
 [原版 UBA 调用原版 Clang 编译 iOS 目标文件](resource-runtime/research/original-uba-clang-library-paths/README.md)：完整 Xcode 构建已越过调度等待并启动编译，随后暴露研究环境过长的库搜索路径超出 UBA 固定缓冲区。只压缩路径组织、保留原库和查找顺序后，原版 UBA 与 Clang 的定点编译正常退出，产物与直接调用 Clang 逐字节一致。完整 UE 构建已继续，签名和 UE CocoaPods 仍待验证；没有替换 UBA 或修改引擎代码。
